@@ -13,7 +13,7 @@ public class Album {
     private int año;
     private List<Genero> generos;
     private BufferedImage imagen;
-    private List<Album> albums;
+    private List<Tema> temas;
     private Artista artista;
 
     public Album(String nombre, int año, BufferedImage imagen, Artista artista) {
@@ -21,7 +21,7 @@ public class Album {
         this.año = año;
         this.generos = null;
         this.imagen = imagen;
-        this.albums = null;
+        this.temas = null;
         this.artista = artista;
     }
 
@@ -61,8 +61,8 @@ public class Album {
         return imagen;
     }
 
-    public List<Album> getAlbums() {
-        return albums;
+    public List<Tema> getTemas() {
+        return temas;
     }
 
     public Artista getArtista() {

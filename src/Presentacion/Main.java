@@ -8,6 +8,8 @@ package Presentacion;
 import Logica.Fabrica;
 import Logica.IControladorUsuario;
 import javax.swing.JOptionPane;
+import Logica.Fecha;
+import java.awt.image.BufferedImage;
 
 /**
  *
@@ -335,9 +337,17 @@ public class Main extends javax.swing.JFrame {
         String email = this.jRegisterEmailField.getText();
         String nombre= this.jRegisterNombreField.getText();
         String apellido = this.jRegisterApellidoField.getText();
+        int dia = this.jComboBoxDia.getSelectedIndex() + 1;
+        int mes = this.jComboBoxMes.getSelectedIndex() + 1;
+        int año = this.jComboBoxAño.getSelectedIndex() + 1900;
+        Fecha fechaDeNac = new Fecha(dia, mes, año);
+        if(fechaDeNac.validarFecha())
+            System.out.println("Valida");
+        else
+            System.out.println("Invalida");        
         
         //A través de mi interfaz registro a un nuevo usuario en mi Sistema
-        ICU.registrarUsuario(nick, contraseña, email, nombre, apellido, null, null); // Corresponder con los datos correctos luego
+        ICU.registrarUsuario(nick, contraseña, email, nombre, apellido, fechaDeNac, null); // Corresponder con los datos correctos luego
         
         //Muestro éxito de la operación
         JOptionPane.showMessageDialog(this, "El Usuario se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);

@@ -6,7 +6,7 @@
 package Presentacion;
 
 import Logica.Fabrica;
-import Logica.IControladorUsuario;
+import Logica.IControlador;
 import javax.swing.JOptionPane;
 import Logica.Fecha;
 import java.awt.image.BufferedImage;
@@ -17,7 +17,7 @@ import java.awt.image.BufferedImage;
  */
 public class Main extends javax.swing.JFrame {
     
-    private IControladorUsuario ICU;
+    private IControlador ICU;
 
     /**
      * Creates new form Main
@@ -29,7 +29,7 @@ public class Main extends javax.swing.JFrame {
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();
-        ICU = fabrica.getIControladorUsuario();
+        ICU = fabrica.getIControlador();
     }
 
     /**

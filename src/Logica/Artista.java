@@ -6,7 +6,9 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
-import java.util.List;
+import java.util.HashMap;
+//import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -15,13 +17,13 @@ import java.util.List;
 public class Artista extends Usuario {
     private String biografia;
     private String dir_web;
-    private List<Album> albums;
+    private Map albums;
 
     public Artista(String biografia, String dir_web, String nickname, String contraseña, String mail, String nombre, String apellido, Fecha fechaDeNacimiento, BufferedImage imagen) {
         super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
         this.biografia = biografia;
         this.dir_web = dir_web;
-        this.albums = null;
+        this.albums = new HashMap();
     }
 
     

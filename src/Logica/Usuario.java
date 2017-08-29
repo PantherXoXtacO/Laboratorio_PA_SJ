@@ -4,6 +4,8 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 /**
  *
  * @author Casca
@@ -16,6 +18,8 @@ public class Usuario {
     private String apellido;
     private Fecha fechaDeNacimiento;
     private BufferedImage imagen;
+    
+    private Map seguidores;
     
 
     public Usuario(String nickname, String contraseña, String mail,
@@ -32,7 +36,8 @@ public class Usuario {
             this.imagen = ImageIO.read(new File("data/default.jpg"));
         } catch (IOException e) {
         }
-        
+                
+        this.seguidores=new HashMap();
     }
     
     //getters

@@ -5,7 +5,8 @@
  */
 package Logica;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -13,15 +14,15 @@ import java.util.List;
  */
 public class Genero {
     private String nombre;
-    private List<Genero> hijos;
-    private List<Album> albums;
-    private List<ListaPorDefecto> listas;
+    private Map hijos;
+    private Map albums;
+    private Map listas;
 
     public Genero(String nombre) {
         this.nombre = nombre;
-        this.hijos = null;
-        this.albums = null;
-        this.listas = null;
+        this.hijos = new HashMap();
+        this.albums = new HashMap();
+        this.listas = new HashMap();
     }
 
     //GETTERS
@@ -29,15 +30,15 @@ public class Genero {
         return nombre;
     }
 
-    public List<Genero> getHijos() {
+    public Map getHijos() {
         return hijos;
     }
     
-    public List<Album> getAlbums() {
+    public Map getAlbums() {
         return albums;
     }
     
-    public List<ListaPorDefecto> getListas(){
+    public Map getListas(){
         return listas;
     }
     

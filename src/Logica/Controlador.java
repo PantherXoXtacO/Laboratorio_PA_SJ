@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Logica;
 
 import java.awt.image.BufferedImage;
@@ -11,9 +6,9 @@ import java.awt.image.BufferedImage;
  *
  * @author Casca
  */
-public class ControladorUsuario implements IControladorUsuario {
+public class Controlador implements IControlador {
     
-    public ControladorUsuario(){
+    public Controlador(){
         
     }
     
@@ -23,7 +18,7 @@ public class ControladorUsuario implements IControladorUsuario {
                                     Fecha fechaDeNacimiento,
                                     BufferedImage imagen) {
         //Instancio al manejador
-        ManejadorUsuario mu = ManejadorUsuario.getinstance();
+        Manejador mu = Manejador.getinstance();
         //Creo el usuario
         Usuario u = new Usuario(nickname, contraseña, mail, nombre, apellido,
                                 fechaDeNacimiento, imagen);
@@ -32,7 +27,7 @@ public class ControladorUsuario implements IControladorUsuario {
     }
     
     public DataUsuario verInfoUsuario(String ci){
-        ManejadorUsuario mu = ManejadorUsuario.getinstance();
+        Manejador mu = Manejador.getinstance();
         Usuario u = mu.obtenerUsuario(ci);
         if (u!= null)
             return new DataUsuario(u.getNickname(), u.getContraseña(),

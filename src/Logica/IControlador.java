@@ -10,7 +10,7 @@ import java.awt.image.BufferedImage;
  *
  * @author Casca
  */
-public interface IControladorUsuario {
+public interface IControlador{
     public abstract void registrarUsuario(String nickname, String contraseña,
                     String mail, String nombre, String apellido,
                     Fecha fechaDeNacimiento, BufferedImage imagen);

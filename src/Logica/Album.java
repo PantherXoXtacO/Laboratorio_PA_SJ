@@ -1,73 +1,55 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
-import java.util.List;
+import java.util.HashMap;
+//import java.util.List;
+import java.util.Map;
 
 /**
  *
  * @author Casca
  */
 public class Album {
-    
-    private String nombre;
-    private int año;
-    private List<Genero> generos;
-    private BufferedImage imagen;
-    private List<Tema> temas;
-    private Artista artista;
-
-    public Album(String nombre, int año, BufferedImage imagen, Artista artista) {
-        this.nombre = nombre;
-        this.año = año;
-        this.generos = null;
-        this.imagen = imagen;
-        this.temas = null;
-        this.artista = artista;
-    }
-
-    //SETTERS
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setAño(int año) {
-        this.año = año;
-    }
-
-
-    public void setImagen(BufferedImage imagen) {
-        this.imagen = imagen;
-    }
-
    
-    public void setArtista(Artista artista) {
-        this.artista = artista;
+    private String nombre;
+    private int anio;
+    private BufferedImage img;
+    private Artista artista;
+    
+    private Map temas;
+    private Map genero;
+    
+    public Album(String nom, int year, BufferedImage imagen, Artista artist){
+        nombre=nom;
+        anio=year;
+        img=imagen;
+        artista=artist;
+        
+        temas=new HashMap();
+        genero=new HashMap();
     }
-
-    //GETTERS
-    public String getNombre() {
+    
+    public String getNombre(){
         return nombre;
     }
-
-    public int getAño() {
-        return año;
+    
+    public int getAnio(){
+        return anio;
     }
-
-    public List<Genero> getGenero() {
-        return generos;
+    
+    public BufferedImage getImg(){
+        return img;
     }
-
-    public BufferedImage getImagen() {
-        return imagen;
-    }
-
-    public List<Tema> getTemas() {
-        return temas;
-    }
-
-    public Artista getArtista() {
+    
+    public Artista getArtista(){
         return artista;
     }
     
+    public Map getTemas(){
+        return temas;
+    }
     
+    public Map getGeneros(){
+        return genero;
+    }
 }

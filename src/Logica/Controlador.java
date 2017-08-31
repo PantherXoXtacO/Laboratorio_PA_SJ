@@ -1,6 +1,7 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
+import java.util.Map;
 
 /**
  *
@@ -37,7 +38,46 @@ public class Controlador implements IControlador {
             return new DataUsuario("", "", "", "", "", null, null);
         
     }
-
     
+    public void AltaGenero(String nombre, Genero padre){
+        Genero g=new Genero(nombre);
+        if(padre==null){
+            Manejador M=Manejador.getinstance();
+            M.getGenero().addGenero(g);
+        }
+        else{
+            padre.addGenero(g);
+        }
+    }
+    
+
+    public Genero GetGenero(){
+        Manejador M=Manejador.getinstance();
+        return M.getGenero();
+    }
+    
+    public void AgregarTema(){
+    
+    }
+    public void EliminarTemaFav(){
+    
+    }
+    public void ConsultarAlbum(){
+        
+    }
+
+    public boolean FindUser(String text){
+        Manejador M=Manejador.getinstance();
+        return (M.FindUser(text));
+    }
+
+    @Override
+    public void SeguirUsuario(String seguidor, String seguido) {
+       Manejador M=Manejador.getinstance();
+       Usuario u1 = M.obtenerUsuario(seguidor);
+       Usuario u2 = M.obtenerUsuario(seguido);
+       u1.addFollow(u2);
+       u2.addFollower(u1);
+    }
     
 }

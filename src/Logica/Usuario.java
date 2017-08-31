@@ -99,5 +99,10 @@ public class Usuario {
     public void setImagen(BufferedImage imagen) {
         this.imagen = imagen;
     }        
+    void addFollower(Usuario u1) {
+        seguidores.put(u1.getNickname(), u1);
+    }
+
+    void addFollow(Usuario u2) {}
     
 }

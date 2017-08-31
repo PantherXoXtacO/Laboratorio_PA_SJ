@@ -10,6 +10,11 @@ import Logica.IControlador;
 import javax.swing.JOptionPane;
 import Logica.Fecha;
 import java.awt.image.BufferedImage;
+import javax.swing.tree.DefaultTreeModel;
+import Logica.Genero;
+import java.awt.Dimension;
+import javax.swing.JTree;
+import javax.swing.tree.TreeNode;
 
 /**
  *
@@ -26,12 +31,13 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         this.setSize(550, 550);
         this.jRegisterFrame.setVisible(false);
+        this.setLocationRelativeTo(null);
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();
         ICU = fabrica.getIControlador();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,6 +47,9 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jInternalFrame2 = new javax.swing.JInternalFrame();
+        jDialog1 = new javax.swing.JDialog();
         jRegisterFrame = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -59,6 +68,21 @@ public class Main extends javax.swing.JFrame {
         jComboBoxDia = new javax.swing.JComboBox<>();
         jComboBoxMes = new javax.swing.JComboBox<>();
         jComboBoxAño = new javax.swing.JComboBox<>();
+        FrameNewGen = new javax.swing.JInternalFrame();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TreeNewGen = new javax.swing.JTree();
+        bAddNewGen = new javax.swing.JButton();
+        TFNewGen = new javax.swing.JTextField();
+        bCancelNewGen = new javax.swing.JButton();
+        FrameSeguirUser = new javax.swing.JInternalFrame();
+        Follower = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        Followed = new javax.swing.JTextField();
+        followAccept = new javax.swing.JButton();
+        FollowCancel = new javax.swing.JButton();
+        LabelUserMail = new javax.swing.JLabel();
+        FollowedLabel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
         jMenuRegistros = new javax.swing.JMenu();
@@ -80,6 +104,43 @@ public class Main extends javax.swing.JFrame {
         jMenuItemAgregarLista = new javax.swing.JMenuItem();
         jMenuItemQuitarLista = new javax.swing.JMenuItem();
         jMenuItemPublicarLista = new javax.swing.JMenuItem();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jInternalFrame2.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
+        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
+        jInternalFrame2Layout.setHorizontalGroup(
+            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame2Layout.setVerticalGroup(
+            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,7 +198,7 @@ public class Main extends javax.swing.JFrame {
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addComponent(RegisterCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(RegisterAcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addContainerGap()
@@ -169,7 +230,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 173, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jRegisterFrameLayout.setVerticalGroup(
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,16 +262,153 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
+        );
+
+        FrameNewGen.setVisible(true);
+        FrameNewGen.setVisible(false);
+
+        jScrollPane1.setViewportView(TreeNewGen);
+
+        bAddNewGen.setText("Agregar");
+        bAddNewGen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bAddNewGenMouseClicked(evt);
+            }
+        });
+        bAddNewGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAddNewGenActionPerformed(evt);
+            }
+        });
+
+        bCancelNewGen.setText("Cancelar");
+
+        javax.swing.GroupLayout FrameNewGenLayout = new javax.swing.GroupLayout(FrameNewGen.getContentPane());
+        FrameNewGen.getContentPane().setLayout(FrameNewGenLayout);
+        FrameNewGenLayout.setHorizontalGroup(
+            FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameNewGenLayout.createSequentialGroup()
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameNewGenLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43))
+                    .addGroup(FrameNewGenLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(bAddNewGen)
+                        .addGap(18, 18, 18)
+                        .addComponent(bCancelNewGen)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+        );
+        FrameNewGenLayout.setVerticalGroup(
+            FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameNewGenLayout.createSequentialGroup()
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameNewGenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(FrameNewGenLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(bAddNewGen)
+                            .addComponent(bCancelNewGen))))
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+
+        FrameSeguirUser.setVisible(true);
+        FrameSeguirUser.setVisible(false);
+
+        jLabel8.setText("Usuario (Nick)");
+
+        jLabel9.setText("Usuario al que descea seguir (Nick)");
+
+        followAccept.setText("Aceptar");
+        followAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                followAcceptActionPerformed(evt);
+            }
+        });
+
+        FollowCancel.setText("Cancelar");
+        FollowCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FollowCancelActionPerformed(evt);
+            }
+        });
+
+        LabelUserMail.setForeground(new java.awt.Color(255, 0, 51));
+
+        FollowedLabel.setForeground(new java.awt.Color(255, 0, 51));
+
+        javax.swing.GroupLayout FrameSeguirUserLayout = new javax.swing.GroupLayout(FrameSeguirUser.getContentPane());
+        FrameSeguirUser.getContentPane().setLayout(FrameSeguirUserLayout);
+        FrameSeguirUserLayout.setHorizontalGroup(
+            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel8))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(Follower, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                                    .addComponent(Followed))
+                                .addGap(2, 2, 2)
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(followAccept)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addComponent(FollowCancel)
+                        .addGap(49, 49, 49))))
+        );
+        FrameSeguirUserLayout.setVerticalGroup(
+            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Followed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(followAccept)
+                    .addComponent(FollowCancel))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
         jMenuBar1.add(jMenuInicio);
 
         jMenuRegistros.setText("Registros");
+        jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuRegistrosActionPerformed(evt);
+            }
+        });
 
         jMenuItemRegUsu.setText("Registrar Usuario");
         jMenuItemRegUsu.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -226,6 +424,11 @@ public class Main extends javax.swing.JFrame {
         jMenuRegistros.add(jMenuItemRegUsu);
 
         jMenuItemCrearGen.setText("Crear Genero");
+        jMenuItemCrearGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCrearGenActionPerformed(evt);
+            }
+        });
         jMenuRegistros.add(jMenuItemCrearGen);
 
         jMenuItemCrearAlb.setText("Crear Album");
@@ -260,6 +463,11 @@ public class Main extends javax.swing.JFrame {
         jMenuUsuarios.setText("Usuarios");
 
         jMenuItemSegUsu.setText("Seguir Usuario");
+        jMenuItemSegUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSegUsuActionPerformed(evt);
+            }
+        });
         jMenuUsuarios.add(jMenuItemSegUsu);
 
         jMenuItemDejarDeSeguirUsu.setText("Dejar De Seguir Usuario");
@@ -292,11 +500,24 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jRegisterFrame)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jRegisterFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FrameNewGen)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jRegisterFrame)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -353,6 +574,52 @@ public class Main extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "El Usuario se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_RegisterAcceptButtonMouseClicked
 
+    private void jMenuItemCrearGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearGenActionPerformed
+    }//GEN-LAST:event_jMenuItemCrearGenActionPerformed
+
+    private void bAddNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddNewGenActionPerformed
+//        Genero root=ICU.GetGenero();
+//        TreeNewGen=new JTree((TreeNode) root);
+//        
+//        
+//        DefaultTreeModel model=(DefaultTreeModel) TreeNewGen.getModel();
+//        DefaultTreeModel SelectedNode=(DefaultTreeModel) TreeNewGen.getLastSelectedPathComponent();
+    }//GEN-LAST:event_bAddNewGenActionPerformed
+
+    private void bAddNewGenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAddNewGenMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bAddNewGenMouseClicked
+
+    private void followAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_followAcceptActionPerformed
+        if(!(ICU.FindUser(Follower.getText()))){
+            LabelUserMail.setText("Nick invalido");
+        }
+        if(!(ICU.FindUser(Followed.getText()))){
+            FollowedLabel.setText("Nick invalido");
+        }
+        if((ICU.FindUser(Followed.getText()))&&(ICU.FindUser(Follower.getText()))){
+            ICU.SeguirUsuario(Follower.getText(), Followed.getText());
+            JOptionPane.showMessageDialog(this, "Operacion realicada con exito", "Seguir Usuario", JOptionPane.INFORMATION_MESSAGE);
+            FrameSeguirUser.setVisible(false);
+        }       
+    }//GEN-LAST:event_followAcceptActionPerformed
+
+    private void FollowCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FollowCancelActionPerformed
+        FrameSeguirUser.setVisible(false);
+    }//GEN-LAST:event_FollowCancelActionPerformed
+
+    private void jMenuRegistrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRegistrosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuRegistrosActionPerformed
+
+    private void jMenuItemSegUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSegUsuActionPerformed
+        this.Follower.setText("");
+        this.Followed.setText("");
+        this.LabelUserMail.setText("");
+        this.FollowedLabel.setText("");
+        this.FrameSeguirUser.setVisible(true);
+    }//GEN-LAST:event_jMenuItemSegUsuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -389,11 +656,26 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton FollowCancel;
+    private javax.swing.JTextField Followed;
+    private javax.swing.JLabel FollowedLabel;
+    private javax.swing.JTextField Follower;
+    private javax.swing.JInternalFrame FrameNewGen;
+    private javax.swing.JInternalFrame FrameSeguirUser;
+    private javax.swing.JLabel LabelUserMail;
     private javax.swing.JButton RegisterAcceptButton;
     private javax.swing.JButton RegisterCancelButton;
+    private javax.swing.JTextField TFNewGen;
+    private javax.swing.JTree TreeNewGen;
+    private javax.swing.JButton bAddNewGen;
+    private javax.swing.JButton bCancelNewGen;
+    private javax.swing.JButton followAccept;
     private javax.swing.JComboBox<String> jComboBoxAño;
     private javax.swing.JComboBox<String> jComboBoxDia;
     private javax.swing.JComboBox<String> jComboBoxMes;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -401,6 +683,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuConsultas;
     private javax.swing.JMenu jMenuInicio;
@@ -428,5 +712,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame jRegisterFrame;
     private javax.swing.JTextField jRegisterNicknameField;
     private javax.swing.JTextField jRegisterNombreField;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

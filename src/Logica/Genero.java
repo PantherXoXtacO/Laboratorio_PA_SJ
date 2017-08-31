@@ -46,6 +46,14 @@ public class Genero {
     //SETTERS
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }   
+    } 
+    
+    
+    //Funciones
+    void addGenero(Genero g) {
+        if(!(hijos.containsKey(g.getNombre()))){
+           hijos.put(g.getNombre(), g);
+        }
+    }
     
 }

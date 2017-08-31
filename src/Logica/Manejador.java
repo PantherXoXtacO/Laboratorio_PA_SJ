@@ -43,4 +43,14 @@ public class Manejador {
     public Usuario obtenerUsuario(String nickname){
         return ((Usuario) usuariosCI.get(nickname));
     }
+    
+    
+    //Funciones auxiliares
+    public Genero getGenero(){
+        return genero;
+    }
+
+    boolean FindUser(String text) {
+        return usuariosCI.containsKey(text);
+    }
 }

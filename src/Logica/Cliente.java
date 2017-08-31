@@ -31,7 +31,10 @@ public class Cliente extends Usuario{
         this.Listas = new HashMap();
         
     }
-
     
+    @Override
+    void addFollow(Usuario u2) {
+        siguiendo.put(u2.getNickname(), u2);
+    }
     
 }

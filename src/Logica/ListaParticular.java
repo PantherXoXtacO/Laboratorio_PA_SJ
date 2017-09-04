@@ -19,7 +19,7 @@ public class ListaParticular extends ListaDeReproduccion {
     public ListaParticular(Cliente cliente, String nombre, BufferedImage imagen) {
         super(nombre, imagen);
         this.cliente = cliente;
-        this.privacidad = true;
+        this.privacidad = false;
     }
         
 }

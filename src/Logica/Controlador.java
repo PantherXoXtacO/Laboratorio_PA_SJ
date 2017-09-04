@@ -1,7 +1,6 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
-import java.util.Map;
 
 /**
  *
@@ -27,6 +26,7 @@ public class Controlador implements IControlador {
         mu.addUsuario(u);
     }
     
+    @Override
     public DataUsuario verInfoUsuario(String ci){
         Manejador mu = Manejador.getinstance();
         Usuario u = mu.obtenerUsuario(ci);
@@ -39,6 +39,7 @@ public class Controlador implements IControlador {
         
     }
     
+    @Override
     public void AltaGenero(String nombre, Genero padre){
         Genero g=new Genero(nombre);
         if(padre==null){
@@ -51,6 +52,7 @@ public class Controlador implements IControlador {
     }
     
 
+    @Override
     public Genero GetGenero(){
         Manejador M=Manejador.getinstance();
         return M.getGenero();
@@ -59,13 +61,16 @@ public class Controlador implements IControlador {
     public void AgregarTema(){
     
     }
+    @Override
     public void EliminarTemaFav(){
     
     }
+    @Override
     public void ConsultarAlbum(){
         
     }
 
+    @Override
     public boolean FindUser(String text){
         Manejador M=Manejador.getinstance();
         return (M.FindUser(text));

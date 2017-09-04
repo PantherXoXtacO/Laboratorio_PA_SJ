@@ -6,7 +6,9 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,12 +18,12 @@ import java.util.Map;
 public class ListaDeReproduccion {
     
     private String nombre;
-    private Map temas;
+    private List<Tema> temas;
     private BufferedImage imagen;
 
     public ListaDeReproduccion(String nombre, BufferedImage imagen) {
         this.nombre = nombre;
-        this.temas = new HashMap();
+        this.temas = new ArrayList();
         this.imagen = imagen;
     }
 
@@ -30,7 +32,7 @@ public class ListaDeReproduccion {
         return nombre;
     }
 
-    public Map getTemas() {
+    public List<Tema> getTemas() {
         return temas;
     }
 

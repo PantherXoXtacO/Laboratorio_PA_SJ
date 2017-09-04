@@ -1,13 +1,13 @@
 package Logica;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Manejador {
     //Clase que conserva las colecciones globales del sistema
     
-    private Map usuariosCI;
-    private Map Listas; // Listas por defecto
+    private List<Usuario> usuariosCI;
+    private List<ListaDeReproduccion> Listas; // Listas por defecto
     private Genero genero; // Guarda el genero raiz
     
     //Ids para la identificadores
@@ -19,8 +19,8 @@ public class Manejador {
     private static Manejador instancia=null;
     
     private Manejador(){
-        usuariosCI=new HashMap();
-        Listas=new HashMap();
+        usuariosCI=new ArrayList();
+        Listas=new ArrayList();
         genero=new Genero("Genero");
         IdTema=0;
         IdAlbum=0;
@@ -36,12 +36,13 @@ public class Manejador {
     public void addUsuario(Usuario usu){
         String nickname = usu.getNickname();
         if (this.obtenerUsuario(nickname) == null) {
-            usuariosCI.put(nickname,usu);
+      //      usuariosCI.put(nickname,usu); Cambiar por funcion de List
         }
     }
     
     public Usuario obtenerUsuario(String nickname){
-        return ((Usuario) usuariosCI.get(nickname));
+    //    return ((Usuario) usuariosCI.get(nickname)); Cambiar por funcion de List
+          return null;
     }
     
     
@@ -51,6 +52,7 @@ public class Manejador {
     }
 
     boolean FindUser(String text) {
-        return usuariosCI.containsKey(text);
+    //    return usuariosCI.containsKey(text); Cambiar por funcion de List
+    return true;
     }
 }

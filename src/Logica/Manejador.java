@@ -1,6 +1,7 @@
 package Logica;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Manejador {
@@ -36,13 +37,20 @@ public class Manejador {
     public void addUsuario(Usuario usu){
         String nickname = usu.getNickname();
         if (this.obtenerUsuario(nickname) == null) {
-      //      usuariosCI.put(nickname,usu); Cambiar por funcion de List
+            usuariosCI.add(usu);
         }
     }
     
     public Usuario obtenerUsuario(String nickname){
-    //    return ((Usuario) usuariosCI.get(nickname)); Cambiar por funcion de List
-          return null;
+        Iterator it=usuariosCI.iterator();
+        Usuario user;
+        while(it.hasNext()){
+            user=(Usuario)it.next();
+            if(user.getNickname().equals(nickname)){
+                return user;
+            }
+        }
+        return null;
     }
     
     
@@ -52,7 +60,14 @@ public class Manejador {
     }
 
     boolean FindUser(String text) {
-    //    return usuariosCI.containsKey(text); Cambiar por funcion de List
-    return true;
+        Iterator it=usuariosCI.iterator();
+        Usuario user;
+        while(it.hasNext()){
+            user=(Usuario)it.next();
+            if(user.getNickname()==text){
+                return true;
+            }
+        }
+        return false;
     }
 }

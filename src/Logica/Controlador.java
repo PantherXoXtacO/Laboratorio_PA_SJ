@@ -81,8 +81,10 @@ public class Controlador implements IControlador {
        Manejador M=Manejador.getinstance();
        Usuario u1 = M.obtenerUsuario(seguidor);
        Usuario u2 = M.obtenerUsuario(seguido);
-       u1.addFollow(u2);
-       u2.addFollower(u1);
+       if(u1!=null && u2!=null){
+            u1.addFollow(u2);
+            u2.addFollower(u1);
+       }
     }
     
 }

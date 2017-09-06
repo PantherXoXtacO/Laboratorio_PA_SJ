@@ -13,7 +13,9 @@ import java.awt.image.BufferedImage;
 import javax.swing.tree.DefaultTreeModel;
 import Logica.Genero;
 import java.awt.Dimension;
+import java.util.Iterator;
 import javax.swing.JTree;
+import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 
 /**
@@ -74,6 +76,8 @@ public class Main extends javax.swing.JFrame {
         bAddNewGen = new javax.swing.JButton();
         TFNewGen = new javax.swing.JTextField();
         bCancelNewGen = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         FrameSeguirUser = new javax.swing.JInternalFrame();
         Follower = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -262,7 +266,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -271,6 +275,8 @@ public class Main extends javax.swing.JFrame {
         FrameNewGen.setVisible(true);
         FrameNewGen.setVisible(false);
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
+        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(TreeNewGen);
 
         bAddNewGen.setText("Agregar");
@@ -287,40 +293,44 @@ public class Main extends javax.swing.JFrame {
 
         bCancelNewGen.setText("Cancelar");
 
+        jLabel10.setText("Genero padre");
+
+        jLabel11.setText("Nombre del nuevo genero");
+
         javax.swing.GroupLayout FrameNewGenLayout = new javax.swing.GroupLayout(FrameNewGen.getContentPane());
         FrameNewGen.getContentPane().setLayout(FrameNewGenLayout);
         FrameNewGenLayout.setHorizontalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameNewGenLayout.createSequentialGroup()
+            .addGroup(FrameNewGenLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(bAddNewGen)
-                        .addGap(18, 18, 18)
-                        .addComponent(bCancelNewGen)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                    .addComponent(jLabel11)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(FrameNewGenLayout.createSequentialGroup()
+                            .addComponent(bAddNewGen)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bCancelNewGen))
+                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         FrameNewGenLayout.setVerticalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameNewGenLayout.createSequentialGroup()
-                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bAddNewGen)
-                            .addComponent(bCancelNewGen))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bAddNewGen)
+                    .addComponent(bCancelNewGen))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -397,7 +407,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -501,12 +511,10 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRegisterFrame)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 45, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FrameSeguirUser)
+                    .addComponent(jRegisterFrame))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -576,8 +584,27 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_RegisterAcceptButtonMouseClicked
 
     private void jMenuItemCrearGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearGenActionPerformed
+        FrameNewGen.setVisible(true);
+        Genero general=ICU.GetGenero();
+        DefaultTreeModel model = (DefaultTreeModel)TreeNewGen.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();        
+        root.add(PopulateTree(general));
+        model.reload();
     }//GEN-LAST:event_jMenuItemCrearGenActionPerformed
-
+    
+    private DefaultMutableTreeNode PopulateTree(Genero g){
+        DefaultMutableTreeNode Nodo = new DefaultMutableTreeNode(g.getNombre());
+        Iterator it=g.getHijos().iterator();
+        Genero aux;
+        while(it.hasNext()){
+            aux=(Genero)it.next();
+            DefaultMutableTreeNode NodoHijo= new DefaultMutableTreeNode(aux.getNombre());
+            Nodo.add(NodoHijo);
+            PopulateTree(aux);
+        }
+        return Nodo;
+    }
+    
     private void bAddNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddNewGenActionPerformed
 //        Genero root=ICU.GetGenero();
 //        TreeNewGen=new JTree((TreeNode) root);
@@ -683,6 +710,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

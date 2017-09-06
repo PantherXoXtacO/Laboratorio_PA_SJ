@@ -3,13 +3,15 @@ package Logica;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.swing.tree.DefaultMutableTreeNode;
 
 public class Manejador {
     //Clase que conserva las colecciones globales del sistema
     
     private List<Usuario> usuariosCI;
     private List<ListaDeReproduccion> Listas; // Listas por defecto
-    private Genero genero; // Guarda el genero raiz
+    private final Genero genero=new Genero("Genero"); // Guarda el genero raiz
+    private List<Genero> generosList;
     
     //Ids para la identificadores
     private double IdTema;
@@ -22,7 +24,9 @@ public class Manejador {
     private Manejador(){
         usuariosCI=new ArrayList();
         Listas=new ArrayList();
-        genero=new Genero("Genero");
+        generosList=new ArrayList();
+        //genero=new Genero("Genero");
+        generosList.add(genero);
         IdTema=0;
         IdAlbum=0;
         IdList=0;
@@ -57,6 +61,10 @@ public class Manejador {
     //Funciones auxiliares
     public Genero getGenero(){
         return genero;
+    }
+    
+    public List<Genero> getListGeneros(){
+        return generosList;
     }
 
     boolean FindUser(String text) {

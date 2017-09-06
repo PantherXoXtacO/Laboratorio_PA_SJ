@@ -8,8 +8,10 @@ import java.awt.image.BufferedImage;
 public interface IControlador{
     public abstract void registrarUsuario(String nickname, String contraseña,
                     String mail, String nombre, String apellido,
-                    Fecha fechaDeNacimiento, BufferedImage imagen);
-    public abstract DataUsuario verInfoUsuario(String nickname);
+                    Fecha fechaDeNacimiento, BufferedImage imagen, String usertype,
+                    String biografia, String dir_web);
+    public abstract DataUsuario ConsultarCliente(String nickname);
+    public abstract DataUsuario ConsultarArtista(String nickname);
     
     public abstract void AltaGenero(String nombre, Genero padre);
     public abstract Genero GetGenero();

@@ -4,18 +4,36 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.IOException;
 import java.io.File;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 /**
  *
  * @author Casca
  */
-public class Usuario {
+@Entity
+public class Usuario implements Serializable {
+    
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO) 
+    long id;
+    
+    //@Column(name = "NICKNAME")
     private String nickname;
+    //@Column(name = "CONSTRASEÑA")
     private String contraseña;
+    //@Column(name = "MAIL")
     private String mail; // Identificador
+    //@Column(name = "NOMBRE")
     private String nombre;
+    //@Column(name = "APELLIDO")
     private String apellido;
+    //@Column(name = "FECHA_DE_NACIMIENTO")  ???
     private Fecha fechaDeNacimiento;
     private BufferedImage imagen;
     

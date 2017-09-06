@@ -16,27 +16,45 @@ public class Controlador implements IControlador {
     public void registrarUsuario(String nickname, String contraseña, 
                                     String mail, String nombre, String apellido,
                                     Fecha fechaDeNacimiento,
-                                    BufferedImage imagen) {
+                                    BufferedImage imagen, String userType,
+                                    String biografia, String dir_web) {
         //Instancio al manejador
         Manejador mu = Manejador.getinstance();
         //Creo el usuario
-        Usuario u = new Usuario(nickname, contraseña, mail, nombre, apellido,
-                                fechaDeNacimiento, imagen);
-        //Lo agrego a la colección global
-        mu.addUsuario(u);
+        if(userType=="Cliente"){
+            Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
+                                            fechaDeNacimiento, imagen);
+            mu.addUsuario(user, userType);
+        }
+        else if (userType=="Artista"){
+            Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
+                                            fechaDeNacimiento, imagen);
+            mu.addUsuario(user, userType);
+        }        
     }
     
     @Override
-    public DataUsuario verInfoUsuario(String ci){
+    public DataUsuario ConsultarCliente(String nickname){
         Manejador mu = Manejador.getinstance();
-        Usuario u = mu.obtenerUsuario(ci);
+        Usuario u = mu.obtenerCliente(nickname);
         if (u!= null)
             return new DataUsuario(u.getNickname(), u.getContraseña(),
                                    u.getMail(), u.getNombre(), u.getApellido(),
                                    u.getFechaDeNacimiento(), u.getImagen());
         else
-            return new DataUsuario("", "", "", "", "", null, null);
-        
+            return new DataUsuario("", "", "", "", "", null, null);        
+    }
+    
+    @Override
+    public DataUsuario ConsultarArtista(String nickname){
+        Manejador mu = Manejador.getinstance();
+        Usuario u = mu.obtenerArtista(nickname);
+        if (u!= null)
+            return new DataUsuario(u.getNickname(), u.getContraseña(),
+                                   u.getMail(), u.getNombre(), u.getApellido(),
+                                   u.getFechaDeNacimiento(), u.getImagen());
+        else
+            return new DataUsuario("", "", "", "", "", null, null);        
     }
     
     @Override

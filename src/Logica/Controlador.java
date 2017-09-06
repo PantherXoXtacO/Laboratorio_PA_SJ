@@ -16,27 +16,21 @@ public class Controlador implements IControlador {
     public void registrarUsuario(String nickname, String contraseña, 
                                     String mail, String nombre, String apellido,
                                     Fecha fechaDeNacimiento,
-                                    BufferedImage imagen) {
+                                    BufferedImage imagen, String userType,
+                                    String biografia, String dir_web) {
         //Instancio al manejador
         Manejador mu = Manejador.getinstance();
         //Creo el usuario
-        Usuario u = new Usuario(nickname, contraseña, mail, nombre, apellido,
-                                fechaDeNacimiento, imagen);
-        //Lo agrego a la colección global
-        mu.addUsuario(u);
-    }
-    
-    @Override
-    public DataUsuario verInfoUsuario(String ci){
-        Manejador mu = Manejador.getinstance();
-        Usuario u = mu.obtenerUsuario(ci);
-        if (u!= null)
-            return new DataUsuario(u.getNickname(), u.getContraseña(),
-                                   u.getMail(), u.getNombre(), u.getApellido(),
-                                   u.getFechaDeNacimiento(), u.getImagen());
-        else
-            return new DataUsuario("", "", "", "", "", null, null);
-        
+        if(userType=="Cliente"){
+            Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
+                                            fechaDeNacimiento, imagen);
+            mu.addUsuario(user, userType);
+        }
+        else if (userType=="Artista"){
+            Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
+                                            fechaDeNacimiento, imagen);
+            mu.addUsuario(user, userType);
+        }        
     }
     
     @Override
@@ -83,6 +77,30 @@ public class Controlador implements IControlador {
        Usuario u2 = M.obtenerUsuario(seguido);
        u1.addFollow(u2);
        u2.addFollower(u1);
+    }
+    
+    @Override
+    public boolean nicknameLibre(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.nicknameLibre(nickname);
+    }
+    
+    @Override
+    public boolean mailLibre(String mail){
+        Manejador M=Manejador.getinstance();
+        return M.mailLibre(mail);
+    }
+    
+    @Override
+    public Cliente consultarCliente(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.obtenerCliente(nickname);
+    }
+    
+    @Override
+    public Artista consultarArtista(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.obtenerArtista(nickname);
     }
     
 }

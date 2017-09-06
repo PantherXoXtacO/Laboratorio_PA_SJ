@@ -34,30 +34,6 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public DataUsuario ConsultarCliente(String nickname){
-        Manejador mu = Manejador.getinstance();
-        Usuario u = mu.obtenerCliente(nickname);
-        if (u!= null)
-            return new DataUsuario(u.getNickname(), u.getContraseña(),
-                                   u.getMail(), u.getNombre(), u.getApellido(),
-                                   u.getFechaDeNacimiento(), u.getImagen());
-        else
-            return new DataUsuario("", "", "", "", "", null, null);        
-    }
-    
-    @Override
-    public DataUsuario ConsultarArtista(String nickname){
-        Manejador mu = Manejador.getinstance();
-        Usuario u = mu.obtenerArtista(nickname);
-        if (u!= null)
-            return new DataUsuario(u.getNickname(), u.getContraseña(),
-                                   u.getMail(), u.getNombre(), u.getApellido(),
-                                   u.getFechaDeNacimiento(), u.getImagen());
-        else
-            return new DataUsuario("", "", "", "", "", null, null);        
-    }
-    
-    @Override
     public void AltaGenero(String nombre, Genero padre){
         Genero g=new Genero(nombre);
         if(padre==null){
@@ -101,6 +77,30 @@ public class Controlador implements IControlador {
        Usuario u2 = M.obtenerUsuario(seguido);
        u1.addFollow(u2);
        u2.addFollower(u1);
+    }
+    
+    @Override
+    public boolean nicknameLibre(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.nicknameLibre(nickname);
+    }
+    
+    @Override
+    public boolean mailLibre(String mail){
+        Manejador M=Manejador.getinstance();
+        return M.mailLibre(mail);
+    }
+    
+    @Override
+    public Cliente consultarCliente(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.obtenerCliente(nickname);
+    }
+    
+    @Override
+    public Artista consultarArtista(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.obtenerArtista(nickname);
     }
     
 }

@@ -9,6 +9,14 @@ public class Artista extends Usuario {
     private String dir_web;
     private List<Album> albums;
 
+    public String getBiografia() {
+        return biografia;
+    }
+
+    public String getDir_web() {
+        return dir_web;
+    }
+
     public Artista(String biografia, String dir_web, String nickname, String contraseña, String mail, String nombre, String apellido, Fecha fechaDeNacimiento, BufferedImage imagen) {
         super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
         this.biografia = biografia;

@@ -53,14 +53,13 @@ public class Manejador {
     }
     
     public void addUsuario(Usuario usu, String userType){
-        String nickname = usu.getNickname();
-        if (this.obtenerUsuario(nickname) == null) { //si no existe en la lista
-           usuarios.add(usu); 
+        String nickname = usu.getNickname(); //si no existe en la lista
+        usuarios.add(usu); 
            //entitymanager.getTransaction( ).begin( );
            //entitymanager.persist(usu);
            //entitymanager.getTransaction().commit();
            //entitymanager.close();   
-           if(userType=="Cliente"){
+        if(userType=="Cliente"){
                Cliente cliente = (Cliente) usu;
                clientes.add(cliente);
                //entitymanager.getTransaction( ).begin( );
@@ -68,18 +67,36 @@ public class Manejador {
             //entitymanager.getTransaction().commit();
             //entitymanager.close();   
            }
-           if(userType=="Artista"){
+        if(userType=="Artista"){
               Artista artista = (Artista) usu;
               artistas.add(artista);
             //entitymanager.getTransaction( ).begin( );
             //entitymanager.persist(usu);
             //entitymanager.getTransaction().commit();
             //entitymanager.close();   
-           }           
-        }
-        else
-            System.out.println("Usuario ya existe");
+           } 
     } 
+    
+    
+    public boolean nicknameLibre(String nickname){
+        return this.obtenerUsuario(nickname) == null; 
+    }  
+    
+    public boolean mailLibre(String mail){
+        return this.obtenerUsuarioPorMail(mail) == null; 
+    } 
+    
+    public Usuario obtenerUsuarioPorMail(String mail){
+        Iterator it = usuarios.iterator();
+        Usuario user;
+        while(it.hasNext()){
+            user = (Usuario)it.next();
+            if(user.getMail().equals(mail))
+                return user;
+        }
+        return null;
+    }
+        
     
     public Usuario obtenerUsuario(String nickname){
         Iterator it = usuarios.iterator();
@@ -92,7 +109,7 @@ public class Manejador {
         return null;
     }
     
-    public Usuario obtenerCliente(String nickname){
+    public Cliente obtenerCliente(String nickname){
         Iterator it = clientes.iterator();
         Cliente user;
         while(it.hasNext()){
@@ -103,7 +120,7 @@ public class Manejador {
         return null;
     }
     
-    public Usuario obtenerArtista(String nickname){
+    public Artista obtenerArtista(String nickname){
         Iterator it = artistas.iterator();
         Artista user;
         while(it.hasNext()){

@@ -5,6 +5,8 @@
  */
 package Presentacion;
 
+import Logica.Cliente;
+import Logica.DataUsuario;
 import Logica.Fabrica;
 import Logica.IControlador;
 import javax.swing.JOptionPane;
@@ -18,6 +20,7 @@ import java.awt.Font;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JTree;
@@ -65,6 +68,14 @@ public class Main extends javax.swing.JFrame {
         BiografiaTextArea = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        VentanaDeCliente = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        VentanaDeArtista = new javax.swing.JDialog();
         jRegisterFrame = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -212,6 +223,61 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(RegistrarArtistaCancelButton)
                         .addComponent(RegistrarArtistaAcceptButton)))
+            );
+
+            jLabel13.setText("IMAGEN");
+
+            jLabel14.setText("Nickname");
+
+            jLabel15.setText("Nombre");
+
+            jLabel16.setText("Apellido");
+
+            jLabel17.setText("Mail");
+
+            jLabel18.setText("Fecha de nacimiento");
+
+            javax.swing.GroupLayout VentanaDeClienteLayout = new javax.swing.GroupLayout(VentanaDeCliente.getContentPane());
+            VentanaDeCliente.getContentPane().setLayout(VentanaDeClienteLayout);
+            VentanaDeClienteLayout.setHorizontalGroup(
+                VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel15)
+                        .addComponent(jLabel16)
+                        .addComponent(jLabel17)
+                        .addComponent(jLabel18))
+                    .addContainerGap(94, Short.MAX_VALUE))
+            );
+            VentanaDeClienteLayout.setVerticalGroup(
+                VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeClienteLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel14)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel15)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel16)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel17)
+                    .addGap(7, 7, 7)
+                    .addComponent(jLabel18))
+                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+            );
+
+            javax.swing.GroupLayout VentanaDeArtistaLayout = new javax.swing.GroupLayout(VentanaDeArtista.getContentPane());
+            VentanaDeArtista.getContentPane().setLayout(VentanaDeArtistaLayout);
+            VentanaDeArtistaLayout.setHorizontalGroup(
+                VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 400, Short.MAX_VALUE)
+            );
+            VentanaDeArtistaLayout.setVerticalGroup(
+                VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 300, Short.MAX_VALUE)
             );
 
             setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -504,6 +570,11 @@ public class Main extends javax.swing.JFrame {
             UserList.setVisible(true);
 
             jButton2.setText("Aceptar");
+            jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    jButton2MouseClicked(evt);
+                }
+            });
             jButton2.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
                     jButton2ActionPerformed(evt);
@@ -861,15 +932,17 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemConArtistaMouseClicked
 
     private void jMenuItemConClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConClienteActionPerformed
+        //Relevar esto al controlador
         this.UserList.setSize(500, 500);
-        
         Manejador manejador = Logica.Manejador.getinstance();
-        int numeroDeClientes = manejador.getClientes().size();
-        System.out.println(numeroDeClientes);
-        JLabel ejemplo = new JLabel();
-        ejemplo.setText("Username");
-        ejemplo.setBounds(0, 40*numeroDeClientes, 200, 40);
-        this.UserListUsers.add(ejemplo);
+        List<Cliente> clientes = manejador.getClientes();
+        int numeroDeClientes = clientes.size();  
+        for(int i=0; i<numeroDeClientes; i++){
+            JLabel label = new JLabel();
+            label.setText(clientes.get(i).getNickname());
+            label.setBounds(0, 40*i, 200, 40);
+            this.UserListUsers.add(label);              
+        }    
         this.UserList.setVisible(true);
     }//GEN-LAST:event_jMenuItemConClienteActionPerformed
 
@@ -879,7 +952,15 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         this.UserList.setVisible(false);
+        this.UserListUsers.removeAll();
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        String username = this.ConsultUserTextFIeld.getText();
+        DataUsuario usuario = ICU.ConsultarCliente(username);
+        this.VentanaDeCliente.setSize(500, 200);
+        this.VentanaDeCliente.setVisible(true);
+    }//GEN-LAST:event_jButton2MouseClicked
 
     
     /**
@@ -941,6 +1022,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane UserListScroll;
     private javax.swing.JPanel UserListUsers;
     private javax.swing.JComboBox<String> UserTypeComboBox;
+    private javax.swing.JDialog VentanaDeArtista;
+    private javax.swing.JDialog VentanaDeCliente;
     private javax.swing.JButton bAddNewGen;
     private javax.swing.JButton bCancelNewGen;
     private javax.swing.JButton followAccept;
@@ -955,6 +1038,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

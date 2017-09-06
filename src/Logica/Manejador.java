@@ -63,12 +63,18 @@ public class Manejador {
            if(userType=="Cliente"){
                Cliente cliente = (Cliente) usu;
                clientes.add(cliente);
-               System.out.println(clientes.size());
-               //System.out.println(clientes.get(0).getNickname());
+               //entitymanager.getTransaction( ).begin( );
+            //entitymanager.persist(usu);
+            //entitymanager.getTransaction().commit();
+            //entitymanager.close();   
            }
            if(userType=="Artista"){
               Artista artista = (Artista) usu;
               artistas.add(artista);
+            //entitymanager.getTransaction( ).begin( );
+            //entitymanager.persist(usu);
+            //entitymanager.getTransaction().commit();
+            //entitymanager.close();   
            }           
         }
         else

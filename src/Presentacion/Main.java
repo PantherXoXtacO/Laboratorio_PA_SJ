@@ -184,830 +184,837 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 453, Short.MAX_VALUE)
         );
 
-        FileChooser.setCurrentDirectory(new java.io.File("C:\\"));
-            FileChooser.setDialogTitle("Seleccion de imagen");
+        FileChooser.setCurrentDirectory(new java.io.File("C:\\Users"));
+        FileChooser.setDialogTitle("Seleccion de imagen");
+        FileChooser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FileChooserActionPerformed(evt);
+            }
+        });
 
-            RegistrarArtista.setTitle("Opciones de artista");
+        RegistrarArtista.setTitle("Opciones de artista");
 
-            RegistrarArtistaCancelButton.setText("Cancelar");
-            RegistrarArtistaCancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    RegistrarArtistaCancelButtonMouseClicked(evt);
-                }
-            });
+        RegistrarArtistaCancelButton.setText("Cancelar");
+        RegistrarArtistaCancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegistrarArtistaCancelButtonMouseClicked(evt);
+            }
+        });
 
-            RegistrarArtistaAcceptButton.setText("Registrar");
-            RegistrarArtistaAcceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    RegistrarArtistaAcceptButtonMouseClicked(evt);
-                }
-            });
+        RegistrarArtistaAcceptButton.setText("Registrar");
+        RegistrarArtistaAcceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegistrarArtistaAcceptButtonMouseClicked(evt);
+            }
+        });
 
-            LinkWebTextField.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    LinkWebTextFieldActionPerformed(evt);
-                }
-            });
+        LinkWebTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LinkWebTextFieldActionPerformed(evt);
+            }
+        });
 
-            BiografiaTextArea.setColumns(20);
-            BiografiaTextArea.setRows(5);
-            jScrollPane2.setViewportView(BiografiaTextArea);
+        BiografiaTextArea.setColumns(20);
+        BiografiaTextArea.setRows(5);
+        jScrollPane2.setViewportView(BiografiaTextArea);
 
-            jLabel2.setText("Biografia");
+        jLabel2.setText("Biografia");
 
-            jLabel11.setText("Link a sitio web");
+        jLabel11.setText("Link a sitio web");
 
-            javax.swing.GroupLayout RegistrarArtistaLayout = new javax.swing.GroupLayout(RegistrarArtista.getContentPane());
-            RegistrarArtista.getContentPane().setLayout(RegistrarArtistaLayout);
-            RegistrarArtistaLayout.setHorizontalGroup(
-                RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(RegistrarArtistaLayout.createSequentialGroup()
-                    .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(RegistrarArtistaCancelButton)
-                        .addGroup(RegistrarArtistaLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel11))))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
-                    .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(RegistrarArtistaAcceptButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
-                        .addComponent(LinkWebTextField, javax.swing.GroupLayout.Alignment.TRAILING))
-                    .addContainerGap())
-            );
-            RegistrarArtistaLayout.setVerticalGroup(
-                RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarArtistaLayout.createSequentialGroup()
-                    .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(RegistrarArtistaLayout.createSequentialGroup()
-                            .addGap(16, 16, 16)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(RegistrarArtistaLayout.createSequentialGroup()
-                            .addGap(61, 61, 61)
-                            .addComponent(jLabel2)))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                    .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(LinkWebTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel11))
-                    .addGap(44, 44, 44)
-                    .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(RegistrarArtistaCancelButton)
-                        .addComponent(RegistrarArtistaAcceptButton)))
-            );
+        javax.swing.GroupLayout RegistrarArtistaLayout = new javax.swing.GroupLayout(RegistrarArtista.getContentPane());
+        RegistrarArtista.getContentPane().setLayout(RegistrarArtistaLayout);
+        RegistrarArtistaLayout.setHorizontalGroup(
+            RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RegistrarArtistaCancelButton)
+                    .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel11))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RegistrarArtistaAcceptButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                    .addComponent(LinkWebTextField, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
+        );
+        RegistrarArtistaLayout.setVerticalGroup(
+            RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarArtistaLayout.createSequentialGroup()
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LinkWebTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
+                .addGap(44, 44, 44)
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RegistrarArtistaCancelButton)
+                    .addComponent(RegistrarArtistaAcceptButton)))
+        );
 
-            jLabel19.setText("IMAGEN");
+        jLabel19.setText("IMAGEN");
 
-            jLabel20.setText("Nickname:");
+        jLabel20.setText("Nickname:");
 
-            jLabel21.setText("Nombre:");
+        jLabel21.setText("Nombre:");
 
-            jLabel22.setText("Apellido:");
+        jLabel22.setText("Apellido:");
 
-            jLabel23.setText("Mail:");
+        jLabel23.setText("Mail:");
 
-            jLabel24.setText("Fecha de nacimiento:");
+        jLabel24.setText("Fecha de nacimiento:");
 
-            NickLabel3.setText("nick");
+        NickLabel3.setText("nick");
 
-            NombreLabel3.setText("nombre");
+        NombreLabel3.setText("nombre");
 
-            ApellidoLabel3.setText("apellido");
+        ApellidoLabel3.setText("apellido");
 
-            MailLabel3.setText("mail");
+        MailLabel3.setText("mail");
 
-            FechaLabel3.setText("fecha");
+        FechaLabel3.setText("fecha");
 
-            BiografiaLabel2.setColumns(20);
-            BiografiaLabel2.setRows(5);
-            jScrollPane3.setViewportView(BiografiaLabel2);
+        BiografiaLabel2.setColumns(20);
+        BiografiaLabel2.setRows(5);
+        jScrollPane3.setViewportView(BiografiaLabel2);
 
-            jLabel13.setText("Biografia:");
+        jLabel13.setText("Biografia:");
 
-            jLabel15.setText("Pagina web:");
+        jLabel15.setText("Pagina web:");
 
-            WebLabel3.setText("web");
+        WebLabel3.setText("web");
 
-            javax.swing.GroupLayout VentanaDeArtistaLayout = new javax.swing.GroupLayout(VentanaDeArtista.getContentPane());
-            VentanaDeArtista.getContentPane().setLayout(VentanaDeArtistaLayout);
-            VentanaDeArtistaLayout.setHorizontalGroup(
-                VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane3)
-                .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel21)
-                                .addComponent(jLabel22)
-                                .addComponent(jLabel23)
-                                .addComponent(jLabel24)
-                                .addComponent(jLabel15))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(FechaLabel3)
-                                .addComponent(MailLabel3)
-                                .addComponent(ApellidoLabel3)
-                                .addComponent(NombreLabel3)
-                                .addComponent(NickLabel3)
-                                .addComponent(WebLabel3)))
-                        .addComponent(jLabel13))
-                    .addGap(71, 104, Short.MAX_VALUE))
-            );
-            VentanaDeArtistaLayout.setVerticalGroup(
-                VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeArtistaLayout.createSequentialGroup()
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel20)
-                                .addComponent(NickLabel3))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel21)
-                                .addComponent(NombreLabel3))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel22)
-                                .addComponent(ApellidoLabel3))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel23)
-                                .addComponent(MailLabel3))
-                            .addGap(7, 7, 7)
-                            .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel24)
-                                .addComponent(FechaLabel3)))
-                        .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel15)
-                        .addComponent(WebLabel3))
-                    .addGap(9, 9, 9)
-                    .addComponent(jLabel13)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-            );
+        javax.swing.GroupLayout VentanaDeArtistaLayout = new javax.swing.GroupLayout(VentanaDeArtista.getContentPane());
+        VentanaDeArtista.getContentPane().setLayout(VentanaDeArtistaLayout);
+        VentanaDeArtistaLayout.setHorizontalGroup(
+            VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3)
+            .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel15))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FechaLabel3)
+                            .addComponent(MailLabel3)
+                            .addComponent(ApellidoLabel3)
+                            .addComponent(NombreLabel3)
+                            .addComponent(NickLabel3)
+                            .addComponent(WebLabel3)))
+                    .addComponent(jLabel13))
+                .addGap(71, 104, Short.MAX_VALUE))
+        );
+        VentanaDeArtistaLayout.setVerticalGroup(
+            VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeArtistaLayout.createSequentialGroup()
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(NickLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel21)
+                            .addComponent(NombreLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel22)
+                            .addComponent(ApellidoLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel23)
+                            .addComponent(MailLabel3))
+                        .addGap(7, 7, 7)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(FechaLabel3)))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(WebLabel3))
+                .addGap(9, 9, 9)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
-            jLabel33.setText("IMAGEN");
+        jLabel33.setText("IMAGEN");
 
-            NicknameLabel1.setText("Nickname:");
+        NicknameLabel1.setText("Nickname:");
 
-            NombreLabel1.setText("Nombre:");
+        NombreLabel1.setText("Nombre:");
 
-            ApellidoLabel1.setText("Apellido:");
+        ApellidoLabel1.setText("Apellido:");
 
-            MailLabel1.setText("Mail:");
+        MailLabel1.setText("Mail:");
 
-            FechaLabel1.setText("Fecha de nacimiento:");
+        FechaLabel1.setText("Fecha de nacimiento:");
 
-            NickLabel2.setText("nick");
+        NickLabel2.setText("nick");
 
-            NombreLabel2.setText("nombre");
+        NombreLabel2.setText("nombre");
 
-            ApellidoLabel2.setText("apellido");
+        ApellidoLabel2.setText("apellido");
 
-            MailLabel2.setText("mail");
+        MailLabel2.setText("mail");
 
-            FechaLabel2.setText("fecha");
+        FechaLabel2.setText("fecha");
 
-            javax.swing.GroupLayout VentanaDeClienteLayout = new javax.swing.GroupLayout(VentanaDeCliente.getContentPane());
-            VentanaDeCliente.getContentPane().setLayout(VentanaDeClienteLayout);
-            VentanaDeClienteLayout.setHorizontalGroup(
-                VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(VentanaDeClienteLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(NicknameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(NombreLabel1)
-                        .addComponent(MailLabel1)
-                        .addComponent(FechaLabel1)
-                        .addComponent(ApellidoLabel1))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(FechaLabel2)
-                        .addComponent(MailLabel2)
-                        .addComponent(NombreLabel2)
-                        .addComponent(NickLabel2)
-                        .addComponent(ApellidoLabel2))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            );
-            VentanaDeClienteLayout.setVerticalGroup(
-                VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(VentanaDeClienteLayout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeClienteLayout.createSequentialGroup()
-                            .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(NicknameLabel1)
-                                .addComponent(NickLabel2))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(NombreLabel1)
-                                .addComponent(NombreLabel2))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(ApellidoLabel1)
-                                .addComponent(ApellidoLabel2))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(MailLabel1)
-                                .addComponent(MailLabel2))
-                            .addGap(7, 7, 7)
-                            .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(FechaLabel1)
-                                .addComponent(FechaLabel2)))
-                        .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap())
-            );
+        javax.swing.GroupLayout VentanaDeClienteLayout = new javax.swing.GroupLayout(VentanaDeCliente.getContentPane());
+        VentanaDeCliente.getContentPane().setLayout(VentanaDeClienteLayout);
+        VentanaDeClienteLayout.setHorizontalGroup(
+            VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NicknameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NombreLabel1)
+                    .addComponent(MailLabel1)
+                    .addComponent(FechaLabel1)
+                    .addComponent(ApellidoLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FechaLabel2)
+                    .addComponent(MailLabel2)
+                    .addComponent(NombreLabel2)
+                    .addComponent(NickLabel2)
+                    .addComponent(ApellidoLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        VentanaDeClienteLayout.setVerticalGroup(
+            VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeClienteLayout.createSequentialGroup()
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NicknameLabel1)
+                            .addComponent(NickLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NombreLabel1)
+                            .addComponent(NombreLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ApellidoLabel1)
+                            .addComponent(ApellidoLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(MailLabel1)
+                            .addComponent(MailLabel2))
+                        .addGap(7, 7, 7)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(FechaLabel1)
+                            .addComponent(FechaLabel2)))
+                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
-            setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-            jRegisterFrame.setVisible(true);
+        jRegisterFrame.setVisible(true);
 
-            jLabel1.setText("Nickname");
+        jLabel1.setText("Nickname");
 
-            jLabel3.setText("Email");
+        jLabel3.setText("Email");
 
-            jLabel4.setText("Nombre");
+        jLabel4.setText("Nombre");
 
-            jLabel5.setText("Apellido");
+        jLabel5.setText("Apellido");
 
-            jLabel6.setText("Fecha de nacimiento");
+        jLabel6.setText("Fecha de nacimiento");
 
-            jLabel7.setText("Imagen del usuario");
+        jLabel7.setText("Imagen del usuario");
 
-            RegisterCancelButton.setText("Cancelar");
-            RegisterCancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    RegisterCancelButtonMouseClicked(evt);
-                }
-            });
+        RegisterCancelButton.setText("Cancelar");
+        RegisterCancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegisterCancelButtonMouseClicked(evt);
+            }
+        });
 
-            RegisterAcceptButton.setText("Registrar");
-            RegisterAcceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    RegisterAcceptButtonMouseClicked(evt);
-                }
-            });
-            RegisterAcceptButton.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    RegisterAcceptButtonActionPerformed(evt);
-                }
-            });
+        RegisterAcceptButton.setText("Registrar");
+        RegisterAcceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegisterAcceptButtonMouseClicked(evt);
+            }
+        });
+        RegisterAcceptButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegisterAcceptButtonActionPerformed(evt);
+            }
+        });
 
-            jRegisterNicknameField.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jRegisterNicknameFieldActionPerformed(evt);
-                }
-            });
+        jRegisterNicknameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRegisterNicknameFieldActionPerformed(evt);
+            }
+        });
 
-            jRegisterApellidolField.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jRegisterApellidolFieldActionPerformed(evt);
-                }
-            });
+        jRegisterApellidolField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRegisterApellidolFieldActionPerformed(evt);
+            }
+        });
 
-            jComboBoxDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18", "19","20","21","22","23","24","25","26","27","28","29","30","31" }));
-            jComboBoxDia.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jComboBoxDiaActionPerformed(evt);
-                }
-            });
+        jComboBoxDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18", "19","20","21","22","23","24","25","26","27","28","29","30","31" }));
+        jComboBoxDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxDiaActionPerformed(evt);
+            }
+        });
 
-            jComboBoxMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1","2","3","4","5","6","7","8","9","10","11","12" }));
+        jComboBoxMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1","2","3","4","5","6","7","8","9","10","11","12" }));
 
-            jComboBoxAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1900","1901","1902","1903","1904","1905","1906","1907","1908","1909","1910","1911","1912","1913","1914","1915","1916","1917","1918","1919","1920","1921","1922","1923","1924","1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937","1938","1939","1940","1941","1942","1943","1944","1945","1946","1947","1948","1949","1950","1951","1952","1953","1954","1955","1956","1957","1958","1959","1960","1961","1962","1963","1964","1965","1966","1967","1968","1969","1970","1971","1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015", "2016" }));
+        jComboBoxAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1900","1901","1902","1903","1904","1905","1906","1907","1908","1909","1910","1911","1912","1913","1914","1915","1916","1917","1918","1919","1920","1921","1922","1923","1924","1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937","1938","1939","1940","1941","1942","1943","1944","1945","1946","1947","1948","1949","1950","1951","1952","1953","1954","1955","1956","1957","1958","1959","1960","1961","1962","1963","1964","1965","1966","1967","1968","1969","1970","1971","1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015", "2016" }));
 
-            UserTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Artista" }));
-            UserTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    UserTypeComboBoxActionPerformed(evt);
-                }
-            });
+        UserTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Artista" }));
+        UserTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserTypeComboBoxActionPerformed(evt);
+            }
+        });
 
-            jLabel10.setText("Tipo de usuario");
+        jLabel10.setText("Tipo de usuario");
 
-            jButton1.setText("Change");
-            jButton1.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton1ActionPerformed(evt);
-                }
-            });
+        jButton1.setText("Change");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-            ImagePathTextField.setEnabled(false);
+        ImagePathTextField.setEnabled(false);
 
-            javax.swing.GroupLayout jRegisterFrameLayout = new javax.swing.GroupLayout(jRegisterFrame.getContentPane());
-            jRegisterFrame.getContentPane().setLayout(jRegisterFrameLayout);
-            jRegisterFrameLayout.setHorizontalGroup(
-                jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                    .addComponent(RegisterCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(RegisterAcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(25, 25, 25)
-                            .addComponent(jRegisterNicknameField))
-                        .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addGap(46, 46, 46)
-                            .addComponent(jRegisterEmailField))
-                        .addGroup(jRegisterFrameLayout.createSequentialGroup()
+        javax.swing.GroupLayout jRegisterFrameLayout = new javax.swing.GroupLayout(jRegisterFrame.getContentPane());
+        jRegisterFrame.getContentPane().setLayout(jRegisterFrameLayout);
+        jRegisterFrameLayout.setHorizontalGroup(
+            jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                .addComponent(RegisterCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(RegisterAcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(25, 25, 25)
+                        .addComponent(jRegisterNicknameField))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(46, 46, 46)
+                        .addComponent(jRegisterEmailField))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(33, 33, 33)
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRegisterNombreField)
+                            .addComponent(jRegisterApellidolField)))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5))
-                            .addGap(33, 33, 33)
-                            .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jRegisterNombreField)
-                                .addComponent(jRegisterApellidolField)))
-                        .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                            .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
                                 .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                    .addGap(0, 0, Short.MAX_VALUE)
-                                    .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                    .addComponent(ImagePathTextField)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton1))))))
-            );
-            jRegisterFrameLayout.setVerticalGroup(
-                jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jRegisterNicknameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jRegisterNombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jRegisterApellidolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRegisterEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(13, 13, 13)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1)
-                        .addComponent(ImagePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(14, 14, 14)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel10)
-                        .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(RegisterCancelButton)
-                        .addComponent(RegisterAcceptButton)))
-            );
+                                    .addComponent(jLabel10)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                                .addComponent(ImagePathTextField)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton1))))))
+        );
+        jRegisterFrameLayout.setVerticalGroup(
+            jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRegisterNicknameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRegisterNombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRegisterApellidolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRegisterEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
+                    .addComponent(ImagePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RegisterCancelButton)
+                    .addComponent(RegisterAcceptButton)))
+        );
 
-            FrameNewGen.setVisible(true);
-            FrameNewGen.setVisible(false);
+        FrameNewGen.setVisible(true);
+        FrameNewGen.setVisible(false);
+        FrameNewGen.setTitle("Alta Genero");
 
-            jScrollPane1.setViewportView(TreeNewGen);
+        jScrollPane1.setViewportView(TreeNewGen);
 
-            bAddNewGen.setText("Agregar");
-            bAddNewGen.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    bAddNewGenMouseClicked(evt);
-                }
-            });
-            bAddNewGen.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    bAddNewGenActionPerformed(evt);
-                }
-            });
+        bAddNewGen.setText("Agregar");
+        bAddNewGen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bAddNewGenMouseClicked(evt);
+            }
+        });
+        bAddNewGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bAddNewGenActionPerformed(evt);
+            }
+        });
 
-            bCancelNewGen.setText("Cancelar");
+        bCancelNewGen.setText("Cancelar");
 
-            javax.swing.GroupLayout FrameNewGenLayout = new javax.swing.GroupLayout(FrameNewGen.getContentPane());
-            FrameNewGen.getContentPane().setLayout(FrameNewGenLayout);
-            FrameNewGenLayout.setHorizontalGroup(
-                FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameNewGenLayout.createSequentialGroup()
-                    .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(FrameNewGenLayout.createSequentialGroup()
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(43, 43, 43))
-                        .addGroup(FrameNewGenLayout.createSequentialGroup()
-                            .addGap(39, 39, 39)
-                            .addComponent(bAddNewGen)
-                            .addGap(18, 18, 18)
-                            .addComponent(bCancelNewGen)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18))
-            );
-            FrameNewGenLayout.setVerticalGroup(
-                FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(FrameNewGenLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(FrameNewGenLayout.createSequentialGroup()
-                    .addGap(62, 62, 62)
-                    .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(18, 18, 18)
-                    .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        javax.swing.GroupLayout FrameNewGenLayout = new javax.swing.GroupLayout(FrameNewGen.getContentPane());
+        FrameNewGen.getContentPane().setLayout(FrameNewGenLayout);
+        FrameNewGenLayout.setHorizontalGroup(
+            FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameNewGenLayout.createSequentialGroup()
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameNewGenLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43))
+                    .addGroup(FrameNewGenLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
                         .addComponent(bAddNewGen)
-                        .addComponent(bCancelNewGen)))
-            );
+                        .addGap(18, 18, 18)
+                        .addComponent(bCancelNewGen)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+        );
+        FrameNewGenLayout.setVerticalGroup(
+            FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameNewGenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(FrameNewGenLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bAddNewGen)
+                    .addComponent(bCancelNewGen)))
+        );
 
-            FrameSeguirUser.setVisible(true);
-            FrameSeguirUser.setVisible(false);
+        FrameSeguirUser.setVisible(true);
+        FrameSeguirUser.setVisible(false);
+        FrameSeguirUser.setTitle("Seguir Usuario");
 
-            jLabel8.setText("Usuario (Nick)");
+        jLabel8.setText("Usuario (Nick)");
 
-            jLabel9.setText("Usuario al que descea seguir (Nick)");
+        jLabel9.setText("Usuario al que descea seguir (Nick)");
 
-            followAccept.setText("Aceptar");
-            followAccept.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    followAcceptActionPerformed(evt);
-                }
-            });
+        followAccept.setText("Aceptar");
+        followAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                followAcceptActionPerformed(evt);
+            }
+        });
 
-            FollowCancel.setText("Cancelar");
-            FollowCancel.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    FollowCancelActionPerformed(evt);
-                }
-            });
+        FollowCancel.setText("Cancelar");
+        FollowCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FollowCancelActionPerformed(evt);
+            }
+        });
 
-            LabelUserMail.setForeground(new java.awt.Color(255, 0, 51));
+        LabelUserMail.setForeground(new java.awt.Color(255, 0, 51));
 
-            FollowedLabel.setForeground(new java.awt.Color(255, 0, 51));
+        FollowedLabel.setForeground(new java.awt.Color(255, 0, 51));
 
-            javax.swing.GroupLayout FrameSeguirUserLayout = new javax.swing.GroupLayout(FrameSeguirUser.getContentPane());
-            FrameSeguirUser.getContentPane().setLayout(FrameSeguirUserLayout);
-            FrameSeguirUserLayout.setHorizontalGroup(
-                FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                            .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel9)
-                                        .addComponent(jLabel8))
-                                    .addGap(0, 0, Short.MAX_VALUE))
-                                .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(Follower, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                                        .addComponent(Followed))
-                                    .addGap(2, 2, 2)
-                                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                            .addContainerGap())
-                        .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                            .addGap(22, 22, 22)
-                            .addComponent(followAccept)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                            .addComponent(FollowCancel)
-                            .addGap(49, 49, 49))))
-            );
-            FrameSeguirUserLayout.setVerticalGroup(
-                FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                    .addContainerGap(267, Short.MAX_VALUE)
-                    .addComponent(jLabel8)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(41, 41, 41)
-                    .addComponent(jLabel9)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Followed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(62, 62, 62)
-                    .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        javax.swing.GroupLayout FrameSeguirUserLayout = new javax.swing.GroupLayout(FrameSeguirUser.getContentPane());
+        FrameSeguirUser.getContentPane().setLayout(FrameSeguirUserLayout);
+        FrameSeguirUserLayout.setHorizontalGroup(
+            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel8))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(Follower, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                                    .addComponent(Followed))
+                                .addGap(2, 2, 2)
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
                         .addComponent(followAccept)
-                        .addComponent(FollowCancel)))
-            );
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addComponent(FollowCancel)
+                        .addGap(49, 49, 49))))
+        );
+        FrameSeguirUserLayout.setVerticalGroup(
+            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addContainerGap(283, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Followed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(followAccept)
+                    .addComponent(FollowCancel)))
+        );
 
-            ClientList.setVisible(true);
+        ClientList.setVisible(true);
 
-            jButton2.setText("Aceptar");
-            jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jButton2MouseClicked(evt);
-                }
-            });
-            jButton2.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton2ActionPerformed(evt);
-                }
-            });
+        jButton2.setText("Aceptar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-            jButton3.setText("Cancelar");
-            jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jButton3MouseClicked(evt);
-                }
-            });
+        jButton3.setText("Cancelar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
-            jLabel12.setText("Nick del usuario a consultar");
+        jLabel12.setText("Nick del usuario a consultar");
 
-            javax.swing.GroupLayout UserListUsersLayout = new javax.swing.GroupLayout(UserListUsers);
-            UserListUsers.setLayout(UserListUsersLayout);
-            UserListUsersLayout.setHorizontalGroup(
-                UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 361, Short.MAX_VALUE)
-            );
-            UserListUsersLayout.setVerticalGroup(
-                UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 494, Short.MAX_VALUE)
-            );
+        javax.swing.GroupLayout UserListUsersLayout = new javax.swing.GroupLayout(UserListUsers);
+        UserListUsers.setLayout(UserListUsersLayout);
+        UserListUsersLayout.setHorizontalGroup(
+            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 361, Short.MAX_VALUE)
+        );
+        UserListUsersLayout.setVerticalGroup(
+            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 494, Short.MAX_VALUE)
+        );
 
-            UserListScroll.setViewportView(UserListUsers);
+        UserListScroll.setViewportView(UserListUsers);
 
-            javax.swing.GroupLayout ClientListLayout = new javax.swing.GroupLayout(ClientList.getContentPane());
-            ClientList.getContentPane().setLayout(ClientListLayout);
-            ClientListLayout.setHorizontalGroup(
-                ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(ClientListLayout.createSequentialGroup()
-                    .addComponent(jButton3)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2))
-                .addGroup(ClientListLayout.createSequentialGroup()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(ConsultUserTextFIeld))
-                .addGroup(ClientListLayout.createSequentialGroup()
-                    .addComponent(UserListScroll)
-                    .addContainerGap())
-            );
-            ClientListLayout.setVerticalGroup(
-                ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientListLayout.createSequentialGroup()
-                    .addComponent(UserListScroll)
-                    .addGap(18, 18, 18)
-                    .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel12))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton2)
-                        .addComponent(jButton3)))
-            );
+        javax.swing.GroupLayout ClientListLayout = new javax.swing.GroupLayout(ClientList.getContentPane());
+        ClientList.getContentPane().setLayout(ClientListLayout);
+        ClientListLayout.setHorizontalGroup(
+            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2))
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ConsultUserTextFIeld))
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(UserListScroll)
+                .addContainerGap())
+        );
+        ClientListLayout.setVerticalGroup(
+            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientListLayout.createSequentialGroup()
+                .addComponent(UserListScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)))
+        );
 
-            ArtistList.setVisible(true);
+        ArtistList.setVisible(true);
 
-            jButton4.setText("Aceptar");
-            jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jButton4MouseClicked(evt);
-                }
-            });
-            jButton4.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jButton4ActionPerformed(evt);
-                }
-            });
+        jButton4.setText("Aceptar");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
-            jButton5.setText("Cancelar");
-            jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jButton5MouseClicked(evt);
-                }
-            });
+        jButton5.setText("Cancelar");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
 
-            jLabel14.setText("Nick del usuario a consultar");
+        jLabel14.setText("Nick del usuario a consultar");
 
-            javax.swing.GroupLayout UserListUsers1Layout = new javax.swing.GroupLayout(UserListUsers1);
-            UserListUsers1.setLayout(UserListUsers1Layout);
-            UserListUsers1Layout.setHorizontalGroup(
-                UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 361, Short.MAX_VALUE)
-            );
-            UserListUsers1Layout.setVerticalGroup(
-                UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 397, Short.MAX_VALUE)
-            );
+        javax.swing.GroupLayout UserListUsers1Layout = new javax.swing.GroupLayout(UserListUsers1);
+        UserListUsers1.setLayout(UserListUsers1Layout);
+        UserListUsers1Layout.setHorizontalGroup(
+            UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 361, Short.MAX_VALUE)
+        );
+        UserListUsers1Layout.setVerticalGroup(
+            UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 397, Short.MAX_VALUE)
+        );
 
-            UserListScroll1.setViewportView(UserListUsers1);
+        UserListScroll1.setViewportView(UserListUsers1);
 
-            javax.swing.GroupLayout ArtistListLayout = new javax.swing.GroupLayout(ArtistList.getContentPane());
-            ArtistList.getContentPane().setLayout(ArtistListLayout);
-            ArtistListLayout.setHorizontalGroup(
-                ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(ArtistListLayout.createSequentialGroup()
-                    .addComponent(jButton5)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4))
-                .addGroup(ArtistListLayout.createSequentialGroup()
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(ConsultUserTextFIeld1))
-                .addGroup(ArtistListLayout.createSequentialGroup()
-                    .addComponent(UserListScroll1)
-                    .addContainerGap())
-            );
-            ArtistListLayout.setVerticalGroup(
-                ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                    .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE)
-                    .addGap(18, 18, 18)
-                    .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel14))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4)
-                        .addComponent(jButton5)))
-            );
+        javax.swing.GroupLayout ArtistListLayout = new javax.swing.GroupLayout(ArtistList.getContentPane());
+        ArtistList.getContentPane().setLayout(ArtistListLayout);
+        ArtistListLayout.setHorizontalGroup(
+            ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ArtistListLayout.createSequentialGroup()
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4))
+            .addGroup(ArtistListLayout.createSequentialGroup()
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ConsultUserTextFIeld1))
+            .addGroup(ArtistListLayout.createSequentialGroup()
+                .addComponent(UserListScroll1)
+                .addContainerGap())
+        );
+        ArtistListLayout.setVerticalGroup(
+            ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
+                .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5)))
+        );
 
-            jMenuInicio.setText("Inicio");
-            jMenuBar1.add(jMenuInicio);
+        jMenuInicio.setText("Inicio");
+        jMenuBar1.add(jMenuInicio);
 
-            jMenuRegistros.setText("Registros");
-            jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuRegistrosActionPerformed(evt);
-                }
-            });
+        jMenuRegistros.setText("Registros");
+        jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuRegistrosActionPerformed(evt);
+            }
+        });
 
-            jMenuItemRegUsu.setText("Registrar Usuario");
-            jMenuItemRegUsu.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jMenuItemRegUsuMouseClicked(evt);
-                }
-            });
-            jMenuItemRegUsu.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuItemRegUsuActionPerformed(evt);
-                }
-            });
-            jMenuRegistros.add(jMenuItemRegUsu);
+        jMenuItemRegUsu.setText("Registrar Usuario");
+        jMenuItemRegUsu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItemRegUsuMouseClicked(evt);
+            }
+        });
+        jMenuItemRegUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemRegUsuActionPerformed(evt);
+            }
+        });
+        jMenuRegistros.add(jMenuItemRegUsu);
 
-            jMenuItemCrearGen.setText("Crear Genero");
-            jMenuItemCrearGen.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuItemCrearGenActionPerformed(evt);
-                }
-            });
-            jMenuRegistros.add(jMenuItemCrearGen);
+        jMenuItemCrearGen.setText("Crear Genero");
+        jMenuItemCrearGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCrearGenActionPerformed(evt);
+            }
+        });
+        jMenuRegistros.add(jMenuItemCrearGen);
 
-            jMenuItemCrearAlb.setText("Crear Album");
-            jMenuItemCrearAlb.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuItemCrearAlbActionPerformed(evt);
-                }
-            });
-            jMenuRegistros.add(jMenuItemCrearAlb);
+        jMenuItemCrearAlb.setText("Crear Album");
+        jMenuItemCrearAlb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCrearAlbActionPerformed(evt);
+            }
+        });
+        jMenuRegistros.add(jMenuItemCrearAlb);
 
-            jMenuItemCrearLis.setText("Crear Lista de Reproduccion");
-            jMenuRegistros.add(jMenuItemCrearLis);
+        jMenuItemCrearLis.setText("Crear Lista de Reproduccion");
+        jMenuRegistros.add(jMenuItemCrearLis);
 
-            jMenuBar1.add(jMenuRegistros);
+        jMenuBar1.add(jMenuRegistros);
 
-            jMenuConsultas.setText("Consultas");
+        jMenuConsultas.setText("Consultas");
 
-            jMenuItemConCliente.setText("Consultar Cliente");
-            jMenuItemConCliente.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jMenuItemConClienteMouseClicked(evt);
-                }
-            });
-            jMenuItemConCliente.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuItemConClienteActionPerformed(evt);
-                }
-            });
-            jMenuConsultas.add(jMenuItemConCliente);
+        jMenuItemConCliente.setText("Consultar Cliente");
+        jMenuItemConCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItemConClienteMouseClicked(evt);
+            }
+        });
+        jMenuItemConCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConClienteActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemConCliente);
 
-            jMenuItemConArtista.setText("Consultar Artista");
-            jMenuItemConArtista.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jMenuItemConArtistaMouseClicked(evt);
-                }
-            });
-            jMenuItemConArtista.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuItemConArtistaActionPerformed(evt);
-                }
-            });
-            jMenuConsultas.add(jMenuItemConArtista);
+        jMenuItemConArtista.setText("Consultar Artista");
+        jMenuItemConArtista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItemConArtistaMouseClicked(evt);
+            }
+        });
+        jMenuItemConArtista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConArtistaActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemConArtista);
 
-            jMenuItemConAlbum.setText("Consultar Album");
-            jMenuConsultas.add(jMenuItemConAlbum);
+        jMenuItemConAlbum.setText("Consultar Album");
+        jMenuConsultas.add(jMenuItemConAlbum);
 
-            jMenuItemConLista.setText("Consultar Lista");
-            jMenuConsultas.add(jMenuItemConLista);
+        jMenuItemConLista.setText("Consultar Lista");
+        jMenuConsultas.add(jMenuItemConLista);
 
-            jMenuBar1.add(jMenuConsultas);
+        jMenuBar1.add(jMenuConsultas);
 
-            jMenuUsuarios.setText("Usuarios");
+        jMenuUsuarios.setText("Usuarios");
 
-            jMenuItemSegUsu.setText("Seguir Usuario");
-            jMenuItemSegUsu.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    jMenuItemSegUsuActionPerformed(evt);
-                }
-            });
-            jMenuUsuarios.add(jMenuItemSegUsu);
+        jMenuItemSegUsu.setText("Seguir Usuario");
+        jMenuItemSegUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSegUsuActionPerformed(evt);
+            }
+        });
+        jMenuUsuarios.add(jMenuItemSegUsu);
 
-            jMenuItemDejarDeSeguirUsu.setText("Dejar De Seguir Usuario");
-            jMenuUsuarios.add(jMenuItemDejarDeSeguirUsu);
+        jMenuItemDejarDeSeguirUsu.setText("Dejar De Seguir Usuario");
+        jMenuUsuarios.add(jMenuItemDejarDeSeguirUsu);
 
-            jMenuItemGuardarFav.setText("Guardar Favorito");
-            jMenuUsuarios.add(jMenuItemGuardarFav);
+        jMenuItemGuardarFav.setText("Guardar Favorito");
+        jMenuUsuarios.add(jMenuItemGuardarFav);
 
-            jMenuItemQuitarFav.setText("Quitar Favorito");
-            jMenuUsuarios.add(jMenuItemQuitarFav);
+        jMenuItemQuitarFav.setText("Quitar Favorito");
+        jMenuUsuarios.add(jMenuItemQuitarFav);
 
-            jMenuBar1.add(jMenuUsuarios);
+        jMenuBar1.add(jMenuUsuarios);
 
-            jMenuListas.setText("Listas");
+        jMenuListas.setText("Listas");
 
-            jMenuItemAgregarLista.setText("Agregar Lista");
-            jMenuListas.add(jMenuItemAgregarLista);
+        jMenuItemAgregarLista.setText("Agregar Lista");
+        jMenuListas.add(jMenuItemAgregarLista);
 
-            jMenuItemQuitarLista.setText("Quitar Lista");
-            jMenuListas.add(jMenuItemQuitarLista);
+        jMenuItemQuitarLista.setText("Quitar Lista");
+        jMenuListas.add(jMenuItemQuitarLista);
 
-            jMenuItemPublicarLista.setText("Publicar Lista");
-            jMenuListas.add(jMenuItemPublicarLista);
+        jMenuItemPublicarLista.setText("Publicar Lista");
+        jMenuListas.add(jMenuItemPublicarLista);
 
-            jMenuBar1.add(jMenuListas);
+        jMenuBar1.add(jMenuListas);
 
-            setJMenuBar(jMenuBar1);
+        setJMenuBar(jMenuBar1);
 
-            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-            getContentPane().setLayout(layout);
-            layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jRegisterFrame)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FrameNewGen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(ClientList)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jRegisterFrame)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(FrameNewGen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap()
+                    .addComponent(ArtistList)
+                    .addGap(306, 306, 306)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jRegisterFrame)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ClientList)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 63, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(ClientList)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap())
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ArtistList)
-                        .addGap(306, 306, 306)))
-            );
-            layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jRegisterFrame)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(ClientList)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 323, Short.MAX_VALUE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(ArtistList)
-                        .addContainerGap(598, Short.MAX_VALUE)))
-            );
+                    .addContainerGap()
+                    .addComponent(ArtistList)
+                    .addContainerGap(391, Short.MAX_VALUE)))
+        );
 
-            pack();
-        }// </editor-fold>//GEN-END:initComponents
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemCrearAlbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearAlbActionPerformed
         // TODO add your handling code here:
@@ -1297,6 +1304,21 @@ public class Main extends javax.swing.JFrame {
         }    
         this.ArtistList.setVisible(true);
     }//GEN-LAST:event_jMenuItemConArtistaActionPerformed
+
+    private void FileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FileChooserActionPerformed
+        int returnVal = this.FileChooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = this.FileChooser.getSelectedFile();
+            try {
+                //What to do with the file, e.g. display it in a TextArea
+                this.ImagePathTextField.read( new FileReader( file.getAbsolutePath() ), null );
+        } catch (IOException ex) {
+          System.out.println("problem accessing file"+file.getAbsolutePath());
+        }
+        } else {
+            System.out.println("File access cancelled by user.");
+        }
+    }//GEN-LAST:event_FileChooserActionPerformed
 
     
     /**

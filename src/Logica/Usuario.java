@@ -23,17 +23,17 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy= GenerationType.AUTO) 
     long id;
     
-    //@Column(name = "NICKNAME")
+    @Column(name = "NICKNAME")
     private String nickname;
-    //@Column(name = "CONSTRASEÑA")
+    @Column(name = "CONSTRASEÑA")
     private String contraseña;
-    //@Column(name = "MAIL")
+    @Column(name = "MAIL")
     private String mail; // Identificador
-    //@Column(name = "NOMBRE")
+    @Column(name = "NOMBRE")
     private String nombre;
-    //@Column(name = "APELLIDO")
+    @Column(name = "APELLIDO")
     private String apellido;
-    //@Column(name = "FECHA_DE_NACIMIENTO")  ???
+    //@Column(name = "FECHA_DE_NACIMIENTO")
     private Fecha fechaDeNacimiento;
     private BufferedImage imagen;
     

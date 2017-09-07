@@ -22,8 +22,8 @@ public class Manejador {
     private double IdList;
     
     //Para la base de datos
-    //EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Eclipselink_JPA" );
-    //EntityManager entitymanager = emfactory.createEntityManager( );    
+    EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Lab_Pro_AplPU" );
+    EntityManager entitymanager = emfactory.createEntityManager( );    
     
     private static Manejador instancia=null;
     
@@ -52,28 +52,21 @@ public class Manejador {
         return instancia;
     }
     
-    public void addUsuario(Usuario usu, String userType){
+    public void addUsuario(Usuario usu, String userType){ //El usuario sera Cliente o Artista
         String nickname = usu.getNickname(); //si no existe en la lista
-        usuarios.add(usu); 
-           //entitymanager.getTransaction( ).begin( );
-           //entitymanager.persist(usu);
-           //entitymanager.getTransaction().commit();
-           //entitymanager.close();   
+        usuarios.add(usu);
+        Usuario user = new Usuario(usu.getNickname(),"",usu.getMail(),usu.getNombre(),usu.getApellido(),null,null);
+        entitymanager.getTransaction( ).begin( );
+        entitymanager.persist(user);
+        entitymanager.getTransaction().commit();
+        entitymanager.close();   
         if(userType=="Cliente"){
-               Cliente cliente = (Cliente) usu;
-               clientes.add(cliente);
-               //entitymanager.getTransaction( ).begin( );
-            //entitymanager.persist(usu);
-            //entitymanager.getTransaction().commit();
-            //entitymanager.close();   
+            Cliente cliente = (Cliente) usu;
+            clientes.add(cliente); 
            }
         if(userType=="Artista"){
               Artista artista = (Artista) usu;
-              artistas.add(artista);
-            //entitymanager.getTransaction( ).begin( );
-            //entitymanager.persist(usu);
-            //entitymanager.getTransaction().commit();
-            //entitymanager.close();   
+              artistas.add(artista); 
            } 
     } 
     

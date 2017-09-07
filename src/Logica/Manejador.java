@@ -143,7 +143,7 @@ public class Manejador {
     }
 
     boolean FindUser(String text) {
-        Iterator it=usuariosCI.iterator();
+        Iterator it=usuarios.iterator();
         Usuario user;
         while(it.hasNext()){
             user=(Usuario)it.next();

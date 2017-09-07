@@ -33,19 +33,7 @@ public class Controlador implements IControlador {
             mu.addUsuario(user, userType);
         }        
     }
-    
-    @Override
-    public DataUsuario verInfoUsuario(String ci){
-        Manejador mu = Manejador.getinstance();
-        Usuario u = mu.obtenerUsuario(ci);
-        if (u!= null)
-            return new DataUsuario(u.getNickname(), u.getContraseña(),
-                                   u.getMail(), u.getNombre(), u.getApellido(),
-                                   u.getFechaDeNacimiento(), u.getImagen());
-        else
-            return new DataUsuario("", "", "", "", "", null, null);
-        
-    }
+  
     
     @Override
     public void AltaGenero(String nombre, String padre){

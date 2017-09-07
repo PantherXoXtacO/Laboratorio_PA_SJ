@@ -1,6 +1,7 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 /**
  *
@@ -40,15 +41,21 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void AltaGenero(String nombre, Genero padre){
-        Genero g=new Genero(nombre);
-        if(padre==null){
-            Manejador M=Manejador.getinstance();
-            M.getGenero().addGenero(g);
+    public void AltaGenero(String nombre, String padre){
+        Manejador mu = Manejador.getinstance();
+        Genero gen;
+        Genero nuevoGen=new Genero(nombre);
+        if(padre.equals("") || padre.equals("General")){
+            gen=mu.getGenero();
+            gen.addHijo(nuevoGen);
         }
         else{
-            padre.addGenero(g);
+            gen=mu.findGenero(padre);
+            if(gen!=null){
+                gen.addHijo(nuevoGen);
+            }
         }
+        mu.addGeneroToList(nuevoGen);
     }
     
 
@@ -85,6 +92,5 @@ public class Controlador implements IControlador {
             u1.addFollow(u2);
             u2.addFollower(u1);
        }
-    }
-    
+    }    
 }

@@ -292,6 +292,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         bCancelNewGen.setText("Cancelar");
+        bCancelNewGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelNewGenActionPerformed(evt);
+            }
+        });
 
         jLabel10.setText("Genero padre");
 
@@ -330,7 +335,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -407,7 +412,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -585,33 +590,50 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItemCrearGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearGenActionPerformed
         FrameNewGen.setVisible(true);
-        Genero general=ICU.GetGenero();
-        DefaultTreeModel model = (DefaultTreeModel)TreeNewGen.getModel();
-        DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();        
-        root.add(PopulateTree(general));
-        model.reload();
+        PopulateTree();
     }//GEN-LAST:event_jMenuItemCrearGenActionPerformed
     
-    private DefaultMutableTreeNode PopulateTree(Genero g){
-        DefaultMutableTreeNode Nodo = new DefaultMutableTreeNode(g.getNombre());
+    private void PopulateTree(){        
+        //No tocar ¡chanchada!
+        TreeNewGen = new javax.swing.JTree();
+        DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
+        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(TreeNewGen);
+        ////////////////////////////////////////////////////////////////////////
+        
+        Genero general=ICU.GetGenero();
+        DefaultTreeModel model = (DefaultTreeModel)TreeNewGen.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
+        Iterator it = general.getHijos().iterator();
+        while(it.hasNext()){
+            root.add(RecursivePopulate((Genero)it.next()));
+        }
+        model.reload(root);
+        TreeNewGen.revalidate();
+    }
+    
+    private DefaultMutableTreeNode RecursivePopulate(Genero g){
+        DefaultMutableTreeNode nodo= new DefaultMutableTreeNode(g.getNombre());
         Iterator it=g.getHijos().iterator();
         Genero aux;
         while(it.hasNext()){
             aux=(Genero)it.next();
-            DefaultMutableTreeNode NodoHijo= new DefaultMutableTreeNode(aux.getNombre());
-            Nodo.add(NodoHijo);
-            PopulateTree(aux);
+            nodo.add(RecursivePopulate(aux));
         }
-        return Nodo;
+        return nodo;
     }
     
     private void bAddNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddNewGenActionPerformed
-//        Genero root=ICU.GetGenero();
-//        TreeNewGen=new JTree((TreeNode) root);
-//        
-//        
-//        DefaultTreeModel model=(DefaultTreeModel) TreeNewGen.getModel();
-//        DefaultTreeModel SelectedNode=(DefaultTreeModel) TreeNewGen.getLastSelectedPathComponent();
+        if(!(TFNewGen.getText().equals(""))){
+            DefaultMutableTreeNode select = (DefaultMutableTreeNode) TreeNewGen.getLastSelectedPathComponent();
+            String SelectedNom;
+            if(select!=null)
+                SelectedNom=select.toString();
+            else
+                SelectedNom="";
+            ICU.AltaGenero(TFNewGen.getText(), SelectedNom);
+            PopulateTree();
+        }
     }//GEN-LAST:event_bAddNewGenActionPerformed
 
     private void bAddNewGenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAddNewGenMouseClicked
@@ -652,6 +674,11 @@ public class Main extends javax.swing.JFrame {
         this.FollowedLabel.setText("");
         this.FrameSeguirUser.setVisible(true);
     }//GEN-LAST:event_jMenuItemSegUsuActionPerformed
+
+    private void bCancelNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelNewGenActionPerformed
+        FrameNewGen.setVisible(false);
+        TFNewGen.setText("");
+    }//GEN-LAST:event_bCancelNewGenActionPerformed
 
     /**
      * @param args the command line arguments

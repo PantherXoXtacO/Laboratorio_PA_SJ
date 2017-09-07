@@ -2,6 +2,7 @@ package Logica;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -55,10 +56,15 @@ public class Genero implements Serializable{
     
     
     //Funciones
-    void addGenero(Genero g) {
-        /*if(!(hijos.containsKey(g.getNombre()))){
-           hijos.put(g.getNombre(), g);
-        }*/
+    public void addHijo(Genero g) {
+        Iterator it=hijos.iterator();
+        Genero aux;
+        while(it.hasNext()){
+            aux=(Genero)it.next();
+            if(aux.getNombre().equals(g.getNombre()))
+                return;
+        }
+        hijos.add(g);
     }
     
     

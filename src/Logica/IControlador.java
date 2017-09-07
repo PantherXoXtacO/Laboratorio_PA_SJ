@@ -11,7 +11,7 @@ public interface IControlador{
                     Fecha fechaDeNacimiento, BufferedImage imagen);
     public abstract DataUsuario verInfoUsuario(String nickname);
     
-    public abstract void AltaGenero(String nombre, Genero padre);
+    public abstract void AltaGenero(String nombre, String padre);
     public abstract Genero GetGenero();
     //public abstract void AgregarTema(Usuario user, );//Agregar tema a lista
     public abstract void SeguirUsuario(String seguidor, String seguido);

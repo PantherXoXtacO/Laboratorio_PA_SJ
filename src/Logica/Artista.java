@@ -17,7 +17,7 @@ public class Artista extends Usuario {
         return dir_web;
     }
 
-    public Artista(String biografia, String dir_web, String nickname, String contraseña, String mail, String nombre, String apellido, Fecha fechaDeNacimiento, BufferedImage imagen) {
+    public Artista(String biografia, String dir_web, String nickname, String contraseña, String mail, String nombre, String apellido, Fecha fechaDeNacimiento, byte[] imagen) {
         super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
         this.biografia = biografia;
         this.dir_web = dir_web;

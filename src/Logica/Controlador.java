@@ -16,7 +16,7 @@ public class Controlador implements IControlador {
     public void registrarUsuario(String nickname, String contraseña, 
                                     String mail, String nombre, String apellido,
                                     Fecha fechaDeNacimiento,
-                                    BufferedImage imagen, String userType,
+                                    byte[] imagen, String userType,
                                     String biografia, String dir_web) {
         //Instancio al manejador
         Manejador mu = Manejador.getinstance();

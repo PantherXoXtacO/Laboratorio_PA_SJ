@@ -13,7 +13,7 @@ public class Cliente extends Usuario{
 
     public Cliente(String nickname, String contraseña, String mail,
                     String nombre, String apellido, Fecha fechaDeNacimiento,
-                    BufferedImage imagen) {
+                    byte[] imagen) {
         super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
         this.siguiendo = new ArrayList();
         this.temasFav = new ArrayList();

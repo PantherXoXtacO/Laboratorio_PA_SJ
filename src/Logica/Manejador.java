@@ -56,10 +56,17 @@ public class Manejador {
         String nickname = usu.getNickname(); //si no existe en la lista
         usuarios.add(usu);
         Usuario user = new Usuario(usu.getNickname(),"",usu.getMail(),usu.getNombre(),usu.getApellido(),null,null);
-        entitymanager.getTransaction( ).begin( );
-        entitymanager.persist(user);
-        entitymanager.getTransaction().commit();
-        entitymanager.close();   
+        
+        try {
+            entitymanager.getTransaction().begin();
+            entitymanager.persist(user);
+            entitymanager.getTransaction().commit();
+            entitymanager.close();            
+        } catch (Exception e) {
+            e.printStackTrace();
+            entitymanager.getTransaction().rollback();
+        } 
+  
         if(userType=="Cliente"){
             Cliente cliente = (Cliente) usu;
             clientes.add(cliente); 
@@ -133,5 +140,18 @@ public class Manejador {
     boolean FindUser(String text) {
     //    return usuariosCI.containsKey(text); Cambiar por funcion de List
     return true;
+    }
+
+    public void persist(Object object) {
+        entitymanager.getTransaction().begin();
+        try {
+            entitymanager.persist(object);
+            entitymanager.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+            entitymanager.getTransaction().rollback();
+        } finally {
+            entitymanager.close();
+        }
     }
 }

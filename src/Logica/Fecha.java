@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Logica;
+import java.io.Serializable;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
@@ -11,7 +12,7 @@ import java.util.regex.Matcher;
  *
  * @author Casca
  */
-public class Fecha {
+public class Fecha implements Serializable{
     private int dia;
     private int mes;
     private int año;

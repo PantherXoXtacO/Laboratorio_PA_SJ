@@ -25,7 +25,9 @@ import java.io.IOException;
 import java.util.List;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
+import java.util.Iterator;
 import javax.swing.JTree;
+import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 
 /**
@@ -126,6 +128,8 @@ public class Main extends javax.swing.JFrame {
         bAddNewGen = new javax.swing.JButton();
         TFNewGen = new javax.swing.JTextField();
         bCancelNewGen = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         FrameSeguirUser = new javax.swing.JInternalFrame();
         Follower = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -601,6 +605,8 @@ public class Main extends javax.swing.JFrame {
         FrameNewGen.setVisible(false);
         FrameNewGen.setTitle("Alta Genero");
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
+        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(TreeNewGen);
 
         bAddNewGen.setText("Agregar");
@@ -616,12 +622,22 @@ public class Main extends javax.swing.JFrame {
         });
 
         bCancelNewGen.setText("Cancelar");
+        bCancelNewGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelNewGenActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Genero padre");
+
+        jLabel11.setText("Nombre del nuevo genero");
 
         javax.swing.GroupLayout FrameNewGenLayout = new javax.swing.GroupLayout(FrameNewGen.getContentPane());
         FrameNewGen.getContentPane().setLayout(FrameNewGenLayout);
         FrameNewGenLayout.setHorizontalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameNewGenLayout.createSequentialGroup()
+            .addGroup(FrameNewGenLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FrameNewGenLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -635,6 +651,16 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
+                    .addComponent(jLabel11)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(FrameNewGenLayout.createSequentialGroup()
+                            .addComponent(bAddNewGen)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bCancelNewGen))
+                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         FrameNewGenLayout.setVerticalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -648,6 +674,19 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen)))
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bAddNewGen)
+                    .addComponent(bCancelNewGen))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -702,7 +741,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(followAccept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addComponent(FollowCancel)
                         .addGap(49, 49, 49))))
         );
@@ -724,7 +763,8 @@ public class Main extends javax.swing.JFrame {
                 .addGap(62, 62, 62)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
-                    .addComponent(FollowCancel)))
+                    .addComponent(FollowCancel))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -979,6 +1019,12 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FrameSeguirUser)
+                    .addComponent(jRegisterFrame))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jRegisterFrame)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -997,6 +1043,10 @@ public class Main extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FrameNewGen)
+                    .addComponent(jRegisterFrame))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRegisterFrame)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ClientList)
@@ -1005,6 +1055,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 63, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -1106,15 +1157,51 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_RegisterAcceptButtonMouseClicked
 
     private void jMenuItemCrearGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearGenActionPerformed
+        FrameNewGen.setVisible(true);
+        PopulateTree();
     }//GEN-LAST:event_jMenuItemCrearGenActionPerformed
-
+    
+    private void PopulateTree(){        
+        //No tocar ¡chanchada!
+        TreeNewGen = new javax.swing.JTree();
+        DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
+        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(TreeNewGen);
+        ////////////////////////////////////////////////////////////////////////
+        
+        Genero general=ICU.GetGenero();
+        DefaultTreeModel model = (DefaultTreeModel)TreeNewGen.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
+        Iterator it = general.getHijos().iterator();
+        while(it.hasNext()){
+            root.add(RecursivePopulate((Genero)it.next()));
+        }
+        model.reload(root);
+        TreeNewGen.revalidate();
+    }
+    
+    private DefaultMutableTreeNode RecursivePopulate(Genero g){
+        DefaultMutableTreeNode nodo= new DefaultMutableTreeNode(g.getNombre());
+        Iterator it=g.getHijos().iterator();
+        Genero aux;
+        while(it.hasNext()){
+            aux=(Genero)it.next();
+            nodo.add(RecursivePopulate(aux));
+        }
+        return nodo;
+    }
+    
     private void bAddNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddNewGenActionPerformed
-//        Genero root=ICU.GetGenero();
-//        TreeNewGen=new JTree((TreeNode) root);
-//        
-//        
-//        DefaultTreeModel model=(DefaultTreeModel) TreeNewGen.getModel();
-//        DefaultTreeModel SelectedNode=(DefaultTreeModel) TreeNewGen.getLastSelectedPathComponent();
+        if(!(TFNewGen.getText().equals(""))){
+            DefaultMutableTreeNode select = (DefaultMutableTreeNode) TreeNewGen.getLastSelectedPathComponent();
+            String SelectedNom;
+            if(select!=null)
+                SelectedNom=select.toString();
+            else
+                SelectedNom="";
+            ICU.AltaGenero(TFNewGen.getText(), SelectedNom);
+            PopulateTree();
+        }
     }//GEN-LAST:event_bAddNewGenActionPerformed
 
     private void bAddNewGenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAddNewGenMouseClicked
@@ -1129,9 +1216,14 @@ public class Main extends javax.swing.JFrame {
             FollowedLabel.setText("Nick invalido");
         }
         if((ICU.FindUser(Followed.getText()))&&(ICU.FindUser(Follower.getText()))){
-            ICU.SeguirUsuario(Follower.getText(), Followed.getText());
-            JOptionPane.showMessageDialog(this, "Operacion realicada con exito", "Seguir Usuario", JOptionPane.INFORMATION_MESSAGE);
-            FrameSeguirUser.setVisible(false);
+            if(Follower.getText().equals(Followed.getText())){
+                JOptionPane.showMessageDialog(this, "Los usuarios no pueden seguirse a si mismos", "Seguir Usuario", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                ICU.SeguirUsuario(Follower.getText(), Followed.getText());
+                JOptionPane.showMessageDialog(this, "Operacion realicada con exito", "Seguir Usuario", JOptionPane.INFORMATION_MESSAGE);
+                FrameSeguirUser.setVisible(false);
+            }
         }       
     }//GEN-LAST:event_followAcceptActionPerformed
 
@@ -1321,6 +1413,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_FileChooserActionPerformed
 
     
+    private void bCancelNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelNewGenActionPerformed
+        FrameNewGen.setVisible(false);
+        TFNewGen.setText("");
+    }//GEN-LAST:event_bCancelNewGenActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1416,6 +1513,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxMes;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

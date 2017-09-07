@@ -14,7 +14,8 @@ public class Manejador {
     private List<Cliente> clientes;
     private List<Artista> artistas;
     private List<ListaDeReproduccion> Listas; // Listas por defecto
-    private Genero genero; // Guarda el genero raiz
+    private final Genero genero=new Genero("General"); // Guarda el genero raiz
+    private List<Genero> generosList;
     
     //Ids para la identificadores
     private double IdTema;
@@ -32,7 +33,7 @@ public class Manejador {
         clientes=new ArrayList();
         artistas=new ArrayList();
         Listas=new ArrayList();
-        genero=new Genero("Genero");
+        generosList=new ArrayList();
         IdTema=0;
         IdAlbum=0;
         IdList=0;
@@ -136,10 +137,21 @@ public class Manejador {
     public Genero getGenero(){
         return genero;
     }
+    
+    public List<Genero> getListGeneros(){
+        return generosList;
+    }
 
     boolean FindUser(String text) {
-    //    return usuariosCI.containsKey(text); Cambiar por funcion de List
-    return true;
+        Iterator it=usuariosCI.iterator();
+        Usuario user;
+        while(it.hasNext()){
+            user=(Usuario)it.next();
+            if(user.getNickname()==text){
+                return true;
+            }
+        }
+        return false;
     }
 
     public void persist(Object object) {
@@ -153,5 +165,20 @@ public class Manejador {
         } finally {
             entitymanager.close();
         }
+    }
+
+    Genero findGenero(String text) {
+        Iterator it=generosList.iterator();
+        Genero g;
+        while(it.hasNext()){
+            g=(Genero)it.next();
+            if(g.getNombre().equals(text))
+                return g;
+        }
+        return null;
+    }
+
+    void addGeneroToList(Genero nuevoGen){
+            generosList.add(nuevoGen);
     }
 }

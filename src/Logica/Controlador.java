@@ -44,18 +44,23 @@ public class Controlador implements IControlador {
     public void AltaGenero(String nombre, String padre){
         Manejador mu = Manejador.getinstance();
         Genero gen;
-        Genero nuevoGen=new Genero(nombre);
-        if(padre.equals("") || padre.equals("General")){
+        Genero nuevoGen=mu.findGenero(nombre);
+        if(nuevoGen==null){
+            nuevoGen=new Genero(nombre);
+            if(padre.equals("") || padre.equals("General")){
+            System.out.println("sin padre");
             gen=mu.getGenero();
             gen.addHijo(nuevoGen);
-        }
-        else{
-            gen=mu.findGenero(padre);
-            if(gen!=null){
-                gen.addHijo(nuevoGen);
             }
+            else{
+               gen=mu.findGenero(padre);
+                if(gen!=null){
+                   gen.addHijo(nuevoGen);
+                }
+            }
+            mu.addGeneroToList(nuevoGen);
         }
-        mu.addGeneroToList(nuevoGen);
+
     }
     
 

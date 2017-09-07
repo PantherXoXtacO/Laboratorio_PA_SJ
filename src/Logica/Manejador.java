@@ -88,13 +88,6 @@ public class Manejador {
     }
 
     void addGeneroToList(Genero nuevoGen){
-        Iterator it=generosList.iterator();
-        Genero g;
-        while(it.hasNext()){
-            g=(Genero)it.next();
-            if(g.getNombre().equals(nuevoGen.getNombre()))
-                return;
-        }
-        generosList.add(nuevoGen);
+            generosList.add(nuevoGen);
     }
 }

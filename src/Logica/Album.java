@@ -20,7 +20,7 @@ public class Album implements Serializable {
     
     private String nombre;
     private int anio;
-    private BufferedImage img;
+    private String img;
     private Artista artista;
     
     private List<Tema> temas;
@@ -29,7 +29,7 @@ public class Album implements Serializable {
     public Album() {
     }
     
-    public Album(String nom, int year, BufferedImage imagen, Artista artist){
+    public Album(String nom, int year, String imagen, Artista artist){
         nombre=nom;
         anio=year;
         img=imagen;
@@ -47,7 +47,7 @@ public class Album implements Serializable {
         return anio;
     }
     
-    public BufferedImage getImg(){
+    public String getImg(){
         return img;
     }
     

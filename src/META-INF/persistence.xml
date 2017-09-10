@@ -3,6 +3,9 @@
   <persistence-unit name="Lab_Pro_AplPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>Logica.Usuario</class>
+    <class>Logica.Artista</class>
+    <class>Logica.Cliente</class>
+    <class>Logica.Album</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Espotify"/>
       <property name="javax.persistence.jdbc.user" value="tisj"/>

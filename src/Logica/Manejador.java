@@ -56,25 +56,33 @@ public class Manejador {
     public void addUsuario(Usuario usu, String userType){ //El usuario sera Cliente o Artista
         String nickname = usu.getNickname(); //si no existe en la lista
         usuarios.add(usu);
-        Usuario user = new Usuario(usu.getNickname(),"",usu.getMail(),usu.getNombre(),usu.getApellido(),null,null);
-        
-        try {
-            entitymanager.getTransaction().begin();
-            entitymanager.persist(user);
-            entitymanager.getTransaction().commit();
-            entitymanager.close();            
-        } catch (Exception e) {
-            e.printStackTrace();
-            entitymanager.getTransaction().rollback();
-        } 
-  
         if(userType=="Cliente"){
             Cliente cliente = (Cliente) usu;
             clientes.add(cliente); 
-           }
+             try {
+                entitymanager.getTransaction().begin();
+                entitymanager.persist(cliente);
+                entitymanager.getTransaction().commit();
+                entitymanager.close(); 
+             }
+             catch (Exception e) {
+                e.printStackTrace();
+                entitymanager.getTransaction().rollback();
+            } 
+        }
         if(userType=="Artista"){
               Artista artista = (Artista) usu;
               artistas.add(artista); 
+              try {
+                entitymanager.getTransaction().begin();
+                entitymanager.persist(artista);
+                entitymanager.getTransaction().commit();
+                entitymanager.close(); 
+              }
+              catch (Exception e) {
+                e.printStackTrace();
+                entitymanager.getTransaction().rollback();
+              } 
            } 
     } 
     

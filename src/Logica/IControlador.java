@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 public interface IControlador{
     public abstract void registrarUsuario(String nickname, String contraseña,
                     String mail, String nombre, String apellido,
-                    Fecha fechaDeNacimiento, byte[] imagen, String usertype,
+                    Fecha fechaDeNacimiento, String imagen, String usertype,
                     String biografia, String dir_web);
     
     public abstract void AltaGenero(String nombre, String padre);

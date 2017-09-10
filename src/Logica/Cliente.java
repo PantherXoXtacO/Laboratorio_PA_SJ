@@ -1,9 +1,15 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
+@Entity
 public class Cliente extends Usuario{
     private List<Usuario> siguiendo;
     private List<Tema> temasFav;
@@ -11,9 +17,11 @@ public class Cliente extends Usuario{
     private List<ListaDeReproduccion> listasFav;
     private List<ListaDeReproduccion> Listas; //Listas propias creadas por el usuario
 
+    
+    
     public Cliente(String nickname, String contraseña, String mail,
                     String nombre, String apellido, Fecha fechaDeNacimiento,
-                    byte[] imagen) {
+                    String imagen) {
         super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
         this.siguiendo = new ArrayList();
         this.temasFav = new ArrayList();
@@ -21,6 +29,9 @@ public class Cliente extends Usuario{
         this.listasFav = new ArrayList();
         this.Listas = new ArrayList();        
     }
+
+    public Cliente() {
+    }   
     
     @Override
     void addFollow(Usuario u2) {

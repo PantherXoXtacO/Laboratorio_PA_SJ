@@ -48,6 +48,7 @@ public class Main extends javax.swing.JFrame {
         this.ClientList.setVisible(false);
         this.ArtistList.setVisible(false);
         this.setLocationRelativeTo(null);
+        this.AltaAlbum.setVisible(false);
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();

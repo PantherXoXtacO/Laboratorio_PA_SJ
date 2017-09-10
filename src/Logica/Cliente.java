@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "CLIENTE")
 public class Cliente extends Usuario{
     private List<Usuario> siguiendo;
     private List<Tema> temasFav;

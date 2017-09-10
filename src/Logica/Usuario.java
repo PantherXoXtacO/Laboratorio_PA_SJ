@@ -68,9 +68,7 @@ public abstract class Usuario implements Serializable {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
-        this.imagen = imagen;
-        
-                
+        this.imagen = imagen;    
         //this.seguidores=new List();
     }
     

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 public class Manejador {
     //Clase que conserva las colecciones globales del sistema
@@ -37,6 +38,12 @@ public class Manejador {
         IdTema=0;
         IdAlbum=0;
         IdList=0;
+        
+        Query q = entitymanager.createQuery("SELECT a FROM Cliente a");
+        Query q2 = entitymanager.createQuery("SELECT a FROM Artista a");
+        clientes = q.getResultList();
+        artistas = q2.getResultList();
+        
     }
     
     public List<Cliente> getClientes(){
@@ -54,10 +61,10 @@ public class Manejador {
     }
     
     public void addUsuario(Usuario usu, String userType){ //El usuario sera Cliente o Artista
-        String nickname = usu.getNickname(); //si no existe en la lista
-        usuarios.add(usu);
+        //String nickname = usu.getNickname(); //si no existe en la lista
+        //usuarios.add(usu);
         if(userType=="Cliente"){
-            Cliente cliente = (Cliente) usu;
+            Cliente cliente = (Cliente) usu;            
             clientes.add(cliente); 
              try {
                 entitymanager.getTransaction().begin();
@@ -85,21 +92,39 @@ public class Manejador {
               } 
            } 
     } 
-    
-    
+        
     public boolean nicknameLibre(String nickname){
-        return this.obtenerUsuario(nickname) == null; 
+        if(this.obtenerCliente(nickname) == null){
+            if(this.obtenerArtista(nickname)== null)
+                return true;
+        }
+        return false;
     }  
     
     public boolean mailLibre(String mail){
-        return this.obtenerUsuarioPorMail(mail) == null; 
+        if(this.obtenerClientePorMail(mail) == null){
+            if(this.obtenerArtistaPorMail(mail)== null)
+                return true;
+        }
+        return false;
     } 
     
-    public Usuario obtenerUsuarioPorMail(String mail){
-        Iterator it = usuarios.iterator();
-        Usuario user;
+   
+    public Usuario obtenerClientePorMail(String mail){
+        Iterator it = clientes.iterator();
+        Cliente user;
         while(it.hasNext()){
-            user = (Usuario)it.next();
+            user = (Cliente)it.next();
+            if(user.getMail().equals(mail))
+                return user;
+        }
+        return null;
+    }
+    public Usuario obtenerArtistaPorMail(String mail){
+        Iterator it = artistas.iterator();
+        Artista user;
+        while(it.hasNext()){
+            user = (Artista)it.next();
             if(user.getMail().equals(mail))
                 return user;
         }

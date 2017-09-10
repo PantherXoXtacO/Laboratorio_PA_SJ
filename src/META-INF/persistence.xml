@@ -6,6 +6,7 @@
     <class>Logica.Artista</class>
     <class>Logica.Cliente</class>
     <class>Logica.Album</class>
+    <class>Logica.Fecha</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Espotify"/>
       <property name="javax.persistence.jdbc.user" value="tisj"/>

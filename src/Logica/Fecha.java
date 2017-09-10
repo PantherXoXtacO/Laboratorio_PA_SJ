@@ -7,14 +7,26 @@ package Logica;
 import java.io.Serializable;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  *
  * @author Casca
  */
-public class Fecha implements Serializable{
+@Entity
+public class Fecha{
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO) 
+    long id;
+    @Column(name = "DIA")
     private int dia;
+    @Column(name = "MES")
     private int mes;
+    @Column(name = "AÑO")
     private int año;
     
     public Fecha(){}

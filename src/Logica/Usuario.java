@@ -11,9 +11,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +25,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -30,6 +33,7 @@ import javax.persistence.Table;
  * @author Casca
  */
 @MappedSuperclass
+@Table(name = "USUARIO")
 public abstract class Usuario implements Serializable {
     
     @Id
@@ -46,7 +50,8 @@ public abstract class Usuario implements Serializable {
     private String nombre;
     @Column(name = "APELLIDO")
     private String apellido;
-    @Column(name = "FECHA_DE_NACIMIENTO")
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "FECHA_DE_NACIMIENTO")
     private Fecha fechaDeNacimiento;
     @Column(name = "IMAGEN_DE_USUARIO")
     private String imagen; //path a la imagen del usuario

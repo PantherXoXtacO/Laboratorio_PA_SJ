@@ -5,6 +5,9 @@
  */
 package Presentacion;
 
+import Logica.Artista;
+import Logica.Cliente;
+import Logica.DataUsuario;
 import Logica.Fabrica;
 import Logica.IControlador;
 import javax.swing.JOptionPane;
@@ -12,8 +15,19 @@ import Logica.Fecha;
 import java.awt.image.BufferedImage;
 import javax.swing.tree.DefaultTreeModel;
 import Logica.Genero;
+import Logica.Manejador;
+import Logica.Usuario;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import java.util.Iterator;
 import javax.swing.JTree;
+import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 
 /**
@@ -31,6 +45,10 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         this.setSize(550, 550);
         this.jRegisterFrame.setVisible(false);
+        this.ExistArtistAltaAlbum.setVisible(false);
+        this.AltaAlbum.setVisible(false);
+        this.ClientList.setVisible(false);
+        this.ArtistList.setVisible(false);
         this.setLocationRelativeTo(null);
         
         //Inicialización
@@ -47,12 +65,52 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jInternalFrame1 = new javax.swing.JInternalFrame();
         jInternalFrame2 = new javax.swing.JInternalFrame();
-        jDialog1 = new javax.swing.JDialog();
+        FileChooser = new javax.swing.JFileChooser();
+        RegistrarArtista = new javax.swing.JDialog();
+        RegistrarArtistaCancelButton = new javax.swing.JButton();
+        RegistrarArtistaAcceptButton = new javax.swing.JButton();
+        LinkWebTextField = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        BiografiaTextArea = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        VentanaDeArtista = new javax.swing.JDialog();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        NickLabel3 = new javax.swing.JLabel();
+        NombreLabel3 = new javax.swing.JLabel();
+        ApellidoLabel3 = new javax.swing.JLabel();
+        MailLabel3 = new javax.swing.JLabel();
+        FechaLabel3 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        BiografiaLabel2 = new javax.swing.JTextArea();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        WebLabel3 = new javax.swing.JLabel();
+        VentanaDeCliente = new javax.swing.JDialog();
+        jLabel33 = new javax.swing.JLabel();
+        NicknameLabel1 = new javax.swing.JLabel();
+        NombreLabel1 = new javax.swing.JLabel();
+        ApellidoLabel1 = new javax.swing.JLabel();
+        MailLabel1 = new javax.swing.JLabel();
+        FechaLabel1 = new javax.swing.JLabel();
+        NickLabel2 = new javax.swing.JLabel();
+        NombreLabel2 = new javax.swing.JLabel();
+        ApellidoLabel2 = new javax.swing.JLabel();
+        MailLabel2 = new javax.swing.JLabel();
+        FechaLabel2 = new javax.swing.JLabel();
+        ExistArtistAltaAlbum = new javax.swing.JDialog();
+        exitartistaltaablumlabel1 = new javax.swing.JLabel();
+        exitartistaltaablumtxtNick1 = new javax.swing.JTextField();
+        exitartistaltaablumbtnCancelar1 = new javax.swing.JButton();
+        exitartistaltaablumbtnConfirmar1 = new javax.swing.JButton();
         jRegisterFrame = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -61,19 +119,24 @@ public class Main extends javax.swing.JFrame {
         RegisterCancelButton = new javax.swing.JButton();
         RegisterAcceptButton = new javax.swing.JButton();
         jRegisterNicknameField = new javax.swing.JTextField();
-        jRegisterContraseñaField = new javax.swing.JTextField();
-        jRegisterEmailField = new javax.swing.JTextField();
+        jRegisterApellidolField = new javax.swing.JTextField();
         jRegisterNombreField = new javax.swing.JTextField();
-        jRegisterApellidoField = new javax.swing.JTextField();
+        jRegisterEmailField = new javax.swing.JTextField();
         jComboBoxDia = new javax.swing.JComboBox<>();
         jComboBoxMes = new javax.swing.JComboBox<>();
         jComboBoxAño = new javax.swing.JComboBox<>();
+        UserTypeComboBox = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        ImagePathTextField = new javax.swing.JTextField();
         FrameNewGen = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         TreeNewGen = new javax.swing.JTree();
         bAddNewGen = new javax.swing.JButton();
         TFNewGen = new javax.swing.JTextField();
         bCancelNewGen = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         FrameSeguirUser = new javax.swing.JInternalFrame();
         Follower = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -83,6 +146,46 @@ public class Main extends javax.swing.JFrame {
         FollowCancel = new javax.swing.JButton();
         LabelUserMail = new javax.swing.JLabel();
         FollowedLabel = new javax.swing.JLabel();
+        ClientList = new javax.swing.JInternalFrame();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        ConsultUserTextFIeld = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        UserListScroll = new javax.swing.JScrollPane();
+        UserListUsers = new javax.swing.JPanel();
+        ArtistList = new javax.swing.JInternalFrame();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        ConsultUserTextFIeld1 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        UserListScroll1 = new javax.swing.JScrollPane();
+        UserListUsers1 = new javax.swing.JPanel();
+        AltaAlbum = new javax.swing.JInternalFrame();
+        AltaAlbumjLabel9 = new javax.swing.JLabel();
+        AltaAlbumtxtNom = new javax.swing.JTextField();
+        AltaAlbumjLabel10 = new javax.swing.JLabel();
+        AltaAlbumtxtApe = new javax.swing.JTextField();
+        AltaAlbumjLabel11 = new javax.swing.JLabel();
+        AltaAlbumDia = new javax.swing.JComboBox<>();
+        AltaAlbumMes = new javax.swing.JComboBox<>();
+        AltaAlbumAnio = new javax.swing.JComboBox<>();
+        AltaAlbumbtnImagen = new javax.swing.JButton();
+        AltaAlbumbtnCancelar = new javax.swing.JButton();
+        AltaAlbumbtnConfirmar = new javax.swing.JButton();
+        jAltaAlbumLabel12 = new javax.swing.JLabel();
+        AltaAlbumjScrollPane1 = new javax.swing.JScrollPane();
+        AltaAlbumlblImagen = new javax.swing.JLabel();
+        AltaAlbumjScrollPane2 = new javax.swing.JScrollPane();
+        AltaAlbumjList1 = new javax.swing.JList<>();
+        jAltaAlbumLabel13 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        AltaAlbumjList2 = new javax.swing.JList<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        AltaAlbumjList3 = new javax.swing.JList<>();
+        AltaAlbumjLabel14 = new javax.swing.JLabel();
+        AltaAlbumjLabel15 = new javax.swing.JLabel();
+        AltaAlbumjLabel16 = new javax.swing.JLabel();
+        AltaAlbumjRadioButton1 = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
         jMenuRegistros = new javax.swing.JMenu();
@@ -105,41 +208,323 @@ public class Main extends javax.swing.JFrame {
         jMenuItemQuitarLista = new javax.swing.JMenuItem();
         jMenuItemPublicarLista = new javax.swing.JMenuItem();
 
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         jInternalFrame2.setVisible(true);
 
         javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
         jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
         jInternalFrame2Layout.setHorizontalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 482, Short.MAX_VALUE)
         );
         jInternalFrame2Layout.setVerticalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 453, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        FileChooser.setCurrentDirectory(new java.io.File("C:\\Users"));
+        FileChooser.setDialogTitle("Seleccion de imagen");
+        FileChooser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FileChooserActionPerformed(evt);
+            }
+        });
+
+        RegistrarArtista.setTitle("Opciones de artista");
+
+        RegistrarArtistaCancelButton.setText("Cancelar");
+        RegistrarArtistaCancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegistrarArtistaCancelButtonMouseClicked(evt);
+            }
+        });
+
+        RegistrarArtistaAcceptButton.setText("Registrar");
+        RegistrarArtistaAcceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RegistrarArtistaAcceptButtonMouseClicked(evt);
+            }
+        });
+
+        LinkWebTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LinkWebTextFieldActionPerformed(evt);
+            }
+        });
+
+        BiografiaTextArea.setColumns(20);
+        BiografiaTextArea.setRows(5);
+        jScrollPane2.setViewportView(BiografiaTextArea);
+
+        jLabel2.setText("Biografia");
+
+        jLabel17.setText("Link a sitio web");
+
+        javax.swing.GroupLayout RegistrarArtistaLayout = new javax.swing.GroupLayout(RegistrarArtista.getContentPane());
+        RegistrarArtista.getContentPane().setLayout(RegistrarArtistaLayout);
+        RegistrarArtistaLayout.setHorizontalGroup(
+            RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RegistrarArtistaCancelButton)
+                    .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel17))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(RegistrarArtistaAcceptButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                    .addComponent(LinkWebTextField, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        RegistrarArtistaLayout.setVerticalGroup(
+            RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RegistrarArtistaLayout.createSequentialGroup()
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(RegistrarArtistaLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LinkWebTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
+                .addGap(44, 44, 44)
+                .addGroup(RegistrarArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RegistrarArtistaCancelButton)
+                    .addComponent(RegistrarArtistaAcceptButton)))
+        );
+
+        jLabel19.setText("IMAGEN");
+
+        jLabel20.setText("Nickname:");
+
+        jLabel21.setText("Nombre:");
+
+        jLabel22.setText("Apellido:");
+
+        jLabel23.setText("Mail:");
+
+        jLabel24.setText("Fecha de nacimiento:");
+
+        NickLabel3.setText("nick");
+
+        NombreLabel3.setText("nombre");
+
+        ApellidoLabel3.setText("apellido");
+
+        MailLabel3.setText("mail");
+
+        FechaLabel3.setText("fecha");
+
+        BiografiaLabel2.setColumns(20);
+        BiografiaLabel2.setRows(5);
+        jScrollPane3.setViewportView(BiografiaLabel2);
+
+        jLabel13.setText("Biografia:");
+
+        jLabel15.setText("Pagina web:");
+
+        WebLabel3.setText("web");
+
+        javax.swing.GroupLayout VentanaDeArtistaLayout = new javax.swing.GroupLayout(VentanaDeArtista.getContentPane());
+        VentanaDeArtista.getContentPane().setLayout(VentanaDeArtistaLayout);
+        VentanaDeArtistaLayout.setHorizontalGroup(
+            VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3)
+            .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel15))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FechaLabel3)
+                            .addComponent(MailLabel3)
+                            .addComponent(ApellidoLabel3)
+                            .addComponent(NombreLabel3)
+                            .addComponent(NickLabel3)
+                            .addComponent(WebLabel3)))
+                    .addComponent(jLabel13))
+                .addGap(71, 104, Short.MAX_VALUE))
+        );
+        VentanaDeArtistaLayout.setVerticalGroup(
+            VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeArtistaLayout.createSequentialGroup()
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(NickLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel21)
+                            .addComponent(NombreLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel22)
+                            .addComponent(ApellidoLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel23)
+                            .addComponent(MailLabel3))
+                        .addGap(7, 7, 7)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel24)
+                            .addComponent(FechaLabel3)))
+                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(WebLabel3))
+                .addGap(9, 9, 9)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jLabel33.setText("IMAGEN");
+
+        NicknameLabel1.setText("Nickname:");
+
+        NombreLabel1.setText("Nombre:");
+
+        ApellidoLabel1.setText("Apellido:");
+
+        MailLabel1.setText("Mail:");
+
+        FechaLabel1.setText("Fecha de nacimiento:");
+
+        NickLabel2.setText("nick");
+
+        NombreLabel2.setText("nombre");
+
+        ApellidoLabel2.setText("apellido");
+
+        MailLabel2.setText("mail");
+
+        FechaLabel2.setText("fecha");
+
+        javax.swing.GroupLayout VentanaDeClienteLayout = new javax.swing.GroupLayout(VentanaDeCliente.getContentPane());
+        VentanaDeCliente.getContentPane().setLayout(VentanaDeClienteLayout);
+        VentanaDeClienteLayout.setHorizontalGroup(
+            VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NicknameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NombreLabel1)
+                    .addComponent(MailLabel1)
+                    .addComponent(FechaLabel1)
+                    .addComponent(ApellidoLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FechaLabel2)
+                    .addComponent(MailLabel2)
+                    .addComponent(NombreLabel2)
+                    .addComponent(NickLabel2)
+                    .addComponent(ApellidoLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        VentanaDeClienteLayout.setVerticalGroup(
+            VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeClienteLayout.createSequentialGroup()
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NicknameLabel1)
+                            .addComponent(NickLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NombreLabel1)
+                            .addComponent(NombreLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ApellidoLabel1)
+                            .addComponent(ApellidoLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(MailLabel1)
+                            .addComponent(MailLabel2))
+                        .addGap(7, 7, 7)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(FechaLabel1)
+                            .addComponent(FechaLabel2)))
+                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        ExistArtistAltaAlbum.setLocationRelativeTo(null);
+        ExistArtistAltaAlbum.setSize(400, 200);
+
+        exitartistaltaablumlabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        exitartistaltaablumlabel1.setText("Artista");
+
+        exitartistaltaablumtxtNick1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitartistaltaablumtxtNick1ActionPerformed(evt);
+            }
+        });
+
+        exitartistaltaablumbtnCancelar1.setText("Cancelar");
+        exitartistaltaablumbtnCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitartistaltaablumbtnCancelar1ActionPerformed(evt);
+            }
+        });
+
+        exitartistaltaablumbtnConfirmar1.setText("Confirmar");
+        exitartistaltaablumbtnConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitartistaltaablumbtnConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ExistArtistAltaAlbumLayout = new javax.swing.GroupLayout(ExistArtistAltaAlbum.getContentPane());
+        ExistArtistAltaAlbum.getContentPane().setLayout(ExistArtistAltaAlbumLayout);
+        ExistArtistAltaAlbumLayout.setHorizontalGroup(
+            ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(exitartistaltaablumlabel1)
+                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(exitartistaltaablumbtnCancelar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exitartistaltaablumbtnConfirmar1))
+                    .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(exitartistaltaablumtxtNick1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        ExistArtistAltaAlbumLayout.setVerticalGroup(
+            ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(exitartistaltaablumlabel1)
+                    .addComponent(exitartistaltaablumtxtNick1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(exitartistaltaablumbtnCancelar1)
+                    .addComponent(exitartistaltaablumbtnConfirmar1))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -148,15 +533,13 @@ public class Main extends javax.swing.JFrame {
 
         jLabel1.setText("Nickname");
 
-        jLabel2.setText("Contraseña");
-
         jLabel3.setText("Email");
 
         jLabel4.setText("Nombre");
 
         jLabel5.setText("Apellido");
 
-        jLabel6.setText("Fecha de Nacimiento");
+        jLabel6.setText("Fecha de nacimiento");
 
         jLabel7.setText("Imagen del usuario");
 
@@ -173,6 +556,11 @@ public class Main extends javax.swing.JFrame {
                 RegisterAcceptButtonMouseClicked(evt);
             }
         });
+        RegisterAcceptButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegisterAcceptButtonActionPerformed(evt);
+            }
+        });
 
         jRegisterNicknameField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,17 +568,40 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jRegisterEmailField.addActionListener(new java.awt.event.ActionListener() {
+        jRegisterApellidolField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRegisterEmailFieldActionPerformed(evt);
+                jRegisterApellidolFieldActionPerformed(evt);
             }
         });
 
         jComboBoxDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5","6","7","8","9","10","11","12","13","14","15","16","17","18", "19","20","21","22","23","24","25","26","27","28","29","30","31" }));
+        jComboBoxDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxDiaActionPerformed(evt);
+            }
+        });
 
         jComboBoxMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1","2","3","4","5","6","7","8","9","10","11","12" }));
 
         jComboBoxAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1900","1901","1902","1903","1904","1905","1906","1907","1908","1909","1910","1911","1912","1913","1914","1915","1916","1917","1918","1919","1920","1921","1922","1923","1924","1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937","1938","1939","1940","1941","1942","1943","1944","1945","1946","1947","1948","1949","1950","1951","1952","1953","1954","1955","1956","1957","1958","1959","1960","1961","1962","1963","1964","1965","1966","1967","1968","1969","1970","1971","1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015", "2016" }));
+
+        UserTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Artista" }));
+        UserTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserTypeComboBoxActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Tipo de usuario");
+
+        jButton1.setText("Change");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        ImagePathTextField.setEnabled(false);
 
         javax.swing.GroupLayout jRegisterFrameLayout = new javax.swing.GroupLayout(jRegisterFrame.getContentPane());
         jRegisterFrame.getContentPane().setLayout(jRegisterFrameLayout);
@@ -198,39 +609,49 @@ public class Main extends javax.swing.JFrame {
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addComponent(RegisterCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(RegisterAcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(14, 14, 14)
-                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRegisterEmailField, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRegisterApellidoField)
-                            .addComponent(jRegisterContraseñaField, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jRegisterNombreField)))
-                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(25, 25, 25)
                         .addComponent(jRegisterNicknameField))
                     .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(jLabel3)
+                        .addGap(46, 46, 46)
+                        .addComponent(jRegisterEmailField))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addGap(533, 533, 533)
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRegisterNombreField)
+                            .addComponent(jRegisterApellidolField)))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel6)
+                                .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                                    .addComponent(jLabel10)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)
-                        .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                                .addComponent(ImagePathTextField)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButton1))))))
         );
         jRegisterFrameLayout.setVerticalGroup(
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,30 +659,33 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRegisterNicknameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRegisterContraseñaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRegisterNombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRegisterApellidolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRegisterEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRegisterNombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRegisterApellidoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
+                    .addComponent(ImagePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
@@ -270,7 +694,10 @@ public class Main extends javax.swing.JFrame {
 
         FrameNewGen.setVisible(true);
         FrameNewGen.setVisible(false);
+        FrameNewGen.setTitle("Alta Genero");
 
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
+        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(TreeNewGen);
 
         bAddNewGen.setText("Agregar");
@@ -286,45 +713,55 @@ public class Main extends javax.swing.JFrame {
         });
 
         bCancelNewGen.setText("Cancelar");
+        bCancelNewGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCancelNewGenActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setText("Genero padre");
+
+        jLabel11.setText("Nombre del nuevo genero");
 
         javax.swing.GroupLayout FrameNewGenLayout = new javax.swing.GroupLayout(FrameNewGen.getContentPane());
         FrameNewGen.getContentPane().setLayout(FrameNewGenLayout);
         FrameNewGenLayout.setHorizontalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameNewGenLayout.createSequentialGroup()
+            .addGroup(FrameNewGenLayout.createSequentialGroup()
+                .addGap(578, 578, 578)
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(bAddNewGen)
-                        .addGap(18, 18, 18)
-                        .addComponent(bCancelNewGen)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                    .addComponent(jLabel11)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(FrameNewGenLayout.createSequentialGroup()
+                            .addComponent(bAddNewGen)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(bCancelNewGen))
+                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         FrameNewGenLayout.setVerticalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameNewGenLayout.createSequentialGroup()
-                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(FrameNewGenLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bAddNewGen)
-                            .addComponent(bCancelNewGen))))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bAddNewGen)
+                    .addComponent(bCancelNewGen))
+                .addContainerGap(461, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
         FrameSeguirUser.setVisible(false);
+        FrameSeguirUser.setTitle("Seguir Usuario");
 
         jLabel8.setText("Usuario (Nick)");
 
@@ -374,14 +811,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(followAccept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addComponent(FollowCancel)
                         .addGap(49, 49, 49))))
         );
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addContainerGap(345, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -397,7 +834,356 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
+        );
+
+        ClientList.setVisible(true);
+
+        jButton2.setText("Aceptar");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Cancelar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        jLabel12.setText("Nick del usuario a consultar");
+
+        javax.swing.GroupLayout UserListUsersLayout = new javax.swing.GroupLayout(UserListUsers);
+        UserListUsers.setLayout(UserListUsersLayout);
+        UserListUsersLayout.setHorizontalGroup(
+            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1060, Short.MAX_VALUE)
+        );
+        UserListUsersLayout.setVerticalGroup(
+            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1121, Short.MAX_VALUE)
+        );
+
+        UserListScroll.setViewportView(UserListUsers);
+
+        javax.swing.GroupLayout ClientListLayout = new javax.swing.GroupLayout(ClientList.getContentPane());
+        ClientList.getContentPane().setLayout(ClientListLayout);
+        ClientListLayout.setHorizontalGroup(
+            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2))
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ConsultUserTextFIeld))
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(UserListScroll)
+                .addContainerGap())
+        );
+        ClientListLayout.setVerticalGroup(
+            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientListLayout.createSequentialGroup()
+                .addComponent(UserListScroll)
+                .addGap(18, 18, 18)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3)))
+        );
+
+        ArtistList.setVisible(true);
+
+        jButton4.setText("Aceptar");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Cancelar");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jLabel14.setText("Nick del usuario a consultar");
+
+        javax.swing.GroupLayout UserListUsers1Layout = new javax.swing.GroupLayout(UserListUsers1);
+        UserListUsers1.setLayout(UserListUsers1Layout);
+        UserListUsers1Layout.setHorizontalGroup(
+            UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1046, Short.MAX_VALUE)
+        );
+        UserListUsers1Layout.setVerticalGroup(
+            UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 776, Short.MAX_VALUE)
+        );
+
+        UserListScroll1.setViewportView(UserListUsers1);
+
+        javax.swing.GroupLayout ArtistListLayout = new javax.swing.GroupLayout(ArtistList.getContentPane());
+        ArtistList.getContentPane().setLayout(ArtistListLayout);
+        ArtistListLayout.setHorizontalGroup(
+            ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ArtistListLayout.createSequentialGroup()
+                .addComponent(jButton5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4))
+            .addGroup(ArtistListLayout.createSequentialGroup()
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(UserListScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.DEFAULT_SIZE, 898, Short.MAX_VALUE))
+        );
+        ArtistListLayout.setVerticalGroup(
+            ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
+                .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ArtistListLayout.createSequentialGroup()
+                        .addContainerGap(778, Short.MAX_VALUE)
+                        .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(UserListScroll1)
+                        .addGap(20, 20, 20)))
+                .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5)))
+        );
+
+        ExistArtistAltaAlbum.setLocationRelativeTo(null);
+        AltaAlbum.setVisible(true);
+
+        AltaAlbumjLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AltaAlbumjLabel9.setText("Nombre Album");
+
+        AltaAlbumtxtNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumtxtNomActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumjLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AltaAlbumjLabel10.setText("Generos Pertenecientes");
+
+        AltaAlbumjLabel11.setText("Año de creación:");
+
+        AltaAlbumDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        AltaAlbumDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumDiaActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        AltaAlbumMes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumMesActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumAnio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998" }));
+        AltaAlbumAnio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumAnioActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnImagen.setText("Agregar Imagen");
+        AltaAlbumbtnImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnImagenActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnCancelar.setText("Cancelar");
+        AltaAlbumbtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnCancelarActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnConfirmar.setText("Confirmar");
+        AltaAlbumbtnConfirmar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnConfirmarActionPerformed(evt);
+            }
+        });
+
+        jAltaAlbumLabel12.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jAltaAlbumLabel12.setText("Alta Album");
+
+        AltaAlbumlblImagen.setText("Imagen");
+        AltaAlbumjScrollPane1.setViewportView(AltaAlbumlblImagen);
+
+        AltaAlbumjList1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AltaAlbumjList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        AltaAlbumjScrollPane2.setViewportView(AltaAlbumjList1);
+
+        jAltaAlbumLabel13.setFont(new java.awt.Font("Calibri", 2, 18)); // NOI18N
+        jAltaAlbumLabel13.setText("Temas:");
+
+        AltaAlbumjList2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AltaAlbumjList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(AltaAlbumjList2);
+
+        AltaAlbumjList3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AltaAlbumjList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane5.setViewportView(AltaAlbumjList3);
+
+        AltaAlbumjLabel14.setText("Nombre");
+
+        AltaAlbumjLabel15.setText("Duración");
+
+        AltaAlbumjLabel16.setText("Ubicación");
+
+        AltaAlbumjRadioButton1.setText("Crear Particular");
+
+        javax.swing.GroupLayout AltaAlbumLayout = new javax.swing.GroupLayout(AltaAlbum.getContentPane());
+        AltaAlbum.getContentPane().setLayout(AltaAlbumLayout);
+        AltaAlbumLayout.setHorizontalGroup(
+            AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(AltaAlbumLayout.createSequentialGroup()
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AltaAlbumLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jAltaAlbumLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(139, 139, 139))
+                            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(AltaAlbumjLabel14)
+                                .addGap(59, 59, 59)
+                                .addComponent(AltaAlbumjLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumjLabel16)
+                                .addGap(51, 51, 51)))
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(AltaAlbumbtnImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                            .addComponent(AltaAlbumjScrollPane1)
+                            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(AltaAlbumjRadioButton1))))
+                    .addGroup(AltaAlbumLayout.createSequentialGroup()
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumjScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumjLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(AltaAlbumjLabel10))
+                                    .addGroup(AltaAlbumLayout.createSequentialGroup()
+                                        .addGap(33, 33, 33)
+                                        .addComponent(AltaAlbumjLabel9)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(AltaAlbumtxtNom, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                    .addComponent(AltaAlbumtxtApe))))
+                        .addGap(9, 9, 9)
+                        .addComponent(AltaAlbumbtnCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AltaAlbumbtnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(jAltaAlbumLabel12)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        AltaAlbumLayout.setVerticalGroup(
+            AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AltaAlbumLayout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(jAltaAlbumLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AltaAlbumLayout.createSequentialGroup()
+                        .addComponent(AltaAlbumjScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(AltaAlbumbtnImagen)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AltaAlbumjRadioButton1)
+                        .addGap(14, 14, 14)
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumbtnCancelar)
+                            .addComponent(AltaAlbumbtnConfirmar)))
+                    .addGroup(AltaAlbumLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumtxtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumjLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumtxtApe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumjLabel10))
+                        .addGap(18, 18, 18)
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumjLabel11)
+                            .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addComponent(jAltaAlbumLabel13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AltaAlbumjLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AltaAlbumjLabel15)
+                            .addComponent(AltaAlbumjLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AltaAlbumjScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(27, 27, 27))
         );
 
         jMenuInicio.setText("Inicio");
@@ -447,9 +1233,29 @@ public class Main extends javax.swing.JFrame {
         jMenuConsultas.setText("Consultas");
 
         jMenuItemConCliente.setText("Consultar Cliente");
+        jMenuItemConCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItemConClienteMouseClicked(evt);
+            }
+        });
+        jMenuItemConCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConClienteActionPerformed(evt);
+            }
+        });
         jMenuConsultas.add(jMenuItemConCliente);
 
         jMenuItemConArtista.setText("Consultar Artista");
+        jMenuItemConArtista.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItemConArtistaMouseClicked(evt);
+            }
+        });
+        jMenuItemConArtista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConArtistaActionPerformed(evt);
+            }
+        });
         jMenuConsultas.add(jMenuItemConArtista);
 
         jMenuItemConAlbum.setText("Consultar Album");
@@ -501,30 +1307,55 @@ public class Main extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jRegisterFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FrameNewGen)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jRegisterFrame)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FrameNewGen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(ClientList)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(ArtistList)
+                    .addGap(306, 306, 306)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(883, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jRegisterFrame)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jRegisterFrame)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ClientList)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(ArtistList)
+                    .addContainerGap(673, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(1103, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemCrearAlbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearAlbActionPerformed
-        // TODO add your handling code here:
+       this.ExistArtistAltaAlbum.setVisible(true);
+       this.AltaAlbum.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearAlbActionPerformed
 
     private void jMenuItemRegUsuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRegUsuMouseClicked
@@ -535,9 +1366,9 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRegisterNicknameFieldActionPerformed
 
-    private void jRegisterEmailFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRegisterEmailFieldActionPerformed
+    private void jRegisterApellidolFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRegisterApellidolFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRegisterEmailFieldActionPerformed
+    }//GEN-LAST:event_jRegisterApellidolFieldActionPerformed
 
     private void RegisterCancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterCancelButtonMouseClicked
         this.jRegisterFrame.setVisible(false);
@@ -546,44 +1377,118 @@ public class Main extends javax.swing.JFrame {
     private void jMenuItemRegUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRegUsuActionPerformed
         this.jRegisterFrame.setVisible(true);
         this.jRegisterNicknameField.setText("");
-        this.jRegisterContraseñaField.setText("");
-        this.jRegisterEmailField.setText("");
+        this.jRegisterApellidolField.setText("");
         this.jRegisterNombreField.setText("");
-        this.jRegisterApellidoField.setText("");
+        this.jRegisterEmailField.setText("");
     }//GEN-LAST:event_jMenuItemRegUsuActionPerformed
 
     private void RegisterAcceptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterAcceptButtonMouseClicked
         String nick = this.jRegisterNicknameField.getText();
-        String contraseña = this.jRegisterContraseñaField.getText();
-        String email = this.jRegisterEmailField.getText();
+        String apellido = this.jRegisterApellidolField.getText();
         String nombre= this.jRegisterNombreField.getText();
-        String apellido = this.jRegisterApellidoField.getText();
+        String email = this.jRegisterEmailField.getText();
+        int userTypeIndex = this.UserTypeComboBox.getSelectedIndex();
+        String userType = this.UserTypeComboBox.getItemAt(userTypeIndex);
         int dia = this.jComboBoxDia.getSelectedIndex() + 1;
         int mes = this.jComboBoxMes.getSelectedIndex() + 1;
         int año = this.jComboBoxAño.getSelectedIndex() + 1900;
         Fecha fechaDeNac = new Fecha(dia, mes, año);
-        if(fechaDeNac.validarFecha())
-            System.out.println("Valida");
+        if(fechaDeNac.validarFecha()){
+            if(!nick.isEmpty() && !email.isEmpty() && !nombre.isEmpty() &&
+                    !apellido.isEmpty()){
+               if(userType=="Cliente"){
+                    if(ICU.nicknameLibre(nick)){
+                        if(ICU.mailLibre(email)){
+                            ICU.registrarUsuario(nick, "", email, nombre, apellido, fechaDeNac, null, userType, "", "");
+                            JOptionPane.showMessageDialog(this, "El Cliente se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);                
+                            return;   
+                        }
+                        else{
+                            JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
+                            return; 
+                        }
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(this, "Nickname en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
+                        return;
+                    }     
+                    
+            }
+                if(userType=="Artista")      
+                    if(ICU.nicknameLibre(nick)){
+                        if(ICU.mailLibre(email)){
+                            this.RegistrarArtista.setSize(500, 500);
+                            this.RegistrarArtista.setVisible(true);
+                        }
+                        else
+                            JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(this, "Nickname en uso", "Error", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                     
+            }
+            else
+               JOptionPane.showMessageDialog(this, "Todos los campos son necesarios", "Error", JOptionPane.INFORMATION_MESSAGE); 
+            
+        }
         else
-            System.out.println("Invalida");        
+            JOptionPane.showMessageDialog(this, "Fecha invalida", "Error", JOptionPane.INFORMATION_MESSAGE);       
+        
         
         //A través de mi interfaz registro a un nuevo usuario en mi Sistema
-        ICU.registrarUsuario(nick, contraseña, email, nombre, apellido, fechaDeNac, null); // Corresponder con los datos correctos luego
+        
         
         //Muestro éxito de la operación
-        JOptionPane.showMessageDialog(this, "El Usuario se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);
+        
     }//GEN-LAST:event_RegisterAcceptButtonMouseClicked
 
     private void jMenuItemCrearGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearGenActionPerformed
+        FrameNewGen.setVisible(true);
+        PopulateTree();
     }//GEN-LAST:event_jMenuItemCrearGenActionPerformed
-
+    
+    private void PopulateTree(){        
+        //No tocar ¡chanchada!
+        TreeNewGen = new javax.swing.JTree();
+        DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
+        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(TreeNewGen);
+        ////////////////////////////////////////////////////////////////////////
+        
+        Genero general=ICU.GetGenero();
+        DefaultTreeModel model = (DefaultTreeModel)TreeNewGen.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
+        Iterator it = general.getHijos().iterator();
+        while(it.hasNext()){
+            root.add(RecursivePopulate((Genero)it.next()));
+        }
+        model.reload(root);
+        TreeNewGen.revalidate();
+    }
+    
+    private DefaultMutableTreeNode RecursivePopulate(Genero g){
+        DefaultMutableTreeNode nodo= new DefaultMutableTreeNode(g.getNombre());
+        Iterator it=g.getHijos().iterator();
+        Genero aux;
+        while(it.hasNext()){
+            aux=(Genero)it.next();
+            nodo.add(RecursivePopulate(aux));
+        }
+        return nodo;
+    }
+    
     private void bAddNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddNewGenActionPerformed
-//        Genero root=ICU.GetGenero();
-//        TreeNewGen=new JTree((TreeNode) root);
-//        
-//        
-//        DefaultTreeModel model=(DefaultTreeModel) TreeNewGen.getModel();
-//        DefaultTreeModel SelectedNode=(DefaultTreeModel) TreeNewGen.getLastSelectedPathComponent();
+        if(!(TFNewGen.getText().equals(""))){
+            DefaultMutableTreeNode select = (DefaultMutableTreeNode) TreeNewGen.getLastSelectedPathComponent();
+            String SelectedNom;
+            if(select!=null)
+                SelectedNom=select.toString();
+            else
+                SelectedNom="";
+            ICU.AltaGenero(TFNewGen.getText(), SelectedNom);
+            PopulateTree();
+        }
     }//GEN-LAST:event_bAddNewGenActionPerformed
 
     private void bAddNewGenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bAddNewGenMouseClicked
@@ -598,9 +1503,14 @@ public class Main extends javax.swing.JFrame {
             FollowedLabel.setText("Nick invalido");
         }
         if((ICU.FindUser(Followed.getText()))&&(ICU.FindUser(Follower.getText()))){
-            ICU.SeguirUsuario(Follower.getText(), Followed.getText());
-            JOptionPane.showMessageDialog(this, "Operacion realicada con exito", "Seguir Usuario", JOptionPane.INFORMATION_MESSAGE);
-            FrameSeguirUser.setVisible(false);
+            if(Follower.getText().equals(Followed.getText())){
+                JOptionPane.showMessageDialog(this, "Los usuarios no pueden seguirse a si mismos", "Seguir Usuario", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                ICU.SeguirUsuario(Follower.getText(), Followed.getText());
+                JOptionPane.showMessageDialog(this, "Operacion realicada con exito", "Seguir Usuario", JOptionPane.INFORMATION_MESSAGE);
+                FrameSeguirUser.setVisible(false);
+            }
         }       
     }//GEN-LAST:event_followAcceptActionPerformed
 
@@ -619,6 +1529,221 @@ public class Main extends javax.swing.JFrame {
         this.FollowedLabel.setText("");
         this.FrameSeguirUser.setVisible(true);
     }//GEN-LAST:event_jMenuItemSegUsuActionPerformed
+
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.FileChooser.showOpenDialog(null);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBoxDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxDiaActionPerformed
+
+    private void RegisterAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterAcceptButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegisterAcceptButtonActionPerformed
+
+    private void LinkWebTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LinkWebTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LinkWebTextFieldActionPerformed
+                            
+    private void RegistrarArtistaCancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarArtistaCancelButtonMouseClicked
+    this.RegistrarArtista.setVisible(false); 
+    }//GEN-LAST:event_RegistrarArtistaCancelButtonMouseClicked
+
+    private void RegistrarArtistaAcceptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarArtistaAcceptButtonMouseClicked
+        String nick = this.jRegisterNicknameField.getText();
+        String email = this.jRegisterApellidolField.getText();
+        String nombre= this.jRegisterNombreField.getText();
+        String apellido = this.jRegisterEmailField.getText();
+        int userTypeIndex = this.UserTypeComboBox.getSelectedIndex();
+        String userType = this.UserTypeComboBox.getItemAt(userTypeIndex);
+        int dia = this.jComboBoxDia.getSelectedIndex() + 1;
+        int mes = this.jComboBoxMes.getSelectedIndex() + 1;
+        int año = this.jComboBoxAño.getSelectedIndex() + 1900;
+        Fecha fechaDeNac = new Fecha(dia, mes, año);
+        String biografia = this.BiografiaTextArea.getText();
+        String website = this.LinkWebTextField.getText();
+        
+        ICU.registrarUsuario(nick, "", email, nombre, apellido, fechaDeNac, null, userType, biografia, website);
+        this.BiografiaTextArea.setText("");
+        this.LinkWebTextField.setText("");
+        this.RegistrarArtista.setVisible(false);
+        JOptionPane.showMessageDialog(this, "El Artista se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE); 
+    }//GEN-LAST:event_RegistrarArtistaAcceptButtonMouseClicked
+
+    private void jMenuItemConClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemConClienteMouseClicked
+     
+    }//GEN-LAST:event_jMenuItemConClienteMouseClicked
+
+    private void jMenuItemConArtistaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemConArtistaMouseClicked
+      
+    }//GEN-LAST:event_jMenuItemConArtistaMouseClicked
+
+    private void jMenuItemConClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConClienteActionPerformed
+        //Relevar esto al controlador
+        this.ClientList.setSize(500, 500);
+        Manejador manejador = Logica.Manejador.getinstance();
+        List<Cliente> clientes = manejador.getClientes();
+        int numeroDeClientes = clientes.size();  
+        for(int i=0; i<numeroDeClientes; i++){
+            JLabel label = new JLabel();
+            label.setText(clientes.get(i).getNickname());
+            label.setBounds(0, 40*i, 200, 40);
+            this.UserListUsers.add(label);              
+        }    
+        this.ClientList.setVisible(true);
+    }//GEN-LAST:event_jMenuItemConClienteActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        this.ClientList.setVisible(false);
+        this.UserListUsers.removeAll();
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        String username = this.ConsultUserTextFIeld.getText();
+        if(!username.isEmpty()){
+            Cliente user = ICU.consultarCliente(username);   
+            if(!(user==null)){ //Si encuentra al usuario
+                Fecha fecha = user.getFechaDeNacimiento();
+                String fechaString = String.valueOf(fecha.getDia()) + '/' + String.valueOf(fecha.getMes()) + '/' + String.valueOf(fecha.getAño());
+                //DataUsuario usuario = ICU.ConsultarCliente(username);                
+                this.NickLabel2.setText(username);
+                this.NombreLabel2.setText(user.getNombre());
+                this.ApellidoLabel2.setText(user.getApellido());
+                this.MailLabel2.setText(user.getMail());
+                this.FechaLabel2.setText(fechaString);
+                this.VentanaDeCliente.setSize(500, 200);
+                this.VentanaDeCliente.setVisible(true);
+            }
+            else
+                JOptionPane.showMessageDialog(this, "No existe el usuario", "Consultar Cliente", JOptionPane.INFORMATION_MESSAGE);
+                
+        }
+        
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void UserTypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserTypeComboBoxActionPerformed
+        String type = this.UserTypeComboBox.getSelectedItem().toString();
+        if(type.equals("Cliente")){
+            this.RegisterAcceptButton.setText("Registrar");
+        }
+        else
+            this.RegisterAcceptButton.setText("Siguiente");
+    }//GEN-LAST:event_UserTypeComboBoxActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        String username = this.ConsultUserTextFIeld1.getText();
+        if(!username.isEmpty()){
+            Artista user = ICU.consultarArtista(username);   
+            if(!(user==null)){ //Si encuentra al usuario
+                Fecha fecha = user.getFechaDeNacimiento();
+                String fechaString = String.valueOf(fecha.getDia()) + '/' + String.valueOf(fecha.getMes()) + '/' + String.valueOf(fecha.getAño());
+                //DataUsuario usuario = ICU.ConsultarCliente(username);                
+                this.NickLabel3.setText(username);
+                this.NombreLabel3.setText(user.getNombre());
+                this.ApellidoLabel3.setText(user.getApellido());
+                this.MailLabel3.setText(user.getMail());
+                this.FechaLabel3.setText(fechaString);
+                this.BiografiaLabel2.setText(user.getBiografia());
+                this.WebLabel3.setText(user.getDir_web());
+                this.VentanaDeArtista.setSize(500, 200);
+                this.VentanaDeArtista.setVisible(true);
+            }
+            else
+                JOptionPane.showMessageDialog(this, "No existe el usuario", "Consultar Artista", JOptionPane.INFORMATION_MESSAGE);
+                
+        }
+        
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        this.ArtistList.setVisible(false);
+        this.UserListUsers1.removeAll();
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jMenuItemConArtistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConArtistaActionPerformed
+        this.ArtistList.setSize(500, 500);               
+        Manejador manejador = Logica.Manejador.getinstance();
+        List<Artista> artistas = manejador.getArtistas();
+        int numeroDeArtistas = artistas.size();  
+        for(int i=0; i<numeroDeArtistas; i++){
+            JLabel label = new JLabel();
+            label.setText(artistas.get(i).getNickname());
+            label.setBounds(0, 40*i, 200, 40);
+            this.UserListUsers1.add(label);              
+        }    
+        this.ArtistList.setVisible(true);
+    }//GEN-LAST:event_jMenuItemConArtistaActionPerformed
+
+    private void FileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FileChooserActionPerformed
+        int returnVal = this.FileChooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = this.FileChooser.getSelectedFile();
+            try {
+                //What to do with the file, e.g. display it in a TextArea
+                this.ImagePathTextField.read( new FileReader( file.getAbsolutePath() ), null );
+        } catch (IOException ex) {
+          System.out.println("problem accessing file"+file.getAbsolutePath());
+        }
+        } else {
+            System.out.println("File access cancelled by user.");
+        }
+    }//GEN-LAST:event_FileChooserActionPerformed
+
+    
+    private void bCancelNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelNewGenActionPerformed
+        FrameNewGen.setVisible(false);
+        TFNewGen.setText("");
+    }//GEN-LAST:event_bCancelNewGenActionPerformed
+
+    private void AltaAlbumtxtNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumtxtNomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumtxtNomActionPerformed
+
+    private void AltaAlbumDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumDiaActionPerformed
+
+    private void AltaAlbumMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumMesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumMesActionPerformed
+
+    private void AltaAlbumAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumAnioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumAnioActionPerformed
+
+    private void AltaAlbumbtnImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnImagenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnImagenActionPerformed
+
+    private void AltaAlbumbtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_AltaAlbumbtnCancelarActionPerformed
+
+    private void AltaAlbumbtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnConfirmarActionPerformed
+
+    private void exitartistaltaablumtxtNick1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumtxtNick1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exitartistaltaablumtxtNick1ActionPerformed
+
+    private void exitartistaltaablumbtnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnCancelar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exitartistaltaablumbtnCancelar1ActionPerformed
+
+    private void exitartistaltaablumbtnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -656,29 +1781,111 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JInternalFrame AltaAlbum;
+    private javax.swing.JComboBox<String> AltaAlbumAnio;
+    private javax.swing.JComboBox<String> AltaAlbumDia;
+    private javax.swing.JComboBox<String> AltaAlbumMes;
+    private javax.swing.JButton AltaAlbumbtnCancelar;
+    private javax.swing.JButton AltaAlbumbtnConfirmar;
+    private javax.swing.JButton AltaAlbumbtnImagen;
+    private javax.swing.JLabel AltaAlbumjLabel10;
+    private javax.swing.JLabel AltaAlbumjLabel11;
+    private javax.swing.JLabel AltaAlbumjLabel14;
+    private javax.swing.JLabel AltaAlbumjLabel15;
+    private javax.swing.JLabel AltaAlbumjLabel16;
+    private javax.swing.JLabel AltaAlbumjLabel9;
+    private javax.swing.JList<String> AltaAlbumjList1;
+    private javax.swing.JList<String> AltaAlbumjList2;
+    private javax.swing.JList<String> AltaAlbumjList3;
+    private javax.swing.JRadioButton AltaAlbumjRadioButton1;
+    private javax.swing.JScrollPane AltaAlbumjScrollPane1;
+    private javax.swing.JScrollPane AltaAlbumjScrollPane2;
+    private javax.swing.JLabel AltaAlbumlblImagen;
+    private javax.swing.JTextField AltaAlbumtxtApe;
+    private javax.swing.JTextField AltaAlbumtxtNom;
+    private javax.swing.JLabel ApellidoLabel1;
+    private javax.swing.JLabel ApellidoLabel2;
+    private javax.swing.JLabel ApellidoLabel3;
+    private javax.swing.JInternalFrame ArtistList;
+    private javax.swing.JTextArea BiografiaLabel2;
+    private javax.swing.JTextArea BiografiaTextArea;
+    private javax.swing.JInternalFrame ClientList;
+    private javax.swing.JTextField ConsultUserTextFIeld;
+    private javax.swing.JTextField ConsultUserTextFIeld1;
+    private javax.swing.JDialog ExistArtistAltaAlbum;
+    private javax.swing.JLabel FechaLabel1;
+    private javax.swing.JLabel FechaLabel2;
+    private javax.swing.JLabel FechaLabel3;
+    private javax.swing.JFileChooser FileChooser;
     private javax.swing.JButton FollowCancel;
     private javax.swing.JTextField Followed;
     private javax.swing.JLabel FollowedLabel;
     private javax.swing.JTextField Follower;
     private javax.swing.JInternalFrame FrameNewGen;
     private javax.swing.JInternalFrame FrameSeguirUser;
+    private javax.swing.JTextField ImagePathTextField;
     private javax.swing.JLabel LabelUserMail;
+    private javax.swing.JTextField LinkWebTextField;
+    private javax.swing.JLabel MailLabel1;
+    private javax.swing.JLabel MailLabel2;
+    private javax.swing.JLabel MailLabel3;
+    private javax.swing.JLabel NickLabel2;
+    private javax.swing.JLabel NickLabel3;
+    private javax.swing.JLabel NicknameLabel1;
+    private javax.swing.JLabel NombreLabel1;
+    private javax.swing.JLabel NombreLabel2;
+    private javax.swing.JLabel NombreLabel3;
     private javax.swing.JButton RegisterAcceptButton;
     private javax.swing.JButton RegisterCancelButton;
+    private javax.swing.JDialog RegistrarArtista;
+    private javax.swing.JButton RegistrarArtistaAcceptButton;
+    private javax.swing.JButton RegistrarArtistaCancelButton;
     private javax.swing.JTextField TFNewGen;
     private javax.swing.JTree TreeNewGen;
+    private javax.swing.JScrollPane UserListScroll;
+    private javax.swing.JScrollPane UserListScroll1;
+    private javax.swing.JPanel UserListUsers;
+    private javax.swing.JPanel UserListUsers1;
+    private javax.swing.JComboBox<String> UserTypeComboBox;
+    private javax.swing.JDialog VentanaDeArtista;
+    private javax.swing.JDialog VentanaDeCliente;
+    private javax.swing.JLabel WebLabel3;
     private javax.swing.JButton bAddNewGen;
     private javax.swing.JButton bCancelNewGen;
+    private javax.swing.JButton exitartistaltaablumbtnCancelar1;
+    private javax.swing.JButton exitartistaltaablumbtnConfirmar1;
+    private javax.swing.JLabel exitartistaltaablumlabel1;
+    private javax.swing.JTextField exitartistaltaablumtxtNick1;
     private javax.swing.JButton followAccept;
+    private javax.swing.JLabel jAltaAlbumLabel12;
+    private javax.swing.JLabel jAltaAlbumLabel13;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBoxAño;
     private javax.swing.JComboBox<String> jComboBoxDia;
     private javax.swing.JComboBox<String> jComboBoxMes;
-    private javax.swing.JDialog jDialog1;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -706,12 +1913,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuListas;
     private javax.swing.JMenu jMenuRegistros;
     private javax.swing.JMenu jMenuUsuarios;
-    private javax.swing.JTextField jRegisterApellidoField;
-    private javax.swing.JTextField jRegisterContraseñaField;
+    private javax.swing.JTextField jRegisterApellidolField;
     private javax.swing.JTextField jRegisterEmailField;
     private javax.swing.JInternalFrame jRegisterFrame;
     private javax.swing.JTextField jRegisterNicknameField;
     private javax.swing.JTextField jRegisterNombreField;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     // End of variables declaration//GEN-END:variables
 }

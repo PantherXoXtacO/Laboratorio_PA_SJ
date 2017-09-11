@@ -1,6 +1,7 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 /**
  *
@@ -16,39 +17,45 @@ public class Controlador implements IControlador {
     public void registrarUsuario(String nickname, String contraseña, 
                                     String mail, String nombre, String apellido,
                                     Fecha fechaDeNacimiento,
-                                    BufferedImage imagen) {
+                                    byte[] imagen, String userType,
+                                    String biografia, String dir_web) {
         //Instancio al manejador
         Manejador mu = Manejador.getinstance();
         //Creo el usuario
-        Usuario u = new Usuario(nickname, contraseña, mail, nombre, apellido,
-                                fechaDeNacimiento, imagen);
-        //Lo agrego a la colección global
-        mu.addUsuario(u);
+        if(userType=="Cliente"){
+            Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
+                                            fechaDeNacimiento, imagen);
+            mu.addUsuario(user, userType);
+        }
+        else if (userType=="Artista"){
+            Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
+                                            fechaDeNacimiento, imagen);
+            mu.addUsuario(user, userType);
+        }        
     }
+  
     
     @Override
-    public DataUsuario verInfoUsuario(String ci){
+    public void AltaGenero(String nombre, String padre){
         Manejador mu = Manejador.getinstance();
-        Usuario u = mu.obtenerUsuario(ci);
-        if (u!= null)
-            return new DataUsuario(u.getNickname(), u.getContraseña(),
-                                   u.getMail(), u.getNombre(), u.getApellido(),
-                                   u.getFechaDeNacimiento(), u.getImagen());
-        else
-            return new DataUsuario("", "", "", "", "", null, null);
-        
-    }
-    
-    @Override
-    public void AltaGenero(String nombre, Genero padre){
-        Genero g=new Genero(nombre);
-        if(padre==null){
-            Manejador M=Manejador.getinstance();
-            M.getGenero().addGenero(g);
+        Genero gen;
+        Genero nuevoGen=mu.findGenero(nombre);
+        if(nuevoGen==null){
+            nuevoGen=new Genero(nombre);
+            if(padre.equals("") || padre.equals("General")){
+            System.out.println("sin padre");
+            gen=mu.getGenero();
+            gen.addHijo(nuevoGen);
+            }
+            else{
+               gen=mu.findGenero(padre);
+                if(gen!=null){
+                   gen.addHijo(nuevoGen);
+                }
+            }
+            mu.addGeneroToList(nuevoGen);
         }
-        else{
-            padre.addGenero(g);
-        }
+
     }
     
 
@@ -81,8 +88,34 @@ public class Controlador implements IControlador {
        Manejador M=Manejador.getinstance();
        Usuario u1 = M.obtenerUsuario(seguidor);
        Usuario u2 = M.obtenerUsuario(seguido);
-       u1.addFollow(u2);
-       u2.addFollower(u1);
+       if(u1!=null && u2!=null){
+            u1.addFollow(u2);
+            u2.addFollower(u1);
+       }
+    }    
+    
+    @Override
+    public boolean nicknameLibre(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.nicknameLibre(nickname);
+    }
+    
+    @Override
+    public boolean mailLibre(String mail){
+        Manejador M=Manejador.getinstance();
+        return M.mailLibre(mail);
+    }
+    
+    @Override
+    public Cliente consultarCliente(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.obtenerCliente(nickname);
+    }
+    
+    @Override
+    public Artista consultarArtista(String nickname){
+        Manejador M=Manejador.getinstance();
+        return M.obtenerArtista(nickname);
     }
     
 }

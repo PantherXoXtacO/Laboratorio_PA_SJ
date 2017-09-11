@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Logica;
-import java.io.Serializable;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import javax.persistence.Column;

@@ -113,6 +113,8 @@ public class Main extends javax.swing.JFrame {
         exitartistaltaablumtxtNick1 = new javax.swing.JTextField();
         exitartistaltaablumbtnCancelar1 = new javax.swing.JButton();
         exitartistaltaablumbtnConfirmar1 = new javax.swing.JButton();
+        CLFileChooser1 = new javax.swing.JFileChooser();
+        CLFileChooser2 = new javax.swing.JFileChooser();
         jRegisterFrame = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -556,6 +558,22 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
+        CLFileChooser1.setCurrentDirectory(new java.io.File("I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images"));
+        CLFileChooser1.setDialogTitle("Seleccion de imagen");
+        CLFileChooser1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLFileChooser1ActionPerformed(evt);
+            }
+        });
+
+        CLFileChooser2.setCurrentDirectory(new java.io.File("I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images"));
+        CLFileChooser2.setDialogTitle("Seleccion de imagen");
+        CLFileChooser2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLFileChooser2ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jRegisterFrame.setVisible(true);
@@ -785,7 +803,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -847,7 +865,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(313, Short.MAX_VALUE)
+                .addContainerGap(315, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -863,7 +881,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -1195,7 +1213,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                         .addComponent(jAltaAlbumLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1219,6 +1237,11 @@ public class Main extends javax.swing.JFrame {
         CLTextFieldDePathDeImagen.setFocusable(false);
 
         CLPorDefectoBotonDeCambioDeImagen.setText("Cambiar");
+        CLPorDefectoBotonDeCambioDeImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLPorDefectoBotonDeCambioDeImagenActionPerformed(evt);
+            }
+        });
 
         CLRegisterButton.setText("Registrar");
 
@@ -1258,10 +1281,9 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                    .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                        .addComponent(CLPorDefectoBotonDeCambioDeImagen, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(CLTextFieldNombreDeLista))))
+                    .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(CLPorDefectoBotonDeCambioDeImagen, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CLTextFieldNombreDeLista)))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton7))
@@ -1286,7 +1308,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel0))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton)
                     .addComponent(CLCancelButton)))
@@ -1301,6 +1323,11 @@ public class Main extends javax.swing.JFrame {
         CLTextFieldDePathDeImagen2.setFocusable(false);
 
         CLPorDefectoBotonDeCambioDeImagen2.setText("Cambiar");
+        CLPorDefectoBotonDeCambioDeImagen2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLPorDefectoBotonDeCambioDeImagen2ActionPerformed(evt);
+            }
+        });
 
         CLRegisterButton2.setText("Registrar");
 
@@ -1377,7 +1404,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2002,6 +2029,22 @@ public class Main extends javax.swing.JFrame {
         this.CrearListaParticular.setVisible(false);
     }//GEN-LAST:event_CLCancelButton2ActionPerformed
 
+    private void CLFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLFileChooser1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CLFileChooser1ActionPerformed
+
+    private void CLFileChooser2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLFileChooser2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CLFileChooser2ActionPerformed
+
+    private void CLPorDefectoBotonDeCambioDeImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLPorDefectoBotonDeCambioDeImagenActionPerformed
+        this.CLFileChooser1.showOpenDialog(null);
+    }//GEN-LAST:event_CLPorDefectoBotonDeCambioDeImagenActionPerformed
+
+    private void CLPorDefectoBotonDeCambioDeImagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLPorDefectoBotonDeCambioDeImagen2ActionPerformed
+        this.CLFileChooser2.showOpenDialog(null);
+    }//GEN-LAST:event_CLPorDefectoBotonDeCambioDeImagen2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2069,6 +2112,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextArea BiografiaTextArea;
     private javax.swing.JButton CLCancelButton;
     private javax.swing.JButton CLCancelButton2;
+    private javax.swing.JFileChooser CLFileChooser1;
+    private javax.swing.JFileChooser CLFileChooser2;
     private javax.swing.JLabel CLLabel0;
     private javax.swing.JLabel CLLabel1;
     private javax.swing.JLabel CLLabel2;

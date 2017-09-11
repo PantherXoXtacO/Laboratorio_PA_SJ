@@ -1,7 +1,6 @@
 package Logica;
 
 import javax.persistence.Entity;
-import java.awt.image.BufferedImage;
 import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;

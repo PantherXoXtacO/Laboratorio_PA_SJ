@@ -19,6 +19,7 @@ import Logica.Manejador;
 import Logica.Usuario;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Image;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -26,7 +27,9 @@ import java.util.List;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import java.util.Iterator;
+import javax.swing.ImageIcon;
 import javax.swing.JTree;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 
@@ -67,7 +70,7 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame2 = new javax.swing.JInternalFrame();
-        FileChooser = new javax.swing.JFileChooser();
+        AUFileChooser = new javax.swing.JFileChooser();
         RegistrarArtista = new javax.swing.JDialog();
         RegistrarArtistaCancelButton = new javax.swing.JButton();
         RegistrarArtistaAcceptButton = new javax.swing.JButton();
@@ -77,7 +80,7 @@ public class Main extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         VentanaDeArtista = new javax.swing.JDialog();
-        jLabel19 = new javax.swing.JLabel();
+        ImagenDeArtista = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -94,7 +97,7 @@ public class Main extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         WebLabel3 = new javax.swing.JLabel();
         VentanaDeCliente = new javax.swing.JDialog();
-        jLabel33 = new javax.swing.JLabel();
+        ImagenDeCliente = new javax.swing.JLabel();
         NicknameLabel1 = new javax.swing.JLabel();
         NombreLabel1 = new javax.swing.JLabel();
         ApellidoLabel1 = new javax.swing.JLabel();
@@ -248,11 +251,11 @@ public class Main extends javax.swing.JFrame {
             .addGap(0, 453, Short.MAX_VALUE)
         );
 
-        FileChooser.setCurrentDirectory(new java.io.File("C:\\Users"));
-        FileChooser.setDialogTitle("Seleccion de imagen");
-        FileChooser.addActionListener(new java.awt.event.ActionListener() {
+        AUFileChooser.setCurrentDirectory(new java.io.File("I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images"));
+        AUFileChooser.setDialogTitle("Seleccion de imagen");
+        AUFileChooser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FileChooserActionPerformed(evt);
+                AUFileChooserActionPerformed(evt);
             }
         });
 
@@ -325,8 +328,6 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(RegistrarArtistaAcceptButton)))
         );
 
-        jLabel19.setText("IMAGEN");
-
         jLabel20.setText("Nickname:");
 
         jLabel21.setText("Nombre:");
@@ -349,6 +350,7 @@ public class Main extends javax.swing.JFrame {
 
         BiografiaLabel2.setColumns(20);
         BiografiaLabel2.setRows(5);
+        BiografiaLabel2.setFocusable(false);
         jScrollPane3.setViewportView(BiografiaLabel2);
 
         jLabel13.setText("Biografia:");
@@ -366,7 +368,7 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(VentanaDeArtistaLayout.createSequentialGroup()
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ImagenDeArtista, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -410,19 +412,19 @@ public class Main extends javax.swing.JFrame {
                         .addGap(7, 7, 7)
                         .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel24)
-                            .addComponent(FechaLabel3)))
-                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(WebLabel3))
-                .addGap(9, 9, 9)
+                            .addComponent(FechaLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeArtistaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(WebLabel3))
+                        .addGap(9, 9, 9))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, VentanaDeArtistaLayout.createSequentialGroup()
+                        .addComponent(ImagenDeArtista, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        jLabel33.setText("IMAGEN");
 
         NicknameLabel1.setText("Nickname:");
 
@@ -450,7 +452,7 @@ public class Main extends javax.swing.JFrame {
             VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VentanaDeClienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ImagenDeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(NicknameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -492,7 +494,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(FechaLabel1)
                             .addComponent(FechaLabel2)))
-                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ImagenDeCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -627,6 +629,8 @@ public class Main extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        ImagePathTextField.setFocusable(false);
 
         javax.swing.GroupLayout jRegisterFrameLayout = new javax.swing.GroupLayout(jRegisterFrame.getContentPane());
         jRegisterFrame.getContentPane().setLayout(jRegisterFrameLayout);
@@ -781,7 +785,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -843,7 +847,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(311, Short.MAX_VALUE)
+                .addContainerGap(313, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -859,7 +863,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -893,7 +897,7 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsersLayout.setVerticalGroup(
             UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 651, Short.MAX_VALUE)
+            .addGap(0, 692, Short.MAX_VALUE)
         );
 
         UserListScroll.setViewportView(UserListUsers);
@@ -959,7 +963,7 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsers1Layout.setVerticalGroup(
             UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addGap(0, 521, Short.MAX_VALUE)
         );
 
         UserListScroll1.setViewportView(UserListUsers1);
@@ -983,7 +987,7 @@ public class Main extends javax.swing.JFrame {
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 494, Short.MAX_VALUE)
+                .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 523, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1191,7 +1195,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                         .addComponent(jAltaAlbumLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1282,7 +1286,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel0))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton)
                     .addComponent(CLCancelButton)))
@@ -1328,27 +1332,28 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CLPorDefectoBotonDeCambioDeImagen2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaParticularLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton6))
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(CLTitulo2)
                         .addGap(0, 167, Short.MAX_VALUE))
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CLLabel4)
-                            .addComponent(CLLabel3))
-                        .addGap(33, 33, 33)
-                        .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CLTextFieldDePathDeImagen2)
-                            .addComponent(CLTextFieldNombreDeLista2)))
-                    .addGroup(CrearListaParticularLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(CLLabel5)
+                            .addGroup(CrearListaParticularLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CLLabel4)
+                                    .addComponent(CLLabel3)))
+                            .addGroup(CrearListaParticularLayout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(CLLabel5)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaParticularLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton6)))
+                        .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField1)
+                            .addComponent(CLTextFieldDePathDeImagen2)
+                            .addComponent(CLTextFieldNombreDeLista2))))
                 .addContainerGap())
         );
         CrearListaParticularLayout.setVerticalGroup(
@@ -1372,7 +1377,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -1556,17 +1561,17 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(ArtistList)
-                    .addContainerGap(508, Short.MAX_VALUE)))
+                    .addContainerGap(533, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(319, 319, 319)
                     .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(310, Short.MAX_VALUE)))
+                    .addContainerGap(360, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1615,8 +1620,7 @@ public class Main extends javax.swing.JFrame {
         String apellido = this.jRegisterApellidolField.getText();
         String nombre= this.jRegisterNombreField.getText();
         String email = this.jRegisterEmailField.getText();
-        //get imagepath from filechooser
-        String imagePath = "data\\user_images\\default.png";
+        String imagePath = "I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images\\default.jpg";
         int userTypeIndex = this.UserTypeComboBox.getSelectedIndex();
         String userType = this.UserTypeComboBox.getItemAt(userTypeIndex);
         int dia = this.jComboBoxDia.getSelectedIndex() + 1;
@@ -1626,6 +1630,8 @@ public class Main extends javax.swing.JFrame {
         if(fechaDeNac.validarFecha()){
             if(!nick.isEmpty() && !email.isEmpty() && !nombre.isEmpty() &&
                     !apellido.isEmpty()){
+               if(!this.ImagePathTextField.getText().equals(""))
+                    imagePath = this.ImagePathTextField.getText();
                if(userType=="Cliente"){
                     if(ICU.nicknameLibre(nick)){
                         if(ICU.mailLibre(email)){
@@ -1761,7 +1767,9 @@ public class Main extends javax.swing.JFrame {
 
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.FileChooser.showOpenDialog(null);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Image Files", "jpg", "png", "jpeg");
+        this.AUFileChooser.setFileFilter(filter);
+        this.AUFileChooser.showOpenDialog(null);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBoxDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDiaActionPerformed
@@ -1793,8 +1801,10 @@ public class Main extends javax.swing.JFrame {
         Fecha fechaDeNac = new Fecha(dia, mes, año);
         String biografia = this.BiografiaTextArea.getText();
         String website = this.LinkWebTextField.getText();
-        
-        ICU.registrarUsuario(nick, "", email, nombre, apellido, fechaDeNac, null, userType, biografia, website);
+        String imagePath = "I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images\\default.jpg";
+        if(!this.ImagePathTextField.getText().equals(""))
+                    imagePath = this.ImagePathTextField.getText();        
+        ICU.registrarUsuario(nick, "", email, nombre, apellido, fechaDeNac, imagePath, userType, biografia, website);
         this.BiografiaTextArea.setText("");
         this.LinkWebTextField.setText("");
         this.RegistrarArtista.setVisible(false);
@@ -1845,7 +1855,12 @@ public class Main extends javax.swing.JFrame {
                 this.NombreLabel2.setText(user.getNombre());
                 this.ApellidoLabel2.setText(user.getApellido());
                 this.MailLabel2.setText(user.getMail());
-                this.FechaLabel2.setText(fechaString);
+                this.FechaLabel2.setText(fechaString);                
+                ImageIcon icon = new ImageIcon(user.getImagen());
+                Image image = icon.getImage();
+                Image newIcon = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+                icon = new ImageIcon(newIcon);
+                this.ImagenDeCliente.setIcon(icon);   
                 this.VentanaDeCliente.setSize(500, 200);
                 this.VentanaDeCliente.setVisible(true);
             }
@@ -1880,6 +1895,12 @@ public class Main extends javax.swing.JFrame {
                 this.FechaLabel3.setText(fechaString);
                 this.BiografiaLabel2.setText(user.getBiografia());
                 this.WebLabel3.setText(user.getDir_web());
+                ImageIcon icon = new ImageIcon(user.getImagen());
+                Image image = icon.getImage();
+                Image newIcon = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
+                icon = new ImageIcon(newIcon);
+                System.out.println(user.getImagen());
+                this.ImagenDeArtista.setIcon(icon);   
                 this.VentanaDeArtista.setSize(500, 200);
                 this.VentanaDeArtista.setVisible(true);
             }
@@ -1913,20 +1934,11 @@ public class Main extends javax.swing.JFrame {
         this.ArtistList.setVisible(true);
     }//GEN-LAST:event_jMenuItemConArtistaActionPerformed
 
-    private void FileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FileChooserActionPerformed
-        int returnVal = this.FileChooser.showOpenDialog(this);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = this.FileChooser.getSelectedFile();
-            try {
-                //What to do with the file, e.g. display it in a TextArea
-                this.ImagePathTextField.read( new FileReader( file.getAbsolutePath() ), null );
-        } catch (IOException ex) {
-          System.out.println("problem accessing file"+file.getAbsolutePath());
-        }
-        } else {
-            System.out.println("File access cancelled by user.");
-        }
-    }//GEN-LAST:event_FileChooserActionPerformed
+    private void AUFileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AUFileChooserActionPerformed
+            File file = this.AUFileChooser.getSelectedFile();
+            String filePath = file.getAbsolutePath();
+            this.ImagePathTextField.setText(filePath);
+    }//GEN-LAST:event_AUFileChooserActionPerformed
 
     
     private void bCancelNewGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCancelNewGenActionPerformed
@@ -2026,6 +2038,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFileChooser AUFileChooser;
     private javax.swing.JInternalFrame AltaAlbum;
     private javax.swing.JComboBox<String> AltaAlbumAnio;
     private javax.swing.JComboBox<String> AltaAlbumDia;
@@ -2081,7 +2094,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel FechaLabel1;
     private javax.swing.JLabel FechaLabel2;
     private javax.swing.JLabel FechaLabel3;
-    private javax.swing.JFileChooser FileChooser;
     private javax.swing.JButton FollowCancel;
     private javax.swing.JTextField Followed;
     private javax.swing.JLabel FollowedLabel;
@@ -2089,6 +2101,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame FrameNewGen;
     private javax.swing.JInternalFrame FrameSeguirUser;
     private javax.swing.JTextField ImagePathTextField;
+    private javax.swing.JLabel ImagenDeArtista;
+    private javax.swing.JLabel ImagenDeCliente;
     private javax.swing.JLabel LabelUserMail;
     private javax.swing.JTextField LinkWebTextField;
     private javax.swing.JLabel MailLabel1;
@@ -2144,7 +2158,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -2152,7 +2165,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

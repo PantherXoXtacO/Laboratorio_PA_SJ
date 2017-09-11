@@ -49,6 +49,8 @@ public class Main extends javax.swing.JFrame {
         this.ArtistList.setVisible(false);
         this.setLocationRelativeTo(null);
         this.AltaAlbum.setVisible(false);
+        this.CrearListaParticular.setVisible(false);
+        this.CrearListaPorDefecto.setVisible(false);
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();
@@ -1217,6 +1219,11 @@ public class Main extends javax.swing.JFrame {
         CLRegisterButton.setText("Registrar");
 
         CLCancelButton.setText("Cancelar");
+        CLCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLCancelButtonActionPerformed(evt);
+            }
+        });
 
         CLTitulo.setText("Lista Por Defecto");
 
@@ -1275,7 +1282,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel0))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton)
                     .addComponent(CLCancelButton)))
@@ -1294,6 +1301,11 @@ public class Main extends javax.swing.JFrame {
         CLRegisterButton2.setText("Registrar");
 
         CLCancelButton2.setText("Cancelar");
+        CLCancelButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLCancelButton2ActionPerformed(evt);
+            }
+        });
 
         CLTitulo2.setText("Lista Particular");
 
@@ -1360,7 +1372,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -1408,9 +1420,19 @@ public class Main extends javax.swing.JFrame {
         jMenuItemCrearLis.setText("Crear Lista de Reproduccion");
 
         jMenuItemCrearListaPorDefecto.setText("Por Defecto");
+        jMenuItemCrearListaPorDefecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCrearListaPorDefectoActionPerformed(evt);
+            }
+        });
         jMenuItemCrearLis.add(jMenuItemCrearListaPorDefecto);
 
         jMenuItemCrearListaParticular.setText("Particular");
+        jMenuItemCrearListaParticular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCrearListaParticularActionPerformed(evt);
+            }
+        });
         jMenuItemCrearLis.add(jMenuItemCrearListaParticular);
 
         jMenuRegistros.add(jMenuItemCrearLis);
@@ -1951,6 +1973,22 @@ public class Main extends javax.swing.JFrame {
     private void exitartistaltaablumbtnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
+
+    private void jMenuItemCrearListaPorDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaPorDefectoActionPerformed
+        this.CrearListaPorDefecto.setVisible(true);
+    }//GEN-LAST:event_jMenuItemCrearListaPorDefectoActionPerformed
+
+    private void jMenuItemCrearListaParticularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaParticularActionPerformed
+        this.CrearListaParticular.setVisible(true);
+    }//GEN-LAST:event_jMenuItemCrearListaParticularActionPerformed
+
+    private void CLCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLCancelButtonActionPerformed
+        this.CrearListaPorDefecto.setVisible(false);
+    }//GEN-LAST:event_CLCancelButtonActionPerformed
+
+    private void CLCancelButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLCancelButton2ActionPerformed
+        this.CrearListaParticular.setVisible(false);
+    }//GEN-LAST:event_CLCancelButton2ActionPerformed
 
     /**
      * @param args the command line arguments

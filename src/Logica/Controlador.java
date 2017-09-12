@@ -1,6 +1,8 @@
 package Logica;
 
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -116,6 +118,14 @@ public class Controlador implements IControlador {
     public Artista consultarArtista(String nickname){
         Manejador M=Manejador.getinstance();
         return M.obtenerArtista(nickname);
+    }
+    
+    
+    @Override
+    public List getItemCliente(){
+        Manejador M=Manejador.getinstance();
+        List ret=M.ItemCLiente();
+        return ret;       
     }
     
 }

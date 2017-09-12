@@ -1,5 +1,6 @@
 package Logica;
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 /**
  *
@@ -23,5 +24,6 @@ public interface IControlador{
     public abstract boolean mailLibre(String mail);
     public abstract Cliente consultarCliente(String nickname);
     public abstract Artista consultarArtista(String nickname);
+    public abstract List getItemCliente();
 }
 

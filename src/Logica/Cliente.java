@@ -38,5 +38,6 @@ public class Cliente extends Usuario{
     @Override
     void addFollow(Usuario u2) {
         siguiendo.add(u2);
-    }    
+    }
+
 }

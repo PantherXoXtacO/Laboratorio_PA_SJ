@@ -128,4 +128,20 @@ public class Controlador implements IControlador {
         return ret;       
     }
     
+    @Override
+    public List getTemasItem(){
+     Manejador M=Manejador.getinstance();
+     List ret=M.ItemTemas();
+     return ret;
+    }    
+    
+    @Override
+    public void agregarTemaALista(Object selectedItem, Object selectedItem0){
+        Item l = (Item) selectedItem;
+        Item t = (Item) selectedItem0;
+        ListaDeReproduccion lista = (ListaDeReproduccion) l.getValue();
+        Tema tem = (Tema) t.getValue();
+        lista.agregarTema(tem);
+    }
+    
 }

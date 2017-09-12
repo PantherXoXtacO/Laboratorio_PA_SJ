@@ -49,6 +49,8 @@ public class ListaDeReproduccion {
     public void setImagen(BufferedImage imagen) {
         this.imagen = imagen;
     }
-    
-    
+
+    void agregarTema(Tema tem) {
+        temas.add(tem);
+    }    
 }

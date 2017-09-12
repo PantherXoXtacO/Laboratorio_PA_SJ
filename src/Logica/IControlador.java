@@ -25,5 +25,9 @@ public interface IControlador{
     public abstract Cliente consultarCliente(String nickname);
     public abstract Artista consultarArtista(String nickname);
     public abstract List getItemCliente();
+
+    public abstract List getTemasItem();
+
+    public abstract void agregarTemaALista(Object selectedItem, Object selectedItem0);
 }
 

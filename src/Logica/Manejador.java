@@ -217,13 +217,24 @@ public class Manejador {
             generosList.add(nuevoGen);
     }
 
-    List ItemCLiente() {
+    public List ItemCLiente() {
         Iterator it=clientes.iterator();
         Cliente c;
         List ret= new ArrayList();
         while(it.hasNext()){
             c=(Cliente) it.next();
             ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
+    }
+
+    public List ItemTemas() {
+        Iterator it=Temas.iterator();
+        Tema t;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            t=(Tema)it.next();
+            ret.add(new Item(t, t.getNombre()));
         }
         return ret;
     }

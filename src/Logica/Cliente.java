@@ -3,6 +3,7 @@ package Logica;
 import java.awt.image.BufferedImage;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -40,4 +41,14 @@ public class Cliente extends Usuario{
         siguiendo.add(u2);
     }
 
+    public List getListsItem() {
+        Iterator it = Listas.iterator();
+        List ret= new ArrayList();
+        ListaDeReproduccion L;
+        while(it.hasNext()){
+            L= (ListaDeReproduccion) it.next();
+            ret.add(new Item(L,L.getNombre()));
+        }
+        return ret;
+    }
 }

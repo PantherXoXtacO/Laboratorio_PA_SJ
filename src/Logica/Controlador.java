@@ -67,13 +67,6 @@ public class Controlador implements IControlador {
         return M.getGenero();
     }
     
-    public void AgregarTema(){
-    
-    }
-    @Override
-    public void EliminarTemaFav(){
-    
-    }
     @Override
     public void ConsultarAlbum(){
         
@@ -144,4 +137,30 @@ public class Controlador implements IControlador {
         lista.agregarTema(tem);
     }
     
+    @Override
+    public void QuitarTemaFavorito(Object selectedItem, Object selectedItem0){
+        Item usr = (Item) selectedItem;
+        Item tem = (Item) selectedItem0;
+        Cliente client = (Cliente) usr.getValue();
+        Tema t = (Tema) tem.getValue();
+        client.quitarTemaFav(t);
+    }
+    
+    @Override
+    public void QuitarAlbumFav(Object selectedItem, Object selectedItem0){
+        Item usr = (Item) selectedItem;
+        Item alb = (Item) selectedItem0;
+        Cliente client = (Cliente) usr.getValue();
+        Album a = (Album) alb.getValue();
+        client.quitarAlbumFav(a); 
+    }
+
+    @Override
+    public void QuitarListaFav(Object selectedItem, Object selectedItem0){
+        Item usr = (Item) selectedItem;
+        Item lst = (Item) selectedItem0;
+        Cliente client = (Cliente) usr.getValue();
+        ListaDeReproduccion lista = (ListaDeReproduccion) lst.getValue();
+        client.quitarListFav(lista);
+    }
 }

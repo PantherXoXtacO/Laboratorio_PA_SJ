@@ -14,9 +14,7 @@ public interface IControlador{
     
     public abstract void AltaGenero(String nombre, String padre);
     public abstract Genero GetGenero();
-    //public abstract void AgregarTema(Usuario user, );//Agregar tema a lista
     public abstract void SeguirUsuario(String seguidor, String seguido);
-    public abstract void EliminarTemaFav();//Eliminar Tema, Album o lista de favoritos
     public abstract void ConsultarAlbum();
 
     public abstract boolean FindUser(String text);
@@ -29,5 +27,11 @@ public interface IControlador{
     public abstract List getTemasItem();
 
     public abstract void agregarTemaALista(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarAlbumFav(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
 }
 

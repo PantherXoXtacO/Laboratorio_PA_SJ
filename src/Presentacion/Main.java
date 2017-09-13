@@ -49,6 +49,8 @@ public class Main extends javax.swing.JFrame {
         this.AltaAlbum.setVisible(false);
         this.ClientList.setVisible(false);
         this.ArtistList.setVisible(false);
+        this.DejarDeSeguirUsuario.setVisible(false);
+        
         this.setLocationRelativeTo(null);
         
         //Inicialización
@@ -186,6 +188,39 @@ public class Main extends javax.swing.JFrame {
         AltaAlbumjLabel15 = new javax.swing.JLabel();
         AltaAlbumjLabel16 = new javax.swing.JLabel();
         AltaAlbumjRadioButton1 = new javax.swing.JRadioButton();
+        QuitarTemaDeLista = new javax.swing.JInternalFrame();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jLabel29 = new javax.swing.JLabel();
+        QuitarListaCancelar1 = new javax.swing.JButton();
+        QuitarListaConfirmar1 = new javax.swing.JButton();
+        DejarDeSeguirUsuario = new javax.swing.JInternalFrame();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        DejarSeguirUsuarioCancelar1 = new javax.swing.JButton();
+        DejarSeguirUsuarioConfirmar1 = new javax.swing.JButton();
+        GuardarTemaListaAlbum = new javax.swing.JInternalFrame();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        GuardarTemaListaAlbumCancelar1 = new javax.swing.JButton();
+        GuardarTemaListaAlbumConfirmar1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
         jMenuRegistros = new javax.swing.JMenu();
@@ -756,7 +791,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(461, Short.MAX_VALUE))
+                .addContainerGap(493, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -818,7 +853,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(345, Short.MAX_VALUE)
+                .addContainerGap(361, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -834,7 +869,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -868,7 +903,7 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsersLayout.setVerticalGroup(
             UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1121, Short.MAX_VALUE)
+            .addGap(0, 1187, Short.MAX_VALUE)
         );
 
         UserListScroll.setViewportView(UserListUsers);
@@ -934,7 +969,7 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsers1Layout.setVerticalGroup(
             UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 776, Short.MAX_VALUE)
+            .addGap(0, 822, Short.MAX_VALUE)
         );
 
         UserListScroll1.setViewportView(UserListUsers1);
@@ -959,7 +994,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ArtistListLayout.createSequentialGroup()
-                        .addContainerGap(778, Short.MAX_VALUE)
+                        .addContainerGap(824, Short.MAX_VALUE)
                         .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14))
@@ -1171,7 +1206,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                         .addComponent(jAltaAlbumLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1184,6 +1219,271 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(27, 27, 27))
+        );
+
+        QuitarTemaDeLista.setMinimumSize(new java.awt.Dimension(20, 34));
+        QuitarTemaDeLista.setVisible(true);
+
+        jLabel18.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel18.setText("Quitar Tema de Lista");
+
+        jLabel25.setText("*Usuario: ");
+
+        jLabel26.setText(" Lista: ");
+
+        jLabel27.setText("*: Opcional; si la lista es por defecto.");
+
+        jLabel28.setText("Temas:");
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane6.setViewportView(jList1);
+
+        jLabel29.setText("Seleccione el tema a quitar");
+
+        QuitarListaCancelar1.setText("Cancelar");
+        QuitarListaCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitarListaCancelar1ActionPerformed(evt);
+            }
+        });
+
+        QuitarListaConfirmar1.setText("Confirmar");
+        QuitarListaConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitarListaConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuitarTemaDeListaLayout = new javax.swing.GroupLayout(QuitarTemaDeLista.getContentPane());
+        QuitarTemaDeLista.getContentPane().setLayout(QuitarTemaDeListaLayout);
+        QuitarTemaDeListaLayout.setHorizontalGroup(
+            QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addGap(0, 17, Short.MAX_VALUE)
+                        .addComponent(jLabel18)
+                        .addGap(72, 72, 72))
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                            .addComponent(jTextField1))))
+                .addGap(52, 52, 52))
+            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(jLabel28))
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(QuitarListaCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel29))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(QuitarListaConfirmar1)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        QuitarTemaDeListaLayout.setVerticalGroup(
+            QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel18)
+                .addGap(18, 18, 18)
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel29)
+                .addGap(18, 18, 18)
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(QuitarListaCancelar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(QuitarListaConfirmar1))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        DejarDeSeguirUsuario.setLocationRelativeTo(null);
+        DejarDeSeguirUsuario.setVisible(true);
+
+        jLabel30.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel30.setText("Dejar de Seguir a Usuario");
+
+        jLabel31.setText("Cliente: ");
+
+        jLabel32.setText("Usuario: ");
+
+        DejarSeguirUsuarioCancelar1.setText("Cancelar");
+        DejarSeguirUsuarioCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DejarSeguirUsuarioCancelar1ActionPerformed(evt);
+            }
+        });
+
+        DejarSeguirUsuarioConfirmar1.setText("Confirmar");
+        DejarSeguirUsuarioConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DejarSeguirUsuarioConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout DejarDeSeguirUsuarioLayout = new javax.swing.GroupLayout(DejarDeSeguirUsuario.getContentPane());
+        DejarDeSeguirUsuario.getContentPane().setLayout(DejarDeSeguirUsuarioLayout);
+        DejarDeSeguirUsuarioLayout.setHorizontalGroup(
+            DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel30))
+                    .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel31)
+                            .addComponent(jLabel32))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(DejarSeguirUsuarioCancelar1)
+                                .addGap(18, 18, 18)
+                                .addComponent(DejarSeguirUsuarioConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                                .addComponent(jTextField3)))))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+        DejarDeSeguirUsuarioLayout.setVerticalGroup(
+            DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel30)
+                .addGap(23, 23, 23)
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel32))
+                .addGap(36, 36, 36)
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DejarSeguirUsuarioCancelar1)
+                    .addComponent(DejarSeguirUsuarioConfirmar1))
+                .addContainerGap(59, Short.MAX_VALUE))
+        );
+
+        GuardarTemaListaAlbum.setLocationRelativeTo(null);
+        GuardarTemaListaAlbum.setVisible(true);
+
+        jLabel34.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        jLabel34.setText("Guardar Tema/Lista/Album");
+
+        jLabel35.setText("Cliente: ");
+
+        jLabel36.setText("Tema: ");
+
+        jLabel37.setText("Lista: ");
+
+        jLabel38.setText("Album: ");
+
+        GuardarTemaListaAlbumCancelar1.setText("Cancelar");
+        GuardarTemaListaAlbumCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarTemaListaAlbumCancelar1ActionPerformed(evt);
+            }
+        });
+
+        GuardarTemaListaAlbumConfirmar1.setText("Confirmar");
+        GuardarTemaListaAlbumConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarTemaListaAlbumConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout GuardarTemaListaAlbumLayout = new javax.swing.GroupLayout(GuardarTemaListaAlbum.getContentPane());
+        GuardarTemaListaAlbum.getContentPane().setLayout(GuardarTemaListaAlbumLayout);
+        GuardarTemaListaAlbumLayout.setHorizontalGroup(
+            GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                            .addGap(51, 51, 51)
+                            .addComponent(jLabel34))
+                        .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel36)
+                                    .addComponent(jLabel37))
+                                .addComponent(jLabel38))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jTextField7)
+                                .addComponent(jTextField6)
+                                .addComponent(jTextField8))))
+                    .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(GuardarTemaListaAlbumCancelar1)
+                        .addGap(18, 18, 18)
+                        .addComponent(GuardarTemaListaAlbumConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        GuardarTemaListaAlbumLayout.setVerticalGroup(
+            GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel34)
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel37))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38)
+                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GuardarTemaListaAlbumCancelar1)
+                    .addComponent(GuardarTemaListaAlbumConfirmar1))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -1277,6 +1577,11 @@ public class Main extends javax.swing.JFrame {
         jMenuUsuarios.add(jMenuItemSegUsu);
 
         jMenuItemDejarDeSeguirUsu.setText("Dejar De Seguir Usuario");
+        jMenuItemDejarDeSeguirUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDejarDeSeguirUsuActionPerformed(evt);
+            }
+        });
         jMenuUsuarios.add(jMenuItemDejarDeSeguirUsu);
 
         jMenuItemGuardarFav.setText("Guardar Favorito");
@@ -1325,6 +1630,21 @@ public class Main extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(883, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(529, 529, 529)
+                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(530, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1342,12 +1662,27 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(ArtistList)
-                    .addContainerGap(673, Short.MAX_VALUE)))
+                    .addContainerGap(695, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(1103, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(673, 673, 673)
+                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(678, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -1738,12 +2073,40 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_exitartistaltaablumtxtNick1ActionPerformed
 
     private void exitartistaltaablumbtnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnCancelar1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_exitartistaltaablumbtnCancelar1ActionPerformed
 
     private void exitartistaltaablumbtnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
+
+    private void QuitarListaCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarListaCancelar1ActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_QuitarListaCancelar1ActionPerformed
+
+    private void QuitarListaConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarListaConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QuitarListaConfirmar1ActionPerformed
+
+    private void DejarSeguirUsuarioCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DejarSeguirUsuarioCancelar1ActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_DejarSeguirUsuarioCancelar1ActionPerformed
+
+    private void DejarSeguirUsuarioConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
+
+    private void GuardarTemaListaAlbumCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarTemaListaAlbumCancelar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuardarTemaListaAlbumCancelar1ActionPerformed
+
+    private void GuardarTemaListaAlbumConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarTemaListaAlbumConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuardarTemaListaAlbumConfirmar1ActionPerformed
+
+    private void jMenuItemDejarDeSeguirUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDejarDeSeguirUsuActionPerformed
+        this.DejarDeSeguirUsuario.setVisible(true);
+    }//GEN-LAST:event_jMenuItemDejarDeSeguirUsuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1812,6 +2175,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame ClientList;
     private javax.swing.JTextField ConsultUserTextFIeld;
     private javax.swing.JTextField ConsultUserTextFIeld1;
+    private javax.swing.JInternalFrame DejarDeSeguirUsuario;
+    private javax.swing.JButton DejarSeguirUsuarioCancelar1;
+    private javax.swing.JButton DejarSeguirUsuarioConfirmar1;
     private javax.swing.JDialog ExistArtistAltaAlbum;
     private javax.swing.JLabel FechaLabel1;
     private javax.swing.JLabel FechaLabel2;
@@ -1823,6 +2189,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField Follower;
     private javax.swing.JInternalFrame FrameNewGen;
     private javax.swing.JInternalFrame FrameSeguirUser;
+    private javax.swing.JInternalFrame GuardarTemaListaAlbum;
+    private javax.swing.JButton GuardarTemaListaAlbumCancelar1;
+    private javax.swing.JButton GuardarTemaListaAlbumConfirmar1;
     private javax.swing.JTextField ImagePathTextField;
     private javax.swing.JLabel LabelUserMail;
     private javax.swing.JTextField LinkWebTextField;
@@ -1835,6 +2204,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel NombreLabel1;
     private javax.swing.JLabel NombreLabel2;
     private javax.swing.JLabel NombreLabel3;
+    private javax.swing.JButton QuitarListaCancelar1;
+    private javax.swing.JButton QuitarListaConfirmar1;
+    private javax.swing.JInternalFrame QuitarTemaDeLista;
     private javax.swing.JButton RegisterAcceptButton;
     private javax.swing.JButton RegisterCancelButton;
     private javax.swing.JDialog RegistrarArtista;
@@ -1877,6 +2249,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -1884,14 +2257,28 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuConsultas;
     private javax.swing.JMenu jMenuInicio;
@@ -1923,5 +2310,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }

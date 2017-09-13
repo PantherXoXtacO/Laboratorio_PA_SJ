@@ -2,6 +2,7 @@ package Logica;
 
 
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
@@ -36,4 +37,8 @@ public class Cliente extends Usuario{
     void addFollow(Usuario u2) {
         siguiendo.add(u2);
     }    
+    
+    void setListaParticular(ListaDeReproduccion lista){
+        this.Listas.add(lista);
+    }
 }

@@ -19,12 +19,16 @@ public class ListaDeReproduccion {
     
     private String nombre;
     private List<Tema> temas;
-    private BufferedImage imagen;
+    private String imagen;
 
-    public ListaDeReproduccion(String nombre, BufferedImage imagen) {
+    public ListaDeReproduccion(String nombre, String imagen) {
         this.nombre = nombre;
         this.temas = new ArrayList();
         this.imagen = imagen;
+    }
+
+    ListaDeReproduccion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     //GETTERS
@@ -36,7 +40,7 @@ public class ListaDeReproduccion {
         return temas;
     }
 
-    public BufferedImage getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
@@ -46,7 +50,7 @@ public class ListaDeReproduccion {
     }
 
 
-    public void setImagen(BufferedImage imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
     

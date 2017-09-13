@@ -23,5 +23,6 @@ public interface IControlador{
     public abstract boolean mailLibre(String mail);
     public abstract Cliente consultarCliente(String nickname);
     public abstract Artista consultarArtista(String nickname);
+    public abstract void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista);
 }
 

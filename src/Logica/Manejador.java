@@ -60,6 +60,8 @@ public class Manejador {
         return instancia;
     }
     
+    
+    
     public void addUsuario(Usuario usu, String userType){ //El usuario sera Cliente o Artista
         //String nickname = usu.getNickname(); //si no existe en la lista
         //usuarios.add(usu);
@@ -143,6 +145,7 @@ public class Manejador {
         return null;
     }
     
+    
     public Cliente obtenerCliente(String nickname){
         Iterator it = clientes.iterator();
         Cliente user;
@@ -213,5 +216,10 @@ public class Manejador {
 
     void addGeneroToList(Genero nuevoGen){
             generosList.add(nuevoGen);
+    }
+    
+    void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
+        ListaParticular lista = new ListaParticular(client, nombreDeLista, imagenDeLista);
+        client.setListaParticular(lista);
     }
 }

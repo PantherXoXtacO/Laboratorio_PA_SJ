@@ -118,4 +118,10 @@ public class Controlador implements IControlador {
         return M.obtenerArtista(nickname);
     }
     
+    @Override
+    public void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
+        Manejador M=Manejador.getinstance();
+        M.addListaParticular(client, nombreDeLista, imagenDeLista);
+    }
+    
 }

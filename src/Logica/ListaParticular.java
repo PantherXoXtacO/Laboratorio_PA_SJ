@@ -5,7 +5,6 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
 
 /**
  *
@@ -16,7 +15,7 @@ public class ListaParticular extends ListaDeReproduccion {
     private Cliente cliente;
     private boolean privacidad; //true si la lista es privada
 
-    public ListaParticular(Cliente cliente, String nombre, BufferedImage imagen) {
+    public ListaParticular(Cliente cliente, String nombre, String imagen) {
         super(nombre, imagen);
         this.cliente = cliente;
         this.privacidad = false;

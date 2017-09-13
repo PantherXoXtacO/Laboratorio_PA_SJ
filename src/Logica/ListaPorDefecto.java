@@ -15,7 +15,7 @@ public class ListaPorDefecto extends ListaDeReproduccion {
     
     private Genero genero;
 
-    public ListaPorDefecto(Genero genero, String nombre, BufferedImage imagen) {
+    public ListaPorDefecto(Genero genero, String nombre, String imagen) {
         super(nombre, imagen);
         this.genero = genero;
     }

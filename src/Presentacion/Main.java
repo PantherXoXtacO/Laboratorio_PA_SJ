@@ -51,6 +51,8 @@ public class Main extends javax.swing.JFrame {
         this.ArtistList.setVisible(false);
         this.DejarDeSeguirUsuario.setVisible(false);
         this.ConsultaListaReproduccion.setVisible(false);
+        this.GuardarTemaListaAlbum.setVisible(false);
+        this.QuitarTemaDeLista.setVisible(false);
         
         this.setLocationRelativeTo(null);
         
@@ -255,7 +257,6 @@ public class Main extends javax.swing.JFrame {
 
         MainInternalFrame.setVisible(true);
 
-        BackgroundMain.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Desktop\\Tecnólogo Informático\\4TO SEMESTRE\\PROGRAMACION DE APLICACIONES\\Laboratorio_PA_SJ\\Espotify Background\\espotify-back.jpg")); // NOI18N
         BackgroundMain.setText("jLabel18");
 
         javax.swing.GroupLayout MainInternalFrameLayout = new javax.swing.GroupLayout(MainInternalFrame.getContentPane());
@@ -804,7 +805,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(529, Short.MAX_VALUE))
+                .addContainerGap(533, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -866,7 +867,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(379, Short.MAX_VALUE)
+                .addContainerGap(381, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -882,7 +883,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -1219,7 +1220,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(AltaAlbumTemaSubTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1235,7 +1236,7 @@ public class Main extends javax.swing.JFrame {
         );
 
         QuitarTemaDeLista.setMinimumSize(new java.awt.Dimension(20, 34));
-        QuitarTemaDeLista.setLocationRelativeTo(null);
+        //QuitarTemaDeLista.setLocationRelativeTo(null);
         QuitarTemaDeLista.setVisible(true);
 
         QuitarTemaListaTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -1249,11 +1250,6 @@ public class Main extends javax.swing.JFrame {
 
         QuitarTemaListaTemas.setText("Temas:");
 
-        QuitarTemaListaListado1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         QuitarTemaListaListado.setViewportView(QuitarTemaListaListado1);
 
         QuitarTemaListaListadoIndication.setText("Seleccione el tema a quitar");
@@ -1339,7 +1335,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(QuitarListaConfirmar1)))
         );
 
-        DejarDeSeguirUsuario.setLocationRelativeTo(null);
+        //DejarDeSeguirUsuario.setLocationRelativeTo(null);
         DejarDeSeguirUsuario.setVisible(true);
 
         DejarSeguirUsuarioTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -1406,10 +1402,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DejarSeguirUsuarioCancelar1)
                     .addComponent(DejarSeguirUsuarioConfirmar1))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        GuardarTemaListaAlbum.setLocationRelativeTo(null);
+        //GuardarTemaListaAlbum.setLocationRelativeTo(null);
         GuardarTemaListaAlbum.setVisible(true);
 
         GuardarTLATitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -1496,10 +1492,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GuardarTemaListaAlbumCancelar1)
                     .addComponent(GuardarTemaListaAlbumConfirmar1))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        ConsultaListaReproduccion.setLocationRelativeTo(null);
+        //ConsultaListaReproduccion.setLocationRelativeTo(null);
         ConsultaListaReproduccion.setVisible(true);
 
         ConsultaListaReproduccionTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -1568,7 +1564,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -2179,7 +2175,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_AltaAlbumbtnImagenActionPerformed
 
     private void AltaAlbumbtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelarActionPerformed
-        this.setVisible(false);
+        this.AltaAlbum.setVisible(false);
         this.AltaAlbumtxtNom.setText("");
         this.AltaAlbumtxtApe.setText("");
     }//GEN-LAST:event_AltaAlbumbtnCancelarActionPerformed
@@ -2193,7 +2189,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed
 
     private void ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
-        this.setVisible(false);
+        this.ExistArtistAltaAlbum.setVisible(false);
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
 
     private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
@@ -2201,7 +2197,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
 
     private void QuitarListaCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarListaCancelar1ActionPerformed
-        this.setVisible(false);
+        this.QuitarTemaDeLista.setVisible(false);
         this.QuitarTemaListaUsuText.setText("");
         this.QuitarTemaListaListText.setText("");
     }//GEN-LAST:event_QuitarListaCancelar1ActionPerformed
@@ -2211,7 +2207,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_QuitarListaConfirmar1ActionPerformed
 
     private void DejarSeguirUsuarioCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DejarSeguirUsuarioCancelar1ActionPerformed
-        this.setVisible(false);
+        this.DejarDeSeguirUsuario.setVisible(false);
         this.DejarSeguirUsuarioClientText.setText("");
         this.DejarSeguirUsuarioUsuText.setText("");
     }//GEN-LAST:event_DejarSeguirUsuarioCancelar1ActionPerformed
@@ -2221,7 +2217,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
 
     private void GuardarTemaListaAlbumCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarTemaListaAlbumCancelar1ActionPerformed
-        this.setVisible(false);
+        this.GuardarTemaListaAlbum.setVisible(false);
         this.GuardarTLAClientText.setText("");
         this.GuardarTLATemaText.setText("");
         this.GuardarTLAListText.setText("");
@@ -2237,7 +2233,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemDejarDeSeguirUsuActionPerformed
 
     private void AltaAlbumbtnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelar1ActionPerformed
-        this.setVisible(false);
+        this.ConsultaListaReproduccion.setVisible(false);
     }//GEN-LAST:event_AltaAlbumbtnCancelar1ActionPerformed
 
     private void AltaAlbumbtnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmar1ActionPerformed

@@ -440,17 +440,17 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  <Component id="exitartistaltaablumlabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="ExistArtistAltaAlbumArtist" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="exitartistaltaablumbtnCancelar1" min="-2" max="-2" attributes="0"/>
+                          <Component id="ExistArtistAltaAlbumArtistTexttnCancelar1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="exitartistaltaablumbtnConfirmar1" min="-2" max="-2" attributes="0"/>
+                          <Component id="ExistArtistAltaAlbumArtistTexttnConfirmar1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="exitartistaltaablumtxtNick1" min="-2" pref="173" max="-2" attributes="0"/>
+                          <Component id="ExistArtistAltaAlbumArtistText" min="-2" pref="173" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="35" max="32767" attributes="0"/>
@@ -462,13 +462,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="exitartistaltaablumlabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="exitartistaltaablumtxtNick1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ExistArtistAltaAlbumArtist" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ExistArtistAltaAlbumArtistText" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="exitartistaltaablumbtnCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="exitartistaltaablumbtnConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ExistArtistAltaAlbumArtistTexttnCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ExistArtistAltaAlbumArtistTexttnConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
@@ -476,31 +476,31 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="exitartistaltaablumlabel1">
+        <Component class="javax.swing.JLabel" name="ExistArtistAltaAlbumArtist">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Artista"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="exitartistaltaablumtxtNick1">
+        <Component class="javax.swing.JTextField" name="ExistArtistAltaAlbumArtistText">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitartistaltaablumtxtNick1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExistArtistAltaAlbumArtistTextActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="exitartistaltaablumbtnCancelar1">
+        <Component class="javax.swing.JButton" name="ExistArtistAltaAlbumArtistTexttnCancelar1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitartistaltaablumbtnCancelar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="exitartistaltaablumbtnConfirmar1">
+        <Component class="javax.swing.JButton" name="ExistArtistAltaAlbumArtistTexttnConfirmar1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Confirmar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitartistaltaablumbtnConfirmar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -584,6 +584,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Consultar Lista"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemConListaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -714,6 +717,13 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
+          <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="ConsultaListaReproduccion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -734,14 +744,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ArtistList" max="32767" attributes="0"/>
-                  <EmptySpace pref="699" max="32767" attributes="0"/>
+                  <EmptySpace pref="719" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="AltaAlbum" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="1103" max="32767" attributes="0"/>
+                  <EmptySpace pref="1213" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
@@ -755,13 +765,20 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="673" max="-2" attributes="0"/>
                   <Component id="DejarDeSeguirUsuario" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="678" max="32767" attributes="0"/>
+                  <EmptySpace pref="702" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Component id="GuardarTemaListaAlbum" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+          <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="ConsultaListaReproduccion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -1062,7 +1079,7 @@
                       <Component id="bAddNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bCancelNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="505" max="32767" attributes="0"/>
+                  <EmptySpace pref="525" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1163,7 +1180,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="367" max="32767" attributes="0"/>
+                  <EmptySpace pref="377" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1182,7 +1199,7 @@
                       <Component id="followAccept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="FollowCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="141" max="32767" attributes="0"/>
+                  <EmptySpace pref="151" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1315,7 +1332,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1197" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1249" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1351,7 +1368,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="832" max="32767" attributes="0"/>
+                          <EmptySpace pref="868" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="ConsultUserTextFIeld1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1411,7 +1428,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="830" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="866" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1437,25 +1454,25 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jAltaAlbumLabel13" min="-2" pref="62" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumTemaSubTitle" min="-2" pref="62" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumjLabel14" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumNom" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumjLabel15" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumDur" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="AltaAlbumjLabel16" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumUbi" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="AltaAlbumbtnImagen" alignment="0" pref="155" max="32767" attributes="0"/>
-                              <Component id="AltaAlbumjScrollPane1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="AltaAlbumImagen" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumjRadioButton1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumSelectCreaParti" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1463,15 +1480,15 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="AltaAlbumjScrollPane2" min="-2" pref="99" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumNomListado" min="-2" pref="99" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumjScrollPane5" min="-2" pref="89" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumDurListado" min="-2" pref="89" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumjScrollPane4" min="-2" pref="99" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumUbiListado" min="-2" pref="99" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="AltaAlbumjLabel11" min="-2" max="-2" attributes="0"/>
+                                  <Component id="AltaAlbumAñoCrea" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="AltaAlbumDia" min="-2" pref="59" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -1483,11 +1500,11 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="AltaAlbumjLabel10" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AltaAlbumGenPert" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                          <Component id="AltaAlbumjLabel9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AltaAlbumNomAlb" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
@@ -1507,7 +1524,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
-                  <Component id="jAltaAlbumLabel12" min="-2" max="-2" attributes="0"/>
+                  <Component id="AltaAlbumTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -1516,15 +1533,15 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                  <Component id="jAltaAlbumLabel12" min="-2" max="-2" attributes="0"/>
+                  <Component id="AltaAlbumTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="AltaAlbumjScrollPane1" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Component id="AltaAlbumImagen" min="-2" pref="161" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="AltaAlbumbtnImagen" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="AltaAlbumjRadioButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="AltaAlbumSelectCreaParti" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="AltaAlbumbtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1535,43 +1552,43 @@
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="AltaAlbumtxtNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumjLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumNomAlb" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="AltaAlbumtxtApe" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumjLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumGenPert" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumjLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumAñoCrea" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="AltaAlbumMes" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="AltaAlbumAnio" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="AltaAlbumDia" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
-                          <Component id="jAltaAlbumLabel13" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                          <Component id="AltaAlbumTemaSubTitle" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="AltaAlbumjLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumjLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumjLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumNom" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumDur" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumUbi" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="AltaAlbumjScrollPane2" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumjScrollPane4" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumjScrollPane5" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumNomListado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumUbiListado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="AltaAlbumDurListado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="AltaAlbumjLabel9">
+        <Component class="javax.swing.JLabel" name="AltaAlbumNomAlb">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Nombre Album"/>
@@ -1582,7 +1599,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AltaAlbumtxtNomActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="AltaAlbumjLabel10">
+        <Component class="javax.swing.JLabel" name="AltaAlbumGenPert">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Generos Pertenecientes"/>
@@ -1590,7 +1607,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="AltaAlbumtxtApe">
         </Component>
-        <Component class="javax.swing.JLabel" name="AltaAlbumjLabel11">
+        <Component class="javax.swing.JLabel" name="AltaAlbumA&#xf1;oCrea">
           <Properties>
             <Property name="text" type="java.lang.String" value="A&#xf1;o de creaci&#xf3;n:"/>
           </Properties>
@@ -1763,7 +1780,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AltaAlbumbtnConfirmarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jAltaAlbumLabel12">
+        <Component class="javax.swing.JLabel" name="AltaAlbumTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Calibri" size="18" style="1"/>
@@ -1771,25 +1788,25 @@
             <Property name="text" type="java.lang.String" value="Alta Album"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="AltaAlbumjScrollPane1">
+        <Container class="javax.swing.JScrollPane" name="AltaAlbumImagen">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="AltaAlbumlblImagen">
+            <Component class="javax.swing.JLabel" name="AltaAlbumlblImagen1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Imagen"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="AltaAlbumjScrollPane2">
+        <Container class="javax.swing.JScrollPane" name="AltaAlbumNomListado">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="AltaAlbumjList1">
+            <Component class="javax.swing.JList" name="AltaAlbumNomListado1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1812,7 +1829,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jAltaAlbumLabel13">
+        <Component class="javax.swing.JLabel" name="AltaAlbumTemaSubTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Calibri" size="18" style="2"/>
@@ -1820,14 +1837,14 @@
             <Property name="text" type="java.lang.String" value="Temas:"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="AltaAlbumjScrollPane4">
+        <Container class="javax.swing.JScrollPane" name="AltaAlbumUbiListado">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="AltaAlbumjList2">
+            <Component class="javax.swing.JList" name="AltaAlbumUbiListado1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1850,14 +1867,14 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JScrollPane" name="AltaAlbumjScrollPane5">
+        <Container class="javax.swing.JScrollPane" name="AltaAlbumDurListado">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="AltaAlbumjList3">
+            <Component class="javax.swing.JList" name="AltaAlbumDurListado1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1880,22 +1897,22 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="AltaAlbumjLabel14">
+        <Component class="javax.swing.JLabel" name="AltaAlbumNom">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="AltaAlbumjLabel15">
+        <Component class="javax.swing.JLabel" name="AltaAlbumDur">
           <Properties>
             <Property name="text" type="java.lang.String" value="Duraci&#xf3;n"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="AltaAlbumjLabel16">
+        <Component class="javax.swing.JLabel" name="AltaAlbumUbi">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ubicaci&#xf3;n"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="AltaAlbumjRadioButton1">
+        <Component class="javax.swing.JRadioButton" name="AltaAlbumSelectCreaParti">
           <Properties>
             <Property name="text" type="java.lang.String" value="Crear Particular"/>
           </Properties>
@@ -1904,7 +1921,7 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="QuitarTemaDeLista">
       <Properties>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor" postCode="QuitarTemaDeLista.setLocationRelativeTo(null);">
           <Dimension value="[20, 34]"/>
         </Property>
         <Property name="visible" type="boolean" value="true"/>
@@ -1992,7 +2009,6 @@
                       <Component id="QuitarListaCancelar1" alignment="3" max="32767" attributes="0"/>
                       <Component id="QuitarListaConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="67" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2140,7 +2156,7 @@
                       <Component id="DejarSeguirUsuarioCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DejarSeguirUsuarioConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="83" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2268,7 +2284,7 @@
                       <Component id="GuardarTemaListaAlbumCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="GuardarTemaListaAlbumConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="59" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2324,6 +2340,127 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarTemaListaAlbumConfirmar1ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JInternalFrame" name="ConsultaListaReproduccion">
+      <Properties>
+        <Property name="visible" type="boolean" value="true"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ConsultaListaReproduccion.setLocationRelativeTo(null);"/>
+      </AuxValues>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="ConsultaListaReproduccionTitle" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="ConsultaListaReproduccionListado" alignment="1" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="ConsultaListaReproduccionSelectGen" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="ConsultaListaReproduccionSelectCli" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="AltaAlbumbtnCancelar1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="AltaAlbumbtnConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="49" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="ConsultaListaReproduccionTitle" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ConsultaListaReproduccionSelectGen" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ConsultaListaReproduccionSelectCli" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="ConsultaListaReproduccionListado" min="-2" pref="146" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="AltaAlbumbtnCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AltaAlbumbtnConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="ConsultaListaReproduccionTitle">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Calibri" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Consulta de Lista de Reproducci&#xf3;n"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="ConsultaListaReproduccionSelectGen">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Genero"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JRadioButton" name="ConsultaListaReproduccionSelectCli">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cliente"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="ConsultaListaReproduccionListado">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JList" name="ConsultaListaReproduccionListado1">
+              <Properties>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="Item 5"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="AltaAlbumbtnCancelar1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AltaAlbumbtnCancelar1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="AltaAlbumbtnConfirmar1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Confirmar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AltaAlbumbtnConfirmar1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

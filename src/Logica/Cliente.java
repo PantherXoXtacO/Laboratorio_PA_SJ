@@ -46,7 +46,7 @@ public class Cliente extends Usuario{
     void setListaParticular(ListaDeReproduccion lista){
         this.Listas.add(lista);
     }
-    }
+    
 
     public List getListsItem() {
         Iterator it = Listas.iterator();

@@ -66,7 +66,7 @@ public class Main extends javax.swing.JFrame {
         this.ClientList.setVisible(false);
         this.ArtistList.setVisible(false);
         this.setLocationRelativeTo(null);
-        this.AltaAlbum.setVisible(false);
+        this.AltaAlbum1.setVisible(false);
         this.CrearListaParticular.setVisible(false);
         this.CrearListaPorDefecto.setVisible(false);
         this.CLClientList.setVisible(false);
@@ -131,17 +131,17 @@ public class Main extends javax.swing.JFrame {
         VDCBUtton2 = new javax.swing.JButton();
         VDCLabel25 = new javax.swing.JLabel();
         VDCButton3 = new javax.swing.JButton();
-        ExistArtistAltaAlbum = new javax.swing.JDialog();
-        exitartistaltaablumlabel1 = new javax.swing.JLabel();
-        exitartistaltaablumtxtNick1 = new javax.swing.JTextField();
-        exitartistaltaablumbtnCancelar1 = new javax.swing.JButton();
-        exitartistaltaablumbtnConfirmar1 = new javax.swing.JButton();
         CLFileChooser1 = new javax.swing.JFileChooser();
         CLFileChooser2 = new javax.swing.JFileChooser();
         ListaGeneral = new javax.swing.JDialog();
         LGButton15 = new javax.swing.JButton();
         LGScroll6 = new javax.swing.JScrollPane();
         ListaGeneralLista = new javax.swing.JPanel();
+        ExistArtistAltaAlbum = new javax.swing.JDialog();
+        ExistArtistAltaAlbumArtist = new javax.swing.JLabel();
+        ExistArtistAltaAlbumArtistText = new javax.swing.JTextField();
+        ExistArtistAltaAlbumArtistTexttnCancelar1 = new javax.swing.JButton();
+        ExistArtistAltaAlbumArtistTexttnConfirmar1 = new javax.swing.JButton();
         jRegisterFrame = new javax.swing.JInternalFrame();
         RegFrameLabel1 = new javax.swing.JLabel();
         RegFrameLabel3 = new javax.swing.JLabel();
@@ -194,32 +194,6 @@ public class Main extends javax.swing.JFrame {
         ALLabel14 = new javax.swing.JLabel();
         ALUserListScroll1 = new javax.swing.JScrollPane();
         ALUserListUsers1 = new javax.swing.JPanel();
-        AltaAlbum = new javax.swing.JInternalFrame();
-        AltaAlbumjLabel9 = new javax.swing.JLabel();
-        AltaAlbumtxtNom = new javax.swing.JTextField();
-        AltaAlbumjLabel10 = new javax.swing.JLabel();
-        AltaAlbumtxtApe = new javax.swing.JTextField();
-        AltaAlbumjLabel11 = new javax.swing.JLabel();
-        AltaAlbumDia = new javax.swing.JComboBox<>();
-        AltaAlbumMes = new javax.swing.JComboBox<>();
-        AltaAlbumAnio = new javax.swing.JComboBox<>();
-        AltaAlbumbtnImagen = new javax.swing.JButton();
-        AltaAlbumbtnCancelar = new javax.swing.JButton();
-        AltaAlbumbtnConfirmar = new javax.swing.JButton();
-        jAltaAlbumLabel12 = new javax.swing.JLabel();
-        AltaAlbumjScrollPane1 = new javax.swing.JScrollPane();
-        AltaAlbumlblImagen = new javax.swing.JLabel();
-        AltaAlbumjScrollPane2 = new javax.swing.JScrollPane();
-        AltaAlbumjList1 = new javax.swing.JList<>();
-        jAltaAlbumLabel13 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        AltaAlbumjList2 = new javax.swing.JList<>();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        AltaAlbumjList3 = new javax.swing.JList<>();
-        AltaAlbumjLabel14 = new javax.swing.JLabel();
-        AltaAlbumjLabel15 = new javax.swing.JLabel();
-        AltaAlbumjLabel16 = new javax.swing.JLabel();
-        AltaAlbumjRadioButton1 = new javax.swing.JRadioButton();
         CrearListaPorDefecto = new javax.swing.JInternalFrame();
         CLLabel1 = new javax.swing.JLabel();
         CLLabel2 = new javax.swing.JLabel();
@@ -332,6 +306,73 @@ public class Main extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         LBConsultarAlbArt2 = new javax.swing.JLabel();
         JboxConsultarAlbAlb = new javax.swing.JComboBox<>();
+        AltaAlbum1 = new javax.swing.JInternalFrame();
+        AltaAlbumNomAlb = new javax.swing.JLabel();
+        AltaAlbumtxtNom1 = new javax.swing.JTextField();
+        AltaAlbumGenPert = new javax.swing.JLabel();
+        AltaAlbumtxtApe1 = new javax.swing.JTextField();
+        AltaAlbumAñoCrea = new javax.swing.JLabel();
+        AltaAlbumDia1 = new javax.swing.JComboBox<>();
+        AltaAlbumMes1 = new javax.swing.JComboBox<>();
+        AltaAlbumAnio1 = new javax.swing.JComboBox<>();
+        AltaAlbumbtnImagen1 = new javax.swing.JButton();
+        AltaAlbumbtnCancelar1 = new javax.swing.JButton();
+        AltaAlbumbtnConfirmar1 = new javax.swing.JButton();
+        AltaAlbumTitle = new javax.swing.JLabel();
+        AltaAlbumImagen = new javax.swing.JScrollPane();
+        AltaAlbumlblImagen1 = new javax.swing.JLabel();
+        AltaAlbumNomListado = new javax.swing.JScrollPane();
+        AltaAlbumNomListado1 = new javax.swing.JList<>();
+        AltaAlbumTemaSubTitle = new javax.swing.JLabel();
+        AltaAlbumUbiListado = new javax.swing.JScrollPane();
+        AltaAlbumUbiListado1 = new javax.swing.JList<>();
+        AltaAlbumDurListado = new javax.swing.JScrollPane();
+        AltaAlbumDurListado1 = new javax.swing.JList<>();
+        AltaAlbumNom = new javax.swing.JLabel();
+        AltaAlbumDur = new javax.swing.JLabel();
+        AltaAlbumUbi = new javax.swing.JLabel();
+        AltaAlbumSelectCreaParti = new javax.swing.JRadioButton();
+        QuitarTemaDeLista = new javax.swing.JInternalFrame();
+        QuitarTemaListaTitle = new javax.swing.JLabel();
+        QuitarTemaListaUsu = new javax.swing.JLabel();
+        QuitarTemaListaUsuText = new javax.swing.JTextField();
+        QuitarTemaListaList = new javax.swing.JLabel();
+        QuitarTemaListaListText = new javax.swing.JTextField();
+        QuitarTemaListaInf = new javax.swing.JLabel();
+        QuitarTemaListaTemas = new javax.swing.JLabel();
+        QuitarTemaListaListado = new javax.swing.JScrollPane();
+        QuitarTemaListaListado1 = new javax.swing.JList<>();
+        QuitarTemaListaListadoIndication = new javax.swing.JLabel();
+        QuitarListaCancelar1 = new javax.swing.JButton();
+        QuitarListaConfirmar1 = new javax.swing.JButton();
+        DejarDeSeguirUsuario = new javax.swing.JInternalFrame();
+        DejarSeguirUsuarioTitle = new javax.swing.JLabel();
+        DejarSeguirUsuarioClient = new javax.swing.JLabel();
+        DejarSeguirUsuarioUsu = new javax.swing.JLabel();
+        DejarSeguirUsuarioClientText = new javax.swing.JTextField();
+        DejarSeguirUsuarioUsuText = new javax.swing.JTextField();
+        DejarSeguirUsuarioCancelar1 = new javax.swing.JButton();
+        DejarSeguirUsuarioConfirmar1 = new javax.swing.JButton();
+        GuardarTemaListaAlbum = new javax.swing.JInternalFrame();
+        GuardarTLATitle = new javax.swing.JLabel();
+        GuardarTLAClient = new javax.swing.JLabel();
+        GuardarTLAClientText = new javax.swing.JTextField();
+        GuardarTLATema = new javax.swing.JLabel();
+        GuardarTLAList = new javax.swing.JLabel();
+        GuardarTLAAlbum = new javax.swing.JLabel();
+        GuardarTLATemaText = new javax.swing.JTextField();
+        GuardarTLAListText = new javax.swing.JTextField();
+        GuardarTLAAlbumText = new javax.swing.JTextField();
+        GuardarTemaListaAlbumCancelar1 = new javax.swing.JButton();
+        GuardarTemaListaAlbumConfirmar1 = new javax.swing.JButton();
+        ConsultaListaReproduccion = new javax.swing.JInternalFrame();
+        ConsultaListaReproduccionTitle = new javax.swing.JLabel();
+        ConsultaListaReproduccionSelectGen = new javax.swing.JRadioButton();
+        ConsultaListaReproduccionSelectCli = new javax.swing.JRadioButton();
+        ConsultaListaReproduccionListado = new javax.swing.JScrollPane();
+        ConsultaListaReproduccionListado1 = new javax.swing.JList<>();
+        AltaAlbumbtnCancelar2 = new javax.swing.JButton();
+        AltaAlbumbtnConfirmar2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
         jMenuRegistros = new javax.swing.JMenu();
@@ -661,64 +702,6 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ExistArtistAltaAlbum.setLocationRelativeTo(null);
-        ExistArtistAltaAlbum.setSize(400, 200);
-
-        exitartistaltaablumlabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitartistaltaablumlabel1.setText("Artista");
-
-        exitartistaltaablumtxtNick1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitartistaltaablumtxtNick1ActionPerformed(evt);
-            }
-        });
-
-        exitartistaltaablumbtnCancelar1.setText("Cancelar");
-        exitartistaltaablumbtnCancelar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitartistaltaablumbtnCancelar1ActionPerformed(evt);
-            }
-        });
-
-        exitartistaltaablumbtnConfirmar1.setText("Confirmar");
-        exitartistaltaablumbtnConfirmar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitartistaltaablumbtnConfirmar1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout ExistArtistAltaAlbumLayout = new javax.swing.GroupLayout(ExistArtistAltaAlbum.getContentPane());
-        ExistArtistAltaAlbum.getContentPane().setLayout(ExistArtistAltaAlbumLayout);
-        ExistArtistAltaAlbumLayout.setHorizontalGroup(
-            ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(exitartistaltaablumlabel1)
-                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(exitartistaltaablumbtnCancelar1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitartistaltaablumbtnConfirmar1))
-                    .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(exitartistaltaablumtxtNick1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(46, Short.MAX_VALUE))
-        );
-        ExistArtistAltaAlbumLayout.setVerticalGroup(
-            ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exitartistaltaablumlabel1)
-                    .addComponent(exitartistaltaablumtxtNick1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(exitartistaltaablumbtnCancelar1)
-                    .addComponent(exitartistaltaablumbtnConfirmar1))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
         CLFileChooser1.setCurrentDirectory(new java.io.File("I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images"));
         CLFileChooser1.setDialogTitle("Seleccion de imagen");
         CLFileChooser1.addActionListener(new java.awt.event.ActionListener() {
@@ -771,6 +754,64 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(LGScroll6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LGButton15))
+        );
+
+        ExistArtistAltaAlbum.setLocationRelativeTo(null);
+        ExistArtistAltaAlbum.setSize(400, 200);
+
+        ExistArtistAltaAlbumArtist.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ExistArtistAltaAlbumArtist.setText("Artista");
+
+        ExistArtistAltaAlbumArtistText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExistArtistAltaAlbumArtistTextActionPerformed(evt);
+            }
+        });
+
+        ExistArtistAltaAlbumArtistTexttnCancelar1.setText("Cancelar");
+        ExistArtistAltaAlbumArtistTexttnCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(evt);
+            }
+        });
+
+        ExistArtistAltaAlbumArtistTexttnConfirmar1.setText("Confirmar");
+        ExistArtistAltaAlbumArtistTexttnConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ExistArtistAltaAlbumLayout = new javax.swing.GroupLayout(ExistArtistAltaAlbum.getContentPane());
+        ExistArtistAltaAlbum.getContentPane().setLayout(ExistArtistAltaAlbumLayout);
+        ExistArtistAltaAlbumLayout.setHorizontalGroup(
+            ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(ExistArtistAltaAlbumArtist)
+                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(ExistArtistAltaAlbumArtistTexttnCancelar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ExistArtistAltaAlbumArtistTexttnConfirmar1))
+                    .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ExistArtistAltaAlbumArtistText, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        ExistArtistAltaAlbumLayout.setVerticalGroup(
+            ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ExistArtistAltaAlbumLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ExistArtistAltaAlbumArtist)
+                    .addComponent(ExistArtistAltaAlbumArtistText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(ExistArtistAltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ExistArtistAltaAlbumArtistTexttnCancelar1)
+                    .addComponent(ExistArtistAltaAlbumArtistTexttnConfirmar1))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -855,7 +896,7 @@ public class Main extends javax.swing.JFrame {
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addComponent(RegisterCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 484, Short.MAX_VALUE)
                 .addComponent(RegisterAcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addContainerGap()
@@ -932,7 +973,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 345, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -1002,7 +1043,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addContainerGap(382, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -1064,7 +1105,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(542, Short.MAX_VALUE)
+                .addContainerGap(550, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1080,7 +1121,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(316, Short.MAX_VALUE))
+                .addContainerGap(324, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -1167,7 +1208,7 @@ public class Main extends javax.swing.JFrame {
                 ALButton4ActionPerformed(evt);
             }
         });
-        ArtistList.getContentPane().add(ALButton4);
+        ArtistList.getContentPane().add(ALButton4, java.awt.BorderLayout.CENTER);
 
         ALButton5.setText("Cancelar");
         ALButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1175,11 +1216,11 @@ public class Main extends javax.swing.JFrame {
                 ALButton5MouseClicked(evt);
             }
         });
-        ArtistList.getContentPane().add(ALButton5);
-        ArtistList.getContentPane().add(ConsultUserTextFIeld1);
+        ArtistList.getContentPane().add(ALButton5, java.awt.BorderLayout.PAGE_START);
+        ArtistList.getContentPane().add(ConsultUserTextFIeld1, java.awt.BorderLayout.PAGE_END);
 
         ALLabel14.setText("Nick del usuario a consultar");
-        ArtistList.getContentPane().add(ALLabel14);
+        ArtistList.getContentPane().add(ALLabel14, java.awt.BorderLayout.LINE_END);
 
         javax.swing.GroupLayout ALUserListUsers1Layout = new javax.swing.GroupLayout(ALUserListUsers1);
         ALUserListUsers1.setLayout(ALUserListUsers1Layout);
@@ -1189,235 +1230,23 @@ public class Main extends javax.swing.JFrame {
         );
         ALUserListUsers1Layout.setVerticalGroup(
             ALUserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1128, Short.MAX_VALUE)
+            .addGap(0, 1132, Short.MAX_VALUE)
         );
 
         ALUserListScroll1.setViewportView(ALUserListUsers1);
 
-        ArtistList.getContentPane().add(ALUserListScroll1);
-
-        AltaAlbum.setVisible(true);
-
-        AltaAlbumjLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AltaAlbumjLabel9.setText("Nombre Album");
-
-        AltaAlbumtxtNom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumtxtNomActionPerformed(evt);
-            }
-        });
-
-        AltaAlbumjLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AltaAlbumjLabel10.setText("Generos Pertenecientes");
-
-        AltaAlbumjLabel11.setText("Año de creación:");
-
-        AltaAlbumDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        AltaAlbumDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumDiaActionPerformed(evt);
-            }
-        });
-
-        AltaAlbumMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
-        AltaAlbumMes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumMesActionPerformed(evt);
-            }
-        });
-
-        AltaAlbumAnio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998" }));
-        AltaAlbumAnio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumAnioActionPerformed(evt);
-            }
-        });
-
-        AltaAlbumbtnImagen.setText("Agregar Imagen");
-        AltaAlbumbtnImagen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumbtnImagenActionPerformed(evt);
-            }
-        });
-
-        AltaAlbumbtnCancelar.setText("Cancelar");
-        AltaAlbumbtnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumbtnCancelarActionPerformed(evt);
-            }
-        });
-
-        AltaAlbumbtnConfirmar.setText("Confirmar");
-        AltaAlbumbtnConfirmar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AltaAlbumbtnConfirmarActionPerformed(evt);
-            }
-        });
-
-        jAltaAlbumLabel12.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        jAltaAlbumLabel12.setText("Alta Album");
-
-        AltaAlbumlblImagen.setText("Imagen");
-        AltaAlbumjScrollPane1.setViewportView(AltaAlbumlblImagen);
-
-        AltaAlbumjList1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        AltaAlbumjList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        AltaAlbumjScrollPane2.setViewportView(AltaAlbumjList1);
-
-        jAltaAlbumLabel13.setFont(new java.awt.Font("Calibri", 2, 18)); // NOI18N
-        jAltaAlbumLabel13.setText("Temas:");
-
-        AltaAlbumjList2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        AltaAlbumjList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane4.setViewportView(AltaAlbumjList2);
-
-        AltaAlbumjList3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        AltaAlbumjList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane5.setViewportView(AltaAlbumjList3);
-
-        AltaAlbumjLabel14.setText("Nombre");
-
-        AltaAlbumjLabel15.setText("Duración");
-
-        AltaAlbumjLabel16.setText("Ubicación");
-
-        AltaAlbumjRadioButton1.setText("Crear Particular");
-
-        javax.swing.GroupLayout AltaAlbumLayout = new javax.swing.GroupLayout(AltaAlbum.getContentPane());
-        AltaAlbum.getContentPane().setLayout(AltaAlbumLayout);
-        AltaAlbumLayout.setHorizontalGroup(
-            AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(AltaAlbumLayout.createSequentialGroup()
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AltaAlbumLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jAltaAlbumLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(139, 139, 139))
-                            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(AltaAlbumjLabel14)
-                                .addGap(59, 59, 59)
-                                .addComponent(AltaAlbumjLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(AltaAlbumjLabel16)
-                                .addGap(51, 51, 51)))
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(AltaAlbumbtnImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                            .addComponent(AltaAlbumjScrollPane1)
-                            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(AltaAlbumjRadioButton1))))
-                    .addGroup(AltaAlbumLayout.createSequentialGroup()
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                .addGap(0, 17, Short.MAX_VALUE)
-                                .addComponent(AltaAlbumjScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(AltaAlbumjLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(AltaAlbumjLabel10))
-                                    .addGroup(AltaAlbumLayout.createSequentialGroup()
-                                        .addGap(33, 33, 33)
-                                        .addComponent(AltaAlbumjLabel9)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(AltaAlbumtxtNom, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                                    .addComponent(AltaAlbumtxtApe))))
-                        .addGap(9, 9, 9)
-                        .addComponent(AltaAlbumbtnCancelar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AltaAlbumbtnConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                .addGap(178, 178, 178)
-                .addComponent(jAltaAlbumLabel12)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        AltaAlbumLayout.setVerticalGroup(
-            AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AltaAlbumLayout.createSequentialGroup()
-                .addGap(4, 4, 4)
-                .addComponent(jAltaAlbumLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(AltaAlbumLayout.createSequentialGroup()
-                        .addComponent(AltaAlbumjScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(23, 23, 23)
-                        .addComponent(AltaAlbumbtnImagen)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AltaAlbumjRadioButton1)
-                        .addGap(14, 14, 14)
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AltaAlbumbtnCancelar)
-                            .addComponent(AltaAlbumbtnConfirmar)))
-                    .addGroup(AltaAlbumLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AltaAlbumtxtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AltaAlbumjLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AltaAlbumtxtApe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AltaAlbumjLabel10))
-                        .addGap(18, 18, 18)
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AltaAlbumjLabel11)
-                            .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 652, Short.MAX_VALUE)
-                        .addComponent(jAltaAlbumLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AltaAlbumjLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(AltaAlbumjLabel15)
-                            .addComponent(AltaAlbumjLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AltaAlbumjScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(27, 27, 27))
-        );
+        ArtistList.getContentPane().add(ALUserListScroll1, java.awt.BorderLayout.LINE_START);
 
         CrearListaPorDefecto.setVisible(true);
 
         CLLabel1.setText("Nombre de la lista");
-        CrearListaPorDefecto.getContentPane().add(CLLabel1);
+        CrearListaPorDefecto.getContentPane().add(CLLabel1, java.awt.BorderLayout.CENTER);
 
         CLLabel2.setText("Imagen de la lista");
-        CrearListaPorDefecto.getContentPane().add(CLLabel2);
+        CrearListaPorDefecto.getContentPane().add(CLLabel2, java.awt.BorderLayout.PAGE_START);
 
         CLTextFieldDePathDeImagen.setFocusable(false);
-        CrearListaPorDefecto.getContentPane().add(CLTextFieldDePathDeImagen);
+        CrearListaPorDefecto.getContentPane().add(CLTextFieldDePathDeImagen, java.awt.BorderLayout.PAGE_END);
 
         CLPorDefectoBotonDeCambioDeImagen.setText("Cambiar");
         CLPorDefectoBotonDeCambioDeImagen.addActionListener(new java.awt.event.ActionListener() {
@@ -1425,8 +1254,8 @@ public class Main extends javax.swing.JFrame {
                 CLPorDefectoBotonDeCambioDeImagenActionPerformed(evt);
             }
         });
-        CrearListaPorDefecto.getContentPane().add(CLPorDefectoBotonDeCambioDeImagen);
-        CrearListaPorDefecto.getContentPane().add(CLTextFieldNombreDeLista);
+        CrearListaPorDefecto.getContentPane().add(CLPorDefectoBotonDeCambioDeImagen, java.awt.BorderLayout.LINE_END);
+        CrearListaPorDefecto.getContentPane().add(CLTextFieldNombreDeLista, java.awt.BorderLayout.LINE_START);
 
         CLRegisterButton.setText("Registrar");
         CLRegisterButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1434,7 +1263,7 @@ public class Main extends javax.swing.JFrame {
                 CLRegisterButtonActionPerformed(evt);
             }
         });
-        CrearListaPorDefecto.getContentPane().add(CLRegisterButton);
+        CrearListaPorDefecto.getContentPane().add(CLRegisterButton, java.awt.BorderLayout.CENTER);
 
         CLCancelButton.setText("Cancelar");
         CLCancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1442,16 +1271,16 @@ public class Main extends javax.swing.JFrame {
                 CLCancelButtonActionPerformed(evt);
             }
         });
-        CrearListaPorDefecto.getContentPane().add(CLCancelButton);
+        CrearListaPorDefecto.getContentPane().add(CLCancelButton, java.awt.BorderLayout.CENTER);
 
         CLTitulo.setText("Lista Por Defecto");
-        CrearListaPorDefecto.getContentPane().add(CLTitulo);
+        CrearListaPorDefecto.getContentPane().add(CLTitulo, java.awt.BorderLayout.CENTER);
 
         CLLabel0.setText("Genero");
-        CrearListaPorDefecto.getContentPane().add(CLLabel0);
+        CrearListaPorDefecto.getContentPane().add(CLLabel0, java.awt.BorderLayout.CENTER);
 
         CLGeneroTextField.setFocusable(false);
-        CrearListaPorDefecto.getContentPane().add(CLGeneroTextField);
+        CrearListaPorDefecto.getContentPane().add(CLGeneroTextField, java.awt.BorderLayout.CENTER);
 
         CLButton7.setText("Cambiar");
         CLButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -1459,18 +1288,18 @@ public class Main extends javax.swing.JFrame {
                 CLButton7ActionPerformed(evt);
             }
         });
-        CrearListaPorDefecto.getContentPane().add(CLButton7);
+        CrearListaPorDefecto.getContentPane().add(CLButton7, java.awt.BorderLayout.CENTER);
 
         CrearListaParticular.setVisible(true);
 
         CLLabel3.setText("Nombre de la lista");
-        CrearListaParticular.getContentPane().add(CLLabel3);
+        CrearListaParticular.getContentPane().add(CLLabel3, java.awt.BorderLayout.CENTER);
 
         CLLabel4.setText("Imagen de la lista");
-        CrearListaParticular.getContentPane().add(CLLabel4);
+        CrearListaParticular.getContentPane().add(CLLabel4, java.awt.BorderLayout.PAGE_START);
 
         CLTextFieldDePathDeImagen2.setFocusable(false);
-        CrearListaParticular.getContentPane().add(CLTextFieldDePathDeImagen2);
+        CrearListaParticular.getContentPane().add(CLTextFieldDePathDeImagen2, java.awt.BorderLayout.PAGE_END);
 
         CLPorDefectoBotonDeCambioDeImagen2.setText("Cambiar");
         CLPorDefectoBotonDeCambioDeImagen2.addActionListener(new java.awt.event.ActionListener() {
@@ -1478,8 +1307,8 @@ public class Main extends javax.swing.JFrame {
                 CLPorDefectoBotonDeCambioDeImagen2ActionPerformed(evt);
             }
         });
-        CrearListaParticular.getContentPane().add(CLPorDefectoBotonDeCambioDeImagen2);
-        CrearListaParticular.getContentPane().add(CLPTextFieldNombreDeLista);
+        CrearListaParticular.getContentPane().add(CLPorDefectoBotonDeCambioDeImagen2, java.awt.BorderLayout.LINE_END);
+        CrearListaParticular.getContentPane().add(CLPTextFieldNombreDeLista, java.awt.BorderLayout.LINE_START);
 
         CLRegisterButton2.setText("Registrar");
         CLRegisterButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -1487,7 +1316,7 @@ public class Main extends javax.swing.JFrame {
                 CLRegisterButton2ActionPerformed(evt);
             }
         });
-        CrearListaParticular.getContentPane().add(CLRegisterButton2);
+        CrearListaParticular.getContentPane().add(CLRegisterButton2, java.awt.BorderLayout.CENTER);
 
         CLCancelButton2.setText("Cancelar");
         CLCancelButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -1495,16 +1324,16 @@ public class Main extends javax.swing.JFrame {
                 CLCancelButton2ActionPerformed(evt);
             }
         });
-        CrearListaParticular.getContentPane().add(CLCancelButton2);
+        CrearListaParticular.getContentPane().add(CLCancelButton2, java.awt.BorderLayout.CENTER);
 
         CLTitulo2.setText("Lista Particular");
-        CrearListaParticular.getContentPane().add(CLTitulo2);
+        CrearListaParticular.getContentPane().add(CLTitulo2, java.awt.BorderLayout.CENTER);
 
         CLLabel5.setText("Nick del cliente propietario");
-        CrearListaParticular.getContentPane().add(CLLabel5);
+        CrearListaParticular.getContentPane().add(CLLabel5, java.awt.BorderLayout.CENTER);
 
         CLPClienteTextField.setFocusable(false);
-        CrearListaParticular.getContentPane().add(CLPClienteTextField);
+        CrearListaParticular.getContentPane().add(CLPClienteTextField, java.awt.BorderLayout.CENTER);
 
         CLPButton6.setText("Cambiar");
         CLPButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -1512,7 +1341,7 @@ public class Main extends javax.swing.JFrame {
                 CLPButton6ActionPerformed(evt);
             }
         });
-        CrearListaParticular.getContentPane().add(CLPButton6);
+        CrearListaParticular.getContentPane().add(CLPButton6, java.awt.BorderLayout.CENTER);
 
         CLClientList.setVisible(true);
 
@@ -1550,7 +1379,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLCUserListUsers2Layout.setVerticalGroup(
             CLCUserListUsers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1288, Short.MAX_VALUE)
+            .addGap(0, 2511, Short.MAX_VALUE)
         );
 
         CLCUserListScroll2.setViewportView(CLCUserListUsers2);
@@ -1574,7 +1403,7 @@ public class Main extends javax.swing.JFrame {
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 1290, Short.MAX_VALUE)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 2513, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1621,7 +1450,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLListaDeGeneroLayout.setVerticalGroup(
             CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1341, Short.MAX_VALUE)
+            .addGap(0, 3783, Short.MAX_VALUE)
         );
 
         CLGUserListScroll3.setViewportView(CLListaDeGenero);
@@ -1725,7 +1554,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLLabelDeUsuario_Lista)
                     .addComponent(ConsultUserTextFIeld2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLBotonAceptar)
                     .addComponent(PCLBotonCancelar)))
@@ -1813,7 +1642,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLLabel29)
                     .addComponent(PCLComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLBotonAceptar1)
                     .addComponent(PCLBotonCancelar1)))
@@ -1890,7 +1719,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBAddToListAceptar)
                     .addComponent(JBAddToListCancelar))
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(321, Short.MAX_VALUE))
         );
 
         FrameRemoveTemaFav.setVisible(true);
@@ -1950,7 +1779,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
 
         FrameRemoveAlbumFav.setTitle("Eliminar album de favoritos");
@@ -2011,7 +1840,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBRemoveAlbumFavAcept)
                     .addComponent(jBRemoveAlbumFavCancel))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(197, Short.MAX_VALUE))
         );
 
         jFrameRemoveListFav.setTitle("Eliminar lista de favoritos");
@@ -2072,7 +1901,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBEliminarFavAcept)
                     .addComponent(jBEliminarListFavCancel))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(202, Short.MAX_VALUE))
         );
 
         jFConsultarAlbumGen.setTitle("Consultar Album");
@@ -2141,7 +1970,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         FrameConsultarAlbum.setVisible(true);
@@ -2224,7 +2053,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(62, Short.MAX_VALUE))
+                        .addContainerGap(78, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BConsultAlbAceptar)
@@ -2272,7 +2101,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(JboxConsultarAlbAlb, 0, 129, Short.MAX_VALUE)
                             .addComponent(JboxConsultarAlbArt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         FrameConsultarAlbArtLayout.setVerticalGroup(
             FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2285,11 +2114,556 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LBConsultarAlbArt2)
                     .addComponent(JboxConsultarAlbAlb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton9))
                 .addGap(20, 20, 20))
+        );
+
+        ExistArtistAltaAlbum.setLocationRelativeTo(null);
+        AltaAlbum1.setVisible(false);
+
+        AltaAlbumNomAlb.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AltaAlbumNomAlb.setText("Nombre Album");
+
+        AltaAlbumtxtNom1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumtxtNom1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumGenPert.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AltaAlbumGenPert.setText("Generos Pertenecientes");
+
+        AltaAlbumAñoCrea.setText("Año de creación:");
+
+        AltaAlbumDia1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        AltaAlbumDia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumDia1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumMes1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        AltaAlbumMes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumMes1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumAnio1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998" }));
+        AltaAlbumAnio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumAnio1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnImagen1.setText("Agregar Imagen");
+        AltaAlbumbtnImagen1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnImagen1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnCancelar1.setText("Cancelar");
+        AltaAlbumbtnCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnCancelar1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnConfirmar1.setText("Confirmar");
+        AltaAlbumbtnConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        AltaAlbumTitle.setText("Alta Album");
+
+        AltaAlbumlblImagen1.setText("Imagen");
+        AltaAlbumImagen.setViewportView(AltaAlbumlblImagen1);
+
+        AltaAlbumNomListado1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AltaAlbumNomListado1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        AltaAlbumNomListado.setViewportView(AltaAlbumNomListado1);
+
+        AltaAlbumTemaSubTitle.setFont(new java.awt.Font("Calibri", 2, 18)); // NOI18N
+        AltaAlbumTemaSubTitle.setText("Temas:");
+
+        AltaAlbumUbiListado1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AltaAlbumUbiListado1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        AltaAlbumUbiListado.setViewportView(AltaAlbumUbiListado1);
+
+        AltaAlbumDurListado1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        AltaAlbumDurListado1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        AltaAlbumDurListado.setViewportView(AltaAlbumDurListado1);
+
+        AltaAlbumNom.setText("Nombre");
+
+        AltaAlbumDur.setText("Duración");
+
+        AltaAlbumUbi.setText("Ubicación");
+
+        AltaAlbumSelectCreaParti.setText("Crear Particular");
+
+        javax.swing.GroupLayout AltaAlbum1Layout = new javax.swing.GroupLayout(AltaAlbum1.getContentPane());
+        AltaAlbum1.getContentPane().setLayout(AltaAlbum1Layout);
+        AltaAlbum1Layout.setHorizontalGroup(
+            AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AltaAlbum1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumTemaSubTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(139, 139, 139))
+                            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(AltaAlbumNom)
+                                .addGap(59, 59, 59)
+                                .addComponent(AltaAlbumDur)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumUbi)
+                                .addGap(51, 51, 51)))
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(AltaAlbumbtnImagen1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                            .addComponent(AltaAlbumImagen)
+                            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(AltaAlbumSelectCreaParti))))
+                    .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumNomListado, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AltaAlbumDurListado, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AltaAlbumUbiListado, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(AltaAlbumAñoCrea)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(AltaAlbumDia1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AltaAlbumMes1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AltaAlbumAnio1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(AltaAlbumGenPert))
+                                    .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                                        .addGap(33, 33, 33)
+                                        .addComponent(AltaAlbumNomAlb)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(AltaAlbumtxtNom1, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                                    .addComponent(AltaAlbumtxtApe1))))
+                        .addGap(9, 9, 9)
+                        .addComponent(AltaAlbumbtnCancelar1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AltaAlbumbtnConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                .addGap(178, 178, 178)
+                .addComponent(AltaAlbumTitle)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        AltaAlbum1Layout.setVerticalGroup(
+            AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                .addGap(4, 4, 4)
+                .addComponent(AltaAlbumTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                        .addComponent(AltaAlbumImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addComponent(AltaAlbumbtnImagen1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AltaAlbumSelectCreaParti)
+                        .addGap(14, 14, 14)
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumbtnCancelar1)
+                            .addComponent(AltaAlbumbtnConfirmar1)))
+                    .addGroup(AltaAlbum1Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumtxtNom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumNomAlb))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumtxtApe1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumGenPert))
+                        .addGap(18, 18, 18)
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(AltaAlbumAñoCrea)
+                            .addComponent(AltaAlbumMes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumAnio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumDia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addComponent(AltaAlbumTemaSubTitle)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AltaAlbumNom, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(AltaAlbumDur)
+                            .addComponent(AltaAlbumUbi, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AltaAlbumNomListado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumUbiListado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AltaAlbumDurListado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+
+        QuitarTemaDeLista.setMinimumSize(new java.awt.Dimension(20, 34));
+        QuitarTemaDeLista.setVisible(false);
+
+        QuitarTemaListaTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        QuitarTemaListaTitle.setText("Quitar Tema de Lista");
+
+        QuitarTemaListaUsu.setText("*Usuario: ");
+
+        QuitarTemaListaList.setText(" Lista: ");
+
+        QuitarTemaListaInf.setText("*: Opcional; si la lista es por defecto.");
+
+        QuitarTemaListaTemas.setText("Temas:");
+
+        QuitarTemaListaListado.setViewportView(QuitarTemaListaListado1);
+
+        QuitarTemaListaListadoIndication.setText("Seleccione el tema a quitar");
+
+        QuitarListaCancelar1.setText("Cancelar");
+        QuitarListaCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitarListaCancelar1ActionPerformed(evt);
+            }
+        });
+
+        QuitarListaConfirmar1.setText("Confirmar");
+        QuitarListaConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuitarListaConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout QuitarTemaDeListaLayout = new javax.swing.GroupLayout(QuitarTemaDeLista.getContentPane());
+        QuitarTemaDeLista.getContentPane().setLayout(QuitarTemaDeListaLayout);
+        QuitarTemaDeListaLayout.setHorizontalGroup(
+            QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(QuitarTemaListaUsu))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(QuitarTemaListaList, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addGap(0, 17, Short.MAX_VALUE)
+                        .addComponent(QuitarTemaListaTitle)
+                        .addGap(72, 72, 72))
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(QuitarTemaListaListText, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                            .addComponent(QuitarTemaListaUsuText))))
+                .addGap(52, 52, 52))
+            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(QuitarTemaListaTemas))
+                    .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(QuitarTemaListaListado, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                                .addComponent(QuitarTemaListaInf, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(QuitarListaCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(QuitarTemaListaListadoIndication))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(QuitarListaConfirmar1)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        QuitarTemaDeListaLayout.setVerticalGroup(
+            QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(QuitarTemaListaTitle)
+                .addGap(18, 18, 18)
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(QuitarTemaListaUsu)
+                    .addComponent(QuitarTemaListaUsuText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(QuitarTemaListaList)
+                    .addComponent(QuitarTemaListaListText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(QuitarTemaListaTemas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(QuitarTemaListaListado, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
+                .addComponent(QuitarTemaListaListadoIndication)
+                .addGap(18, 18, 18)
+                .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(QuitarTemaListaInf)
+                    .addComponent(QuitarListaCancelar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(QuitarListaConfirmar1)))
+        );
+
+        //DejarDeSeguirUsuario.setLocationRelativeTo(null);
+        DejarDeSeguirUsuario.setVisible(false
+        );
+
+        DejarSeguirUsuarioTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        DejarSeguirUsuarioTitle.setText("Dejar de Seguir a Usuario");
+
+        DejarSeguirUsuarioClient.setText("Cliente: ");
+
+        DejarSeguirUsuarioUsu.setText("Usuario: ");
+
+        DejarSeguirUsuarioCancelar1.setText("Cancelar");
+        DejarSeguirUsuarioCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DejarSeguirUsuarioCancelar1ActionPerformed(evt);
+            }
+        });
+
+        DejarSeguirUsuarioConfirmar1.setText("Confirmar");
+        DejarSeguirUsuarioConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DejarSeguirUsuarioConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout DejarDeSeguirUsuarioLayout = new javax.swing.GroupLayout(DejarDeSeguirUsuario.getContentPane());
+        DejarDeSeguirUsuario.getContentPane().setLayout(DejarDeSeguirUsuarioLayout);
+        DejarDeSeguirUsuarioLayout.setHorizontalGroup(
+            DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(DejarSeguirUsuarioTitle))
+                    .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(DejarSeguirUsuarioClient)
+                            .addComponent(DejarSeguirUsuarioUsu))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(DejarSeguirUsuarioCancelar1)
+                                .addGap(18, 18, 18)
+                                .addComponent(DejarSeguirUsuarioConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(DejarSeguirUsuarioUsuText, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                                .addComponent(DejarSeguirUsuarioClientText)))))
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+        DejarDeSeguirUsuarioLayout.setVerticalGroup(
+            DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(DejarSeguirUsuarioTitle)
+                .addGap(23, 23, 23)
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DejarSeguirUsuarioClient)
+                    .addComponent(DejarSeguirUsuarioClientText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DejarSeguirUsuarioUsuText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DejarSeguirUsuarioUsu))
+                .addGap(36, 36, 36)
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DejarSeguirUsuarioCancelar1)
+                    .addComponent(DejarSeguirUsuarioConfirmar1))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        //GuardarTemaListaAlbum.setLocationRelativeTo(null);
+        GuardarTemaListaAlbum.setVisible(false);
+
+        GuardarTLATitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        GuardarTLATitle.setText("Guardar Tema/Lista/Album");
+
+        GuardarTLAClient.setText("Cliente: ");
+
+        GuardarTLATema.setText("Tema: ");
+
+        GuardarTLAList.setText("Lista: ");
+
+        GuardarTLAAlbum.setText("Album: ");
+
+        GuardarTemaListaAlbumCancelar1.setText("Cancelar");
+        GuardarTemaListaAlbumCancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarTemaListaAlbumCancelar1ActionPerformed(evt);
+            }
+        });
+
+        GuardarTemaListaAlbumConfirmar1.setText("Confirmar");
+        GuardarTemaListaAlbumConfirmar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarTemaListaAlbumConfirmar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout GuardarTemaListaAlbumLayout = new javax.swing.GroupLayout(GuardarTemaListaAlbum.getContentPane());
+        GuardarTemaListaAlbum.getContentPane().setLayout(GuardarTemaListaAlbumLayout);
+        GuardarTemaListaAlbumLayout.setHorizontalGroup(
+            GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                            .addGap(51, 51, 51)
+                            .addComponent(GuardarTLATitle))
+                        .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(GuardarTLAClient, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(GuardarTLAClientText, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(GuardarTLATema)
+                                    .addComponent(GuardarTLAList))
+                                .addComponent(GuardarTLAAlbum))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(GuardarTLAListText)
+                                .addComponent(GuardarTLATemaText)
+                                .addComponent(GuardarTLAAlbumText))))
+                    .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(GuardarTemaListaAlbumCancelar1)
+                        .addGap(18, 18, 18)
+                        .addComponent(GuardarTemaListaAlbumConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+        GuardarTemaListaAlbumLayout.setVerticalGroup(
+            GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarTemaListaAlbumLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(GuardarTLATitle)
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GuardarTLAClient)
+                    .addComponent(GuardarTLAClientText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GuardarTLATema)
+                    .addComponent(GuardarTLATemaText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GuardarTLAListText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GuardarTLAList))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GuardarTLAAlbum)
+                    .addComponent(GuardarTLAAlbumText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GuardarTemaListaAlbumCancelar1)
+                    .addComponent(GuardarTemaListaAlbumConfirmar1))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        //ConsultaListaReproduccion.setLocationRelativeTo(null);
+        ConsultaListaReproduccion.setVisible(false);
+
+        ConsultaListaReproduccionTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        ConsultaListaReproduccionTitle.setText("Consulta de Lista de Reproducción");
+
+        ConsultaListaReproduccionSelectGen.setText("Genero");
+
+        ConsultaListaReproduccionSelectCli.setText("Cliente");
+
+        ConsultaListaReproduccionListado1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        ConsultaListaReproduccionListado.setViewportView(ConsultaListaReproduccionListado1);
+
+        AltaAlbumbtnCancelar2.setText("Cancelar");
+        AltaAlbumbtnCancelar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnCancelar2ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnConfirmar2.setText("Confirmar");
+        AltaAlbumbtnConfirmar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnConfirmar2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout ConsultaListaReproduccionLayout = new javax.swing.GroupLayout(ConsultaListaReproduccion.getContentPane());
+        ConsultaListaReproduccion.getContentPane().setLayout(ConsultaListaReproduccionLayout);
+        ConsultaListaReproduccionLayout.setHorizontalGroup(
+            ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ConsultaListaReproduccionTitle)
+                    .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(ConsultaListaReproduccionListado)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ConsultaListaReproduccionLayout.createSequentialGroup()
+                                .addComponent(ConsultaListaReproduccionSelectGen)
+                                .addGap(31, 31, 31)
+                                .addComponent(ConsultaListaReproduccionSelectCli))))
+                    .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(AltaAlbumbtnCancelar2)
+                        .addGap(18, 18, 18)
+                        .addComponent(AltaAlbumbtnConfirmar2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+        ConsultaListaReproduccionLayout.setVerticalGroup(
+            ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ConsultaListaReproduccionTitle)
+                .addGap(18, 18, 18)
+                .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConsultaListaReproduccionSelectGen)
+                    .addComponent(ConsultaListaReproduccionSelectCli))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ConsultaListaReproduccionListado, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AltaAlbumbtnCancelar2)
+                    .addComponent(AltaAlbumbtnConfirmar2))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -2402,6 +2776,11 @@ public class Main extends javax.swing.JFrame {
         jMenuConsultas.add(jMenuConsultarAlbum);
 
         jMenuItemConLista.setText("Consultar Lista");
+        jMenuItemConLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemConListaActionPerformed(evt);
+            }
+        });
         jMenuConsultas.add(jMenuItemConLista);
 
         jMenuBar1.add(jMenuConsultas);
@@ -2417,6 +2796,11 @@ public class Main extends javax.swing.JFrame {
         jMenuUsuarios.add(jMenuItemSegUsu);
 
         jMenuItemDejarDeSeguirUsu.setText("Dejar De Seguir Usuario");
+        jMenuItemDejarDeSeguirUsu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDejarDeSeguirUsuActionPerformed(evt);
+            }
+        });
         jMenuUsuarios.add(jMenuItemDejarDeSeguirUsu);
 
         jMenu1.setText("Agregar a favoritos");
@@ -2492,7 +2876,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(FrameRemoveAlbumFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(213, 213, 213)
-                        .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(FrameConsultarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2523,11 +2907,6 @@ public class Main extends javax.swing.JFrame {
                     .addGap(306, 306, 306)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(91, 91, 91)
-                    .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1018, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(CrearListaPorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
@@ -2556,6 +2935,31 @@ public class Main extends javax.swing.JFrame {
                     .addContainerGap()
                     .addComponent(PrivacidadClientList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(17, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2568,7 +2972,7 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
                                 .addComponent(FrameConsultarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(FrameRemoveAlbumFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2578,17 +2982,17 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(91, 91, 91)
                         .addComponent(jFConsultarAlbumGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ClientList)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 34, Short.MAX_VALUE)
                         .addComponent(FrameRemoveTemaFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(jFrameRemoveListFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(46, 46, 46)
                         .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -2596,24 +3000,19 @@ public class Main extends javax.swing.JFrame {
                     .addContainerGap(2742, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(319, 319, 319)
-                    .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(2554, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 1174, Short.MAX_VALUE)
+                    .addGap(0, 1930, Short.MAX_VALUE)
                     .addComponent(CrearListaPorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1175, Short.MAX_VALUE)))
+                    .addGap(0, 1930, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(3347, Short.MAX_VALUE)))
+                    .addContainerGap(3849, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CLClientList)
-                    .addContainerGap(72, Short.MAX_VALUE)))
+                    .addContainerGap(1291, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(21, 21, 21)
@@ -2622,19 +3021,45 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(PrivacidadClientList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 3276, Short.MAX_VALUE)))
+                    .addGap(0, 3315, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(PrivacidadClientList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(3194, Short.MAX_VALUE)))
+                    .addContainerGap(3233, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemCrearAlbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearAlbActionPerformed
-        // TODO add your handling code here:
+        this.ExistArtistAltaAlbum.setVisible(true);
+        this.AltaAlbum1.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearAlbActionPerformed
 
     private void jMenuItemRegUsuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRegUsuMouseClicked
@@ -2991,46 +3416,6 @@ public class Main extends javax.swing.JFrame {
         FrameNewGen.setVisible(false);
         TFNewGen.setText("");
     }//GEN-LAST:event_bCancelNewGenActionPerformed
-
-    private void AltaAlbumtxtNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumtxtNomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltaAlbumtxtNomActionPerformed
-
-    private void AltaAlbumDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltaAlbumDiaActionPerformed
-
-    private void AltaAlbumMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumMesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltaAlbumMesActionPerformed
-
-    private void AltaAlbumAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumAnioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltaAlbumAnioActionPerformed
-
-    private void AltaAlbumbtnImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnImagenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltaAlbumbtnImagenActionPerformed
-
-    private void AltaAlbumbtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelarActionPerformed
-        this.setVisible(false);
-    }//GEN-LAST:event_AltaAlbumbtnCancelarActionPerformed
-
-    private void AltaAlbumbtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AltaAlbumbtnConfirmarActionPerformed
-
-    private void exitartistaltaablumtxtNick1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumtxtNick1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_exitartistaltaablumtxtNick1ActionPerformed
-
-    private void exitartistaltaablumbtnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnCancelar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_exitartistaltaablumbtnCancelar1ActionPerformed
-
-    private void exitartistaltaablumbtnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_exitartistaltaablumbtnConfirmar1ActionPerformed
 
     private void jMenuItemCrearListaPorDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaPorDefectoActionPerformed
         this.CrearListaPorDefecto.setVisible(true);
@@ -3591,6 +3976,114 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PCLBotonCancelar1ActionPerformed
 
+    private void QuitarListaCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarListaCancelar1ActionPerformed
+        this.QuitarTemaDeLista.setVisible(false);
+        this.QuitarTemaListaUsuText.setText("");
+        this.QuitarTemaListaListText.setText("");
+    }//GEN-LAST:event_QuitarListaCancelar1ActionPerformed
+
+    private void QuitarListaConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarListaConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_QuitarListaConfirmar1ActionPerformed
+
+    private void DejarSeguirUsuarioCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DejarSeguirUsuarioCancelar1ActionPerformed
+        this.DejarDeSeguirUsuario.setVisible(false);
+        this.DejarSeguirUsuarioClientText.setText("");
+        this.DejarSeguirUsuarioUsuText.setText("");
+    }//GEN-LAST:event_DejarSeguirUsuarioCancelar1ActionPerformed
+
+    private void DejarSeguirUsuarioConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
+
+    private void GuardarTemaListaAlbumCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarTemaListaAlbumCancelar1ActionPerformed
+        this.GuardarTemaListaAlbum.setVisible(false);
+        this.GuardarTLAClientText.setText("");
+        this.GuardarTLATemaText.setText("");
+        this.GuardarTLAListText.setText("");
+        this.GuardarTLAAlbumText.setText("");
+    }//GEN-LAST:event_GuardarTemaListaAlbumCancelar1ActionPerformed
+
+    private void GuardarTemaListaAlbumConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarTemaListaAlbumConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuardarTemaListaAlbumConfirmar1ActionPerformed
+
+    private void AltaAlbumbtnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelar2ActionPerformed
+        this.ConsultaListaReproduccion.setVisible(false);
+    }//GEN-LAST:event_AltaAlbumbtnCancelar2ActionPerformed
+
+    private void AltaAlbumbtnConfirmar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnConfirmar2ActionPerformed
+
+    private void ExistArtistAltaAlbumArtistTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed
+
+    private void ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
+        this.ExistArtistAltaAlbum.setVisible(false);
+    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
+
+    private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
+
+    private void jMenuItemDejarDeSeguirUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDejarDeSeguirUsuActionPerformed
+         this.DejarDeSeguirUsuario.setVisible(true);
+    }//GEN-LAST:event_jMenuItemDejarDeSeguirUsuActionPerformed
+
+    private void jMenuItemConListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConListaActionPerformed
+        this.ConsultaListaReproduccion.setVisible(true);
+    }//GEN-LAST:event_jMenuItemConListaActionPerformed
+
+    private void AltaAlbumbtnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed
+
+    private void AltaAlbumbtnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelar1ActionPerformed
+        this.AltaAlbum1.setVisible(false);
+        this.AltaAlbumtxtNom1.setText("");
+        this.AltaAlbumtxtApe1.setText("");
+    }//GEN-LAST:event_AltaAlbumbtnCancelar1ActionPerformed
+
+    private void AltaAlbumbtnImagen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnImagen1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnImagen1ActionPerformed
+
+    private void AltaAlbumAnio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumAnio1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumAnio1ActionPerformed
+
+    private void AltaAlbumMes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumMes1ActionPerformed
+        int mes = Integer.parseInt(this.AltaAlbumMes1.getSelectedItem().toString());
+        if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+            this.AltaAlbumDia1.removeAll();
+            for (int i = 1; i <= 30; i++){
+                this.AltaAlbumDia1.addItem(Integer.toString(i));
+            }
+        }
+        else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+            this.AltaAlbumDia1.removeAll();
+            for (int i = 1; i <= 31; i++){
+                this.AltaAlbumDia1.addItem(Integer.toString(i));
+            }
+        }
+        else if (mes == 2){
+            this.AltaAlbumDia1.removeAll();
+            for (int i = 1; i <= 28; i++){
+                this.AltaAlbumDia1.addItem(Integer.toString(i));
+            }
+        }
+    }//GEN-LAST:event_AltaAlbumMes1ActionPerformed
+
+    private void AltaAlbumDia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumDia1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumDia1ActionPerformed
+
+    private void AltaAlbumtxtNom1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumtxtNom1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumtxtNom1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3633,28 +4126,34 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane ALUserListScroll1;
     private javax.swing.JPanel ALUserListUsers1;
     private javax.swing.JFileChooser AUFileChooser;
-    private javax.swing.JInternalFrame AltaAlbum;
-    private javax.swing.JComboBox<String> AltaAlbumAnio;
-    private javax.swing.JComboBox<String> AltaAlbumDia;
-    private javax.swing.JComboBox<String> AltaAlbumMes;
-    private javax.swing.JButton AltaAlbumbtnCancelar;
-    private javax.swing.JButton AltaAlbumbtnConfirmar;
-    private javax.swing.JButton AltaAlbumbtnImagen;
-    private javax.swing.JLabel AltaAlbumjLabel10;
-    private javax.swing.JLabel AltaAlbumjLabel11;
-    private javax.swing.JLabel AltaAlbumjLabel14;
-    private javax.swing.JLabel AltaAlbumjLabel15;
-    private javax.swing.JLabel AltaAlbumjLabel16;
-    private javax.swing.JLabel AltaAlbumjLabel9;
-    private javax.swing.JList<String> AltaAlbumjList1;
-    private javax.swing.JList<String> AltaAlbumjList2;
-    private javax.swing.JList<String> AltaAlbumjList3;
-    private javax.swing.JRadioButton AltaAlbumjRadioButton1;
-    private javax.swing.JScrollPane AltaAlbumjScrollPane1;
-    private javax.swing.JScrollPane AltaAlbumjScrollPane2;
-    private javax.swing.JLabel AltaAlbumlblImagen;
-    private javax.swing.JTextField AltaAlbumtxtApe;
-    private javax.swing.JTextField AltaAlbumtxtNom;
+    private javax.swing.JInternalFrame AltaAlbum1;
+    private javax.swing.JComboBox<String> AltaAlbumAnio1;
+    private javax.swing.JLabel AltaAlbumAñoCrea;
+    private javax.swing.JComboBox<String> AltaAlbumDia1;
+    private javax.swing.JLabel AltaAlbumDur;
+    private javax.swing.JScrollPane AltaAlbumDurListado;
+    private javax.swing.JList<String> AltaAlbumDurListado1;
+    private javax.swing.JLabel AltaAlbumGenPert;
+    private javax.swing.JScrollPane AltaAlbumImagen;
+    private javax.swing.JComboBox<String> AltaAlbumMes1;
+    private javax.swing.JLabel AltaAlbumNom;
+    private javax.swing.JLabel AltaAlbumNomAlb;
+    private javax.swing.JScrollPane AltaAlbumNomListado;
+    private javax.swing.JList<String> AltaAlbumNomListado1;
+    private javax.swing.JRadioButton AltaAlbumSelectCreaParti;
+    private javax.swing.JLabel AltaAlbumTemaSubTitle;
+    private javax.swing.JLabel AltaAlbumTitle;
+    private javax.swing.JLabel AltaAlbumUbi;
+    private javax.swing.JScrollPane AltaAlbumUbiListado;
+    private javax.swing.JList<String> AltaAlbumUbiListado1;
+    private javax.swing.JButton AltaAlbumbtnCancelar1;
+    private javax.swing.JButton AltaAlbumbtnCancelar2;
+    private javax.swing.JButton AltaAlbumbtnConfirmar1;
+    private javax.swing.JButton AltaAlbumbtnConfirmar2;
+    private javax.swing.JButton AltaAlbumbtnImagen1;
+    private javax.swing.JLabel AltaAlbumlblImagen1;
+    private javax.swing.JTextField AltaAlbumtxtApe1;
+    private javax.swing.JTextField AltaAlbumtxtNom1;
     private javax.swing.JLabel ApellidoLabel1;
     private javax.swing.JLabel ApellidoLabel2;
     private javax.swing.JLabel ApellidoLabel3;
@@ -3719,9 +4218,27 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField ConsultUserTextFIeld1;
     private javax.swing.JTextField ConsultUserTextFIeld2;
     private javax.swing.JTextField ConsultUserTextFIeld3;
+    private javax.swing.JInternalFrame ConsultaListaReproduccion;
+    private javax.swing.JScrollPane ConsultaListaReproduccionListado;
+    private javax.swing.JList<String> ConsultaListaReproduccionListado1;
+    private javax.swing.JRadioButton ConsultaListaReproduccionSelectCli;
+    private javax.swing.JRadioButton ConsultaListaReproduccionSelectGen;
+    private javax.swing.JLabel ConsultaListaReproduccionTitle;
     private javax.swing.JInternalFrame CrearListaParticular;
     private javax.swing.JInternalFrame CrearListaPorDefecto;
+    private javax.swing.JInternalFrame DejarDeSeguirUsuario;
+    private javax.swing.JButton DejarSeguirUsuarioCancelar1;
+    private javax.swing.JLabel DejarSeguirUsuarioClient;
+    private javax.swing.JTextField DejarSeguirUsuarioClientText;
+    private javax.swing.JButton DejarSeguirUsuarioConfirmar1;
+    private javax.swing.JLabel DejarSeguirUsuarioTitle;
+    private javax.swing.JLabel DejarSeguirUsuarioUsu;
+    private javax.swing.JTextField DejarSeguirUsuarioUsuText;
     private javax.swing.JDialog ExistArtistAltaAlbum;
+    private javax.swing.JLabel ExistArtistAltaAlbumArtist;
+    private javax.swing.JTextField ExistArtistAltaAlbumArtistText;
+    private javax.swing.JButton ExistArtistAltaAlbumArtistTexttnCancelar1;
+    private javax.swing.JButton ExistArtistAltaAlbumArtistTexttnConfirmar1;
     private javax.swing.JLabel FechaLabel1;
     private javax.swing.JLabel FechaLabel2;
     private javax.swing.JLabel FechaLabel3;
@@ -3735,6 +4252,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame FrameRemoveAlbumFav;
     private javax.swing.JInternalFrame FrameRemoveTemaFav;
     private javax.swing.JInternalFrame FrameSeguirUser;
+    private javax.swing.JLabel GuardarTLAAlbum;
+    private javax.swing.JTextField GuardarTLAAlbumText;
+    private javax.swing.JLabel GuardarTLAClient;
+    private javax.swing.JTextField GuardarTLAClientText;
+    private javax.swing.JLabel GuardarTLAList;
+    private javax.swing.JTextField GuardarTLAListText;
+    private javax.swing.JLabel GuardarTLATema;
+    private javax.swing.JTextField GuardarTLATemaText;
+    private javax.swing.JLabel GuardarTLATitle;
+    private javax.swing.JInternalFrame GuardarTemaListaAlbum;
+    private javax.swing.JButton GuardarTemaListaAlbumCancelar1;
+    private javax.swing.JButton GuardarTemaListaAlbumConfirmar1;
     private javax.swing.JTextField ImagePathTextField;
     private javax.swing.JLabel ImagenDeArtista;
     private javax.swing.JLabel ImagenDeCliente;
@@ -3780,6 +4309,19 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane PCLUserListScroll5;
     private javax.swing.JInternalFrame PrivacidadClientList;
     private javax.swing.JInternalFrame PrivacidadClientList2;
+    private javax.swing.JButton QuitarListaCancelar1;
+    private javax.swing.JButton QuitarListaConfirmar1;
+    private javax.swing.JInternalFrame QuitarTemaDeLista;
+    private javax.swing.JLabel QuitarTemaListaInf;
+    private javax.swing.JLabel QuitarTemaListaList;
+    private javax.swing.JTextField QuitarTemaListaListText;
+    private javax.swing.JScrollPane QuitarTemaListaListado;
+    private javax.swing.JList<String> QuitarTemaListaListado1;
+    private javax.swing.JLabel QuitarTemaListaListadoIndication;
+    private javax.swing.JLabel QuitarTemaListaTemas;
+    private javax.swing.JLabel QuitarTemaListaTitle;
+    private javax.swing.JLabel QuitarTemaListaUsu;
+    private javax.swing.JTextField QuitarTemaListaUsuText;
     private javax.swing.JLabel RAL17;
     private javax.swing.JLabel RAL2;
     private javax.swing.JScrollPane RAScrollPanel;
@@ -3818,13 +4360,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel WebLabel3;
     private javax.swing.JButton bAddNewGen;
     private javax.swing.JButton bCancelNewGen;
-    private javax.swing.JButton exitartistaltaablumbtnCancelar1;
-    private javax.swing.JButton exitartistaltaablumbtnConfirmar1;
-    private javax.swing.JLabel exitartistaltaablumlabel1;
-    private javax.swing.JTextField exitartistaltaablumtxtNick1;
     private javax.swing.JButton followAccept;
-    private javax.swing.JLabel jAltaAlbumLabel12;
-    private javax.swing.JLabel jAltaAlbumLabel13;
     private javax.swing.JButton jBConsultarAlbumGen;
     private javax.swing.JButton jBConsultarAlbumGenCancel;
     private javax.swing.JButton jBConsultarGenSelectGen;
@@ -3893,8 +4429,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jRegisterNicknameField;
     private javax.swing.JTextField jRegisterNombreField;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;

@@ -16,6 +16,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.tree.DefaultTreeModel;
 import Logica.Genero;
 import Logica.ListaDeReproduccion;
+import Logica.ListaParticular;
 import Logica.Manejador;
 import Logica.Usuario;
 import java.awt.Dimension;
@@ -31,6 +32,7 @@ import javax.swing.JLabel;
 import java.util.Iterator;
 import javax.swing.ImageIcon;
 import javax.swing.JTree;
+import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
@@ -58,6 +60,7 @@ public class Main extends javax.swing.JFrame {
         this.CrearListaPorDefecto.setVisible(false);
         this.CLClientList.setVisible(false);
         this.CLGeneroList.setVisible(false);
+        this.PrivacidadClientList.setVisible(false );
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();
@@ -171,6 +174,7 @@ public class Main extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         UserListScroll = new javax.swing.JScrollPane();
         UserListUsers = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
         ArtistList = new javax.swing.JInternalFrame();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -242,6 +246,15 @@ public class Main extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         UserListScroll3 = new javax.swing.JScrollPane();
         CLListaDeGenero = new javax.swing.JPanel();
+        PrivacidadClientList = new javax.swing.JInternalFrame();
+        PCLBotonAceptar = new javax.swing.JButton();
+        PCLBotonCancelar = new javax.swing.JButton();
+        ConsultUserTextFIeld2 = new javax.swing.JTextField();
+        PCLLabelDeUsuario_Lista = new javax.swing.JLabel();
+        UserListScroll4 = new javax.swing.JScrollPane();
+        PCLClientList = new javax.swing.JPanel();
+        PCLComboBox = new javax.swing.JComboBox<>();
+        jLabel28 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuInicio = new javax.swing.JMenu();
         jMenuRegistros = new javax.swing.JMenu();
@@ -906,7 +919,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -968,7 +981,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(339, Short.MAX_VALUE)
+                .addContainerGap(367, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -984,7 +997,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -1018,10 +1031,12 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsersLayout.setVerticalGroup(
             UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 883, Short.MAX_VALUE)
+            .addGap(0, 930, Short.MAX_VALUE)
         );
 
         UserListScroll.setViewportView(UserListUsers);
+
+        jLabel27.setText("Privacidad");
 
         javax.swing.GroupLayout ClientListLayout = new javax.swing.GroupLayout(ClientList.getContentPane());
         ClientList.getContentPane().setLayout(ClientListLayout);
@@ -1031,23 +1046,26 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2))
+            .addComponent(UserListScroll)
             .addGroup(ClientListLayout.createSequentialGroup()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld))
-            .addGroup(ClientListLayout.createSequentialGroup()
-                .addComponent(UserListScroll)
+                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
                 .addContainerGap())
         );
         ClientListLayout.setVerticalGroup(
             ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientListLayout.createSequentialGroup()
-                .addComponent(UserListScroll)
+                .addComponent(UserListScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3)))
@@ -1084,7 +1102,7 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsers1Layout.setVerticalGroup(
             UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 609, Short.MAX_VALUE)
+            .addGap(0, 683, Short.MAX_VALUE)
         );
 
         UserListScroll1.setViewportView(UserListUsers1);
@@ -1108,7 +1126,7 @@ public class Main extends javax.swing.JFrame {
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 611, Short.MAX_VALUE)
+                .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1316,7 +1334,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
                         .addComponent(jAltaAlbumLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1421,7 +1439,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel0))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton)
                     .addComponent(CLCancelButton)))
@@ -1527,7 +1545,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -1565,11 +1583,11 @@ public class Main extends javax.swing.JFrame {
         UserListUsers2.setLayout(UserListUsers2Layout);
         UserListUsers2Layout.setHorizontalGroup(
             UserListUsers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 765, Short.MAX_VALUE)
+            .addGap(0, 766, Short.MAX_VALUE)
         );
         UserListUsers2Layout.setVerticalGroup(
             UserListUsers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1179, Short.MAX_VALUE)
+            .addGap(0, 1257, Short.MAX_VALUE)
         );
 
         UserListScroll2.setViewportView(UserListUsers2);
@@ -1593,7 +1611,7 @@ public class Main extends javax.swing.JFrame {
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(UserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 1181, Short.MAX_VALUE)
+                .addComponent(UserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 1259, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1640,7 +1658,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLListaDeGeneroLayout.setVerticalGroup(
             CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1186, Short.MAX_VALUE)
+            .addGap(0, 1283, Short.MAX_VALUE)
         );
 
         UserListScroll3.setViewportView(CLListaDeGenero);
@@ -1673,6 +1691,94 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton10)
                     .addComponent(jButton11)))
+        );
+
+        PrivacidadClientList.setMaximizable(true);
+        PrivacidadClientList.setResizable(true);
+        PrivacidadClientList.setVisible(true);
+
+        PCLBotonAceptar.setText("Siguiente");
+        PCLBotonAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PCLBotonAceptarMouseClicked(evt);
+            }
+        });
+        PCLBotonAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PCLBotonAceptarActionPerformed(evt);
+            }
+        });
+
+        PCLBotonCancelar.setText("Cancelar");
+        PCLBotonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PCLBotonCancelarMouseClicked(evt);
+            }
+        });
+        PCLBotonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PCLBotonCancelarActionPerformed(evt);
+            }
+        });
+
+        PCLLabelDeUsuario_Lista.setText("Nick del usuario");
+
+        javax.swing.GroupLayout PCLClientListLayout = new javax.swing.GroupLayout(PCLClientList);
+        PCLClientList.setLayout(PCLClientListLayout);
+        PCLClientListLayout.setHorizontalGroup(
+            PCLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 761, Short.MAX_VALUE)
+        );
+        PCLClientListLayout.setVerticalGroup(
+            PCLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 938, Short.MAX_VALUE)
+        );
+
+        UserListScroll4.setViewportView(PCLClientList);
+
+        PCLComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Privada", "Publica"}));
+
+        jLabel28.setText("Privacidad");
+
+        javax.swing.GroupLayout PrivacidadClientListLayout = new javax.swing.GroupLayout(PrivacidadClientList.getContentPane());
+        PrivacidadClientList.getContentPane().setLayout(PrivacidadClientListLayout);
+        PrivacidadClientListLayout.setHorizontalGroup(
+            PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PrivacidadClientListLayout.createSequentialGroup()
+                .addComponent(PCLBotonCancelar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PCLBotonAceptar))
+            .addGroup(PrivacidadClientListLayout.createSequentialGroup()
+                .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(UserListScroll4)
+                    .addGroup(PrivacidadClientListLayout.createSequentialGroup()
+                        .addComponent(PCLLabelDeUsuario_Lista, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ConsultUserTextFIeld2))
+                    .addGroup(PrivacidadClientListLayout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addGap(57, 57, 57)
+                        .addComponent(PCLComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        PrivacidadClientListLayout.setVerticalGroup(
+            PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrivacidadClientListLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(UserListScroll4, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PCLLabelDeUsuario_Lista)
+                    .addComponent(ConsultUserTextFIeld2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(PCLComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PCLBotonAceptar)
+                    .addComponent(PCLBotonCancelar)))
         );
 
         jMenuInicio.setText("Inicio");
@@ -1802,6 +1908,11 @@ public class Main extends javax.swing.JFrame {
         jMenuListas.add(jMenuItemQuitarLista);
 
         jMenuItemPublicarLista.setText("Publicar Lista");
+        jMenuItemPublicarLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPublicarListaActionPerformed(evt);
+            }
+        });
         jMenuListas.add(jMenuItemPublicarLista);
 
         jMenuBar1.add(jMenuListas);
@@ -1851,6 +1962,11 @@ public class Main extends javax.swing.JFrame {
                     .addGap(20, 20, 20)
                     .addComponent(CLGeneroList)
                     .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(PrivacidadClientList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(17, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1863,17 +1979,17 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(ArtistList)
-                    .addContainerGap(596, Short.MAX_VALUE)))
+                    .addContainerGap(619, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(319, 319, 319)
                     .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(459, Short.MAX_VALUE)))
+                    .addContainerGap(500, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -1883,17 +1999,21 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(922, Short.MAX_VALUE)))
+                    .addContainerGap(963, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CLClientList)
-                    .addContainerGap(26, Short.MAX_VALUE)))
+                    .addContainerGap(49, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(21, 21, 21)
                     .addComponent(CLGeneroList)
                     .addGap(9, 9, 9)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(PrivacidadClientList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 757, Short.MAX_VALUE)))
         );
 
         pack();
@@ -2467,6 +2587,89 @@ public class Main extends javax.swing.JFrame {
         this.ListaGeneral.setVisible(false);
     }//GEN-LAST:event_jButton15ActionPerformed
 
+    private void PCLBotonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonAceptarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PCLBotonAceptarMouseClicked
+
+    private void PCLBotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonAceptarActionPerformed
+        String mode = this.PCLLabelDeUsuario_Lista.getText();
+        Cliente objetivo = null;
+        if(!mode.equals("Lista de reproduccion")){
+            String username = this.ConsultUserTextFIeld2.getText();
+            if(!username.isEmpty()){
+                Cliente user = ICU.consultarCliente(username);   
+                if((user!=null)){ //Si encuentra al usuario
+                    this.PCLClientList.removeAll();
+                    List<ListaDeReproduccion> listas = user.getListas();
+                    int listSize = listas.size();
+                    for(int i=0; i<listSize; i++){
+                        JLabel label = new JLabel();
+                        label.setText(listas.get(i).getNombre());
+                        label.setBounds(0, 40*i, 200, 40);
+                        this.PCLClientList.add(label);
+                    }
+                    SwingUtilities.updateComponentTreeUI(this.PCLClientList);
+                    this.ConsultUserTextFIeld2.setText("");
+                    this.PCLLabelDeUsuario_Lista.setText("Lista de reproduccion");
+                    objetivo = user;
+                }    
+                else
+                    JOptionPane.showMessageDialog(this, "No existe el usuario", "Consultar Cliente", JOptionPane.INFORMATION_MESSAGE);
+                
+            }
+        }    
+            else{
+                String selectedList = this.ConsultUserTextFIeld2.getText();
+                if(!selectedList.isEmpty()){
+                    ListaParticular lista = ICU.getListByName(objetivo, selectedList);
+                    if(lista!=null){
+                        String item = this.PCLComboBox.getSelectedItem().toString();
+                        if(item.equals("Publica")){
+                            if(lista.getPrivacidad()){
+                                ICU.privatizarLista(lista, false);
+                                JOptionPane.showMessageDialog(this, "La lista es ahora publica", "Lista Particular", JOptionPane.INFORMATION_MESSAGE);
+                            }
+                            else
+                                JOptionPane.showMessageDialog(this, "La lista ya es publica", "Lista Particular", JOptionPane.INFORMATION_MESSAGE);    
+                            }
+                        else{
+                            if(lista.getPrivacidad())
+                                JOptionPane.showMessageDialog(this, "La lista ya es privada", "Lista Particular", JOptionPane.INFORMATION_MESSAGE); 
+                            else{
+                               ICU.privatizarLista(lista, true);
+                               JOptionPane.showMessageDialog(this, "La lista es ahora privada", "Lista Particular", JOptionPane.INFORMATION_MESSAGE);
+                        }
+                }
+            }
+                     }
+            }
+            
+            
+    }//GEN-LAST:event_PCLBotonAceptarActionPerformed
+
+    private void PCLBotonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonCancelarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PCLBotonCancelarMouseClicked
+
+    private void jMenuItemPublicarListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPublicarListaActionPerformed
+        Manejador manejador = Logica.Manejador.getinstance();
+        List<Cliente> clientes = manejador.getClientes();
+        int numeroDeClientes = clientes.size();  
+        for(int i=0; i<numeroDeClientes; i++){
+            JLabel label = new JLabel();
+            label.setText(clientes.get(i).getNickname());
+            label.setBounds(0, 40*i, 200, 40);
+            this.PCLClientList.add(label);              
+        }    
+        this.PrivacidadClientList.setVisible(true);
+    }//GEN-LAST:event_jMenuItemPublicarListaActionPerformed
+
+    private void PCLBotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonCancelarActionPerformed
+        this.PCLClientList.removeAll();
+        this.PCLLabelDeUsuario_Lista.setText("Nick del usuario");
+        this.PrivacidadClientList.setVisible(false);
+    }//GEN-LAST:event_PCLBotonCancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2562,6 +2765,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame ClientList;
     private javax.swing.JTextField ConsultUserTextFIeld;
     private javax.swing.JTextField ConsultUserTextFIeld1;
+    private javax.swing.JTextField ConsultUserTextFIeld2;
     private javax.swing.JInternalFrame CrearListaParticular;
     private javax.swing.JInternalFrame CrearListaPorDefecto;
     private javax.swing.JDialog ExistArtistAltaAlbum;
@@ -2590,6 +2794,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel NombreLabel1;
     private javax.swing.JLabel NombreLabel2;
     private javax.swing.JLabel NombreLabel3;
+    private javax.swing.JButton PCLBotonAceptar;
+    private javax.swing.JButton PCLBotonCancelar;
+    private javax.swing.JPanel PCLClientList;
+    private javax.swing.JComboBox<String> PCLComboBox;
+    private javax.swing.JLabel PCLLabelDeUsuario_Lista;
+    private javax.swing.JInternalFrame PrivacidadClientList;
     private javax.swing.JButton RegisterAcceptButton;
     private javax.swing.JButton RegisterCancelButton;
     private javax.swing.JDialog RegistrarArtista;
@@ -2601,6 +2811,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane UserListScroll1;
     private javax.swing.JScrollPane UserListScroll2;
     private javax.swing.JScrollPane UserListScroll3;
+    private javax.swing.JScrollPane UserListScroll4;
     private javax.swing.JPanel UserListUsers;
     private javax.swing.JPanel UserListUsers1;
     private javax.swing.JPanel UserListUsers2;
@@ -2654,6 +2865,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -26,5 +26,7 @@ public interface IControlador{
     public abstract Artista consultarArtista(String nickname);
     public abstract void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista);
     public abstract void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista);
+    public abstract void privatizarLista(ListaParticular lista, boolean modo);
+    public ListaParticular getListByName(Cliente user, String name);
 }
 

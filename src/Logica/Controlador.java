@@ -136,4 +136,15 @@ public class Controlador implements IControlador {
         M.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
     }
     
+    @Override
+    public void privatizarLista(ListaParticular lista, boolean modo){
+        lista.setPrivacidad(modo);
+    }
+    
+    @Override
+    public ListaParticular getListByName(Cliente user, String name){
+        Manejador M=Manejador.getinstance();
+        return M.getListaPorNombre(user, name);
+    }
+    
 }

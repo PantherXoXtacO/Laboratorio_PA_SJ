@@ -18,7 +18,15 @@ public class ListaParticular extends ListaDeReproduccion {
     public ListaParticular(Cliente cliente, String nombre, String imagen) {
         super(nombre, imagen);
         this.cliente = cliente;
-        this.privacidad = false;
+        this.privacidad = true;
+    }
+    
+    public void setPrivacidad(boolean modo){
+        this.privacidad = modo;
+    }
+    
+    public boolean getPrivacidad(){
+        return this.privacidad;
     }
         
 }

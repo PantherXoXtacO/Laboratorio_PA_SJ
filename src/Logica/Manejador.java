@@ -185,6 +185,21 @@ public class Manejador {
         return null;
     }
     
+    public ListaParticular getListaPorNombre(Cliente user, String nombre){
+        List<ListaDeReproduccion> listas = user.getListas();
+        Iterator it = listas.iterator();
+        ListaDeReproduccion lista;
+        while(it.hasNext()){
+            lista = (ListaDeReproduccion)it.next();
+            if(lista.getNombre().equals(nombre)){
+                ListaParticular listaFinal = (ListaParticular) lista;
+                return listaFinal;
+            }
+                
+        }
+        return null;
+    }
+    
     public List<Genero> getListGeneros(){
         return generosList;
     }
@@ -238,4 +253,5 @@ public class Manejador {
         ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);
         this.Listas.add(lista);
     }
+    
 }

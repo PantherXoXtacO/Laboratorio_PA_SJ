@@ -2,7 +2,7 @@
 
 <Form version="1.7" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Container class="javax.swing.JInternalFrame" name="jInternalFrame2">
+    <Container class="javax.swing.JInternalFrame" name="ToBeHonestIHaveNoClue">
       <Properties>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
@@ -45,15 +45,15 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RAL2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RAL17" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <EmptySpace pref="6" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="RegistrarArtistaAcceptButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" alignment="1" pref="325" max="32767" attributes="0"/>
+                      <Component id="RAScrollPanel" alignment="1" pref="325" max="32767" attributes="0"/>
                       <Component id="LinkWebTextField" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -66,17 +66,17 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Component id="RAScrollPanel" min="-2" pref="161" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="RAL2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="36" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LinkWebTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="RAL17" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -109,7 +109,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LinkWebTextFieldActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+        <Container class="javax.swing.JScrollPane" name="RAScrollPanel">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -124,12 +124,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="RAL2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Biografia"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel17">
+        <Component class="javax.swing.JLabel" name="RAL17">
           <Properties>
             <Property name="text" type="java.lang.String" value="Link a sitio web"/>
           </Properties>
@@ -141,7 +141,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
+              <Component id="VDALSP3" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -149,12 +149,12 @@
                           <Component id="ImagenDeArtista" min="-2" pref="138" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel20" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel22" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL20" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                              <Component id="VDAL21" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL22" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL23" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL24" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL15" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -166,7 +166,7 @@
                               <Component id="WebLabel3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="VDAL13" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="71" pref="104" max="32767" attributes="0"/>
               </Group>
@@ -179,32 +179,32 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL20" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="NickLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL21" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="NombreLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL22" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ApellidoLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL23" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="MailLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL24" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="FechaLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="VDAL15" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="WebLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
@@ -214,9 +214,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                  <Component id="VDAL13" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane3" min="-2" pref="120" max="-2" attributes="0"/>
+                  <Component id="VDALSP3" min="-2" pref="120" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -224,27 +224,27 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="ImagenDeArtista">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel20">
+        <Component class="javax.swing.JLabel" name="VDAL20">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nickname:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel21">
+        <Component class="javax.swing.JLabel" name="VDAL21">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel22">
+        <Component class="javax.swing.JLabel" name="VDAL22">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel23">
+        <Component class="javax.swing.JLabel" name="VDAL23">
           <Properties>
             <Property name="text" type="java.lang.String" value="Mail:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel24">
+        <Component class="javax.swing.JLabel" name="VDAL24">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fecha de nacimiento:"/>
           </Properties>
@@ -274,7 +274,7 @@
             <Property name="text" type="java.lang.String" value="fecha"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+        <Container class="javax.swing.JScrollPane" name="VDALSP3">
           <AuxValues>
             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
           </AuxValues>
@@ -290,12 +290,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel13">
+        <Component class="javax.swing.JLabel" name="VDAL13">
           <Properties>
             <Property name="text" type="java.lang.String" value="Biografia:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel15">
+        <Component class="javax.swing.JLabel" name="VDAL15">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pagina web:"/>
           </Properties>
@@ -335,12 +335,12 @@
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton13" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jButton14" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jButton12" max="32767" attributes="0"/>
+                      <Component id="VDCBUtton2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="VDCButton3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="VDCButton1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                  <Component id="VDCLabel25" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -380,13 +380,13 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="VDCButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="VDCLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+                  <Component id="VDCBUtton2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton14" min="-2" max="-2" attributes="0"/>
+                  <Component id="VDCButton3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -445,33 +445,33 @@
             <Property name="text" type="java.lang.String" value="fecha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton12">
+        <Component class="javax.swing.JButton" name="VDCButton1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver Seguidores"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VDCButton1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton13">
+        <Component class="javax.swing.JButton" name="VDCBUtton2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver Listas creadas"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VDCBUtton2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel25">
+        <Component class="javax.swing.JLabel" name="VDCLabel25">
           <Properties>
             <Property name="text" type="java.lang.String" value="Preferencias?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton14">
+        <Component class="javax.swing.JButton" name="VDCButton3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver Usuarios Seguidos"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VDCButton3ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -580,32 +580,32 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton15" max="32767" attributes="0"/>
+                  <Component id="LGButton15" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
-              <Component id="jScrollPane6" alignment="0" max="32767" attributes="0"/>
+              <Component id="LGScroll6" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="jScrollPane6" max="32767" attributes="0"/>
+                  <Component id="LGScroll6" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton15" min="-2" max="-2" attributes="0"/>
+                  <Component id="LGButton15" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton15">
+        <Component class="javax.swing.JButton" name="LGButton15">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cerrar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LGButton15ActionPerformed"/>
           </Events>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+        <Container class="javax.swing.JScrollPane" name="LGScroll6">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
@@ -869,6 +869,13 @@
                   <EmptySpace pref="17" max="32767" attributes="0"/>
               </Group>
           </Group>
+          <Group type="103" rootIndex="8" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="PrivacidadClientList2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -883,20 +890,20 @@
               <Component id="FrameNewGen" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="FrameSeguirUser" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="81" max="32767" attributes="0"/>
+              <EmptySpace pref="115" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ArtistList" max="32767" attributes="0"/>
-                  <EmptySpace pref="619" max="32767" attributes="0"/>
+                  <EmptySpace pref="644" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="319" max="-2" attributes="0"/>
                   <Component id="AltaAlbum" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="500" max="32767" attributes="0"/>
+                  <EmptySpace pref="546" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
@@ -910,14 +917,14 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CrearListaParticular" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="963" max="32767" attributes="0"/>
+                  <EmptySpace pref="1009" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CLClientList" max="32767" attributes="0"/>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                  <EmptySpace pref="72" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
@@ -930,7 +937,14 @@
           <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="PrivacidadClientList" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="757" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="775" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+          <Group type="103" rootIndex="8" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="PrivacidadClientList2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="764" max="32767" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -954,19 +968,19 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="RegFrameLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           <Component id="jRegisterNicknameField" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RegFrameLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Component id="jRegisterEmailField" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RegFrameLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RegFrameLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -976,11 +990,11 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel7" max="32767" attributes="0"/>
+                              <Component id="RegFrameLabel7" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="RegFrameLabel6" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="RegFrameLabel10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="UserTypeComboBox" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -999,7 +1013,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="ImagePathTextField" max="32767" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton1" max="-2" attributes="0"/>
+                                  <Component id="RegFrameLabelButton1" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1011,40 +1025,40 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jRegisterNicknameField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jRegisterNombreField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel5" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jRegisterApellidolField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jRegisterEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jComboBoxDia" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxMes" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxAño" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabelButton1" alignment="3" max="-2" attributes="0"/>
                       <Component id="ImagePathTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="UserTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -1057,32 +1071,32 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nickname"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Email"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel7">
           <Properties>
             <Property name="text" type="java.lang.String" value="Imagen del usuario"/>
           </Properties>
@@ -1164,17 +1178,17 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="RegFrameLabel10">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tipo de usuario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="RegFrameLabelButton1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Change"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegFrameLabelButton1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ImagePathTextField">
@@ -1230,7 +1244,7 @@
                       <Component id="bAddNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bCancelNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="219" max="32767" attributes="0"/>
+                  <EmptySpace pref="231" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1331,7 +1345,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="367" max="32767" attributes="0"/>
+                  <EmptySpace pref="373" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1350,7 +1364,7 @@
                       <Component id="followAccept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="FollowCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="141" max="32767" attributes="0"/>
+                  <EmptySpace pref="147" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1411,15 +1425,15 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLButton3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLButton2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Component id="UserListScroll" alignment="0" max="32767" attributes="0"/>
+              <Component id="CLScroll" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel12" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
-                      <Component id="jLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLLabel12" alignment="0" min="-2" pref="158" max="-2" attributes="0"/>
+                      <Component id="CLLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ConsultUserTextFIeld" pref="317" max="32767" attributes="0"/>
@@ -1430,49 +1444,49 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="UserListScroll" min="-2" pref="499" max="-2" attributes="0"/>
+                  <Component id="CLScroll" min="-2" pref="499" max="-2" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLLabel12" min="-2" max="-2" attributes="0"/>
                       <Component id="ConsultUserTextFIeld" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLLabel27" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLButton3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="CLButton2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton2MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CLButton2MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLButton2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="CLButton3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton3MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CLButton3MouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ConsultUserTextFIeld">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="CLLabel12">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nick del usuario a consultar"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="UserListScroll">
+        <Container class="javax.swing.JScrollPane" name="CLScroll">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
@@ -1493,7 +1507,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel27">
+        <Component class="javax.swing.JLabel" name="CLLabel27">
           <Properties>
             <Property name="text" type="java.lang.String" value="Privacidad"/>
           </Properties>
@@ -1509,17 +1523,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                  <Component id="ALButton5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                  <Component id="ALButton4" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel14" min="-2" pref="158" max="-2" attributes="0"/>
+                  <Component id="ALLabel14" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ConsultUserTextFIeld1" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="UserListScroll1" max="32767" attributes="0"/>
+                  <Component id="ALUserListScroll1" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -1527,51 +1541,51 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="UserListScroll1" pref="685" max="32767" attributes="0"/>
+                  <Component id="ALUserListScroll1" pref="718" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ConsultUserTextFIeld1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ALLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ALButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ALButton5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="ALButton4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton4MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ALButton4MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ALButton4ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="ALButton5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton5MouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ALButton5MouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="ConsultUserTextFIeld1">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel14">
+        <Component class="javax.swing.JLabel" name="ALLabel14">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nick del usuario a consultar"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="UserListScroll1">
+        <Container class="javax.swing.JScrollPane" name="ALUserListScroll1">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="UserListUsers1">
+            <Container class="javax.swing.JPanel" name="ALUserListUsers1">
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -1581,7 +1595,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="683" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="716" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1716,7 +1730,7 @@
                               <Component id="AltaAlbumAnio" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="AltaAlbumDia" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="210" max="32767" attributes="0"/>
+                          <EmptySpace pref="222" max="32767" attributes="0"/>
                           <Component id="jAltaAlbumLabel13" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -2104,7 +2118,7 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLButton7" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2130,8 +2144,8 @@
                       <Component id="CLLabel0" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="207" max="32767" attributes="0"/>
+                  <Component id="CLButton7" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="219" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLRegisterButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2197,12 +2211,12 @@
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="CLButton7">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cambiar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLButton7ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -2228,7 +2242,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                          <Component id="CLPButton6" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
@@ -2284,8 +2298,8 @@
                       <Component id="CLPClienteTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="239" max="32767" attributes="0"/>
+                  <Component id="CLPButton6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="251" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLRegisterButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCancelButton2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2351,12 +2365,12 @@
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="CLPButton6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cambiar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLPButton6ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -2370,17 +2384,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jButton9" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLCButton9" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton8" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLCButton8" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel18" min="-2" pref="158" max="-2" attributes="0"/>
+                  <Component id="CLCLabel18" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CLConsultUserTextFIeld" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="UserListScroll2" max="32767" attributes="0"/>
+                  <Component id="CLCUserListScroll2" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -2388,52 +2402,52 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="UserListScroll2" pref="1259" max="32767" attributes="0"/>
+                  <Component id="CLCUserListScroll2" pref="1290" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLCLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLCButton8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLCButton9" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="CLCButton8">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton8MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CLCButton8MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLCButton8ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton9">
+        <Component class="javax.swing.JButton" name="CLCButton9">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton9MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CLCButton9MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLCButton9ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="CLConsultUserTextFIeld">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel18">
+        <Component class="javax.swing.JLabel" name="CLCLabel18">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nick del cliente propietario"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="UserListScroll2">
+        <Container class="javax.swing.JScrollPane" name="CLCUserListScroll2">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="UserListUsers2">
+            <Container class="javax.swing.JPanel" name="CLCUserListUsers2">
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -2443,7 +2457,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1257" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1288" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -2461,17 +2475,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jButton11" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLGButton11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton10" min="-2" max="-2" attributes="0"/>
+                  <Component id="CLGLButton10" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jLabel19" min="-2" pref="158" max="-2" attributes="0"/>
+                  <Component id="CLGLabel19" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CLConsultUserTextFIeld1" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="UserListScroll3" max="32767" attributes="0"/>
+                  <Component id="CLGUserListScroll3" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -2479,48 +2493,48 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="UserListScroll3" max="32767" attributes="0"/>
+                  <Component id="CLGUserListScroll3" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLGLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLGLButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CLGButton11" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton10">
+        <Component class="javax.swing.JButton" name="CLGLButton10">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton10MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CLGLButton10MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLGLButton10ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton11">
+        <Component class="javax.swing.JButton" name="CLGButton11">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton11MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CLGButton11MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLGButton11ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="CLConsultUserTextFIeld1">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel19">
+        <Component class="javax.swing.JLabel" name="CLGLabel19">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre del genero"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="UserListScroll3">
+        <Container class="javax.swing.JScrollPane" name="CLGUserListScroll3">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
@@ -2534,7 +2548,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1283" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1341" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -2560,17 +2574,11 @@
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="UserListScroll4" alignment="0" max="32767" attributes="0"/>
+                      <Component id="PCLUserListScroll4" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="PCLLabelDeUsuario_Lista" min="-2" pref="158" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="ConsultUserTextFIeld2" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                          <Component id="PCLComboBox" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -2581,18 +2589,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="UserListScroll4" min="-2" pref="502" max="-2" attributes="0"/>
+                  <Component id="PCLUserListScroll4" min="-2" pref="502" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PCLLabelDeUsuario_Lista" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ConsultUserTextFIeld2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="PCLComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <EmptySpace pref="25" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PCLBotonAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="PCLBotonCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2627,7 +2630,7 @@
             <Property name="text" type="java.lang.String" value="Nick del usuario"/>
           </Properties>
         </Component>
-        <Container class="javax.swing.JScrollPane" name="UserListScroll4">
+        <Container class="javax.swing.JScrollPane" name="PCLUserListScroll4">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
@@ -2648,7 +2651,114 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JComboBox" name="PCLComboBox">
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JInternalFrame" name="PrivacidadClientList2">
+      <Properties>
+        <Property name="maximizable" type="boolean" value="true"/>
+        <Property name="resizable" type="boolean" value="true"/>
+        <Property name="visible" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="PCLBotonCancelar1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="PCLBotonAceptar1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="PCLUserListScroll5" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="PCLLabelDeUsuario_Lista1" min="-2" pref="158" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="ConsultUserTextFIeld3" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="PCLLabel29" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="PCLComboBox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="PCLUserListScroll5" min="-2" pref="502" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PCLLabelDeUsuario_Lista1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ConsultUserTextFIeld3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PCLLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="PCLComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PCLBotonAceptar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="PCLBotonCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="PCLBotonAceptar1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Siguiente"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PCLBotonAceptar1MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PCLBotonAceptar1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="PCLBotonCancelar1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PCLBotonCancelar1MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PCLBotonCancelar1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="ConsultUserTextFIeld3">
+        </Component>
+        <Component class="javax.swing.JLabel" name="PCLLabelDeUsuario_Lista1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nick del usuario"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="PCLUserListScroll5">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="PCLClientList1">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="761" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="0" pref="938" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JComboBox" name="PCLComboBox1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Privada&quot;, &quot;Publica&quot;})" type="code"/>
@@ -2658,7 +2768,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel28">
+        <Component class="javax.swing.JLabel" name="PCLLabel29">
           <Properties>
             <Property name="text" type="java.lang.String" value="Privacidad"/>
           </Properties>

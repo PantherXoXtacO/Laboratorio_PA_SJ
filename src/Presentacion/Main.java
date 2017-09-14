@@ -68,7 +68,8 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jInternalFrame2 = new javax.swing.JInternalFrame();
+        MainInternalFrame = new javax.swing.JInternalFrame();
+        BackgroundMain = new javax.swing.JLabel();
         FileChooser = new javax.swing.JFileChooser();
         RegistrarArtista = new javax.swing.JDialog();
         RegistrarArtistaCancelButton = new javax.swing.JButton();
@@ -252,17 +253,20 @@ public class Main extends javax.swing.JFrame {
         jMenuItemQuitarLista = new javax.swing.JMenuItem();
         jMenuItemPublicarLista = new javax.swing.JMenuItem();
 
-        jInternalFrame2.setVisible(true);
+        MainInternalFrame.setVisible(true);
 
-        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
-        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
-        jInternalFrame2Layout.setHorizontalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
+        BackgroundMain.setIcon(new javax.swing.ImageIcon("C:\\Users\\usuario\\Desktop\\Tecnólogo Informático\\4TO SEMESTRE\\PROGRAMACION DE APLICACIONES\\Laboratorio_PA_SJ\\Espotify Background\\espotify-back.jpg")); // NOI18N
+        BackgroundMain.setText("jLabel18");
+
+        javax.swing.GroupLayout MainInternalFrameLayout = new javax.swing.GroupLayout(MainInternalFrame.getContentPane());
+        MainInternalFrame.getContentPane().setLayout(MainInternalFrameLayout);
+        MainInternalFrameLayout.setHorizontalGroup(
+            MainInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BackgroundMain, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        jInternalFrame2Layout.setVerticalGroup(
-            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 453, Short.MAX_VALUE)
+        MainInternalFrameLayout.setVerticalGroup(
+            MainInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(BackgroundMain)
         );
 
         FileChooser.setCurrentDirectory(new java.io.File("C:\\Users"));
@@ -800,7 +804,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(525, Short.MAX_VALUE))
+                .addContainerGap(529, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -862,7 +866,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(377, Short.MAX_VALUE)
+                .addContainerGap(379, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -878,7 +882,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         ClientList.setVisible(true);
@@ -1215,7 +1219,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                         .addComponent(AltaAlbumTemaSubTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1402,7 +1406,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DejarSeguirUsuarioCancelar1)
                     .addComponent(DejarSeguirUsuarioConfirmar1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         GuardarTemaListaAlbum.setLocationRelativeTo(null);
@@ -1492,7 +1496,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GuardarTemaListaAlbumCancelar1)
                     .addComponent(GuardarTemaListaAlbumConfirmar1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         ConsultaListaReproduccion.setLocationRelativeTo(null);
@@ -1564,7 +1568,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -2312,6 +2316,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel ApellidoLabel2;
     private javax.swing.JLabel ApellidoLabel3;
     private javax.swing.JInternalFrame ArtistList;
+    private javax.swing.JLabel BackgroundMain;
     private javax.swing.JTextArea BiografiaLabel2;
     private javax.swing.JTextArea BiografiaTextArea;
     private javax.swing.JInternalFrame ClientList;
@@ -2364,6 +2369,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel MailLabel1;
     private javax.swing.JLabel MailLabel2;
     private javax.swing.JLabel MailLabel3;
+    private javax.swing.JInternalFrame MainInternalFrame;
     private javax.swing.JLabel NickLabel2;
     private javax.swing.JLabel NickLabel3;
     private javax.swing.JLabel NicknameLabel1;
@@ -2409,7 +2415,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxAño;
     private javax.swing.JComboBox<String> jComboBoxDia;
     private javax.swing.JComboBox<String> jComboBoxMes;
-    private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

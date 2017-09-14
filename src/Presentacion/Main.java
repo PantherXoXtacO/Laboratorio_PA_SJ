@@ -5,6 +5,8 @@
  */
 package Presentacion;
 
+import Logica.Album;
+import Logica.Item;
 import Logica.Artista;
 import Logica.Cliente;
 import Logica.DataUsuario;
@@ -36,6 +38,15 @@ import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
+import Logica.Item;
+import Logica.ListaDeReproduccion;
+import Logica.Tema;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.DefaultListModel;
+import javax.swing.JComboBox;
+import javax.swing.JList;
+import static jdk.nashorn.internal.runtime.regexp.joni.Syntax.Java;
 
 /**
  *
@@ -231,6 +242,66 @@ public class Main extends javax.swing.JFrame {
         CLCancelButton2 = new javax.swing.JButton();
         CLTitulo2 = new javax.swing.JLabel();
         CLLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        JFaddTemaToList = new javax.swing.JInternalFrame();
+        CBaddToListUser = new javax.swing.JComboBox<>();
+        CBaddToListList = new javax.swing.JComboBox<>();
+        CBaddToListTema = new javax.swing.JComboBox<>();
+        LabelAddToListUser = new javax.swing.JLabel();
+        LabelAddToListList = new javax.swing.JLabel();
+        LabelAddToListTema = new javax.swing.JLabel();
+        JBAddToListAceptar = new javax.swing.JButton();
+        JBAddToListCancelar = new javax.swing.JButton();
+        FrameRemoveTemaFav = new javax.swing.JInternalFrame();
+        LbRemoveTemaFav1 = new javax.swing.JLabel();
+        LbRemoveTemaFav2 = new javax.swing.JLabel();
+        CBRemoveFavTemaCliente = new javax.swing.JComboBox<>();
+        CBRemoveFavTemaTema = new javax.swing.JComboBox<>();
+        BRemoveTemaFavAcept = new javax.swing.JButton();
+        BRemoveTemaFavCancel = new javax.swing.JButton();
+        FrameRemoveAlbumFav = new javax.swing.JInternalFrame();
+        jLRemoveAlbumFav1 = new javax.swing.JLabel();
+        jLRemoveAlbumFav2 = new javax.swing.JLabel();
+        CBRemoveAlbumFavAlbum = new javax.swing.JComboBox<>();
+        jBRemoveAlbumFavAcept = new javax.swing.JButton();
+        jBRemoveAlbumFavCancel = new javax.swing.JButton();
+        CBRemoveAlbumFavCliente = new javax.swing.JComboBox<>();
+        jFrameRemoveListFav = new javax.swing.JInternalFrame();
+        jLRemoveListFavUsr = new javax.swing.JLabel();
+        jLRemoveListFavList = new javax.swing.JLabel();
+        jCBRemoveListFavClnt = new javax.swing.JComboBox<>();
+        jCBRemoveListFavList = new javax.swing.JComboBox<>();
+        JBEliminarFavAcept = new javax.swing.JButton();
+        jBEliminarListFavCancel = new javax.swing.JButton();
+        jFConsultarAlbumGen = new javax.swing.JInternalFrame();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTreeConsultarAlbum = new javax.swing.JTree();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jListConsultarAlbumGen = new javax.swing.JList<>();
+        jBConsultarGenSelectGen = new javax.swing.JButton();
+        jBConsultarAlbumGenCancel = new javax.swing.JButton();
+        jBConsultarAlbumGen = new javax.swing.JButton();
+        FrameConsultarAlbum = new javax.swing.JInternalFrame();
+        jLConsultAlb1 = new javax.swing.JLabel();
+        jLConsultAlbNom = new javax.swing.JLabel();
+        jLConsultAlb2 = new javax.swing.JLabel();
+        jLConsultAlb3 = new javax.swing.JLabel();
+        jLConsultAlbDate = new javax.swing.JLabel();
+        jLConsultAlbImg = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jLConsultAlbGen = new javax.swing.JList<>();
+        jLConsultAlb4 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jLConsultAlbTemas = new javax.swing.JList<>();
+        BConsultAlbAceptar = new javax.swing.JButton();
+        FrameConsultarAlbArt = new javax.swing.JInternalFrame();
+        JboxConsultarAlbArt = new javax.swing.JComboBox<>();
+        LBConsultarAlbArt1 = new javax.swing.JLabel();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        LBConsultarAlbArt2 = new javax.swing.JLabel();
+        JboxConsultarAlbAlb = new javax.swing.JComboBox<>();
         CLPClienteTextField = new javax.swing.JTextField();
         CLPButton6 = new javax.swing.JButton();
         CLClientList = new javax.swing.JInternalFrame();
@@ -275,17 +346,23 @@ public class Main extends javax.swing.JFrame {
         jMenuConsultas = new javax.swing.JMenu();
         jMenuItemConCliente = new javax.swing.JMenuItem();
         jMenuItemConArtista = new javax.swing.JMenuItem();
-        jMenuItemConAlbum = new javax.swing.JMenuItem();
+        jMenuConsultarAlbum = new javax.swing.JMenu();
+        jMenuConsultarAlbumGen = new javax.swing.JMenuItem();
+        jMenuConsultarAlbumArtist = new javax.swing.JMenuItem();
         jMenuItemConLista = new javax.swing.JMenuItem();
         jMenuUsuarios = new javax.swing.JMenu();
         jMenuItemSegUsu = new javax.swing.JMenuItem();
         jMenuItemDejarDeSeguirUsu = new javax.swing.JMenuItem();
-        jMenuItemGuardarFav = new javax.swing.JMenuItem();
-        jMenuItemQuitarFav = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuRemoveTemaFav = new javax.swing.JMenuItem();
+        jMenuRemoveListaFav = new javax.swing.JMenuItem();
+        jMenuRemoveAlbumFav = new javax.swing.JMenuItem();
         jMenuListas = new javax.swing.JMenu();
         jMenuItemAgregarLista = new javax.swing.JMenuItem();
         jMenuItemQuitarLista = new javax.swing.JMenuItem();
         jMenuItemPublicarLista = new javax.swing.JMenuItem();
+        jMenuAgregarTemaList = new javax.swing.JMenuItem();
 
         ToBeHonestIHaveNoClue.setVisible(true);
 
@@ -857,7 +934,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 337, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -927,6 +1004,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
+                .addContainerGap(127, Short.MAX_VALUE))
                 .addContainerGap(231, Short.MAX_VALUE))
         );
 
@@ -989,6 +1067,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addContainerGap(165, Short.MAX_VALUE)
                 .addContainerGap(373, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1005,6 +1084,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
+                .addContainerGap(165, Short.MAX_VALUE))
                 .addContainerGap(147, Short.MAX_VALUE))
         );
 
@@ -1035,10 +1115,12 @@ public class Main extends javax.swing.JFrame {
         UserListUsers.setLayout(UserListUsersLayout);
         UserListUsersLayout.setHorizontalGroup(
             UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1060, Short.MAX_VALUE)
             .addGap(0, 477, Short.MAX_VALUE)
         );
         UserListUsersLayout.setVerticalGroup(
             UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1386, Short.MAX_VALUE)
             .addGap(0, 930, Short.MAX_VALUE)
         );
 
@@ -1102,12 +1184,20 @@ public class Main extends javax.swing.JFrame {
 
         ALLabel14.setText("Nick del usuario a consultar");
 
+        javax.swing.GroupLayout UserListUsers1Layout = new javax.swing.GroupLayout(UserListUsers1);
+        UserListUsers1.setLayout(UserListUsers1Layout);
+        UserListUsers1Layout.setHorizontalGroup(
+            UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1069, Short.MAX_VALUE)
         javax.swing.GroupLayout ALUserListUsers1Layout = new javax.swing.GroupLayout(ALUserListUsers1);
         ALUserListUsers1.setLayout(ALUserListUsers1Layout);
         ALUserListUsers1Layout.setHorizontalGroup(
             ALUserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 472, Short.MAX_VALUE)
         );
+        UserListUsers1Layout.setVerticalGroup(
+            UserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1532, Short.MAX_VALUE)
         ALUserListUsers1Layout.setVerticalGroup(
             ALUserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 716, Short.MAX_VALUE)
@@ -1134,6 +1224,7 @@ public class Main extends javax.swing.JFrame {
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
+                .addComponent(UserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 1168, Short.MAX_VALUE)
                 .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1342,6 +1433,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 422, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                         .addComponent(jAltaAlbumLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1419,6 +1511,10 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel0))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                    .addComponent(CLPorDefectoBotonDeCambioDeImagen, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CLTextFieldNombreDeLista)))
                     .addComponent(CLGeneroTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
                     .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
                     .addComponent(CLPorDefectoBotonDeCambioDeImagen, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1446,6 +1542,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLGeneroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CLLabel0))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 387, Short.MAX_VALUE)
                 .addComponent(CLButton7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1552,11 +1650,486 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel5)
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 407, Short.MAX_VALUE)
                 .addComponent(CLPButton6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 251, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
+        );
+
+        JFaddTemaToList.setVisible(true);
+        JFaddTemaToList.setVisible(false);
+
+        CBaddToListUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBaddToListUserActionPerformed(evt);
+            }
+        });
+
+        LabelAddToListUser.setText("Usuario");
+
+        LabelAddToListList.setText("Lista");
+
+        LabelAddToListTema.setText("Tema");
+
+        JBAddToListAceptar.setText("Aceptar");
+        JBAddToListAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBAddToListAceptarActionPerformed(evt);
+            }
+        });
+
+        JBAddToListCancelar.setText("Cancelar");
+        JBAddToListCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBAddToListCancelarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout JFaddTemaToListLayout = new javax.swing.GroupLayout(JFaddTemaToList.getContentPane());
+        JFaddTemaToList.getContentPane().setLayout(JFaddTemaToListLayout);
+        JFaddTemaToListLayout.setHorizontalGroup(
+            JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JFaddTemaToListLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(JFaddTemaToListLayout.createSequentialGroup()
+                        .addComponent(JBAddToListAceptar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addComponent(JBAddToListCancelar))
+                    .addGroup(JFaddTemaToListLayout.createSequentialGroup()
+                        .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelAddToListUser)
+                            .addComponent(LabelAddToListList)
+                            .addComponent(LabelAddToListTema))
+                        .addGap(18, 18, 18)
+                        .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CBaddToListUser, 0, 130, Short.MAX_VALUE)
+                            .addComponent(CBaddToListList, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CBaddToListTema, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+        JFaddTemaToListLayout.setVerticalGroup(
+            JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JFaddTemaToListLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelAddToListUser)
+                    .addComponent(CBaddToListUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CBaddToListList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelAddToListList))
+                .addGap(29, 29, 29)
+                .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CBaddToListTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelAddToListTema))
+                .addGap(33, 33, 33)
+                .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JBAddToListAceptar)
+                    .addComponent(JBAddToListCancelar))
+                .addContainerGap(297, Short.MAX_VALUE))
+        );
+
+        FrameRemoveTemaFav.setVisible(true);
+        FrameRemoveTemaFav.setVisible(false);
+
+        LbRemoveTemaFav1.setText("Cliente");
+
+        LbRemoveTemaFav2.setText("Tema");
+
+        BRemoveTemaFavAcept.setText("Aceptar");
+        BRemoveTemaFavAcept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRemoveTemaFavAceptActionPerformed(evt);
+            }
+        });
+
+        BRemoveTemaFavCancel.setText("Cancelar");
+        BRemoveTemaFavCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRemoveTemaFavCancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout FrameRemoveTemaFavLayout = new javax.swing.GroupLayout(FrameRemoveTemaFav.getContentPane());
+        FrameRemoveTemaFav.getContentPane().setLayout(FrameRemoveTemaFavLayout);
+        FrameRemoveTemaFavLayout.setHorizontalGroup(
+            FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameRemoveTemaFavLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(FrameRemoveTemaFavLayout.createSequentialGroup()
+                        .addComponent(BRemoveTemaFavAcept)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addComponent(BRemoveTemaFavCancel))
+                    .addGroup(FrameRemoveTemaFavLayout.createSequentialGroup()
+                        .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LbRemoveTemaFav2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LbRemoveTemaFav1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CBRemoveFavTemaCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CBRemoveFavTemaTema, 0, 130, Short.MAX_VALUE))))
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
+        FrameRemoveTemaFavLayout.setVerticalGroup(
+            FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameRemoveTemaFavLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LbRemoveTemaFav1)
+                    .addComponent(CBRemoveFavTemaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LbRemoveTemaFav2)
+                    .addComponent(CBRemoveFavTemaTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BRemoveTemaFavAcept)
+                    .addComponent(BRemoveTemaFavCancel))
+                .addContainerGap(239, Short.MAX_VALUE))
+        );
+
+        FrameRemoveAlbumFav.setTitle("Eliminar album de favoritos");
+        FrameRemoveAlbumFav.setVisible(true);
+        FrameRemoveAlbumFav.setVisible(false);
+
+        jLRemoveAlbumFav1.setText("Cliente");
+
+        jLRemoveAlbumFav2.setText("Album");
+
+        jBRemoveAlbumFavAcept.setText("Aceptar");
+        jBRemoveAlbumFavAcept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRemoveAlbumFavAceptActionPerformed(evt);
+            }
+        });
+
+        jBRemoveAlbumFavCancel.setText("Cancelar");
+        jBRemoveAlbumFavCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRemoveAlbumFavCancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout FrameRemoveAlbumFavLayout = new javax.swing.GroupLayout(FrameRemoveAlbumFav.getContentPane());
+        FrameRemoveAlbumFav.getContentPane().setLayout(FrameRemoveAlbumFavLayout);
+        FrameRemoveAlbumFavLayout.setHorizontalGroup(
+            FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
+                        .addComponent(jBRemoveAlbumFavAcept)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addComponent(jBRemoveAlbumFavCancel))
+                    .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
+                        .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLRemoveAlbumFav1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLRemoveAlbumFav2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(CBRemoveAlbumFavCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CBRemoveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+        FrameRemoveAlbumFavLayout.setVerticalGroup(
+            FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLRemoveAlbumFav1)
+                    .addComponent(CBRemoveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLRemoveAlbumFav2)
+                    .addComponent(CBRemoveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBRemoveAlbumFavAcept)
+                    .addComponent(jBRemoveAlbumFavCancel))
+                .addContainerGap(173, Short.MAX_VALUE))
+        );
+
+        jFrameRemoveListFav.setTitle("Eliminar lista de favoritos");
+        jFrameRemoveListFav.setVisible(true);
+        jFrameRemoveListFav.setVisible(false);
+
+        jLRemoveListFavUsr.setText("Cliente");
+
+        jLRemoveListFavList.setText("Lista");
+
+        JBEliminarFavAcept.setText("Aceptar");
+        JBEliminarFavAcept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBEliminarFavAceptActionPerformed(evt);
+            }
+        });
+
+        jBEliminarListFavCancel.setText("Cancelar");
+        jBEliminarListFavCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEliminarListFavCancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jFrameRemoveListFavLayout = new javax.swing.GroupLayout(jFrameRemoveListFav.getContentPane());
+        jFrameRemoveListFav.getContentPane().setLayout(jFrameRemoveListFavLayout);
+        jFrameRemoveListFavLayout.setHorizontalGroup(
+            jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
+                        .addComponent(JBEliminarFavAcept)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addComponent(jBEliminarListFavCancel))
+                    .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
+                        .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLRemoveListFavUsr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLRemoveListFavList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCBRemoveListFavClnt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCBRemoveListFavList, 0, 130, Short.MAX_VALUE))))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        jFrameRemoveListFavLayout.setVerticalGroup(
+            jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLRemoveListFavUsr)
+                    .addComponent(jCBRemoveListFavClnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLRemoveListFavList)
+                    .addComponent(jCBRemoveListFavList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JBEliminarFavAcept)
+                    .addComponent(jBEliminarListFavCancel))
+                .addContainerGap(178, Short.MAX_VALUE))
+        );
+
+        jFConsultarAlbumGen.setTitle("Consultar Album");
+        jFConsultarAlbumGen.setVisible(true);
+        jFConsultarAlbumGen.setVisible(false);
+
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
+        jTreeConsultarAlbum.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane6.setViewportView(jTreeConsultarAlbum);
+
+        jScrollPane7.setViewportView(jListConsultarAlbumGen);
+
+        jBConsultarGenSelectGen.setText("Elegir >>>");
+        jBConsultarGenSelectGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultarGenSelectGenActionPerformed(evt);
+            }
+        });
+
+        jBConsultarAlbumGenCancel.setText("Cancelar");
+        jBConsultarAlbumGenCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultarAlbumGenCancelActionPerformed(evt);
+            }
+        });
+
+        jBConsultarAlbumGen.setText("Consultar");
+        jBConsultarAlbumGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultarAlbumGenActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jFConsultarAlbumGenLayout = new javax.swing.GroupLayout(jFConsultarAlbumGen.getContentPane());
+        jFConsultarAlbumGen.getContentPane().setLayout(jFConsultarAlbumGenLayout);
+        jFConsultarAlbumGenLayout.setHorizontalGroup(
+            jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jBConsultarGenSelectGen)
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFConsultarAlbumGenLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBConsultarAlbumGen)
+                .addGap(30, 30, 30)
+                .addComponent(jBConsultarAlbumGenCancel)
+                .addGap(151, 151, 151))
+        );
+        jFConsultarAlbumGenLayout.setVerticalGroup(
+            jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
+                .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFConsultarAlbumGenLayout.createSequentialGroup()
+                        .addComponent(jBConsultarGenSelectGen)
+                        .addGap(110, 110, 110)))
+                .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBConsultarAlbumGenCancel)
+                    .addComponent(jBConsultarAlbumGen))
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+
+        FrameConsultarAlbum.setVisible(true);
+        FrameConsultarAlbum.setVisible(false);
+
+        jLConsultAlb1.setText("Nombre:");
+
+        jLConsultAlb2.setText("Año de crecion:");
+
+        jLConsultAlb3.setText("Generos:");
+
+        jScrollPane8.setViewportView(jLConsultAlbGen);
+
+        jLConsultAlb4.setText("Canciones:");
+
+        jScrollPane9.setViewportView(jLConsultAlbTemas);
+
+        BConsultAlbAceptar.setText("Aceptar");
+        BConsultAlbAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BConsultAlbAceptarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout FrameConsultarAlbumLayout = new javax.swing.GroupLayout(FrameConsultarAlbum.getContentPane());
+        FrameConsultarAlbum.getContentPane().setLayout(FrameConsultarAlbumLayout);
+        FrameConsultarAlbumLayout.setHorizontalGroup(
+            FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                            .addComponent(jLConsultAlb2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLConsultAlbDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FrameConsultarAlbumLayout.createSequentialGroup()
+                            .addComponent(jLConsultAlb1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLConsultAlbNom, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addComponent(jLConsultAlb3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addComponent(jLConsultAlb4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addComponent(BConsultAlbAceptar)
+                        .addGap(0, 59, Short.MAX_VALUE))
+                    .addComponent(jLConsultAlbImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        FrameConsultarAlbumLayout.setVerticalGroup(
+            FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLConsultAlb1)
+                            .addComponent(jLConsultAlbNom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLConsultAlb2)
+                            .addComponent(jLConsultAlbDate, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLConsultAlb3)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLConsultAlbImg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLConsultAlb4)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(54, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BConsultAlbAceptar)
+                        .addGap(68, 68, 68))))
+        );
+
+        jLConsultAlbImg.getAccessibleContext().setAccessibleName("jLConsultAlbImg");
+
+        FrameConsultarAlbArt.setVisible(true);
+
+        LBConsultarAlbArt1.setText("Artista");
+
+        jButton8.setText("Consultar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Cancelar");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        LBConsultarAlbArt2.setText("Album");
+
+        javax.swing.GroupLayout FrameConsultarAlbArtLayout = new javax.swing.GroupLayout(FrameConsultarAlbArt.getContentPane());
+        FrameConsultarAlbArt.getContentPane().setLayout(FrameConsultarAlbArtLayout);
+        FrameConsultarAlbArtLayout.setHorizontalGroup(
+            FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameConsultarAlbArtLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(FrameConsultarAlbArtLayout.createSequentialGroup()
+                        .addComponent(jButton8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addComponent(jButton9))
+                    .addGroup(FrameConsultarAlbArtLayout.createSequentialGroup()
+                        .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LBConsultarAlbArt1)
+                            .addComponent(LBConsultarAlbArt2))
+                        .addGap(18, 18, 18)
+                        .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JboxConsultarAlbAlb, 0, 129, Short.MAX_VALUE)
+                            .addComponent(JboxConsultarAlbArt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        FrameConsultarAlbArtLayout.setVerticalGroup(
+            FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameConsultarAlbArtLayout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LBConsultarAlbArt1)
+                    .addComponent(JboxConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LBConsultarAlbArt2)
+                    .addComponent(JboxConsultarAlbAlb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton9))
+                .addGap(20, 20, 20))
         );
 
         CLClientList.setVisible(true);
@@ -1953,8 +2526,25 @@ public class Main extends javax.swing.JFrame {
         });
         jMenuConsultas.add(jMenuItemConArtista);
 
-        jMenuItemConAlbum.setText("Consultar Album");
-        jMenuConsultas.add(jMenuItemConAlbum);
+        jMenuConsultarAlbum.setText("Consultar Album");
+
+        jMenuConsultarAlbumGen.setText("Por Genero");
+        jMenuConsultarAlbumGen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsultarAlbumGenActionPerformed(evt);
+            }
+        });
+        jMenuConsultarAlbum.add(jMenuConsultarAlbumGen);
+
+        jMenuConsultarAlbumArtist.setText("Por Artista");
+        jMenuConsultarAlbumArtist.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsultarAlbumArtistActionPerformed(evt);
+            }
+        });
+        jMenuConsultarAlbum.add(jMenuConsultarAlbumArtist);
+
+        jMenuConsultas.add(jMenuConsultarAlbum);
 
         jMenuItemConLista.setText("Consultar Lista");
         jMenuConsultas.add(jMenuItemConLista);
@@ -1974,11 +2564,36 @@ public class Main extends javax.swing.JFrame {
         jMenuItemDejarDeSeguirUsu.setText("Dejar De Seguir Usuario");
         jMenuUsuarios.add(jMenuItemDejarDeSeguirUsu);
 
-        jMenuItemGuardarFav.setText("Guardar Favorito");
-        jMenuUsuarios.add(jMenuItemGuardarFav);
+        jMenu1.setText("Agregar a favoritos");
+        jMenuUsuarios.add(jMenu1);
 
-        jMenuItemQuitarFav.setText("Quitar Favorito");
-        jMenuUsuarios.add(jMenuItemQuitarFav);
+        jMenu2.setText("Quitar de favoritos");
+
+        jMenuRemoveTemaFav.setText("Tema");
+        jMenuRemoveTemaFav.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuRemoveTemaFavActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuRemoveTemaFav);
+
+        jMenuRemoveListaFav.setText("Lista");
+        jMenuRemoveListaFav.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuRemoveListaFavActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuRemoveListaFav);
+
+        jMenuRemoveAlbumFav.setText("Album");
+        jMenuRemoveAlbumFav.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuRemoveAlbumFavActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuRemoveAlbumFav);
+
+        jMenuUsuarios.add(jMenu2);
 
         jMenuBar1.add(jMenuUsuarios);
 
@@ -1998,6 +2613,14 @@ public class Main extends javax.swing.JFrame {
         });
         jMenuListas.add(jMenuItemPublicarLista);
 
+        jMenuAgregarTemaList.setText("Agregar Tema");
+        jMenuAgregarTemaList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAgregarTemaListActionPerformed(evt);
+            }
+        });
+        jMenuListas.add(jMenuAgregarTemaList);
+
         jMenuBar1.add(jMenuListas);
 
         setJMenuBar(jMenuBar1);
@@ -2008,13 +2631,36 @@ public class Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jRegisterFrame)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FrameNewGen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(570, 570, 570)
+                        .addComponent(FrameRemoveAlbumFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(213, 213, 213)
+                        .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(FrameConsultarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FrameNewGen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(ClientList)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(FrameRemoveTemaFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addComponent(jFrameRemoveListFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(JFaddTemaToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jFConsultarAlbumGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -2024,6 +2670,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(91, 91, 91)
                     .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(816, Short.MAX_VALUE)))
                     .addContainerGap(202, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -2034,6 +2681,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(992, Short.MAX_VALUE)))
                     .addContainerGap(378, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -2059,9 +2707,34 @@ public class Main extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jRegisterFrame)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ClientList)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRegisterFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(FrameConsultarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(FrameRemoveAlbumFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(JFaddTemaToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(jFConsultarAlbumGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ClientList)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(FrameRemoveTemaFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(jFrameRemoveListFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2070,6 +2743,9 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(115, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
+                    .addGap(403, 403, 403)
+                    .addComponent(ArtistList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(1287, Short.MAX_VALUE)))
                     .addContainerGap()
                     .addComponent(ArtistList)
                     .addContainerGap(644, Short.MAX_VALUE)))
@@ -2077,16 +2753,18 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addGap(319, 319, 319)
                     .addComponent(AltaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(1831, Short.MAX_VALUE)))
                     .addContainerGap(546, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 1174, Short.MAX_VALUE)
                     .addComponent(CrearListaPorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 1175, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(2338, Short.MAX_VALUE)))
                     .addContainerGap(1009, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -2205,26 +2883,26 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItemCrearGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearGenActionPerformed
         FrameNewGen.setVisible(true);
-        PopulateTree();
+        PopulateTree(TreeNewGen);
     }//GEN-LAST:event_jMenuItemCrearGenActionPerformed
     
-    private void PopulateTree(){        
+    private void PopulateTree(JTree tree){        
         //No tocar ¡chanchada!
-        TreeNewGen = new javax.swing.JTree();
+        tree = new javax.swing.JTree();
         DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
-        TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(TreeNewGen);
+        tree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(tree);
         ////////////////////////////////////////////////////////////////////////
         
         Genero general=ICU.GetGenero();
-        DefaultTreeModel model = (DefaultTreeModel)TreeNewGen.getModel();
+        DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode)model.getRoot();
         Iterator it = general.getHijos().iterator();
         while(it.hasNext()){
             root.add(RecursivePopulate((Genero)it.next()));
         }
         model.reload(root);
-        TreeNewGen.revalidate();
+        tree.revalidate();
     }
     
     private DefaultMutableTreeNode RecursivePopulate(Genero g){
@@ -2247,7 +2925,7 @@ public class Main extends javax.swing.JFrame {
             else
                 SelectedNom="";
             ICU.AltaGenero(TFNewGen.getText(), SelectedNom);
-            PopulateTree();
+            PopulateTree(TreeNewGen);
         }
     }//GEN-LAST:event_bAddNewGenActionPerformed
 
@@ -2527,6 +3205,301 @@ public class Main extends javax.swing.JFrame {
         this.CrearListaParticular.setVisible(false);
     }//GEN-LAST:event_CLCancelButton2ActionPerformed
 
+    private void CBaddToListUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBaddToListUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBaddToListUserActionPerformed
+
+    private void jMenuAgregarTemaListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAgregarTemaListActionPerformed
+        
+        Iterator it = ICU.getItemCliente().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item) it.next();
+            CBaddToListUser.addItem(item);
+        }
+        CBaddToListUser.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JComboBox box = (JComboBox)ae.getSource();
+                Item aux = (Item)box.getSelectedItem();
+                Cliente client = (Cliente)aux.getValue();
+                populateCBList(client);
+            }
+            
+        });
+        
+        Iterator itTemas = ICU.getTemasItem().iterator();
+        Item ItemTemas;
+        while(itTemas.hasNext()){
+            ItemTemas=(Item) itTemas.next();
+            CBaddToListTema.addItem(ItemTemas);
+        }
+        
+        JFaddTemaToList.setVisible(true);
+    }//GEN-LAST:event_jMenuAgregarTemaListActionPerformed
+
+    private void JBAddToListCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAddToListCancelarActionPerformed
+        JFaddTemaToList.setVisible(false);
+    }//GEN-LAST:event_JBAddToListCancelarActionPerformed
+
+    private void JBAddToListAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAddToListAceptarActionPerformed
+        ICU.agregarTemaALista(CBaddToListList.getSelectedItem(), CBaddToListTema.getSelectedItem());
+        JOptionPane.showMessageDialog(this, "Tema agregado", "Agregar tema a lista", JOptionPane.INFORMATION_MESSAGE);
+        JFaddTemaToList.setVisible(false);        
+    }//GEN-LAST:event_JBAddToListAceptarActionPerformed
+
+    private void jMenuRemoveListaFavActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRemoveListaFavActionPerformed
+         ////jCBRemoveListFavClnt
+         //jCBRemoveListFavList
+        Iterator itCliente = ICU.getItemCliente().iterator();
+        Item itemCliente;
+        while(itCliente.hasNext()){
+            itemCliente=(Item) itCliente.next();
+            jCBRemoveListFavClnt.addItem(itemCliente);
+        }
+        jCBRemoveListFavClnt.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JComboBox box = (JComboBox)ae.getSource();
+                Item aux = (Item)box.getSelectedItem();
+                Cliente client = (Cliente)aux.getValue();
+                populateCBListFav(client);
+            }
+            
+        });        
+        jFrameRemoveListFav.setVisible(true);   
+    }//GEN-LAST:event_jMenuRemoveListaFavActionPerformed
+
+    private void BRemoveTemaFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRemoveTemaFavCancelActionPerformed
+        FrameRemoveTemaFav.setVisible(false);
+    }//GEN-LAST:event_BRemoveTemaFavCancelActionPerformed
+
+    private void jMenuRemoveTemaFavActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRemoveTemaFavActionPerformed
+        
+        Iterator itCliente = ICU.getItemCliente().iterator();
+        Item itemCliente;
+        while(itCliente.hasNext()){
+            itemCliente=(Item) itCliente.next();
+            CBRemoveFavTemaCliente.addItem(itemCliente);
+        }
+        CBRemoveFavTemaCliente.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JComboBox box = (JComboBox)ae.getSource();
+                Item aux = (Item)box.getSelectedItem();
+                Cliente client = (Cliente)aux.getValue();
+                populateCBTemasFav(client);
+            }
+            
+        });        
+        FrameRemoveTemaFav.setVisible(true);        
+    }//GEN-LAST:event_jMenuRemoveTemaFavActionPerformed
+
+    private void BRemoveTemaFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRemoveTemaFavAceptActionPerformed
+        ICU.QuitarTemaFavorito(CBRemoveFavTemaCliente.getSelectedItem(),CBRemoveFavTemaTema.getSelectedItem());
+        JOptionPane.showMessageDialog(this, "Tema eliminado de favoritos", "Eliminar tema de favoritos", JOptionPane.INFORMATION_MESSAGE);
+        FrameRemoveTemaFav.setVisible(false);
+    }//GEN-LAST:event_BRemoveTemaFavAceptActionPerformed
+
+    private void jMenuRemoveAlbumFavActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRemoveAlbumFavActionPerformed
+        Iterator itCliente = ICU.getItemCliente().iterator();
+        Item itemCliente;
+        while(itCliente.hasNext()){
+            itemCliente=(Item) itCliente.next();
+            CBRemoveAlbumFavCliente.addItem(itemCliente);
+        }
+        CBRemoveAlbumFavCliente.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JComboBox box = (JComboBox)ae.getSource();
+                Item aux = (Item)box.getSelectedItem();
+                Cliente client = (Cliente)aux.getValue();
+                populateCBAlbum(client);
+            }
+            
+        });        
+        FrameRemoveAlbumFav.setVisible(true);
+    }//GEN-LAST:event_jMenuRemoveAlbumFavActionPerformed
+
+    private void jBRemoveAlbumFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoveAlbumFavAceptActionPerformed
+        ICU.QuitarAlbumFav(CBRemoveAlbumFavCliente.getSelectedItem(), CBRemoveAlbumFavCliente.getSelectedItem());
+        JOptionPane.showMessageDialog(this, "Album eliminado de favoritos", "Eliminar album de favoritos", JOptionPane.INFORMATION_MESSAGE);
+        FrameRemoveAlbumFav.setVisible(false);
+    }//GEN-LAST:event_jBRemoveAlbumFavAceptActionPerformed
+
+    private void jBRemoveAlbumFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoveAlbumFavCancelActionPerformed
+        FrameRemoveAlbumFav.setVisible(false);
+    }//GEN-LAST:event_jBRemoveAlbumFavCancelActionPerformed
+
+    private void JBEliminarFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBEliminarFavAceptActionPerformed
+        ICU.QuitarListaFav(jCBRemoveListFavClnt.getSelectedItem(), jCBRemoveListFavList.getSelectedItem());
+        JOptionPane.showMessageDialog(this, "Lista eliminado de favoritos", "Eliminar lista de favoritos", JOptionPane.INFORMATION_MESSAGE);
+        jFrameRemoveListFav.setVisible(false); 
+    }//GEN-LAST:event_JBEliminarFavAceptActionPerformed
+
+    private void jBEliminarListFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarListFavCancelActionPerformed
+        jFrameRemoveListFav.setVisible(false); 
+    }//GEN-LAST:event_jBEliminarListFavCancelActionPerformed
+
+    private void jMenuConsultarAlbumGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumGenActionPerformed
+        DefaultListModel model=(DefaultListModel) jListConsultarAlbumGen.getModel();
+        model.removeAllElements();        
+        jListConsultarAlbumGen.clearSelection();
+        PopulateTree(jTreeConsultarAlbum);
+        jFConsultarAlbumGen.setVisible(true);
+    }//GEN-LAST:event_jMenuConsultarAlbumGenActionPerformed
+
+    private void jBConsultarAlbumGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarAlbumGenActionPerformed
+        if(!jListConsultarAlbumGen.isSelectionEmpty()){
+            Item item = (Item) jListConsultarAlbumGen.getSelectedValue();
+            Album alb = (Album) item.getValue();
+            consultarAlbum(alb);
+        }
+        else
+            JOptionPane.showMessageDialog(this, "ERROR: No hay ningun album seleccionado", "ERROR: Seleccion de album", JOptionPane.ERROR_MESSAGE);
+
+    }//GEN-LAST:event_jBConsultarAlbumGenActionPerformed
+
+    private void jBConsultarGenSelectGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarGenSelectGenActionPerformed
+        DefaultMutableTreeNode node= (DefaultMutableTreeNode)jTreeConsultarAlbum.getLastSelectedPathComponent();
+        if(node!=null){
+            String s = node.toString();
+            populateListConsultAlbum(jListConsultarAlbumGen ,ICU.getAlbumPorGenItem(s));
+        }
+    }//GEN-LAST:event_jBConsultarGenSelectGenActionPerformed
+
+    private void jBConsultarAlbumGenCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarAlbumGenCancelActionPerformed
+        jFConsultarAlbumGen.setVisible(false);
+    }//GEN-LAST:event_jBConsultarAlbumGenCancelActionPerformed
+
+    private void BConsultAlbAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BConsultAlbAceptarActionPerformed
+        FrameConsultarAlbum.setVisible(false);
+    }//GEN-LAST:event_BConsultAlbAceptarActionPerformed
+
+    private void jMenuConsultarAlbumArtistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumArtistActionPerformed
+        //populateJBArtist(JboxConsultarAlbArt)
+        Iterator itArt = ICU.getItemArtist().iterator();
+        Item itemArt;
+        while(itArt.hasNext()){
+            itemArt=(Item) itArt.next();
+            JboxConsultarAlbArt.addItem(itemArt);
+        }
+        JboxConsultarAlbArt.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                JComboBox box = (JComboBox)ae.getSource();
+                Item aux = (Item)box.getSelectedItem();
+                Artista art = (Artista)aux.getValue();
+                populateCBAlbums(art);
+            }
+            
+        });
+        FrameConsultarAlbArt.setVisible(true);
+    }//GEN-LAST:event_jMenuConsultarAlbumArtistActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        Item item = (Item) JboxConsultarAlbAlb.getSelectedItem();
+        consultarAlbum((Album) item.getValue());
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        FrameConsultarAlbArt.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void populateCBAlbums(Artista art){
+        JboxConsultarAlbAlb.removeAllItems();
+        Iterator it = art.getAlbumsItem().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item)it.next();
+            JboxConsultarAlbAlb.addItem(item);
+        }
+    }
+    
+    
+    private void populateListConsultAlbum(JList JlistAlbum, List AlbumItems){
+        Iterator it=AlbumItems.iterator();
+        Item item;
+        DefaultListModel model=(DefaultListModel) JlistAlbum.getModel();
+        model.removeAllElements();
+        while(it.hasNext()){
+            item=(Item)it.next();
+            model.addElement(item);
+        }
+    }
+    
+    private void consultarAlbum(Album alb){
+        jLConsultAlbNom.setText(alb.getNombre());
+        jLConsultAlbDate.setText(Integer.toString(alb.getAnio()));
+        populateGenList(alb.getGeneros());
+        populateTemList(alb.getTemas());
+        ImageIcon img = new ImageIcon(alb.getImg());
+        jLConsultAlbImg.setIcon(img);
+        FrameConsultarAlbum.setVisible(true);
+    }
+    
+    private void populateGenList(List l){
+        DefaultListModel model = (DefaultListModel) jLConsultAlbGen.getModel();
+        model.removeAllElements();
+        Iterator it = l.iterator();
+        Genero g;
+        while(it.hasNext()){
+            g=(Genero) it.next();
+            model.addElement(g.getNombre());
+        }
+    }
+    
+    private void populateTemList(List l){
+        DefaultListModel model = (DefaultListModel) jLConsultAlbTemas.getModel();
+        model.removeAllElements();
+        Iterator it = l.iterator();
+        Tema t;
+        while(it.hasNext()){
+            t=(Tema) it.next();
+            model.addElement(t.getInfo());
+        }
+    }
+    
+    private void populateCBList(Cliente client){
+        CBaddToListList.removeAllItems();
+        Iterator it = client.getListsItem().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item)it.next();
+            CBaddToListList.addItem(item);
+        }
+    }
+    
+    private void populateCBListFav(Cliente client){
+        jCBRemoveListFavList.removeAllItems();
+        Iterator it = client.getListsFavItem().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item)it.next();
+            jCBRemoveListFavList.addItem(item);
+        }    
+    }
+    
+    private void populateCBAlbum(Cliente client){
+        CBRemoveAlbumFavAlbum.removeAllItems();
+        Iterator it = client.getListsItem().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item)it.next();
+            CBRemoveAlbumFavAlbum.addItem(item);
+        }
+    }
+    
+    private void populateCBTemasFav(Cliente client){
+        CBRemoveFavTemaTema.removeAllItems();
+        Iterator it = client.getTemasFavItem().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item)it.next();
+            CBRemoveFavTemaTema.addItem(item);
+        }
+    }
+    
     private void CLFileChooser1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLFileChooser1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CLFileChooser1ActionPerformed
@@ -2842,8 +3815,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel ApellidoLabel2;
     private javax.swing.JLabel ApellidoLabel3;
     private javax.swing.JInternalFrame ArtistList;
+    private javax.swing.JButton BConsultAlbAceptar;
+    private javax.swing.JButton BRemoveTemaFavAcept;
+    private javax.swing.JButton BRemoveTemaFavCancel;
     private javax.swing.JTextArea BiografiaLabel2;
     private javax.swing.JTextArea BiografiaTextArea;
+    private javax.swing.JComboBox<Item> CBRemoveAlbumFavAlbum;
+    private javax.swing.JComboBox<Item> CBRemoveAlbumFavCliente;
+    private javax.swing.JComboBox<Item> CBRemoveFavTemaCliente;
+    private javax.swing.JComboBox<Item> CBRemoveFavTemaTema;
+    private javax.swing.JComboBox<Item> CBaddToListList;
+    private javax.swing.JComboBox<Item> CBaddToListTema;
+    private javax.swing.JComboBox<Item> CBaddToListUser;
     private javax.swing.JButton CLButton2;
     private javax.swing.JButton CLButton3;
     private javax.swing.JButton CLButton7;
@@ -2902,14 +3885,31 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField Followed;
     private javax.swing.JLabel FollowedLabel;
     private javax.swing.JTextField Follower;
+    private javax.swing.JInternalFrame FrameConsultarAlbArt;
+    private javax.swing.JInternalFrame FrameConsultarAlbum;
     private javax.swing.JInternalFrame FrameNewGen;
+    private javax.swing.JInternalFrame FrameRemoveAlbumFav;
+    private javax.swing.JInternalFrame FrameRemoveTemaFav;
     private javax.swing.JInternalFrame FrameSeguirUser;
     private javax.swing.JTextField ImagePathTextField;
     private javax.swing.JLabel ImagenDeArtista;
     private javax.swing.JLabel ImagenDeCliente;
+    private javax.swing.JButton JBAddToListAceptar;
+    private javax.swing.JButton JBAddToListCancelar;
+    private javax.swing.JButton JBEliminarFavAcept;
+    private javax.swing.JInternalFrame JFaddTemaToList;
+    private javax.swing.JComboBox<Item> JboxConsultarAlbAlb;
+    private javax.swing.JComboBox<Item> JboxConsultarAlbArt;
+    private javax.swing.JLabel LBConsultarAlbArt1;
+    private javax.swing.JLabel LBConsultarAlbArt2;
+    private javax.swing.JLabel LabelAddToListList;
+    private javax.swing.JLabel LabelAddToListTema;
+    private javax.swing.JLabel LabelAddToListUser;
     private javax.swing.JButton LGButton15;
     private javax.swing.JScrollPane LGScroll6;
     private javax.swing.JLabel LabelUserMail;
+    private javax.swing.JLabel LbRemoveTemaFav1;
+    private javax.swing.JLabel LbRemoveTemaFav2;
     private javax.swing.JTextField LinkWebTextField;
     private javax.swing.JDialog ListaGeneral;
     private javax.swing.JPanel ListaGeneralLista;
@@ -2981,18 +3981,59 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton followAccept;
     private javax.swing.JLabel jAltaAlbumLabel12;
     private javax.swing.JLabel jAltaAlbumLabel13;
+    private javax.swing.JButton jBConsultarAlbumGen;
+    private javax.swing.JButton jBConsultarAlbumGenCancel;
+    private javax.swing.JButton jBConsultarGenSelectGen;
+    private javax.swing.JButton jBEliminarListFavCancel;
+    private javax.swing.JButton jBRemoveAlbumFavAcept;
+    private javax.swing.JButton jBRemoveAlbumFavCancel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<Item> jCBRemoveListFavClnt;
+    private javax.swing.JComboBox<Item> jCBRemoveListFavList;
     private javax.swing.JComboBox<String> jComboBoxAño;
     private javax.swing.JComboBox<String> jComboBoxDia;
     private javax.swing.JComboBox<String> jComboBoxMes;
+    private javax.swing.JInternalFrame jFConsultarAlbumGen;
+    private javax.swing.JInternalFrame jFrameRemoveListFav;
+    private javax.swing.JInternalFrame jInternalFrame2;
+    private javax.swing.JLabel jLConsultAlb1;
+    private javax.swing.JLabel jLConsultAlb2;
+    private javax.swing.JLabel jLConsultAlb3;
+    private javax.swing.JLabel jLConsultAlb4;
+    private javax.swing.JLabel jLConsultAlbDate;
+    private javax.swing.JList<String> jLConsultAlbGen;
+    private javax.swing.JLabel jLConsultAlbImg;
+    private javax.swing.JLabel jLConsultAlbNom;
+    private javax.swing.JList<String> jLConsultAlbTemas;
+    private javax.swing.JLabel jLRemoveAlbumFav1;
+    private javax.swing.JLabel jLRemoveAlbumFav2;
+    private javax.swing.JLabel jLRemoveListFavList;
+    private javax.swing.JLabel jLRemoveListFavUsr;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<Item> jListConsultarAlbumGen;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMenuAgregarTemaList;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuConsultarAlbum;
+    private javax.swing.JMenuItem jMenuConsultarAlbumArtist;
+    private javax.swing.JMenuItem jMenuConsultarAlbumGen;
     private javax.swing.JMenu jMenuConsultas;
     private javax.swing.JMenu jMenuInicio;
     private javax.swing.JMenuItem jMenuItemAgregarLista;
-    private javax.swing.JMenuItem jMenuItemConAlbum;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;
     private javax.swing.JMenuItem jMenuItemConLista;
@@ -3002,14 +4043,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemCrearListaParticular;
     private javax.swing.JMenuItem jMenuItemCrearListaPorDefecto;
     private javax.swing.JMenuItem jMenuItemDejarDeSeguirUsu;
-    private javax.swing.JMenuItem jMenuItemGuardarFav;
     private javax.swing.JMenuItem jMenuItemPublicarLista;
-    private javax.swing.JMenuItem jMenuItemQuitarFav;
     private javax.swing.JMenuItem jMenuItemQuitarLista;
     private javax.swing.JMenuItem jMenuItemRegUsu;
     private javax.swing.JMenuItem jMenuItemSegUsu;
     private javax.swing.JMenu jMenuListas;
     private javax.swing.JMenu jMenuRegistros;
+    private javax.swing.JMenuItem jMenuRemoveAlbumFav;
+    private javax.swing.JMenuItem jMenuRemoveListaFav;
+    private javax.swing.JMenuItem jMenuRemoveTemaFav;
     private javax.swing.JMenu jMenuUsuarios;
     private javax.swing.JTextField jRegisterApellidolField;
     private javax.swing.JTextField jRegisterEmailField;
@@ -3019,5 +4061,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTree jTreeConsultarAlbum;
     // End of variables declaration//GEN-END:variables
 }

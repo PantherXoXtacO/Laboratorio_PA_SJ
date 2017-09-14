@@ -17,6 +17,7 @@ public class Manejador {
     private List<ListaDeReproduccion> Listas; // Listas por defecto
     private final Genero genero=new Genero("General"); // Guarda el genero raiz
     private List<Genero> generosList;
+    private List<Tema> Temas;//Guarda los temas en una lista
     
     //Ids para la identificadores
     private double IdTema;
@@ -35,6 +36,7 @@ public class Manejador {
         artistas=new ArrayList();
         Listas=new ArrayList(); // Listas por defecto
         generosList=new ArrayList();
+        Temas=new ArrayList();
         IdTema=0;
         IdAlbum=0;
         IdList=0;
@@ -254,4 +256,26 @@ public class Manejador {
         this.Listas.add(lista);
     }
     
+
+    public List ItemCLiente() {
+        Iterator it=clientes.iterator();
+        Cliente c;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            c=(Cliente) it.next();
+            ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
+    }
+
+    public List ItemTemas() {
+        Iterator it=Temas.iterator();
+        Tema t;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            t=(Tema)it.next();
+            ret.add(new Item(t, t.getNombre()));
+        }
+        return ret;
+    }
 }

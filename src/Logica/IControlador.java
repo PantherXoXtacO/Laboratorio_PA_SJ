@@ -1,5 +1,6 @@
 package Logica;
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 /**
  *
@@ -16,7 +17,6 @@ public interface IControlador{
     public abstract Genero getGeneroPorNombre(String nombre);
     //public abstract void AgregarTema(Usuario user, );//Agregar tema a lista
     public abstract void SeguirUsuario(String seguidor, String seguido);
-    public abstract void EliminarTemaFav();//Eliminar Tema, Album o lista de favoritos
     public abstract void ConsultarAlbum();
 
     public abstract boolean FindUser(String text);
@@ -24,6 +24,21 @@ public interface IControlador{
     public abstract boolean mailLibre(String mail);
     public abstract Cliente consultarCliente(String nickname);
     public abstract Artista consultarArtista(String nickname);
+    public abstract List getItemCliente();
+
+    public abstract List getTemasItem();
+
+    public abstract void agregarTemaALista(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarAlbumFav(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
+
+    public abstract List getAlbumPorGenItem(String s);
+
+    public abstract List getItemArtist();
     public abstract void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista);
     public abstract void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista);
     public abstract void privatizarLista(ListaParticular lista, boolean modo);

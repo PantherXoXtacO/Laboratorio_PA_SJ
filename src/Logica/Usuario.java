@@ -117,9 +117,12 @@ public abstract class Usuario implements Serializable {
     }        
     void addFollower(Usuario u1) {
         //seguidores.put(u1.getNickname(), u1);
-        return;
     }
 
     void addFollow(Usuario u2) {}
     
+    @Override
+    public String toString() {
+        return getNickname();
+    }    
 }

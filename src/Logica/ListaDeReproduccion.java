@@ -53,6 +53,8 @@ public class ListaDeReproduccion {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
-    
-    
+
+    void agregarTema(Tema tem) {
+        temas.add(tem);
+    }    
 }

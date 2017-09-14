@@ -163,4 +163,46 @@ public class Controlador implements IControlador {
         ListaDeReproduccion lista = (ListaDeReproduccion) lst.getValue();
         client.quitarListFav(lista);
     }
+    
+    @Override
+    public List getAlbumPorGenItem(String s){
+        Manejador M=Manejador.getinstance();
+        List generos=M.getListGeneros();
+        List ret= new ArrayList();
+        Iterator it = generos.iterator();
+        
+        //Busca el genero
+        Genero g=null;
+        while(it.hasNext()){
+            g=(Genero) it.next();
+            if(s.equals(g.getNombre())){
+                break;
+            }
+            else g=null;
+        }
+        
+        //Busca los albums dentro del genero
+        if(g!=null){
+            Iterator itAlbum = g.getAlbums().iterator();
+            Album alb;
+            while(itAlbum.hasNext()){
+                alb= (Album) itAlbum.next();
+                ret.add(new Item(alb,alb.getNombre()));
+            }
+        }
+        return ret;
+    }
+    
+    @Override
+    public List getItemArtist(){
+        Manejador M=Manejador.getinstance();
+        Iterator it=M.getArtistas().iterator();
+        Artista art;
+        List ret=new ArrayList();
+        while(it.hasNext()){
+            art=(Artista)it.next();
+            ret.add(new Item(art,art.getNombre()));
+        }
+        return ret;
+    }
 }

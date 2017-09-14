@@ -33,5 +33,9 @@ public interface IControlador{
     public abstract void QuitarAlbumFav(Object selectedItem, Object selectedItem0);
 
     public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
+
+    public abstract List getAlbumPorGenItem(String s);
+
+    public abstract List getItemArtist();
 }
 

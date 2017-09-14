@@ -95,5 +95,11 @@ public class Tema implements Serializable{
         return "Logica.Album[ id=" + id + " ]";
     }    
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
+
+    public String getInfo() {
+        String ret = null;
+        ret=orden + "-" + nombre + "(" + duracion + ")";
+        return ret;
+    }
     
 }

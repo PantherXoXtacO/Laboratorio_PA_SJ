@@ -2,6 +2,7 @@ package Logica;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -43,5 +44,16 @@ public class Artista extends Usuario {
     
     public Artista(){
         
+    }
+
+    public List getAlbumsItem() {
+        Iterator it = albums.iterator();
+        Album a;
+        List ret=new ArrayList();
+        while(it.hasNext()){
+            a=(Album) it.next();
+            ret.add(new Item(a, a.getNombre()));
+        }
+        return ret;
     }
 }

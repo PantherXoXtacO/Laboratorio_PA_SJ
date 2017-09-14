@@ -13,6 +13,7 @@ public interface IControlador{
     
     public abstract void AltaGenero(String nombre, String padre);
     public abstract Genero GetGenero();
+    public abstract Genero getGeneroPorNombre(String nombre);
     //public abstract void AgregarTema(Usuario user, );//Agregar tema a lista
     public abstract void SeguirUsuario(String seguidor, String seguido);
     public abstract void EliminarTemaFav();//Eliminar Tema, Album o lista de favoritos
@@ -24,5 +25,6 @@ public interface IControlador{
     public abstract Cliente consultarCliente(String nickname);
     public abstract Artista consultarArtista(String nickname);
     public abstract void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista);
+    public abstract void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista);
 }
 

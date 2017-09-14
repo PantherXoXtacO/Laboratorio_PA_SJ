@@ -33,7 +33,7 @@ public class Manejador {
         usuarios =new ArrayList();
         clientes=new ArrayList();
         artistas=new ArrayList();
-        Listas=new ArrayList();
+        Listas=new ArrayList(); // Listas por defecto
         generosList=new ArrayList();
         IdTema=0;
         IdAlbum=0;
@@ -174,6 +174,17 @@ public class Manejador {
         return genero;
     }
     
+    public Genero getGeneroPorNombre(String nombre){
+        Iterator it = generosList.iterator();
+        Genero user;
+        while(it.hasNext()){
+            user = (Genero)it.next();
+            if(user.getNombre().equals(nombre))
+                return user;
+        }
+        return null;
+    }
+    
     public List<Genero> getListGeneros(){
         return generosList;
     }
@@ -221,5 +232,10 @@ public class Manejador {
     void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
         ListaParticular lista = new ListaParticular(client, nombreDeLista, imagenDeLista);
         client.setListaParticular(lista);
+    }
+    
+    void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
+        ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);
+        this.Listas.add(lista);
     }
 }

@@ -65,6 +65,12 @@ public class Controlador implements IControlador {
         return M.getGenero();
     }
     
+    @Override
+    public Genero getGeneroPorNombre(String nombre){
+        Manejador M=Manejador.getinstance();
+        return M.getGeneroPorNombre(nombre);
+    }
+    
     public void AgregarTema(){
     
     }
@@ -122,6 +128,12 @@ public class Controlador implements IControlador {
     public void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
         Manejador M=Manejador.getinstance();
         M.addListaParticular(client, nombreDeLista, imagenDeLista);
+    }
+    
+    @Override
+    public void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
+        Manejador M=Manejador.getinstance();
+        M.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
     }
     
 }

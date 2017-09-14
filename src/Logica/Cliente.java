@@ -33,6 +33,10 @@ public class Cliente extends Usuario{
     public Cliente() {
     }   
     
+    public List<ListaDeReproduccion> getListas(){
+        return this.Listas;
+    }
+    
     @Override
     void addFollow(Usuario u2) {
         siguiendo.add(u2);

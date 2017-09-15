@@ -961,35 +961,35 @@
           <Group type="103" rootIndex="8" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="AltaAlbum1" min="-2" max="-2" attributes="0"/>
+                  <Component id="AltaAlbum1" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="9" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="QuitarTemaDeLista" min="-2" max="-2" attributes="0"/>
+                  <Component id="QuitarTemaDeLista" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="10" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="DejarDeSeguirUsuario" min="-2" max="-2" attributes="0"/>
+                  <Component id="DejarDeSeguirUsuario" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="11" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="GuardarTemaListaAlbum" min="-2" max="-2" attributes="0"/>
+                  <Component id="GuardarTemaListaAlbum" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="12" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="ConsultaListaReproduccion" min="-2" max="-2" attributes="0"/>
+                  <Component id="ConsultaListaReproduccion" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -1041,28 +1041,28 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="ArtistList" max="32767" attributes="0"/>
-                  <EmptySpace pref="2742" max="32767" attributes="0"/>
+                  <EmptySpace pref="2817" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="1930" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="2028" max="32767" attributes="0"/>
                   <Component id="CrearListaPorDefecto" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="1930" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="2029" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CrearListaParticular" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="3849" max="32767" attributes="0"/>
+                  <EmptySpace pref="4046" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="4" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CLClientList" max="32767" attributes="0"/>
-                  <EmptySpace pref="1291" max="32767" attributes="0"/>
+                  <EmptySpace pref="1395" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="5" groupAlignment="0" attributes="0">
@@ -1075,48 +1075,48 @@
           <Group type="103" rootIndex="6" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Component id="PrivacidadClientList" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="3315" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="3471" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="7" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="PrivacidadClientList2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="3233" max="32767" attributes="0"/>
+                  <EmptySpace pref="3389" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="8" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="AltaAlbum1" min="-2" max="-2" attributes="0"/>
+                  <Component id="AltaAlbum1" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="9" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="QuitarTemaDeLista" min="-2" max="-2" attributes="0"/>
+                  <Component id="QuitarTemaDeLista" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="10" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="DejarDeSeguirUsuario" min="-2" max="-2" attributes="0"/>
+                  <Component id="DejarDeSeguirUsuario" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="11" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="GuardarTemaListaAlbum" min="-2" max="-2" attributes="0"/>
+                  <Component id="GuardarTemaListaAlbum" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="103" rootIndex="12" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="ConsultaListaReproduccion" min="-2" max="-2" attributes="0"/>
+                  <Component id="ConsultaListaReproduccion" min="-2" pref="0" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -1234,7 +1234,7 @@
                       <Component id="RegFrameLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="UserTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="361" max="32767" attributes="0"/>
+                  <EmptySpace pref="397" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegisterCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RegisterAcceptButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1417,7 +1417,7 @@
                       <Component id="bAddNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bCancelNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="382" max="32767" attributes="0"/>
+                  <EmptySpace pref="410" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1518,7 +1518,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="550" max="32767" attributes="0"/>
+                  <EmptySpace pref="572" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1537,7 +1537,7 @@
                       <Component id="followAccept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="FollowCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="324" max="32767" attributes="0"/>
+                  <EmptySpace pref="346" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1591,6 +1591,7 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="ClientList">
       <Properties>
+        <Property name="resizable" type="boolean" value="true"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -1689,6 +1690,7 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="ArtistList">
       <Properties>
+        <Property name="resizable" type="boolean" value="true"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -1757,7 +1759,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1132" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1245" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1768,6 +1770,7 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="CrearListaPorDefecto">
       <Properties>
+        <Property name="resizable" type="boolean" value="true"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -1896,6 +1899,7 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="CrearListaParticular">
       <Properties>
+        <Property name="resizable" type="boolean" value="true"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -2024,6 +2028,7 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="CLClientList">
       <Properties>
+        <Property name="resizable" type="boolean" value="true"/>
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
 
@@ -2049,7 +2054,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="CLCUserListScroll2" pref="2513" max="32767" attributes="0"/>
+                  <Component id="CLCUserListScroll2" pref="2640" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2104,7 +2109,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="2511" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="2638" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -2195,7 +2200,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="3783" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="4014" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -2242,7 +2247,7 @@
                       <Component id="PCLLabelDeUsuario_Lista" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ConsultUserTextFIeld2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="45" max="32767" attributes="0"/>
+                  <EmptySpace pref="73" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PCLBotonAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="PCLBotonCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2349,7 +2354,7 @@
                       <Component id="PCLLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="PCLComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="70" max="32767" attributes="0"/>
+                  <EmptySpace pref="98" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PCLBotonAceptar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="PCLBotonCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2482,7 +2487,7 @@
                       <Component id="JBAddToListAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="JBAddToListCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="321" max="32767" attributes="0"/>
+                  <EmptySpace pref="349" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2607,7 +2612,7 @@
                       <Component id="BRemoveTemaFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BRemoveTemaFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="263" max="32767" attributes="0"/>
+                  <EmptySpace pref="291" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2715,7 +2720,7 @@
                       <Component id="jBRemoveAlbumFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBRemoveAlbumFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="197" max="32767" attributes="0"/>
+                  <EmptySpace pref="225" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2823,7 +2828,7 @@
                       <Component id="JBEliminarFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBEliminarListFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="202" max="32767" attributes="0"/>
+                  <EmptySpace pref="230" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2928,7 +2933,7 @@
                       <Component id="jBConsultarAlbumGenCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBConsultarAlbumGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="120" max="32767" attributes="0"/>
+                  <EmptySpace pref="148" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -3077,7 +3082,7 @@
                               <Component id="jLConsultAlb4" min="-2" max="-2" attributes="0"/>
                               <Component id="jScrollPane9" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="78" max="32767" attributes="0"/>
+                          <EmptySpace pref="106" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
@@ -3276,11 +3281,11 @@
     <Container class="javax.swing.JInternalFrame" name="AltaAlbum1">
       <Properties>
         <Property name="visible" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="false" type="code"/>
+          <Connection code="true" type="code"/>
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ExistArtistAltaAlbum.setLocationRelativeTo(null);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//AltaAlbum1.setLocationRelativeTo(null);"/>
       </AuxValues>
 
       <Layout>
@@ -3404,7 +3409,7 @@
                               <Component id="AltaAlbumAnio1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="AltaAlbumDia1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="54" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="AltaAlbumTemaSubTitle" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -3783,7 +3788,7 @@
                   </Group>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="QuitarTemaListaTitle" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                       </Group>
@@ -3931,11 +3936,11 @@
     <Container class="javax.swing.JInternalFrame" name="DejarDeSeguirUsuario">
       <Properties>
         <Property name="visible" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="false&#xa;" type="code"/>
+          <Connection code="false&#xa;    " type="code"/>
         </Property>
       </Properties>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//DejarDeSeguirUsuario.setLocationRelativeTo(null);"/>
+        <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="//DejarDeSeguirUsuario.setLocationRelativeTo(null);"/>
       </AuxValues>
 
       <Layout>
@@ -3968,7 +3973,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -3992,7 +3997,7 @@
                       <Component id="DejarSeguirUsuarioCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DejarSeguirUsuarioConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -4088,7 +4093,7 @@
                           <Component id="GuardarTemaListaAlbumConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -4122,7 +4127,7 @@
                       <Component id="GuardarTemaListaAlbumCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="GuardarTemaListaAlbumConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -4217,7 +4222,7 @@
                           <Component id="AltaAlbumbtnConfirmar2" min="-2" pref="83" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -4238,7 +4243,7 @@
                       <Component id="AltaAlbumbtnCancelar2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="AltaAlbumbtnConfirmar2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="47" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

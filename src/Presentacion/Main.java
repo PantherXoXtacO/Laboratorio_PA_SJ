@@ -346,6 +346,7 @@ public class Main extends javax.swing.JFrame {
         QuitarListaCancelar1 = new javax.swing.JButton();
         QuitarListaConfirmar1 = new javax.swing.JButton();
         DejarDeSeguirUsuario = new javax.swing.JInternalFrame();
+        //DejarDeSeguirUsuario.setLocationRelativeTo(null);
         DejarSeguirUsuarioTitle = new javax.swing.JLabel();
         DejarSeguirUsuarioClient = new javax.swing.JLabel();
         DejarSeguirUsuarioUsu = new javax.swing.JLabel();
@@ -973,7 +974,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 361, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 397, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -1043,7 +1044,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(382, Short.MAX_VALUE))
+                .addContainerGap(410, Short.MAX_VALUE))
         );
 
         FrameSeguirUser.setVisible(true);
@@ -1105,7 +1106,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(550, Short.MAX_VALUE)
+                .addContainerGap(572, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1121,9 +1122,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
                     .addComponent(FollowCancel))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(346, Short.MAX_VALUE))
         );
 
+        ClientList.setResizable(true);
         ClientList.setVisible(true);
 
         CLButton2.setText("Aceptar");
@@ -1195,6 +1197,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLButton3)))
         );
 
+        ArtistList.setResizable(true);
         ArtistList.setVisible(true);
 
         ALButton4.setText("Aceptar");
@@ -1230,13 +1233,14 @@ public class Main extends javax.swing.JFrame {
         );
         ALUserListUsers1Layout.setVerticalGroup(
             ALUserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1132, Short.MAX_VALUE)
+            .addGap(0, 1245, Short.MAX_VALUE)
         );
 
         ALUserListScroll1.setViewportView(ALUserListUsers1);
 
         ArtistList.getContentPane().add(ALUserListScroll1, java.awt.BorderLayout.LINE_START);
 
+        CrearListaPorDefecto.setResizable(true);
         CrearListaPorDefecto.setVisible(true);
 
         CLLabel1.setText("Nombre de la lista");
@@ -1290,6 +1294,7 @@ public class Main extends javax.swing.JFrame {
         });
         CrearListaPorDefecto.getContentPane().add(CLButton7, java.awt.BorderLayout.CENTER);
 
+        CrearListaParticular.setResizable(true);
         CrearListaParticular.setVisible(true);
 
         CLLabel3.setText("Nombre de la lista");
@@ -1343,6 +1348,7 @@ public class Main extends javax.swing.JFrame {
         });
         CrearListaParticular.getContentPane().add(CLPButton6, java.awt.BorderLayout.CENTER);
 
+        CLClientList.setResizable(true);
         CLClientList.setVisible(true);
 
         CLCButton8.setText("Aceptar");
@@ -1379,7 +1385,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLCUserListUsers2Layout.setVerticalGroup(
             CLCUserListUsers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 2511, Short.MAX_VALUE)
+            .addGap(0, 2638, Short.MAX_VALUE)
         );
 
         CLCUserListScroll2.setViewportView(CLCUserListUsers2);
@@ -1403,7 +1409,7 @@ public class Main extends javax.swing.JFrame {
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 2513, Short.MAX_VALUE)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 2640, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1450,7 +1456,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLListaDeGeneroLayout.setVerticalGroup(
             CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3783, Short.MAX_VALUE)
+            .addGap(0, 4014, Short.MAX_VALUE)
         );
 
         CLGUserListScroll3.setViewportView(CLListaDeGenero);
@@ -1554,7 +1560,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLLabelDeUsuario_Lista)
                     .addComponent(ConsultUserTextFIeld2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLBotonAceptar)
                     .addComponent(PCLBotonCancelar)))
@@ -1642,7 +1648,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLLabel29)
                     .addComponent(PCLComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLBotonAceptar1)
                     .addComponent(PCLBotonCancelar1)))
@@ -1719,7 +1725,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBAddToListAceptar)
                     .addComponent(JBAddToListCancelar))
-                .addContainerGap(321, Short.MAX_VALUE))
+                .addContainerGap(349, Short.MAX_VALUE))
         );
 
         FrameRemoveTemaFav.setVisible(true);
@@ -1779,7 +1785,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addContainerGap(291, Short.MAX_VALUE))
         );
 
         FrameRemoveAlbumFav.setTitle("Eliminar album de favoritos");
@@ -1840,7 +1846,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBRemoveAlbumFavAcept)
                     .addComponent(jBRemoveAlbumFavCancel))
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
         jFrameRemoveListFav.setTitle("Eliminar lista de favoritos");
@@ -1901,7 +1907,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBEliminarFavAcept)
                     .addComponent(jBEliminarListFavCancel))
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(230, Short.MAX_VALUE))
         );
 
         jFConsultarAlbumGen.setTitle("Consultar Album");
@@ -1970,7 +1976,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         FrameConsultarAlbum.setVisible(true);
@@ -2053,7 +2059,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(78, Short.MAX_VALUE))
+                        .addContainerGap(106, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BConsultAlbAceptar)
@@ -2121,8 +2127,8 @@ public class Main extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        ExistArtistAltaAlbum.setLocationRelativeTo(null);
-        AltaAlbum1.setVisible(false);
+        //AltaAlbum1.setLocationRelativeTo(null);
+        AltaAlbum1.setVisible(true);
 
         AltaAlbumNomAlb.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AltaAlbumNomAlb.setText("Nombre Album");
@@ -2319,7 +2325,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaAlbumMes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumAnio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(AltaAlbumDia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(AltaAlbumTemaSubTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2380,7 +2386,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(QuitarTemaListaList, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(QuitarTemaDeListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
-                        .addGap(0, 17, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(QuitarTemaListaTitle)
                         .addGap(72, 72, 72))
                     .addGroup(QuitarTemaDeListaLayout.createSequentialGroup()
@@ -2433,7 +2439,6 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(QuitarListaConfirmar1)))
         );
 
-        //DejarDeSeguirUsuario.setLocationRelativeTo(null);
         DejarDeSeguirUsuario.setVisible(false
         );
 
@@ -2482,7 +2487,7 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(DejarSeguirUsuarioUsuText, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                                 .addComponent(DejarSeguirUsuarioClientText)))))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         DejarDeSeguirUsuarioLayout.setVerticalGroup(
             DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2501,7 +2506,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DejarSeguirUsuarioCancelar1)
                     .addComponent(DejarSeguirUsuarioConfirmar1))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         //GuardarTemaListaAlbum.setLocationRelativeTo(null);
@@ -2564,7 +2569,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(GuardarTemaListaAlbumCancelar1)
                         .addGap(18, 18, 18)
                         .addComponent(GuardarTemaListaAlbumConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         GuardarTemaListaAlbumLayout.setVerticalGroup(
             GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2591,7 +2596,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(GuardarTemaListaAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(GuardarTemaListaAlbumCancelar1)
                     .addComponent(GuardarTemaListaAlbumConfirmar1))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         //ConsultaListaReproduccion.setLocationRelativeTo(null);
@@ -2646,7 +2651,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(AltaAlbumbtnCancelar2)
                         .addGap(18, 18, 18)
                         .addComponent(AltaAlbumbtnConfirmar2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ConsultaListaReproduccionLayout.setVerticalGroup(
             ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2663,7 +2668,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar2)
                     .addComponent(AltaAlbumbtnConfirmar2))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenuInicio.setText("Inicio");
@@ -2938,27 +2943,27 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -2997,22 +3002,22 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(ArtistList)
-                    .addContainerGap(2742, Short.MAX_VALUE)))
+                    .addContainerGap(2817, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 1930, Short.MAX_VALUE)
+                    .addGap(0, 2028, Short.MAX_VALUE)
                     .addComponent(CrearListaPorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1930, Short.MAX_VALUE)))
+                    .addGap(0, 2029, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(3849, Short.MAX_VALUE)))
+                    .addContainerGap(4046, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(CLClientList)
-                    .addContainerGap(1291, Short.MAX_VALUE)))
+                    .addContainerGap(1395, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(21, 21, 21)
@@ -3021,36 +3026,36 @@ public class Main extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(PrivacidadClientList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 3315, Short.MAX_VALUE)))
+                    .addGap(0, 3471, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(PrivacidadClientList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(3233, Short.MAX_VALUE)))
+                    .addContainerGap(3389, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -3292,7 +3297,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItemConClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConClienteActionPerformed
         //Relevar esto al controlador
-        this.ClientList.setSize(500, 500);
+        this.ClientList.setMaximizable(true);
         Manejador manejador = Logica.Manejador.getinstance();
         List<Cliente> clientes = manejador.getClientes();
         int numeroDeClientes = clientes.size();  
@@ -3392,6 +3397,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ALButton5MouseClicked
 
     private void jMenuItemConArtistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConArtistaActionPerformed
+        this.ArtistList.setMaximizable(true);
         this.ArtistList.setSize(500, 500);               
         Manejador manejador = Logica.Manejador.getinstance();
         List<Artista> artistas = manejador.getArtistas();
@@ -3418,10 +3424,12 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bCancelNewGenActionPerformed
 
     private void jMenuItemCrearListaPorDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaPorDefectoActionPerformed
+        this.CrearListaPorDefecto.setMaximizable(true);
         this.CrearListaPorDefecto.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearListaPorDefectoActionPerformed
 
     private void jMenuItemCrearListaParticularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaParticularActionPerformed
+        this.CrearListaParticular.setMaximizable(true);
         this.CrearListaParticular.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearListaParticularActionPerformed
 
@@ -3926,6 +3934,7 @@ public class Main extends javax.swing.JFrame {
             label.setBounds(0, 40*i, 200, 40);
             this.PCLClientList.add(label);              
         }    
+        this.PrivacidadClientList.setSize(500, 500);
         this.PrivacidadClientList.setVisible(true);
     }//GEN-LAST:event_jMenuItemPublicarListaActionPerformed
 

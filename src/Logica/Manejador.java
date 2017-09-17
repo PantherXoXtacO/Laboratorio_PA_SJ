@@ -62,40 +62,33 @@ public class Manejador {
         return instancia;
     }
     
-    
-    
-    public void addUsuario(Usuario usu, String userType){ //El usuario sera Cliente o Artista
-        //String nickname = usu.getNickname(); //si no existe en la lista
-        //usuarios.add(usu);
-        if(userType=="Cliente"){
-            Cliente cliente = (Cliente) usu;            
-            clientes.add(cliente); 
-             try {
-                entitymanager.getTransaction().begin();
-                entitymanager.persist(cliente);
-                entitymanager.getTransaction().commit();
-                entitymanager.close(); 
-             }
-             catch (Exception e) {
-                e.printStackTrace();
-                entitymanager.getTransaction().rollback();
-            } 
+    public void addCliente(Cliente usu){
+        clientes.add(usu);
+        try{
+            entitymanager.getTransaction().begin();
+            entitymanager.persist(usu);
+            entitymanager.getTransaction().commit();
+            entitymanager.close(); 
         }
-        if(userType=="Artista"){
-              Artista artista = (Artista) usu;
-              artistas.add(artista); 
-              try {
-                entitymanager.getTransaction().begin();
-                entitymanager.persist(artista);
-                entitymanager.getTransaction().commit();
-                entitymanager.close(); 
-              }
-              catch (Exception e) {
-                e.printStackTrace();
-                entitymanager.getTransaction().rollback();
-              } 
-           } 
+        catch (Exception e) {
+            e.printStackTrace();
+            entitymanager.getTransaction().rollback();
+        } 
     } 
+    
+    public void addArtista(Artista usu){
+        artistas.add(usu); 
+        try {
+            entitymanager.getTransaction().begin();
+            entitymanager.persist(usu);
+            entitymanager.getTransaction().commit();
+            entitymanager.close(); 
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            entitymanager.getTransaction().rollback();
+        } 
+    }
         
     public boolean nicknameLibre(String nickname){
         if(this.obtenerCliente(nickname) == null){

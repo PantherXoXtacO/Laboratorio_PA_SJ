@@ -7,9 +7,12 @@ import java.util.List;
  * @author Casca
  */
 public interface IControlador{
-    public abstract void registrarUsuario(String nickname, String contraseña,
+    public abstract void registrarCliente(String nickname, String contraseña,
                     String mail, String nombre, String apellido,
-                    Fecha fechaDeNacimiento, String imagen, String usertype,
+                    Fecha fechaDeNacimiento, String imagen);
+    public abstract void registrarArtista(String nickname, String contraseña,
+                    String mail, String nombre, String apellido,
+                    Fecha fechaDeNacimiento, String imagen,
                     String biografia, String dir_web);
     
     public abstract void AltaGenero(String nombre, String padre);

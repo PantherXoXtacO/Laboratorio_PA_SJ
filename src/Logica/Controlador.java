@@ -16,27 +16,27 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void registrarUsuario(String nickname, String contraseña, 
-                                    String mail, String nombre, String apellido,
-                                    Fecha fechaDeNacimiento,
-                                    String imagen, String userType,
-                                    String biografia, String dir_web) {
-        //Instancio al manejador
+    public void registrarCliente(String nickname, String contraseña,
+                    String mail, String nombre, String apellido,
+                    Fecha fechaDeNacimiento, String imagen){
+        
         Manejador mu = Manejador.getinstance();
-        //Creo el usuario
-        if(userType=="Cliente"){
-            Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
+        Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
                                             fechaDeNacimiento, imagen);
-            mu.addUsuario(user, userType);
-        }
-        else if (userType=="Artista"){
-            Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
+        mu.addCliente(user);
+    } 
+        
+    public void registrarArtista(String nickname, String contraseña,
+                    String mail, String nombre, String apellido,
+                    Fecha fechaDeNacimiento, String imagen,
+                    String biografia, String dir_web){
+        
+        Manejador mu = Manejador.getinstance();
+        Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
                                             fechaDeNacimiento, imagen);
-            mu.addUsuario(user, userType);
-        }        
+        mu.addArtista(user);
     }
-  
-    
+      
     @Override
     public void AltaGenero(String nombre, String padre){
         Manejador mu = Manejador.getinstance();

@@ -169,15 +169,6 @@ public class Main extends javax.swing.JFrame {
         bCancelNewGen = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        FrameSeguirUser = new javax.swing.JInternalFrame();
-        Follower = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        Followed = new javax.swing.JTextField();
-        followAccept = new javax.swing.JButton();
-        FollowCancel = new javax.swing.JButton();
-        LabelUserMail = new javax.swing.JLabel();
-        FollowedLabel = new javax.swing.JLabel();
         CLClientList = new javax.swing.JInternalFrame();
         CLCButton8 = new javax.swing.JButton();
         CLCButton9 = new javax.swing.JButton();
@@ -185,13 +176,6 @@ public class Main extends javax.swing.JFrame {
         CLCLabel18 = new javax.swing.JLabel();
         CLCUserListScroll2 = new javax.swing.JScrollPane();
         CLCUserListUsers2 = new javax.swing.JPanel();
-        CLGeneroList = new javax.swing.JInternalFrame();
-        CLGLButton10 = new javax.swing.JButton();
-        CLGButton11 = new javax.swing.JButton();
-        CLConsultUserTextFIeld1 = new javax.swing.JTextField();
-        CLGLabel19 = new javax.swing.JLabel();
-        CLGUserListScroll3 = new javax.swing.JScrollPane();
-        CLListaDeGenero = new javax.swing.JPanel();
         PrivacidadClientList = new javax.swing.JInternalFrame();
         PCLBotonAceptar = new javax.swing.JButton();
         PCLBotonCancelar = new javax.swing.JButton();
@@ -358,6 +342,22 @@ public class Main extends javax.swing.JFrame {
         CLLabel0 = new javax.swing.JLabel();
         CLGeneroTextField = new javax.swing.JTextField();
         CLButton7 = new javax.swing.JButton();
+        ArtistList = new javax.swing.JInternalFrame();
+        ALButton4 = new javax.swing.JButton();
+        ALButton5 = new javax.swing.JButton();
+        ConsultUserTextFIeld1 = new javax.swing.JTextField();
+        ALLabel14 = new javax.swing.JLabel();
+        ALUserListScroll1 = new javax.swing.JScrollPane();
+        ALUserListUsers1 = new javax.swing.JPanel();
+        FrameSeguirUser = new javax.swing.JInternalFrame();
+        Follower = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        Followed = new javax.swing.JTextField();
+        followAccept = new javax.swing.JButton();
+        FollowCancel = new javax.swing.JButton();
+        LabelUserMail = new javax.swing.JLabel();
+        FollowedLabel = new javax.swing.JLabel();
         ClientList = new javax.swing.JInternalFrame();
         CLButton2 = new javax.swing.JButton();
         CLButton3 = new javax.swing.JButton();
@@ -366,15 +366,14 @@ public class Main extends javax.swing.JFrame {
         CLScroll = new javax.swing.JScrollPane();
         UserListUsers = new javax.swing.JPanel();
         CLLabel27 = new javax.swing.JLabel();
-        ArtistList = new javax.swing.JInternalFrame();
-        ALButton4 = new javax.swing.JButton();
-        ALButton5 = new javax.swing.JButton();
-        ConsultUserTextFIeld1 = new javax.swing.JTextField();
-        ALLabel14 = new javax.swing.JLabel();
-        ALUserListScroll1 = new javax.swing.JScrollPane();
-        ALUserListUsers1 = new javax.swing.JPanel();
+        CLGeneroList = new javax.swing.JInternalFrame();
+        CLGLButton10 = new javax.swing.JButton();
+        CLGButton11 = new javax.swing.JButton();
+        CLConsultUserTextFIeld1 = new javax.swing.JTextField();
+        CLGLabel19 = new javax.swing.JLabel();
+        CLGUserListScroll3 = new javax.swing.JScrollPane();
+        CLListaDeGenero = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuInicio = new javax.swing.JMenu();
         jMenuRegistros = new javax.swing.JMenu();
         jMenuItemRegUsu = new javax.swing.JMenuItem();
         jMenuItemCrearGen = new javax.swing.JMenuItem();
@@ -815,8 +814,7 @@ public class Main extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 800));
-        setPreferredSize(new java.awt.Dimension(10, 10));
+        getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jRegisterFrame.setVisible(true);
 
@@ -936,7 +934,7 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 520, Short.MAX_VALUE)
                                 .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -945,7 +943,8 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                                 .addComponent(ImagePathTextField)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(RegFrameLabelButton1))))))
+                                .addComponent(RegFrameLabelButton1)))))
+                .addGap(249, 249, 249))
         );
         jRegisterFrameLayout.setVerticalGroup(
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -980,11 +979,13 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
         );
+
+        getContentPane().add(jRegisterFrame);
 
         FrameNewGen.setVisible(true);
         FrameNewGen.setVisible(false);
@@ -1050,86 +1051,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
-        FrameSeguirUser.setVisible(true);
-        FrameSeguirUser.setVisible(false);
-        FrameSeguirUser.setTitle("Seguir Usuario");
-
-        jLabel8.setText("Usuario (Nick)");
-
-        jLabel9.setText("Usuario al que descea seguir (Nick)");
-
-        followAccept.setText("Aceptar");
-        followAccept.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                followAcceptActionPerformed(evt);
-            }
-        });
-
-        FollowCancel.setText("Cancelar");
-        FollowCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FollowCancelActionPerformed(evt);
-            }
-        });
-
-        LabelUserMail.setForeground(new java.awt.Color(255, 0, 51));
-
-        FollowedLabel.setForeground(new java.awt.Color(255, 0, 51));
-
-        javax.swing.GroupLayout FrameSeguirUserLayout = new javax.swing.GroupLayout(FrameSeguirUser.getContentPane());
-        FrameSeguirUser.getContentPane().setLayout(FrameSeguirUserLayout);
-        FrameSeguirUserLayout.setHorizontalGroup(
-            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel8))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(Follower)
-                                    .addComponent(Followed))
-                                .addGap(2, 2, 2)
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap())
-                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(followAccept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FollowCancel)
-                        .addGap(49, 49, 49))))
-        );
-        FrameSeguirUserLayout.setVerticalGroup(
-            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Followed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(followAccept)
-                    .addComponent(FollowCancel))
-                .addContainerGap(13, Short.MAX_VALUE))
-        );
+        getContentPane().add(FrameNewGen);
 
         CLClientList.setVisible(true);
 
@@ -1183,7 +1108,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CLConsultUserTextFIeld))
+                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE))
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCUserListScroll2)
                 .addContainerGap())
@@ -1191,7 +1116,7 @@ public class Main extends javax.swing.JFrame {
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1202,76 +1127,12 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLCButton9)))
         );
 
-        CLGeneroList.setVisible(true);
-
-        CLGLButton10.setText("Aceptar");
-        CLGLButton10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CLGLButton10MouseClicked(evt);
-            }
-        });
-        CLGLButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CLGLButton10ActionPerformed(evt);
-            }
-        });
-
-        CLGButton11.setText("Cancelar");
-        CLGButton11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CLGButton11MouseClicked(evt);
-            }
-        });
-        CLGButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CLGButton11ActionPerformed(evt);
-            }
-        });
-
-        CLGLabel19.setText("Nombre del genero");
-
-        javax.swing.GroupLayout CLListaDeGeneroLayout = new javax.swing.GroupLayout(CLListaDeGenero);
-        CLListaDeGenero.setLayout(CLListaDeGeneroLayout);
-        CLListaDeGeneroLayout.setHorizontalGroup(
-            CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        CLListaDeGeneroLayout.setVerticalGroup(
-            CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        CLGUserListScroll3.setViewportView(CLListaDeGenero);
-
-        javax.swing.GroupLayout CLGeneroListLayout = new javax.swing.GroupLayout(CLGeneroList.getContentPane());
-        CLGeneroList.getContentPane().setLayout(CLGeneroListLayout);
-        CLGeneroListLayout.setHorizontalGroup(
-            CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGButton11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(CLGLButton10))
-            .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CLConsultUserTextFIeld1))
-            .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3)
-                .addContainerGap())
-        );
-        CLGeneroListLayout.setVerticalGroup(
-            CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CLGLabel19))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CLGLButton10)
-                    .addComponent(CLGButton11)))
-        );
+        getContentPane().add(CLClientList);
+        try {
+            CLClientList.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         PrivacidadClientList.setMaximizable(true);
         PrivacidadClientList.setResizable(true);
@@ -1329,8 +1190,9 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(PCLUserListScroll4)
                     .addGroup(PrivacidadClientListLayout.createSequentialGroup()
                         .addComponent(PCLLabelDeUsuario_Lista, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ConsultUserTextFIeld2)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ConsultUserTextFIeld2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)))
                 .addContainerGap())
         );
         PrivacidadClientListLayout.setVerticalGroup(
@@ -1342,11 +1204,13 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLLabelDeUsuario_Lista)
                     .addComponent(ConsultUserTextFIeld2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLBotonAceptar)
                     .addComponent(PCLBotonCancelar)))
         );
+
+        getContentPane().add(PrivacidadClientList);
 
         PrivacidadClientList2.setMaximizable(true);
         PrivacidadClientList2.setResizable(true);
@@ -1407,14 +1271,14 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PCLUserListScroll5)
                     .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
-                        .addComponent(PCLLabelDeUsuario_Lista1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ConsultUserTextFIeld3))
-                    .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
                         .addComponent(PCLLabel29)
                         .addGap(57, 57, 57)
                         .addComponent(PCLComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
+                        .addComponent(PCLLabelDeUsuario_Lista1, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(ConsultUserTextFIeld3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         PrivacidadClientList2Layout.setVerticalGroup(
@@ -1430,11 +1294,13 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLLabel29)
                     .addComponent(PCLComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PCLBotonAceptar1)
                     .addComponent(PCLBotonCancelar1)))
         );
+
+        getContentPane().add(PrivacidadClientList2);
 
         JFaddTemaToList.setVisible(true);
         JFaddTemaToList.setVisible(false);
@@ -1507,8 +1373,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBAddToListAceptar)
                     .addComponent(JBAddToListCancelar))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
+
+        getContentPane().add(JFaddTemaToList);
 
         jFrameRemoveListFav.setTitle("Eliminar lista de favoritos");
         jFrameRemoveListFav.setVisible(true);
@@ -1556,7 +1424,7 @@ public class Main extends javax.swing.JFrame {
         jFrameRemoveListFavLayout.setVerticalGroup(
             jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRemoveListFavUsr)
                     .addComponent(jCBRemoveListFavClnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1569,6 +1437,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(JBEliminarFavAcept)
                     .addComponent(jBEliminarListFavCancel)))
         );
+
+        getContentPane().add(jFrameRemoveListFav);
 
         FrameRemoveTemaFav.setVisible(true);
         FrameRemoveTemaFav.setVisible(false);
@@ -1627,8 +1497,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
+
+        getContentPane().add(FrameRemoveTemaFav);
 
         FrameRemoveAlbumFav.setTitle("Eliminar album de favoritos");
         FrameRemoveAlbumFav.setVisible(true);
@@ -1676,7 +1548,7 @@ public class Main extends javax.swing.JFrame {
         FrameRemoveAlbumFavLayout.setVerticalGroup(
             FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRemoveAlbumFav1)
                     .addComponent(CBRemoveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1689,6 +1561,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jBRemoveAlbumFavAcept)
                     .addComponent(jBRemoveAlbumFavCancel)))
         );
+
+        getContentPane().add(FrameRemoveAlbumFav);
 
         jFConsultarAlbumGen.setTitle("Consultar Album");
         jFConsultarAlbumGen.setVisible(true);
@@ -1756,8 +1630,10 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jFConsultarAlbumGen);
 
         FrameConsultarAlbum.setVisible(true);
         FrameConsultarAlbum.setVisible(false);
@@ -1839,7 +1715,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(15, Short.MAX_VALUE))
+                        .addContainerGap(178, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BConsultAlbAceptar)
@@ -1847,6 +1723,8 @@ public class Main extends javax.swing.JFrame {
         );
 
         jLConsultAlbImg.getAccessibleContext().setAccessibleName("jLConsultAlbImg");
+
+        getContentPane().add(FrameConsultarAlbum);
 
         FrameConsultarAlbArt.setVisible(false);
 
@@ -1906,6 +1784,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jButton9))
                 .addGap(20, 20, 20))
         );
+
+        getContentPane().add(FrameConsultarAlbArt);
 
         //AltaAlbum1.setLocationRelativeTo(null);
         AltaAlbum1.setVisible(true);
@@ -2120,6 +2000,8 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getContentPane().add(AltaAlbum1);
+
         QuitarTemaDeLista.setMinimumSize(new java.awt.Dimension(20, 34));
         QuitarTemaDeLista.setVisible(false);
 
@@ -2219,6 +2101,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(QuitarListaConfirmar1)))
         );
 
+        getContentPane().add(QuitarTemaDeLista);
+
         DejarDeSeguirUsuario.setVisible(false
         );
 
@@ -2288,6 +2172,8 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(DejarSeguirUsuarioConfirmar1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        getContentPane().add(DejarDeSeguirUsuario);
 
         //GuardarTemaListaAlbum.setLocationRelativeTo(null);
         GuardarTemaListaAlbum.setVisible(false);
@@ -2379,6 +2265,8 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getContentPane().add(GuardarTemaListaAlbum);
+
         ConsultaListaReproduccion.setVisible(false);
 
         ConsultaListaReproduccionTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -2449,6 +2337,13 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(AltaAlbumbtnConfirmar2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        getContentPane().add(ConsultaListaReproduccion);
+        try {
+            ConsultaListaReproduccion.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         CrearListaParticular.setVisible(true);
 
@@ -2550,11 +2445,18 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
         );
+
+        getContentPane().add(CrearListaParticular);
+        try {
+            CrearListaParticular.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         CrearListaPorDefecto.setVisible(true);
 
@@ -2602,29 +2504,43 @@ public class Main extends javax.swing.JFrame {
         CrearListaPorDefecto.getContentPane().setLayout(CrearListaPorDefectoLayout);
         CrearListaPorDefectoLayout.setHorizontalGroup(
             CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
-                .addComponent(CLCancelButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(CLRegisterButton))
-            .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addComponent(CLTitulo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CLLabel1)
-                    .addComponent(CLLabel2)
-                    .addComponent(CLLabel0))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CLGeneroTextField)
-                    .addComponent(CLTextFieldDePathDeImagen)
-                    .addComponent(CLPorDefectoBotonDeCambioDeImagen, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(CLTextFieldNombreDeLista)))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(CLButton7))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CLRegisterButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CLTextFieldNombreDeLista, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
+                        .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CLLabel1)
+                            .addComponent(CLCancelButton))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
+                        .addComponent(CLLabel0)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(CLGeneroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
+                .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
+                        .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
+                                .addGap(368, 368, 368)
+                                .addComponent(CLTitulo))
+                            .addGroup(CrearListaPorDefectoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(CLLabel2)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CLPorDefectoBotonDeCambioDeImagen, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(CLButton7, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap())
         );
         CrearListaPorDefectoLayout.setVerticalGroup(
             CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2638,90 +2554,26 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLLabel2)
                     .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(CLPorDefectoBotonDeCambioDeImagen)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(1, 1, 1)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLGeneroTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CLLabel0))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(5, 5, 5)
                 .addComponent(CLButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton)
                     .addComponent(CLCancelButton)))
         );
 
-        ClientList.setVisible(true);
-
-        CLButton2.setText("Aceptar");
-        CLButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CLButton2MouseClicked(evt);
-            }
-        });
-        CLButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CLButton2ActionPerformed(evt);
-            }
-        });
-
-        CLButton3.setText("Cancelar");
-        CLButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CLButton3MouseClicked(evt);
-            }
-        });
-
-        CLLabel12.setText("Nick del usuario a consultar");
-
-        javax.swing.GroupLayout UserListUsersLayout = new javax.swing.GroupLayout(UserListUsers);
-        UserListUsers.setLayout(UserListUsersLayout);
-        UserListUsersLayout.setHorizontalGroup(
-            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        UserListUsersLayout.setVerticalGroup(
-            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        CLScroll.setViewportView(UserListUsers);
-
-        CLLabel27.setText("Privacidad");
-
-        javax.swing.GroupLayout ClientListLayout = new javax.swing.GroupLayout(ClientList.getContentPane());
-        ClientList.getContentPane().setLayout(ClientListLayout);
-        ClientListLayout.setHorizontalGroup(
-            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ClientListLayout.createSequentialGroup()
-                .addComponent(CLButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(CLButton2))
-            .addComponent(CLScroll)
-            .addGroup(ClientListLayout.createSequentialGroup()
-                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CLLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CLLabel27))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld)
-                .addContainerGap())
-        );
-        ClientListLayout.setVerticalGroup(
-            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientListLayout.createSequentialGroup()
-                .addComponent(CLScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CLLabel12)
-                    .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(CLLabel27)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CLButton2)
-                    .addComponent(CLButton3)))
-        );
+        getContentPane().add(CrearListaPorDefecto);
+        try {
+            CrearListaPorDefecto.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
 
         ArtistList.setVisible(true);
 
@@ -2778,7 +2630,7 @@ public class Main extends javax.swing.JFrame {
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2789,8 +2641,245 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(ALButton5)))
         );
 
-        jMenuInicio.setText("Inicio");
-        jMenuBar1.add(jMenuInicio);
+        getContentPane().add(ArtistList);
+        try {
+            ArtistList.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+
+        FrameSeguirUser.setVisible(true);
+        FrameSeguirUser.setVisible(false);
+        FrameSeguirUser.setTitle("Seguir Usuario");
+
+        jLabel8.setText("Usuario (Nick)");
+
+        jLabel9.setText("Usuario al que descea seguir (Nick)");
+
+        followAccept.setText("Aceptar");
+        followAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                followAcceptActionPerformed(evt);
+            }
+        });
+
+        FollowCancel.setText("Cancelar");
+        FollowCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FollowCancelActionPerformed(evt);
+            }
+        });
+
+        LabelUserMail.setForeground(new java.awt.Color(255, 0, 51));
+
+        FollowedLabel.setForeground(new java.awt.Color(255, 0, 51));
+
+        javax.swing.GroupLayout FrameSeguirUserLayout = new javax.swing.GroupLayout(FrameSeguirUser.getContentPane());
+        FrameSeguirUser.getContentPane().setLayout(FrameSeguirUserLayout);
+        FrameSeguirUserLayout.setHorizontalGroup(
+            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel8))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(Follower)
+                                    .addComponent(Followed))
+                                .addGap(2, 2, 2)
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap())
+                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(followAccept)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                        .addComponent(FollowCancel)
+                        .addGap(49, 49, 49))))
+        );
+        FrameSeguirUserLayout.setVerticalGroup(
+            FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                .addContainerGap(165, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Followed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62)
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(followAccept)
+                    .addComponent(FollowCancel))
+                .addContainerGap())
+        );
+
+        getContentPane().add(FrameSeguirUser);
+
+        ClientList.setVisible(true);
+
+        CLButton2.setText("Aceptar");
+        CLButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CLButton2MouseClicked(evt);
+            }
+        });
+        CLButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLButton2ActionPerformed(evt);
+            }
+        });
+
+        CLButton3.setText("Cancelar");
+        CLButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CLButton3MouseClicked(evt);
+            }
+        });
+
+        CLLabel12.setText("Nick del usuario a consultar");
+
+        javax.swing.GroupLayout UserListUsersLayout = new javax.swing.GroupLayout(UserListUsers);
+        UserListUsers.setLayout(UserListUsersLayout);
+        UserListUsersLayout.setHorizontalGroup(
+            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        UserListUsersLayout.setVerticalGroup(
+            UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        CLScroll.setViewportView(UserListUsers);
+
+        CLLabel27.setText("Privacidad");
+
+        javax.swing.GroupLayout ClientListLayout = new javax.swing.GroupLayout(ClientList.getContentPane());
+        ClientList.getContentPane().setLayout(ClientListLayout);
+        ClientListLayout.setHorizontalGroup(
+            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addComponent(CLButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CLButton2))
+            .addComponent(CLScroll)
+            .addGroup(ClientListLayout.createSequentialGroup()
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CLLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CLLabel27))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        ClientListLayout.setVerticalGroup(
+            ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClientListLayout.createSequentialGroup()
+                .addComponent(CLScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CLLabel12)
+                    .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(CLLabel27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CLButton2)
+                    .addComponent(CLButton3)))
+        );
+
+        getContentPane().add(ClientList);
+        try {
+            ClientList.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e1) {
+            e1.printStackTrace();
+        }
+
+        CLGeneroList.setVisible(true);
+
+        CLGLButton10.setText("Aceptar");
+        CLGLButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CLGLButton10MouseClicked(evt);
+            }
+        });
+        CLGLButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLGLButton10ActionPerformed(evt);
+            }
+        });
+
+        CLGButton11.setText("Cancelar");
+        CLGButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CLGButton11MouseClicked(evt);
+            }
+        });
+        CLGButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CLGButton11ActionPerformed(evt);
+            }
+        });
+
+        CLGLabel19.setText("Nombre del genero");
+
+        javax.swing.GroupLayout CLListaDeGeneroLayout = new javax.swing.GroupLayout(CLListaDeGenero);
+        CLListaDeGenero.setLayout(CLListaDeGeneroLayout);
+        CLListaDeGeneroLayout.setHorizontalGroup(
+            CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        CLListaDeGeneroLayout.setVerticalGroup(
+            CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        CLGUserListScroll3.setViewportView(CLListaDeGenero);
+
+        javax.swing.GroupLayout CLGeneroListLayout = new javax.swing.GroupLayout(CLGeneroList.getContentPane());
+        CLGeneroList.getContentPane().setLayout(CLGeneroListLayout);
+        CLGeneroListLayout.setHorizontalGroup(
+            CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CLGeneroListLayout.createSequentialGroup()
+                .addComponent(CLGLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(CLGeneroListLayout.createSequentialGroup()
+                .addComponent(CLGUserListScroll3)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
+                .addComponent(CLGButton11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CLGLButton10))
+            .addGroup(CLGeneroListLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        CLGeneroListLayout.setVerticalGroup(
+            CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
+                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CLGLabel19))
+                .addGap(18, 18, 18)
+                .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CLGLButton10)
+                    .addComponent(CLGButton11)))
+        );
+
+        getContentPane().add(CLGeneroList);
 
         jMenuRegistros.setText("Registros");
         jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
@@ -2987,224 +3076,6 @@ public class Main extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jRegisterFrame)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(570, 570, 570)
-                        .addComponent(FrameRemoveAlbumFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(FrameConsultarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FrameNewGen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(JFaddTemaToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jFConsultarAlbumGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(FrameSeguirUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)
-                        .addComponent(jFrameRemoveListFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(FrameRemoveTemaFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(ArtistList)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(CLClientList)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CLGeneroList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(430, 430, 430)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(PrivacidadClientList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(PrivacidadClientList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(602, 602, 602)
-                    .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(602, 602, 602)
-                    .addComponent(CrearListaPorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(719, 719, 719)
-                    .addComponent(ClientList)
-                    .addGap(719, 719, 719)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRegisterFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FrameNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(FrameConsultarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(FrameConsultarAlbArt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(FrameRemoveAlbumFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JFaddTemaToList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(jFConsultarAlbumGen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(665, 665, 665)
-                .addComponent(ArtistList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FrameSeguirUser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jFrameRemoveListFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(FrameRemoveTemaFav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(CLClientList)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(21, 21, 21)
-                    .addComponent(CLGeneroList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(PrivacidadClientList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(PrivacidadClientList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(AltaAlbum1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(QuitarTemaDeLista, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(DejarDeSeguirUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(GuardarTemaListaAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(ConsultaListaReproduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(1854, 1854, 1854)
-                    .addComponent(CrearListaParticular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(1860, 1860, 1860)
-                    .addComponent(CrearListaPorDefecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(2842, 2842, 2842)
-                    .addComponent(ClientList)
-                    .addGap(2842, 2842, 2842)))
-        );
-
-        try {
-            CLClientList.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            CLGeneroList.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            CrearListaParticular.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            CrearListaPorDefecto.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            ClientList.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
-        try {
-            ArtistList.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -3361,6 +3232,7 @@ public class Main extends javax.swing.JFrame {
                         if(ICU.mailLibre(email)){
                             ICU.registrarCliente(nick, "", email, nombre, apellido, fechaDeNac, imagePath);
                             JOptionPane.showMessageDialog(this, "El Cliente se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);                
+                            this.jRegisterFrame.setVisible(false);
                             return;   
                         }
                         else{
@@ -3402,29 +3274,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_LinkWebTextFieldActionPerformed
                             
     private void RegistrarArtistaCancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarArtistaCancelButtonMouseClicked
-    this.RegistrarArtista.setVisible(false); 
+    
     }//GEN-LAST:event_RegistrarArtistaCancelButtonMouseClicked
 
     private void RegistrarArtistaAcceptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegistrarArtistaAcceptButtonMouseClicked
-        String nick = this.jRegisterNicknameField.getText();
-        String email = this.jRegisterApellidolField.getText();
-        String nombre= this.jRegisterNombreField.getText();
-        String apellido = this.jRegisterEmailField.getText();
-        int userTypeIndex = this.UserTypeComboBox.getSelectedIndex();
-        int dia = this.jComboBoxDia.getSelectedIndex() + 1;
-        int mes = this.jComboBoxMes.getSelectedIndex() + 1;
-        int año = this.jComboBoxAño.getSelectedIndex() + 1900;
-        Fecha fechaDeNac = new Fecha(dia, mes, año);
-        String biografia = this.BiografiaTextArea.getText();
-        String website = this.LinkWebTextField.getText();
-        String imagePath = "I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images\\default.jpg";
-        if(!this.ImagePathTextField.getText().equals(""))
-                    imagePath = this.ImagePathTextField.getText();    
-        ICU.registrarArtista(nick, "", email, nombre, apellido, fechaDeNac, imagePath, biografia, website);
-        this.BiografiaTextArea.setText("");
-        this.LinkWebTextField.setText("");
-        this.RegistrarArtista.setVisible(false);
-        JOptionPane.showMessageDialog(this, "El Artista se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE); 
+        
     }//GEN-LAST:event_RegistrarArtistaAcceptButtonMouseClicked
 
     private void jMenuItemConClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemConClienteMouseClicked
@@ -3485,10 +3339,14 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bCancelNewGenActionPerformed
 
     private void jMenuItemCrearListaPorDefectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaPorDefectoActionPerformed
+        CLTextFieldNombreDeLista.setText("");
+        CLTextFieldDePathDeImagen.setText("");
+        CLGeneroTextField.setText("");
         this.CrearListaPorDefecto.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearListaPorDefectoActionPerformed
 
     private void jMenuItemCrearListaParticularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaParticularActionPerformed
+        CLPTextFieldNombreDeLista.setText("");
         this.CrearListaParticular.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearListaParticularActionPerformed
 
@@ -3562,7 +3420,6 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_BRemoveTemaFavCancelActionPerformed
 
     private void jMenuRemoveTemaFavActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRemoveTemaFavActionPerformed
-        
         Iterator itCliente = ICU.getItemCliente().iterator();
         Item itemCliente;
         while(itCliente.hasNext()){
@@ -3823,30 +3680,6 @@ public class Main extends javax.swing.JFrame {
         this.CLClientList.setVisible(false);
     }//GEN-LAST:event_CLCButton9ActionPerformed
 
-    private void CLGLButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CLGLButton10MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CLGLButton10MouseClicked
-
-    private void CLGLButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLGLButton10ActionPerformed
-        String nombreGenero = this.CLConsultUserTextFIeld1.getText();
-        if(!nombreGenero.equals("")){
-            if(ICU.getGeneroPorNombre(nombreGenero)!=null)
-                this.CLGeneroTextField.setText(nombreGenero);
-            else
-                JOptionPane.showMessageDialog(this, "No existe el genero especificado", "Seleccionar genero", JOptionPane.INFORMATION_MESSAGE);
-        }
-        this.CLGeneroList.setVisible(false);
-        this.CrearListaPorDefecto.setVisible(true);
-    }//GEN-LAST:event_CLGLButton10ActionPerformed
-
-    private void CLGButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CLGButton11MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CLGButton11MouseClicked
-
-    private void CLGButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLGButton11ActionPerformed
-        this.CLGeneroList.setVisible(false);
-    }//GEN-LAST:event_CLGButton11ActionPerformed
-
     private void VDCButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VDCButton1ActionPerformed
         this.ListaGeneral.setVisible(true);
         this.ListaGeneral.setSize(200, 300);
@@ -3878,40 +3711,6 @@ public class Main extends javax.swing.JFrame {
         this.ListaGeneral.setVisible(false);
     }//GEN-LAST:event_LGButton15ActionPerformed
 
-    private void PCLBotonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonAceptarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PCLBotonAceptarMouseClicked
-
-    private void PCLBotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonAceptarActionPerformed
-        String mode = this.PCLLabelDeUsuario_Lista.getText();
-        String username = this.ConsultUserTextFIeld2.getText();
-        if(!username.isEmpty()){
-            Cliente user = ICU.consultarCliente(username);   
-            if((user!=null)){ //Si encuentra al usuario
-                this.PCLClientList.removeAll();
-                List<ListaDeReproduccion> listas = user.getListas();
-                int listSize = listas.size();
-                for(int i=0; i<listSize; i++){
-                    JLabel label = new JLabel();
-                    label.setText(listas.get(i).getNombre());
-                    label.setBounds(0, 40*i, 200, 40);
-                    this.PCLClientList1.add(label);
-                }
-                SwingUtilities.updateComponentTreeUI(this.PCLClientList);
-            }    
-            else
-                JOptionPane.showMessageDialog(this, "No existe el usuario", "Consultar Cliente", JOptionPane.INFORMATION_MESSAGE);
-        }
-        this.PrivacidadClientList.setVisible(false);
-        this.PrivacidadClientList2.setVisible(true);
-            
-            
-    }//GEN-LAST:event_PCLBotonAceptarActionPerformed
-
-    private void PCLBotonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonCancelarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PCLBotonCancelarMouseClicked
-
     private void jMenuItemPublicarListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPublicarListaActionPerformed
         Manejador manejador = Logica.Manejador.getinstance();
         List<Cliente> clientes = manejador.getClientes();
@@ -3925,12 +3724,6 @@ public class Main extends javax.swing.JFrame {
         this.PrivacidadClientList.setSize(500, 500);
         this.PrivacidadClientList.setVisible(true);
     }//GEN-LAST:event_jMenuItemPublicarListaActionPerformed
-
-    private void PCLBotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonCancelarActionPerformed
-        this.PCLClientList.removeAll();
-        this.PCLLabelDeUsuario_Lista.setText("Nick del usuario");
-        this.PrivacidadClientList.setVisible(false);
-    }//GEN-LAST:event_PCLBotonCancelarActionPerformed
 
     private void PCLBotonAceptar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonAceptar1MouseClicked
         // TODO add your handling code here:
@@ -3970,7 +3763,9 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_PCLBotonCancelar1MouseClicked
 
     private void PCLBotonCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonCancelar1ActionPerformed
-        // TODO add your handling code here:
+        PrivacidadClientList2.setVisible(false);
+        ConsultUserTextFIeld3.setText("");
+                
     }//GEN-LAST:event_PCLBotonCancelar1ActionPerformed
 
     private void QuitarListaCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuitarListaCancelar1ActionPerformed
@@ -4117,41 +3912,6 @@ public class Main extends javax.swing.JFrame {
         this.CLClientList.setVisible(true);
     }//GEN-LAST:event_CLPButton6ActionPerformed
 
-    private void CLPorDefectoBotonDeCambioDeImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLPorDefectoBotonDeCambioDeImagenActionPerformed
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Image Files", "jpg", "png", "jpeg");
-        this.CLFileChooser1.setFileFilter(filter);
-        this.CLFileChooser1.showOpenDialog(null);
-    }//GEN-LAST:event_CLPorDefectoBotonDeCambioDeImagenActionPerformed
-
-    private void CLRegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLRegisterButtonActionPerformed
-        String listName = this.CLTextFieldNombreDeLista.getText();
-        String listImagePath = CLTextFieldDePathDeImagen.getText();
-        String nombreGenero = CLGeneroTextField.getText();
-        Genero genero = ICU.getGeneroPorNombre(nombreGenero);
-        ICU.addListaPorDefecto(genero, listName, listImagePath);
-        this.CrearListaPorDefecto.setVisible(false);
-        JOptionPane.showMessageDialog(this, "Lista creada con exito", "Crear Lista por defecto", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_CLRegisterButtonActionPerformed
-
-    private void CLCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLCancelButtonActionPerformed
-        this.CrearListaPorDefecto.setVisible(false);
-    }//GEN-LAST:event_CLCancelButtonActionPerformed
-
-    private void CLButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLButton7ActionPerformed
-        Manejador manejador = Logica.Manejador.getinstance();
-        List<Genero> generos = manejador.getListGeneros();
-        int numeroDeGeneros = generos.size();
-        for(int i=0; i<numeroDeGeneros; i++){
-            JLabel label = new JLabel();
-            label.setText(generos.get(i).getNombre());
-            label.setBounds(0, 40*i, 200, 40);
-            this.CLListaDeGenero.add(label);
-        }
-        this.CrearListaPorDefecto.setVisible(false);
-        this.CLGeneroList.setSize(200, 300);
-        this.CLGeneroList.setVisible(true);
-    }//GEN-LAST:event_CLButton7ActionPerformed
-
     private void CLButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CLButton2MouseClicked
         String username = this.ConsultUserTextFIeld.getText();
         if(!username.isEmpty()){
@@ -4232,6 +3992,109 @@ public class Main extends javax.swing.JFrame {
     private void RegisterCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterCancelButtonActionPerformed
         this.jRegisterFrame.setVisible(false);
     }//GEN-LAST:event_RegisterCancelButtonActionPerformed
+
+    private void CLGButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLGButton11ActionPerformed
+        this.CLGeneroList.setVisible(false);
+    }//GEN-LAST:event_CLGButton11ActionPerformed
+
+    private void CLGButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CLGButton11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CLGButton11MouseClicked
+
+    private void CLGLButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLGLButton10ActionPerformed
+        String nombreGenero = this.CLConsultUserTextFIeld1.getText();
+        if(!nombreGenero.equals("")){
+            if(ICU.getGeneroPorNombre(nombreGenero)!=null)
+            this.CLGeneroTextField.setText(nombreGenero);
+            else
+            JOptionPane.showMessageDialog(this, "No existe el genero especificado", "Seleccionar genero", JOptionPane.INFORMATION_MESSAGE);
+        }
+        this.CLGeneroList.setVisible(false);
+        this.CrearListaPorDefecto.setVisible(true);
+    }//GEN-LAST:event_CLGLButton10ActionPerformed
+
+    private void CLGLButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CLGLButton10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CLGLButton10MouseClicked
+
+    private void PCLBotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonCancelarActionPerformed
+        this.PCLClientList.removeAll();
+        this.PCLLabelDeUsuario_Lista.setText("Nick del usuario");
+        this.PrivacidadClientList.setVisible(false);
+    }//GEN-LAST:event_PCLBotonCancelarActionPerformed
+
+    private void PCLBotonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonCancelarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PCLBotonCancelarMouseClicked
+
+    private void PCLBotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonAceptarActionPerformed
+        String mode = this.PCLLabelDeUsuario_Lista.getText();
+        String username = this.ConsultUserTextFIeld2.getText();
+        if(!username.isEmpty()){
+            Cliente user = ICU.consultarCliente(username);
+            if((user!=null)){ //Si encuentra al usuario
+                this.PCLClientList.removeAll();
+                List<ListaDeReproduccion> listas = user.getListas();
+                int listSize = listas.size();
+                for(int i=0; i<listSize; i++){
+                    JLabel label = new JLabel();
+                    label.setText(listas.get(i).getNombre());
+                    label.setBounds(0, 40*i, 200, 40);
+                    this.PCLClientList1.add(label);
+                }
+                SwingUtilities.updateComponentTreeUI(this.PCLClientList);
+            }
+            else
+            JOptionPane.showMessageDialog(this, "No existe el usuario", "Consultar Cliente", JOptionPane.INFORMATION_MESSAGE);
+        }
+        this.PrivacidadClientList.setVisible(false);
+        this.PrivacidadClientList2.setVisible(true);
+
+    }//GEN-LAST:event_PCLBotonAceptarActionPerformed
+
+    private void PCLBotonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PCLBotonAceptarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PCLBotonAceptarMouseClicked
+
+    private void CLCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLCancelButtonActionPerformed
+        this.CrearListaPorDefecto.setVisible(false);
+    }//GEN-LAST:event_CLCancelButtonActionPerformed
+
+    private void CLRegisterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLRegisterButtonActionPerformed
+        String listName = this.CLTextFieldNombreDeLista.getText();
+        String listImagePath = CLTextFieldDePathDeImagen.getText();
+        String nombreGenero = CLGeneroTextField.getText();
+        Genero genero = ICU.getGeneroPorNombre(nombreGenero);
+        if(genero!=null){
+            ICU.addListaPorDefecto(genero, listName, listImagePath);
+            this.CrearListaPorDefecto.setVisible(false);
+            JOptionPane.showMessageDialog(this, "Lista creada con exito", "Crear Lista por defecto", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else
+        JOptionPane.showMessageDialog(this, "Genero incorrecto", "Crear Lista por defecto", JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_CLRegisterButtonActionPerformed
+
+    private void CLPorDefectoBotonDeCambioDeImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLPorDefectoBotonDeCambioDeImagenActionPerformed
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Image Files", "jpg", "png", "jpeg");
+        this.CLFileChooser1.setFileFilter(filter);
+        this.CLFileChooser1.showOpenDialog(null);
+    }//GEN-LAST:event_CLPorDefectoBotonDeCambioDeImagenActionPerformed
+
+    private void CLButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLButton7ActionPerformed
+        Manejador manejador = Logica.Manejador.getinstance();
+        List<Genero> generos = manejador.getListGeneros();
+        int numeroDeGeneros = generos.size();
+        for(int i=0; i<numeroDeGeneros; i++){
+            JLabel label = new JLabel();
+            label.setText(generos.get(i).getNombre());
+            label.setBounds(0, 40*i, 200, 40);
+            this.CLListaDeGenero.add(label);
+        }
+        this.CrearListaPorDefecto.setVisible(false);
+        this.CLGeneroList.setSize(200, 300);
+        this.CLGeneroList.setVisible(true);
+    }//GEN-LAST:event_CLButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4551,7 +4414,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuConsultarAlbumArtist;
     private javax.swing.JMenuItem jMenuConsultarAlbumGen;
     private javax.swing.JMenu jMenuConsultas;
-    private javax.swing.JMenu jMenuInicio;
     private javax.swing.JMenuItem jMenuItemAgregarLista;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;

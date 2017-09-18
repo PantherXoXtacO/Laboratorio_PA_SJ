@@ -26,7 +26,7 @@ public class Manejador {
     
     //Para la base de datos
     EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Lab_Pro_AplPU" );
-    EntityManager entitymanager = emfactory.createEntityManager( );    
+    
     
     private static Manejador instancia=null;
     
@@ -41,6 +41,7 @@ public class Manejador {
         IdAlbum=0;
         IdList=0;
         
+        EntityManager entitymanager = emfactory.createEntityManager( );    
         Query q = entitymanager.createQuery("SELECT a FROM Cliente a");
         Query q2 = entitymanager.createQuery("SELECT a FROM Artista a");
         clientes = q.getResultList();
@@ -64,6 +65,7 @@ public class Manejador {
     
     public void addCliente(Cliente usu){
         clientes.add(usu);
+        EntityManager entitymanager = emfactory.createEntityManager( );  
         try{
             entitymanager.getTransaction().begin();
             entitymanager.persist(usu);
@@ -78,6 +80,7 @@ public class Manejador {
     
     public void addArtista(Artista usu){
         artistas.add(usu); 
+        EntityManager entitymanager = emfactory.createEntityManager( );    
         try {
             entitymanager.getTransaction().begin();
             entitymanager.persist(usu);
@@ -212,6 +215,7 @@ public class Manejador {
     }
 
     public void persist(Object object) {
+        EntityManager entitymanager = emfactory.createEntityManager( );
         entitymanager.getTransaction().begin();
         try {
             entitymanager.persist(object);

@@ -431,6 +431,11 @@ public class Main extends javax.swing.JFrame {
                 RegistrarArtistaCancelButtonMouseClicked(evt);
             }
         });
+        RegistrarArtistaCancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarArtistaCancelButtonActionPerformed(evt);
+            }
+        });
 
         RegistrarArtistaAcceptButton.setText("Registrar");
         RegistrarArtistaAcceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2445,7 +2450,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -3250,6 +3255,7 @@ public class Main extends javax.swing.JFrame {
                         if(ICU.mailLibre(email)){
                             this.RegistrarArtista.setSize(500, 500);
                             this.RegistrarArtista.setVisible(true);
+                            
                         }
                         else
                             JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
@@ -4100,6 +4106,10 @@ public class Main extends javax.swing.JFrame {
         this.CLGeneroList.setSize(200, 300);
         this.CLGeneroList.setVisible(true);
     }//GEN-LAST:event_CLButton7ActionPerformed
+
+    private void RegistrarArtistaCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarArtistaCancelButtonActionPerformed
+        RegistrarArtista.setVisible(false);
+    }//GEN-LAST:event_RegistrarArtistaCancelButtonActionPerformed
 
     /**
      * @param args the command line arguments

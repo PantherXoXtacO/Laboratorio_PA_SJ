@@ -979,7 +979,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -1051,7 +1051,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameNewGen);
@@ -1116,7 +1116,7 @@ public class Main extends javax.swing.JFrame {
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2406,7 +2406,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(CLTitulo2)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 956, Short.MAX_VALUE))
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
                         .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(CrearListaParticularLayout.createSequentialGroup()
@@ -2445,7 +2445,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2622,7 +2622,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(ArtistListLayout.createSequentialGroup()
                 .addComponent(ALLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld1))
+                .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.DEFAULT_SIZE, 1039, Short.MAX_VALUE))
             .addGroup(ArtistListLayout.createSequentialGroup()
                 .addComponent(ALUserListScroll1)
                 .addContainerGap())
@@ -2630,7 +2630,7 @@ public class Main extends javax.swing.JFrame {
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3291,8 +3291,9 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItemConClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConClienteActionPerformed
         //Relevar esto al controlador
-        Manejador manejador = Logica.Manejador.getinstance();
-        List<Cliente> clientes = manejador.getClientes();
+        ConsultUserTextFIeld.setText("");
+        List<Cliente> clientes = ICU.getListaClientes();
+        
         int numeroDeClientes = clientes.size();  
         for(int i=0; i<numeroDeClientes; i++){
             JLabel label = new JLabel();
@@ -3313,6 +3314,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_UserTypeComboBoxActionPerformed
 
     private void jMenuItemConArtistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConArtistaActionPerformed
+        ConsultUserTextFIeld1.setText("");
         this.ArtistList.setSize(500, 500);               
         Manejador manejador = Logica.Manejador.getinstance();
         List<Artista> artistas = manejador.getArtistas();
@@ -3347,6 +3349,8 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItemCrearListaParticularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearListaParticularActionPerformed
         CLPTextFieldNombreDeLista.setText("");
+        CLPClienteTextField.setText("");
+        CLTextFieldDePathDeImagen2.setText("");
         this.CrearListaParticular.setVisible(true);
     }//GEN-LAST:event_jMenuItemCrearListaParticularActionPerformed
 
@@ -3712,8 +3716,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_LGButton15ActionPerformed
 
     private void jMenuItemPublicarListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPublicarListaActionPerformed
-        Manejador manejador = Logica.Manejador.getinstance();
-        List<Cliente> clientes = manejador.getClientes();
+        ConsultUserTextFIeld2.setText("");
+        List<Cliente> clientes = ICU.getListaClientes();
         int numeroDeClientes = clientes.size();  
         for(int i=0; i<numeroDeClientes; i++){
             JLabel label = new JLabel();
@@ -3883,6 +3887,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_CLPorDefectoBotonDeCambioDeImagen2ActionPerformed
 
     private void CLRegisterButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLRegisterButton2ActionPerformed
+        CLConsultUserTextFIeld.setText("");
         String userNick = this.CLPClienteTextField.getText();
         Cliente client = ICU.consultarCliente(userNick);
         String listName = this.CLPTextFieldNombreDeLista.getText();
@@ -4028,8 +4033,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_PCLBotonCancelarMouseClicked
 
     private void PCLBotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PCLBotonAceptarActionPerformed
-        String mode = this.PCLLabelDeUsuario_Lista.getText();
-        String username = this.ConsultUserTextFIeld2.getText();
+        ConsultUserTextFIeld3.setText("");
+        String username = this.ConsultUserTextFIeld2.getText();        
         if(!username.isEmpty()){
             Cliente user = ICU.consultarCliente(username);
             if((user!=null)){ //Si encuentra al usuario

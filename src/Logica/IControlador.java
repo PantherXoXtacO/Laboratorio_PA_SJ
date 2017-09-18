@@ -15,6 +15,7 @@ public interface IControlador{
                     Fecha fechaDeNacimiento, String imagen,
                     String biografia, String dir_web);
     
+    public abstract List<Cliente> getListaClientes();
     public abstract void AltaGenero(String nombre, String padre);
     public abstract Genero GetGenero();
     public abstract Genero getGeneroPorNombre(String nombre);

@@ -36,6 +36,13 @@ public class Controlador implements IControlador {
                                             fechaDeNacimiento, imagen);
         mu.addArtista(user);
     }
+    
+    @Override
+    public List<Cliente> getListaClientes(){
+        Manejador mu = Manejador.getinstance();
+        List<Cliente> clientes = mu.getClientes();
+        return clientes;
+    }
       
     @Override
     public void AltaGenero(String nombre, String padre){

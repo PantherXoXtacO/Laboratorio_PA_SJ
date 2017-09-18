@@ -184,8 +184,7 @@ public class Manejador {
     }
     
     public ListaParticular getListaPorNombre(Cliente user, String nombre){
-        List<ListaDeReproduccion> listas = user.getListas();
-        Iterator it = listas.iterator();
+        Iterator it = user.getListas().iterator();
         ListaDeReproduccion lista;
         while(it.hasNext()){
             lista = (ListaDeReproduccion)it.next();
@@ -193,7 +192,6 @@ public class Manejador {
                 ListaParticular listaFinal = (ListaParticular) lista;
                 return listaFinal;
             }
-                
         }
         return null;
     }

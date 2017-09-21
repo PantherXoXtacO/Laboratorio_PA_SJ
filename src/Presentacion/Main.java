@@ -354,8 +354,6 @@ public class Main extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         followAccept = new javax.swing.JButton();
         FollowCancel = new javax.swing.JButton();
-        LabelUserMail = new javax.swing.JLabel();
-        FollowedLabel = new javax.swing.JLabel();
         CBSeguirUserSeguidor = new javax.swing.JComboBox<>();
         CBSeguirUserSeguido = new javax.swing.JComboBox<>();
         ClientList = new javax.swing.JInternalFrame();
@@ -2676,10 +2674,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        LabelUserMail.setForeground(new java.awt.Color(255, 0, 51));
-
-        FollowedLabel.setForeground(new java.awt.Color(255, 0, 51));
-
         javax.swing.GroupLayout FrameSeguirUserLayout = new javax.swing.GroupLayout(FrameSeguirUser.getContentPane());
         FrameSeguirUser.getContentPane().setLayout(FrameSeguirUserLayout);
         FrameSeguirUserLayout.setHorizontalGroup(
@@ -2693,10 +2687,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(CBSeguirUserSeguidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CBSeguirUserSeguido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                            .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 40, Short.MAX_VALUE))
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
                         .addComponent(followAccept)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2707,18 +2698,14 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap(232, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CBSeguirUserSeguidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(CBSeguirUserSeguidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CBSeguirUserSeguido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(CBSeguirUserSeguido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
@@ -3165,7 +3152,18 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bAddNewGenMouseClicked
 
     private void followAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_followAcceptActionPerformed
-        
+        Item Iseguidor;
+        Item Iseguido;
+        Iseguidor = (Item) CBSeguirUserSeguidor.getSelectedItem();
+        Iseguido = (Item) CBSeguirUserSeguido.getSelectedItem();
+        if(Iseguidor.toString().equals(Iseguido.toString())){
+            JOptionPane.showMessageDialog(this, "ERROR: Un usuario no puede seguirse a si mismo", "ERROR: Seguir usuario", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            ICU.SeguirUsuario(Iseguidor, Iseguido);
+            JOptionPane.showMessageDialog(this, "Usiario seguido con exito", "Seguir usuario", JOptionPane.INFORMATION_MESSAGE);
+            this.FrameSeguirUser.setVisible(false);
+        }
     }//GEN-LAST:event_followAcceptActionPerformed
 
     private void FollowCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FollowCancelActionPerformed
@@ -3177,8 +3175,15 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuRegistrosActionPerformed
 
     private void jMenuItemSegUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSegUsuActionPerformed
-        this.LabelUserMail.setText("");
-        this.FollowedLabel.setText("");
+        //CBSeguirUserSeguidora
+        populateCBwithClient(CBSeguirUserSeguidor);
+        populateCBwithClient(CBSeguirUserSeguido);
+        Iterator it = ICU.getItemArtist().iterator();
+        Item item;
+        while(it.hasNext()){
+            item = (Item) it.next();
+            CBSeguirUserSeguido.addItem(item);
+        }
         this.FrameSeguirUser.setVisible(true);
     }//GEN-LAST:event_jMenuItemSegUsuActionPerformed
 
@@ -3564,6 +3569,16 @@ public class Main extends javax.swing.JFrame {
         while(it.hasNext()){
             item=(Item)it.next();
             model.addElement(item);
+        }
+    }
+    
+    private void populateCBwithClient(JComboBox box){
+        box.removeAllItems();
+        Iterator it = ICU.getItemCliente().iterator();
+        Item item;
+        while(it.hasNext()){
+            item=(Item) it.next();
+            box.addItem(item);
         }
     }
     
@@ -4284,7 +4299,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel FechaLabel2;
     private javax.swing.JLabel FechaLabel3;
     private javax.swing.JButton FollowCancel;
-    private javax.swing.JLabel FollowedLabel;
     private javax.swing.JInternalFrame FrameConsultarAlbArt;
     private javax.swing.JInternalFrame FrameConsultarAlbum;
     private javax.swing.JInternalFrame FrameNewGen;
@@ -4319,7 +4333,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel LabelAddToListList;
     private javax.swing.JLabel LabelAddToListTema;
     private javax.swing.JLabel LabelAddToListUser;
-    private javax.swing.JLabel LabelUserMail;
     private javax.swing.JLabel LbRemoveTemaFav1;
     private javax.swing.JLabel LbRemoveTemaFav2;
     private javax.swing.JTextField LinkWebTextField;

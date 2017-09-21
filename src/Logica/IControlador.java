@@ -20,7 +20,7 @@ public interface IControlador{
     public abstract Genero GetGenero();
     public abstract Genero getGeneroPorNombre(String nombre);
     //public abstract void AgregarTema(Usuario user, );//Agregar tema a lista
-    public abstract void SeguirUsuario(String seguidor, String seguido);
+    public abstract void SeguirUsuario(Item seguidor, Item seguido);
     public abstract void ConsultarAlbum();
 
     public abstract boolean FindUser(String text);

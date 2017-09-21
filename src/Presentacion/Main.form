@@ -3831,11 +3831,7 @@
                               <Component id="CBSeguirUserSeguidor" max="32767" attributes="0"/>
                               <Component id="CBSeguirUserSeguido" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="FollowedLabel" pref="75" max="32767" attributes="0"/>
-                              <Component id="LabelUserMail" max="32767" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="followAccept" min="-2" max="-2" attributes="0"/>
@@ -3851,20 +3847,14 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <EmptySpace pref="232" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="LabelUserMail" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="CBSeguirUserSeguidor" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="CBSeguirUserSeguidor" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="FollowedLabel" min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="CBSeguirUserSeguido" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="CBSeguirUserSeguido" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="followAccept" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3901,20 +3891,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FollowCancelActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="LabelUserMail">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="FollowedLabel">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="CBSeguirUserSeguidor">
           <Properties>

@@ -95,10 +95,10 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public void SeguirUsuario(String seguidor, String seguido) {
+    public void SeguirUsuario(Item seguidor, Item seguido) {
        Manejador M=Manejador.getinstance();
-       Usuario u1 = M.obtenerUsuario(seguidor);
-       Usuario u2 = M.obtenerUsuario(seguido);
+       Usuario u1 = (Usuario) seguidor.getValue();
+       Usuario u2 = (Usuario) seguido.getValue();
        if(u1!=null && u2!=null){
             u1.addFollow(u2);
             u2.addFollower(u1);

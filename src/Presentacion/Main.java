@@ -443,6 +443,11 @@ public class Main extends javax.swing.JFrame {
                 RegistrarArtistaAcceptButtonMouseClicked(evt);
             }
         });
+        RegistrarArtistaAcceptButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarArtistaAcceptButtonActionPerformed(evt);
+            }
+        });
 
         LinkWebTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1282,7 +1287,7 @@ public class Main extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
                         .addComponent(PCLLabelDeUsuario_Lista1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 906, Short.MAX_VALUE)
                         .addComponent(ConsultUserTextFIeld3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -2450,7 +2455,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2524,7 +2529,7 @@ public class Main extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
                         .addComponent(CLLabel0)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 606, Short.MAX_VALUE)
                         .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2868,13 +2873,13 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CLGLButton10))
             .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addGap(0, 515, Short.MAX_VALUE)
+                .addGap(0, 984, Short.MAX_VALUE)
                 .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CLGeneroListLayout.setVerticalGroup(
             CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4145,6 +4150,28 @@ public class Main extends javax.swing.JFrame {
     private void RegistrarArtistaCancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarArtistaCancelButtonActionPerformed
         RegistrarArtista.setVisible(false);
     }//GEN-LAST:event_RegistrarArtistaCancelButtonActionPerformed
+
+    private void RegistrarArtistaAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarArtistaAcceptButtonActionPerformed
+    String nick = this.jRegisterNicknameField.getText();
+        String email = this.jRegisterApellidolField.getText();
+        String nombre= this.jRegisterNombreField.getText();
+        String apellido = this.jRegisterEmailField.getText();
+        int dia = this.jComboBoxDia.getSelectedIndex() + 1;
+        int mes = this.jComboBoxMes.getSelectedIndex() + 1;
+        int año = this.jComboBoxAño.getSelectedIndex() + 1900;
+        Fecha fechaDeNac = new Fecha(dia, mes, año);
+        String biografia = this.BiografiaTextArea.getText();
+        String website = this.LinkWebTextField.getText();
+        String imagePath = "I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images\\default.jpg";
+        if(!this.ImagePathTextField.getText().equals(""))
+                    imagePath = this.ImagePathTextField.getText();        
+        ICU.registrarArtista(nick, "", email, nombre, apellido, fechaDeNac, imagePath, biografia, website);
+        this.BiografiaTextArea.setText("");
+        this.LinkWebTextField.setText("");
+        this.RegistrarArtista.setVisible(false);
+        JOptionPane.showMessageDialog(this, "El Artista se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE); 
+    
+    }//GEN-LAST:event_RegistrarArtistaAcceptButtonActionPerformed
 
     /**
      * @param args the command line arguments

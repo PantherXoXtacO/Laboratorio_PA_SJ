@@ -60,8 +60,14 @@ public class Manejador {
         Genero g;
         while(it.hasNext()){
             g=(Genero) it.next();
-            if(g==null){
+            if(g.getPadre().equals(genero.getNombre())){
                 genero.addHijo(g);
+            }
+            else{
+                Genero padre = findGenero(g.getPadre());
+                if(padre!=null){
+                    padre.addHijo(g);
+                }
             }
         }
     }
@@ -243,7 +249,7 @@ public class Manejador {
         }
     }
 
-    Genero findGenero(String text) {
+    public Genero findGenero(String text) {
         Iterator it=generosList.iterator();
         Genero g;
         while(it.hasNext()){
@@ -300,5 +306,10 @@ public class Manejador {
             ret.add(new Item(t, t.getNombre()));
         }
         return ret;
+    }
+
+    public void updatePersistGen(Genero gen) {
+        EntityManager entitymanager = emfactory.createEntityManager( );
+        entitymanager.merge(gen);
     }
 }

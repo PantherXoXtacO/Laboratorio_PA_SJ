@@ -28,7 +28,7 @@ public class Cliente extends Usuario{
         this.temasFav = new ArrayList();
         this.albumsFav = new ArrayList();
         this.listasFav = new ArrayList();
-        this.Listas = new ArrayList();        
+        this.Listas = new ArrayList();
     }
 
     public Cliente() {
@@ -39,7 +39,7 @@ public class Cliente extends Usuario{
     }
     
     @Override
-    void addFollow(Usuario u2) {
+    public void addFollow(Usuario u2) {
         siguiendo.add(u2);
     }    
     

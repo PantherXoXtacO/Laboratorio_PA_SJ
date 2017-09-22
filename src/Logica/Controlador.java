@@ -145,9 +145,9 @@ public class Controlador implements IControlador {
     }    
     
     @Override
-    public void agregarTemaALista(Object selectedItem, Object selectedItem0){
-        Item l = (Item) selectedItem;
-        Item t = (Item) selectedItem0;
+    public void agregarTemaALista(Object Lista, Object Tema){
+        Item l = (Item) Lista;
+        Item t = (Item) Tema;
         ListaDeReproduccion lista = (ListaDeReproduccion) l.getValue();
         Tema tem = (Tema) t.getValue();
         lista.agregarTema(tem);

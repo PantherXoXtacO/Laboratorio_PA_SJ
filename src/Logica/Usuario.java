@@ -114,12 +114,14 @@ public abstract class Usuario implements Serializable {
 
     public void setImagen(String imagen) {
         this.imagen = imagen;
-    }        
-    void addFollower(Usuario u1) {
+    }
+    
+    public void addFollower(Usuario u1) {
         //seguidores.put(u1.getNickname(), u1);
     }
 
-    void addFollow(Usuario u2) {}
+    public void addFollow(Usuario u2) {       
+    }
     
     @Override
     public String toString() {

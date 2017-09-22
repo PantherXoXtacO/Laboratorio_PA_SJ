@@ -32,7 +32,7 @@ public interface IControlador{
 
     public abstract List getTemasItem();
 
-    public abstract void agregarTemaALista(Object selectedItem, Object selectedItem0);
+    public abstract void agregarTemaALista(Object Lista, Object Tema);
 
     public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
 

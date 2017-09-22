@@ -21,9 +21,6 @@ public class Artista extends Usuario {
     @JoinTable(name="ALBUMS_DE_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"),
                inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
     private List<Album> albums;
-    //@OneToMany
-    //@JoinTable(name="USUARIOS_SEGUIDOS", joinColumns=@JoinColumn(name="USUARIO_NICKNAME"),
-    //           inverseJoinColumns=@JoinColumn(name="SEGUIDOS_NICK"))
     private List<Usuario> siguiendo;
 
     public String getBiografia() {

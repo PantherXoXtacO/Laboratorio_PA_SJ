@@ -4,11 +4,19 @@ import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "ALBUM")
 public class Album implements Serializable {
     
     private static final long serialVersionUID = 1L;
@@ -20,8 +28,12 @@ public class Album implements Serializable {
     private String nombre;
     private int anio;
     private String img;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ARTISTA_DEL_ALBUM")
     private Artista artista;
-    
+    @OneToMany
+    @JoinTable(name="TEMAS_DEL_ALBUM", joinColumns=@JoinColumn(name="ALBUM_ID"),
+               inverseJoinColumns=@JoinColumn(name="TEMAS_ID")) 
     private List<Tema> temas;
     private List<Genero> genero;
 

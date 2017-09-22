@@ -1,12 +1,18 @@
 package Logica;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "TEMA")
 public class Tema implements Serializable{
     
     private static final long serialVersionUID = 1L;
@@ -17,6 +23,8 @@ public class Tema implements Serializable{
     private String nombre;
     private int duracion;
     private int orden;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ALBUM_DEL_TEMA")
     private Album album;
 
     public Tema(String nombre, int duracion, int orden, Album album) {
@@ -24,6 +32,9 @@ public class Tema implements Serializable{
         this.duracion = duracion;
         this.orden = orden;
         this.album = album;
+    }
+    
+     public Tema() {
     }
 
     //GETTERS

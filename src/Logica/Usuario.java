@@ -1,6 +1,8 @@
 
 package Logica;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -39,7 +41,7 @@ public abstract class Usuario implements Serializable {
     private Fecha fechaDeNacimiento;
     @Column(name = "IMAGEN_DE_USUARIO")
     private String imagen; //path a la imagen del usuario
-    
+    private List<Usuario>seguidores;
     
     public Usuario(){}
     
@@ -53,7 +55,7 @@ public abstract class Usuario implements Serializable {
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.imagen = imagen;    
-        //this.seguidores=new List();
+        this.seguidores=new ArrayList();
     }
     
     //getters
@@ -117,10 +119,10 @@ public abstract class Usuario implements Serializable {
     }
     
     public void addFollower(Usuario u1) {
-        //seguidores.put(u1.getNickname(), u1);
+        seguidores.add(u1);
     }
 
-    public void addFollow(Usuario u2) {       
+    public void addFollow(Usuario u2) {
     }
     
     @Override

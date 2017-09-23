@@ -47,5 +47,7 @@ public interface IControlador{
     public abstract void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista);
     public abstract void privatizarLista(ListaParticular lista, boolean modo);
     public ListaParticular getListByName(Cliente user, String name);
+
+    public abstract List getListasDefectoItem();
 }
 

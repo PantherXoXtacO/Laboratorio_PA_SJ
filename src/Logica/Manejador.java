@@ -312,4 +312,15 @@ public class Manejador {
         EntityManager entitymanager = emfactory.createEntityManager( );
         entitymanager.merge(gen);
     }
+
+    public List getListasDefectoItem() {
+        Iterator it = Listas.iterator();
+        List ret = new ArrayList();
+        ListaDeReproduccion lista;
+        while(it.hasNext()){
+            lista = (ListaDeReproduccion) it.next();
+            ret.add(new Item(lista, lista.getNombre()));
+        }
+        return ret;
+    }
 }

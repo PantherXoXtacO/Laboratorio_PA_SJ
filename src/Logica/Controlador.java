@@ -244,4 +244,10 @@ public class Controlador implements IControlador {
         return M.getListaPorNombre(user, name);
     }
     
+    @Override
+    public List getListasDefectoItem(){
+        Manejador M=Manejador.getinstance();
+        return M.getListasDefectoItem();
+    }
+    
 }

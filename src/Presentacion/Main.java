@@ -371,6 +371,13 @@ public class Main extends javax.swing.JFrame {
         jCBAgregarTemaLista3 = new javax.swing.JComboBox<>();
         jBAgregarLista2 = new javax.swing.JButton();
         jBAgregarLista4 = new javax.swing.JButton();
+        AgregarTemaListDefecto = new javax.swing.JInternalFrame();
+        jCAgregarTemaListDefectoList = new javax.swing.JComboBox<>();
+        jCAgregarTemaListDefectoTema = new javax.swing.JComboBox<>();
+        LbATLD1 = new javax.swing.JLabel();
+        LbATLD2 = new javax.swing.JLabel();
+        jAgregarTemaListDCerrar = new javax.swing.JButton();
+        jBAgregarTemaListD = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuRegistros = new javax.swing.JMenu();
         jMenuItemRegUsu = new javax.swing.JMenuItem();
@@ -399,8 +406,8 @@ public class Main extends javax.swing.JFrame {
         jMenuItemQuitarLista = new javax.swing.JMenuItem();
         jMenuItemPublicarLista = new javax.swing.JMenuItem();
         jMenuAgregarTema = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMAgregarTemaListaPart = new javax.swing.JMenuItem();
+        jMAgregarTemaListDef = new javax.swing.JMenuItem();
 
         ToBeHonestIHaveNoClue.setVisible(true);
 
@@ -2807,6 +2814,12 @@ public class Main extends javax.swing.JFrame {
 
         jLAgregarTemaLista3.setText("Tema");
 
+        jCBAgregarTemaLista3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBAgregarTemaLista3ActionPerformed(evt);
+            }
+        });
+
         jBAgregarLista2.setText("Agregar");
         jBAgregarLista2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2865,6 +2878,70 @@ public class Main extends javax.swing.JFrame {
         );
 
         getContentPane().add(AgregarTemaListaPart);
+
+        AgregarTemaListDefecto.setVisible(false);
+
+        jCAgregarTemaListDefectoList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCAgregarTemaListDefectoListActionPerformed(evt);
+            }
+        });
+
+        LbATLD1.setText("Lista");
+
+        LbATLD2.setText("Tema");
+
+        jAgregarTemaListDCerrar.setText("Cerrar");
+        jAgregarTemaListDCerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jAgregarTemaListDCerrarActionPerformed(evt);
+            }
+        });
+
+        jBAgregarTemaListD.setText("Agregar");
+        jBAgregarTemaListD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAgregarTemaListDActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout AgregarTemaListDefectoLayout = new javax.swing.GroupLayout(AgregarTemaListDefecto.getContentPane());
+        AgregarTemaListDefecto.getContentPane().setLayout(AgregarTemaListDefectoLayout);
+        AgregarTemaListDefectoLayout.setHorizontalGroup(
+            AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AgregarTemaListDefectoLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(LbATLD1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LbATLD2, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jCAgregarTemaListDefectoList, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jCAgregarTemaListDefectoTema, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jAgregarTemaListDCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jBAgregarTemaListD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
+        );
+        AgregarTemaListDefectoLayout.setVerticalGroup(
+            AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AgregarTemaListDefectoLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCAgregarTemaListDefectoList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LbATLD1))
+                .addGap(52, 52, 52)
+                .addGroup(AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCAgregarTemaListDefectoTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LbATLD2)
+                    .addComponent(jBAgregarTemaListD))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                .addComponent(jAgregarTemaListDCerrar)
+                .addGap(45, 45, 45))
+        );
+
+        getContentPane().add(AgregarTemaListDefecto);
 
         jMenuRegistros.setText("Registros");
         jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
@@ -3051,16 +3128,21 @@ public class Main extends javax.swing.JFrame {
 
         jMenuAgregarTema.setText("Agregar Tema");
 
-        jMenuItem1.setText("Lista particular");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMAgregarTemaListaPart.setText("Lista particular");
+        jMAgregarTemaListaPart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMAgregarTemaListaPartActionPerformed(evt);
             }
         });
-        jMenuAgregarTema.add(jMenuItem1);
+        jMenuAgregarTema.add(jMAgregarTemaListaPart);
 
-        jMenuItem2.setText("Lista por defecto");
-        jMenuAgregarTema.add(jMenuItem2);
+        jMAgregarTemaListDef.setText("Lista por defecto");
+        jMAgregarTemaListDef.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMAgregarTemaListDefActionPerformed(evt);
+            }
+        });
+        jMenuAgregarTema.add(jMAgregarTemaListDef);
 
         jMenuListas.add(jMenuAgregarTema);
 
@@ -3161,14 +3243,19 @@ public class Main extends javax.swing.JFrame {
         Item Iseguido;
         Iseguidor = (Item) CBSeguirUserSeguidor.getSelectedItem();
         Iseguido = (Item) CBSeguirUserSeguido.getSelectedItem();
-        if(Iseguidor.toString().equals(Iseguido.toString())){
-            JOptionPane.showMessageDialog(this, "ERROR: Un usuario no puede seguirse a si mismo", "ERROR: Seguir usuario", JOptionPane.ERROR_MESSAGE);
+        if(Iseguidor != null && Iseguido !=null){
+            if(Iseguidor.toString().equals(Iseguido.toString())){
+                JOptionPane.showMessageDialog(this, "ERROR: Un usuario no puede seguirse a si mismo", "ERROR: Seguir usuario", JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                ICU.SeguirUsuario(Iseguidor, Iseguido);
+                JOptionPane.showMessageDialog(this, "Usiario seguido con exito", "Seguir usuario", JOptionPane.INFORMATION_MESSAGE);
+                this.FrameSeguirUser.setVisible(false);
+            }
         }
         else{
-            ICU.SeguirUsuario(Iseguidor, Iseguido);
-            JOptionPane.showMessageDialog(this, "Usiario seguido con exito", "Seguir usuario", JOptionPane.INFORMATION_MESSAGE);
-            this.FrameSeguirUser.setVisible(false);
-        }
+            JOptionPane.showMessageDialog(this, "ERROR: No hay usurios seleccionados", "ERROR: Seguir usuario", JOptionPane.ERROR_MESSAGE);
+        }        
     }//GEN-LAST:event_followAcceptActionPerformed
 
     private void FollowCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FollowCancelActionPerformed
@@ -4100,7 +4187,7 @@ public class Main extends javax.swing.JFrame {
         RegistrarArtista.setVisible(false);
     }//GEN-LAST:event_RegistrarArtistaCancelButtonActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMAgregarTemaListaPartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMAgregarTemaListaPartActionPerformed
         populateCBwithClient(jCBAgregarTemaLista1);
         jCBAgregarTemaLista2.removeAllItems();
         jCBAgregarTemaLista3.removeAllItems();
@@ -4109,14 +4196,15 @@ public class Main extends javax.swing.JFrame {
             jCBAgregarTemaLista3.addItem((Item) it.next());
         }
         Item item = (Item) jCBAgregarTemaLista1.getSelectedItem();
-        Cliente c = (Cliente) item.getValue();
-        Iterator it2 = c.getListsItem().iterator();
-        while(it2.hasNext()){
+        if(item!=null){
+            Cliente c = (Cliente) item.getValue();
+            Iterator it2 = c.getListsItem().iterator();
+            while(it2.hasNext()){
             jCBAgregarTemaLista2.addItem((Item) it2.next());
-        }   
-        
+            }  
+        }        
         AgregarTemaListaPart.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMAgregarTemaListaPartActionPerformed
 
     private void jCBAgregarTemaLista1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBAgregarTemaLista1ItemStateChanged
         jCBAgregarTemaLista2.removeAllItems();
@@ -4149,6 +4237,50 @@ public class Main extends javax.swing.JFrame {
     private void jBAgregarLista4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAgregarLista4ActionPerformed
         AgregarTemaListaPart.setVisible(false);
     }//GEN-LAST:event_jBAgregarLista4ActionPerformed
+
+    private void jMAgregarTemaListDefActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMAgregarTemaListDefActionPerformed
+        jCAgregarTemaListDefectoList.removeAllItems();
+        jCAgregarTemaListDefectoTema.removeAllItems();
+        
+        Iterator it = ICU.getListasDefectoItem().iterator();
+        while(it.hasNext()){
+            jCAgregarTemaListDefectoList.addItem((Item) it.next());
+        }
+        Iterator it2 = ICU.getTemasItem().iterator();
+        while(it2.hasNext()){
+            jCAgregarTemaListDefectoTema.addItem((Item) it2.next());
+        }
+        AgregarTemaListDefecto.setVisible(true);
+    }//GEN-LAST:event_jMAgregarTemaListDefActionPerformed
+
+    private void jCAgregarTemaListDefectoListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCAgregarTemaListDefectoListActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCAgregarTemaListDefectoListActionPerformed
+
+    private void jCBAgregarTemaLista3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBAgregarTemaLista3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBAgregarTemaLista3ActionPerformed
+
+    private void jBAgregarTemaListDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAgregarTemaListDActionPerformed
+        Item lista = (Item) jCAgregarTemaListDefectoList.getSelectedItem();
+        Item tema = (Item) jCAgregarTemaListDefectoTema.getSelectedItem();
+        if(lista!=null){
+            if(tema!=null){
+                ICU.agregarTemaALista(lista, tema);
+                JOptionPane.showMessageDialog(this, "Tema Agregado", "Agregar Tema", JOptionPane.INFORMATION_MESSAGE);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "ERROR: No hay ningun tema seleccionada", "Agregar Tema", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "ERROR: No hay ninguna lista seleccionada", "Agregar Tema", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jBAgregarTemaListDActionPerformed
+
+    private void jAgregarTemaListDCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarTemaListDCerrarActionPerformed
+        AgregarTemaListDefecto.setVisible(false);
+    }//GEN-LAST:event_jAgregarTemaListDCerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4192,6 +4324,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane ALUserListScroll1;
     private javax.swing.JPanel ALUserListUsers1;
     private javax.swing.JFileChooser AUFileChooser;
+    private javax.swing.JInternalFrame AgregarTemaListDefecto;
     private javax.swing.JInternalFrame AgregarTemaListaPart;
     private javax.swing.JInternalFrame AltaAlbum1;
     private javax.swing.JComboBox<String> AltaAlbumAnio1;
@@ -4337,6 +4470,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel LBConsultarAlbArt2;
     private javax.swing.JButton LGButton15;
     private javax.swing.JScrollPane LGScroll6;
+    private javax.swing.JLabel LbATLD1;
+    private javax.swing.JLabel LbATLD2;
     private javax.swing.JLabel LbRemoveTemaFav1;
     private javax.swing.JLabel LbRemoveTemaFav2;
     private javax.swing.JTextField LinkWebTextField;
@@ -4417,8 +4552,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton bAddNewGen;
     private javax.swing.JButton bCancelNewGen;
     private javax.swing.JButton followAccept;
+    private javax.swing.JButton jAgregarTemaListDCerrar;
     private javax.swing.JButton jBAgregarLista2;
     private javax.swing.JButton jBAgregarLista4;
+    private javax.swing.JButton jBAgregarTemaListD;
     private javax.swing.JButton jBConsultarAlbumGen;
     private javax.swing.JButton jBConsultarAlbumGenCancel;
     private javax.swing.JButton jBConsultarGenSelectGen;
@@ -4427,6 +4564,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jBRemoveAlbumFavCancel;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<Item> jCAgregarTemaListDefectoList;
+    private javax.swing.JComboBox<Item> jCAgregarTemaListDefectoTema;
     private javax.swing.JComboBox<Item> jCBAgregarTemaLista1;
     private javax.swing.JComboBox<Item> jCBAgregarTemaLista2;
     private javax.swing.JComboBox<Item> jCBAgregarTemaLista3;
@@ -4458,6 +4597,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<Item> jListConsultarAlbumGen;
+    private javax.swing.JMenuItem jMAgregarTemaListDef;
+    private javax.swing.JMenuItem jMAgregarTemaListaPart;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenuAgregarTema;
@@ -4466,8 +4607,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuConsultarAlbumArtist;
     private javax.swing.JMenuItem jMenuConsultarAlbumGen;
     private javax.swing.JMenu jMenuConsultas;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItemAgregarLista;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;

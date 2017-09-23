@@ -4,13 +4,20 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name="Genero")
 public class Genero implements Serializable{
     
     private static final long serialVersionUID = 1L;
@@ -18,10 +25,19 @@ public class Genero implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
         
-    
+    @Column(name = "NOMBRE")
     private String nombre;
+    @OneToMany
+    @JoinTable(name="GENEROS_HIJOS", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="HIJOS")) 
     private List<Genero> hijos;
+    @OneToMany
+    @JoinTable(name="ALBUMS_DE_GENERO", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="ALBUMS_GENERO"))
     private List<Album> albums;
+    @OneToOne
+    @JoinTable (name = "GENERO_PADRE")
+    Genero padre=null;
+    //@OneToMany
+    //@JoinTable(name="LISTA_DE_GENERO", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="LISTA_GENERO")) 
     private List<ListaDeReproduccion> listas;
 
     public Genero(String nombre) {
@@ -64,12 +80,25 @@ public class Genero implements Serializable{
             if(aux.getNombre().equals(g.getNombre()))
                 return;
         }
+        g.setPadre(this);
         hijos.add(g);
     }
     
+    private void setPadre(Genero dad){
+        if(!(dad.getNombre().equals("General"))){
+            padre=dad;
+        }
+    }
+    
+    public Genero getPadre(){
+        return padre;
+    }
     
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Funciones del @Entity
+    public Genero(){
+    }
+    
     public Long getId() {
         return id;
     }
@@ -102,10 +131,5 @@ public class Genero implements Serializable{
     public String toString() {
         return "Logica.Album[ id=" + id + " ]";
     }    
- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    
-    
-    
-    
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 }

@@ -7,6 +7,7 @@
     <class>Logica.Cliente</class>
     <class>Logica.Album</class>
     <class>Logica.Fecha</class>
+    <class>Logica.Genero</class>
     <class>Logica.Tema</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Espotify"/>

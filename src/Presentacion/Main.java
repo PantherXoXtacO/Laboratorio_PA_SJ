@@ -350,14 +350,14 @@ public class Main extends javax.swing.JFrame {
         ALUserListScroll1 = new javax.swing.JScrollPane();
         ALUserListUsers1 = new javax.swing.JPanel();
         FrameSeguirUser = new javax.swing.JInternalFrame();
-        Follower = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        Followed = new javax.swing.JTextField();
         followAccept = new javax.swing.JButton();
         FollowCancel = new javax.swing.JButton();
         LabelUserMail = new javax.swing.JLabel();
         FollowedLabel = new javax.swing.JLabel();
+        CBSeguirUserSeguidor = new javax.swing.JComboBox<>();
+        CBSeguirUserSeguido = new javax.swing.JComboBox<>();
         ClientList = new javax.swing.JInternalFrame();
         CLButton2 = new javax.swing.JButton();
         CLButton3 = new javax.swing.JButton();
@@ -944,7 +944,7 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                .addGap(0, 520, Short.MAX_VALUE)
+                                .addGap(0, 719, Short.MAX_VALUE)
                                 .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -989,7 +989,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -1044,7 +1044,7 @@ public class Main extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bCancelNewGen))
                         .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1009, Short.MAX_VALUE))
         );
         FrameNewGenLayout.setVerticalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1118,7 +1118,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE))
+                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 1039, Short.MAX_VALUE))
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCUserListScroll2)
                 .addContainerGap())
@@ -1383,7 +1383,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBAddToListAceptar)
                     .addComponent(JBAddToListCancelar))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         getContentPane().add(JFaddTemaToList);
@@ -1434,7 +1434,7 @@ public class Main extends javax.swing.JFrame {
         jFrameRemoveListFavLayout.setVerticalGroup(
             jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(337, Short.MAX_VALUE)
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRemoveListFavUsr)
                     .addComponent(jCBRemoveListFavClnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1507,7 +1507,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameRemoveTemaFav);
@@ -1558,7 +1558,7 @@ public class Main extends javax.swing.JFrame {
         FrameRemoveAlbumFavLayout.setVerticalGroup(
             FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(320, Short.MAX_VALUE)
                 .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRemoveAlbumFav1)
                     .addComponent(CBRemoveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1640,7 +1640,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFConsultarAlbumGen);
@@ -1725,7 +1725,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(178, Short.MAX_VALUE))
+                        .addContainerGap(100, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BConsultAlbAceptar)
@@ -2693,43 +2693,37 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8)
+                            .addComponent(CBSeguirUserSeguidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CBSeguirUserSeguido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel8))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(Follower)
-                                    .addComponent(Followed))
-                                .addGap(2, 2, 2)
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addContainerGap())
+                            .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                            .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
                         .addComponent(followAccept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(FollowCancel)
-                        .addGap(49, 49, 49))))
+                        .addGap(9, 9, 9)))
+                .addContainerGap())
         );
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(165, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CBSeguirUserSeguidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Followed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FollowedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CBSeguirUserSeguido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(followAccept)
@@ -2791,7 +2785,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CLLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 1029, Short.MAX_VALUE)
                 .addContainerGap())
         );
         ClientListLayout.setVerticalGroup(
@@ -3130,7 +3124,7 @@ public class Main extends javax.swing.JFrame {
     
     private void PopulateTree(JTree tree){        
         //No tocar ¡chanchada!
-        tree = new javax.swing.JTree();
+        //tree = new javax.swing.JTree();
         DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
         tree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane1.setViewportView(tree);
@@ -3176,22 +3170,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_bAddNewGenMouseClicked
 
     private void followAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_followAcceptActionPerformed
-        if(!(ICU.FindUser(Follower.getText()))){
-            LabelUserMail.setText("Nick invalido");
-        }
-        if(!(ICU.FindUser(Followed.getText()))){
-            FollowedLabel.setText("Nick invalido");
-        }
-        if((ICU.FindUser(Followed.getText()))&&(ICU.FindUser(Follower.getText()))){
-            if(Follower.getText().equals(Followed.getText())){
-                JOptionPane.showMessageDialog(this, "Los usuarios no pueden seguirse a si mismos", "Seguir Usuario", JOptionPane.ERROR_MESSAGE);
-            }
-            else{
-                ICU.SeguirUsuario(Follower.getText(), Followed.getText());
-                JOptionPane.showMessageDialog(this, "Operacion realicada con exito", "Seguir Usuario", JOptionPane.INFORMATION_MESSAGE);
-                FrameSeguirUser.setVisible(false);
-            }
-        }       
+        
     }//GEN-LAST:event_followAcceptActionPerformed
 
     private void FollowCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FollowCancelActionPerformed
@@ -3203,8 +3182,6 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuRegistrosActionPerformed
 
     private void jMenuItemSegUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSegUsuActionPerformed
-        this.Follower.setText("");
-        this.Followed.setText("");
         this.LabelUserMail.setText("");
         this.FollowedLabel.setText("");
         this.FrameSeguirUser.setVisible(true);
@@ -4256,6 +4233,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<Item> CBRemoveAlbumFavCliente;
     private javax.swing.JComboBox<Item> CBRemoveFavTemaCliente;
     private javax.swing.JComboBox<Item> CBRemoveFavTemaTema;
+    private javax.swing.JComboBox<Item> CBSeguirUserSeguido;
+    private javax.swing.JComboBox<Item> CBSeguirUserSeguidor;
     private javax.swing.JComboBox<Item> CBaddToListList;
     private javax.swing.JComboBox<Item> CBaddToListTema;
     private javax.swing.JComboBox<Item> CBaddToListUser;
@@ -4332,9 +4311,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel FechaLabel2;
     private javax.swing.JLabel FechaLabel3;
     private javax.swing.JButton FollowCancel;
-    private javax.swing.JTextField Followed;
     private javax.swing.JLabel FollowedLabel;
-    private javax.swing.JTextField Follower;
     private javax.swing.JInternalFrame FrameConsultarAlbArt;
     private javax.swing.JInternalFrame FrameConsultarAlbum;
     private javax.swing.JInternalFrame FrameNewGen;

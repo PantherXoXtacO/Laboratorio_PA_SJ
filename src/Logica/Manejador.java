@@ -15,7 +15,7 @@ public class Manejador {
     private List<Cliente> clientes;
     private List<Artista> artistas;
     private List<ListaDeReproduccion> Listas; // Listas por defecto
-    private final Genero genero=new Genero("General"); // Guarda el genero raiz
+    private Genero genero=new Genero("General"); // Guarda el genero raiz
     private List<Genero> generosList;
     private List<Tema> Temas;//Guarda los temas en una lista
     
@@ -44,9 +44,26 @@ public class Manejador {
         EntityManager entitymanager = emfactory.createEntityManager( );    
         Query q = entitymanager.createQuery("SELECT a FROM Cliente a");
         Query q2 = entitymanager.createQuery("SELECT a FROM Artista a");
+        Query QGeneros = entitymanager.createQuery("SELECT a FROM Genero a");
         clientes = q.getResultList();
         artistas = q2.getResultList();
+        generosList = QGeneros.getResultList();
         
+        
+        
+        
+        GeneralGetHijos();
+    }
+    
+    private void GeneralGetHijos(){
+        Iterator it = generosList.iterator();
+        Genero g;
+        while(it.hasNext()){
+            g=(Genero) it.next();
+            if(g==null){
+                genero.addHijo(g);
+            }
+        }
     }
     
     public List<Cliente> getClientes(){
@@ -238,7 +255,18 @@ public class Manejador {
     }
 
     void addGeneroToList(Genero nuevoGen){
-            generosList.add(nuevoGen);
+        EntityManager entitymanager = emfactory.createEntityManager( );    
+        try {
+            entitymanager.getTransaction().begin();
+            entitymanager.persist(nuevoGen);
+            entitymanager.getTransaction().commit();
+            entitymanager.close(); 
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            entitymanager.getTransaction().rollback();
+        } 
+        generosList.add(nuevoGen);
     }
     
     void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){

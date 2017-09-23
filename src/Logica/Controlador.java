@@ -52,7 +52,7 @@ public class Controlador implements IControlador {
         if(nuevoGen==null){
             nuevoGen=new Genero(nombre);
             if(padre.equals("") || padre.equals("General")){
-            System.out.println("sin padre");
+            //System.out.println("sin padre");
             gen=mu.getGenero();
             gen.addHijo(nuevoGen);
             }

@@ -1,32 +1,24 @@
 
 package Logica;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-import java.io.IOException;
-import java.io.File;
 import java.io.Serializable;
-import java.nio.file.Files;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Casca
  */
-@Entity
-public class Usuario implements Serializable {
+@MappedSuperclass
+@Table(name = "USUARIO")
+public abstract class Usuario implements Serializable {
     
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO) 
@@ -42,37 +34,25 @@ public class Usuario implements Serializable {
     private String nombre;
     @Column(name = "APELLIDO")
     private String apellido;
-    //@Column(name = "FECHA_DE_NACIMIENTO")
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "FECHA_DE_NACIMIENTO")
     private Fecha fechaDeNacimiento;
+    @Column(name = "IMAGEN_DE_USUARIO")
+    private String imagen; //path a la imagen del usuario
     
-    private byte[] imagen;
-    @OneToMany
-    @JoinTable(name="SEGUIDORES", joinColumns=@JoinColumn(name="NICKNAME"),
-               inverseJoinColumns=@JoinColumn(name="SEGUIDORES_NICK")) 
-    private List<Usuario> seguidores;
     
     public Usuario(){}
     
     public Usuario(String nickname, String contraseña, String mail,
                     String nombre, String apellido, Fecha fechaDeNacimiento,
-                    byte[] imagen) {
+                    String imagen) {
         this.nickname = nickname;
         this.contraseña = contraseña;
         this.mail = mail;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
-        this.imagen = null;
-        
-        File fi = new File("data/default.jpg");
-        try {
-            this.imagen = Files.readAllBytes(fi.toPath());
-            //this.imagen = ImageIO.read(new File("data/default.jpg")); para Buffered image
-        } catch (IOException ex) {
-            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-                
+        this.imagen = imagen;    
         //this.seguidores=new List();
     }
     
@@ -102,7 +82,7 @@ public class Usuario implements Serializable {
         return fechaDeNacimiento;
     }
 
-    public byte[] getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
@@ -132,14 +112,25 @@ public class Usuario implements Serializable {
         this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }        
     void addFollower(Usuario u1) {
         //seguidores.put(u1.getNickname(), u1);
-        return;
     }
 
     void addFollow(Usuario u2) {}
     
+    @Override
+    public String toString() {
+        return getNickname();
+    }    
+
+    void removeFollow(Usuario u2) {
+        
+    }
+
+    void removeFollower(Usuario u1) {
+        
+    }
 }

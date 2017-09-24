@@ -3,12 +3,16 @@
   <persistence-unit name="Lab_Pro_AplPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>Logica.Usuario</class>
+    <class>Logica.Artista</class>
+    <class>Logica.Cliente</class>
+    <class>Logica.Album</class>
+    <class>Logica.Fecha</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Espotify"/>
       <property name="javax.persistence.jdbc.user" value="tisj"/>
       <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
       <property name="javax.persistence.jdbc.password" value="tisj"/>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
 </persistence>

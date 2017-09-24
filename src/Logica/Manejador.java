@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 public class Manejador {
     //Clase que conserva las colecciones globales del sistema
@@ -16,6 +17,7 @@ public class Manejador {
     private List<ListaDeReproduccion> Listas; // Listas por defecto
     private final Genero genero=new Genero("General"); // Guarda el genero raiz
     private List<Genero> generosList;
+    private List<Tema> Temas;//Guarda los temas en una lista
     
     //Ids para la identificadores
     private double IdTema;
@@ -32,11 +34,18 @@ public class Manejador {
         usuarios =new ArrayList();
         clientes=new ArrayList();
         artistas=new ArrayList();
-        Listas=new ArrayList();
+        Listas=new ArrayList(); // Listas por defecto
         generosList=new ArrayList();
+        Temas=new ArrayList();
         IdTema=0;
         IdAlbum=0;
         IdList=0;
+        
+        Query q = entitymanager.createQuery("SELECT a FROM Cliente a");
+        Query q2 = entitymanager.createQuery("SELECT a FROM Artista a");
+        clientes = q.getResultList();
+        artistas = q2.getResultList();
+        
     }
     
     public List<Cliente> getClientes(){
@@ -53,45 +62,71 @@ public class Manejador {
         return instancia;
     }
     
-    public void addUsuario(Usuario usu, String userType){ //El usuario sera Cliente o Artista
-        String nickname = usu.getNickname(); //si no existe en la lista
-        usuarios.add(usu);
-        Usuario user = new Usuario(usu.getNickname(),"",usu.getMail(),usu.getNombre(),usu.getApellido(),null,null);
-        
-        try {
+    public void addCliente(Cliente usu){
+        clientes.add(usu);
+        try{
             entitymanager.getTransaction().begin();
-            entitymanager.persist(user);
+            entitymanager.persist(usu);
             entitymanager.getTransaction().commit();
-            entitymanager.close();            
-        } catch (Exception e) {
+            entitymanager.close(); 
+        }
+        catch (Exception e) {
             e.printStackTrace();
             entitymanager.getTransaction().rollback();
         } 
-  
-        if(userType=="Cliente"){
-            Cliente cliente = (Cliente) usu;
-            clientes.add(cliente); 
-           }
-        if(userType=="Artista"){
-              Artista artista = (Artista) usu;
-              artistas.add(artista); 
-           } 
     } 
     
-    
+    public void addArtista(Artista usu){
+        artistas.add(usu); 
+        try {
+            entitymanager.getTransaction().begin();
+            entitymanager.persist(usu);
+            entitymanager.getTransaction().commit();
+            entitymanager.close(); 
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            entitymanager.getTransaction().rollback();
+        } 
+    }
+        
     public boolean nicknameLibre(String nickname){
-        return this.obtenerUsuario(nickname) == null; 
+        if(this.obtenerCliente(nickname) == null){
+            if(this.obtenerArtista(nickname)== null)
+                return true;
+        }
+        return false;
     }  
     
     public boolean mailLibre(String mail){
-        return this.obtenerUsuarioPorMail(mail) == null; 
+        if(this.obtenerClientePorMail(mail) == null){
+            if(this.obtenerArtistaPorMail(mail)== null)
+                return true;
+        }
+        return false;
     } 
     
-    public Usuario obtenerUsuarioPorMail(String mail){
-        Iterator it = usuarios.iterator();
-        Usuario user;
+    public boolean artistLibre(String nombre){
+            if(this.obtenerArtista(nombre)== null)
+                return true;
+            return false;
+    }  
+   
+    public Usuario obtenerClientePorMail(String mail){
+        Iterator it = clientes.iterator();
+        Cliente user;
         while(it.hasNext()){
-            user = (Usuario)it.next();
+            user = (Cliente)it.next();
+            if(user.getMail().equals(mail))
+                return user;
+        }
+        return null;
+    }
+    public Usuario obtenerArtistaPorMail(String mail){
+        Iterator it = artistas.iterator();
+        Artista user;
+        while(it.hasNext()){
+            user = (Artista)it.next();
             if(user.getMail().equals(mail))
                 return user;
         }
@@ -109,6 +144,7 @@ public class Manejador {
         }
         return null;
     }
+    
     
     public Cliente obtenerCliente(String nickname){
         Iterator it = clientes.iterator();
@@ -136,6 +172,32 @@ public class Manejador {
     //Funciones auxiliares
     public Genero getGenero(){
         return genero;
+    }
+    
+    public Genero getGeneroPorNombre(String nombre){
+        Iterator it = generosList.iterator();
+        Genero user;
+        while(it.hasNext()){
+            user = (Genero)it.next();
+            if(user.getNombre().equals(nombre))
+                return user;
+        }
+        return null;
+    }
+    
+    public ListaParticular getListaPorNombre(Cliente user, String nombre){
+        List<ListaDeReproduccion> listas = user.getListas();
+        Iterator it = listas.iterator();
+        ListaDeReproduccion lista;
+        while(it.hasNext()){
+            lista = (ListaDeReproduccion)it.next();
+            if(lista.getNombre().equals(nombre)){
+                ListaParticular listaFinal = (ListaParticular) lista;
+                return listaFinal;
+            }
+                
+        }
+        return null;
     }
     
     public List<Genero> getListGeneros(){
@@ -180,5 +242,38 @@ public class Manejador {
 
     void addGeneroToList(Genero nuevoGen){
             generosList.add(nuevoGen);
+    }
+    
+    void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
+        ListaParticular lista = new ListaParticular(client, nombreDeLista, imagenDeLista);
+        client.setListaParticular(lista);
+    }
+    
+    void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
+        ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);
+        this.Listas.add(lista);
+    }
+    
+
+    public List ItemCLiente() {
+        Iterator it=clientes.iterator();
+        Cliente c;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            c=(Cliente) it.next();
+            ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
+    }
+
+    public List ItemTemas() {
+        Iterator it=Temas.iterator();
+        Tema t;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            t=(Tema)it.next();
+            ret.add(new Item(t, t.getNombre()));
+        }
+        return ret;
     }
 }

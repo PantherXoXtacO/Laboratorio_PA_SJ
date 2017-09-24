@@ -203,7 +203,7 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void GuardarTemaFavorito(Object selectedItem, Object selectedItem0){
+    public void GuardarTemaFav(Object selectedItem, Object selectedItem0){
         Item usr = (Item) selectedItem;
         Item tem = (Item) selectedItem0;
         Cliente client = (Cliente) usr.getValue();
@@ -282,6 +282,11 @@ public class Controlador implements IControlador {
     public ListaParticular getListByName(Cliente user, String name){
         Manejador M=Manejador.getinstance();
         return M.getListaPorNombre(user, name);
+    }
+
+    @Override
+    public boolean artistLibre(String artistAlbum) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

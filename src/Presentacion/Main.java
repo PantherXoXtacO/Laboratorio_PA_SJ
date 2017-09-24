@@ -72,6 +72,9 @@ public class Main extends javax.swing.JFrame {
         this.CLGeneroList.setVisible(false);
         this.PrivacidadClientList.setVisible(false);
         this.PrivacidadClientList2.setVisible(false);
+        this.GuardarTema.setVisible(false);
+        this.GuardarLista.setVisible(false);
+        this.GuardarAlbum.setVisible(false);
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();
@@ -294,6 +297,30 @@ public class Main extends javax.swing.JFrame {
         DejarSeguirUsuarioConfirmar1 = new javax.swing.JButton();
         DejarSeguirUsuarioLabelCli = new javax.swing.JLabel();
         DejarSeguirUsuarioLabelUsu = new javax.swing.JLabel();
+        GuardarTema = new javax.swing.JInternalFrame();
+        LbsaveTemaFav = new javax.swing.JLabel();
+        LbsaveTemaFav2 = new javax.swing.JLabel();
+        CBsaveFavTemaCliente = new javax.swing.JComboBox<>();
+        CBsaveFavTemaTema = new javax.swing.JComboBox<>();
+        BsaveTemaFavAcept = new javax.swing.JButton();
+        BsaveTemaFavCancel = new javax.swing.JButton();
+        GuardarTemaTitle = new javax.swing.JLabel();
+        GuardarLista = new javax.swing.JInternalFrame();
+        jLsaveListFavUsr = new javax.swing.JLabel();
+        jLsaveListFavList = new javax.swing.JLabel();
+        jCBsaveListFavClnt = new javax.swing.JComboBox<>();
+        jCBsaveListFavList = new javax.swing.JComboBox<>();
+        JBguardarFavAcept = new javax.swing.JButton();
+        jBguardarListFavCancel = new javax.swing.JButton();
+        GuardarListaTitle = new javax.swing.JLabel();
+        GuardarAlbum = new javax.swing.JInternalFrame();
+        jLsaveAlbumFav = new javax.swing.JLabel();
+        jLsaveAlbumFav2 = new javax.swing.JLabel();
+        CBsaveAlbumFavAlbum = new javax.swing.JComboBox<>();
+        jBsaveAlbumFavAcept = new javax.swing.JButton();
+        jBsaveAlbumFavCancel = new javax.swing.JButton();
+        CBsaveAlbumFavCliente = new javax.swing.JComboBox<>();
+        GuardarAlbumTitle = new javax.swing.JLabel();
         ConsultaListaReproduccion = new javax.swing.JInternalFrame();
         ConsultaListaReproduccionTitle = new javax.swing.JLabel();
         ConsultaListaReproduccionSelectGen = new javax.swing.JRadioButton();
@@ -357,30 +384,6 @@ public class Main extends javax.swing.JFrame {
         CLGLabel19 = new javax.swing.JLabel();
         CLGUserListScroll3 = new javax.swing.JScrollPane();
         CLListaDeGenero = new javax.swing.JPanel();
-        GuardarLista = new javax.swing.JInternalFrame();
-        jLsaveListFavUsr = new javax.swing.JLabel();
-        jLsaveListFavList = new javax.swing.JLabel();
-        jCBsaveListFavClnt = new javax.swing.JComboBox<>();
-        jCBsaveListFavList = new javax.swing.JComboBox<>();
-        JBguardarFavAcept = new javax.swing.JButton();
-        jBguardarListFavCancel = new javax.swing.JButton();
-        GuardarListaTitle = new javax.swing.JLabel();
-        GuardarTema = new javax.swing.JInternalFrame();
-        LbsaveTemaFav = new javax.swing.JLabel();
-        LbsaveTemaFav2 = new javax.swing.JLabel();
-        CBsaveFavTemaCliente = new javax.swing.JComboBox<>();
-        CBsaveFavTemaTema = new javax.swing.JComboBox<>();
-        BsaveTemaFavAcept = new javax.swing.JButton();
-        BsaveTemaFavCancel = new javax.swing.JButton();
-        GuardarTemaTitle = new javax.swing.JLabel();
-        GuardarAlbum = new javax.swing.JInternalFrame();
-        jLsaveAlbumFav = new javax.swing.JLabel();
-        jLsaveAlbumFav2 = new javax.swing.JLabel();
-        CBsaveAlbumFavAlbum = new javax.swing.JComboBox<>();
-        jBsaveAlbumFavAcept = new javax.swing.JButton();
-        jBsaveAlbumFavCancel = new javax.swing.JButton();
-        CBsaveAlbumFavCliente = new javax.swing.JComboBox<>();
-        GuardarAlbumTitle = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuRegistros = new javax.swing.JMenu();
         jMenuItemRegUsu = new javax.swing.JMenuItem();
@@ -945,7 +948,7 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                .addGap(0, 520, Short.MAX_VALUE)
+                                .addGap(0, 707, Short.MAX_VALUE)
                                 .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -990,7 +993,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 426, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -1062,7 +1065,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(347, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameNewGen);
@@ -1119,7 +1122,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE))
+                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 1027, Short.MAX_VALUE))
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCUserListScroll2)
                 .addContainerGap())
@@ -1127,7 +1130,7 @@ public class Main extends javax.swing.JFrame {
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1384,7 +1387,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(JFaddTemaToListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBAddToListAceptar)
                     .addComponent(JBAddToListCancelar))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(450, Short.MAX_VALUE))
         );
 
         getContentPane().add(JFaddTemaToList);
@@ -1435,7 +1438,7 @@ public class Main extends javax.swing.JFrame {
         jFrameRemoveListFavLayout.setVerticalGroup(
             jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFrameRemoveListFavLayout.createSequentialGroup()
-                .addContainerGap(336, Short.MAX_VALUE)
+                .addContainerGap(568, Short.MAX_VALUE)
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRemoveListFavUsr)
                     .addComponent(jCBRemoveListFavClnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1508,7 +1511,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(483, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameRemoveTemaFav);
@@ -1559,7 +1562,7 @@ public class Main extends javax.swing.JFrame {
         FrameRemoveAlbumFavLayout.setVerticalGroup(
             FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameRemoveAlbumFavLayout.createSequentialGroup()
-                .addContainerGap(171, Short.MAX_VALUE)
+                .addContainerGap(551, Short.MAX_VALUE)
                 .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLRemoveAlbumFav1)
                     .addComponent(CBRemoveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1641,7 +1644,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(381, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFConsultarAlbumGen);
@@ -1726,7 +1729,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(178, Short.MAX_VALUE))
+                        .addContainerGap(331, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BConsultAlbAceptar)
@@ -1973,7 +1976,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaALbumAgrTemaUbi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(AltaALbumAgrTema)
-                        .addContainerGap(162, Short.MAX_VALUE))))
+                        .addContainerGap(394, Short.MAX_VALUE))))
         );
 
         getContentPane().add(AltaAlbum1);
@@ -2134,7 +2137,7 @@ public class Main extends javax.swing.JFrame {
                                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(DejarSeguirUsuarioLabelCli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(DejarSeguirUsuarioLabelUsu, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))))))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(944, Short.MAX_VALUE))
         );
         DejarDeSeguirUsuarioLayout.setVerticalGroup(
             DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2142,23 +2145,243 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(DejarSeguirUsuarioTitle)
                 .addGap(23, 23, 23)
-                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DejarSeguirUsuarioClient)
-                    .addComponent(DejarSeguirUsuarioClientText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DejarSeguirUsuarioLabelCli, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DejarSeguirUsuarioLabelCli, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(DejarSeguirUsuarioClient)
+                        .addComponent(DejarSeguirUsuarioClientText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DejarSeguirUsuarioUsuText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DejarSeguirUsuarioUsu)
-                    .addComponent(DejarSeguirUsuarioLabelUsu, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DejarSeguirUsuarioLabelUsu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(DejarSeguirUsuarioUsuText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DejarSeguirUsuarioUsu)))
                 .addGap(18, 18, 18)
                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DejarSeguirUsuarioCancelar1)
                     .addComponent(DejarSeguirUsuarioConfirmar1))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(524, Short.MAX_VALUE))
         );
 
         getContentPane().add(DejarDeSeguirUsuario);
+
+        GuardarTema.setPreferredSize(new java.awt.Dimension(209, 198));
+        GuardarTema.setVisible(true);
+        FrameRemoveTemaFav.setVisible(false);
+
+        LbsaveTemaFav.setText("Cliente");
+
+        LbsaveTemaFav2.setText("Tema");
+
+        BsaveTemaFavAcept.setText("Aceptar");
+        BsaveTemaFavAcept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BsaveTemaFavAceptActionPerformed(evt);
+            }
+        });
+
+        BsaveTemaFavCancel.setText("Cancelar");
+        BsaveTemaFavCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BsaveTemaFavCancelActionPerformed(evt);
+            }
+        });
+
+        GuardarTemaTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        GuardarTemaTitle.setText("Guardar Tema");
+
+        javax.swing.GroupLayout GuardarTemaLayout = new javax.swing.GroupLayout(GuardarTema.getContentPane());
+        GuardarTema.getContentPane().setLayout(GuardarTemaLayout);
+        GuardarTemaLayout.setHorizontalGroup(
+            GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarTemaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BsaveTemaFavAcept)
+                .addGap(18, 18, 18)
+                .addComponent(BsaveTemaFavCancel)
+                .addGap(347, 347, 347))
+            .addGroup(GuardarTemaLayout.createSequentialGroup()
+                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(GuardarTemaLayout.createSequentialGroup()
+                            .addGap(27, 27, 27)
+                            .addComponent(LbsaveTemaFav)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(CBsaveFavTemaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GuardarTemaLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(LbsaveTemaFav2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(CBsaveFavTemaTema, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(GuardarTemaLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(GuardarTemaTitle)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        GuardarTemaLayout.setVerticalGroup(
+            GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarTemaLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(GuardarTemaTitle)
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CBsaveFavTemaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LbsaveTemaFav))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CBsaveFavTemaTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LbsaveTemaFav2))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BsaveTemaFavAcept)
+                    .addComponent(BsaveTemaFavCancel))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(GuardarTema);
+
+        jFrameRemoveListFav.setTitle("Eliminar lista de favoritos");
+        GuardarLista.setVisible(true);
+        jFrameRemoveListFav.setVisible(false);
+
+        jLsaveListFavUsr.setText("Cliente");
+
+        jLsaveListFavList.setText("Lista");
+
+        JBguardarFavAcept.setText("Aceptar");
+        JBguardarFavAcept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBguardarFavAceptActionPerformed(evt);
+            }
+        });
+
+        jBguardarListFavCancel.setText("Cancelar");
+        jBguardarListFavCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBguardarListFavCancelActionPerformed(evt);
+            }
+        });
+
+        GuardarListaTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        GuardarListaTitle.setText("Guardar Lista");
+
+        javax.swing.GroupLayout GuardarListaLayout = new javax.swing.GroupLayout(GuardarLista.getContentPane());
+        GuardarLista.getContentPane().setLayout(GuardarListaLayout);
+        GuardarListaLayout.setHorizontalGroup(
+            GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarListaLayout.createSequentialGroup()
+                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GuardarListaLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(GuardarListaLayout.createSequentialGroup()
+                                .addComponent(JBguardarFavAcept)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jBguardarListFavCancel))
+                            .addGroup(GuardarListaLayout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jCBsaveListFavClnt, 0, 73, Short.MAX_VALUE)
+                                    .addComponent(jCBsaveListFavList, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(GuardarListaLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLsaveListFavUsr)
+                            .addComponent(GuardarListaTitle)
+                            .addComponent(jLsaveListFavList, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        GuardarListaLayout.setVerticalGroup(
+            GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarListaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(GuardarListaTitle)
+                .addGap(18, 18, 18)
+                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLsaveListFavUsr)
+                    .addComponent(jCBsaveListFavClnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLsaveListFavList)
+                    .addComponent(jCBsaveListFavList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JBguardarFavAcept)
+                    .addComponent(jBguardarListFavCancel))
+                .addGap(365, 365, 365))
+        );
+
+        getContentPane().add(GuardarLista);
+
+        FrameRemoveAlbumFav.setTitle("Eliminar album de favoritos");
+        GuardarAlbum.setVisible(true);
+        FrameRemoveAlbumFav.setVisible(false);
+
+        jLsaveAlbumFav.setText("Cliente");
+
+        jLsaveAlbumFav2.setText("Album");
+
+        jBsaveAlbumFavAcept.setText("Aceptar");
+        jBsaveAlbumFavAcept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBsaveAlbumFavAceptActionPerformed(evt);
+            }
+        });
+
+        jBsaveAlbumFavCancel.setText("Cancelar");
+        jBsaveAlbumFavCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBsaveAlbumFavCancelActionPerformed(evt);
+            }
+        });
+
+        GuardarAlbumTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        GuardarAlbumTitle.setText("Guardar Album");
+
+        javax.swing.GroupLayout GuardarAlbumLayout = new javax.swing.GroupLayout(GuardarAlbum.getContentPane());
+        GuardarAlbum.getContentPane().setLayout(GuardarAlbumLayout);
+        GuardarAlbumLayout.setHorizontalGroup(
+            GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarAlbumLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(GuardarAlbumLayout.createSequentialGroup()
+                        .addComponent(jBsaveAlbumFavAcept)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBsaveAlbumFavCancel))
+                    .addGroup(GuardarAlbumLayout.createSequentialGroup()
+                        .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLsaveAlbumFav, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLsaveAlbumFav2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(GuardarAlbumTitle)
+                            .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(CBsaveAlbumFavCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(CBsaveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        GuardarAlbumLayout.setVerticalGroup(
+            GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(GuardarAlbumLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(GuardarAlbumTitle)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLsaveAlbumFav)
+                    .addComponent(CBsaveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLsaveAlbumFav2)
+                    .addComponent(CBsaveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBsaveAlbumFavAcept)
+                    .addComponent(jBsaveAlbumFavCancel))
+                .addGap(365, 365, 365))
+        );
+
+        getContentPane().add(GuardarAlbum);
 
         ConsultaListaReproduccion.setVisible(false);
 
@@ -2338,7 +2561,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 510, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2523,7 +2746,7 @@ public class Main extends javax.swing.JFrame {
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2593,14 +2816,14 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(followAccept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 962, Short.MAX_VALUE)
                         .addComponent(FollowCancel)
                         .addGap(49, 49, 49))))
         );
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(234, Short.MAX_VALUE)
+                .addContainerGap(466, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2673,7 +2896,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CLLabel27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 1017, Short.MAX_VALUE)
                 .addContainerGap())
         );
         ClientListLayout.setVerticalGroup(
@@ -2761,7 +2984,7 @@ public class Main extends javax.swing.JFrame {
         CLGeneroListLayout.setVerticalGroup(
             CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2773,218 +2996,6 @@ public class Main extends javax.swing.JFrame {
         );
 
         getContentPane().add(CLGeneroList);
-
-        jFrameRemoveListFav.setTitle("Eliminar lista de favoritos");
-        GuardarLista.setVisible(true);
-        jFrameRemoveListFav.setVisible(false);
-
-        jLsaveListFavUsr.setText("Cliente");
-
-        jLsaveListFavList.setText("Lista");
-
-        JBguardarFavAcept.setText("Aceptar");
-        JBguardarFavAcept.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBguardarFavAceptActionPerformed(evt);
-            }
-        });
-
-        jBguardarListFavCancel.setText("Cancelar");
-        jBguardarListFavCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBguardarListFavCancelActionPerformed(evt);
-            }
-        });
-
-        GuardarListaTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        GuardarListaTitle.setText("Guardar Lista");
-
-        javax.swing.GroupLayout GuardarListaLayout = new javax.swing.GroupLayout(GuardarLista.getContentPane());
-        GuardarLista.getContentPane().setLayout(GuardarListaLayout);
-        GuardarListaLayout.setHorizontalGroup(
-            GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GuardarListaLayout.createSequentialGroup()
-                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(GuardarListaLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(GuardarListaLayout.createSequentialGroup()
-                                .addComponent(JBguardarFavAcept)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBguardarListFavCancel))
-                            .addGroup(GuardarListaLayout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jCBsaveListFavClnt, 0, 73, Short.MAX_VALUE)
-                                    .addComponent(jCBsaveListFavList, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addGroup(GuardarListaLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLsaveListFavUsr)
-                            .addComponent(GuardarListaTitle)
-                            .addComponent(jLsaveListFavList, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        GuardarListaLayout.setVerticalGroup(
-            GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GuardarListaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(GuardarListaTitle)
-                .addGap(18, 18, 18)
-                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLsaveListFavUsr)
-                    .addComponent(jCBsaveListFavClnt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLsaveListFavList)
-                    .addComponent(jCBsaveListFavList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JBguardarFavAcept)
-                    .addComponent(jBguardarListFavCancel)))
-        );
-
-        getContentPane().add(GuardarLista);
-
-        GuardarTema.setVisible(true);
-        FrameRemoveTemaFav.setVisible(false);
-
-        LbsaveTemaFav.setText("Cliente");
-
-        LbsaveTemaFav2.setText("Tema");
-
-        BsaveTemaFavAcept.setText("Aceptar");
-        BsaveTemaFavAcept.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BsaveTemaFavAceptActionPerformed(evt);
-            }
-        });
-
-        BsaveTemaFavCancel.setText("Cancelar");
-        BsaveTemaFavCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BsaveTemaFavCancelActionPerformed(evt);
-            }
-        });
-
-        GuardarTemaTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        GuardarTemaTitle.setText("Guardar Tema");
-
-        javax.swing.GroupLayout GuardarTemaLayout = new javax.swing.GroupLayout(GuardarTema.getContentPane());
-        GuardarTema.getContentPane().setLayout(GuardarTemaLayout);
-        GuardarTemaLayout.setHorizontalGroup(
-            GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GuardarTemaLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(GuardarTemaTitle)
-                    .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(GuardarTemaLayout.createSequentialGroup()
-                            .addComponent(BsaveTemaFavAcept)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BsaveTemaFavCancel))
-                        .addGroup(GuardarTemaLayout.createSequentialGroup()
-                            .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(LbsaveTemaFav2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(LbsaveTemaFav, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(CBsaveFavTemaCliente, 0, 84, Short.MAX_VALUE)
-                                .addComponent(CBsaveFavTemaTema, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        GuardarTemaLayout.setVerticalGroup(
-            GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GuardarTemaLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(GuardarTemaTitle)
-                .addGap(44, 44, 44)
-                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LbsaveTemaFav)
-                    .addComponent(CBsaveFavTemaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LbsaveTemaFav2)
-                    .addComponent(CBsaveFavTemaTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BsaveTemaFavAcept)
-                    .addComponent(BsaveTemaFavCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(GuardarTema);
-
-        FrameRemoveAlbumFav.setTitle("Eliminar album de favoritos");
-        GuardarAlbum.setVisible(true);
-        FrameRemoveAlbumFav.setVisible(false);
-
-        jLsaveAlbumFav.setText("Cliente");
-
-        jLsaveAlbumFav2.setText("Album");
-
-        jBsaveAlbumFavAcept.setText("Aceptar");
-        jBsaveAlbumFavAcept.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBsaveAlbumFavAceptActionPerformed(evt);
-            }
-        });
-
-        jBsaveAlbumFavCancel.setText("Cancelar");
-        jBsaveAlbumFavCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBsaveAlbumFavCancelActionPerformed(evt);
-            }
-        });
-
-        GuardarAlbumTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
-        GuardarAlbumTitle.setText("Guardar Album");
-
-        javax.swing.GroupLayout GuardarAlbumLayout = new javax.swing.GroupLayout(GuardarAlbum.getContentPane());
-        GuardarAlbum.getContentPane().setLayout(GuardarAlbumLayout);
-        GuardarAlbumLayout.setHorizontalGroup(
-            GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GuardarAlbumLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(GuardarAlbumLayout.createSequentialGroup()
-                        .addComponent(jBsaveAlbumFavAcept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBsaveAlbumFavCancel))
-                    .addGroup(GuardarAlbumLayout.createSequentialGroup()
-                        .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLsaveAlbumFav, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLsaveAlbumFav2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(CBsaveAlbumFavCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CBsaveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1002, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GuardarAlbumLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(GuardarAlbumTitle)
-                .addGap(35, 35, 35))
-        );
-        GuardarAlbumLayout.setVerticalGroup(
-            GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GuardarAlbumLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(GuardarAlbumTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 285, Short.MAX_VALUE)
-                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLsaveAlbumFav)
-                    .addComponent(CBsaveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLsaveAlbumFav2)
-                    .addComponent(CBsaveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBsaveAlbumFavAcept)
-                    .addComponent(jBsaveAlbumFavCancel)))
-        );
-
-        getContentPane().add(GuardarAlbum);
 
         jMenuRegistros.setText("Registros");
         jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
@@ -4241,7 +4252,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_JBguardarFavAceptActionPerformed
 
     private void jBguardarListFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBguardarListFavCancelActionPerformed
-        // TODO add your handling code here:
+        this.GuardarLista.setVisible(false);
     }//GEN-LAST:event_jBguardarListFavCancelActionPerformed
 
     private void BsaveTemaFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsaveTemaFavAceptActionPerformed
@@ -4251,7 +4262,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_BsaveTemaFavAceptActionPerformed
 
     private void BsaveTemaFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BsaveTemaFavCancelActionPerformed
-        // TODO add your handling code here:
+        this.GuardarTema.setVisible(false);
     }//GEN-LAST:event_BsaveTemaFavCancelActionPerformed
 
     private void jBsaveAlbumFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsaveAlbumFavAceptActionPerformed
@@ -4261,7 +4272,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jBsaveAlbumFavAceptActionPerformed
 
     private void jBsaveAlbumFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsaveAlbumFavCancelActionPerformed
-        // TODO add your handling code here:
+        this.GuardarAlbum.setVisible(false);
     }//GEN-LAST:event_jBsaveAlbumFavCancelActionPerformed
 
     private void jMenuSaveListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveListaActionPerformed

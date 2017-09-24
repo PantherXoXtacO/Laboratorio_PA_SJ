@@ -19,16 +19,6 @@
           </Group>
         </DimensionLayout>
       </Layout>
-<<<<<<< HEAD
-=======
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="BackgroundMain">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel18"/>
-          </Properties>
-        </Component>
-      </SubComponents>
->>>>>>> Joaco
     </Container>
     <Component class="javax.swing.JFileChooser" name="AUFileChooser">
       <Properties>
@@ -1191,11 +1181,7 @@
                       <Component id="bAddNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bCancelNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
                   <EmptySpace pref="171" max="32767" attributes="0"/>
-=======
-                  <EmptySpace pref="533" max="32767" attributes="0"/>
->>>>>>> Joaco
               </Group>
           </Group>
         </DimensionLayout>
@@ -1275,23 +1261,9 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
               <Group type="102" alignment="1" attributes="0">
                   <Component id="CLCUserListScroll2" pref="587" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-=======
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="381" max="32767" attributes="0"/>
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Follower" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="LabelUserMail" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
->>>>>>> Joaco
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1301,10 +1273,6 @@
                       <Component id="CLCButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCButton9" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
-=======
-                  <EmptySpace pref="155" max="32767" attributes="0"/>
->>>>>>> Joaco
               </Group>
           </Group>
         </DimensionLayout>
@@ -1617,62 +1585,10 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="LabelAddToListUser" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CBaddToListUser" alignment="3" min="-2" max="-2" attributes="0"/>
-=======
-                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                  <Component id="AltaAlbumTitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="AltaAlbumImagen" min="-2" pref="161" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Component id="AltaAlbumbtnImagen" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="AltaAlbumSelectCreaParti" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumbtnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumbtnConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumtxtNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumNomAlb" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumtxtApe" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumGenPert" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumAñoCrea" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumMes" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumAnio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumDia" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="46" max="32767" attributes="0"/>
-                          <Component id="AltaAlbumTemaSubTitle" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="AltaAlbumNom" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumDur" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumUbi" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="AltaAlbumNomListado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumUbiListado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumDurListado" alignment="1" min="-2" pref="130" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
->>>>>>> Joaco
                   </Group>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1870,12 +1786,6 @@
     </Container>
     <Container class="javax.swing.JInternalFrame" name="FrameRemoveTemaFav">
       <Properties>
-<<<<<<< HEAD
-=======
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor" postCode="//QuitarTemaDeLista.setLocationRelativeTo(null);">
-          <Dimension value="[20, 34]"/>
-        </Property>
->>>>>>> Joaco
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
       <AuxValues>
@@ -1990,7 +1900,6 @@
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="FrameRemoveAlbumFav.setTitle(&quot;Eliminar album de favoritos&quot;);"/>
       </AuxValues>
 
-<<<<<<< HEAD
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
@@ -2358,11 +2267,6 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
             <Component class="javax.swing.JList" name="jLConsultAlbTemas">
-=======
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Component class="javax.swing.JList" name="QuitarTemaListaListado1">
->>>>>>> Joaco
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
                   <StringArray count="0"/>
@@ -2374,7 +2278,6 @@
             </Component>
           </SubComponents>
         </Container>
-<<<<<<< HEAD
         <Component class="javax.swing.JButton" name="BConsultAlbAceptar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
@@ -3864,9 +3767,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JButton" name="CLGLButton10">
-=======
-        <Component class="javax.swing.JLabel" name="QuitarTemaListaListadoIndication">
->>>>>>> Joaco
           <Properties>
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
@@ -3919,12 +3819,8 @@
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
       <AuxValues>
-<<<<<<< HEAD
         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jFrameRemoveListFav.setVisible(false);"/>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jFrameRemoveListFav.setTitle(&quot;Eliminar lista de favoritos&quot;);"/>
-=======
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//DejarDeSeguirUsuario.setLocationRelativeTo(null);"/>
->>>>>>> Joaco
       </AuxValues>
 
       <Layout>
@@ -3982,10 +3878,6 @@
                       <Component id="JBguardarFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBguardarListFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
-=======
-                  <EmptySpace pref="23" max="32767" attributes="0"/>
->>>>>>> Joaco
               </Group>
           </Group>
         </DimensionLayout>
@@ -4052,11 +3944,7 @@
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
       <AuxValues>
-<<<<<<< HEAD
         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="FrameRemoveTemaFav.setVisible(false);"/>
-=======
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//GuardarTemaListaAlbum.setLocationRelativeTo(null);"/>
->>>>>>> Joaco
       </AuxValues>
 
       <Layout>
@@ -4109,11 +3997,7 @@
                       <Component id="BsaveTemaFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BsaveTemaFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
                   <EmptySpace max="32767" attributes="0"/>
-=======
-                  <EmptySpace pref="23" max="32767" attributes="0"/>
->>>>>>> Joaco
               </Group>
           </Group>
         </DimensionLayout>
@@ -4180,12 +4064,8 @@
         <Property name="visible" type="boolean" value="true"/>
       </Properties>
       <AuxValues>
-<<<<<<< HEAD
         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="FrameRemoveAlbumFav.setVisible(false);"/>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="FrameRemoveAlbumFav.setTitle(&quot;Eliminar album de favoritos&quot;);"/>
-=======
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//ConsultaListaReproduccion.setLocationRelativeTo(null);"/>
->>>>>>> Joaco
       </AuxValues>
 
       <Layout>
@@ -4240,10 +4120,6 @@
                       <Component id="jBsaveAlbumFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBsaveAlbumFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
-=======
-                  <EmptySpace pref="27" max="32767" attributes="0"/>
->>>>>>> Joaco
               </Group>
           </Group>
         </DimensionLayout>

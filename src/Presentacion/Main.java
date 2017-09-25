@@ -66,15 +66,19 @@ public class Main extends javax.swing.JFrame {
         this.ClientList.setVisible(false);
         this.ArtistList.setVisible(false);
         this.AltaAlbum1.setVisible(false);
+        this.QuitarTemaDeLista.setVisible(false);
+        this.DejarDeSeguirUsuario.setVisible(false);
+        this.GuardarTema.setVisible(false);
+        this.GuardarLista.setVisible(false);
+        this.GuardarAlbum.setVisible(false);
+        this.ConsultaListaReproduccion.setVisible(false);
         this.CrearListaParticular.setVisible(false);
         this.CrearListaPorDefecto.setVisible(false);
         this.CLClientList.setVisible(false);
         this.CLGeneroList.setVisible(false);
         this.PrivacidadClientList.setVisible(false);
         this.PrivacidadClientList2.setVisible(false);
-        this.GuardarTema.setVisible(false);
-        this.GuardarLista.setVisible(false);
-        this.GuardarAlbum.setVisible(false);
+        
         
         //Inicialización
         Fabrica fabrica = Fabrica.getInstance();
@@ -412,9 +416,9 @@ public class Main extends javax.swing.JFrame {
         jMenuRemoveAlbumFav = new javax.swing.JMenuItem();
         jMenuListas = new javax.swing.JMenu();
         jMenuItemAgregarLista = new javax.swing.JMenuItem();
-        jMenuItemQuitarLista = new javax.swing.JMenuItem();
         jMenuItemPublicarLista = new javax.swing.JMenuItem();
         jMenuAgregarTemaList = new javax.swing.JMenuItem();
+        jMenuItemQuitarLista = new javax.swing.JMenuItem();
 
         ToBeHonestIHaveNoClue.setVisible(true);
 
@@ -769,7 +773,6 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(LGButton15))
         );
 
-        ExistArtistAltaAlbum.setLocationRelativeTo(null);
         ExistArtistAltaAlbum.setSize(400, 200);
 
         ExistArtistAltaAlbumArtist.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1065,7 +1068,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameNewGen);
@@ -1814,7 +1817,7 @@ public class Main extends javax.swing.JFrame {
         });
 
         AltaAlbumGenPert.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AltaAlbumGenPert.setText("Generos Pertenecientes");
+        AltaAlbumGenPert.setText("Genero Perteneciente");
 
         AltaAlbumAñoCrea.setText("Año de creación:");
 
@@ -1976,7 +1979,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaALbumAgrTemaUbi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(AltaALbumAgrTema)
-                        .addContainerGap(394, Short.MAX_VALUE))))
+                        .addContainerGap(402, Short.MAX_VALUE))))
         );
 
         getContentPane().add(AltaAlbum1);
@@ -2160,7 +2163,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DejarSeguirUsuarioCancelar1)
                     .addComponent(DejarSeguirUsuarioConfirmar1))
-                .addContainerGap(524, Short.MAX_VALUE))
+                .addContainerGap(528, Short.MAX_VALUE))
         );
 
         getContentPane().add(DejarDeSeguirUsuario);
@@ -3194,9 +3197,6 @@ public class Main extends javax.swing.JFrame {
         jMenuItemAgregarLista.setText("Agregar Lista");
         jMenuListas.add(jMenuItemAgregarLista);
 
-        jMenuItemQuitarLista.setText("Quitar Lista");
-        jMenuListas.add(jMenuItemQuitarLista);
-
         jMenuItemPublicarLista.setText("Publicar Lista");
         jMenuItemPublicarLista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3212,6 +3212,14 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jMenuListas.add(jMenuAgregarTemaList);
+
+        jMenuItemQuitarLista.setText("Quitar Tema");
+        jMenuItemQuitarLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemQuitarListaActionPerformed(evt);
+            }
+        });
+        jMenuListas.add(jMenuItemQuitarLista);
 
         jMenuBar1.add(jMenuListas);
 
@@ -3948,19 +3956,23 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed
 
     private void ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
+        this.ExistArtistAltaAlbumArtistText.setText("");
         this.ExistArtistAltaAlbum.setVisible(false);
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
 
     private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
         String artistAlbum = this.ExistArtistAltaAlbumArtistText.getText();
-        if ("Artista".equals(artistAlbum) ) {// FALTA CONSULTA EN LA BASE SI EXISTE EL ARTISTA
-            if(ICU.artistLibre(artistAlbum)){
+        /*if ("Artista".equals(artistAlbum) ) {// FALTA CONSULTA EN LA BASE SI EXISTE EL ARTISTA
+            if(ICU.artistLibre(artistAlbum)){*/
                 this.AltaAlbum1.setVisible(true);
-            }else{
+            /*}else{
             JOptionPane.showMessageDialog(this, "ERROR: No existe el artista", "ERROR: Elección de artista", JOptionPane.ERROR_MESSAGE);
             this.ExistArtistAltaAlbum.setVisible(false);
             }
-        }
+        }*/
+        
+        this.ExistArtistAltaAlbumArtistText.setText("");
+        this.ExistArtistAltaAlbum.setVisible(false);
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
 
     private void jMenuItemDejarDeSeguirUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDejarDeSeguirUsuActionPerformed
@@ -3977,6 +3989,7 @@ public class Main extends javax.swing.JFrame {
         int año = Integer.parseInt(AltaAlbumAnio.getText());
         String imagePath = "";
         
+        ICU.AltaAlbum(AltaAlbumtxtNom1.getText(), AltaAlbumtxtApe1.getText());
     }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed
 
     private void AltaAlbumbtnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelar1ActionPerformed
@@ -4276,16 +4289,20 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jBsaveAlbumFavCancelActionPerformed
 
     private void jMenuSaveListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveListaActionPerformed
-        GuardarLista.setVisible(true);
+        this.GuardarLista.setVisible(true);
     }//GEN-LAST:event_jMenuSaveListaActionPerformed
 
     private void jMenuSaveAlbumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveAlbumActionPerformed
-        GuardarAlbum.setVisible(true);
+        this.GuardarAlbum.setVisible(true);
     }//GEN-LAST:event_jMenuSaveAlbumActionPerformed
 
     private void jMenuSaveTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveTemaActionPerformed
-        GuardarTema.setVisible(true);
+        this.GuardarTema.setVisible(true);
     }//GEN-LAST:event_jMenuSaveTemaActionPerformed
+
+    private void jMenuItemQuitarListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemQuitarListaActionPerformed
+        this.QuitarTemaDeLista.setVisible(true);
+    }//GEN-LAST:event_jMenuItemQuitarListaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -17,6 +17,7 @@ public class Manejador {
     private List<ListaDeReproduccion> Listas; // Listas por defecto
     private final Genero genero=new Genero("General"); // Guarda el genero raiz
     private List<Genero> generosList;
+    private List<Album> albums;
     private List<Tema> Temas;//Guarda los temas en una lista
     
     //Ids para la identificadores
@@ -275,5 +276,9 @@ public class Manejador {
             ret.add(new Item(t, t.getNombre()));
         }
         return ret;
+    }
+
+    void addAlbum(Album nuevoAlb) {
+        albums.add(nuevoAlb);
     }
 }

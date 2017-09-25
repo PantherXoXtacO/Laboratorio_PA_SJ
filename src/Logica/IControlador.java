@@ -58,5 +58,7 @@ public interface IControlador{
     public void GuardarAlbumFav(Object selectedItem, Object selectedItem0);
 
     public void DejarSeguirUsuario(String seguidor, String seguido);
+
+    public void AltaAlbum(String newAlb, String toGen);
 }
 

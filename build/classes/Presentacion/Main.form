@@ -555,7 +555,7 @@
     </Container>
     <Container class="javax.swing.JDialog" name="ExistArtistAltaAlbum">
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ExistArtistAltaAlbum.setLocationRelativeTo(null);&#xa;ExistArtistAltaAlbum.setSize(400, 200);"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ExistArtistAltaAlbum.setSize(400, 200);"/>
       </AuxValues>
 
       <Layout>
@@ -839,11 +839,6 @@
                 <Property name="text" type="java.lang.String" value="Agregar Lista"/>
               </Properties>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemQuitarLista">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Quitar Lista"/>
-              </Properties>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemPublicarLista">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Publicar Lista"/>
@@ -858,6 +853,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuAgregarTemaListActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemQuitarLista">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Quitar Tema"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemQuitarListaActionPerformed"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -1181,7 +1184,7 @@
                       <Component id="bAddNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bCancelNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="347" max="32767" attributes="0"/>
+                  <EmptySpace pref="351" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2552,7 +2555,7 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="AltaALbumAgrTema" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="394" max="32767" attributes="0"/>
+                          <EmptySpace pref="402" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -2574,7 +2577,7 @@
         <Component class="javax.swing.JLabel" name="AltaAlbumGenPert">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Generos Pertenecientes"/>
+            <Property name="text" type="java.lang.String" value="Genero Perteneciente"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="AltaAlbumtxtApe1">

@@ -214,13 +214,13 @@ public class Main extends javax.swing.JFrame {
         jBRemoveAlbumFavCancel = new javax.swing.JButton();
         CBRemoveAlbumFavCliente = new javax.swing.JComboBox<>();
         jFConsultarAlbumGen = new javax.swing.JInternalFrame();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTreeConsultarAlbum = new javax.swing.JTree();
         jScrollPane7 = new javax.swing.JScrollPane();
         jListConsultarAlbumGen = new javax.swing.JList<>();
         jBConsultarGenSelectGen = new javax.swing.JButton();
         jBConsultarAlbumGenCancel = new javax.swing.JButton();
         jBConsultarAlbumGen = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTConsultarAlbum = new javax.swing.JTree();
         FrameConsultarAlbum = new javax.swing.JInternalFrame();
         jLConsultAlb1 = new javax.swing.JLabel();
         jLConsultAlbNom = new javax.swing.JLabel();
@@ -1524,10 +1524,7 @@ public class Main extends javax.swing.JFrame {
         jFConsultarAlbumGen.setVisible(true);
         jFConsultarAlbumGen.setVisible(false);
 
-        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
-        jTreeConsultarAlbum.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane6.setViewportView(jTreeConsultarAlbum);
-
+        jListConsultarAlbumGen.setModel(new DefaultListModel());
         jScrollPane7.setViewportView(jListConsultarAlbumGen);
 
         jBConsultarGenSelectGen.setText("Elegir >>>");
@@ -1551,19 +1548,23 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
+        jTConsultarAlbum.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(jTConsultarAlbum);
+
         javax.swing.GroupLayout jFConsultarAlbumGenLayout = new javax.swing.GroupLayout(jFConsultarAlbumGen.getContentPane());
         jFConsultarAlbumGen.getContentPane().setLayout(jFConsultarAlbumGenLayout);
         jFConsultarAlbumGenLayout.setHorizontalGroup(
             jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(jBConsultarGenSelectGen)
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(59, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFConsultarAlbumGenLayout.createSequentialGroup()
+            .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBConsultarAlbumGen)
                 .addGap(30, 30, 30)
@@ -1574,15 +1575,15 @@ public class Main extends javax.swing.JFrame {
             jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFConsultarAlbumGenLayout.createSequentialGroup()
                         .addComponent(jBConsultarGenSelectGen)
-                        .addGap(110, 110, 110)))
+                        .addGap(110, 110, 110))
+                    .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE))
+                        .addGap(30, 30, 30)))
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
@@ -1681,6 +1682,12 @@ public class Main extends javax.swing.JFrame {
 
         FrameConsultarAlbArt.setVisible(false);
 
+        JboxConsultarAlbArt.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                JboxConsultarAlbArtItemStateChanged(evt);
+            }
+        });
+
         LBConsultarAlbArt1.setText("Artista");
 
         jButton8.setText("Consultar");
@@ -1735,7 +1742,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton9))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(250, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameConsultarAlbArt);
@@ -3214,7 +3221,7 @@ public class Main extends javax.swing.JFrame {
         //tree = new javax.swing.JTree();
         DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
         tree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        jScrollPane1.setViewportView(tree);
+        //jScrollPane1.setViewportView(tree);
         ////////////////////////////////////////////////////////////////////////
         
         Genero general=ICU.GetGenero();
@@ -3580,11 +3587,10 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jBEliminarListFavCancelActionPerformed
 
     private void jMenuConsultarAlbumGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumGenActionPerformed
-        //DefaultListModel model=(DefaultListModel) jListConsultarAlbumGen.getModel();
-        //model.removeAllElements();        
+        DefaultListModel model=(DefaultListModel) jListConsultarAlbumGen.getModel();
+        model.removeAllElements();        
         jListConsultarAlbumGen.clearSelection();
-        PopulateTree(jTreeConsultarAlbum);
-        this.jFConsultarAlbumGen.setSize(500, 500);
+        PopulateTree(jTConsultarAlbum);
         jFConsultarAlbumGen.setVisible(true);
     }//GEN-LAST:event_jMenuConsultarAlbumGenActionPerformed
 
@@ -3600,7 +3606,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jBConsultarAlbumGenActionPerformed
 
     private void jBConsultarGenSelectGenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarGenSelectGenActionPerformed
-        DefaultMutableTreeNode node= (DefaultMutableTreeNode)jTreeConsultarAlbum.getLastSelectedPathComponent();
+        DefaultMutableTreeNode node= (DefaultMutableTreeNode)jTConsultarAlbum.getLastSelectedPathComponent();
         if(node!=null){
             String s = node.toString();
             populateListConsultAlbum(jListConsultarAlbumGen ,ICU.getAlbumPorGenItem(s));
@@ -3623,22 +3629,22 @@ public class Main extends javax.swing.JFrame {
             itemArt=(Item) itArt.next();
             JboxConsultarAlbArt.addItem(itemArt);
         }
-        JboxConsultarAlbArt.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                JComboBox box = (JComboBox)ae.getSource();
-                Item aux = (Item)box.getSelectedItem();
-                Artista art = (Artista)aux.getValue();
-                populateCBAlbums(art);
-            }
-            
-        });
+        Item selected = (Item) JboxConsultarAlbArt.getSelectedItem();
+        if(selected!=null){
+            Artista art = (Artista) selected.getValue();
+            populateCBAlbums(art);
+        }
         FrameConsultarAlbArt.setVisible(true);
     }//GEN-LAST:event_jMenuConsultarAlbumArtistActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         Item item = (Item) JboxConsultarAlbAlb.getSelectedItem();
-        consultarAlbum((Album) item.getValue());
+        if(item!=null){
+            consultarAlbum((Album) item.getValue());
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "ERROR: No hay ningun album seleccionado", "ERROR: Seleccion de album", JOptionPane.ERROR_MESSAGE);
+        }        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -4352,6 +4358,14 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CBRemoveAlbumFavClienteItemStateChanged
 
+    private void JboxConsultarAlbArtItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JboxConsultarAlbArtItemStateChanged
+        Item selected = (Item) JboxConsultarAlbArt.getSelectedItem();
+        if(selected!=null){
+            Artista art = (Artista) selected.getValue();
+            populateCBAlbums(art);
+        }
+    }//GEN-LAST:event_JboxConsultarAlbArtItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -4703,10 +4717,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jRegisterNicknameField;
     private javax.swing.JTextField jRegisterNombreField;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTree jTreeConsultarAlbum;
+    private javax.swing.JTree jTConsultarAlbum;
     // End of variables declaration//GEN-END:variables
 }

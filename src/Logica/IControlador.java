@@ -36,7 +36,7 @@ public interface IControlador{
 
     public abstract void QuitarTemaFavorito(Item cliente, Item tema);
 
-    public abstract void QuitarAlbumFav(Item cliente, item album);
+    public abstract void QuitarAlbumFav(Item cliente, Item album);
 
     public abstract void QuitarListaFav(Item cliente, Item lista);
 

@@ -34,11 +34,11 @@ public interface IControlador{
 
     public abstract void agregarTemaALista(Object Lista, Object Tema);
 
-    public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
+    public abstract void QuitarTemaFavorito(Item cliente, Item tema);
 
-    public abstract void QuitarAlbumFav(Object selectedItem, Object selectedItem0);
+    public abstract void QuitarAlbumFav(Item cliente, item album);
 
-    public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
+    public abstract void QuitarListaFav(Item cliente, Item lista);
 
     public abstract List getAlbumPorGenItem(String s);
 

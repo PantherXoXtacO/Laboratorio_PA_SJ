@@ -1322,6 +1322,12 @@ public class Main extends javax.swing.JFrame {
 
         jLRemoveListFavList.setText("Lista");
 
+        jCBRemoveListFavClnt.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jCBRemoveListFavClntItemStateChanged(evt);
+            }
+        });
+
         JBEliminarFavAcept.setText("Aceptar");
         JBEliminarFavAcept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1372,7 +1378,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBEliminarFavAcept)
                     .addComponent(jBEliminarListFavCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(326, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFrameRemoveListFav);
@@ -1383,6 +1389,12 @@ public class Main extends javax.swing.JFrame {
         LbRemoveTemaFav1.setText("Cliente");
 
         LbRemoveTemaFav2.setText("Tema");
+
+        CBRemoveFavTemaCliente.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                CBRemoveFavTemaClienteItemStateChanged(evt);
+            }
+        });
 
         BRemoveTemaFavAcept.setText("Aceptar");
         BRemoveTemaFavAcept.addActionListener(new java.awt.event.ActionListener() {
@@ -1458,6 +1470,12 @@ public class Main extends javax.swing.JFrame {
         jBRemoveAlbumFavCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBRemoveAlbumFavCancelActionPerformed(evt);
+            }
+        });
+
+        CBRemoveAlbumFavCliente.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                CBRemoveAlbumFavClienteItemStateChanged(evt);
             }
         });
 
@@ -2936,7 +2954,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jCAgregarTemaListDefectoTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LbATLD2)
                     .addComponent(jBAgregarTemaListD))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
                 .addComponent(jAgregarTemaListDCerrar)
                 .addGap(45, 45, 45))
         );
@@ -3449,16 +3467,14 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             jCBRemoveListFavClnt.addItem(itemCliente);
         }
-        jCBRemoveListFavClnt.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                JComboBox box = (JComboBox)ae.getSource();
-                Item aux = (Item)box.getSelectedItem();
-                Cliente client = (Cliente)aux.getValue();
-                populateCBListFav(client);
+        Item selected = (Item) jCBRemoveListFavClnt.getSelectedItem();
+        if(selected != null){
+            Cliente c = (Cliente) selected.getValue();
+            Iterator itList = c.getListsFavItem().iterator();
+            while(itList.hasNext()){
+                jCBRemoveListFavList.addItem((Item)itList.next());
             }
-            
-        });        
+        }
         jFrameRemoveListFav.setVisible(true);   
     }//GEN-LAST:event_jMenuRemoveListaFavActionPerformed
 
@@ -3474,49 +3490,67 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             CBRemoveFavTemaCliente.addItem(itemCliente);
         }
-        CBRemoveFavTemaCliente.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                JComboBox box = (JComboBox)ae.getSource();
-                Item aux = (Item)box.getSelectedItem();
-                Cliente client = (Cliente)aux.getValue();
-                populateCBTemasFav(client);
+        Item selected = (Item)CBRemoveFavTemaCliente.getSelectedItem();
+        if(selected!=null){
+            Cliente c = (Cliente) selected.getValue();
+            Iterator it = c.getTemasFavItem().iterator();
+            while(it.hasNext()){
+                CBRemoveFavTemaTema.addItem((Item)it.next());
             }
-            
-        });        
+        }        
         FrameRemoveTemaFav.setVisible(true);        
     }//GEN-LAST:event_jMenuRemoveTemaFavActionPerformed
 
     private void BRemoveTemaFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRemoveTemaFavAceptActionPerformed
-        ICU.QuitarTemaFavorito(CBRemoveFavTemaCliente.getSelectedItem(),CBRemoveFavTemaTema.getSelectedItem());
-        JOptionPane.showMessageDialog(this, "Tema eliminado de favoritos", "Eliminar tema de favoritos", JOptionPane.INFORMATION_MESSAGE);
-        FrameRemoveTemaFav.setVisible(false);
+        Item cliente = (Item) CBRemoveFavTemaCliente.getSelectedItem();
+        if(cliente!=null){
+            Item tema = (Item) CBRemoveFavTemaTema.getSelectedItem();
+            if(tema!=null){
+                ICU.QuitarTemaFavorito(cliente,tema);
+                JOptionPane.showMessageDialog(this, "Tema eliminado de favoritos", "Eliminar tema de favoritos", JOptionPane.INFORMATION_MESSAGE);
+                FrameRemoveTemaFav.setVisible(false);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "ERROR: No hay tema seleccionado", "Eliminar tema de favoritos", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "ERROR: No hay cliente seleccionado", "Eliminar tema de favoritos", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_BRemoveTemaFavAceptActionPerformed
 
     private void jMenuRemoveAlbumFavActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRemoveAlbumFavActionPerformed
         Iterator itCliente = ICU.getItemCliente().iterator();
         Item itemCliente;
+        CBRemoveAlbumFavCliente.removeAllItems();
         while(itCliente.hasNext()){
             itemCliente=(Item) itCliente.next();
             CBRemoveAlbumFavCliente.addItem(itemCliente);
         }
-        CBRemoveAlbumFavCliente.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                JComboBox box = (JComboBox)ae.getSource();
-                Item aux = (Item)box.getSelectedItem();
-                Cliente client = (Cliente)aux.getValue();
-                populateCBAlbum(client);
-            }
-            
-        });        
+        Item item = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
+        if(item!=null){
+            Cliente c = (Cliente) item.getValue();
+             populateCBAlbum(CBRemoveAlbumFavAlbum,c);
+        }
         FrameRemoveAlbumFav.setVisible(true);
     }//GEN-LAST:event_jMenuRemoveAlbumFavActionPerformed
 
     private void jBRemoveAlbumFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoveAlbumFavAceptActionPerformed
-        ICU.QuitarAlbumFav(CBRemoveAlbumFavCliente.getSelectedItem(), CBRemoveAlbumFavCliente.getSelectedItem());
-        JOptionPane.showMessageDialog(this, "Album eliminado de favoritos", "Eliminar album de favoritos", JOptionPane.INFORMATION_MESSAGE);
-        FrameRemoveAlbumFav.setVisible(false);
+        Item cliente = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
+        if(cliente!=null){
+            Item album = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
+            if(album!=null){
+                ICU.QuitarAlbumFav(cliente, album);
+                JOptionPane.showMessageDialog(this, "Album eliminado de favoritos", "Eliminar album de favoritos", JOptionPane.INFORMATION_MESSAGE);
+                FrameRemoveAlbumFav.setVisible(false);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "ERROR: No hay ningun album seleccionado", "Eliminar album de favoritos", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "ERROR: No hay ningun cliente seleccionado", "Eliminar album de favoritos", JOptionPane.ERROR_MESSAGE);
+        }        
     }//GEN-LAST:event_jBRemoveAlbumFavAceptActionPerformed
 
     private void jBRemoveAlbumFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoveAlbumFavCancelActionPerformed
@@ -3524,9 +3558,21 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jBRemoveAlbumFavCancelActionPerformed
 
     private void JBEliminarFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBEliminarFavAceptActionPerformed
-        ICU.QuitarListaFav(jCBRemoveListFavClnt.getSelectedItem(), jCBRemoveListFavList.getSelectedItem());
-        JOptionPane.showMessageDialog(this, "Lista eliminado de favoritos", "Eliminar lista de favoritos", JOptionPane.INFORMATION_MESSAGE);
-        jFrameRemoveListFav.setVisible(false); 
+        Item cliente = (Item) jCBRemoveListFavClnt.getSelectedItem();
+        Item lista = (Item) jCBRemoveListFavList.getSelectedItem();
+        if(cliente != null){
+            if(lista != null){
+                ICU.QuitarListaFav(cliente, lista);
+                JOptionPane.showMessageDialog(this, "Lista eliminado de favoritos", "Eliminar lista de favoritos", JOptionPane.INFORMATION_MESSAGE);
+                jFrameRemoveListFav.setVisible(false); 
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "ERROR: No hay lista seleccionada", "Eliminar lista de favoritos", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "ERROR: No hay cliente seleccionada", "Eliminar lista de favoritos", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_JBEliminarFavAceptActionPerformed
 
     private void jBEliminarListFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEliminarListFavCancelActionPerformed
@@ -3682,14 +3728,14 @@ public class Main extends javax.swing.JFrame {
             jCBRemoveListFavList.addItem(item);
         }    
     }
-    
-    private void populateCBAlbum(Cliente client){
-        CBRemoveAlbumFavAlbum.removeAllItems();
-        Iterator it = client.getListsItem().iterator();
+        
+    private void populateCBAlbum(JComboBox box, Cliente client){
+        box.removeAllItems();
+        Iterator it = client.getAlbumsFavItem().iterator();
         Item item;
         while(it.hasNext()){
             item=(Item)it.next();
-            CBRemoveAlbumFavAlbum.addItem(item);
+            box.addItem(item);
         }
     }
     
@@ -4281,6 +4327,30 @@ public class Main extends javax.swing.JFrame {
     private void jAgregarTemaListDCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAgregarTemaListDCerrarActionPerformed
         AgregarTemaListDefecto.setVisible(false);
     }//GEN-LAST:event_jAgregarTemaListDCerrarActionPerformed
+
+    private void jCBRemoveListFavClntItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jCBRemoveListFavClntItemStateChanged
+        Item item = (Item) jCBRemoveListFavClnt.getSelectedItem();
+        if(item!=null){
+            Cliente c = (Cliente) item.getValue();
+            this.populateCBListFav(c);
+        }        
+    }//GEN-LAST:event_jCBRemoveListFavClntItemStateChanged
+
+    private void CBRemoveFavTemaClienteItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CBRemoveFavTemaClienteItemStateChanged
+        Item item = (Item) CBRemoveFavTemaCliente.getSelectedItem();
+        if(item!=null){
+            Cliente c = (Cliente) item.getValue();
+            this.populateCBTemasFav(c);
+        }
+    }//GEN-LAST:event_CBRemoveFavTemaClienteItemStateChanged
+
+    private void CBRemoveAlbumFavClienteItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CBRemoveAlbumFavClienteItemStateChanged
+        Item item = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
+        if(item!=null){
+            Cliente c = (Cliente) item.getValue();
+            populateCBAlbum(CBRemoveAlbumFavAlbum,c);
+        }
+    }//GEN-LAST:event_CBRemoveAlbumFavClienteItemStateChanged
 
     /**
      * @param args the command line arguments

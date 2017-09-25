@@ -154,30 +154,24 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void QuitarTemaFavorito(Object selectedItem, Object selectedItem0){
-        Item usr = (Item) selectedItem;
-        Item tem = (Item) selectedItem0;
-        Cliente client = (Cliente) usr.getValue();
-        Tema t = (Tema) tem.getValue();
+    public void QuitarTemaFavorito(Item cliente, Item tema){
+        Cliente client = (Cliente) cliente.getValue();
+        Tema t = (Tema) tema.getValue();
         client.quitarTemaFav(t);
     }
     
     @Override
-    public void QuitarAlbumFav(Object selectedItem, Object selectedItem0){
-        Item usr = (Item) selectedItem;
-        Item alb = (Item) selectedItem0;
-        Cliente client = (Cliente) usr.getValue();
-        Album a = (Album) alb.getValue();
+    public void QuitarAlbumFav(Item cliente, Item album){
+        Cliente client = (Cliente) cliente.getValue();
+        Album a = (Album) album.getValue();
         client.quitarAlbumFav(a); 
     }
 
     @Override
-    public void QuitarListaFav(Object selectedItem, Object selectedItem0){
-        Item usr = (Item) selectedItem;
-        Item lst = (Item) selectedItem0;
-        Cliente client = (Cliente) usr.getValue();
-        ListaDeReproduccion lista = (ListaDeReproduccion) lst.getValue();
-        client.quitarListFav(lista);
+    public void QuitarListaFav(Item cliente, Item lista){
+        Cliente c = (Cliente) cliente.getValue();
+        ListaDeReproduccion l = (ListaDeReproduccion) lista.getValue();
+        c.quitarListFav(l);
     }
     
     @Override

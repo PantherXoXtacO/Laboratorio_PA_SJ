@@ -89,7 +89,18 @@ public class Cliente extends Usuario{
         return ret;
     }
 
-    void quitarListFav(ListaDeReproduccion lista) {
+    public void quitarListFav(ListaDeReproduccion lista) {
         listasFav.remove(lista);
+    }
+
+    public List getAlbumsFavItem() {
+        Iterator it = albumsFav.iterator();
+        Album a;
+        List ret =new ArrayList();
+        while(it.hasNext()){
+            a= (Album) it.next();
+            ret.add(new Item(a,a.getNombre()));
+        }
+        return ret;
     }
 }

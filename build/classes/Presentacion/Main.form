@@ -94,6 +94,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RegistrarArtistaCancelButtonMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistrarArtistaCancelButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="RegistrarArtistaAcceptButton">
@@ -102,6 +103,7 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RegistrarArtistaAcceptButtonMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegistrarArtistaAcceptButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="LinkWebTextField">
@@ -851,20 +853,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar Tema"/>
               </Properties>
-<<<<<<< HEAD
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuAgregarTemaListActionPerformed"/>
-              </Events>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemQuitarLista">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Quitar Tema"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemQuitarListaActionPerformed"/>
-              </Events>
-            </MenuItem>
-=======
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMAgregarTemaListaPart">
                   <Properties>
@@ -884,7 +872,6 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
->>>>>>> Diego
           </SubComponents>
         </Menu>
       </SubComponents>
@@ -908,11 +895,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-<<<<<<< HEAD
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,-37,0,0,4,-75"/>
-=======
     <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-13,0,0,2,15"/>
->>>>>>> Diego
   </AuxValues>
   <SubComponents>
     <Container class="javax.swing.JInternalFrame" name="jRegisterFrame">
@@ -967,11 +950,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-<<<<<<< HEAD
-                                  <EmptySpace min="0" pref="707" max="32767" attributes="0"/>
-=======
                                   <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
->>>>>>> Diego
                                   <Component id="jComboBoxDia" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jComboBoxMes" min="-2" max="-2" attributes="0"/>
@@ -1194,11 +1173,7 @@
                           <Component id="TFNewGen" min="-2" pref="174" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-<<<<<<< HEAD
-                  <EmptySpace max="32767" attributes="0"/>
-=======
                   <EmptySpace pref="319" max="32767" attributes="0"/>
->>>>>>> Diego
               </Group>
           </Group>
         </DimensionLayout>
@@ -1288,11 +1263,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="CLCLabel18" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
-                  <Component id="CLConsultUserTextFIeld" pref="1027" max="32767" attributes="0"/>
-=======
                   <Component id="CLConsultUserTextFIeld" pref="349" max="32767" attributes="0"/>
->>>>>>> Diego
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <Component id="CLCUserListScroll2" pref="501" max="32767" attributes="0"/>
@@ -1489,13 +1460,8 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-                          <Component id="PCLLabelDeUsuario_Lista1" min="-2" pref="158" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-=======
                           <Component id="PCLLabelDeUsuario_Lista1" min="-2" pref="118" max="-2" attributes="0"/>
                           <EmptySpace pref="216" max="32767" attributes="0"/>
->>>>>>> Diego
                           <Component id="ConsultUserTextFIeld3" min="-2" pref="167" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1591,7 +1557,6 @@
         </Component>
       </SubComponents>
     </Container>
-<<<<<<< HEAD
     <Container class="javax.swing.JInternalFrame" name="JFaddTemaToList">
       <Properties>
         <Property name="visible" type="boolean" value="true"/>
@@ -1724,8 +1689,6 @@
         </Component>
       </SubComponents>
     </Container>
-=======
->>>>>>> Diego
     <Container class="javax.swing.JInternalFrame" name="jFrameRemoveListFav">
       <Properties>
         <Property name="visible" type="boolean" value="true"/>
@@ -1765,11 +1728,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-                  <EmptySpace pref="568" max="32767" attributes="0"/>
-=======
                   <EmptySpace max="-2" attributes="0"/>
->>>>>>> Diego
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLRemoveListFavUsr" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jCBRemoveListFavClnt" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1894,11 +1853,7 @@
                       <Component id="BRemoveTemaFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BRemoveTemaFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-<<<<<<< HEAD
-                  <EmptySpace pref="483" max="32767" attributes="0"/>
-=======
                   <EmptySpace pref="313" max="32767" attributes="0"/>
->>>>>>> Diego
               </Group>
           </Group>
         </DimensionLayout>
@@ -1994,11 +1949,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-                  <EmptySpace pref="551" max="32767" attributes="0"/>
-=======
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
->>>>>>> Diego
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLRemoveAlbumFav1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CBRemoveAlbumFavCliente" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2272,15 +2223,7 @@
                               <Component id="jLConsultAlb4" min="-2" max="-2" attributes="0"/>
                               <Component id="jScrollPane9" min="-2" max="-2" attributes="0"/>
                           </Group>
-<<<<<<< HEAD
                           <EmptySpace pref="331" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="BConsultAlbAceptar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-=======
->>>>>>> Diego
                       </Group>
                   </Group>
                   <EmptySpace pref="45" max="32767" attributes="0"/>
@@ -2484,171 +2427,6 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//AltaAlbum1.setLocationRelativeTo(null);"/>
       </AuxValues>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumGenPert" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumNomAlb" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="AltaAlbumtxtNom1" max="32767" attributes="0"/>
-                              <Component id="AltaAlbumtxtApe1" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-<<<<<<< HEAD
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="AltaAlbumAñoCrea" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                          <Component id="AltaAlbumNom" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-=======
-                                  <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
-                                  <Component id="AltaAlbumNomListado" min="-2" pref="99" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumDurListado" min="-2" pref="89" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="AltaAlbumUbiListado" min="-2" pref="99" max="-2" attributes="0"/>
->>>>>>> Diego
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="AltaALbumAgrTemaNom" min="-2" pref="80" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="AltaALbumAgrTemaDur" max="32767" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="AltaALbumAgrTemaUbi" min="-2" pref="91" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="AltaAlbumTemaSubTitle" min="-2" pref="62" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                              <Component id="AltaAlbumDur" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                              <Component id="AltaAlbumUbi" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                          <Component id="AltaAlbumAnio" min="-2" pref="181" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="0" pref="708" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
-                          <Component id="AltaALbumAgrTema" min="-2" pref="150" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                          <Component id="AltaAlbumbtnImagen1" min="-2" pref="125" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="AltaAlbumImagen" min="-2" pref="155" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
-                  <Component id="AltaAlbumTitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="AltaAlbumbtnCancelar1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="AltaAlbumbtnConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="AltaAlbumTitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="AltaAlbumImagen" min="-2" pref="161" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="AltaAlbumbtnImagen1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumbtnCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumbtnConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumtxtNom1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumNomAlb" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumtxtApe1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumGenPert" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumAñoCrea" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumAnio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="AltaAlbumTemaSubTitle" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaAlbumDur" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaAlbumUbi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="AltaALbumAgrTemaNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaALbumAgrTemaDur" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AltaALbumAgrTemaUbi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="AltaALbumAgrTema" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="402" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="AltaAlbumNomAlb">
           <Properties>
@@ -2986,11 +2764,7 @@
                           </Group>
                       </Group>
                   </Group>
-<<<<<<< HEAD
-                  <EmptySpace pref="944" max="32767" attributes="0"/>
-=======
                   <EmptySpace pref="252" max="32767" attributes="0"/>
->>>>>>> Diego
               </Group>
           </Group>
         </DimensionLayout>
@@ -3112,11 +2886,7 @@
                           <Component id="GuardarTemaTitle" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-<<<<<<< HEAD
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
-                  <EmptySpace pref="207" max="32767" attributes="0"/>
->>>>>>> Diego
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -3597,11 +3367,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                           <Component id="CLTitulo2" min="-2" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
                           <EmptySpace min="0" pref="266" max="32767" attributes="0"/>
->>>>>>> Diego
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -3742,12 +3508,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-<<<<<<< HEAD
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
                           <Component id="CLLabel0" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
->>>>>>> Diego
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="CLRegisterButton" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
@@ -3764,8 +3526,6 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="CLLabel0" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="CLGeneroTextField" min="-2" pref="551" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
@@ -3914,11 +3674,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="ALLabel14" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
-                  <Component id="ConsultUserTextFIeld1" max="32767" attributes="0"/>
-=======
                   <Component id="ConsultUserTextFIeld1" pref="349" max="32767" attributes="0"/>
->>>>>>> Diego
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <Component id="ALUserListScroll1" pref="501" max="32767" attributes="0"/>
@@ -3996,101 +3752,6 @@
       <Properties>
         <Property name="visible" type="boolean" value="true" postCode="FrameSeguirUser.setVisible(false);&#xa;FrameSeguirUser.setTitle(&quot;Seguir Usuario&quot;);"/>
       </Properties>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="Follower" pref="590" max="32767" attributes="0"/>
-                                      <Component id="Followed" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                                          <Component id="FollowedLabel" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="LabelUserMail" min="-2" pref="579" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-=======
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="CBSeguirUserSeguidor" max="32767" attributes="0"/>
-                              <Component id="CBSeguirUserSeguido" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="334" max="32767" attributes="0"/>
->>>>>>> Diego
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="followAccept" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="FollowCancel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-<<<<<<< HEAD
-                  <EmptySpace pref="466" max="32767" attributes="0"/>
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Follower" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="LabelUserMail" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Followed" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="FollowedLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-=======
-                  <EmptySpace pref="232" max="32767" attributes="0"/>
-                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="CBSeguirUserSeguidor" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="CBSeguirUserSeguido" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
->>>>>>> Diego
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="followAccept" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="FollowCancel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="Follower">
         </Component>
@@ -4122,21 +3783,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FollowCancelActionPerformed"/>
           </Events>
         </Component>
-<<<<<<< HEAD
-        <Component class="javax.swing.JLabel" name="LabelUserMail">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="FollowedLabel">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="33" green="0" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
-=======
         <Component class="javax.swing.JComboBox" name="CBSeguirUserSeguidor">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -4156,7 +3802,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
           </AuxValues>
->>>>>>> Diego
         </Component>
       </SubComponents>
     </Container>
@@ -4181,11 +3826,7 @@
                       <Component id="CLLabel27" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-<<<<<<< HEAD
-                  <Component id="ConsultUserTextFIeld" pref="1017" max="32767" attributes="0"/>
-=======
                   <Component id="ConsultUserTextFIeld" pref="339" max="32767" attributes="0"/>
->>>>>>> Diego
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -4285,11 +3926,7 @@
                   <Component id="CLGLButton10" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-<<<<<<< HEAD
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
                   <EmptySpace min="0" pref="294" max="32767" attributes="0"/>
->>>>>>> Diego
                   <Component id="CLConsultUserTextFIeld1" min="-2" pref="217" max="-2" attributes="0"/>
               </Group>
           </Group>

@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -41,6 +42,7 @@ public abstract class Usuario implements Serializable {
     private Fecha fechaDeNacimiento;
     @Column(name = "IMAGEN_DE_USUARIO")
     private String imagen; //path a la imagen del usuario
+    //@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Usuario>seguidores;
     
     public Usuario(){}

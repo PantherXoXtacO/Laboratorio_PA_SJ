@@ -242,5 +242,40 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         return M.getListaPorNombre(user, name);
     }
+
+    @Override
+    public void quitarTemaDeLista(Object selectedItem, Object selectedItem0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean artistLibre(String artistAlbum) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void GuardarListaFav(Object selectedItem, Object selectedItem0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void GuardarTemaFav(Object selectedItem, Object selectedItem0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void GuardarAlbumFav(Object selectedItem, Object selectedItem0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void DejarSeguirUsuario(String seguidor, String seguido) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void AltaAlbum(String newAlb, String toGen) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

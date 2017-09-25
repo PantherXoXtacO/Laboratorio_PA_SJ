@@ -365,8 +365,10 @@ public class Main extends javax.swing.JFrame {
         ALUserListScroll1 = new javax.swing.JScrollPane();
         ALUserListUsers1 = new javax.swing.JPanel();
         FrameSeguirUser = new javax.swing.JInternalFrame();
+        Follower = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        Followed = new javax.swing.JTextField();
         followAccept = new javax.swing.JButton();
         FollowCancel = new javax.swing.JButton();
         LabelUserMail = new javax.swing.JLabel();
@@ -2799,12 +2801,6 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                        .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8)
-                            .addComponent(CBSeguirUserSeguidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CBSeguirUserSeguido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
                                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2812,20 +2808,23 @@ public class Main extends javax.swing.JFrame {
                                     .addComponent(jLabel8))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(Follower)
+                                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Follower, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
                                     .addComponent(Followed))
-                                .addGap(2, 2, 2)
                                 .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(LabelUserMail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                        .addGap(0, 0, 0)
+                                        .addComponent(FollowedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addContainerGap())
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
                         .addComponent(followAccept)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 962, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(FollowCancel)
-                        .addGap(9, 9, 9)))
-                .addContainerGap())
+                        .addGap(49, 49, 49))))
         );
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2833,9 +2832,9 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap(466, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CBSeguirUserSeguidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Follower, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelUserMail, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4468,6 +4467,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel FechaLabel2;
     private javax.swing.JLabel FechaLabel3;
     private javax.swing.JButton FollowCancel;
+    private javax.swing.JTextField Followed;
     private javax.swing.JLabel FollowedLabel;
     private javax.swing.JTextField Follower;
     private javax.swing.JInternalFrame FrameConsultarAlbArt;

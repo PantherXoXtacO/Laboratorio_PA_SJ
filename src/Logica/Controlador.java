@@ -36,7 +36,7 @@ public class Controlador implements IControlador {
                                             fechaDeNacimiento, imagen);
         mu.addArtista(user);
     }
-    
+      
     @Override
     public List<Cliente> getListaClientes(){
         Manejador mu = Manejador.getinstance();
@@ -66,7 +66,6 @@ public class Controlador implements IControlador {
         }
 
     }
-    
 
     @Override
     public Genero GetGenero(){

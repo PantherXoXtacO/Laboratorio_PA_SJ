@@ -33,6 +33,8 @@ public interface IControlador{
     public abstract List getTemasItem();
 
     public abstract void agregarTemaALista(Object selectedItem, Object selectedItem0);
+    
+    public abstract void quitarTemaDeLista(Object selectedItem, Object selectedItem0);
 
     public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
 
@@ -47,5 +49,17 @@ public interface IControlador{
     public abstract void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista);
     public abstract void privatizarLista(ListaParticular lista, boolean modo);
     public ListaParticular getListByName(Cliente user, String name);
+
+    public boolean artistLibre(String artistAlbum);
+
+    public void GuardarListaFav(Object selectedItem, Object selectedItem0);
+
+    public void GuardarTemaFav(Object selectedItem, Object selectedItem0);
+
+    public void GuardarAlbumFav(Object selectedItem, Object selectedItem0);
+
+    public void DejarSeguirUsuario(String seguidor, String seguido);
+
+    public void AltaAlbum(String newAlb, String toGen);
 }
 

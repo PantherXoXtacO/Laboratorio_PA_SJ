@@ -15,8 +15,9 @@ public class Manejador {
     private List<Cliente> clientes;
     private List<Artista> artistas;
     private List<ListaDeReproduccion> Listas; // Listas por defecto
-    private Genero genero=new Genero("General"); // Guarda el genero raiz
+    private final Genero genero=new Genero("General"); // Guarda el genero raiz
     private List<Genero> generosList;
+    private List<Album> albums;
     private List<Tema> Temas;//Guarda los temas en una lista
     
     //Ids para la identificadores

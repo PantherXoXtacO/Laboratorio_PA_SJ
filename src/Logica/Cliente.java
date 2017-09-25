@@ -43,6 +43,11 @@ public class Cliente extends Usuario{
         siguiendo.add(u2);
     }    
     
+    @Override
+    void removeFollow(Usuario u2) {
+        siguiendo.remove(u2);
+    } 
+    
     void setListaParticular(ListaDeReproduccion lista){
         this.Listas.add(lista);
     }
@@ -91,5 +96,17 @@ public class Cliente extends Usuario{
 
     void quitarListFav(ListaDeReproduccion lista) {
         listasFav.remove(lista);
+    }
+
+    void guardarListFav(ListaDeReproduccion lista) {
+        listasFav.add(lista);
+    }
+
+    void guardarTemaFav(Tema t) {
+        temasFav.add(t);
+    }
+
+    void guardarAlbumFav(Album a) {
+        albumsFav.add(a);
     }
 }

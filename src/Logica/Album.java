@@ -49,6 +49,13 @@ public class Album implements Serializable {
         temas=new ArrayList();
         genero=new ArrayList();
     }
+
+    Album(String newAlb) {
+        nombre=newAlb;
+        
+        temas=new ArrayList();
+        genero=new ArrayList();
+    }
     
     public String getNombre(){
         return nombre;

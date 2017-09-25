@@ -27,15 +27,14 @@ public class Genero implements Serializable{
         
     @Column(name = "NOMBRE")
     private String nombre;
+    @Column (name = "PADRE")
+    private String padre;
     @OneToMany
     @JoinTable(name="GENEROS_HIJOS", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="HIJOS")) 
     private List<Genero> hijos;
     @OneToMany
     @JoinTable(name="ALBUMS_DE_GENERO", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="ALBUMS_GENERO"))
     private List<Album> albums;
-    @OneToOne
-    @JoinTable (name = "GENERO_PADRE")
-    Genero padre=null;
     //@OneToMany
     //@JoinTable(name="LISTA_DE_GENERO", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="LISTA_GENERO")) 
     private List<ListaDeReproduccion> listas;
@@ -45,6 +44,7 @@ public class Genero implements Serializable{
         this.hijos = new ArrayList();
         this.albums = new ArrayList();
         this.listas = new ArrayList();
+        this.padre = null;
     }
 
     //GETTERS
@@ -85,12 +85,10 @@ public class Genero implements Serializable{
     }
     
     private void setPadre(Genero dad){
-        if(!(dad.getNombre().equals("General"))){
-            padre=dad;
-        }
+        padre=dad.getNombre();
     }
     
-    public Genero getPadre(){
+    public String getPadre(){
         return padre;
     }
     

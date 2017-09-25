@@ -1,6 +1,8 @@
 
 package Logica;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -9,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -39,7 +42,8 @@ public abstract class Usuario implements Serializable {
     private Fecha fechaDeNacimiento;
     @Column(name = "IMAGEN_DE_USUARIO")
     private String imagen; //path a la imagen del usuario
-    
+    //@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Usuario>seguidores;
     
     public Usuario(){}
     
@@ -53,7 +57,7 @@ public abstract class Usuario implements Serializable {
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
         this.imagen = imagen;    
-        //this.seguidores=new List();
+        this.seguidores=new ArrayList();
     }
     
     //getters
@@ -114,12 +118,14 @@ public abstract class Usuario implements Serializable {
 
     public void setImagen(String imagen) {
         this.imagen = imagen;
-    }        
-    void addFollower(Usuario u1) {
-        //seguidores.put(u1.getNickname(), u1);
+    }
+    
+    public void addFollower(Usuario u1) {
+        seguidores.add(u1);
     }
 
-    void addFollow(Usuario u2) {}
+    public void addFollow(Usuario u2) {
+    }
     
     @Override
     public String toString() {

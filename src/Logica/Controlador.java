@@ -52,9 +52,9 @@ public class Controlador implements IControlador {
         if(nuevoGen==null){
             nuevoGen=new Genero(nombre);
             if(padre.equals("") || padre.equals("General")){
-            //System.out.println("sin padre");
-            gen=mu.getGenero();
-            gen.addHijo(nuevoGen);
+                //System.out.println("sin padre");
+                gen=mu.getGenero();
+                gen.addHijo(nuevoGen);
             }
             else{
                gen=mu.findGenero(padre);
@@ -94,10 +94,10 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public void SeguirUsuario(String seguidor, String seguido) {
+    public void SeguirUsuario(Item seguidor, Item seguido) {
        Manejador M=Manejador.getinstance();
-       Usuario u1 = M.obtenerUsuario(seguidor);
-       Usuario u2 = M.obtenerUsuario(seguido);
+       Usuario u1 = (Usuario) seguidor.getValue();
+       Usuario u2 = (Usuario) seguido.getValue();
        if(u1!=null && u2!=null){
             u1.addFollow(u2);
             u2.addFollower(u1);
@@ -144,39 +144,33 @@ public class Controlador implements IControlador {
     }    
     
     @Override
-    public void agregarTemaALista(Object selectedItem, Object selectedItem0){
-        Item l = (Item) selectedItem;
-        Item t = (Item) selectedItem0;
+    public void agregarTemaALista(Object Lista, Object Tema){
+        Item l = (Item) Lista;
+        Item t = (Item) Tema;
         ListaDeReproduccion lista = (ListaDeReproduccion) l.getValue();
         Tema tem = (Tema) t.getValue();
         lista.agregarTema(tem);
     }
     
     @Override
-    public void QuitarTemaFavorito(Object selectedItem, Object selectedItem0){
-        Item usr = (Item) selectedItem;
-        Item tem = (Item) selectedItem0;
-        Cliente client = (Cliente) usr.getValue();
-        Tema t = (Tema) tem.getValue();
+    public void QuitarTemaFavorito(Item cliente, Item tema){
+        Cliente client = (Cliente) cliente.getValue();
+        Tema t = (Tema) tema.getValue();
         client.quitarTemaFav(t);
     }
     
     @Override
-    public void QuitarAlbumFav(Object selectedItem, Object selectedItem0){
-        Item usr = (Item) selectedItem;
-        Item alb = (Item) selectedItem0;
-        Cliente client = (Cliente) usr.getValue();
-        Album a = (Album) alb.getValue();
+    public void QuitarAlbumFav(Item cliente, Item album){
+        Cliente client = (Cliente) cliente.getValue();
+        Album a = (Album) album.getValue();
         client.quitarAlbumFav(a); 
     }
 
     @Override
-    public void QuitarListaFav(Object selectedItem, Object selectedItem0){
-        Item usr = (Item) selectedItem;
-        Item lst = (Item) selectedItem0;
-        Cliente client = (Cliente) usr.getValue();
-        ListaDeReproduccion lista = (ListaDeReproduccion) lst.getValue();
-        client.quitarListFav(lista);
+    public void QuitarListaFav(Item cliente, Item lista){
+        Cliente c = (Cliente) cliente.getValue();
+        ListaDeReproduccion l = (ListaDeReproduccion) lista.getValue();
+        c.quitarListFav(l);
     }
     
     @Override
@@ -276,6 +270,12 @@ public class Controlador implements IControlador {
     @Override
     public void AltaAlbum(String newAlb, String toGen) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public List getListasDefectoItem(){
+        Manejador M=Manejador.getinstance();
+        return M.getListasDefectoItem();
     }
     
 }

@@ -20,7 +20,7 @@ public interface IControlador{
     public abstract Genero GetGenero();
     public abstract Genero getGeneroPorNombre(String nombre);
     //public abstract void AgregarTema(Usuario user, );//Agregar tema a lista
-    public abstract void SeguirUsuario(String seguidor, String seguido);
+    public abstract void SeguirUsuario(Item seguidor, Item seguido);
     public abstract void ConsultarAlbum();
 
     public abstract boolean FindUser(String text);
@@ -32,15 +32,15 @@ public interface IControlador{
 
     public abstract List getTemasItem();
 
-    public abstract void agregarTemaALista(Object selectedItem, Object selectedItem0);
     
     public abstract void quitarTemaDeLista(Object selectedItem, Object selectedItem0);
+    public abstract void agregarTemaALista(Object Lista, Object Tema);
 
-    public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
+    public abstract void QuitarTemaFavorito(Item cliente, Item tema);
 
-    public abstract void QuitarAlbumFav(Object selectedItem, Object selectedItem0);
+    public abstract void QuitarAlbumFav(Item cliente, Item album);
 
-    public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
+    public abstract void QuitarListaFav(Item cliente, Item lista);
 
     public abstract List getAlbumPorGenItem(String s);
 
@@ -61,5 +61,7 @@ public interface IControlador{
     public void DejarSeguirUsuario(String seguidor, String seguido);
 
     public void AltaAlbum(String newAlb, String toGen);
+
+    public abstract List getListasDefectoItem();
 }
 

@@ -126,16 +126,14 @@ public class Main extends javax.swing.JFrame {
         ApellidoLabel2 = new javax.swing.JLabel();
         MailLabel2 = new javax.swing.JLabel();
         FechaLabel2 = new javax.swing.JLabel();
-        VDCButton1 = new javax.swing.JButton();
-        VDCBUtton2 = new javax.swing.JButton();
-        VDCLabel25 = new javax.swing.JLabel();
-        VDCButton3 = new javax.swing.JButton();
+        jCBsaveListFavClnt1 = new javax.swing.JComboBox<>();
+        jCBsaveListFavClnt2 = new javax.swing.JComboBox<>();
+        jCBsaveListFavClnt3 = new javax.swing.JComboBox<>();
+        NicknameLabel2 = new javax.swing.JLabel();
+        NicknameLabel3 = new javax.swing.JLabel();
+        NicknameLabel4 = new javax.swing.JLabel();
         CLFileChooser1 = new javax.swing.JFileChooser();
         CLFileChooser2 = new javax.swing.JFileChooser();
-        ListaGeneral = new javax.swing.JDialog();
-        LGButton15 = new javax.swing.JButton();
-        LGScroll6 = new javax.swing.JScrollPane();
-        ListaGeneralLista = new javax.swing.JPanel();
         ExistArtistAltaAlbum = new javax.swing.JDialog();
         ExistArtistAltaAlbumArtist = new javax.swing.JLabel();
         ExistArtistAltaAlbumArtistText = new javax.swing.JTextField();
@@ -639,6 +637,8 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(VDALSP3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        ImagenDeCliente.setText("NO IMAGE");
+
         NicknameLabel1.setText("Nickname:");
 
         NombreLabel1.setText("Nombre:");
@@ -659,28 +659,29 @@ public class Main extends javax.swing.JFrame {
 
         FechaLabel2.setText("fecha");
 
-        VDCButton1.setText("Ver Seguidores");
-        VDCButton1.addActionListener(new java.awt.event.ActionListener() {
+        jCBsaveListFavClnt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VDCButton1ActionPerformed(evt);
+                jCBsaveListFavClnt1ActionPerformed(evt);
             }
         });
 
-        VDCBUtton2.setText("Ver Listas creadas");
-        VDCBUtton2.addActionListener(new java.awt.event.ActionListener() {
+        jCBsaveListFavClnt2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VDCBUtton2ActionPerformed(evt);
+                jCBsaveListFavClnt2ActionPerformed(evt);
             }
         });
 
-        VDCLabel25.setText("Preferencias?");
-
-        VDCButton3.setText("Ver Usuarios Seguidos");
-        VDCButton3.addActionListener(new java.awt.event.ActionListener() {
+        jCBsaveListFavClnt3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VDCButton3ActionPerformed(evt);
+                jCBsaveListFavClnt3ActionPerformed(evt);
             }
         });
+
+        NicknameLabel2.setText("Seguidores");
+
+        NicknameLabel3.setText("Seguidos");
+
+        NicknameLabel4.setText("Listas creadas");
 
         javax.swing.GroupLayout VentanaDeClienteLayout = new javax.swing.GroupLayout(VentanaDeCliente.getContentPane());
         VentanaDeCliente.getContentPane().setLayout(VentanaDeClienteLayout);
@@ -691,27 +692,32 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(ImagenDeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(NicknameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NombreLabel1)
-                    .addComponent(MailLabel1)
-                    .addComponent(FechaLabel1)
-                    .addComponent(ApellidoLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FechaLabel2)
-                    .addComponent(MailLabel2)
-                    .addComponent(NombreLabel2)
-                    .addComponent(NickLabel2)
-                    .addComponent(ApellidoLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(VentanaDeClienteLayout.createSequentialGroup()
-                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(VDCBUtton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(VDCButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(VDCButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(VDCLabel25)
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(NicknameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NombreLabel1)
+                            .addComponent(MailLabel1)
+                            .addComponent(FechaLabel1)
+                            .addComponent(ApellidoLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(FechaLabel2)
+                            .addComponent(MailLabel2)
+                            .addComponent(NombreLabel2)
+                            .addComponent(NickLabel2)
+                            .addComponent(ApellidoLabel2))
+                        .addGap(0, 164, Short.MAX_VALUE))
+                    .addGroup(VentanaDeClienteLayout.createSequentialGroup()
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NicknameLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                            .addComponent(NicknameLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(NicknameLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCBsaveListFavClnt1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCBsaveListFavClnt2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCBsaveListFavClnt3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         VentanaDeClienteLayout.setVerticalGroup(
             VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -739,15 +745,19 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(FechaLabel1)
                             .addComponent(FechaLabel2)))
                     .addComponent(ImagenDeCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(VDCButton1)
-                    .addComponent(VDCLabel25))
                 .addGap(18, 18, 18)
-                .addComponent(VDCBUtton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(VDCButton3)
-                .addContainerGap())
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBsaveListFavClnt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NicknameLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBsaveListFavClnt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NicknameLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(VentanaDeClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBsaveListFavClnt3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NicknameLabel4))
+                .addGap(21, 21, 21))
         );
 
         CLFileChooser1.setCurrentDirectory(new java.io.File("I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images"));
@@ -765,44 +775,6 @@ public class Main extends javax.swing.JFrame {
                 CLFileChooser2ActionPerformed(evt);
             }
         });
-
-        LGButton15.setText("Cerrar");
-        LGButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LGButton15ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout ListaGeneralListaLayout = new javax.swing.GroupLayout(ListaGeneralLista);
-        ListaGeneralLista.setLayout(ListaGeneralListaLayout);
-        ListaGeneralListaLayout.setHorizontalGroup(
-            ListaGeneralListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 398, Short.MAX_VALUE)
-        );
-        ListaGeneralListaLayout.setVerticalGroup(
-            ListaGeneralListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 269, Short.MAX_VALUE)
-        );
-
-        LGScroll6.setViewportView(ListaGeneralLista);
-
-        javax.swing.GroupLayout ListaGeneralLayout = new javax.swing.GroupLayout(ListaGeneral.getContentPane());
-        ListaGeneral.getContentPane().setLayout(ListaGeneralLayout);
-        ListaGeneralLayout.setHorizontalGroup(
-            ListaGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ListaGeneralLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(LGButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addComponent(LGScroll6)
-        );
-        ListaGeneralLayout.setVerticalGroup(
-            ListaGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ListaGeneralLayout.createSequentialGroup()
-                .addComponent(LGScroll6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LGButton15))
-        );
 
         ExistArtistAltaAlbum.setLocationRelativeTo(null);
         ExistArtistAltaAlbum.setSize(400, 200);
@@ -4151,37 +4123,6 @@ public class Main extends javax.swing.JFrame {
         this.CLClientList.setVisible(false);
     }//GEN-LAST:event_CLCButton9ActionPerformed
 
-    private void VDCButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VDCButton1ActionPerformed
-        this.ListaGeneral.setVisible(true);
-        this.ListaGeneral.setSize(200, 300);
-    }//GEN-LAST:event_VDCButton1ActionPerformed
-
-    private void VDCBUtton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VDCBUtton2ActionPerformed
-        Manejador manejador = Logica.Manejador.getinstance();
-        String clienteNick = this.NickLabel2.getText();
-        Cliente cliente = manejador.obtenerCliente(clienteNick);
-        List<ListaDeReproduccion> listas = cliente.getListas();
-        int numeroDeListas = listas.size();  
-        for(int i=0; i<numeroDeListas; i++){
-            JLabel label = new JLabel();
-            label.setText(listas.get(i).getNombre());
-            label.setBounds(0, 40*i, 200, 40);
-            this.ListaGeneralLista.add(label);              
-        }            
-        this.ListaGeneral.setVisible(true);
-        this.ListaGeneral.setSize(200, 300);
-    }//GEN-LAST:event_VDCBUtton2ActionPerformed
-
-    private void VDCButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VDCButton3ActionPerformed
-        this.ListaGeneral.setVisible(true);
-        this.ListaGeneral.setSize(200, 300);
-    }//GEN-LAST:event_VDCButton3ActionPerformed
-
-    private void LGButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LGButton15ActionPerformed
-        this.ListaGeneralLista.removeAll();
-        this.ListaGeneral.setVisible(false);
-    }//GEN-LAST:event_LGButton15ActionPerformed
-
     private void jMenuItemPublicarListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPublicarListaActionPerformed
         ConsultUserTextFIeld2.setText("");
         List<Cliente> clientes = ICU.getListaClientes();
@@ -4350,6 +4291,25 @@ public class Main extends javax.swing.JFrame {
                 this.ApellidoLabel2.setText(user.getApellido());
                 this.MailLabel2.setText(user.getMail());
                 this.FechaLabel2.setText(fechaString);
+                
+                jCBsaveListFavClnt1.removeAllItems(); //seguidores
+                Iterator it = user.ItemSeguidores().iterator();
+                while(it.hasNext()){
+                    jCBsaveListFavClnt1.addItem((Item)it.next()); 
+                }
+                
+                jCBsaveListFavClnt2.removeAllItems(); //siguiendo
+                Iterator it2 = user.ItemSiguiendo().iterator();
+                while(it2.hasNext()){
+                    jCBsaveListFavClnt2.addItem((Item)it2.next()); 
+                }
+                
+                jCBsaveListFavClnt3.removeAllItems(); //listas
+                Iterator it3 = user.getListsItem().iterator();
+                while(it3.hasNext()){
+                    jCBsaveListFavClnt3.addItem((Item)it3.next()); 
+                }
+                
                 ImageIcon icon = new ImageIcon(user.getImagen());
                 Image image = icon.getImage();
                 Image newIcon = image.getScaledInstance(120, 120,  java.awt.Image.SCALE_SMOOTH);
@@ -4956,6 +4916,18 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AltaAlbumbtnConfirmar3ActionPerformed
 
+    private void jCBsaveListFavClnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClnt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBsaveListFavClnt1ActionPerformed
+
+    private void jCBsaveListFavClnt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClnt2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBsaveListFavClnt2ActionPerformed
+
+    private void jCBsaveListFavClnt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClnt3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBsaveListFavClnt3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -5151,8 +5123,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<Item> JboxConsultarAlbArt;
     private javax.swing.JLabel LBConsultarAlbArt1;
     private javax.swing.JLabel LBConsultarAlbArt2;
-    private javax.swing.JButton LGButton15;
-    private javax.swing.JScrollPane LGScroll6;
     private javax.swing.JLabel LbATLD1;
     private javax.swing.JLabel LbATLD2;
     private javax.swing.JLabel LbRemoveTemaFav1;
@@ -5160,14 +5130,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel LbsaveTemaFav;
     private javax.swing.JLabel LbsaveTemaFav2;
     private javax.swing.JTextField LinkWebTextField;
-    private javax.swing.JDialog ListaGeneral;
-    private javax.swing.JPanel ListaGeneralLista;
     private javax.swing.JLabel MailLabel1;
     private javax.swing.JLabel MailLabel2;
     private javax.swing.JLabel MailLabel3;
     private javax.swing.JLabel NickLabel2;
     private javax.swing.JLabel NickLabel3;
     private javax.swing.JLabel NicknameLabel1;
+    private javax.swing.JLabel NicknameLabel2;
+    private javax.swing.JLabel NicknameLabel3;
+    private javax.swing.JLabel NicknameLabel4;
     private javax.swing.JLabel NombreLabel1;
     private javax.swing.JLabel NombreLabel2;
     private javax.swing.JLabel NombreLabel3;
@@ -5227,10 +5198,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel VDAL23;
     private javax.swing.JLabel VDAL24;
     private javax.swing.JScrollPane VDALSP3;
-    private javax.swing.JButton VDCBUtton2;
-    private javax.swing.JButton VDCButton1;
-    private javax.swing.JButton VDCButton3;
-    private javax.swing.JLabel VDCLabel25;
     private javax.swing.JDialog VentanaDeArtista;
     private javax.swing.JDialog VentanaDeCliente;
     private javax.swing.JLabel WebLabel3;
@@ -5262,6 +5229,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<Item> jCBRemoveListFavClnt;
     private javax.swing.JComboBox<Item> jCBRemoveListFavList;
     private javax.swing.JComboBox<Item> jCBsaveListFavClnt;
+    private javax.swing.JComboBox<Item> jCBsaveListFavClnt1;
+    private javax.swing.JComboBox<Item> jCBsaveListFavClnt2;
+    private javax.swing.JComboBox<Item> jCBsaveListFavClnt3;
     private javax.swing.JComboBox<Item> jCBsaveListFavList;
     private javax.swing.JComboBox<Item> jCBsaveListFavList1;
     private javax.swing.JComboBox<Item> jCBsaveListFavList2;

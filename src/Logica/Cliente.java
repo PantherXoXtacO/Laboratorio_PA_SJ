@@ -120,4 +120,15 @@ public class Cliente extends Usuario{
     void guardarAlbumFav(Album a) {
         albumsFav.add(a);
     }
+    
+    public List ItemSiguiendo() {
+        Iterator it=siguiendo.iterator();
+        Usuario c;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            c=(Usuario) it.next();
+            ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
+    }
 }

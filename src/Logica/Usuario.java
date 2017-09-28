@@ -2,6 +2,7 @@
 package Logica;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -135,5 +136,16 @@ public abstract class Usuario implements Serializable {
 
     void removeFollower(Usuario u1) {
         seguidores.remove(u1);
+    }
+    
+    public List ItemSeguidores() {
+        Iterator it=seguidores.iterator();
+        Usuario c;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            c=(Usuario) it.next();
+            ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
     }
 }

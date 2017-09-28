@@ -355,6 +355,8 @@ public class Manejador {
         return ret;
     }
     
+    
+    
     public List ItemArtista() {
         Iterator it=artistas.iterator();
         Artista c;

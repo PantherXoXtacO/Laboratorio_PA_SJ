@@ -319,31 +319,39 @@
                   <Component id="ImagenDeCliente" min="-2" pref="138" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="NicknameLabel1" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
-                      <Component id="NombreLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="MailLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="FechaLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ApellidoLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="NicknameLabel1" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                              <Component id="NombreLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MailLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="FechaLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ApellidoLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="FechaLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MailLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="NombreLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="NickLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="ApellidoLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="164" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="NicknameLabel2" alignment="0" pref="148" max="32767" attributes="0"/>
+                              <Component id="NicknameLabel4" alignment="0" max="32767" attributes="0"/>
+                              <Component id="NicknameLabel3" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jCBsaveListFavClnt1" max="32767" attributes="0"/>
+                              <Component id="jCBsaveListFavClnt2" max="32767" attributes="0"/>
+                              <Component id="jCBsaveListFavClnt3" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="FechaLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="MailLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="NombreLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="NickLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="ApellidoLabel2" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="VDCBUtton2" alignment="0" max="32767" attributes="0"/>
-                      <Component id="VDCButton3" alignment="0" max="32767" attributes="0"/>
-                      <Component id="VDCButton1" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="VDCLabel25" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -380,22 +388,31 @@
                       </Group>
                       <Component id="ImagenDeCliente" alignment="1" min="-2" pref="121" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="VDCButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="VDCLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCBsaveListFavClnt1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NicknameLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="VDCBUtton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="VDCButton3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jCBsaveListFavClnt2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NicknameLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jCBsaveListFavClnt3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="NicknameLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="ImagenDeCliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="NO IMAGE"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="NicknameLabel1">
           <Properties>
@@ -447,34 +464,59 @@
             <Property name="text" type="java.lang.String" value="fecha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="VDCButton1">
+        <Component class="javax.swing.JComboBox" name="jCBsaveListFavClnt1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ver Seguidores"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VDCButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBsaveListFavClnt1ActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="VDCBUtton2">
+        <Component class="javax.swing.JComboBox" name="jCBsaveListFavClnt2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Ver Listas creadas"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VDCBUtton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBsaveListFavClnt2ActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="VDCLabel25">
+        <Component class="javax.swing.JComboBox" name="jCBsaveListFavClnt3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Preferencias?"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="VDCButton3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ver Usuarios Seguidos"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VDCButton3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBsaveListFavClnt3ActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="NicknameLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Seguidores"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="NicknameLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Seguidos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="NicknameLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Listas creadas"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -500,61 +542,6 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CLFileChooser2ActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JDialog" name="ListaGeneral">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="LGButton15" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Component id="LGScroll6" alignment="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <Component id="LGScroll6" max="32767" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="LGButton15" min="-2" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JButton" name="LGButton15">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cerrar"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LGButton15ActionPerformed"/>
-          </Events>
-        </Component>
-        <Container class="javax.swing.JScrollPane" name="LGScroll6">
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-          <SubComponents>
-            <Container class="javax.swing.JPanel" name="ListaGeneralLista">
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="398" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="269" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
-          </SubComponents>
-        </Container>
-      </SubComponents>
-    </Container>
     <Container class="javax.swing.JDialog" name="ExistArtistAltaAlbum">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="ExistArtistAltaAlbum.setLocationRelativeTo(null);&#xa;ExistArtistAltaAlbum.setSize(400, 200);"/>

@@ -18,8 +18,7 @@ public class Artista extends Usuario {
     @Column(name = "DIR_WEB")
     private String dir_web;    
     @OneToMany
-    @JoinTable(name="ALBUMS_DE_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"),
-               inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
+    @JoinTable(name="ALBUMS_DE_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"), inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
     private List<Album> albums;
     private List<Usuario> siguiendo;
 
@@ -65,5 +64,9 @@ public class Artista extends Usuario {
             ret.add(new Item(a, a.getNombre()));
         }
         return ret;
+    }
+    
+    public List<Album> getAlbums(){
+        return this.albums;
     }
 }

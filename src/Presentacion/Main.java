@@ -3891,7 +3891,7 @@ public class Main extends javax.swing.JFrame {
         }
         Item selected = (Item) JboxConsultarAlbArt.getSelectedItem();
         if(selected!=null){
-            Artista art = (Artista) selected.getValue();
+            Artista art = (Artista) selected.getValue();            
             populateCBAlbums(art);
         }
         FrameConsultarAlbArt.setVisible(true);
@@ -4745,7 +4745,7 @@ public class Main extends javax.swing.JFrame {
         Artista artist = ICU.consultarArtista(artista);
         List<Genero> generos = ICU.getTemporalGenres();
         ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-        ICU.addTemporalAlbum();
+        ICU.addTemporalAlbum(artist);
         ICU.deleteTemporalAlbum();
         ICU.wipeTemporalGenres();
         JOptionPane.showMessageDialog(this, "Album creado con exito", "Alta album", JOptionPane.INFORMATION_MESSAGE);
@@ -4809,6 +4809,7 @@ public class Main extends javax.swing.JFrame {
         String genero = jComboBoxGeneroPert1.getSelectedItem().toString();
         Genero genre = ICU.getGeneroPorNombre(genero);
         ICU.addToTemporalGenres(genre);
+        JOptionPane.showMessageDialog(this, "Genero agregado con exito", "Agregar genero", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

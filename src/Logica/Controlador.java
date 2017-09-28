@@ -389,9 +389,9 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void addTemporalAlbum(){
+    public void addTemporalAlbum(Artista artist){
         Manejador M=Manejador.getinstance();
-        M.addTemporalAlbum();
+        M.addTemporalAlbum(artist);
     }
     
     @Override

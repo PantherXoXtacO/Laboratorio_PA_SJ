@@ -74,7 +74,7 @@ public interface IControlador{
     public abstract void createTemporalAlbum();
     public abstract void deleteTemporalAlbum();
     public abstract void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath);
-    public abstract void addTemporalAlbum();
+    public abstract void addTemporalAlbum(Artista artist);
     public abstract void createTemporalGenres();
     public abstract void addToTemporalGenres(Genero genero);
     public abstract void wipeTemporalGenres();

@@ -131,5 +131,10 @@ public class Genero implements Serializable{
     public String toString() {
         return "Logica.Album[ id=" + id + " ]";
     }    
+    
+    public void addAlbum(Album album){
+        this.albums.add(album);
+    }
+    
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 }

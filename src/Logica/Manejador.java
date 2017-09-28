@@ -412,12 +412,23 @@ public class Manejador {
         this.TemporalAlbum.setImg(imagePath);
     }
     
-    public void addTemporalAlbum(){
-        Artista artista = this.TemporalAlbum.getArtista();
+    public void addTemporalAlbum(Artista artist){        
         Album albumToAdd = new Album(this.TemporalAlbum);
+        List<Genero> generos = this.TemporalAlbum.getGeneros();
+        addAlbumToGeneros(generos, albumToAdd);
         this.Albums.add(albumToAdd);
-       // artista.addAlbum(albumToAdd);
+        artist.addAlbum(albumToAdd);
         deleteTemporalAlbum();        
+    }
+    
+    public void addAlbumToGeneros(List<Genero> generos, Album album){
+        Iterator it=generos.iterator();
+        Genero g;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            g=(Genero) it.next();
+            g.addAlbum(album);
+        }
     }
     
     public void createTemporalGenres(){

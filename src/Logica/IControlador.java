@@ -53,12 +53,11 @@ public interface IControlador{
 
     public void GuardarListaFav(Object selectedItem, Object selectedItem0);
 
-    public void GuardarTemaFav(Object selectedItem, Object selectedItem0);
+    public abstract void GuardarTemaFav(Object selectedItem, Object selectedItem0);
+    public abstract void GuardarTemaFavorito(Object selectedItem, Object selectedItem0);
 
     public void GuardarAlbumFav(Object selectedItem, Object selectedItem0);
 
     public void DejarSeguirUsuario(String seguidor, String seguido);
-
-    public void AltaAlbum(String newAlb, String toGen);
 }
 

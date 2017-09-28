@@ -25,6 +25,10 @@ public class Tema implements Serializable{
         this.orden = orden;
         this.album = album;
     }
+    
+    public Tema(){
+        
+    }
 
     //GETTERS
     public String getNombre() {

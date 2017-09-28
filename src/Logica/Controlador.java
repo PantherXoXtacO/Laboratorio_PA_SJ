@@ -60,11 +60,6 @@ public class Controlador implements IControlador {
 
     }
     
-    public void AltaAlbum(String newAlb, String toGen){
-        Manejador m = Manejador.getinstance();
-        Album nuevoAlb = new Album(newAlb);
-        m.addAlbum(nuevoAlb);
-    }
 
     @Override
     public Genero GetGenero(){
@@ -208,7 +203,7 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void GuardarTemaFav(Object selectedItem, Object selectedItem0){
+    public void GuardarTemaFavorito(Object selectedItem, Object selectedItem0){
         Item usr = (Item) selectedItem;
         Item tem = (Item) selectedItem0;
         Cliente client = (Cliente) usr.getValue();
@@ -294,5 +289,9 @@ public class Controlador implements IControlador {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void GuardarTemaFav(Object selectedItem, Object selectedItem0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

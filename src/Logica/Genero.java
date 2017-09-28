@@ -30,6 +30,10 @@ public class Genero implements Serializable{
         this.albums = new ArrayList();
         this.listas = new ArrayList();
     }
+    
+    public Genero(){
+    
+    }
 
     //GETTERS
     public String getNombre() {

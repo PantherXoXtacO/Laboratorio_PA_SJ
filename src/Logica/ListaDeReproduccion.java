@@ -57,4 +57,8 @@ public class ListaDeReproduccion {
     void agregarTema(Tema tem) {
         if(!temas.contains(tem)) temas.add(tem);
     }
+        
+     void quitarTema(Tema tem) {
+        temas.remove(tem);
+    } 
 }

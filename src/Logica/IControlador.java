@@ -56,5 +56,19 @@ public interface IControlador{
     public abstract void GuardarAlbumFav(Object selectedItem, Object selectedItem0);
     public abstract void DejarSeguirUsuario(String seguidor, String seguido);
     
+    
+    
+    public abstract void AgregarTema(Usuario user);
+    public abstract void SeguirUsuario(String seguidor, String seguido);
+    
+    public abstract void quitarTemaDeLista(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarTemaFavorito(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarAlbumFav(Object selectedItem, Object selectedItem0);
+
+    public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
+    public abstract void GuardarTemaFavorito(Object selectedItem, Object selectedItem0);
+    
 }
 

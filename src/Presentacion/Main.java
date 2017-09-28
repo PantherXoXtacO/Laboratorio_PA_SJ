@@ -277,12 +277,12 @@ public class Main extends javax.swing.JFrame {
         GuardarTemaListaAlbumConfirmar1 = new javax.swing.JButton();
         ConsultaListaReproduccion = new javax.swing.JInternalFrame();
         ConsultaListaReproduccionTitle = new javax.swing.JLabel();
-        ConsultaListaReproduccionSelectGen = new javax.swing.JRadioButton();
-        ConsultaListaReproduccionSelectCli = new javax.swing.JRadioButton();
-        ConsultaListaReproduccionListado = new javax.swing.JScrollPane();
-        ConsultaListaReproduccionListado1 = new javax.swing.JList<>();
         AltaAlbumbtnCancelar2 = new javax.swing.JButton();
         AltaAlbumbtnConfirmar2 = new javax.swing.JButton();
+        jCBsaveListFavList1 = new javax.swing.JComboBox<>();
+        jCBsaveListFavList2 = new javax.swing.JComboBox<>();
+        Generoasd = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         CrearListaParticular = new javax.swing.JInternalFrame();
         CLLabel3 = new javax.swing.JLabel();
         CLLabel4 = new javax.swing.JLabel();
@@ -399,6 +399,14 @@ public class Main extends javax.swing.JFrame {
         AltaALbumAgrTemaUbi = new javax.swing.JTextField();
         AltaALbumAgrTema = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        ConsultaListaReproduccion1 = new javax.swing.JInternalFrame();
+        ConsultaListaReproduccionTitle1 = new javax.swing.JLabel();
+        AltaAlbumbtnCancelar3 = new javax.swing.JButton();
+        AltaAlbumbtnConfirmar3 = new javax.swing.JButton();
+        jCBsaveListFavList3 = new javax.swing.JComboBox<>();
+        jCBsaveListFavList4 = new javax.swing.JComboBox<>();
+        Clienteasd = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuRegistros = new javax.swing.JMenu();
         jMenuItemRegUsu = new javax.swing.JMenuItem();
@@ -413,7 +421,9 @@ public class Main extends javax.swing.JFrame {
         jMenuConsultarAlbum = new javax.swing.JMenu();
         jMenuConsultarAlbumGen = new javax.swing.JMenuItem();
         jMenuConsultarAlbumArtist = new javax.swing.JMenuItem();
-        jMenuItemConLista = new javax.swing.JMenuItem();
+        jMenuConsultarLista = new javax.swing.JMenu();
+        jMenuConsultarAlbumGen1 = new javax.swing.JMenuItem();
+        jMenuConsultarAlbumArtist1 = new javax.swing.JMenuItem();
         jMenuUsuarios = new javax.swing.JMenu();
         jMenuItemSegUsu = new javax.swing.JMenuItem();
         jMenuItemDejarDeSeguirUsu = new javax.swing.JMenuItem();
@@ -916,7 +926,7 @@ public class Main extends javax.swing.JFrame {
 
         jComboBoxAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1900","1901","1902","1903","1904","1905","1906","1907","1908","1909","1910","1911","1912","1913","1914","1915","1916","1917","1918","1919","1920","1921","1922","1923","1924","1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937","1938","1939","1940","1941","1942","1943","1944","1945","1946","1947","1948","1949","1950","1951","1952","1953","1954","1955","1956","1957","1958","1959","1960","1961","1962","1963","1964","1965","1966","1967","1968","1969","1970","1971","1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015", "2016" }));
 
-        UserTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente", "Artista" }));
+        UserTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clienteasd", "Artista" }));
         UserTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UserTypeComboBoxActionPerformed(evt);
@@ -1028,7 +1038,7 @@ public class Main extends javax.swing.JFrame {
 
         FrameNewGen.setVisible(true);
         FrameNewGen.setVisible(false);
-        FrameNewGen.setTitle("Alta Genero");
+        FrameNewGen.setTitle("Alta Generoasd");
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("General");
         TreeNewGen.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
@@ -2049,17 +2059,6 @@ public class Main extends javax.swing.JFrame {
         ConsultaListaReproduccionTitle.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         ConsultaListaReproduccionTitle.setText("Consulta de Lista de Reproducción");
 
-        ConsultaListaReproduccionSelectGen.setText("Genero");
-
-        ConsultaListaReproduccionSelectCli.setText("Cliente");
-
-        ConsultaListaReproduccionListado1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        ConsultaListaReproduccionListado.setViewportView(ConsultaListaReproduccionListado1);
-
         AltaAlbumbtnCancelar2.setText("Cancelar");
         AltaAlbumbtnCancelar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2074,6 +2073,10 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        Generoasd.setText("Genero");
+
+        jLabel2.setText("Lista");
+
         javax.swing.GroupLayout ConsultaListaReproduccionLayout = new javax.swing.GroupLayout(ConsultaListaReproduccion.getContentPane());
         ConsultaListaReproduccion.getContentPane().setLayout(ConsultaListaReproduccionLayout);
         ConsultaListaReproduccionLayout.setHorizontalGroup(
@@ -2081,38 +2084,41 @@ public class Main extends javax.swing.JFrame {
             .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ConsultaListaReproduccionTitle)
                     .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(ConsultaListaReproduccionListado)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ConsultaListaReproduccionLayout.createSequentialGroup()
-                                .addComponent(ConsultaListaReproduccionSelectGen)
-                                .addGap(31, 31, 31)
-                                .addComponent(ConsultaListaReproduccionSelectCli))))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addComponent(jCBsaveListFavList2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
+                        .addComponent(Generoasd, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCBsaveListFavList1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(AltaAlbumbtnCancelar2)
-                        .addGap(18, 18, 18)
-                        .addComponent(AltaAlbumbtnConfirmar2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(226, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AltaAlbumbtnConfirmar2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
+                        .addComponent(ConsultaListaReproduccionTitle)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         ConsultaListaReproduccionLayout.setVerticalGroup(
             ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ConsultaListaReproduccionTitle)
-                .addGap(18, 18, 18)
+                .addGap(42, 42, 42)
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ConsultaListaReproduccionSelectGen)
-                    .addComponent(ConsultaListaReproduccionSelectCli))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ConsultaListaReproduccionListado, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                    .addComponent(jCBsaveListFavList1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Generoasd))
+                .addGap(46, 46, 46)
+                .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBsaveListFavList2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(84, 84, 84)
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar2)
-                    .addComponent(AltaAlbumbtnConfirmar2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(AltaAlbumbtnConfirmar2)))
         );
 
         getContentPane().add(ConsultaListaReproduccion);
@@ -3139,7 +3145,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(AltaAlbum1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(AltaALbumAgrTema1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
                 .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1)))
@@ -3215,6 +3221,75 @@ public class Main extends javax.swing.JFrame {
         );
 
         getContentPane().add(AltaTema);
+
+        ConsultaListaReproduccion1.setVisible(false);
+
+        ConsultaListaReproduccionTitle1.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
+        ConsultaListaReproduccionTitle1.setText("Consulta de Lista de Reproducción");
+
+        AltaAlbumbtnCancelar3.setText("Cancelar");
+        AltaAlbumbtnCancelar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnCancelar3ActionPerformed(evt);
+            }
+        });
+
+        AltaAlbumbtnConfirmar3.setText("Confirmar");
+        AltaAlbumbtnConfirmar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AltaAlbumbtnConfirmar3ActionPerformed(evt);
+            }
+        });
+
+        Clienteasd.setText("Cliente");
+
+        jLabel4.setText("Lista");
+
+        javax.swing.GroupLayout ConsultaListaReproduccion1Layout = new javax.swing.GroupLayout(ConsultaListaReproduccion1.getContentPane());
+        ConsultaListaReproduccion1.getContentPane().setLayout(ConsultaListaReproduccion1Layout);
+        ConsultaListaReproduccion1Layout.setHorizontalGroup(
+            ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addComponent(jCBsaveListFavList4, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
+                        .addComponent(Clienteasd, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCBsaveListFavList3, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(AltaAlbumbtnCancelar3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AltaAlbumbtnConfirmar3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
+                        .addComponent(ConsultaListaReproduccionTitle1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        ConsultaListaReproduccion1Layout.setVerticalGroup(
+            ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ConsultaListaReproduccionTitle1)
+                .addGap(42, 42, 42)
+                .addGroup(ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBsaveListFavList3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Clienteasd))
+                .addGap(46, 46, 46)
+                .addGroup(ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCBsaveListFavList4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(84, 84, 84)
+                .addGroup(ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AltaAlbumbtnCancelar3)
+                    .addComponent(AltaAlbumbtnConfirmar3)))
+        );
+
+        getContentPane().add(ConsultaListaReproduccion1);
 
         jMenuRegistros.setText("Registros");
         jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
@@ -3322,13 +3397,25 @@ public class Main extends javax.swing.JFrame {
 
         jMenuConsultas.add(jMenuConsultarAlbum);
 
-        jMenuItemConLista.setText("Consultar Lista");
-        jMenuItemConLista.addActionListener(new java.awt.event.ActionListener() {
+        jMenuConsultarLista.setText("Consultar Lista");
+
+        jMenuConsultarAlbumGen1.setText("Por Genero");
+        jMenuConsultarAlbumGen1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemConListaActionPerformed(evt);
+                jMenuConsultarAlbumGen1ActionPerformed(evt);
             }
         });
-        jMenuConsultas.add(jMenuItemConLista);
+        jMenuConsultarLista.add(jMenuConsultarAlbumGen1);
+
+        jMenuConsultarAlbumArtist1.setText("Por Cliente");
+        jMenuConsultarAlbumArtist1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuConsultarAlbumArtist1ActionPerformed(evt);
+            }
+        });
+        jMenuConsultarLista.add(jMenuConsultarAlbumArtist1);
+
+        jMenuConsultas.add(jMenuConsultarLista);
 
         jMenuBar1.add(jMenuConsultas);
 
@@ -4208,10 +4295,6 @@ public class Main extends javax.swing.JFrame {
          this.DejarDeSeguirUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItemDejarDeSeguirUsuActionPerformed
 
-    private void jMenuItemConListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConListaActionPerformed
-        this.ConsultaListaReproduccion.setVisible(true);
-    }//GEN-LAST:event_jMenuItemConListaActionPerformed
-
     private void CLPorDefectoBotonDeCambioDeImagen2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CLPorDefectoBotonDeCambioDeImagen2ActionPerformed
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Image Files", "jpg", "png", "jpeg");
         this.CLFileChooser2.setFileFilter(filter);
@@ -4824,6 +4907,55 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBoxGeneroPert1ActionPerformed
 
+    private void jMenuConsultarAlbumGen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumGen1ActionPerformed
+        this.ConsultaListaReproduccion.setVisible(true);      
+        
+        jCBsaveListFavList1.removeAllItems();
+        jCBsaveListFavList2.removeAllItems();
+        List generos = ICU.getGeneroItem();
+        Iterator itGen = generos.iterator();
+        while(itGen.hasNext()){
+            jCBsaveListFavList1.addItem((Item)itGen.next());
+        }
+        Item selected = (Item)jCBsaveListFavList1.getSelectedItem();
+        if(selected!=null){
+            Genero g = (Genero) selected.getValue();
+            Iterator it = g.getListas().iterator();
+            while(it.hasNext()){
+                jCBsaveListFavList2.addItem((Item)it.next()); 
+            }
+        }  
+    }//GEN-LAST:event_jMenuConsultarAlbumGen1ActionPerformed
+
+    private void jMenuConsultarAlbumArtist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumArtist1ActionPerformed
+        this.ConsultaListaReproduccion1.setVisible(true);
+        
+        jCBsaveListFavList3.removeAllItems();
+        jCBsaveListFavList4.removeAllItems();
+        List clientes = ICU.getItemCliente();
+        Iterator itGen = clientes.iterator();
+        while(itGen.hasNext()){
+            jCBsaveListFavList3.addItem((Item)itGen.next());
+        }
+        Item selected = (Item)jCBsaveListFavList3.getSelectedItem();
+        if(selected!=null){
+            Cliente g = (Cliente) selected.getValue();
+            Iterator it = g.getListas().iterator();
+            while(it.hasNext()){
+                jCBsaveListFavList4.addItem((Item)it.next()); 
+            }
+        }  
+        
+    }//GEN-LAST:event_jMenuConsultarAlbumArtist1ActionPerformed
+
+    private void AltaAlbumbtnCancelar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnCancelar3ActionPerformed
+
+    private void AltaAlbumbtnConfirmar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AltaAlbumbtnConfirmar3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -4885,8 +5017,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel AltaAlbumUbi;
     private javax.swing.JButton AltaAlbumbtnCancelar1;
     private javax.swing.JButton AltaAlbumbtnCancelar2;
+    private javax.swing.JButton AltaAlbumbtnCancelar3;
     private javax.swing.JButton AltaAlbumbtnConfirmar1;
     private javax.swing.JButton AltaAlbumbtnConfirmar2;
+    private javax.swing.JButton AltaAlbumbtnConfirmar3;
     private javax.swing.JButton AltaAlbumbtnImagen1;
     private javax.swing.JLabel AltaAlbumlblImagen1;
     private javax.swing.JTextField AltaAlbumtxtNom1;
@@ -4955,16 +5089,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel CLTitulo;
     private javax.swing.JLabel CLTitulo2;
     private javax.swing.JInternalFrame ClientList;
+    private javax.swing.JLabel Clienteasd;
     private javax.swing.JTextField ConsultUserTextFIeld;
     private javax.swing.JTextField ConsultUserTextFIeld1;
     private javax.swing.JTextField ConsultUserTextFIeld2;
     private javax.swing.JTextField ConsultUserTextFIeld3;
     private javax.swing.JInternalFrame ConsultaListaReproduccion;
-    private javax.swing.JScrollPane ConsultaListaReproduccionListado;
-    private javax.swing.JList<String> ConsultaListaReproduccionListado1;
-    private javax.swing.JRadioButton ConsultaListaReproduccionSelectCli;
-    private javax.swing.JRadioButton ConsultaListaReproduccionSelectGen;
+    private javax.swing.JInternalFrame ConsultaListaReproduccion1;
     private javax.swing.JLabel ConsultaListaReproduccionTitle;
+    private javax.swing.JLabel ConsultaListaReproduccionTitle1;
     private javax.swing.JInternalFrame CrearListaParticular;
     private javax.swing.JInternalFrame CrearListaPorDefecto;
     private javax.swing.JInternalFrame DejarDeSeguirUsuario;
@@ -4990,6 +5123,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JInternalFrame FrameRemoveAlbumFav;
     private javax.swing.JInternalFrame FrameRemoveTemaFav;
     private javax.swing.JInternalFrame FrameSeguirUser;
+    private javax.swing.JLabel Generoasd;
     private javax.swing.JInternalFrame GuardarAlbum;
     private javax.swing.JLabel GuardarAlbumTitle;
     private javax.swing.JInternalFrame GuardarLista;
@@ -5129,6 +5263,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<Item> jCBRemoveListFavList;
     private javax.swing.JComboBox<Item> jCBsaveListFavClnt;
     private javax.swing.JComboBox<Item> jCBsaveListFavList;
+    private javax.swing.JComboBox<Item> jCBsaveListFavList1;
+    private javax.swing.JComboBox<Item> jCBsaveListFavList2;
+    private javax.swing.JComboBox<Item> jCBsaveListFavList3;
+    private javax.swing.JComboBox<Item> jCBsaveListFavList4;
     private javax.swing.JComboBox<String> jComboBoxAño;
     private javax.swing.JComboBox<String> jComboBoxDia;
     private javax.swing.JComboBox<Item> jComboBoxGeneroPert1;
@@ -5153,6 +5291,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLRemoveListFavUsr;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<Item> jListConsultarAlbumGen;
@@ -5168,11 +5308,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuConsultarAlbum;
     private javax.swing.JMenuItem jMenuConsultarAlbumArtist;
+    private javax.swing.JMenuItem jMenuConsultarAlbumArtist1;
     private javax.swing.JMenuItem jMenuConsultarAlbumGen;
+    private javax.swing.JMenuItem jMenuConsultarAlbumGen1;
+    private javax.swing.JMenu jMenuConsultarLista;
     private javax.swing.JMenu jMenuConsultas;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;
-    private javax.swing.JMenuItem jMenuItemConLista;
     private javax.swing.JMenuItem jMenuItemCrearAlb;
     private javax.swing.JMenuItem jMenuItemCrearGen;
     private javax.swing.JMenu jMenuItemCrearLis;

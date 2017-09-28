@@ -41,7 +41,12 @@ public class Cliente extends Usuario{
     @Override
     public void addFollow(Usuario u2) {
         siguiendo.add(u2);
-    }    
+    }
+    
+    @Override
+    public  void removeFollow(Usuario u){
+        siguiendo.remove(u);
+    }
     
     void setListaParticular(ListaDeReproduccion lista){
         this.Listas.add(lista);
@@ -58,7 +63,7 @@ public class Cliente extends Usuario{
         }
         return ret;
     }
-
+    
     public List getTemasFavItem() {
         Iterator it = temasFav.iterator();
         List ret= new ArrayList();

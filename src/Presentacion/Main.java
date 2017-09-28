@@ -1356,6 +1356,11 @@ public class Main extends javax.swing.JFrame {
                 jCBRemoveListFavClntItemStateChanged(evt);
             }
         });
+        jCBRemoveListFavClnt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBRemoveListFavClntActionPerformed(evt);
+            }
+        });
 
         JBEliminarFavAcept.setText("Aceptar");
         JBEliminarFavAcept.addActionListener(new java.awt.event.ActionListener() {
@@ -1407,7 +1412,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBEliminarFavAcept)
                     .addComponent(jBEliminarListFavCancel))
-                .addContainerGap(326, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFrameRemoveListFav);
@@ -2999,6 +3004,12 @@ public class Main extends javax.swing.JFrame {
 
         jLsaveListFavList.setText("Lista");
 
+        jCBsaveListFavClnt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCBsaveListFavClntActionPerformed(evt);
+            }
+        });
+
         JBguardarFavAcept.setText("Aceptar");
         JBguardarFavAcept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3069,6 +3080,12 @@ public class Main extends javax.swing.JFrame {
         LbsaveTemaFav.setText("Cliente");
 
         LbsaveTemaFav2.setText("Tema");
+
+        CBsaveFavTemaCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBsaveFavTemaClienteActionPerformed(evt);
+            }
+        });
 
         BsaveTemaFavAcept.setText("Aceptar");
         BsaveTemaFavAcept.addActionListener(new java.awt.event.ActionListener() {
@@ -3151,6 +3168,12 @@ public class Main extends javax.swing.JFrame {
         jBsaveAlbumFavCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBsaveAlbumFavCancelActionPerformed(evt);
+            }
+        });
+
+        CBsaveAlbumFavCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBsaveAlbumFavClienteActionPerformed(evt);
             }
         });
 
@@ -3728,14 +3751,6 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             jCBRemoveListFavClnt.addItem(itemCliente);
         }
-        Item selected = (Item) jCBRemoveListFavClnt.getSelectedItem();
-        if(selected != null){
-            Cliente c = (Cliente) selected.getValue();
-            Iterator itList = c.getListsFavItem().iterator();
-            while(itList.hasNext()){
-                jCBRemoveListFavList.addItem((Item)itList.next());
-            }
-        }
         jFrameRemoveListFav.setVisible(true);   
     }//GEN-LAST:event_jMenuRemoveListaFavActionPerformed
 
@@ -4171,7 +4186,11 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_DejarSeguirUsuarioCancelar1ActionPerformed
 
     private void DejarSeguirUsuarioConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
-        // TODO add your handling code here:
+       String seguidor = DejarSeguirUsuarioClientText.getText();
+       String seguido = DejarSeguirUsuarioUsuText.getText();
+       ICU.DejarDeSeguirUsuario(seguidor, seguido);
+       JOptionPane.showMessageDialog(this, "El cliente ya no sigue al usuario", "Dejar de seguir usuario", JOptionPane.INFORMATION_MESSAGE);
+       DejarDeSeguirUsuario.setVisible(false);
     }//GEN-LAST:event_DejarSeguirUsuarioConfirmar1ActionPerformed
 
     private void GuardarTemaListaAlbumCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarTemaListaAlbumCancelar1ActionPerformed
@@ -4662,13 +4681,12 @@ public class Main extends javax.swing.JFrame {
         }
         Item selected = (Item)CBsaveFavTemaCliente.getSelectedItem();
         if(selected!=null){
-            Cliente c = (Cliente) selected.getValue();
-            Iterator it = c.getTemasFavItem().iterator();
+            Manejador mu = Manejador.getinstance();
+            Iterator it = mu.getTemasItem().iterator();
             while(it.hasNext()){
                 CBsaveFavTemaTema.addItem((Item)it.next());
             }
-        }        
-        
+        }                
         GuardarTema.setVisible(true);
     }//GEN-LAST:event_jMenuSaveTemaActionPerformed
 
@@ -4680,14 +4698,6 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             jCBsaveListFavClnt.addItem(itemCliente);
         }
-        Item selected = (Item)jCBsaveListFavClnt.getSelectedItem();
-        if(selected!=null){
-            Cliente c = (Cliente) selected.getValue();
-            Iterator it = c.getTemasFavItem().iterator();
-            while(it.hasNext()){
-                CBsaveFavTemaTema.addItem((Item)it.next());
-            }
-        }  
         GuardarLista.setVisible(true);
     }//GEN-LAST:event_jMenuSaveListaActionPerformed
 
@@ -4701,10 +4711,10 @@ public class Main extends javax.swing.JFrame {
         }
         Item selected = (Item)CBsaveAlbumFavCliente.getSelectedItem();
         if(selected!=null){
-            Cliente c = (Cliente) selected.getValue();
-            Iterator it = c.getTemasFavItem().iterator();
+            Manejador mu = Manejador.getinstance();
+            Iterator it = mu.getAlbumsItem().iterator();
             while(it.hasNext()){
-                CBsaveFavTemaTema.addItem((Item)it.next());
+                CBsaveAlbumFavAlbum.addItem((Item)it.next());
             }
         }  
         GuardarAlbum.setVisible(true);
@@ -4739,6 +4749,49 @@ public class Main extends javax.swing.JFrame {
     private void jBsaveAlbumFavCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsaveAlbumFavCancelActionPerformed
         GuardarAlbum.setVisible(false);
     }//GEN-LAST:event_jBsaveAlbumFavCancelActionPerformed
+
+    private void CBsaveFavTemaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBsaveFavTemaClienteActionPerformed
+        Item selected = (Item)CBsaveFavTemaCliente.getSelectedItem();
+        if(selected!=null){
+            Manejador mu = Manejador.getinstance();
+            Iterator it = mu.getTemasItem().iterator();
+            while(it.hasNext()){
+                CBsaveFavTemaTema.addItem((Item)it.next());
+            }
+        } 
+    }//GEN-LAST:event_CBsaveFavTemaClienteActionPerformed
+
+    private void CBsaveAlbumFavClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBsaveAlbumFavClienteActionPerformed
+        Item selected = (Item)CBsaveAlbumFavCliente.getSelectedItem();
+        if(selected!=null){
+            Manejador mu = Manejador.getinstance();
+            Iterator it = mu.getAlbumsItem().iterator();
+            while(it.hasNext()){
+                CBsaveAlbumFavAlbum.addItem((Item)it.next());
+            }
+        } 
+    }//GEN-LAST:event_CBsaveAlbumFavClienteActionPerformed
+
+    private void jCBsaveListFavClntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClntActionPerformed
+        jCBsaveListFavList.removeAllItems();
+        Item selected = (Item)jCBsaveListFavClnt.getSelectedItem();
+        if(selected!=null){
+            Cliente c = (Cliente) selected.getValue();
+            Iterator it = c.getListsItem().iterator();
+            while(it.hasNext()){
+                jCBsaveListFavList.addItem((Item)it.next()); 
+            }
+            Manejador mu = Manejador.getinstance();
+            Iterator it2 = mu.getListasItem().iterator();
+            while(it2.hasNext()){
+                jCBsaveListFavList.addItem((Item)it2.next()); 
+            }
+        }  
+    }//GEN-LAST:event_jCBsaveListFavClntActionPerformed
+
+    private void jCBRemoveListFavClntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBRemoveListFavClntActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCBRemoveListFavClntActionPerformed
 
     /**
      * @param args the command line arguments

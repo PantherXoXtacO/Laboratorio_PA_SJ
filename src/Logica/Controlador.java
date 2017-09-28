@@ -345,4 +345,15 @@ public class Controlador implements IControlador {
         ListaDeReproduccion lista = (ListaDeReproduccion) lst.getValue();
         client.guardarListFav(lista);
     }
+    
+    @Override
+    public void DejarDeSeguirUsuario(String seguidor, String seguido){
+        Manejador M=Manejador.getinstance();
+         Usuario u1 = M.obtenerUsuario(seguidor);
+         Usuario u2 = M.obtenerUsuario(seguido);
+         if(u1!=null && u2!=null){
+             u1.removeFollow(u2);
+             u2.removeFollower(u1);
+       }
+    }
 }

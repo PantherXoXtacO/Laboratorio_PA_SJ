@@ -124,19 +124,16 @@ public abstract class Usuario implements Serializable {
         seguidores.add(u1);
     }
 
-    public void addFollow(Usuario u2) {
-    }
+    public abstract void addFollow(Usuario u2);
+    public abstract void removeFollow(Usuario u);
     
     @Override
     public String toString() {
         return getNickname();
     }    
     
-    void removeFollow(Usuario u2) {
-        
-    }
 
     void removeFollower(Usuario u1) {
-        
+        seguidores.remove(u1);
     }
 }

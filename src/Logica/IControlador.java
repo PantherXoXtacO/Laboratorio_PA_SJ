@@ -69,6 +69,7 @@ public interface IControlador{
 
     public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
     public abstract void GuardarTemaFavorito(Object selectedItem, Object selectedItem0);
+    public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
     
 }
 

@@ -18,6 +18,7 @@ public class Manejador {
     private Genero genero=new Genero("General"); // Guarda el genero raiz
     private List<Genero> generosList;
     private List<Tema> Temas;//Guarda los temas en una lista
+    private List<Album> Albums;
     
     //Ids para la identificadores
     private double IdTema;
@@ -70,6 +71,39 @@ public class Manejador {
                 }
             }
         }
+    }
+    
+     public List getAlbumsItem() {
+        Iterator it = Albums.iterator();
+        List ret= new ArrayList();
+        Album L;
+        while(it.hasNext()){
+            L= (Album) it.next();
+            ret.add(new Item(L,L.getNombre()));
+        }
+        return ret;
+    }
+     
+     public List getListasItem() {
+        Iterator it = Listas.iterator();
+        List ret= new ArrayList();
+        ListaDeReproduccion L;
+        while(it.hasNext()){
+            L= (ListaDeReproduccion) it.next();
+            ret.add(new Item(L,L.getNombre()));
+        }
+        return ret;
+    }
+    
+    public List getTemasItem() {
+        Iterator it = Temas.iterator();
+        List ret= new ArrayList();
+        Tema L;
+        while(it.hasNext()){
+            L= (Tema) it.next();
+            ret.add(new Item(L,L.getNombre()));
+        }
+        return ret;
     }
     
     public List<Cliente> getClientes(){

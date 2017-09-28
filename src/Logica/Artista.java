@@ -41,6 +41,16 @@ public class Artista extends Usuario {
     public Artista(){
         
     }
+    
+    @Override
+    public void addFollow(Usuario u2) { //Only clients can follow
+       // siguiendo.add(u2);
+    }    
+    
+    @Override
+    public  void removeFollow(Usuario u){
+        //siguiendo.remove(u);
+    }
 
     public List getAlbumsItem() {
         Iterator it = albums.iterator();

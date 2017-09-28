@@ -240,13 +240,34 @@ public class Controlador implements IControlador {
     
      @Override
     public boolean artistLibre(String artistAlbum) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Manejador M=Manejador.getinstance();
+        return M.artistLibre(artistAlbum);
     }
 
     @Override
     public void GuardarTemaFav(Object selectedItem, Object selectedItem0) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    @Override
+    public void GuardarAlbumFav(Object selectedItem, Object selectedItem0){
+        Item usr = (Item) selectedItem;
+        Item alb = (Item) selectedItem0;
+        Cliente client = (Cliente) usr.getValue();
+        Album a = (Album) alb.getValue();
+        client.guardarAlbumFav(a); 
+    }
+    
+    @Override
+    public void DejarSeguirUsuario(String seguidor, String seguido) {
+       Manejador M=Manejador.getinstance();
+       Usuario u1 = M.obtenerUsuario(seguidor);
+       Usuario u2 = M.obtenerUsuario(seguido);
+       if(u1!=null && u2!=null){
+            u1.removeFollow(u2);
+            u2.removeFollower(u1);
+       }
+    }  
     
     @Override
     public List getListasDefectoItem(){
@@ -256,7 +277,10 @@ public class Controlador implements IControlador {
 
     @Override
     public void GuardarListaFav(Object selectedItem, Object selectedItem0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Item usr = (Item) selectedItem;
+        Item lst = (Item) selectedItem0;
+        Cliente client = (Cliente) usr.getValue();
+        ListaDeReproduccion lista = (ListaDeReproduccion) lst.getValue();
+        client.guardarListFav(lista);
     }
-    
 }

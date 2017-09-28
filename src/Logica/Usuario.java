@@ -131,4 +131,12 @@ public abstract class Usuario implements Serializable {
     public String toString() {
         return getNickname();
     }    
+    
+    void removeFollow(Usuario u2) {
+        
+    }
+
+    void removeFollower(Usuario u1) {
+        
+    }
 }

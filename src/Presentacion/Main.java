@@ -4391,7 +4391,7 @@ public class Main extends javax.swing.JFrame {
 
     private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
         String artistAlbum = this.ExistArtistAltaAlbumArtistText.getText();
-        if ("Artista".equals(artistAlbum) ) {// FALTA CONSULTA EN LA BASE SI EXISTE EL ARTISTA
+        if ("Artista".equals(artistAlbum) ) {
             if(ICU.artistLibre(artistAlbum)){
                 this.AltaAlbum1.setVisible(true);
             }else{

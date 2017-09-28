@@ -103,4 +103,16 @@ public class Cliente extends Usuario{
         }
         return ret;
     }
+    
+    void guardarListFav(ListaDeReproduccion lista) {
+        listasFav.add(lista);
+    }
+
+    void guardarTemaFav(Tema t) {
+        temasFav.add(t);
+    }
+
+    void guardarAlbumFav(Album a) {
+        albumsFav.add(a);
+    }
 }

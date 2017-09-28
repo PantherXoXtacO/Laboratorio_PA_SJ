@@ -4626,7 +4626,9 @@ public class Main extends javax.swing.JFrame {
         this.BiografiaTextArea.setText("");
         this.LinkWebTextField.setText("");
         this.RegistrarArtista.setVisible(false);
+        this.jRegisterFrame.setVisible(false);
         JOptionPane.showMessageDialog(this, "El Artista se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE); 
+        
     
     }//GEN-LAST:event_RegistrarArtistaAcceptButtonActionPerformed
 
@@ -4651,14 +4653,60 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
 
     private void jMenuSaveTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveTemaActionPerformed
+        Iterator itCliente = ICU.getItemCliente().iterator();
+        Item itemCliente;
+        CBsaveFavTemaCliente.removeAllItems();
+        while(itCliente.hasNext()){
+            itemCliente=(Item) itCliente.next();
+            CBsaveFavTemaCliente.addItem(itemCliente);
+        }
+        Item selected = (Item)CBsaveFavTemaCliente.getSelectedItem();
+        if(selected!=null){
+            Cliente c = (Cliente) selected.getValue();
+            Iterator it = c.getTemasFavItem().iterator();
+            while(it.hasNext()){
+                CBsaveFavTemaTema.addItem((Item)it.next());
+            }
+        }        
+        
         GuardarTema.setVisible(true);
     }//GEN-LAST:event_jMenuSaveTemaActionPerformed
 
     private void jMenuSaveListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveListaActionPerformed
+        Iterator itCliente = ICU.getItemCliente().iterator();
+        Item itemCliente;
+        jCBsaveListFavClnt.removeAllItems();
+        while(itCliente.hasNext()){
+            itemCliente=(Item) itCliente.next();
+            jCBsaveListFavClnt.addItem(itemCliente);
+        }
+        Item selected = (Item)jCBsaveListFavClnt.getSelectedItem();
+        if(selected!=null){
+            Cliente c = (Cliente) selected.getValue();
+            Iterator it = c.getTemasFavItem().iterator();
+            while(it.hasNext()){
+                CBsaveFavTemaTema.addItem((Item)it.next());
+            }
+        }  
         GuardarLista.setVisible(true);
     }//GEN-LAST:event_jMenuSaveListaActionPerformed
 
     private void jMenuSaveAlbumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSaveAlbumActionPerformed
+        Iterator itCliente = ICU.getItemCliente().iterator();
+        Item itemCliente;
+        CBsaveAlbumFavCliente.removeAllItems();
+        while(itCliente.hasNext()){
+            itemCliente=(Item) itCliente.next();
+            CBsaveAlbumFavCliente.addItem(itemCliente);
+        }
+        Item selected = (Item)CBsaveAlbumFavCliente.getSelectedItem();
+        if(selected!=null){
+            Cliente c = (Cliente) selected.getValue();
+            Iterator it = c.getTemasFavItem().iterator();
+            while(it.hasNext()){
+                CBsaveFavTemaTema.addItem((Item)it.next());
+            }
+        }  
         GuardarAlbum.setVisible(true);
     }//GEN-LAST:event_jMenuSaveAlbumActionPerformed
 

@@ -4372,7 +4372,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_JboxConsultarAlbArtItemStateChanged
 
     private void RegistrarArtistaAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarArtistaAcceptButtonActionPerformed
-    String nick = this.jRegisterNicknameField.getText();
+        String nick = this.jRegisterNicknameField.getText();
         String email = this.jRegisterApellidolField.getText();
         String nombre= this.jRegisterNombreField.getText();
         String apellido = this.jRegisterEmailField.getText();

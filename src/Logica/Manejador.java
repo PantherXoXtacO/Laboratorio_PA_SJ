@@ -132,6 +132,12 @@ public class Manejador {
         return false;
     } 
     
+    public boolean artistLibre(String nombre){
+            if(this.obtenerArtista(nombre)== null)
+                return true;
+            return false;
+    }  
+    
    
     public Usuario obtenerClientePorMail(String mail){
         Iterator it = clientes.iterator();

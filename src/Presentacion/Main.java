@@ -1294,7 +1294,7 @@ public class Main extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
                         .addComponent(PCLLabelDeUsuario_Lista1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 906, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                         .addComponent(ConsultUserTextFIeld3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -2410,7 +2410,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2484,7 +2484,7 @@ public class Main extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createSequentialGroup()
                         .addComponent(CLLabel0)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 606, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(CLTextFieldDePathDeImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2811,13 +2811,13 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CLGLButton10))
             .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addGap(0, 984, Short.MAX_VALUE)
+                .addGap(0, 294, Short.MAX_VALUE)
                 .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CLGeneroListLayout.setVerticalGroup(
             CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3945,18 +3945,6 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AltaAlbumbtnConfirmar2ActionPerformed
 
-    private void ExistArtistAltaAlbumArtistTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed
-
-    private void ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
-        this.ExistArtistAltaAlbum.setVisible(false);
-    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
-
-    private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
-
     private void jMenuItemDejarDeSeguirUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDejarDeSeguirUsuActionPerformed
          this.DejarDeSeguirUsuario.setVisible(true);
     }//GEN-LAST:event_jMenuItemDejarDeSeguirUsuActionPerformed
@@ -4392,6 +4380,26 @@ public class Main extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "El Artista se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE); 
     
     }//GEN-LAST:event_RegistrarArtistaAcceptButtonActionPerformed
+
+    private void ExistArtistAltaAlbumArtistTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed
+
+    private void ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
+        this.ExistArtistAltaAlbum.setVisible(false);
+    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
+
+    private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
+        String artistAlbum = this.ExistArtistAltaAlbumArtistText.getText();
+        if ("Artista".equals(artistAlbum) ) {// FALTA CONSULTA EN LA BASE SI EXISTE EL ARTISTA
+            if(ICU.artistLibre(artistAlbum)){
+                this.AltaAlbum1.setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(this, "ERROR: No existe el artista", "ERROR: Elección de artista", JOptionPane.ERROR_MESSAGE);
+                this.ExistArtistAltaAlbum.setVisible(false);
+            }
+        }
+    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
 
     /**
      * @param args the command line arguments

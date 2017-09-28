@@ -49,5 +49,10 @@ public interface IControlador{
     public ListaParticular getListByName(Cliente user, String name);
 
     public abstract List getListasDefectoItem();
+    public boolean artistLibre(String artistAlbum);
+
+    public void GuardarListaFav(Object selectedItem, Object selectedItem0);
+    public abstract void GuardarTemaFav(Object selectedItem, Object selectedItem0);
+    
 }
 

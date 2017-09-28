@@ -38,6 +38,12 @@ public class Album implements Serializable {
     private List<Genero> genero;
 
     public Album() {
+        nombre="";
+        anio = 0;
+        img="";
+        artista= null;
+        temas = new ArrayList();
+        genero = new ArrayList();
     }
     
     public Album(String nom, int year, String imagen, Artista artist){
@@ -50,8 +56,37 @@ public class Album implements Serializable {
         genero=new ArrayList();
     }
     
+    public Album(Album album){
+        nombre = album.nombre;
+        anio = album.anio;
+        img = album.img;
+        artista = album.artista;
+        temas = album.temas;
+        genero = album.genero;
+    }
+    
     public String getNombre(){
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public void setArtista(Artista artista) {
+        this.artista = artista;
+    }
+
+    public void setGenero(List<Genero> genero) {
+        this.genero = genero;
     }
     
     public int getAnio(){
@@ -72,6 +107,10 @@ public class Album implements Serializable {
     
     public List<Genero> getGeneros(){
         return genero;
+    }
+    
+    public void addTema(Tema tema){
+        this.temas.add(tema);
     }
     
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

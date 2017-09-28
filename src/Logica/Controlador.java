@@ -135,11 +135,25 @@ public class Controlador implements IControlador {
     }
     
     @Override
+    public List getItemArtista(){
+        Manejador M=Manejador.getinstance();
+        List ret=M.ItemArtista();
+        return ret;       
+    }
+    
+    @Override
     public List getTemasItem(){
      Manejador M=Manejador.getinstance();
      List ret=M.ItemTemas();
      return ret;
     }    
+    
+    @Override
+    public List getGeneroItem(){
+     Manejador M=Manejador.getinstance();
+     List ret=M.ItemGenero();
+     return ret;
+    } 
     
     @Override
     public void agregarTemaALista(Object Lista, Object Tema){
@@ -355,5 +369,58 @@ public class Controlador implements IControlador {
              u1.removeFollow(u2);
              u2.removeFollower(u1);
        }
+    }
+    
+    @Override
+    public void createTemporalAlbum(){
+        Manejador M=Manejador.getinstance();
+        M.createTemporalAlbum();
+    }
+    
+    @Override
+    public void deleteTemporalAlbum(){
+        Manejador M=Manejador.getinstance();
+        M.deleteTemporalAlbum();
+    }
+    
+    @Override
+    public void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath){
+        Manejador M=Manejador.getinstance();
+    }
+    
+    @Override
+    public void addTemporalAlbum(){
+        Manejador M=Manejador.getinstance();
+        M.addTemporalAlbum();
+    }
+    
+    @Override
+    public void createTemporalGenres(){
+        Manejador M=Manejador.getinstance();
+        M.createTemporalGenres();
+    }
+    
+    @Override
+    public void addToTemporalGenres(Genero genero){
+        Manejador M=Manejador.getinstance();
+        M.addToTemporalGenres(genero);
+    }
+    
+    @Override
+    public void wipeTemporalGenres(){
+        Manejador M=Manejador.getinstance();
+        M.wipeTemporalGenres();
+    }
+    
+    @Override
+    public List<Genero> getTemporalGenres(){
+        Manejador M=Manejador.getinstance();
+        return M.getTemporalGenres();
+    }
+    
+    @Override
+    public Album getTemporalAlbum(){
+        Manejador M=Manejador.getinstance();
+        return M.getTemporalAlbum();
     }
 }

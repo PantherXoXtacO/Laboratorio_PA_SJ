@@ -29,8 +29,9 @@ public interface IControlador{
     public abstract Cliente consultarCliente(String nickname);
     public abstract Artista consultarArtista(String nickname);
     public abstract List getItemCliente();
-
+    public abstract List getItemArtista();
     public abstract List getTemasItem();
+    public abstract List getGeneroItem();
 
     public abstract void agregarTemaALista(Object Lista, Object Tema);
 
@@ -70,6 +71,14 @@ public interface IControlador{
     public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
     public abstract void GuardarTemaFavorito(Object selectedItem, Object selectedItem0);
     public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
-    
+    public abstract void createTemporalAlbum();
+    public abstract void deleteTemporalAlbum();
+    public abstract void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath);
+    public abstract void addTemporalAlbum();
+    public abstract void createTemporalGenres();
+    public abstract void addToTemporalGenres(Genero genero);
+    public abstract void wipeTemporalGenres();
+    public abstract List<Genero> getTemporalGenres();
+    public abstract Album getTemporalAlbum();
 }
 

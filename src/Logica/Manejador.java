@@ -19,6 +19,8 @@ public class Manejador {
     private List<Genero> generosList;
     private List<Tema> Temas;//Guarda los temas en una lista
     private List<Album> Albums;
+    private Album TemporalAlbum;
+    private List<Genero> TemporalGeneros;
     
     //Ids para la identificadores
     private double IdTema;
@@ -46,9 +48,13 @@ public class Manejador {
         Query q = entitymanager.createQuery("SELECT a FROM Cliente a");
         Query q2 = entitymanager.createQuery("SELECT a FROM Artista a");
         Query QGeneros = entitymanager.createQuery("SELECT a FROM Genero a");
+        Query q3 = entitymanager.createQuery("SELECT a from Album a");
+        Query q4 = entitymanager.createQuery("SELECT a from Tema a");
         clientes = q.getResultList();
         artistas = q2.getResultList();
         generosList = QGeneros.getResultList();
+        Albums = q3.getResultList();
+        Temas = q4.getResultList();
         
         
         
@@ -235,6 +241,18 @@ public class Manejador {
         return genero;
     }
     
+    public void createTemporalAlbum(){
+        this.TemporalAlbum = new Album();
+    }
+    
+    public void deleteTemporalAlbum(){
+        this.TemporalAlbum = null;
+    }
+    
+    public Album getTemporalAlbum(){
+        return this.TemporalAlbum;
+    }
+    
     public Genero getGeneroPorNombre(String nombre){
         Iterator it = generosList.iterator();
         Genero user;
@@ -336,6 +354,17 @@ public class Manejador {
         }
         return ret;
     }
+    
+    public List ItemArtista() {
+        Iterator it=artistas.iterator();
+        Artista c;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            c=(Artista) it.next();
+            ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
+    }
 
     public List ItemTemas() {
         Iterator it=Temas.iterator();
@@ -343,6 +372,17 @@ public class Manejador {
         List ret= new ArrayList();
         while(it.hasNext()){
             t=(Tema)it.next();
+            ret.add(new Item(t, t.getNombre()));
+        }
+        return ret;
+    }
+    
+    public List ItemGenero() {
+        Iterator it=generosList.iterator();
+        Genero t;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            t=(Genero)it.next();
             ret.add(new Item(t, t.getNombre()));
         }
         return ret;
@@ -363,4 +403,41 @@ public class Manejador {
         }
         return ret;
     }
+    
+    public void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath){
+        this.TemporalAlbum.setArtista(artist);
+        this.TemporalAlbum.setNombre(nombre);
+        this.TemporalAlbum.setGenero(generos);
+        this.TemporalAlbum.setAnio(año);
+        this.TemporalAlbum.setImg(imagePath);
+    }
+    
+    public void addTemporalAlbum(){
+        Artista artista = this.TemporalAlbum.getArtista();
+        Album albumToAdd = new Album(this.TemporalAlbum);
+        this.Albums.add(albumToAdd);
+       // artista.addAlbum(albumToAdd);
+        deleteTemporalAlbum();        
+    }
+    
+    public void createTemporalGenres(){
+        this.TemporalGeneros = new ArrayList();
+    }
+    
+    public void addToTemporalGenres(Genero genero){
+        this.TemporalGeneros.add(genero);
+    }
+    
+    public void wipeTemporalGenres(){
+        this.TemporalGeneros = null;
+    }
+    
+    public List<Genero> getTemporalGenres(){
+        return this.TemporalGeneros;
+    }
+    
+    public void addAlbum(Album album){
+        this.Albums.add(album);
+    }
+    
 }

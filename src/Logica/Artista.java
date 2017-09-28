@@ -39,7 +39,7 @@ public class Artista extends Usuario {
     }
     
     public Artista(){
-        
+        this.albums = new ArrayList();
     }
     
     @Override
@@ -52,6 +52,10 @@ public class Artista extends Usuario {
         //siguiendo.remove(u);
     }
 
+    public void addAlbum(Album album){
+        this.albums.add(album);
+    }
+    
     public List getAlbumsItem() {
         Iterator it = albums.iterator();
         Album a;

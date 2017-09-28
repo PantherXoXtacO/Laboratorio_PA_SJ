@@ -1006,7 +1006,7 @@
                       <Component id="RegFrameLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="UserTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="195" max="32767" attributes="0"/>
+                  <EmptySpace pref="194" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegisterCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RegisterAcceptButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1114,7 +1114,7 @@
         <Component class="javax.swing.JComboBox" name="UserTypeComboBox">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Clienteasd&quot;, &quot;Artista&quot; })" type="code"/>
+              <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Cliente&quot;, &quot;Artista&quot; })" type="code"/>
             </Property>
           </Properties>
           <Events>
@@ -1274,7 +1274,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="CLCUserListScroll2" pref="381" max="32767" attributes="0"/>
+                  <Component id="CLCUserListScroll2" pref="384" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2471,31 +2471,32 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="DejarSeguirUsuarioClient" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="DejarSeguirUsuarioUsu" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                          <Component id="DejarSeguirUsuarioTitle" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="DejarSeguirUsuarioCancelar1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="DejarSeguirUsuarioConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
+                          <EmptySpace pref="252" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="DejarSeguirUsuarioClient" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="DejarSeguirUsuarioUsu" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="DejarSeguirUsuarioClientText" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                  <Component id="DejarSeguirUsuarioCancelar1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="DejarSeguirUsuarioConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="242" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="DejarSeguirUsuarioUsuText" alignment="0" max="32767" attributes="0"/>
+                              <Component id="CBSeguirUserSeguidor1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="CBSeguirUserSeguidor2" alignment="1" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                  <Component id="DejarSeguirUsuarioTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -2508,19 +2509,19 @@
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="DejarSeguirUsuarioClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="DejarSeguirUsuarioClientText" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CBSeguirUserSeguidor1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="DejarSeguirUsuarioUsuText" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DejarSeguirUsuarioUsu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CBSeguirUserSeguidor2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="DejarSeguirUsuarioCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DejarSeguirUsuarioConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="39" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2544,10 +2545,6 @@
             <Property name="text" type="java.lang.String" value="Usuario: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="DejarSeguirUsuarioClientText">
-        </Component>
-        <Component class="javax.swing.JTextField" name="DejarSeguirUsuarioUsuText">
-        </Component>
         <Component class="javax.swing.JButton" name="DejarSeguirUsuarioCancelar1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
@@ -2564,149 +2561,32 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DejarSeguirUsuarioConfirmar1ActionPerformed"/>
           </Events>
         </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JInternalFrame" name="GuardarTemaListaAlbum">
-      <Properties>
-        <Property name="visible" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="false" type="code"/>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//GuardarTemaListaAlbum.setLocationRelativeTo(null);"/>
-      </AuxValues>
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                              <Component id="GuardarTLATitle" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="GuardarTLAClient" min="-2" pref="40" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="GuardarTLAClientText" min="-2" pref="250" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="GuardarTLATema" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="GuardarTLAList" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="GuardarTLAAlbum" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="GuardarTLAListText" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="GuardarTLATemaText" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="GuardarTLAAlbumText" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                          <Component id="GuardarTemaListaAlbumCancelar1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="GuardarTemaListaAlbumConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="207" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="GuardarTLATitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="GuardarTLAClient" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="GuardarTLAClientText" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="GuardarTLATema" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="GuardarTLATemaText" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="GuardarTLAListText" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="GuardarTLAList" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="GuardarTLAAlbum" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="GuardarTLAAlbumText" alignment="0" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="GuardarTemaListaAlbumCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="GuardarTemaListaAlbumConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-              </Group>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JLabel" name="GuardarTLATitle">
+        <Component class="javax.swing.JComboBox" name="CBSeguirUserSeguidor1">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Calibri" size="18" style="1"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Guardar Tema/Lista/Album"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="GuardarTLAClient">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cliente: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="GuardarTLAClientText">
-        </Component>
-        <Component class="javax.swing.JLabel" name="GuardarTLATema">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tema: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="GuardarTLAList">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Lista: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="GuardarTLAAlbum">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Album: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="GuardarTLATemaText">
-        </Component>
-        <Component class="javax.swing.JTextField" name="GuardarTLAListText">
-        </Component>
-        <Component class="javax.swing.JTextField" name="GuardarTLAAlbumText">
-        </Component>
-        <Component class="javax.swing.JButton" name="GuardarTemaListaAlbumCancelar1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cancelar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarTemaListaAlbumCancelar1ActionPerformed"/>
+            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="CBSeguirUserSeguidor1ItemStateChanged"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBSeguirUserSeguidor1ActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
+          </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="GuardarTemaListaAlbumConfirmar1">
+        <Component class="javax.swing.JComboBox" name="CBSeguirUserSeguidor2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Confirmar"/>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuardarTemaListaAlbumConfirmar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBSeguirUserSeguidor2ActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -3275,7 +3155,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="232" max="32767" attributes="0"/>
+                  <EmptySpace pref="244" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CBSeguirUserSeguidor" min="-2" max="-2" attributes="0"/>
@@ -3326,6 +3206,9 @@
               <StringArray count="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBSeguirUserSeguidorActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Item&gt;"/>
           </AuxValues>
@@ -4235,7 +4118,7 @@
                           <Component id="AltaALbumAgrTema1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="228" max="32767" attributes="0"/>
+                  <EmptySpace pref="227" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="AltaAlbumbtnCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="AltaAlbumbtnConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>

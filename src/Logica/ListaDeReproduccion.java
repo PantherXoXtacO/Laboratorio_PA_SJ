@@ -55,6 +55,6 @@ public class ListaDeReproduccion {
     }
 
     void agregarTema(Tema tem) {
-        temas.add(tem);
-    }    
+        if(!temas.contains(tem)) temas.add(tem);
+    }
 }

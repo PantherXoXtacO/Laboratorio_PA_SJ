@@ -28,7 +28,7 @@ public class Cliente extends Usuario{
         this.temasFav = new ArrayList();
         this.albumsFav = new ArrayList();
         this.listasFav = new ArrayList();
-        this.Listas = new ArrayList();        
+        this.Listas = new ArrayList();
     }
 
     public Cliente() {
@@ -39,7 +39,7 @@ public class Cliente extends Usuario{
     }
     
     @Override
-    void addFollow(Usuario u2) {
+    public void addFollow(Usuario u2) {
         siguiendo.add(u2);
     }    
     
@@ -89,7 +89,18 @@ public class Cliente extends Usuario{
         return ret;
     }
 
-    void quitarListFav(ListaDeReproduccion lista) {
+    public void quitarListFav(ListaDeReproduccion lista) {
         listasFav.remove(lista);
+    }
+
+    public List getAlbumsFavItem() {
+        Iterator it = albumsFav.iterator();
+        Album a;
+        List ret =new ArrayList();
+        while(it.hasNext()){
+            a= (Album) it.next();
+            ret.add(new Item(a,a.getNombre()));
+        }
+        return ret;
     }
 }

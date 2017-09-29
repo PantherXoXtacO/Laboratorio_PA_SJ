@@ -4141,6 +4141,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_AltaAlbumbtnConfirmar2ActionPerformed
 
     private void jMenuItemDejarDeSeguirUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDejarDeSeguirUsuActionPerformed
+        CBSeguirUserSeguidor1.resetKeyboardActions();
         //CBSeguirUserSeguidor1.removeAllItems();
         populateCBwithClient(CBSeguirUserSeguidor1);
         Item asditem = (Item) CBSeguirUserSeguidor1.getSelectedItem();
@@ -4708,12 +4709,19 @@ public class Main extends javax.swing.JFrame {
         String artista = ExistArtistAltaAlbumArtistText.getText();
         Artista artist = ICU.consultarArtista(artista);
         List<Genero> generos = ICU.getTemporalGenres();
-        ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-        ICU.addTemporalAlbum(artist);
-        ICU.deleteTemporalAlbum();
-        ICU.wipeTemporalGenres();
-        JOptionPane.showMessageDialog(this, "Album creado con exito", "Alta album", JOptionPane.INFORMATION_MESSAGE);
-        AltaAlbum1.setVisible(false);
+        if(artist!=null){
+            System.out.println(nombre + Integer.toString(año));
+            ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
+          ICU.addTemporalAlbum(artist);
+            ICU.deleteTemporalAlbum();
+           ICU.wipeTemporalGenres();
+           JOptionPane.showMessageDialog(this, "Album creado con exito", "Alta album", JOptionPane.INFORMATION_MESSAGE);
+            AltaAlbum1.setVisible(false);
+        }
+        else{
+            JOptionPane.showMessageDialog(this, "era null", "Alta album", JOptionPane.ERROR_MESSAGE);
+        }
+ 
     }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed
 
     private void AltaALbumAgrTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaALbumAgrTemaActionPerformed
@@ -4864,13 +4872,16 @@ public class Main extends javax.swing.JFrame {
     private void CBSeguirUserSeguidor1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CBSeguirUserSeguidor1ItemStateChanged
         CBSeguirUserSeguidor2.removeAllItems();
         Item asditem = (Item) CBSeguirUserSeguidor1.getSelectedItem();
-        Cliente cliente = (Cliente) asditem.getValue();
-        Iterator it = cliente.ItemSiguiendo().iterator();
-        Item item;
-        while(it.hasNext()){
-            item = (Item) it.next();
-            CBSeguirUserSeguidor2.addItem(item);
-        }        
+        if(asditem!=null){
+            Cliente cliente = (Cliente) asditem.getValue();
+            Iterator it = cliente.ItemSiguiendo().iterator();
+            Item item;
+            while(it.hasNext()){
+                item = (Item) it.next();
+                CBSeguirUserSeguidor2.addItem(item);
+            }   
+        }
+     
     }//GEN-LAST:event_CBSeguirUserSeguidor1ItemStateChanged
 
     /**

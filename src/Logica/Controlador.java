@@ -278,8 +278,8 @@ public class Controlador implements IControlador {
        Usuario u1 = (Usuario) seguidor.getValue();
        Usuario u2 = (Usuario) seguido.getValue();
        if(u1!=null && u2!=null){
-           u2.removeFollow(u1);
-            u1.removeFollower(u2);
+           u1.removeFollow(u2);
+           u2.removeFollower(u1);
        }
        else{
            System.out.println("kek");

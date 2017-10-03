@@ -222,7 +222,7 @@ public class Controlador implements IControlador {
         List ret=new ArrayList();
         while(it.hasNext()){
             art=(Artista)it.next();
-            ret.add(new Item(art,art.getNombre()));
+            ret.add(new Item(art,art.getNickname()));
         }
         return ret;
     }
@@ -274,13 +274,15 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public void DejarSeguirUsuario(String seguidor, String seguido) {
-       Manejador M=Manejador.getinstance();
-       Usuario u1 = M.obtenerUsuario(seguidor);
-       Usuario u2 = M.obtenerUsuario(seguido);
+    public void DejarSeguirUsuario(Item seguidor, Item seguido) {
+       Usuario u1 = (Usuario) seguidor.getValue();
+       Usuario u2 = (Usuario) seguido.getValue();
        if(u1!=null && u2!=null){
-            u1.removeFollow(u2);
-            u2.removeFollower(u1);
+           u1.removeFollow(u2);
+           u2.removeFollower(u1);
+       }
+       else{
+           System.out.println("kek");
        }
     }  
     
@@ -423,4 +425,6 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         return M.getTemporalAlbum();
     }
+
+
 }

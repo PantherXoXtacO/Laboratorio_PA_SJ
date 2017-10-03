@@ -135,6 +135,7 @@ public abstract class Usuario implements Serializable {
     
 
     void removeFollower(Usuario u1) {
+        System.out.println("lul");
         seguidores.remove(u1);
     }
     
@@ -148,4 +149,16 @@ public abstract class Usuario implements Serializable {
         }
         return ret;
     }
+    
+    public List<Item> getSeguidoresItem(){
+       Iterator it=this.seguidores.iterator();
+        Usuario c;
+        List ret= new ArrayList();
+        while(it.hasNext()){
+            c=(Usuario) it.next();
+            ret.add(new Item(c, c.getNickname()));
+        }
+        return ret;
+    }
+    
 }

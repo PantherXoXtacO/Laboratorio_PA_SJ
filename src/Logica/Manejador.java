@@ -415,11 +415,15 @@ public class Manejador {
     }
     
     public void addTemporalAlbum(Artista artist){        
+        //EntityManager em = emfactory.createEntityManager( );
+        //Artista artista = em.find(Artista.class, artist.id);
+        //em.getTransaction().begin();
         Album albumToAdd = new Album(this.TemporalAlbum);
         List<Genero> generos = this.TemporalAlbum.getGeneros();
         addAlbumToGeneros(generos, albumToAdd);
-        this.Albums.add(albumToAdd);
-        artist.addAlbum(albumToAdd);
+        this.Albums.add(albumToAdd);artist.addAlbum(albumToAdd);
+        //em.getTransaction().commit(); 
+        
         deleteTemporalAlbum();        
     }
     

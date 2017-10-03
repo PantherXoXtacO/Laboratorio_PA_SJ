@@ -3839,6 +3839,7 @@ public class Main extends javax.swing.JFrame {
             Item item = (Item) jListConsultarAlbumGen.getSelectedValue();
             Album alb = (Album) item.getValue();
             consultarAlbum(alb);
+            System.out.println("lul2");
         }
         else
             JOptionPane.showMessageDialog(this, "ERROR: No hay ningun album seleccionado", "ERROR: Seleccion de album", JOptionPane.ERROR_MESSAGE);
@@ -3930,6 +3931,7 @@ public class Main extends javax.swing.JFrame {
         jLConsultAlbNom.setText(alb.getNombre());
         jLConsultAlbDate.setText(Integer.toString(alb.getAnio()));
         populateGenList(alb.getGeneros());
+        System.out.println("consultarAlbumTest2");
         populateTemList(alb.getTemas());
         ImageIcon img = new ImageIcon(alb.getImg());
         jLConsultAlbImg.setIcon(img);
@@ -3938,6 +3940,7 @@ public class Main extends javax.swing.JFrame {
     
     private void populateGenList(List l){
         DefaultListModel model = (DefaultListModel) jLConsultAlbGen.getModel();
+        System.out.println("populateGenList2");
         model.removeAllElements();
         Iterator it = l.iterator();
         Genero g;

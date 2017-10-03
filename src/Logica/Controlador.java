@@ -52,7 +52,6 @@ public class Controlador implements IControlador {
         if(nuevoGen==null){
             nuevoGen=new Genero(nombre);
             if(padre.equals("") || padre.equals("General")){
-                //System.out.println("sin padre");
                 gen=mu.getGenero();
                 gen.addHijo(nuevoGen);
             }
@@ -388,6 +387,9 @@ public class Controlador implements IControlador {
     @Override
     public void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath){
         Manejador M=Manejador.getinstance();
+        M.configTemporalAlbum(artist, nombre, generos, año, imagePath);
+        
+        
     }
     
     @Override

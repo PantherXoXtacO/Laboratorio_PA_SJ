@@ -426,7 +426,6 @@ public class Manejador {
     public void addAlbumToGeneros(List<Genero> generos, Album album){
         Iterator it=generos.iterator();
         Genero g;
-        List ret= new ArrayList();
         while(it.hasNext()){
             g=(Genero) it.next();
             g.addAlbum(album);

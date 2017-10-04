@@ -1590,7 +1590,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFConsultarAlbumGen);
@@ -1604,10 +1604,12 @@ public class Main extends javax.swing.JFrame {
 
         jLConsultAlb3.setText("Generos:");
 
+        jLConsultAlbGen.setModel(new DefaultListModel());
         jScrollPane8.setViewportView(jLConsultAlbGen);
 
         jLConsultAlb4.setText("Canciones:");
 
+        jLConsultAlbTemas.setModel(new DefaultListModel());
         jScrollPane9.setViewportView(jLConsultAlbTemas);
 
         BConsultAlbAceptar.setText("Aceptar");
@@ -1676,7 +1678,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         jLConsultAlbImg.getAccessibleContext().setAccessibleName("jLConsultAlbImg");
@@ -3038,7 +3040,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(AltaAlbum1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(AltaALbumAgrTema1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 232, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
                 .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1)))
@@ -3864,7 +3866,7 @@ public class Main extends javax.swing.JFrame {
     private void jMenuConsultarAlbumArtistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumArtistActionPerformed
         //populateJBArtist(JboxConsultarAlbArt)
         //System.out.println(artist.getAlbums().get(0).getNombre());
-        JboxConsultarAlbAlb.getItemCount();
+        JboxConsultarAlbArt.removeAllItems();
         Iterator itArt = ICU.getItemArtist().iterator();
         Item itemArt;
         while(itArt.hasNext()){

@@ -456,4 +456,8 @@ public class Manejador {
         this.Albums.add(album);
     }
     
+    public void addTema(Tema tema){
+        this.Temas.add(tema);
+    }
+    
 }

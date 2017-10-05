@@ -389,7 +389,12 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         M.configTemporalAlbum(artist, nombre, generos, año, imagePath);
         
-        
+    }
+    
+    @Override
+    public void addTemaToM(Tema tema){
+        Manejador M=Manejador.getinstance();
+        M.addTema(tema);
     }
     
     @Override

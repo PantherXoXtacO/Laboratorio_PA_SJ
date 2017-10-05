@@ -1941,7 +1941,7 @@
                       <Component id="jBConsultarAlbumGenCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBConsultarAlbumGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="154" max="32767" attributes="0"/>
+                  <EmptySpace pref="162" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2791,7 +2791,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CLPButton6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="279" max="32767" attributes="0"/>
+                  <EmptySpace pref="283" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLRegisterButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCancelButton2" alignment="3" min="-2" max="-2" attributes="0"/>

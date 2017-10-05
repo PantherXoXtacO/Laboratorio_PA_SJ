@@ -3429,6 +3429,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jMenuItemCrearAlbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearAlbActionPerformed
         this.ExistArtistAltaAlbum.setVisible(true);
+        ExistArtistAltaAlbumArtistText.setText("");
         ICU.createTemporalAlbum();
         ICU.createTemporalGenres();
     }//GEN-LAST:event_jMenuItemCrearAlbActionPerformed
@@ -3739,14 +3740,6 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             CBRemoveFavTemaCliente.addItem(itemCliente);
         }
-        Item selected = (Item)CBRemoveFavTemaCliente.getSelectedItem();
-        if(selected!=null){
-            Cliente c = (Cliente) selected.getValue();
-            Iterator it = c.getTemasFavItem().iterator();
-            while(it.hasNext()){
-                CBRemoveFavTemaTema.addItem((Item)it.next());
-            }
-        }        
         FrameRemoveTemaFav.setVisible(true);        
     }//GEN-LAST:event_jMenuRemoveTemaFavActionPerformed
 
@@ -3775,11 +3768,6 @@ public class Main extends javax.swing.JFrame {
         while(itCliente.hasNext()){
             itemCliente=(Item) itCliente.next();
             CBRemoveAlbumFavCliente.addItem(itemCliente);
-        }
-        Item item = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
-        if(item!=null){
-            Cliente c = (Cliente) item.getValue();
-             populateCBAlbum(CBRemoveAlbumFavAlbum,c);
         }
         FrameRemoveAlbumFav.setVisible(true);
     }//GEN-LAST:event_jMenuRemoveAlbumFavActionPerformed
@@ -4573,15 +4561,7 @@ public class Main extends javax.swing.JFrame {
         while(itCliente.hasNext()){
             itemCliente=(Item) itCliente.next();
             CBsaveFavTemaCliente.addItem(itemCliente);
-        }
-        Item selected = (Item)CBsaveFavTemaCliente.getSelectedItem();
-        if(selected!=null){
-            Manejador mu = Manejador.getinstance();
-            Iterator it = mu.getTemasItem().iterator();
-            while(it.hasNext()){
-                CBsaveFavTemaTema.addItem((Item)it.next());
-            }
-        }                
+        }       
         GuardarTema.setVisible(true);
     }//GEN-LAST:event_jMenuSaveTemaActionPerformed
 
@@ -4646,6 +4626,7 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jBsaveAlbumFavCancelActionPerformed
 
     private void CBsaveFavTemaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBsaveFavTemaClienteActionPerformed
+        CBsaveFavTemaTema.removeAllItems();
         Item selected = (Item)CBsaveFavTemaCliente.getSelectedItem();
         if(selected!=null){
             Manejador mu = Manejador.getinstance();
@@ -4741,11 +4722,11 @@ public class Main extends javax.swing.JFrame {
         Album album = ICU.getTemporalAlbum();
         Tema tema = new Tema(nom, duracion, ubicacion, album);
         album.addTema(tema);
+        ICU.addTemaToM(tema);
 
         this.AltaALbumAgrTemaNom.setText("");
         this.AltaALbumAgrTemaDur.setText("");
         this.AltaALbumAgrTemaUbi.setText("");
-        ExistArtistAltaAlbumArtistText.setText("");
         AltaAlbum1.setVisible(true);    
         AltaTema.setVisible(false);
         JOptionPane.showMessageDialog(this, "Tema agregado", "Agregar tema", JOptionPane.INFORMATION_MESSAGE);

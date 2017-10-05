@@ -80,5 +80,6 @@ public interface IControlador{
     public abstract void wipeTemporalGenres();
     public abstract List<Genero> getTemporalGenres();
     public abstract Album getTemporalAlbum();
+    public abstract void addTemaToM(Tema tema);
 }
 

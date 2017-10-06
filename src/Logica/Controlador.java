@@ -4,6 +4,8 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -431,6 +433,21 @@ public class Controlador implements IControlador {
     public Album getTemporalAlbum(){
         Manejador M=Manejador.getinstance();
         return M.getTemporalAlbum();
+    }
+    
+    @Override
+    public String absolutePathToRelative(String path){
+        Pattern p = Pattern.compile("\\w+\\\\data\\\\user_images\\\\\\w+.jpg|\\\\\\w+\\\\data\\\\user_images\\\\\\w+.png");
+        Pattern p2 = Pattern.compile("(\\\\\\w+)+\\\\data\\\\user_images\\\\\\w+(.png|.jpg)");
+        Matcher m = p2.matcher(path);
+        if(m.matches()){
+            int relativeIndex = path.indexOf("user_images/");
+            int finalRelativeIndex = relativeIndex + 12;
+            String relative = path.substring(finalRelativeIndex);
+            return relative;
+        }
+        else
+            return "data/user_images/default.jpg";
     }
 
 

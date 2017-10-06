@@ -81,5 +81,6 @@ public interface IControlador{
     public abstract List<Genero> getTemporalGenres();
     public abstract Album getTemporalAlbum();
     public abstract void addTemaToM(Tema tema);
+    public abstract String absolutePathToRelative(String path);
 }
 

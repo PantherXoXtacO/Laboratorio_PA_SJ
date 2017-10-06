@@ -3571,7 +3571,7 @@ public class Main extends javax.swing.JFrame {
         String apellido = this.jRegisterApellidolField.getText();
         String nombre= this.jRegisterNombreField.getText();
         String email = this.jRegisterEmailField.getText();
-        String imagePath = ".\\data\\user_images\\default.jpg";
+        String imagePath = "data/user_images/default.jpg";
         int userTypeIndex = this.UserTypeComboBox.getSelectedIndex();
         String userType = this.UserTypeComboBox.getItemAt(userTypeIndex);
         int dia = this.jComboBoxDia.getSelectedIndex() + 1;
@@ -3581,8 +3581,12 @@ public class Main extends javax.swing.JFrame {
         if(fechaDeNac.validarFecha()){
             if(!nick.isEmpty() && !email.isEmpty() && !nombre.isEmpty() &&
                     !apellido.isEmpty()){
-               if(!this.ImagePathTextField.getText().equals(""))
-                    imagePath = this.ImagePathTextField.getText();
+               if(!this.ImagePathTextField.getText().equals("")){
+                   System.out.println(this.ImagePathTextField.getText());
+                   String relativePath = ICU.absolutePathToRelative(this.ImagePathTextField.getText());
+                   System.out.println(relativePath);
+                   imagePath = relativePath;                   
+               }                    
                if(userType=="Cliente")
                     if(ICU.nicknameLibre(nick)){
                         if(ICU.mailLibre(email)){

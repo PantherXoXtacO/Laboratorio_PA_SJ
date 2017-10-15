@@ -4,6 +4,7 @@ package Logica;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import javax.persistence.Entity;
@@ -74,7 +75,7 @@ public class Cliente extends Usuario{
         }
         return ret;
     }
-
+    
     public void quitarTemaFav(Tema t) {
         temasFav.remove(t);
     }
@@ -131,5 +132,18 @@ public class Cliente extends Usuario{
         }
         return ret;
     }
-        
+
+    Collection getListasPublicas() {
+        Iterator it= Listas.iterator();
+        //Item L;
+        ListaParticular L;
+        List ret = new ArrayList();
+        while(it.hasNext()){
+            L=(ListaParticular) it.next();
+            if(!L.getPrivacidad()){
+                ret.add(new Item(L, L.getNombre()));
+            }
+        }
+       return ret;
+    }        
 }

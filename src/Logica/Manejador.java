@@ -459,5 +459,16 @@ public class Manejador {
     public void addTema(Tema tema){
         this.Temas.add(tema);
     }
-    
+
+    public List getAllListsAsItem() {
+        List ret = new ArrayList();
+        Iterator itC = clientes.iterator();
+        Cliente c;
+        while(itC.hasNext()){
+            c=(Cliente) itC.next();
+            ret.addAll(c.getListasPublicas());
+        }
+        ret.addAll(this.getListasDefectoItem());        
+        return ret;
+    }    
 }

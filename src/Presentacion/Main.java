@@ -1590,7 +1590,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFConsultarAlbumGen);
@@ -2117,7 +2117,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 279, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2840,6 +2840,12 @@ public class Main extends javax.swing.JFrame {
         jLsaveAlbumFav.setText("Cliente");
 
         jLsaveAlbumFav2.setText("Album");
+
+        CBsaveAlbumFavAlbum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBsaveAlbumFavAlbumActionPerformed(evt);
+            }
+        });
 
         jBsaveAlbumFavAcept.setText("Aceptar");
         jBsaveAlbumFavAcept.addActionListener(new java.awt.event.ActionListener() {
@@ -3779,7 +3785,7 @@ public class Main extends javax.swing.JFrame {
     private void jBRemoveAlbumFavAceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRemoveAlbumFavAceptActionPerformed
         Item cliente = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
         if(cliente!=null){
-            Item album = (Item) CBRemoveAlbumFavCliente.getSelectedItem();
+            Item album = (Item) CBRemoveAlbumFavAlbum.getSelectedItem();
             if(album!=null){
                 ICU.QuitarAlbumFav(cliente, album);
                 JOptionPane.showMessageDialog(this, "Album eliminado de favoritos", "Eliminar album de favoritos", JOptionPane.INFORMATION_MESSAGE);
@@ -4577,6 +4583,13 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             jCBsaveListFavClnt.addItem(itemCliente);
         }
+        Iterator itLista = ICU.getListasAsItem().iterator();
+        Item lista;
+        jCBsaveListFavList.removeAllItems();
+        while(itLista.hasNext()){
+            lista = (Item) itLista.next();
+            jCBsaveListFavList.addItem(lista);
+        }
         GuardarLista.setVisible(true);
     }//GEN-LAST:event_jMenuSaveListaActionPerformed
 
@@ -4588,14 +4601,13 @@ public class Main extends javax.swing.JFrame {
             itemCliente=(Item) itCliente.next();
             CBsaveAlbumFavCliente.addItem(itemCliente);
         }
-        Item selected = (Item)CBsaveAlbumFavCliente.getSelectedItem();
-        if(selected!=null){
-            Manejador mu = Manejador.getinstance();
-            Iterator it = mu.getAlbumsItem().iterator();
-            while(it.hasNext()){
-                CBsaveAlbumFavAlbum.addItem((Item)it.next());
-            }
-        }  
+        CBsaveAlbumFavAlbum.removeAllItems();
+        Iterator itAlbm = ICU.getAlbumsAsItem().iterator();
+        Item itemAlb;
+        while(itAlbm.hasNext()){
+            itemAlb=(Item) itAlbm.next();
+            CBsaveAlbumFavAlbum.addItem(itemAlb);
+        }
         GuardarAlbum.setVisible(true);
     }//GEN-LAST:event_jMenuSaveAlbumActionPerformed
 
@@ -4642,18 +4654,18 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_CBsaveFavTemaClienteActionPerformed
 
     private void CBsaveAlbumFavClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBsaveAlbumFavClienteActionPerformed
-        Item selected = (Item)CBsaveAlbumFavCliente.getSelectedItem();
-        if(selected!=null){
-            Manejador mu = Manejador.getinstance();
-            Iterator it = mu.getAlbumsItem().iterator();
-            while(it.hasNext()){
-                CBsaveAlbumFavAlbum.addItem((Item)it.next());
-            }
-        } 
+//        Item selected = (Item)CBsaveAlbumFavCliente.getSelectedItem();
+//        if(selected!=null){
+//            Manejador mu = Manejador.getinstance();
+//            Iterator it = mu.getAlbumsItem().iterator();
+//            while(it.hasNext()){
+//                CBsaveAlbumFavAlbum.addItem((Item)it.next());
+//            }
+//        } 
     }//GEN-LAST:event_CBsaveAlbumFavClienteActionPerformed
 
     private void jCBsaveListFavClntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClntActionPerformed
-        jCBsaveListFavList.removeAllItems();
+/*        jCBsaveListFavList.removeAllItems();
         Item selected = (Item)jCBsaveListFavClnt.getSelectedItem();
         if(selected!=null){
             Cliente c = (Cliente) selected.getValue();
@@ -4666,7 +4678,7 @@ public class Main extends javax.swing.JFrame {
             while(it2.hasNext()){
                 jCBsaveListFavList.addItem((Item)it2.next()); 
             }
-        }  
+        }  */
     }//GEN-LAST:event_jCBsaveListFavClntActionPerformed
 
     private void jCBRemoveListFavClntActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBRemoveListFavClntActionPerformed
@@ -4876,6 +4888,10 @@ public class Main extends javax.swing.JFrame {
         }
      
     }//GEN-LAST:event_CBSeguirUserSeguidor1ItemStateChanged
+
+    private void CBsaveAlbumFavAlbumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBsaveAlbumFavAlbumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBsaveAlbumFavAlbumActionPerformed
 
     /**
      * @param args the command line arguments

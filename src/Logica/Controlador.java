@@ -167,9 +167,9 @@ public class Controlador implements IControlador {
     
     @Override
     public void QuitarTemaFavorito(Item cliente, Item tema){
-        Cliente client = (Cliente) cliente.getValue();
+        Cliente c = (Cliente) cliente.getValue();
         Tema t = (Tema) tema.getValue();
-        client.quitarTemaFav(t);
+        c.quitarTemaFav(t);
     }
     
     @Override
@@ -450,5 +450,15 @@ public class Controlador implements IControlador {
             return "data/user_images/default.jpg";
     }
 
-
+    @Override
+    public List getAlbumsAsItem(){
+        Manejador M=Manejador.getinstance();
+        return M.getAlbumsItem();
+    }
+    
+    @Override
+    public List getListasAsItem(){
+        Manejador M=Manejador.getinstance();
+        return M.getAllListsAsItem();
+    }
 }

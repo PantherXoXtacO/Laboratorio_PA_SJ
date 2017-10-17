@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Item.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Lab_Pro_Apl&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Logica</a> &gt; <span class="el_source">Item.java</span></div><h1>Item.java</h1><pre class="source lang-java linenums">package Logica;
+
+/**
+ *  The Item class is designed to be used by Swing components that use a
+ *  renderer to display an Object. Swing renderers rely on the toString()
+ *  implementation to display a description of an Object. Separating
+ *  the value and description properties gives increased flexibilty.
+ *
+ *  The &quot;description&quot; property is used by the renderer. The &quot;value&quot;
+ *  property is used for processing by the application.
+ */
+public class Item&lt;V&gt; implements Comparable&lt;Item&gt;
+{
+	private V value;
+	private String description;
+
+	/**
+	 *  Create an Item object
+	 *
+	 *  @param value an Object containing data used by the application
+	 *  @param description the text to be displayed by a renderer
+	 */
+	public Item(V value, String description)
+<span class="fc" id="L24">	{</span>
+<span class="fc" id="L25">		this.value = value;</span>
+<span class="fc" id="L26">		this.description = description;</span>
+<span class="fc" id="L27">	}</span>
+
+	/**
+	 *  Get the Object containing application data
+	 *
+	 *  @returns the application data
+	 */
+	public V getValue()
+	{
+<span class="nc" id="L36">		return value;</span>
+	}
+
+	/**
+	 *  Get the description of the value data
+	 *
+	 *  @returns the description to be displayed by a renderer
+	 */
+	public String getDescription()
+	{
+<span class="nc" id="L46">		return description;</span>
+	}
+
+	/**
+	 *  Implement the natural order for this class using the
+	 *  Description property
+	 *
+	 *  @param item the other Item object to be used in the comparison
+	 */
+	public int compareTo(Item item)
+	{
+<span class="nc" id="L57">		return getDescription().compareTo(item.getDescription());</span>
+	}
+
+	/**
+	 *  The Value property will be used to check for equality
+	 */
+	@Override
+	public boolean equals(Object object)
+	{
+<span class="nc" id="L66">		Item item = (Item)object;</span>
+
+<span class="nc bnc" id="L68" title="All 2 branches missed.">		return (item == null) ? false : value.equals(item.getValue());</span>
+	}
+
+	/**
+	 *  The Value property will be used to determine the hashCode
+	 */
+	@Override
+	public int hashCode()
+	{
+<span class="nc" id="L77">		return value.hashCode();</span>
+	}
+
+	/**
+	 *	The Description property will double as the toString representation.
+	 *
+	 *  @return the description
+	 */
+	@Override
+	public String toString()
+	{
+<span class="nc" id="L88">		return description;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

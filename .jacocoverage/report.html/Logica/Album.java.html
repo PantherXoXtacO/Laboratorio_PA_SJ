@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Album.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Lab_Pro_Apl&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">Logica</a> &gt; <span class="el_source">Album.java</span></div><h1>Album.java</h1><pre class="source lang-java linenums">package Logica;
+
+import javax.persistence.Entity;
+import java.io.Serializable;
+import java.util.List;
+import java.util.ArrayList;
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = &quot;ALBUM&quot;)
+public class Album implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
+
+    
+    private String nombre;
+    private int anio;
+    private String img;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = &quot;ARTISTA_DEL_ALBUM&quot;)
+    private Artista artista;
+    @OneToMany
+    @JoinTable(name=&quot;TEMAS_DEL_ALBUM&quot;, joinColumns=@JoinColumn(name=&quot;ALBUM_ID&quot;),
+               inverseJoinColumns=@JoinColumn(name=&quot;TEMAS_ID&quot;)) 
+    private List&lt;Tema&gt; temas;
+    private List&lt;Genero&gt; genero;
+
+<span class="fc" id="L40">    public Album() {</span>
+<span class="fc" id="L41">        nombre=&quot;&quot;;</span>
+<span class="fc" id="L42">        anio = 0;</span>
+<span class="fc" id="L43">        img=&quot;&quot;;</span>
+<span class="fc" id="L44">        artista= null;</span>
+<span class="fc" id="L45">        temas = new ArrayList();</span>
+<span class="fc" id="L46">        genero = new ArrayList();</span>
+<span class="fc" id="L47">    }</span>
+    
+<span class="nc" id="L49">    public Album(String nom, int year, String imagen, Artista artist){</span>
+<span class="nc" id="L50">        nombre=nom;</span>
+<span class="nc" id="L51">        anio=year;</span>
+<span class="nc" id="L52">        img=imagen;</span>
+<span class="nc" id="L53">        artista=artist;</span>
+        
+<span class="nc" id="L55">        temas=new ArrayList();</span>
+<span class="nc" id="L56">        genero=new ArrayList();</span>
+<span class="nc" id="L57">    }</span>
+    
+<span class="nc" id="L59">    public Album(Album album){</span>
+<span class="nc" id="L60">        nombre = album.nombre;</span>
+<span class="nc" id="L61">        anio = album.anio;</span>
+<span class="nc" id="L62">        img = album.img;</span>
+<span class="nc" id="L63">        artista = album.artista;</span>
+<span class="nc" id="L64">        temas = album.temas;</span>
+<span class="nc" id="L65">        genero = album.genero;</span>
+<span class="nc" id="L66">    }</span>
+    
+    public String getNombre(){
+<span class="nc" id="L69">        return nombre;</span>
+    }
+
+    public void setNombre(String nombre) {
+<span class="nc" id="L73">        this.nombre = nombre;</span>
+<span class="nc" id="L74">    }</span>
+
+    public void setAnio(int anio) {
+<span class="nc" id="L77">        this.anio = anio;</span>
+<span class="nc" id="L78">    }</span>
+
+    public void setImg(String img) {
+<span class="nc" id="L81">        this.img = img;</span>
+<span class="nc" id="L82">    }</span>
+
+    public void setArtista(Artista artista) {
+<span class="nc" id="L85">        this.artista = artista;</span>
+<span class="nc" id="L86">    }</span>
+
+    public void setGenero(List&lt;Genero&gt; genero) {
+<span class="nc" id="L89">        this.genero = genero;</span>
+<span class="nc" id="L90">    }</span>
+    
+    public int getAnio(){
+<span class="nc" id="L93">        return anio;</span>
+    }
+    
+    public String getImg(){
+<span class="nc" id="L97">        return img;</span>
+    }
+    
+    public Artista getArtista(){
+<span class="nc" id="L101">        return artista;</span>
+    }
+    
+    public List&lt;Tema&gt; getTemas(){
+<span class="nc" id="L105">        return temas;</span>
+    }
+    
+    public List&lt;Genero&gt; getGeneros(){
+<span class="nc" id="L109">        return genero;</span>
+    }
+    
+    public void addTema(Tema tema){
+<span class="nc" id="L113">        this.temas.add(tema);</span>
+<span class="nc" id="L114">    }</span>
+    
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Funciones del @Entity
+        public Long getId() {
+<span class="nc" id="L119">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="nc" id="L123">        this.id = id;</span>
+<span class="nc" id="L124">    }</span>
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L128">        int hash = 0;</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">        hash += (id != null ? id.hashCode() : 0);</span>
+<span class="nc" id="L130">        return hash;</span>
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+<span class="nc bnc" id="L136" title="All 2 branches missed.">        if (!(object instanceof Album)) {</span>
+<span class="nc" id="L137">            return false;</span>
+        }
+<span class="nc" id="L139">        Album other = (Album) object;</span>
+<span class="nc bnc" id="L140" title="All 8 branches missed.">        if ((this.id == null &amp;&amp; other.id != null) || (this.id != null &amp;&amp; !this.id.equals(other.id))) {</span>
+<span class="nc" id="L141">            return false;</span>
+        }
+<span class="nc" id="L143">        return true;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L148">        return &quot;Logica.Album[ id=&quot; + id + &quot; ]&quot;;</span>
+    }    
+ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

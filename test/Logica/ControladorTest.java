@@ -107,7 +107,7 @@ public class ControladorTest {
 //     */
     @Test
     public void testAltaGenero() {
-        System.out.println("AltaGenero");
+        System.out.println("AltaGenero1");
         String nombre = "TestGenero";
         String padre = "";
         Controlador instance = new Controlador();
@@ -120,7 +120,7 @@ public class ControladorTest {
     
     @Test
     public void testAltaGenero2() {
-        System.out.println("AltaGenero");
+        System.out.println("AltaGenero2");
         String nombre = "TestGenero";
         String padre = "";
         Controlador instance = new Controlador();
@@ -133,7 +133,7 @@ public class ControladorTest {
     
     @Test
     public void testAltaGenero3() {
-        System.out.println("AltaGenero");
+        System.out.println("AltaGenero3");
         String nombre = "TestGenero2";
         String padre = "TestGenero";
         Controlador instance = new Controlador();
@@ -144,10 +144,49 @@ public class ControladorTest {
         assertEquals(cantExpect, cantResult);
     }
     
-    @Test
+        @Test
     public void testAltaGenero4() {
-        System.out.println("AltaGenero");
+        System.out.println("AltaGenero4");
+        String nombre = "TestGenero3";
+        String padre = "General";
+        Controlador instance = new Controlador();
+        instance.AltaGenero(nombre, padre);
+        List result = instance.getGeneroItem();
+        int cantExpect = result.size() +1;
+        int cantResult = cantExpect;
+        assertEquals(cantExpect, cantResult);
+    }
+    
+    @Test
+    public void testAltaGenero5() {
+        System.out.println("AltaGenero5");
         String nombre = "";
+        String padre = "";
+        Controlador instance = new Controlador();
+        instance.AltaGenero(nombre, padre);
+        List result = instance.getGeneroItem();
+        int cantExpect = result.size();
+        int cantResult = cantExpect;
+        assertEquals(cantExpect, cantResult);
+    }
+    
+    @Test
+    public void testAltaGenero6() {
+        System.out.println("AltaGenero6");
+        String nombre = "TestGenero454545";
+        String padre = "generoFalso";
+        Controlador instance = new Controlador();
+        instance.AltaGenero(nombre, padre);
+        List result = instance.getGeneroItem();
+        int cantExpect = result.size();
+        int cantResult = cantExpect;
+        assertEquals(cantExpect, cantResult);
+    }
+    
+    @Test
+    public void testAltaGenero7() {
+        System.out.println("AltaGenero7");
+        String nombre = "General";
         String padre = "";
         Controlador instance = new Controlador();
         instance.AltaGenero(nombre, padre);
@@ -207,17 +246,33 @@ public class ControladorTest {
 //    /**
 //     * Test of FindUser method, of class Controlador.
 //     */
-//    @Test
-//    public void testFindUser() {
-//        System.out.println("FindUser");
-//        String text = "";
-//        Controlador instance = new Controlador();
-//        boolean expResult = false;
-//        boolean result = instance.FindUser(text);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testFindUser() {
+        System.out.println("FindUser");
+        String nickname = "TestFindUser";
+        String contraseña = "TestFindUser";
+        String mail = "TestFindUser";
+        String nombre = "TestFindUser";
+        String apellido = "TestFindUser";
+        Fecha fechaDeNacimiento = new Fecha(1,1,1);
+        String imagen = "";
+        Controlador instance = new Controlador();
+        instance.registrarCliente(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
+        boolean expResult = true;
+        String text = "TestFindUser";
+        boolean result = instance.FindUser(text);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testFindUser2() {
+        System.out.println("FindUser2");
+        String text = "FalseClient";
+        Controlador instance = new Controlador();
+        boolean expResult = false;
+        boolean result = instance.FindUser(text);
+        assertEquals(expResult, result);
+    }
 //
 //    /**
 //     * Test of SeguirUsuario method, of class Controlador.

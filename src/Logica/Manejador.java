@@ -286,7 +286,7 @@ public class Manejador {
         Usuario user;
         while(it.hasNext()){
             user=(Usuario)it.next();
-            if(user.getNickname()==text){
+            if(user.getNickname().equals(text)){
                 return true;
             }
         }

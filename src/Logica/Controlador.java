@@ -48,24 +48,25 @@ public class Controlador implements IControlador {
       
     @Override
     public void AltaGenero(String nombre, String padre){
-        Manejador mu = Manejador.getinstance();
-        Genero gen;
-        Genero nuevoGen=mu.findGenero(nombre);
-        if(nuevoGen==null){
-            nuevoGen=new Genero(nombre);
-            if(padre.equals("") || padre.equals("General")){
-                gen=mu.getGenero();
-                gen.addHijo(nuevoGen);
-            }
-            else{
-               gen=mu.findGenero(padre);
-                if(gen!=null){
-                   gen.addHijo(nuevoGen);
+        if(!nombre.equals("General")){
+            Manejador mu = Manejador.getinstance();
+            Genero gen;
+            Genero nuevoGen=mu.findGenero(nombre);
+            if(nuevoGen==null){
+                nuevoGen=new Genero(nombre);
+                if(padre.equals("") || padre.equals("General")){
+                    gen=mu.getGenero();
+                    gen.addHijo(nuevoGen);
                 }
+                else{
+                   gen=mu.findGenero(padre);
+                    if(gen!=null){
+                       gen.addHijo(nuevoGen);
+                    }
+                }
+                mu.addGeneroToList(nuevoGen);
             }
-            mu.addGeneroToList(nuevoGen);
         }
-
     }
     
 

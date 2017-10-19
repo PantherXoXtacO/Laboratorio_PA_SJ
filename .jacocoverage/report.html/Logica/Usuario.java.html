@@ -72,93 +72,95 @@ public abstract class Usuario implements Serializable {
     }
 
     public String getMail() {
-<span class="nc" id="L75">        return mail;</span>
+<span class="fc" id="L75">        return mail;</span>
     }
 
     public String getNombre() {
-<span class="nc" id="L79">        return nombre;</span>
+<span class="fc" id="L79">        return nombre;</span>
     }
 
     public String getApellido() {
-<span class="nc" id="L83">        return apellido;</span>
+<span class="fc" id="L83">        return apellido;</span>
     }
 
     public Fecha getFechaDeNacimiento() {
-<span class="nc" id="L87">        return fechaDeNacimiento;</span>
+<span class="fc" id="L87">        return fechaDeNacimiento;</span>
     }
 
     public String getImagen() {
-<span class="nc" id="L91">        return imagen;</span>
+<span class="fc" id="L91">        return imagen;</span>
     }
+    
+    
 
     //setters
     
     public void setNickname(String nickname) {
-<span class="nc" id="L97">        this.nickname = nickname;</span>
-<span class="nc" id="L98">    }</span>
+<span class="nc" id="L99">        this.nickname = nickname;</span>
+<span class="nc" id="L100">    }</span>
 
     public void setContraseña(String contraseña) {
-<span class="nc" id="L101">        this.contraseña = contraseña;</span>
-<span class="nc" id="L102">    }</span>
+<span class="nc" id="L103">        this.contraseña = contraseña;</span>
+<span class="nc" id="L104">    }</span>
 
     public void setMail(String mail) {
-<span class="nc" id="L105">        this.mail = mail;</span>
-<span class="nc" id="L106">    }</span>
+<span class="nc" id="L107">        this.mail = mail;</span>
+<span class="nc" id="L108">    }</span>
 
     public void setNombre(String nombre) {
-<span class="nc" id="L109">        this.nombre = nombre;</span>
-<span class="nc" id="L110">    }</span>
+<span class="nc" id="L111">        this.nombre = nombre;</span>
+<span class="nc" id="L112">    }</span>
 
     public void setApellido(String apellido) {
-<span class="nc" id="L113">        this.apellido = apellido;</span>
-<span class="nc" id="L114">    }</span>
+<span class="nc" id="L115">        this.apellido = apellido;</span>
+<span class="nc" id="L116">    }</span>
 
     public void setFechaDeNacimiento(Fecha fechaDeNacimiento) {
-<span class="nc" id="L117">        this.fechaDeNacimiento = fechaDeNacimiento;</span>
-<span class="nc" id="L118">    }</span>
+<span class="nc" id="L119">        this.fechaDeNacimiento = fechaDeNacimiento;</span>
+<span class="nc" id="L120">    }</span>
 
     public void setImagen(String imagen) {
-<span class="nc" id="L121">        this.imagen = imagen;</span>
-<span class="nc" id="L122">    }</span>
+<span class="nc" id="L123">        this.imagen = imagen;</span>
+<span class="nc" id="L124">    }</span>
     
     public void addFollower(Usuario u1) {
-<span class="nc" id="L125">        seguidores.add(u1);</span>
-<span class="nc" id="L126">    }</span>
+<span class="nc" id="L127">        seguidores.add(u1);</span>
+<span class="nc" id="L128">    }</span>
 
     public abstract void addFollow(Usuario u2);
     public abstract void removeFollow(Usuario u);
     
     @Override
     public String toString() {
-<span class="nc" id="L133">        return getNickname();</span>
+<span class="nc" id="L135">        return getNickname();</span>
     }    
     
 
     void removeFollower(Usuario u1) {
-<span class="nc" id="L138">        System.out.println(&quot;lul&quot;);</span>
-<span class="nc" id="L139">        seguidores.remove(u1);</span>
-<span class="nc" id="L140">    }</span>
+<span class="nc" id="L140">        System.out.println(&quot;lul&quot;);</span>
+<span class="nc" id="L141">        seguidores.remove(u1);</span>
+<span class="nc" id="L142">    }</span>
     
     public List ItemSeguidores() {
-<span class="nc" id="L143">        Iterator it=seguidores.iterator();</span>
+<span class="nc" id="L145">        Iterator it=seguidores.iterator();</span>
         Usuario c;
-<span class="nc" id="L145">        List ret= new ArrayList();</span>
-<span class="nc bnc" id="L146" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L147">            c=(Usuario) it.next();</span>
-<span class="nc" id="L148">            ret.add(new Item(c, c.getNickname()));</span>
+<span class="nc" id="L147">        List ret= new ArrayList();</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L149">            c=(Usuario) it.next();</span>
+<span class="nc" id="L150">            ret.add(new Item(c, c.getNickname()));</span>
         }
-<span class="nc" id="L150">        return ret;</span>
+<span class="nc" id="L152">        return ret;</span>
     }
     
     public List&lt;Item&gt; getSeguidoresItem(){
-<span class="nc" id="L154">       Iterator it=this.seguidores.iterator();</span>
+<span class="nc" id="L156">       Iterator it=this.seguidores.iterator();</span>
         Usuario c;
-<span class="nc" id="L156">        List ret= new ArrayList();</span>
-<span class="nc bnc" id="L157" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L158">            c=(Usuario) it.next();</span>
-<span class="nc" id="L159">            ret.add(new Item(c, c.getNickname()));</span>
+<span class="nc" id="L158">        List ret= new ArrayList();</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L160">            c=(Usuario) it.next();</span>
+<span class="nc" id="L161">            ret.add(new Item(c, c.getNickname()));</span>
         }
-<span class="nc" id="L161">        return ret;</span>
+<span class="nc" id="L163">        return ret;</span>
     }
     
 }

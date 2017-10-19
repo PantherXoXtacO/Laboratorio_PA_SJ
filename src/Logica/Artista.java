@@ -42,6 +42,18 @@ public class Artista extends Usuario {
     }
     
     @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Artista)) {
+            return false;
+    }
+    Artista that = (Artista) other;        
+    return (this.getBiografia().equals(that.getBiografia()) && this.getDir_web().equals(that.getDir_web()) &&
+            this.getNickname().equals(that.getNickname()) && this.getMail().equals(that.getMail())
+            && this.getNombre().equals(that.getNombre())  && this.getApellido().equals(that.getApellido())
+            && this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) && this.getImagen().equals(that.getImagen()));
+    }
+    
+    @Override
     public void addFollow(Usuario u2) { //Only clients can follow
        // siguiendo.add(u2);
     }    

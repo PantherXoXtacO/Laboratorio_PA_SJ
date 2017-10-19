@@ -6,7 +6,9 @@
 package Logica;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import static org.hamcrest.CoreMatchers.hasItems;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -96,7 +98,7 @@ public class ControladorTest {
     public void testGetListaClientes() {
         System.out.println("getListaClientes");
         Controlador instance = new Controlador();
-        int cantExpetc = 1;
+        int cantExpetc = 2;
         List<Cliente> result = instance.getListaClientes();
         int cantResult = result.size();
         assertEquals(cantExpetc, cantResult);
@@ -246,23 +248,23 @@ public class ControladorTest {
 //    /**
 //     * Test of FindUser method, of class Controlador.
 //     */
-    @Test
-    public void testFindUser() {
-        System.out.println("FindUser");
-        String nickname = "TestFindUser";
-        String contraseña = "TestFindUser";
-        String mail = "TestFindUser";
-        String nombre = "TestFindUser";
-        String apellido = "TestFindUser";
-        Fecha fechaDeNacimiento = new Fecha(1,1,1);
-        String imagen = "";
-        Controlador instance = new Controlador();
-        instance.registrarCliente(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
-        boolean expResult = true;
-        String text = "TestFindUser";
-        boolean result = instance.FindUser(text);
-        assertEquals(expResult, result);
-    }
+//    @Test
+//    public void testFindUser() {
+//        System.out.println("FindUser");
+//        String nickname = "TestFindUser";
+//        String contraseña = "TestFindUser";
+//        String mail = "TestFindUser";
+//        String nombre = "TestFindUser";
+//        String apellido = "TestFindUser";
+//        Fecha fechaDeNacimiento = new Fecha(1,1,1);
+//        String imagen = "";
+//        Controlador instance = new Controlador();
+//        instance.registrarCliente(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
+//        boolean expResult = true;
+//        String text = "TestFindUser";
+//        boolean result = instance.FindUser(text);
+//        assertEquals(expResult, result);
+//    }
     
     @Test
     public void testFindUser2() {
@@ -302,51 +304,100 @@ public class ControladorTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+    
+//    @Test
+//    public void testGetListaClientes2() {
+//        System.out.println("getListaClientes_Agregar2ychequar");
+//        Controlador instance = new Controlador();
+//        
+//         List<Cliente> list = Arrays.asList(
+//                new Cliente("Client1", "pass", "Client1@mail", "ClientName", "ClientSurname", new Fecha(11,11,11), "imagePath"),
+//                new Cliente("Client2", "pass", "Client2@mail", "Client2Name", "Client2Surname", new Fecha(20,11,11), "imagePath")
+//         );
+//        
+//        int cantExpetc = 2;
+//       // List<Cliente> result = instance.getListaClientes();
+//        int cantResult = list.size();
+//        
+//        //Test equals
+//        assertThat(list, hasItems(
+//                new Cliente("Client1", "pass", "Client1@mail", "ClientName", "ClientSurname", new Fecha(11,11,11), "imagePath"),
+//                new Cliente("Client2", "pass", "Client2@mail", "Client2Name", "Client2Surname", new Fecha(20,11,11), "imagePath"))
+//        );
+//        //Test size
+//        assertEquals(cantExpetc, cantResult);
+//    }
+    
+    
 //
 //    /**
 //     * Test of mailLibre method, of class Controlador.
 //     */
-//    @Test
-//    public void testMailLibre() {
-//        System.out.println("mailLibre");
-//        String mail = "";
-//        Controlador instance = new Controlador();
-//        boolean expResult = false;
-//        boolean result = instance.mailLibre(mail);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    @Test
+    public void testMailLibre1() {
+        System.out.println("mailLibre1_mailNoEstaLibre");        
+        String mail = "kek";
+        Controlador instance = new Controlador();
+        boolean expResult = false;
+        
+        instance.registrarCliente("", "", "kek", "", "", null, "");        
+        boolean result = instance.mailLibre(mail);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testMailLibre2() {
+        System.out.println("mailLibre1_mailEstaLibre");        
+        String mail = "kek1";
+        Controlador instance = new Controlador();
+        boolean expResult = true;    
+        boolean result = instance.mailLibre(mail);
+        assertEquals(expResult, result);
+    }
+
 //    /**
 //     * Test of consultarCliente method, of class Controlador.
 //     */
-//    @Test
-//    public void testConsultarCliente() {
-//        System.out.println("consultarCliente");
-//        String nickname = "";
-//        Controlador instance = new Controlador();
-//        Cliente expResult = null;
-//        Cliente result = instance.consultarCliente(nickname);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    @Test
+    public void testConsultarCliente1() {
+        System.out.println("consultarCliente1_clienteExiste");
+        String nickname = "The boy";
+        Controlador instance = new Controlador();
+        instance.registrarCliente("The boy", "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");    
+        Cliente expResult = new Cliente("The boy", "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");
+        Cliente result = instance.consultarCliente(nickname);
+        boolean equals = expResult instanceof Cliente && result.equals(expResult);
+        assertEquals(true, equals);
+    }
+    
+    @Test
+    public void testConsultarCliente2() {
+        System.out.println("consultarCliente1_clienteNoExiste");
+        String nickname = "The boy";
+        Controlador instance = new Controlador();  
+        Cliente expResult = new Cliente("The boy2", "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");
+        Cliente result = instance.consultarCliente(nickname);
+        boolean equals = expResult instanceof Cliente && result.equals(expResult);
+        assertEquals(false, equals);
+    }
+
 //    /**
 //     * Test of consultarArtista method, of class Controlador.
 //     */
-//    @Test
-//    public void testConsultarArtista() {
-//        System.out.println("consultarArtista");
-//        String nickname = "";
-//        Controlador instance = new Controlador();
-//        Artista expResult = null;
-//        Artista result = instance.consultarArtista(nickname);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testConsultarArtista1() {
+        System.out.println("consultarArtista1_artistaExiste");
+        String nickname = "The boy3";
+        Controlador instance = new Controlador();
+        Artista expResult = new Artista("bio", "dir", nickname, "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");
+        instance.registrarArtista(nickname, "pass", "The boyMail", "asd", "asd" , new Fecha(1,1,1), "path", "bio" , "dir");
+        Artista result = instance.consultarArtista(nickname);
+        boolean equals = expResult instanceof Artista && result.equals(expResult);
+        assertEquals(equals, true);
+        
+            
+        
+    }
 //
 //    /**
 //     * Test of getItemCliente method, of class Controlador.
@@ -492,61 +543,100 @@ public class ControladorTest {
 //    /**
 //     * Test of addListaParticular method, of class Controlador.
 //     */
-//    @Test
-//    public void testAddListaParticular() {
-//        System.out.println("addListaParticular");
-//        Cliente client = null;
-//        String nombreDeLista = "";
-//        String imagenDeLista = "";
-//        Controlador instance = new Controlador();
-//        instance.addListaParticular(client, nombreDeLista, imagenDeLista);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    @Test
+    public void testAddListaParticular1() {
+        System.out.println("addListaParticular1_clienteNull");
+        Cliente client = null;
+        String nombreDeLista = "";
+        String imagenDeLista = "";
+        Controlador instance = new Controlador();
+        instance.addListaParticular(client, nombreDeLista, imagenDeLista);
+    }
+    
+    @Test
+    public void testAddListaParticular2() {
+        System.out.println("addListaParticular2_agregarCliente");
+        Cliente client = new Cliente("The boy4", "pass", "The boyMail4", "asd", "asd", new Fecha(1,1,1), "path");
+        String nombreDeLista = "ListaPart1";
+        String imagenDeLista = "ImagenListaPart1";
+        Controlador instance = new Controlador();
+        instance.addListaParticular(client, nombreDeLista, imagenDeLista);
+    }
+
 //    /**
 //     * Test of addListaPorDefecto method, of class Controlador.
 //     */
-//    @Test
-//    public void testAddListaPorDefecto() {
-//        System.out.println("addListaPorDefecto");
-//        Genero genero = null;
-//        String nombreDeLista = "";
-//        String imagenDeLista = "";
-//        Controlador instance = new Controlador();
-//        instance.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testAddListaPorDefecto1() {
+        System.out.println("addListaPorDefecto1_agregarGeneroNull");
+        Genero genero = null;
+        String nombreDeLista = "";
+        String imagenDeLista = "";
+        Controlador instance = new Controlador();
+        instance.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
+    }
+    
+    @Test
+    public void testAddListaPorDefecto2() {
+        System.out.println("addListaPorDefecto1_agregarGeneroNull");
+        Genero genero = new Genero("GeneroTestListaPart1");
+        String nombreDeLista = "ListaDef1";
+        String imagenDeLista = "ImagenListaDef1";
+        Controlador instance = new Controlador();
+        instance.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
+    }
 //
 //    /**
 //     * Test of privatizarLista method, of class Controlador.
 //     */
-//    @Test
-//    public void testPrivatizarLista() {
-//        System.out.println("privatizarLista");
-//        ListaParticular lista = null;
-//        boolean modo = false;
-//        Controlador instance = new Controlador();
-//        instance.privatizarLista(lista, modo);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testPrivatizarLista1() {
+        System.out.println("privatizarLista1_listaEsNull_privada");
+        ListaParticular lista = null;
+        boolean modo = false;
+        boolean expResult = false;
+        Controlador instance = new Controlador();
+        instance.privatizarLista(lista, modo);
+        if(lista!=null)  
+            assertEquals(expResult, lista.getPrivacidad());            
+    }
+    
+    @Test
+    public void testPrivatizarLista2() {
+        System.out.println("privatizarLista2_privada");
+        ListaParticular lista = new ListaParticular(new Cliente(), "nombre", "imagen");
+        boolean modo = false;
+        boolean expResult = false;
+        Controlador instance = new Controlador();
+        instance.privatizarLista(lista, modo);
+        if(lista!=null)  
+            assertEquals(expResult, lista.getPrivacidad());            
+    }
+    
+    @Test
+    public void testPrivatizarLista3() {
+        System.out.println("privatizarLista3_publica");
+        ListaParticular lista = new ListaParticular(new Cliente(), "nombre", "imagen");
+        boolean modo = true;
+        boolean expResult = true;
+        Controlador instance = new Controlador();
+        instance.privatizarLista(lista, modo);
+        if(lista!=null)  
+            assertEquals(expResult, lista.getPrivacidad());            
+    }
 //
 //    /**
 //     * Test of getListByName method, of class Controlador.
 //     */
 //    @Test
-//    public void testGetListByName() {
-//        System.out.println("getListByName");
+//    public void testGetListByName1() {
+//        System.out.println("getListByName1");
 //        Cliente user = null;
 //        String name = "";
 //        Controlador instance = new Controlador();
 //        ListaParticular expResult = null;
 //        ListaParticular result = instance.getListByName(user, name);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
 //    }
 //
 //    /**

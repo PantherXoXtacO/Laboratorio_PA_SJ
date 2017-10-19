@@ -35,116 +35,127 @@ public class Cliente extends Usuario{
 <span class="fc" id="L35">    public Cliente() {</span>
 <span class="fc" id="L36">    }   </span>
     
+    @Override
+    public boolean equals(Object other) {
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if (!(other instanceof Cliente)) {</span>
+<span class="nc" id="L41">            return false;</span>
+    }
+<span class="fc" id="L43">    Cliente that = (Cliente) other;</span>
+<span class="pc bpc" id="L44" title="1 of 4 branches missed.">    return (this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
+<span class="pc bpc" id="L45" title="2 of 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
+<span class="pc bpc" id="L46" title="2 of 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
+}
+    
     public List&lt;ListaDeReproduccion&gt; getListas(){
-<span class="nc" id="L39">        return this.Listas;</span>
+<span class="nc" id="L50">        return this.Listas;</span>
     }
     
     @Override
     public void addFollow(Usuario u2) {
-<span class="nc" id="L44">        siguiendo.add(u2);</span>
-<span class="nc" id="L45">    }</span>
+<span class="nc" id="L55">        siguiendo.add(u2);</span>
+<span class="nc" id="L56">    }</span>
     
     @Override
     public  void removeFollow(Usuario u){
-<span class="nc" id="L49">        siguiendo.remove(u);</span>
-<span class="nc" id="L50">    }</span>
+<span class="nc" id="L60">        siguiendo.remove(u);</span>
+<span class="nc" id="L61">    }</span>
     
     void setListaParticular(ListaDeReproduccion lista){
-<span class="nc" id="L53">        this.Listas.add(lista);</span>
-<span class="nc" id="L54">    }</span>
+<span class="fc" id="L64">        this.Listas.add(lista);</span>
+<span class="fc" id="L65">    }</span>
     
-
+  
     public List getListsItem() {
-<span class="nc" id="L58">        Iterator it = Listas.iterator();</span>
-<span class="nc" id="L59">        List ret= new ArrayList();</span>
-        ListaDeReproduccion L;
-<span class="nc bnc" id="L61" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L62">            L= (ListaDeReproduccion) it.next();</span>
-<span class="nc" id="L63">            ret.add(new Item(L,L.getNombre()));</span>
-        }
-<span class="nc" id="L65">        return ret;</span>
-    }
-    
-    public List getTemasFavItem() {
-<span class="nc" id="L69">        Iterator it = temasFav.iterator();</span>
+<span class="nc" id="L69">        Iterator it = Listas.iterator();</span>
 <span class="nc" id="L70">        List ret= new ArrayList();</span>
-        Tema T;
+        ListaDeReproduccion L;
 <span class="nc bnc" id="L72" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L73">            T= (Tema)it.next();</span>
-<span class="nc" id="L74">            ret.add(new Item(T,T.getNombre()));</span>
+<span class="nc" id="L73">            L= (ListaDeReproduccion) it.next();</span>
+<span class="nc" id="L74">            ret.add(new Item(L,L.getNombre()));</span>
         }
 <span class="nc" id="L76">        return ret;</span>
     }
     
+    public List getTemasFavItem() {
+<span class="nc" id="L80">        Iterator it = temasFav.iterator();</span>
+<span class="nc" id="L81">        List ret= new ArrayList();</span>
+        Tema T;
+<span class="nc bnc" id="L83" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L84">            T= (Tema)it.next();</span>
+<span class="nc" id="L85">            ret.add(new Item(T,T.getNombre()));</span>
+        }
+<span class="nc" id="L87">        return ret;</span>
+    }
+    
     public void quitarTemaFav(Tema t) {
-<span class="nc" id="L80">        temasFav.remove(t);</span>
-<span class="nc" id="L81">    }</span>
+<span class="nc" id="L91">        temasFav.remove(t);</span>
+<span class="nc" id="L92">    }</span>
 
     public void quitarAlbumFav(Album a) {
-<span class="nc" id="L84">        albumsFav.remove(a);</span>
-<span class="nc" id="L85">    }</span>
+<span class="nc" id="L95">        albumsFav.remove(a);</span>
+<span class="nc" id="L96">    }</span>
 
     public List getListsFavItem() {
-<span class="nc" id="L88">        Iterator it = listasFav.iterator();</span>
-<span class="nc" id="L89">        List ret= new ArrayList();</span>
+<span class="nc" id="L99">        Iterator it = listasFav.iterator();</span>
+<span class="nc" id="L100">        List ret= new ArrayList();</span>
         ListaDeReproduccion L;
-<span class="nc bnc" id="L91" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L92">            L= (ListaDeReproduccion)it.next();</span>
-<span class="nc" id="L93">            ret.add(new Item(L,L.getNombre()));</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L103">            L= (ListaDeReproduccion)it.next();</span>
+<span class="nc" id="L104">            ret.add(new Item(L,L.getNombre()));</span>
         }
-<span class="nc" id="L95">        return ret;</span>
+<span class="nc" id="L106">        return ret;</span>
     }
 
     public void quitarListFav(ListaDeReproduccion lista) {
-<span class="nc" id="L99">        listasFav.remove(lista);</span>
-<span class="nc" id="L100">    }</span>
+<span class="nc" id="L110">        listasFav.remove(lista);</span>
+<span class="nc" id="L111">    }</span>
 
     public List getAlbumsFavItem() {
-<span class="nc" id="L103">        Iterator it = albumsFav.iterator();</span>
+<span class="nc" id="L114">        Iterator it = albumsFav.iterator();</span>
         Album a;
-<span class="nc" id="L105">        List ret =new ArrayList();</span>
-<span class="nc bnc" id="L106" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L107">            a= (Album) it.next();</span>
-<span class="nc" id="L108">            ret.add(new Item(a,a.getNombre()));</span>
+<span class="nc" id="L116">        List ret =new ArrayList();</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L118">            a= (Album) it.next();</span>
+<span class="nc" id="L119">            ret.add(new Item(a,a.getNombre()));</span>
         }
-<span class="nc" id="L110">        return ret;</span>
+<span class="nc" id="L121">        return ret;</span>
     }
     
     void guardarListFav(ListaDeReproduccion lista) {
-<span class="nc" id="L114">        listasFav.add(lista);</span>
-<span class="nc" id="L115">    }</span>
+<span class="nc" id="L125">        listasFav.add(lista);</span>
+<span class="nc" id="L126">    }</span>
 
     void guardarTemaFav(Tema t) {
-<span class="nc" id="L118">        temasFav.add(t);</span>
-<span class="nc" id="L119">    }</span>
+<span class="nc" id="L129">        temasFav.add(t);</span>
+<span class="nc" id="L130">    }</span>
 
     void guardarAlbumFav(Album a) {
-<span class="nc" id="L122">        albumsFav.add(a);</span>
-<span class="nc" id="L123">    }</span>
+<span class="nc" id="L133">        albumsFav.add(a);</span>
+<span class="nc" id="L134">    }</span>
     
     public List ItemSiguiendo() {
-<span class="nc" id="L126">        Iterator it=siguiendo.iterator();</span>
+<span class="nc" id="L137">        Iterator it=siguiendo.iterator();</span>
         Usuario c;
-<span class="nc" id="L128">        List ret= new ArrayList();</span>
-<span class="nc bnc" id="L129" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L130">            c=(Usuario) it.next();</span>
-<span class="nc" id="L131">            ret.add(new Item(c, c.getNickname()));</span>
+<span class="nc" id="L139">        List ret= new ArrayList();</span>
+<span class="nc bnc" id="L140" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L141">            c=(Usuario) it.next();</span>
+<span class="nc" id="L142">            ret.add(new Item(c, c.getNickname()));</span>
         }
-<span class="nc" id="L133">        return ret;</span>
+<span class="nc" id="L144">        return ret;</span>
     }
 
     Collection getListasPublicas() {
-<span class="nc" id="L137">        Iterator it= Listas.iterator();</span>
+<span class="nc" id="L148">        Iterator it= Listas.iterator();</span>
         //Item L;
         ListaParticular L;
-<span class="nc" id="L140">        List ret = new ArrayList();</span>
-<span class="nc bnc" id="L141" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L142">            L=(ListaParticular) it.next();</span>
-<span class="nc bnc" id="L143" title="All 2 branches missed.">            if(!L.getPrivacidad()){</span>
-<span class="nc" id="L144">                ret.add(new Item(L, L.getNombre()));</span>
+<span class="nc" id="L151">        List ret = new ArrayList();</span>
+<span class="nc bnc" id="L152" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L153">            L=(ListaParticular) it.next();</span>
+<span class="nc bnc" id="L154" title="All 2 branches missed.">            if(!L.getPrivacidad()){</span>
+<span class="nc" id="L155">                ret.add(new Item(L, L.getNombre()));</span>
             }
         }
-<span class="nc" id="L147">       return ret;</span>
+<span class="nc" id="L158">       return ret;</span>
     }        
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

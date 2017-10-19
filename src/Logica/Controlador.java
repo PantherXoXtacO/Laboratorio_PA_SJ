@@ -231,18 +231,23 @@ public class Controlador implements IControlador {
     @Override
     public void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
         Manejador M=Manejador.getinstance();
+        if (client != null && !nombreDeLista.equals("") && !imagenDeLista.equals(""))
         M.addListaParticular(client, nombreDeLista, imagenDeLista);
     }
     
     @Override
     public void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
         Manejador M=Manejador.getinstance();
+        if (genero != null && !nombreDeLista.equals("") && !imagenDeLista.equals(""))
         M.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
     }
     
     @Override
     public void privatizarLista(ListaParticular lista, boolean modo){
-        lista.setPrivacidad(modo);
+        if(lista != null){
+            lista.setPrivacidad(modo);
+        }
+        
     }
     
     @Override

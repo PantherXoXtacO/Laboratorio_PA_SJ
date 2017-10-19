@@ -35,6 +35,17 @@ public class Cliente extends Usuario{
     public Cliente() {
     }   
     
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Cliente)) {
+            return false;
+    }
+    Cliente that = (Cliente) other;
+    return (this.getNickname().equals(that.getNickname()) && this.getMail().equals(that.getMail())
+            && this.getNombre().equals(that.getNombre())  && this.getApellido().equals(that.getApellido())
+            && this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) && this.getImagen().equals(that.getImagen()));
+}
+    
     public List<ListaDeReproduccion> getListas(){
         return this.Listas;
     }
@@ -53,7 +64,7 @@ public class Cliente extends Usuario{
         this.Listas.add(lista);
     }
     
-
+  
     public List getListsItem() {
         Iterator it = Listas.iterator();
         List ret= new ArrayList();

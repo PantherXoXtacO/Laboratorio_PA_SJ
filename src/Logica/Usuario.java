@@ -90,6 +90,8 @@ public abstract class Usuario implements Serializable {
     public String getImagen() {
         return imagen;
     }
+    
+    
 
     //setters
     

@@ -10,30 +10,30 @@ function getCategories(){
               text: "Categorias",
               nodes: [
               {
-                text: "Articulos Informaticos",
+                text: "",
                 nodes: [
                   {
-                    text: "Software"
+                    text: ""
                   },
                   {
-                    text: "Hardware"
+                    text: ""
                   }
                 ]
               },
               {
-                text: "Cocina",
+                text: "",
                 nodes: [
                 {
-                  text:"Cocina Francesa"
+                  text:""
                 },
                 {
-                  text:"Cocina Mediterranea"
+                  text:""
                 },
                 {
-                  text:"Cocina al Aire Libre"
+                  text:""
                 },
                 {
-                  text:"Accesorios de cocina"
+                  text:""
                 }
                 ]
               }

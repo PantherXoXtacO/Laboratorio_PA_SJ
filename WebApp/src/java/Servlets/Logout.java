@@ -5,21 +5,21 @@
  */
 package Servlets;
 
-import DataType.DTUsuario;
-import Logica.Controlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Logica.IControlador;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Usuario
  */
-public class Servlet extends HttpServlet {
+@WebServlet(name = "Logout", urlPatterns = {"/Logout"})
+public class Logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,28 +30,13 @@ public class Servlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)            
-            
-        throws ServletException, IOException {
-        String nick = request.getParameter("dataname");
-        IControlador controlador = new Controlador();
-        DTUsuario u = controlador.getUserData(nick);
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
-            if(u!=null){
-                out.println("<p> Nombre: " + u.getNom() + "<br> Apellido: " + u.getAp() + "<br> Mail: " + u.getMail() + "<br> Nick: " + u.getNick() + "<br></p>");
-            }
-            out.println("</body>");
-            out.println("</html>");
-        }
+        HttpSession session = request.getSession();
+        session.removeAttribute("UserName");
+        response.sendRedirect("index.html");
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

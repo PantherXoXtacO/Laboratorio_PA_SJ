@@ -38,7 +38,7 @@ public abstract class Usuario implements Serializable {
     private String nombre;
     @Column(name = &quot;APELLIDO&quot;)
     private String apellido;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = &quot;FECHA_DE_NACIMIENTO&quot;)
     private Fecha fechaDeNacimiento;
     @Column(name = &quot;IMAGEN_DE_USUARIO&quot;)
@@ -50,16 +50,16 @@ public abstract class Usuario implements Serializable {
     
     public Usuario(String nickname, String contraseña, String mail,
                     String nombre, String apellido, Fecha fechaDeNacimiento,
-<span class="fc" id="L53">                    String imagen) {</span>
-<span class="fc" id="L54">        this.nickname = nickname;</span>
-<span class="fc" id="L55">        this.contraseña = contraseña;</span>
-<span class="fc" id="L56">        this.mail = mail;</span>
-<span class="fc" id="L57">        this.nombre = nombre;</span>
-<span class="fc" id="L58">        this.apellido = apellido;</span>
-<span class="fc" id="L59">        this.fechaDeNacimiento = fechaDeNacimiento;</span>
-<span class="fc" id="L60">        this.imagen = imagen;    </span>
-<span class="fc" id="L61">        this.seguidores=new ArrayList();</span>
-<span class="fc" id="L62">    }</span>
+<span class="nc" id="L53">                    String imagen) {</span>
+<span class="nc" id="L54">        this.nickname = nickname;</span>
+<span class="nc" id="L55">        this.contraseña = contraseña;</span>
+<span class="nc" id="L56">        this.mail = mail;</span>
+<span class="nc" id="L57">        this.nombre = nombre;</span>
+<span class="nc" id="L58">        this.apellido = apellido;</span>
+<span class="nc" id="L59">        this.fechaDeNacimiento = fechaDeNacimiento;</span>
+<span class="nc" id="L60">        this.imagen = imagen;    </span>
+<span class="nc" id="L61">        this.seguidores=new ArrayList();</span>
+<span class="nc" id="L62">    }</span>
     
     //getters
 
@@ -72,23 +72,23 @@ public abstract class Usuario implements Serializable {
     }
 
     public String getMail() {
-<span class="fc" id="L75">        return mail;</span>
+<span class="nc" id="L75">        return mail;</span>
     }
 
     public String getNombre() {
-<span class="fc" id="L79">        return nombre;</span>
+<span class="nc" id="L79">        return nombre;</span>
     }
 
     public String getApellido() {
-<span class="fc" id="L83">        return apellido;</span>
+<span class="nc" id="L83">        return apellido;</span>
     }
 
     public Fecha getFechaDeNacimiento() {
-<span class="fc" id="L87">        return fechaDeNacimiento;</span>
+<span class="nc" id="L87">        return fechaDeNacimiento;</span>
     }
 
     public String getImagen() {
-<span class="fc" id="L91">        return imagen;</span>
+<span class="nc" id="L91">        return imagen;</span>
     }
     
     
@@ -141,8 +141,8 @@ public abstract class Usuario implements Serializable {
 <span class="nc" id="L141">        seguidores.remove(u1);</span>
 <span class="nc" id="L142">    }</span>
     
-    public List ItemSeguidores() {
-<span class="nc" id="L145">        Iterator it=seguidores.iterator();</span>
+    public List&lt;Item&gt; getSeguidoresItem(){
+<span class="nc" id="L145">       Iterator it=this.seguidores.iterator();</span>
         Usuario c;
 <span class="nc" id="L147">        List ret= new ArrayList();</span>
 <span class="nc bnc" id="L148" title="All 2 branches missed.">        while(it.hasNext()){</span>
@@ -151,17 +151,9 @@ public abstract class Usuario implements Serializable {
         }
 <span class="nc" id="L152">        return ret;</span>
     }
-    
-    public List&lt;Item&gt; getSeguidoresItem(){
-<span class="nc" id="L156">       Iterator it=this.seguidores.iterator();</span>
-        Usuario c;
-<span class="nc" id="L158">        List ret= new ArrayList();</span>
-<span class="nc bnc" id="L159" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L160">            c=(Usuario) it.next();</span>
-<span class="nc" id="L161">            ret.add(new Item(c, c.getNickname()));</span>
-        }
-<span class="nc" id="L163">        return ret;</span>
-    }
-    
+
+    public List getSeguidores() {
+<span class="nc" id="L156">        return seguidores;</span>
+    }    
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -3,8 +3,10 @@ package Logica;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
@@ -17,7 +19,7 @@ public class Artista extends Usuario {
     private String biografia;
     @Column(name = "DIR_WEB")
     private String dir_web;    
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name="ALBUMS_DE_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"), inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
     private List<Album> albums;
     private List<Usuario> siguiendo;
@@ -66,6 +68,8 @@ public class Artista extends Usuario {
     public void addAlbum(Album album){
         this.albums.add(album);
     }
+    
+    
     
     public List getAlbumsItem() {
         Iterator it = albums.iterator();

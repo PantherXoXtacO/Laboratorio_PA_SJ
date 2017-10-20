@@ -31,7 +31,7 @@ public class Album implements Serializable {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "ARTISTA_DEL_ALBUM")
     private Artista artista;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name="TEMAS_DEL_ALBUM", joinColumns=@JoinColumn(name="ALBUM_ID"),
                inverseJoinColumns=@JoinColumn(name="TEMAS_ID")) 
     private List<Tema> temas;

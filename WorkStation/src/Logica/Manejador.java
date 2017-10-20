@@ -417,16 +417,24 @@ public class Manejador {
     }
     
     public void addTemporalAlbum(Artista artist){        
-        //EntityManager em = emfactory.createEntityManager( );
+        EntityManager em = emfactory.createEntityManager( );
         //Artista artista = em.find(Artista.class, artist.id);
-        //em.getTransaction().begin();
-        Album albumToAdd = new Album(this.TemporalAlbum);
-        List<Genero> generos = this.TemporalAlbum.getGeneros();
-        addAlbumToGeneros(generos, albumToAdd);
-        this.Albums.add(albumToAdd);artist.addAlbum(albumToAdd);
-        //em.getTransaction().commit(); 
-        
+        try {
+            em.getTransaction().begin();
+            Album albumToAdd = new Album(this.TemporalAlbum);
+            List<Genero> generos = this.TemporalAlbum.getGeneros();
+            addAlbumToGeneros(generos, albumToAdd);
+            em.persist(albumToAdd);
+            albumToAdd.addTema(new Tema("1",1,1,albumToAdd));
+            em.getTransaction().commit(); 
+            em.close();         
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            em.getTransaction().rollback();
+        }         
         deleteTemporalAlbum();        
+        
     }
     
     public void addAlbumToGeneros(List<Genero> generos, Album album){

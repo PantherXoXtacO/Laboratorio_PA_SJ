@@ -33,7 +33,7 @@ public class Servlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)            
             
         throws ServletException, IOException {
-        String nick = request.getParameter("fname");
+        String nick = request.getParameter("dataname");
         IControlador controlador = new Controlador();
         DTUsuario u = controlador.getUserData(nick);
         response.setContentType("text/html;charset=UTF-8");

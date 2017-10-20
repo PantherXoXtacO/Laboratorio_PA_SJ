@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/META-INF/persistence.xml</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/Manejador.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Presentacion/Main.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/Usuario.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/Album.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/test/Logica/ControladorTest.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/Tema.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/IControlador.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/Artista.java</file>
+            <file>file:/C:/Users/TISJ/Desktop/Grupo%20Magico%20de%20atras/Programacion%20de%20aplicaciones/Laboratorio_PA_SJ/WorkStation/src/Logica/Fecha.java</file>
         </group>
     </open-files>
 </project-private>

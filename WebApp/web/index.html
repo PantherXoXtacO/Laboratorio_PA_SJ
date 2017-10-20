@@ -4,16 +4,47 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <form action="/Lab/Servlet" method="post">
-            Nick: <input type="text" name="fname"><br>
-            <input type="submit" value="Submit">
-        </form>
-    </body>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-treeview.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="./resources/css/general.css"></link>
+    <link rel="stylesheet" type="text/css" href="./resources/css/categories.css"></link>
+    
+
+    <title> Espotify </title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <span id="header-tit" onclick="location.reload()"><img class="img" src="./resources/images/espotify-drowlogo.png"></span>
+        <h1 id="header-titl" onclick="location.reload()">Espotify </h1>
+
+        <nav class="nav-bar">
+            <ul>
+                <li class="button_nav"><a  href="#" onclick="">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--<div class="containerD"></div>
+    <div class="container-tree"></div>-->
+    
+    <form action="/Lab/Servlet" method="POST">
+        Nick:
+        <input type="text" size="20" name="dataname"><br>
+        <input type="submit">
+    </form>
+
+    <footer class="footer">
+            Copyright &copy; 2017
+    </footer>
+
+</body>
+
 </html>

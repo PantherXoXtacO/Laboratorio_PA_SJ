@@ -473,4 +473,15 @@ public class Controlador implements IControlador {
         return M.getUserData(nick);
     }    
     
+    
+    @Override
+    public void WebAltaCliente(String nick, String mail, String fecha, String pass, String nombre, String apellido){
+        Matcher m = Pattern.compile("\\d+").matcher(fecha);
+        List<Integer> numbers = new ArrayList<Integer>();
+        while(m.find()) {
+            numbers.add(Integer.parseInt(m.group()));
+        }
+        Fecha f = new Fecha(numbers.get(0), numbers.get(1), numbers.get(2));
+        this.registrarCliente(nick, pass, mail, nombre, apellido, f, "");
+    }
 }

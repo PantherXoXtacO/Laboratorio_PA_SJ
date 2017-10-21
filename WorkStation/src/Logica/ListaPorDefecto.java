@@ -5,8 +5,6 @@
  */
 package Logica;
 
-import java.awt.image.BufferedImage;
-
 /**
  *
  * @author Casca

@@ -88,6 +88,7 @@ public interface IControlador{
     
     /////////////////////////////////////FUNCIONES DE SERVLET//////////////////////////////////////////////
     public abstract DTUsuario getUserData(String nick);
+    public abstract void WebAltaCliente(String nick, String mail, String fecha, String pass, String nombre, String apellido);
     
     
 }

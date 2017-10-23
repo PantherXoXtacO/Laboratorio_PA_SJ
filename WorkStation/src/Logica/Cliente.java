@@ -2,6 +2,7 @@ package Logica;
 
 
 
+import DataType.DataSession;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -156,5 +157,26 @@ public class Cliente extends Usuario{
             }
         }
        return ret;
-    }        
+    }   
+    
+    /////////////////////////Funciones WEB////////////////////////
+    @Override
+    public DataSession getSession() {
+        DataSession ret = new DataSession(this.getNickname(), this.getMail(), false);
+        return ret;
+    }
+    
+    @Override
+    public List getSiguiendoWeb(){
+        List ret = new ArrayList();
+        Iterator it = siguiendo.iterator();
+        Usuario u;
+        while(it.hasNext()){
+            u=(Usuario) it.next();
+            ret.add(u.getSession());
+        }
+        return ret;
+    }
+    
+    
 }

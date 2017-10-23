@@ -26,21 +26,25 @@
             Pass:
             <input id="contra" type="password" size="20" name="userPass"><br>
             Confirmar Pass:
-            <input id="contra2" type="password" size="20" name="userPass2" onkeyup="checkPasswordMatch();"><p id="passMatch"> </p> <br>          
-            <input type="submit" value="Registar"><br>
+            <input id="contra2" type="password" size="20" name="userPass2" onkeyup="checkPasswordMatch();"><dib id="passMatch"> </dib> <br>          
+            <input id="botonRegistro" type="submit" value="Registar" disabled="true"><br>
         </form>
     </body>
     
     
     
     <script>function checkPasswordMatch() {
-    var password = document.getElementById("contra").value;
-    var confirmPassword  = document.getElementById("contra2").value;
+        var password = document.getElementById("contra").value;
+        var confirmPassword  = document.getElementById("contra2").value;
 
-    if (password !== confirmPassword)
-        document.getElementById('passMatch').innerHTML = 'Las contraseñas no coinsiden';
-    else
-        document.getElementById('passMatch').innerHTML = '(^u^)';
+        if (password !== confirmPassword){
+            document.getElementById('passMatch').innerHTML = ' Las contraseñas no coinsiden';
+            document.getElementById('botonRegistro').disabled = true;
+        }
+        else{
+            document.getElementById('passMatch').innerHTML = '';
+            document.getElementById('botonRegistro').disabled = false;
+        }
     }
     </script>
     

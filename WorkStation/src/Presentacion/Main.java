@@ -9,7 +9,6 @@ import Logica.Album;
 import Logica.Item;
 import Logica.Artista;
 import Logica.Cliente;
-import Logica.DataUsuario;
 import Logica.Fabrica;
 import Logica.IControlador;
 import javax.swing.JOptionPane;

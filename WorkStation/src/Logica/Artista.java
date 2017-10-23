@@ -1,5 +1,6 @@
 package Logica;
 
+import DataType.DataSession;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -22,7 +23,6 @@ public class Artista extends Usuario {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name="ALBUMS_DE_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"), inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
     private List<Album> albums;
-    private List<Usuario> siguiendo;
 
     public String getBiografia() {
         return biografia;
@@ -85,4 +85,16 @@ public class Artista extends Usuario {
     public List<Album> getAlbums(){
         return this.albums;
     }
+
+    
+/////////////////////////Funciones WEB////////////////////////
+  
+    @Override
+    public DataSession getSession() {
+        DataSession ret = new DataSession(this.getNickname(), this.getMail(), true);
+        return ret;
+    }
+    
+    @Override
+    public List getSiguiendoWeb(){return null;}
 }

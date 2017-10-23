@@ -13,12 +13,11 @@
     </head>
     <body>
         <%
-          String uname;
-          if(session.getAttribute("UserName")==null){
+          if(session.getAttribute("UserNick")==null){
               response.sendRedirect("index.html");
           }
         %>
-        <h1>Ususario logueado : ${UserName}</h1>
+        <h1>Ususario logueado : ${UserNick}</h1>
         
         <form action ="Logout" method="POST">
             <input type="submit" value="Logout"><br>            

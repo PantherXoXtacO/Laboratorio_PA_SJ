@@ -484,4 +484,10 @@ public class Controlador implements IControlador {
         Fecha f = new Fecha(numbers.get(0), numbers.get(1), numbers.get(2));
         this.registrarCliente(nick, pass, mail, nombre, apellido, f, "");
     }
+    
+    @Override
+    public DataSession getUserSession(String nick){
+        Manejador M=Manejador.getinstance();
+        return M.getUserSession(nick);
+    }
 }

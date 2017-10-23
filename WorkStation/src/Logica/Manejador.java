@@ -501,4 +501,17 @@ public class Manejador {
         }
         return ret;
     }
+
+    public DataSession getUserSession(String nick) {
+        DataSession ret = null;
+        Usuario u;
+        Iterator it=clientes.iterator();
+        while(it.hasNext()){
+            u=(Usuario) it.next();
+            if(u.getNickname().equals(nick)){
+                ret=u.getSession();
+            }
+        }
+        return ret;
+    }
 }

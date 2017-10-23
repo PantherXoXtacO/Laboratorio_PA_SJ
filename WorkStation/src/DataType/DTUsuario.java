@@ -5,6 +5,7 @@
  */
 package DataType;
 
+import Logica.Cliente;
 import Logica.Fecha;
 import Logica.Usuario;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class DTUsuario {
     private String ap;//Apellido
     private Fecha fechaNacimiento;
     private List<DTUsuario>seguidores;
+    private Boolean artista;
     
     public DTUsuario(Usuario u){
         nick=u.getNickname();
@@ -31,6 +33,12 @@ public class DTUsuario {
         ap=u.getApellido();
         fechaNacimiento=u.getFechaDeNacimiento();
         seguidores = new ArrayList();
+        if(u instanceof Cliente){
+            artista = false;
+        }
+        else{
+            artista = true;
+        }
         Iterator it = u.getSeguidores().iterator();
         Usuario aux;
         while(it.hasNext()){

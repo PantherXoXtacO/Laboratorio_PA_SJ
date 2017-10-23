@@ -1,5 +1,6 @@
 
 package Logica;
+import DataType.DataSession;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -125,19 +126,18 @@ public abstract class Usuario implements Serializable {
     public void addFollower(Usuario u1) {
         seguidores.add(u1);
     }
-
+    
+    void removeFollower(Usuario u1) {
+        System.out.println("lul");
+        seguidores.remove(u1);
+    }
+    
     public abstract void addFollow(Usuario u2);
     public abstract void removeFollow(Usuario u);
     
     @Override
     public String toString() {
         return getNickname();
-    }    
-    
-
-    void removeFollower(Usuario u1) {
-        System.out.println("lul");
-        seguidores.remove(u1);
     }
     
     public List<Item> getSeguidoresItem(){
@@ -153,5 +153,20 @@ public abstract class Usuario implements Serializable {
 
     public List getSeguidores() {
         return seguidores;
-    }    
-}
+    }
+
+/////////////////////////Funciones WEB////////////////////////
+    public abstract DataSession getSession();
+    public List getSeguidoresWeb(){
+        List ret = new ArrayList();
+        Iterator it = seguidores.iterator();
+        Usuario u;
+        while (it.hasNext()){
+            u=(Usuario) it.next();
+            ret.add(u.getSession());
+        }        
+        return ret;
+    }
+    public abstract List getSiguiendoWeb();
+    
+}    

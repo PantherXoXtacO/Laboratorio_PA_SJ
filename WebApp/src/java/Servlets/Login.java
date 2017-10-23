@@ -6,11 +6,10 @@ package Servlets;
  * and open the template in the editor.
  */
 
-import DataType.DTUsuario;
+import DataType.DataSession;
 import Logica.Controlador;
 import Logica.IControlador;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,13 +35,14 @@ public class Login extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         String nick = request.getParameter("name");
         IControlador controlador = new Controlador();
-        DTUsuario u = controlador.getUserData(nick);
-        if(u!=null){
+        DataSession user = controlador.getUserSession(nick);
+        if(user!=null){
             HttpSession session = request.getSession();
-            session.setAttribute("UserName", nick);
+            session.setAttribute("UserNick", nick);
+            session.setAttribute("UserMail", user.getMail());
+            session.setAttribute("EsArtista", user.getEsArtista());
             response.sendRedirect("Welcome.jsp");
             }
         else{

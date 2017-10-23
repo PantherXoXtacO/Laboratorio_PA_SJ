@@ -45,6 +45,13 @@ public class Controlador implements IControlador {
         List<Cliente> clientes = mu.getClientes();
         return clientes;
     }
+    
+    @Override
+    public List<Artista> getListaArtistas(){
+        Manejador mu = Manejador.getinstance();
+        List<Artista> artistas = mu.getArtistas();
+        return artistas;
+    }
       
     @Override
     public void AltaGenero(String nombre, String padre){
@@ -466,5 +473,10 @@ public class Controlador implements IControlador {
     public List getListasAsItem(){
         Manejador M=Manejador.getinstance();
         return M.getAllListsAsItem();
+    }
+    
+    @Override
+    public boolean usuario_libre(String nickname, String mail){
+        return nicknameLibre(nickname) && mailLibre(mail);
     }
 }

@@ -639,21 +639,30 @@ public class ControladorTest {
 //        assertEquals(expResult, result);
 //    }
 //
-//    /**
-//     * Test of artistLibre method, of class Controlador.
-//     */
-//    @Test
-//    public void testArtistLibre() {
-//        System.out.println("artistLibre");
-//        String artistAlbum = "";
-//        Controlador instance = new Controlador();
-//        boolean expResult = false;
-//        boolean result = instance.artistLibre(artistAlbum);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+
+    @Test
+    public void testArtistLibre1() {
+        System.out.println("artistLibre1_libre");
+        Controlador instance = new Controlador();
+        String artist = "PepeLibre1";
+        boolean expResult = true;
+        boolean result = instance.artistLibre(artist);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testArtistLibre2() {
+        System.out.println("artistLibre1_ocupado");
+        Controlador instance = new Controlador();
+        String artist = "PepeLibre2";
+        instance.registrarArtista(artist, "", "PepeLibrePail2", "", "", null, "", "", "");    
+        boolean expResult = false;        
+        boolean result = instance.artistLibre(artist);
+        assertEquals(expResult, result);
+    }
+    
+        
+
 //    /**
 //     * Test of GuardarTemaFav method, of class Controlador.
 //     */
@@ -835,17 +844,15 @@ public class ControladorTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of createTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testCreateTemporalAlbum() {
-//        System.out.println("createTemporalAlbum");
-//        Controlador instance = new Controlador();
-//        instance.createTemporalAlbum();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of createTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testCreateTemporalAlbum() {
+        System.out.println("createTemporalAlbum");
+        Controlador instance = new Controlador();
+        instance.createTemporalAlbum();
+    }
 //
 //    /**
 //     * Test of deleteTemporalAlbum method, of class Controlador.

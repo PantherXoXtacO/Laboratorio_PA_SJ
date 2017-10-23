@@ -173,9 +173,9 @@ public class Manejador {
     } 
     
     public boolean artistLibre(String nombre){
-<span class="nc bnc" id="L176" title="All 2 branches missed.">            if(this.obtenerArtista(nombre)== null)</span>
-<span class="nc" id="L177">                return true;</span>
-<span class="nc" id="L178">            return false;</span>
+<span class="fc bfc" id="L176" title="All 2 branches covered.">            if(this.obtenerArtista(nombre)== null)</span>
+<span class="fc" id="L177">                return true;</span>
+<span class="fc" id="L178">            return false;</span>
     }  
     
    
@@ -227,12 +227,12 @@ public class Manejador {
     public Artista obtenerArtista(String nickname){
 <span class="fc" id="L228">        Iterator it = artistas.iterator();</span>
         Artista user;
-<span class="pc bpc" id="L230" title="1 of 2 branches missed.">        while(it.hasNext()){</span>
+<span class="fc bfc" id="L230" title="All 2 branches covered.">        while(it.hasNext()){</span>
 <span class="fc" id="L231">            user = (Artista)it.next();</span>
-<span class="pc bpc" id="L232" title="1 of 2 branches missed.">            if(user.getNickname().equals(nickname))</span>
+<span class="fc bfc" id="L232" title="All 2 branches covered.">            if(user.getNickname().equals(nickname))</span>
 <span class="fc" id="L233">                return user;</span>
         }
-<span class="nc" id="L235">        return null;</span>
+<span class="fc" id="L235">        return null;</span>
     }
     
     
@@ -258,8 +258,8 @@ public class Manejador {
         Genero user;
 <span class="fc bfc" id="L259" title="All 2 branches covered.">        while(it.hasNext()){</span>
 <span class="fc" id="L260">            user = (Genero)it.next();</span>
-<span class="fc bfc" id="L261" title="All 2 branches covered.">            if(user.getNombre().equals(nombre))</span>
-<span class="fc" id="L262">                return user;</span>
+<span class="pc bpc" id="L261" title="1 of 2 branches missed.">            if(user.getNombre().equals(nombre))</span>
+<span class="nc" id="L262">                return user;</span>
         }
 <span class="fc" id="L264">        return null;</span>
     }
@@ -334,9 +334,9 @@ public class Manejador {
 <span class="fc" id="L334">    }</span>
     
     void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
-<span class="fc" id="L337">        ListaParticular lista = new ListaParticular(client, nombreDeLista, imagenDeLista);</span>
-<span class="fc" id="L338">        client.setListaParticular(lista);</span>
-<span class="fc" id="L339">    }</span>
+<span class="nc" id="L337">        ListaParticular lista = new ListaParticular(client, nombreDeLista, imagenDeLista);</span>
+<span class="nc" id="L338">        client.setListaParticular(lista);</span>
+<span class="nc" id="L339">    }</span>
     
     void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
 <span class="fc" id="L342">        ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);</span>

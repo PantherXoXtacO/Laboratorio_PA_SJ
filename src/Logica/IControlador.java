@@ -16,6 +16,7 @@ public interface IControlador{
                     String biografia, String dir_web);
     
     public abstract List<Cliente> getListaClientes();
+    public abstract List<Artista> getListaArtistas();
     public abstract void AltaGenero(String nombre, String padre);
     public abstract Genero GetGenero();
     public abstract Genero getGeneroPorNombre(String nombre);
@@ -85,5 +86,6 @@ public interface IControlador{
 
     public abstract List getAlbumsAsItem();
     public abstract List getListasAsItem();
+    public abstract boolean usuario_libre(String nickname, String mail);
 }
 

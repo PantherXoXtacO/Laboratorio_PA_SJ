@@ -23,11 +23,11 @@ public class Artista extends Usuario {
     private List&lt;Usuario&gt; siguiendo;
 
     public String getBiografia() {
-<span class="fc" id="L26">        return biografia;</span>
+<span class="nc" id="L26">        return biografia;</span>
     }
 
     public String getDir_web() {
-<span class="fc" id="L30">        return dir_web;</span>
+<span class="nc" id="L30">        return dir_web;</span>
     }
 
     public Artista(String biografia, String dir_web, String nickname, String contraseña, String mail, String nombre, String apellido, Fecha fechaDeNacimiento, String imagen) {
@@ -43,14 +43,14 @@ public class Artista extends Usuario {
     
     @Override
     public boolean equals(Object other) {
-<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if (!(other instanceof Artista)) {</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        if (!(other instanceof Artista)) {</span>
 <span class="nc" id="L47">            return false;</span>
     }
-<span class="fc" id="L49">    Artista that = (Artista) other;        </span>
-<span class="pc bpc" id="L50" title="2 of 4 branches missed.">    return (this.getBiografia().equals(that.getBiografia()) &amp;&amp; this.getDir_web().equals(that.getDir_web()) &amp;&amp;</span>
-<span class="pc bpc" id="L51" title="2 of 4 branches missed.">            this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
-<span class="pc bpc" id="L52" title="2 of 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
-<span class="pc bpc" id="L53" title="2 of 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
+<span class="nc" id="L49">    Artista that = (Artista) other;        </span>
+<span class="nc bnc" id="L50" title="All 4 branches missed.">    return (this.getBiografia().equals(that.getBiografia()) &amp;&amp; this.getDir_web().equals(that.getDir_web()) &amp;&amp;</span>
+<span class="nc bnc" id="L51" title="All 4 branches missed.">            this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
+<span class="nc bnc" id="L52" title="All 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
+<span class="nc bnc" id="L53" title="All 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
     }
     
     @Override

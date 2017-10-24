@@ -37,13 +37,13 @@ public class Cliente extends Usuario{
     
     @Override
     public boolean equals(Object other) {
-<span class="nc bnc" id="L40" title="All 2 branches missed.">        if (!(other instanceof Cliente)) {</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if (!(other instanceof Cliente)) {</span>
 <span class="nc" id="L41">            return false;</span>
     }
-<span class="nc" id="L43">    Cliente that = (Cliente) other;</span>
-<span class="nc bnc" id="L44" title="All 4 branches missed.">    return (this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
-<span class="nc bnc" id="L45" title="All 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
-<span class="nc bnc" id="L46" title="All 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
+<span class="fc" id="L43">    Cliente that = (Cliente) other;</span>
+<span class="pc bpc" id="L44" title="1 of 4 branches missed.">    return (this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
+<span class="pc bpc" id="L45" title="2 of 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
+<span class="pc bpc" id="L46" title="2 of 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
 }
     
     public List&lt;ListaDeReproduccion&gt; getListas(){
@@ -61,8 +61,8 @@ public class Cliente extends Usuario{
 <span class="nc" id="L61">    }</span>
     
     void setListaParticular(ListaDeReproduccion lista){
-<span class="nc" id="L64">        this.Listas.add(lista);</span>
-<span class="nc" id="L65">    }</span>
+<span class="fc" id="L64">        this.Listas.add(lista);</span>
+<span class="fc" id="L65">    }</span>
     
   
     public List getListsItem() {

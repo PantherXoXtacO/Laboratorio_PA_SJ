@@ -407,24 +407,29 @@ public class Manejador {
     }
     
     public void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath){
-        this.TemporalAlbum.setArtista(artist);
-        this.TemporalAlbum.setNombre(nombre);
-        this.TemporalAlbum.setGenero(generos);
-        this.TemporalAlbum.setAnio(año);
-        this.TemporalAlbum.setImg(imagePath);
+        if(artist != null && generos !=null ){
+            this.TemporalAlbum.setArtista(artist);
+            this.TemporalAlbum.setNombre(nombre);
+            this.TemporalAlbum.setGenero(generos);
+            this.TemporalAlbum.setAnio(año);
+            this.TemporalAlbum.setImg(imagePath);
+        }
+        
     }
     
     public void addTemporalAlbum(Artista artist){        
         //EntityManager em = emfactory.createEntityManager( );
         //Artista artista = em.find(Artista.class, artist.id);
         //em.getTransaction().begin();
-        Album albumToAdd = new Album(this.TemporalAlbum);
-        List<Genero> generos = this.TemporalAlbum.getGeneros();
-        addAlbumToGeneros(generos, albumToAdd);
-        this.Albums.add(albumToAdd);artist.addAlbum(albumToAdd);
-        //em.getTransaction().commit(); 
-        
-        deleteTemporalAlbum();        
+        if(artist != null){
+           Album albumToAdd = new Album(this.TemporalAlbum);
+           List<Genero> generos = this.TemporalAlbum.getGeneros();
+           addAlbumToGeneros(generos, albumToAdd);
+           this.Albums.add(albumToAdd);artist.addAlbum(albumToAdd);
+           //em.getTransaction().commit(); 
+           deleteTemporalAlbum();      
+        }
+             
     }
     
     public void addAlbumToGeneros(List<Genero> generos, Album album){
@@ -441,7 +446,10 @@ public class Manejador {
     }
     
     public void addToTemporalGenres(Genero genero){
-        this.TemporalGeneros.add(genero);
+        if(genero != null){
+            this.TemporalGeneros.add(genero);
+        }
+        
     }
     
     public void wipeTemporalGenres(){

@@ -403,8 +403,11 @@ public class Controlador implements IControlador {
     
     @Override
     public void addTemaToM(Tema tema){
-        Manejador M=Manejador.getinstance();
-        M.addTema(tema);
+        if(tema != null){
+            Manejador M=Manejador.getinstance();
+            M.addTema(tema);
+        }
+        
     }
     
     @Override

@@ -874,8 +874,6 @@ public class ControladorTest {
         Tema tema = null;
         Controlador instance = new Controlador();
         instance.addTemaToM(tema);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -887,8 +885,6 @@ public class ControladorTest {
         Artista artist = null;
         Controlador instance = new Controlador();
         instance.addTemporalAlbum(artist);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -899,8 +895,6 @@ public class ControladorTest {
         System.out.println("createTemporalGenres");
         Controlador instance = new Controlador();
         instance.createTemporalGenres();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -912,8 +906,6 @@ public class ControladorTest {
         Genero genero = null;
         Controlador instance = new Controlador();
         instance.addToTemporalGenres(genero);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -924,8 +916,6 @@ public class ControladorTest {
         System.out.println("wipeTemporalGenres");
         Controlador instance = new Controlador();
         instance.wipeTemporalGenres();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -938,8 +928,6 @@ public class ControladorTest {
         List<Genero> expResult = null;
         List<Genero> result = instance.getTemporalGenres();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -952,8 +940,6 @@ public class ControladorTest {
         Album expResult = null;
         Album result = instance.getTemporalAlbum();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -964,11 +950,9 @@ public class ControladorTest {
         System.out.println("absolutePathToRelative");
         String path = "";
         Controlador instance = new Controlador();
-        String expResult = "";
+        String expResult = "data/user_images/default.jpg";
         String result = instance.absolutePathToRelative(path);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 //
 //    /**

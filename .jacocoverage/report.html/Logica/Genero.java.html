@@ -47,13 +47,13 @@ public class Genero implements Serializable{
 <span class="fc" id="L47">        this.padre = null;</span>
 <span class="fc" id="L48">    }</span>
     
-<span class="fc" id="L50">    public Genero(){</span>
+<span class="nc" id="L50">    public Genero(){</span>
     
-<span class="fc" id="L52">    }</span>
+<span class="nc" id="L52">    }</span>
 
     //GETTERS
     public String getNombre() {
-<span class="fc" id="L56">        return nombre;</span>
+<span class="nc" id="L56">        return nombre;</span>
     }
 
     public List&lt;Genero&gt; getHijos() {
@@ -77,20 +77,20 @@ public class Genero implements Serializable{
     
     //Funciones
     public void addHijo(Genero g) {
-<span class="fc" id="L80">        Iterator it=hijos.iterator();</span>
+<span class="nc" id="L80">        Iterator it=hijos.iterator();</span>
         Genero aux;
-<span class="fc bfc" id="L82" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L83">            aux=(Genero)it.next();</span>
-<span class="pc bpc" id="L84" title="1 of 2 branches missed.">            if(aux.getNombre().equals(g.getNombre()))</span>
+<span class="nc bnc" id="L82" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L83">            aux=(Genero)it.next();</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">            if(aux.getNombre().equals(g.getNombre()))</span>
 <span class="nc" id="L85">                return;</span>
         }
-<span class="fc" id="L87">        g.setPadre(this);</span>
-<span class="fc" id="L88">        hijos.add(g);</span>
-<span class="fc" id="L89">    }</span>
+<span class="nc" id="L87">        g.setPadre(this);</span>
+<span class="nc" id="L88">        hijos.add(g);</span>
+<span class="nc" id="L89">    }</span>
     
     private void setPadre(Genero dad){
-<span class="fc" id="L92">        padre=dad.getNombre();</span>
-<span class="fc" id="L93">    }</span>
+<span class="nc" id="L92">        padre=dad.getNombre();</span>
+<span class="nc" id="L93">    }</span>
     
     public String getPadre(){
 <span class="nc" id="L96">        return padre;</span>

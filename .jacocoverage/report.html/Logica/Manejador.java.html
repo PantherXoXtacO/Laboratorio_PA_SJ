@@ -28,44 +28,44 @@ public class Manejador {
     private double IdList;
     
     //Para la base de datos
-<span class="fc" id="L31">    EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( &quot;Lab_Pro_AplPU&quot; );</span>
+<span class="nc" id="L31">    EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( &quot;Lab_Pro_AplPU&quot; );</span>
     
     
 <span class="fc" id="L34">    private static Manejador instancia=null;</span>
     
 <span class="fc" id="L36">    private Manejador(){</span>
-<span class="fc" id="L37">        usuarios =new ArrayList();</span>
-<span class="fc" id="L38">        clientes=new ArrayList();</span>
-<span class="fc" id="L39">        artistas=new ArrayList();</span>
-<span class="fc" id="L40">        Listas=new ArrayList(); // Listas por defecto</span>
-<span class="fc" id="L41">        generosList=new ArrayList();</span>
-<span class="fc" id="L42">        Temas=new ArrayList();</span>
-<span class="fc" id="L43">        IdTema=0;</span>
-<span class="fc" id="L44">        IdAlbum=0;</span>
-<span class="fc" id="L45">        IdList=0;</span>
+<span class="nc" id="L37">        usuarios =new ArrayList();</span>
+<span class="nc" id="L38">        clientes=new ArrayList();</span>
+<span class="nc" id="L39">        artistas=new ArrayList();</span>
+<span class="nc" id="L40">        Listas=new ArrayList(); // Listas por defecto</span>
+<span class="nc" id="L41">        generosList=new ArrayList();</span>
+<span class="nc" id="L42">        Temas=new ArrayList();</span>
+<span class="nc" id="L43">        IdTema=0;</span>
+<span class="nc" id="L44">        IdAlbum=0;</span>
+<span class="nc" id="L45">        IdList=0;</span>
         
-<span class="fc" id="L47">        EntityManager entitymanager = emfactory.createEntityManager( );    </span>
-<span class="fc" id="L48">        Query q = entitymanager.createQuery(&quot;SELECT a FROM Cliente a&quot;);</span>
-<span class="fc" id="L49">        Query q2 = entitymanager.createQuery(&quot;SELECT a FROM Artista a&quot;);</span>
-<span class="fc" id="L50">        Query QGeneros = entitymanager.createQuery(&quot;SELECT a FROM Genero a&quot;);</span>
-<span class="fc" id="L51">        Query q3 = entitymanager.createQuery(&quot;SELECT a from Album a&quot;);</span>
-<span class="fc" id="L52">        Query q4 = entitymanager.createQuery(&quot;SELECT a from Tema a&quot;);</span>
-<span class="fc" id="L53">        clientes = q.getResultList();</span>
-<span class="fc" id="L54">        artistas = q2.getResultList();</span>
-<span class="fc" id="L55">        generosList = QGeneros.getResultList();</span>
-<span class="fc" id="L56">        Albums = q3.getResultList();</span>
-<span class="fc" id="L57">        Temas = q4.getResultList();</span>
-        
-        
+<span class="nc" id="L47">        EntityManager entitymanager = emfactory.createEntityManager( );    </span>
+<span class="nc" id="L48">        Query q = entitymanager.createQuery(&quot;SELECT a FROM Cliente a&quot;);</span>
+<span class="nc" id="L49">        Query q2 = entitymanager.createQuery(&quot;SELECT a FROM Artista a&quot;);</span>
+<span class="nc" id="L50">        Query QGeneros = entitymanager.createQuery(&quot;SELECT a FROM Genero a&quot;);</span>
+<span class="nc" id="L51">        Query q3 = entitymanager.createQuery(&quot;SELECT a from Album a&quot;);</span>
+<span class="nc" id="L52">        Query q4 = entitymanager.createQuery(&quot;SELECT a from Tema a&quot;);</span>
+<span class="nc" id="L53">        clientes = q.getResultList();</span>
+<span class="nc" id="L54">        artistas = q2.getResultList();</span>
+<span class="nc" id="L55">        generosList = QGeneros.getResultList();</span>
+<span class="nc" id="L56">        Albums = q3.getResultList();</span>
+<span class="nc" id="L57">        Temas = q4.getResultList();</span>
         
         
-<span class="fc" id="L62">        GeneralGetHijos();</span>
-<span class="fc" id="L63">    }</span>
+        
+        
+<span class="nc" id="L62">        GeneralGetHijos();</span>
+<span class="nc" id="L63">    }</span>
     
     private void GeneralGetHijos(){
-<span class="fc" id="L66">        Iterator it = generosList.iterator();</span>
+<span class="nc" id="L66">        Iterator it = generosList.iterator();</span>
         Genero g;
-<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        while(it.hasNext()){</span>
 <span class="nc" id="L69">            g=(Genero) it.next();</span>
 <span class="nc bnc" id="L70" title="All 2 branches missed.">            if(g.getPadre().equals(genero.getNombre())){</span>
 <span class="nc" id="L71">                genero.addHijo(g);</span>
@@ -77,7 +77,7 @@ public class Manejador {
                 }
 <span class="nc" id="L78">            }</span>
         }
-<span class="fc" id="L80">    }</span>
+<span class="nc" id="L80">    }</span>
     
      public List getAlbumsItem() {
 <span class="nc" id="L83">        Iterator it = Albums.iterator();</span>
@@ -113,48 +113,48 @@ public class Manejador {
     }
     
     public List&lt;Cliente&gt; getClientes(){
-<span class="fc" id="L116">        return this.clientes;        </span>
+<span class="nc" id="L116">        return this.clientes;        </span>
     }
     
     public List&lt;Artista&gt; getArtistas(){
-<span class="fc" id="L120">        return this.artistas;        </span>
+<span class="nc" id="L120">        return this.artistas;        </span>
     }
     
     public static Manejador getinstance(){
-<span class="fc bfc" id="L124" title="All 2 branches covered.">        if (instancia==null)</span>
-<span class="fc" id="L125">            instancia = new Manejador();</span>
-<span class="fc" id="L126">        return instancia;</span>
+<span class="pc bpc" id="L124" title="1 of 2 branches missed.">        if (instancia==null)</span>
+<span class="nc" id="L125">            instancia = new Manejador();</span>
+<span class="nc" id="L126">        return instancia;</span>
     }
     
     public void addCliente(Cliente usu){
-<span class="fc" id="L130">        clientes.add(usu);</span>
-<span class="fc" id="L131">        EntityManager entitymanager = emfactory.createEntityManager( );  </span>
+<span class="nc" id="L130">        clientes.add(usu);</span>
+<span class="nc" id="L131">        EntityManager entitymanager = emfactory.createEntityManager( );  </span>
         try{
-<span class="fc" id="L133">            entitymanager.getTransaction().begin();</span>
-<span class="fc" id="L134">            entitymanager.persist(usu);</span>
-<span class="fc" id="L135">            entitymanager.getTransaction().commit();</span>
-<span class="fc" id="L136">            entitymanager.close(); </span>
+<span class="nc" id="L133">            entitymanager.getTransaction().begin();</span>
+<span class="nc" id="L134">            entitymanager.persist(usu);</span>
+<span class="nc" id="L135">            entitymanager.getTransaction().commit();</span>
+<span class="nc" id="L136">            entitymanager.close(); </span>
         }
 <span class="nc" id="L138">        catch (Exception e) {</span>
 <span class="nc" id="L139">            e.printStackTrace();</span>
 <span class="nc" id="L140">            entitymanager.getTransaction().rollback();</span>
-<span class="fc" id="L141">        } </span>
-<span class="fc" id="L142">    } </span>
+<span class="nc" id="L141">        } </span>
+<span class="nc" id="L142">    } </span>
     
     public void addArtista(Artista usu){
-<span class="fc" id="L145">        artistas.add(usu); </span>
-<span class="fc" id="L146">        EntityManager entitymanager = emfactory.createEntityManager( );    </span>
+<span class="nc" id="L145">        artistas.add(usu); </span>
+<span class="nc" id="L146">        EntityManager entitymanager = emfactory.createEntityManager( );    </span>
         try {
-<span class="fc" id="L148">            entitymanager.getTransaction().begin();</span>
-<span class="fc" id="L149">            entitymanager.persist(usu);</span>
-<span class="fc" id="L150">            entitymanager.getTransaction().commit();</span>
-<span class="fc" id="L151">            entitymanager.close(); </span>
+<span class="nc" id="L148">            entitymanager.getTransaction().begin();</span>
+<span class="nc" id="L149">            entitymanager.persist(usu);</span>
+<span class="nc" id="L150">            entitymanager.getTransaction().commit();</span>
+<span class="nc" id="L151">            entitymanager.close(); </span>
         }
 <span class="nc" id="L153">        catch (Exception e) {</span>
 <span class="nc" id="L154">            e.printStackTrace();</span>
 <span class="nc" id="L155">            entitymanager.getTransaction().rollback();</span>
-<span class="fc" id="L156">        } </span>
-<span class="fc" id="L157">    }</span>
+<span class="nc" id="L156">        } </span>
+<span class="nc" id="L157">    }</span>
         
     public boolean nicknameLibre(String nickname){
 <span class="nc bnc" id="L160" title="All 2 branches missed.">        if(this.obtenerCliente(nickname) == null){</span>
@@ -165,39 +165,39 @@ public class Manejador {
     }  
     
     public boolean mailLibre(String mail){
-<span class="fc bfc" id="L168" title="All 2 branches covered.">        if(this.obtenerClientePorMail(mail) == null){</span>
-<span class="pc bpc" id="L169" title="1 of 2 branches missed.">            if(this.obtenerArtistaPorMail(mail)== null)</span>
-<span class="fc" id="L170">                return true;</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">        if(this.obtenerClientePorMail(mail) == null){</span>
+<span class="nc bnc" id="L169" title="All 2 branches missed.">            if(this.obtenerArtistaPorMail(mail)== null)</span>
+<span class="nc" id="L170">                return true;</span>
         }
-<span class="fc" id="L172">        return false;</span>
+<span class="nc" id="L172">        return false;</span>
     } 
     
     public boolean artistLibre(String nombre){
-<span class="fc bfc" id="L176" title="All 2 branches covered.">            if(this.obtenerArtista(nombre)== null)</span>
-<span class="fc" id="L177">                return true;</span>
-<span class="fc" id="L178">            return false;</span>
+<span class="nc bnc" id="L176" title="All 2 branches missed.">            if(this.obtenerArtista(nombre)== null)</span>
+<span class="nc" id="L177">                return true;</span>
+<span class="nc" id="L178">            return false;</span>
     }  
     
    
     public Usuario obtenerClientePorMail(String mail){
-<span class="fc" id="L183">        Iterator it = clientes.iterator();</span>
+<span class="nc" id="L183">        Iterator it = clientes.iterator();</span>
         Cliente user;
-<span class="fc bfc" id="L185" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L186">            user = (Cliente)it.next();</span>
-<span class="fc bfc" id="L187" title="All 2 branches covered.">            if(user.getMail().equals(mail))</span>
-<span class="fc" id="L188">                return user;</span>
+<span class="nc bnc" id="L185" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L186">            user = (Cliente)it.next();</span>
+<span class="nc bnc" id="L187" title="All 2 branches missed.">            if(user.getMail().equals(mail))</span>
+<span class="nc" id="L188">                return user;</span>
         }
-<span class="fc" id="L190">        return null;</span>
+<span class="nc" id="L190">        return null;</span>
     }
     public Usuario obtenerArtistaPorMail(String mail){
-<span class="fc" id="L193">        Iterator it = artistas.iterator();</span>
+<span class="nc" id="L193">        Iterator it = artistas.iterator();</span>
         Artista user;
-<span class="fc bfc" id="L195" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L196">            user = (Artista)it.next();</span>
-<span class="pc bpc" id="L197" title="1 of 2 branches missed.">            if(user.getMail().equals(mail))</span>
+<span class="nc bnc" id="L195" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L196">            user = (Artista)it.next();</span>
+<span class="nc bnc" id="L197" title="All 2 branches missed.">            if(user.getMail().equals(mail))</span>
 <span class="nc" id="L198">                return user;</span>
         }
-<span class="fc" id="L200">        return null;</span>
+<span class="nc" id="L200">        return null;</span>
     }
         
     
@@ -214,31 +214,31 @@ public class Manejador {
     
     
     public Cliente obtenerCliente(String nickname){
-<span class="fc" id="L217">        Iterator it = clientes.iterator();</span>
+<span class="nc" id="L217">        Iterator it = clientes.iterator();</span>
         Cliente user;
-<span class="pc bpc" id="L219" title="1 of 2 branches missed.">        while(it.hasNext()){</span>
-<span class="fc" id="L220">            user = (Cliente)it.next();</span>
-<span class="pc bpc" id="L221" title="1 of 2 branches missed.">            if(user.getNickname().equals(nickname))</span>
-<span class="fc" id="L222">                return user;</span>
+<span class="nc bnc" id="L219" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L220">            user = (Cliente)it.next();</span>
+<span class="nc bnc" id="L221" title="All 2 branches missed.">            if(user.getNickname().equals(nickname))</span>
+<span class="nc" id="L222">                return user;</span>
         }
 <span class="nc" id="L224">        return null;</span>
     }
     
     public Artista obtenerArtista(String nickname){
-<span class="fc" id="L228">        Iterator it = artistas.iterator();</span>
+<span class="nc" id="L228">        Iterator it = artistas.iterator();</span>
         Artista user;
-<span class="fc bfc" id="L230" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L231">            user = (Artista)it.next();</span>
-<span class="fc bfc" id="L232" title="All 2 branches covered.">            if(user.getNickname().equals(nickname))</span>
-<span class="fc" id="L233">                return user;</span>
+<span class="nc bnc" id="L230" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L231">            user = (Artista)it.next();</span>
+<span class="nc bnc" id="L232" title="All 2 branches missed.">            if(user.getNickname().equals(nickname))</span>
+<span class="nc" id="L233">                return user;</span>
         }
-<span class="fc" id="L235">        return null;</span>
+<span class="nc" id="L235">        return null;</span>
     }
     
     
     //Funciones auxiliares
     public Genero getGenero(){
-<span class="fc" id="L241">        return genero;</span>
+<span class="nc" id="L241">        return genero;</span>
     }
     
     public void createTemporalAlbum(){
@@ -254,14 +254,14 @@ public class Manejador {
     }
     
     public Genero getGeneroPorNombre(String nombre){
-<span class="fc" id="L257">        Iterator it = generosList.iterator();</span>
+<span class="nc" id="L257">        Iterator it = generosList.iterator();</span>
         Genero user;
-<span class="fc bfc" id="L259" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L260">            user = (Genero)it.next();</span>
-<span class="pc bpc" id="L261" title="1 of 2 branches missed.">            if(user.getNombre().equals(nombre))</span>
+<span class="nc bnc" id="L259" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L260">            user = (Genero)it.next();</span>
+<span class="nc bnc" id="L261" title="All 2 branches missed.">            if(user.getNombre().equals(nombre))</span>
 <span class="nc" id="L262">                return user;</span>
         }
-<span class="fc" id="L264">        return null;</span>
+<span class="nc" id="L264">        return null;</span>
     }
     
     public ListaParticular getListaPorNombre(Cliente user, String nombre){
@@ -282,15 +282,15 @@ public class Manejador {
     }
 
     boolean FindUser(String text) {
-<span class="fc" id="L285">        Iterator it=usuarios.iterator();</span>
+<span class="nc" id="L285">        Iterator it=usuarios.iterator();</span>
         Usuario user;
-<span class="pc bpc" id="L287" title="1 of 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc bnc" id="L287" title="All 2 branches missed.">        while(it.hasNext()){</span>
 <span class="nc" id="L288">            user=(Usuario)it.next();</span>
 <span class="nc bnc" id="L289" title="All 2 branches missed.">            if(user.getNickname().equals(text)){</span>
 <span class="nc" id="L290">                return true;</span>
             }
         }
-<span class="fc" id="L293">        return false;</span>
+<span class="nc" id="L293">        return false;</span>
     }
 
     public void persist(Object object) {
@@ -308,30 +308,30 @@ public class Manejador {
 <span class="nc" id="L308">    }</span>
 
     public Genero findGenero(String text) {
-<span class="fc" id="L311">        Iterator it=generosList.iterator();</span>
+<span class="nc" id="L311">        Iterator it=generosList.iterator();</span>
         Genero g;
-<span class="fc bfc" id="L313" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L314">            g=(Genero)it.next();</span>
-<span class="fc bfc" id="L315" title="All 2 branches covered.">            if(g.getNombre().equals(text))</span>
-<span class="fc" id="L316">                return g;</span>
+<span class="nc bnc" id="L313" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L314">            g=(Genero)it.next();</span>
+<span class="nc bnc" id="L315" title="All 2 branches missed.">            if(g.getNombre().equals(text))</span>
+<span class="nc" id="L316">                return g;</span>
         }
-<span class="fc" id="L318">        return null;</span>
+<span class="nc" id="L318">        return null;</span>
     }
 
     void addGeneroToList(Genero nuevoGen){
-<span class="fc" id="L322">        EntityManager entitymanager = emfactory.createEntityManager( );    </span>
+<span class="nc" id="L322">        EntityManager entitymanager = emfactory.createEntityManager( );    </span>
         try {
-<span class="fc" id="L324">            entitymanager.getTransaction().begin();</span>
-<span class="fc" id="L325">            entitymanager.persist(nuevoGen);</span>
-<span class="fc" id="L326">            entitymanager.getTransaction().commit();</span>
-<span class="fc" id="L327">            entitymanager.close(); </span>
+<span class="nc" id="L324">            entitymanager.getTransaction().begin();</span>
+<span class="nc" id="L325">            entitymanager.persist(nuevoGen);</span>
+<span class="nc" id="L326">            entitymanager.getTransaction().commit();</span>
+<span class="nc" id="L327">            entitymanager.close(); </span>
         }
 <span class="nc" id="L329">        catch (Exception e) {</span>
 <span class="nc" id="L330">            e.printStackTrace();</span>
 <span class="nc" id="L331">            entitymanager.getTransaction().rollback();</span>
-<span class="fc" id="L332">        } </span>
-<span class="fc" id="L333">        generosList.add(nuevoGen);</span>
-<span class="fc" id="L334">    }</span>
+<span class="nc" id="L332">        } </span>
+<span class="nc" id="L333">        generosList.add(nuevoGen);</span>
+<span class="nc" id="L334">    }</span>
     
     void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
 <span class="nc" id="L337">        ListaParticular lista = new ListaParticular(client, nombreDeLista, imagenDeLista);</span>
@@ -339,20 +339,20 @@ public class Manejador {
 <span class="nc" id="L339">    }</span>
     
     void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
-<span class="fc" id="L342">        ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);</span>
-<span class="fc" id="L343">        this.Listas.add(lista);</span>
-<span class="fc" id="L344">    }</span>
+<span class="nc" id="L342">        ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);</span>
+<span class="nc" id="L343">        this.Listas.add(lista);</span>
+<span class="nc" id="L344">    }</span>
     
 
     public List ItemCLiente() {
-<span class="fc" id="L348">        Iterator it=clientes.iterator();</span>
+<span class="nc" id="L348">        Iterator it=clientes.iterator();</span>
         Cliente c;
-<span class="fc" id="L350">        List ret= new ArrayList();</span>
-<span class="fc bfc" id="L351" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L352">            c=(Cliente) it.next();</span>
-<span class="fc" id="L353">            ret.add(new Item(c, c.getNickname()));</span>
+<span class="nc" id="L350">        List ret= new ArrayList();</span>
+<span class="nc bnc" id="L351" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L352">            c=(Cliente) it.next();</span>
+<span class="nc" id="L353">            ret.add(new Item(c, c.getNickname()));</span>
         }
-<span class="fc" id="L355">        return ret;</span>
+<span class="nc" id="L355">        return ret;</span>
     }
     
     
@@ -380,14 +380,14 @@ public class Manejador {
     }
     
     public List ItemGenero() {
-<span class="fc" id="L383">        Iterator it=generosList.iterator();</span>
+<span class="nc" id="L383">        Iterator it=generosList.iterator();</span>
         Genero t;
-<span class="fc" id="L385">        List ret= new ArrayList();</span>
-<span class="fc bfc" id="L386" title="All 2 branches covered.">        while(it.hasNext()){</span>
-<span class="fc" id="L387">            t=(Genero)it.next();</span>
-<span class="fc" id="L388">            ret.add(new Item(t, t.getNombre()));</span>
+<span class="nc" id="L385">        List ret= new ArrayList();</span>
+<span class="nc bnc" id="L386" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L387">            t=(Genero)it.next();</span>
+<span class="nc" id="L388">            ret.add(new Item(t, t.getNombre()));</span>
         }
-<span class="fc" id="L390">        return ret;</span>
+<span class="nc" id="L390">        return ret;</span>
     }
 
     public void updatePersistGen(Genero gen) {

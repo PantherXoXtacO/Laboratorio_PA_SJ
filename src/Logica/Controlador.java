@@ -316,11 +316,6 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public void AgregarTema(Usuario user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public void SeguirUsuario(String seguidor, String seguido) {
          Manejador M=Manejador.getinstance();
          Usuario u1 = M.obtenerUsuario(seguidor);

@@ -733,19 +733,7 @@ public class ControladorTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of AgregarTema method, of class Controlador.
-//     */
-//    @Test
-//    public void testAgregarTema() {
-//        System.out.println("AgregarTema");
-//        Usuario user = null;
-//        Controlador instance = new Controlador();
-//        instance.AgregarTema(user);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+
 //    /**
 //     * Test of SeguirUsuario method, of class Controlador.
 //     */
@@ -853,141 +841,135 @@ public class ControladorTest {
         Controlador instance = new Controlador();
         instance.createTemporalAlbum();
     }
+
+    @Test
+    public void testDeleteTemporalAlbum() {
+        System.out.println("deleteTemporalAlbum");
+        Controlador instance = new Controlador();
+        instance.deleteTemporalAlbum();
+        
+    }
 //
-//    /**
-//     * Test of deleteTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testDeleteTemporalAlbum() {
-//        System.out.println("deleteTemporalAlbum");
-//        Controlador instance = new Controlador();
-//        instance.deleteTemporalAlbum();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of configTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testConfigTemporalAlbum() {
-//        System.out.println("configTemporalAlbum");
-//        Artista artist = null;
-//        String nombre = "";
-//        List<Genero> generos = null;
-//        int año = 0;
-//        String imagePath = "";
-//        Controlador instance = new Controlador();
-//        instance.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of addTemaToM method, of class Controlador.
-//     */
-//    @Test
-//    public void testAddTemaToM() {
-//        System.out.println("addTemaToM");
-//        Tema tema = null;
-//        Controlador instance = new Controlador();
-//        instance.addTemaToM(tema);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of addTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testAddTemporalAlbum() {
-//        System.out.println("addTemporalAlbum");
-//        Artista artist = null;
-//        Controlador instance = new Controlador();
-//        instance.addTemporalAlbum(artist);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of createTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testCreateTemporalGenres() {
-//        System.out.println("createTemporalGenres");
-//        Controlador instance = new Controlador();
-//        instance.createTemporalGenres();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of addToTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testAddToTemporalGenres() {
-//        System.out.println("addToTemporalGenres");
-//        Genero genero = null;
-//        Controlador instance = new Controlador();
-//        instance.addToTemporalGenres(genero);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of wipeTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testWipeTemporalGenres() {
-//        System.out.println("wipeTemporalGenres");
-//        Controlador instance = new Controlador();
-//        instance.wipeTemporalGenres();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of getTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testGetTemporalGenres() {
-//        System.out.println("getTemporalGenres");
-//        Controlador instance = new Controlador();
-//        List<Genero> expResult = null;
-//        List<Genero> result = instance.getTemporalGenres();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of getTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testGetTemporalAlbum() {
-//        System.out.println("getTemporalAlbum");
-//        Controlador instance = new Controlador();
-//        Album expResult = null;
-//        Album result = instance.getTemporalAlbum();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of absolutePathToRelative method, of class Controlador.
-//     */
-//    @Test
-//    public void testAbsolutePathToRelative() {
-//        System.out.println("absolutePathToRelative");
-//        String path = "";
-//        Controlador instance = new Controlador();
-//        String expResult = "";
-//        String result = instance.absolutePathToRelative(path);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of configTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testConfigTemporalAlbum() {
+        System.out.println("configTemporalAlbum");
+        Artista artist = null;
+        String nombre = "";
+        List<Genero> generos = null;
+        int año = 0;
+        String imagePath = "";
+        Controlador instance = new Controlador();
+        instance.configTemporalAlbum(artist, nombre, generos, año, imagePath);
+    }
+
+    /**
+     * Test of addTemaToM method, of class Controlador.
+     */
+    @Test
+    public void testAddTemaToM() {
+        System.out.println("addTemaToM");
+        Tema tema = null;
+        Controlador instance = new Controlador();
+        instance.addTemaToM(tema);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of addTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testAddTemporalAlbum() {
+        System.out.println("addTemporalAlbum");
+        Artista artist = null;
+        Controlador instance = new Controlador();
+        instance.addTemporalAlbum(artist);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of createTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testCreateTemporalGenres() {
+        System.out.println("createTemporalGenres");
+        Controlador instance = new Controlador();
+        instance.createTemporalGenres();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of addToTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testAddToTemporalGenres() {
+        System.out.println("addToTemporalGenres");
+        Genero genero = null;
+        Controlador instance = new Controlador();
+        instance.addToTemporalGenres(genero);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of wipeTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testWipeTemporalGenres() {
+        System.out.println("wipeTemporalGenres");
+        Controlador instance = new Controlador();
+        instance.wipeTemporalGenres();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testGetTemporalGenres() {
+        System.out.println("getTemporalGenres");
+        Controlador instance = new Controlador();
+        List<Genero> expResult = null;
+        List<Genero> result = instance.getTemporalGenres();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testGetTemporalAlbum() {
+        System.out.println("getTemporalAlbum");
+        Controlador instance = new Controlador();
+        Album expResult = null;
+        Album result = instance.getTemporalAlbum();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of absolutePathToRelative method, of class Controlador.
+     */
+    @Test
+    public void testAbsolutePathToRelative() {
+        System.out.println("absolutePathToRelative");
+        String path = "";
+        Controlador instance = new Controlador();
+        String expResult = "";
+        String result = instance.absolutePathToRelative(path);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
 //
 //    /**
 //     * Test of getAlbumsAsItem method, of class Controlador.

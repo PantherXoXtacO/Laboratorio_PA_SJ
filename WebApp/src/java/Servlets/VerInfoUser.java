@@ -48,6 +48,7 @@ public class VerInfoUser extends HttpServlet {
             out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
             if(u!=null){
                 out.println("<p> Nombre: " + u.getNom() + "<br> Apellido: " + u.getAp() + "<br> Mail: " + u.getMail() + "<br> Nick: " + u.getNick() + "<br></p>");
+                out.println("<img src=\"../WorkStation/" + u.getImg().substring(2) + "  height=\"42\" width=\"42\">");
             }
             else{
                 out.println("<p>No se encontro el usuario</p>");

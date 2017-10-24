@@ -22,6 +22,7 @@ public class DTUsuario {
     private String mail;
     private String nom;//Nombre
     private String ap;//Apellido
+    private String img;
     private Fecha fechaNacimiento;
     private List<DTUsuario>seguidores;
     private Boolean artista;
@@ -31,6 +32,7 @@ public class DTUsuario {
         mail=u.getMail();
         nom=u.getNombre();
         ap=u.getApellido();
+        img=u.getImagen();
         fechaNacimiento=u.getFechaDeNacimiento();
         seguidores = new ArrayList();
         if(u instanceof Cliente){
@@ -61,5 +63,9 @@ public class DTUsuario {
     
     public String getAp(){
         return ap;
+    }
+
+    public String getImg() {
+        return img;
     }
 }

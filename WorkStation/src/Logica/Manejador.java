@@ -481,8 +481,54 @@ public class Manejador {
         ret.addAll(this.getListasDefectoItem());        
         return ret;
     }    
-
-
+    
+    boolean ClienteNickRepetido(String nick) {
+        Iterator it = clientes.iterator();
+        Cliente c;
+        while(it.hasNext()){
+            c=(Cliente) it.next();
+            if(nick.equals(c.getNickname())){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    boolean ArtistaNickRepetido(String nick) {
+        Iterator it = artistas.iterator();
+        Artista a;
+        while(it.hasNext()){
+            a=(Artista) it.next();
+            if(nick.equals(a.getNickname())){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    boolean ClienteMailRepetido(String mail) {
+        Iterator it = clientes.iterator();
+        Cliente c;
+        while(it.hasNext()){
+            c=(Cliente) it.next();
+            if(mail.equals(c.getMail())){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    boolean ArtistaMailRepetido(String mail) {
+        Iterator it = artistas.iterator();
+        Artista a;
+        while(it.hasNext()){
+            a=(Artista) it.next();
+            if(mail.equals(a.getMail())){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 /////////////////////////////////////FUNCIONES DE SERVLET//////////////////////////////////////////////
@@ -514,4 +560,6 @@ public class Manejador {
         }
         return ret;
     }
+
+
 }

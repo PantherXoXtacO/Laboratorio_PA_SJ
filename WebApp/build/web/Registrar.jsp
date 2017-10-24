@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action ="Registrar" method="POST">
+        <form id="FormRegistro" name="FormRegistro" action ="/Lab/Registrar" method="POST">
             Nick:
             <input type="Text" size="20" name="userNick"><br>
             Mail:
@@ -24,9 +24,20 @@
             Fecha de Nacimiento:
             <input type="date" name="FechaDeNacimiento"><br>  
             Pass:
-            <input id="contra" type="password" size="20" name="userPass"><br>
+            <input id="contra" type="password" size="20" name="userPass" onkeyup="checkPasswordMatch();"><br>
             Confirmar Pass:
-            <input id="contra2" type="password" size="20" name="userPass2" onkeyup="checkPasswordMatch();"><dib id="passMatch"> </dib> <br>          
+            <input id="contra2" type="password" size="20" name="userPass2" onkeyup="checkPasswordMatch();"><div id="passMatch"> </div> <br>
+            ¿Eres artista?
+            <input id="radioButtonEsArtista" type="radio" name="IsArtist" value="si" onchange="setArtInfoVisible();">Si
+            <input id="radioButtonNoEsArtista" type="radio" name="IsArtist" value="no" onchange="setArtInfoVisible();" checked="checked">No<br>
+            <div id="ArtistInfo" style="display: none;"> 
+                Biografia:<br>
+                <textarea form="FormRegistro" name="bio" cols="40" rows="4" ></textarea><br>
+                Direccion web:
+                <input type="Text" size="20" name="web_url">
+            </div>
+            <!--<br>Imagen:<br>
+            <input id="pic" type="file" name="pic" accept="image/*"><br><br>-->
             <input id="botonRegistro" type="submit" value="Registar" disabled="true"><br>
         </form>
     </body>
@@ -44,6 +55,22 @@
         else{
             document.getElementById('passMatch').innerHTML = '';
             document.getElementById('botonRegistro').disabled = false;
+        }
+    }
+    </script>
+    
+    <script>function checkCampos() {
+        //Funcion que checkea que todos los campos esten llenos
+    }
+    </script>
+    
+    <script>function setArtInfoVisible(){
+        var r = document.getElementById('radioButtonEsArtista');
+        if(r.checked){
+            document.getElementById('ArtistInfo').style.display = 'block';
+        }
+        else{
+            document.getElementById('ArtistInfo').style.display = 'none';
         }
     }
     </script>

@@ -24,9 +24,11 @@ public class Controlador implements IControlador {
                     Fecha fechaDeNacimiento, String imagen){
         
         Manejador mu = Manejador.getinstance();
-        Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
-                                            fechaDeNacimiento, imagen);
-        mu.addCliente(user);
+        if (!mu.ClienteNickRepetido(nickname) && !mu.ClienteMailRepetido(mail)){
+            Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,
+                                       fechaDeNacimiento, imagen);
+            mu.addCliente(user);
+        }
     } 
         
     public void registrarArtista(String nickname, String contraseña,
@@ -35,9 +37,11 @@ public class Controlador implements IControlador {
                     String biografia, String dir_web){
         
         Manejador mu = Manejador.getinstance();
-        Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
+        if(!mu.ArtistaNickRepetido(nickname) && !mu.ArtistaMailRepetido(mail)){
+            Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,
                                             fechaDeNacimiento, imagen);
-        mu.addArtista(user);
+            mu.addArtista(user);
+        }
     }
     
     @Override

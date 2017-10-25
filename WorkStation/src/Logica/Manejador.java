@@ -8,6 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import DataType.*;
+import Enums.TiposDeSuscripcion;
 
 
 public class Manejador {
@@ -43,6 +44,7 @@ public class Manejador {
         Listas=new ArrayList(); // Listas por defecto
         generosList=new ArrayList();
         Temas=new ArrayList();
+        suscripciones = new ArrayList();
         IdTema=0;
         IdAlbum=0;
         IdList=0;
@@ -60,9 +62,9 @@ public class Manejador {
         Temas = q4.getResultList();
         
         
-        
-        
+       
         GeneralGetHijos();
+        testSuscripcion();
     }
     
     private void GeneralGetHijos(){
@@ -80,6 +82,16 @@ public class Manejador {
                 }
             }
         }
+    }
+
+    public List<Suscripcion> getSuscripciones() {
+        return suscripciones;
+    }
+    
+    public void testSuscripcion(){
+        Cliente client = new Cliente("qweasd", "a", "qweasd", "a", "a", new Fecha(1, 1, 1234), "path");
+        Suscripcion s = new Suscripcion(client, TiposDeSuscripcion.Anual);
+        suscripciones.add(s);
     }
     
      public List getAlbumsItem() {
@@ -380,6 +392,22 @@ public class Manejador {
             ret.add(new Item(t, t.getNombre()));
         }
         return ret;
+    }
+    
+    public List ItemSuscripciones(){
+        if(suscripciones!=null){
+            Iterator it = suscripciones.iterator();
+            Suscripcion t;
+            List ret= new ArrayList();
+            while(it.hasNext()){
+                t=(Suscripcion)it.next();
+                ret.add(new Item(t, t.getCliente().getNickname()));
+            }
+            return ret;    
+        }
+        else
+            return null;
+        
     }
     
     public List ItemGenero() {

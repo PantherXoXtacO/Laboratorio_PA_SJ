@@ -32,6 +32,7 @@ public interface IControlador{
     public abstract List getItemArtista();
     public abstract List getTemasItem();
     public abstract List getGeneroItem();
+    public abstract List getItemSuscripciones();
 
     public abstract void agregarTemaALista(Object Lista, Object Tema);
 

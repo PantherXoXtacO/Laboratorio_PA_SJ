@@ -9,6 +9,7 @@
     <class>Logica.Fecha</class>
     <class>Logica.Tema</class>
     <class>Logica.Genero</class>
+    <class>Logica.Suscripcion</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/Espotify"/>
       <property name="javax.persistence.jdbc.user" value="tisj"/>

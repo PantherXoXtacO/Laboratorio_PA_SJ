@@ -152,6 +152,13 @@ public class Controlador implements IControlador {
     }    
     
     @Override
+    public List getItemSuscripciones(){
+        Manejador M=Manejador.getinstance();
+        List ret = M.ItemSuscripciones();
+        return ret;
+    }
+    
+    @Override
     public List getGeneroItem(){
      Manejador M=Manejador.getinstance();
      List ret=M.ItemGenero();

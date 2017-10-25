@@ -6,7 +6,9 @@
 package Logica;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import static org.hamcrest.CoreMatchers.hasItems;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,7 +45,7 @@ public class ControladorTest {
      * Test of registrarCliente method, of class Controlador.
      */
     @Test
-    public void T001_testRegistrarCliente() {
+    public void testRegistrarCliente() {
         System.out.println("registrarCliente");
         String nickname = "ClienteTest";
         String contraseña = "ClienteTest";
@@ -67,7 +69,7 @@ public class ControladorTest {
      * Test of registrarArtista method, of class Controlador.
      */
     @Test
-    public void T002_testRegistrarArtista() {
+    public void testRegistrarArtista() {
         System.out.println("registrarArtista");
         String nickname = "ArtTest";
         String contraseña = "ArtTest";
@@ -93,10 +95,10 @@ public class ControladorTest {
      * Test of getListaClientes method, of class Controlador.
      */
     @Test
-    public void T003_testGetListaClientes() {
+    public void testGetListaClientes() {
         System.out.println("getListaClientes");
         Controlador instance = new Controlador();
-        int cantExpetc = 1;
+        int cantExpetc = 2;
         List<Cliente> result = instance.getListaClientes();
         int cantResult = result.size();
         assertEquals(cantExpetc, cantResult);
@@ -106,7 +108,7 @@ public class ControladorTest {
 //     * Test of AltaGenero method, of class Controlador.
 //     */
     @Test
-    public void T004_testAltaGenero() {
+    public void testAltaGenero() {
         System.out.println("AltaGenero1");
         String nombre = "TestGenero";
         String padre = "";
@@ -119,7 +121,7 @@ public class ControladorTest {
     }
     
     @Test
-    public void T005_testAltaGenero2() {
+    public void testAltaGenero2() {
         System.out.println("AltaGenero2");
         String nombre = "TestGenero";
         String padre = "";
@@ -132,7 +134,7 @@ public class ControladorTest {
     }
     
     @Test
-    public void T006_testAltaGenero3() {
+    public void testAltaGenero3() {
         System.out.println("AltaGenero3");
         String nombre = "TestGenero2";
         String padre = "TestGenero";
@@ -145,7 +147,7 @@ public class ControladorTest {
     }
     
         @Test
-    public void T007_testAltaGenero4() {
+    public void testAltaGenero4() {
         System.out.println("AltaGenero4");
         String nombre = "TestGenero3";
         String padre = "General";
@@ -158,7 +160,7 @@ public class ControladorTest {
     }
     
     @Test
-    public void T008_testAltaGenero5() {
+    public void testAltaGenero5() {
         System.out.println("AltaGenero5");
         String nombre = "";
         String padre = "";
@@ -171,7 +173,7 @@ public class ControladorTest {
     }
     
     @Test
-    public void T009_testAltaGenero6() {
+    public void testAltaGenero6() {
         System.out.println("AltaGenero6");
         String nombre = "TestGenero454545";
         String padre = "generoFalso";
@@ -184,7 +186,7 @@ public class ControladorTest {
     }
     
     @Test
-    public void T010_testAltaGenero7() {
+    public void testAltaGenero7() {
         System.out.println("AltaGenero7");
         String nombre = "General";
         String padre = "";
@@ -201,7 +203,7 @@ public class ControladorTest {
 //     * Test of GetGenero method, of class Controlador.
 //     */
     @Test
-    public void T011_testGetGenero() {
+    public void testGetGenero() {
         System.out.println("GetGenero");
         Controlador instance = new Controlador();
         String expResult = "General";
@@ -214,7 +216,7 @@ public class ControladorTest {
 //     * Test of getGeneroPorNombre method, of class Controlador.
 //     */
     @Test
-    public void T012_testGetGeneroPorNombre() {
+    public void testGetGeneroPorNombre() {
         System.out.println("getGeneroPorNombre");
         String nombre = "TestGenero";
         Controlador instance = new Controlador();
@@ -223,14 +225,57 @@ public class ControladorTest {
     }
     
     @Test
-    public void T013_testGetGeneroPorNombre2() {
+    public void testGetGeneroPorNombre2() {
         System.out.println("getGeneroPorNombre");
         String nombre = "GeneroFalso";
         Controlador instance = new Controlador();
         Genero result = instance.getGeneroPorNombre(nombre);
         assertEquals(null, result);
     }
-
+//
+//    /**
+//     * Test of ConsultarAlbum method, of class Controlador.
+//     */
+//    @Test
+//    public void testConsultarAlbum() {
+//        System.out.println("ConsultarAlbum");
+//        Controlador instance = new Controlador();
+//        instance.ConsultarAlbum();
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
+//
+//    /**
+//     * Test of FindUser method, of class Controlador.
+//     */
+//    @Test
+//    public void testFindUser() {
+//        System.out.println("FindUser");
+//        String nickname = "TestFindUser";
+//        String contraseña = "TestFindUser";
+//        String mail = "TestFindUser";
+//        String nombre = "TestFindUser";
+//        String apellido = "TestFindUser";
+//        Fecha fechaDeNacimiento = new Fecha(1,1,1);
+//        String imagen = "";
+//        Controlador instance = new Controlador();
+//        instance.registrarCliente(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);
+//        boolean expResult = true;
+//        String text = "TestFindUser";
+//        boolean result = instance.FindUser(text);
+//        assertEquals(expResult, result);
+//    }
+    
+//    @Test
+//    public void testFindUser2() {
+//        System.out.println("FindUser2");
+//        String text = "FalseClient";
+//        Controlador instance = new Controlador();
+//        boolean expResult = false;
+//        boolean result = instance.FindUser(text);
+//        assertEquals(expResult, result);
+//    }
+//
 //    /**
 //     * Test of SeguirUsuario method, of class Controlador.
 //     */
@@ -259,51 +304,100 @@ public class ControladorTest {
 //        // TODO review the generated test code and remove the default call to fail.
 //        fail("The test case is a prototype.");
 //    }
+    
+//    @Test
+//    public void testGetListaClientes2() {
+//        System.out.println("getListaClientes_Agregar2ychequar");
+//        Controlador instance = new Controlador();
+//        
+//         List<Cliente> list = Arrays.asList(
+//                new Cliente("Client1", "pass", "Client1@mail", "ClientName", "ClientSurname", new Fecha(11,11,11), "imagePath"),
+//                new Cliente("Client2", "pass", "Client2@mail", "Client2Name", "Client2Surname", new Fecha(20,11,11), "imagePath")
+//         );
+//        
+//        int cantExpetc = 2;
+//       // List<Cliente> result = instance.getListaClientes();
+//        int cantResult = list.size();
+//        
+//        //Test equals
+//        assertThat(list, hasItems(
+//                new Cliente("Client1", "pass", "Client1@mail", "ClientName", "ClientSurname", new Fecha(11,11,11), "imagePath"),
+//                new Cliente("Client2", "pass", "Client2@mail", "Client2Name", "Client2Surname", new Fecha(20,11,11), "imagePath"))
+//        );
+//        //Test size
+//        assertEquals(cantExpetc, cantResult);
+//    }
+    
+    
 //
 //    /**
 //     * Test of mailLibre method, of class Controlador.
 //     */
-//    @Test
-//    public void testMailLibre() {
-//        System.out.println("mailLibre");
-//        String mail = "";
-//        Controlador instance = new Controlador();
-//        boolean expResult = false;
-//        boolean result = instance.mailLibre(mail);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    @Test
+    public void testMailLibre1() {
+        System.out.println("mailLibre1_mailNoEstaLibre");        
+        String mail = "kek";
+        Controlador instance = new Controlador();
+        boolean expResult = false;
+        
+        instance.registrarCliente("", "", "kek", "", "", null, "");        
+        boolean result = instance.mailLibre(mail);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testMailLibre2() {
+        System.out.println("mailLibre1_mailEstaLibre");        
+        String mail = "kek1";
+        Controlador instance = new Controlador();
+        boolean expResult = true;    
+        boolean result = instance.mailLibre(mail);
+        assertEquals(expResult, result);
+    }
+
 //    /**
 //     * Test of consultarCliente method, of class Controlador.
 //     */
-//    @Test
-//    public void testConsultarCliente() {
-//        System.out.println("consultarCliente");
-//        String nickname = "";
-//        Controlador instance = new Controlador();
-//        Cliente expResult = null;
-//        Cliente result = instance.consultarCliente(nickname);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    @Test
+    public void testConsultarCliente1() {
+        System.out.println("consultarCliente1_clienteExiste");
+        String nickname = "The boy";
+        Controlador instance = new Controlador();
+        instance.registrarCliente("The boy", "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");    
+        Cliente expResult = new Cliente("The boy", "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");
+        Cliente result = instance.consultarCliente(nickname);
+        boolean equals = expResult instanceof Cliente && result.equals(expResult);
+        assertEquals(true, equals);
+    }
+    
+    @Test
+    public void testConsultarCliente2() {
+        System.out.println("consultarCliente1_clienteNoExiste");
+        String nickname = "The boy";
+        Controlador instance = new Controlador();  
+        Cliente expResult = new Cliente("The boy2", "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");
+        Cliente result = instance.consultarCliente(nickname);
+        boolean equals = expResult instanceof Cliente && result.equals(expResult);
+        assertEquals(false, equals);
+    }
+
 //    /**
 //     * Test of consultarArtista method, of class Controlador.
 //     */
-//    @Test
-//    public void testConsultarArtista() {
-//        System.out.println("consultarArtista");
-//        String nickname = "";
-//        Controlador instance = new Controlador();
-//        Artista expResult = null;
-//        Artista result = instance.consultarArtista(nickname);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testConsultarArtista1() {
+        System.out.println("consultarArtista1_artistaExiste");
+        String nickname = "The boy3";
+        Controlador instance = new Controlador();
+        Artista expResult = new Artista("bio", "dir", nickname, "pass", "The boyMail", "asd", "asd", new Fecha(1,1,1), "path");
+        instance.registrarArtista(nickname, "pass", "The boyMail", "asd", "asd" , new Fecha(1,1,1), "path", "bio" , "dir");
+        Artista result = instance.consultarArtista(nickname);
+        boolean equals = expResult instanceof Artista && result.equals(expResult);
+        assertEquals(equals, true);
+        
+            
+        
+    }
 //
 //    /**
 //     * Test of getItemCliente method, of class Controlador.
@@ -449,78 +543,126 @@ public class ControladorTest {
 //    /**
 //     * Test of addListaParticular method, of class Controlador.
 //     */
-//    @Test
-//    public void testAddListaParticular() {
-//        System.out.println("addListaParticular");
-//        Cliente client = null;
-//        String nombreDeLista = "";
-//        String imagenDeLista = "";
-//        Controlador instance = new Controlador();
-//        instance.addListaParticular(client, nombreDeLista, imagenDeLista);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+    @Test
+    public void testAddListaParticular1() {
+        System.out.println("addListaParticular1_clienteNull");
+        Cliente client = null;
+        String nombreDeLista = "";
+        String imagenDeLista = "";
+        Controlador instance = new Controlador();
+        instance.addListaParticular(client, nombreDeLista, imagenDeLista);
+    }
+    
+    @Test
+    public void testAddListaParticular2() {
+        System.out.println("addListaParticular2_agregarCliente");
+        Cliente client = new Cliente("The boy4", "pass", "The boyMail4", "asd", "asd", new Fecha(1,1,1), "path");
+        String nombreDeLista = "ListaPart1";
+        String imagenDeLista = "ImagenListaPart1";
+        Controlador instance = new Controlador();
+        instance.addListaParticular(client, nombreDeLista, imagenDeLista);
+    }
+
 //    /**
 //     * Test of addListaPorDefecto method, of class Controlador.
 //     */
-//    @Test
-//    public void testAddListaPorDefecto() {
-//        System.out.println("addListaPorDefecto");
-//        Genero genero = null;
-//        String nombreDeLista = "";
-//        String imagenDeLista = "";
-//        Controlador instance = new Controlador();
-//        instance.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testAddListaPorDefecto1() {
+        System.out.println("addListaPorDefecto1_agregarGeneroNull");
+        Genero genero = null;
+        String nombreDeLista = "";
+        String imagenDeLista = "";
+        Controlador instance = new Controlador();
+        instance.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
+    }
+    
+    @Test
+    public void testAddListaPorDefecto2() {
+        System.out.println("addListaPorDefecto1_agregarGeneroNull");
+        Genero genero = new Genero("GeneroTestListaPart1");
+        String nombreDeLista = "ListaDef1";
+        String imagenDeLista = "ImagenListaDef1";
+        Controlador instance = new Controlador();
+        instance.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);
+    }
 //
 //    /**
 //     * Test of privatizarLista method, of class Controlador.
 //     */
-//    @Test
-//    public void testPrivatizarLista() {
-//        System.out.println("privatizarLista");
-//        ListaParticular lista = null;
-//        boolean modo = false;
-//        Controlador instance = new Controlador();
-//        instance.privatizarLista(lista, modo);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testPrivatizarLista1() {
+        System.out.println("privatizarLista1_listaEsNull_privada");
+        ListaParticular lista = null;
+        boolean modo = false;
+        boolean expResult = false;
+        Controlador instance = new Controlador();
+        instance.privatizarLista(lista, modo);
+        if(lista!=null)  
+            assertEquals(expResult, lista.getPrivacidad());            
+    }
+    
+    @Test
+    public void testPrivatizarLista2() {
+        System.out.println("privatizarLista2_privada");
+        ListaParticular lista = new ListaParticular(new Cliente(), "nombre", "imagen");
+        boolean modo = false;
+        boolean expResult = false;
+        Controlador instance = new Controlador();
+        instance.privatizarLista(lista, modo);
+        if(lista!=null)  
+            assertEquals(expResult, lista.getPrivacidad());            
+    }
+    
+    @Test
+    public void testPrivatizarLista3() {
+        System.out.println("privatizarLista3_publica");
+        ListaParticular lista = new ListaParticular(new Cliente(), "nombre", "imagen");
+        boolean modo = true;
+        boolean expResult = true;
+        Controlador instance = new Controlador();
+        instance.privatizarLista(lista, modo);
+        if(lista!=null)  
+            assertEquals(expResult, lista.getPrivacidad());            
+    }
 //
 //    /**
 //     * Test of getListByName method, of class Controlador.
 //     */
 //    @Test
-//    public void testGetListByName() {
-//        System.out.println("getListByName");
+//    public void testGetListByName1() {
+//        System.out.println("getListByName1");
 //        Cliente user = null;
 //        String name = "";
 //        Controlador instance = new Controlador();
 //        ListaParticular expResult = null;
 //        ListaParticular result = instance.getListByName(user, name);
 //        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of artistLibre method, of class Controlador.
-//     */
-//    @Test
-//    public void testArtistLibre() {
-//        System.out.println("artistLibre");
-//        String artistAlbum = "";
-//        Controlador instance = new Controlador();
-//        boolean expResult = false;
-//        boolean result = instance.artistLibre(artistAlbum);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+
+    @Test
+    public void testArtistLibre1() {
+        System.out.println("artistLibre1_libre");
+        Controlador instance = new Controlador();
+        String artist = "PepeLibre1";
+        boolean expResult = true;
+        boolean result = instance.artistLibre(artist);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testArtistLibre2() {
+        System.out.println("artistLibre1_ocupado");
+        Controlador instance = new Controlador();
+        String artist = "PepeLibre2";
+        instance.registrarArtista(artist, "", "PepeLibrePail2", "", "", null, "", "", "");    
+        boolean expResult = false;        
+        boolean result = instance.artistLibre(artist);
+        assertEquals(expResult, result);
+    }
+    
+        
+
 //    /**
 //     * Test of GuardarTemaFav method, of class Controlador.
 //     */
@@ -591,19 +733,7 @@ public class ControladorTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of AgregarTema method, of class Controlador.
-//     */
-//    @Test
-//    public void testAgregarTema() {
-//        System.out.println("AgregarTema");
-//        Usuario user = null;
-//        Controlador instance = new Controlador();
-//        instance.AgregarTema(user);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
+
 //    /**
 //     * Test of SeguirUsuario method, of class Controlador.
 //     */
@@ -702,152 +832,153 @@ public class ControladorTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of createTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testCreateTemporalAlbum() {
-//        System.out.println("createTemporalAlbum");
-//        Controlador instance = new Controlador();
-//        instance.createTemporalAlbum();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of createTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testCreateTemporalAlbum() {
+        System.out.println("createTemporalAlbum");
+        Controlador instance = new Controlador();
+        instance.createTemporalAlbum();
+    }
+
+    @Test
+    public void testDeleteTemporalAlbum() {
+        System.out.println("deleteTemporalAlbum");
+        Controlador instance = new Controlador();
+        instance.deleteTemporalAlbum();
+        
+    }
 //
-//    /**
-//     * Test of deleteTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testDeleteTemporalAlbum() {
-//        System.out.println("deleteTemporalAlbum");
-//        Controlador instance = new Controlador();
-//        instance.deleteTemporalAlbum();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of configTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testConfigTemporalAlbum() {
-//        System.out.println("configTemporalAlbum");
-//        Artista artist = null;
-//        String nombre = "";
-//        List<Genero> generos = null;
-//        int año = 0;
-//        String imagePath = "";
-//        Controlador instance = new Controlador();
-//        instance.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of addTemaToM method, of class Controlador.
-//     */
-//    @Test
-//    public void testAddTemaToM() {
-//        System.out.println("addTemaToM");
-//        Tema tema = null;
-//        Controlador instance = new Controlador();
-//        instance.addTemaToM(tema);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of addTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testAddTemporalAlbum() {
-//        System.out.println("addTemporalAlbum");
-//        Artista artist = null;
-//        Controlador instance = new Controlador();
-//        instance.addTemporalAlbum(artist);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of createTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testCreateTemporalGenres() {
-//        System.out.println("createTemporalGenres");
-//        Controlador instance = new Controlador();
-//        instance.createTemporalGenres();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of addToTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testAddToTemporalGenres() {
-//        System.out.println("addToTemporalGenres");
-//        Genero genero = null;
-//        Controlador instance = new Controlador();
-//        instance.addToTemporalGenres(genero);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of wipeTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testWipeTemporalGenres() {
-//        System.out.println("wipeTemporalGenres");
-//        Controlador instance = new Controlador();
-//        instance.wipeTemporalGenres();
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of getTemporalGenres method, of class Controlador.
-//     */
-//    @Test
-//    public void testGetTemporalGenres() {
-//        System.out.println("getTemporalGenres");
-//        Controlador instance = new Controlador();
-//        List<Genero> expResult = null;
-//        List<Genero> result = instance.getTemporalGenres();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of getTemporalAlbum method, of class Controlador.
-//     */
-//    @Test
-//    public void testGetTemporalAlbum() {
-//        System.out.println("getTemporalAlbum");
-//        Controlador instance = new Controlador();
-//        Album expResult = null;
-//        Album result = instance.getTemporalAlbum();
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
-//
-//    /**
-//     * Test of absolutePathToRelative method, of class Controlador.
-//     */
-//    @Test
-//    public void testAbsolutePathToRelative() {
-//        System.out.println("absolutePathToRelative");
-//        String path = "";
-//        Controlador instance = new Controlador();
-//        String expResult = "";
-//        String result = instance.absolutePathToRelative(path);
-//        assertEquals(expResult, result);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    /**
+     * Test of configTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testConfigTemporalAlbum() {
+        System.out.println("configTemporalAlbum");
+        Artista artist = null;
+        String nombre = "";
+        List<Genero> generos = null;
+        int año = 0;
+        String imagePath = "";
+        Controlador instance = new Controlador();
+        instance.configTemporalAlbum(artist, nombre, generos, año, imagePath);
+    }
+
+    /**
+     * Test of addTemaToM method, of class Controlador.
+     */
+    @Test
+    public void testAddTemaToM() {
+        System.out.println("addTemaToM");
+        Tema tema = null;
+        Controlador instance = new Controlador();
+        instance.addTemaToM(tema);
+    }
+
+    /**
+     * Test of addTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testAddTemporalAlbum() {
+        System.out.println("addTemporalAlbum");
+        Artista artist = null;
+        Controlador instance = new Controlador();
+        instance.addTemporalAlbum(artist);
+    }
+
+    /**
+     * Test of createTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testCreateTemporalGenres() {
+        System.out.println("createTemporalGenres");
+        Controlador instance = new Controlador();
+        instance.createTemporalGenres();
+    }
+
+    /**
+     * Test of addToTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testAddToTemporalGenres() {
+        System.out.println("addToTemporalGenres");
+        Genero genero = null;
+        Controlador instance = new Controlador();
+        instance.addToTemporalGenres(genero);
+    }
+
+    /**
+     * Test of wipeTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testWipeTemporalGenres() {
+        System.out.println("wipeTemporalGenres");
+        Controlador instance = new Controlador();
+        instance.wipeTemporalGenres();
+    }
+    
+    @Test
+    public void testGetTemporalGenres1() {
+        System.out.println("getTemporalGenres1_ConTemporalGenres");
+        Controlador instance = new Controlador();
+        List<Genero> lista = null;
+        lista.add(new Genero());
+        List<Genero> expResult = lista;
+        List<Genero> result = instance.getTemporalGenres();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getTemporalGenres method, of class Controlador.
+     */
+    @Test
+    public void testGetTemporalGenres2() {
+        System.out.println("getTemporalGenres2_sinTemporalGenres");
+        Controlador instance = new Controlador();
+        List<Genero> expResult = null;
+        instance.wipeTemporalGenres();
+        List<Genero> result = instance.getTemporalGenres();
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testGetTemporalAlbum1() {
+        System.out.println("getTemporalAlbum1_ConTemporalAlbum");
+        Controlador instance = new Controlador();
+        Album expResult = new Album();
+        instance.createTemporalAlbum();
+        Album result = instance.getTemporalAlbum();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getTemporalAlbum method, of class Controlador.
+     */
+    @Test
+    public void testGetTemporalAlbum2() {
+        System.out.println("getTemporalAlbum2_SinTemporalAlbum");
+        Controlador instance = new Controlador();
+        Album expResult = null;
+        instance.deleteTemporalAlbum();
+        Album result = instance.getTemporalAlbum();
+        assertEquals(expResult, result);
+    }
+    
+    
+
+    /**
+     * Test of absolutePathToRelative method, of class Controlador.
+     */
+    @Test
+    public void testAbsolutePathToRelative() {
+        System.out.println("absolutePathToRelative");
+        String path = "";
+        Controlador instance = new Controlador();
+        String expResult = "data/user_images/default.jpg";
+        String result = instance.absolutePathToRelative(path);
+        assertEquals(expResult, result);
+    }
 //
 //    /**
 //     * Test of getAlbumsAsItem method, of class Controlador.

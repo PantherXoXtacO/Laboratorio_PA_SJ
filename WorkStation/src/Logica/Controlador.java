@@ -453,7 +453,7 @@ public class Controlador implements IControlador {
             return relative;
         }
         else
-            return "data/user_images/default.jpg";
+            return "../WebApp/web/imagenes/default.jpg";
     }
 
     @Override

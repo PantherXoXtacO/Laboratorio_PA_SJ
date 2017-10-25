@@ -58,7 +58,7 @@ public abstract class Usuario implements Serializable {
         this.apellido = apellido;
         this.fechaDeNacimiento = fechaDeNacimiento;
         if(imagen.equals("")){
-            this.imagen=".\\data\\user_images\\default.jpeg";
+            this.imagen="../WebApp/web/imagenes/default.jpg";
         }
         else{
             this.imagen = imagen; 

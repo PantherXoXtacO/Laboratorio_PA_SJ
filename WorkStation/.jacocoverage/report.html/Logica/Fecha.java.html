@@ -30,22 +30,22 @@ public class Fecha{
     
 <span class="fc" id="L31">    public Fecha(){}</span>
     
-<span class="nc" id="L33">    public Fecha(int dia, int mes, int año){</span>
-<span class="nc" id="L34">        this.dia = dia;</span>
-<span class="nc" id="L35">        this.mes = mes;</span>
-<span class="nc" id="L36">        this.año = año;</span>
-<span class="nc" id="L37">    }</span>
+<span class="fc" id="L33">    public Fecha(int dia, int mes, int año){</span>
+<span class="fc" id="L34">        this.dia = dia;</span>
+<span class="fc" id="L35">        this.mes = mes;</span>
+<span class="fc" id="L36">        this.año = año;</span>
+<span class="fc" id="L37">    }</span>
     
     @Override
     public boolean equals(Object other) {
-<span class="nc bnc" id="L41" title="All 2 branches missed.">        if (!(other instanceof Fecha)) {</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if (!(other instanceof Fecha)) {</span>
 <span class="nc" id="L42">            return false;</span>
     }
 
-<span class="nc" id="L45">    Fecha that = (Fecha) other;</span>
+<span class="fc" id="L45">    Fecha that = (Fecha) other;</span>
 
-<span class="nc bnc" id="L47" title="All 4 branches missed.">    return this.getDia() == that.getDia() &amp;&amp; this.getMes() == that.getMes() </span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">            &amp;&amp; this.getAño() == that.getAño();</span>
+<span class="pc bpc" id="L47" title="2 of 4 branches missed.">    return this.getDia() == that.getDia() &amp;&amp; this.getMes() == that.getMes() </span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">            &amp;&amp; this.getAño() == that.getAño();</span>
 }
     
     
@@ -75,15 +75,15 @@ public class Fecha{
 
     //getters
     public int getDia() {
-<span class="nc" id="L78">        return dia;</span>
+<span class="fc" id="L78">        return dia;</span>
     }
 
     public int getMes() {
-<span class="nc" id="L82">        return mes;</span>
+<span class="fc" id="L82">        return mes;</span>
     }
 
     public int getAño() {
-<span class="nc" id="L86">        return año;</span>
+<span class="fc" id="L86">        return año;</span>
     }
     
 }

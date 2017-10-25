@@ -12,21 +12,21 @@ package Logica;
 public class Fabrica {
     
 private static Fabrica instancia;
-<span class="fc" id="L15">private Fabrica(){};</span>
+<span class="nc" id="L15">private Fabrica(){};</span>
 
 /*
     @doc La documentacion en general...
 */  
 public static Fabrica getInstance(){
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">    if (instancia == null){</span>
-<span class="fc" id="L22">        instancia = new Fabrica();</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">    if (instancia == null){</span>
+<span class="nc" id="L22">        instancia = new Fabrica();</span>
     }
-<span class="fc" id="L24">    return instancia;</span>
+<span class="nc" id="L24">    return instancia;</span>
 }
     
 public IControlador getIControlador() {
-<span class="fc" id="L28">    IControlador IG = new Controlador();</span>
-<span class="fc" id="L29">    return IG;</span>
+<span class="nc" id="L28">    IControlador IG = new Controlador();</span>
+<span class="nc" id="L29">    return IG;</span>
 }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

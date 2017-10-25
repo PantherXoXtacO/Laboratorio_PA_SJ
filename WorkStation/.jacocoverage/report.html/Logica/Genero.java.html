@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
@@ -39,102 +38,102 @@ public class Genero implements Serializable{
     //@JoinTable(name=&quot;LISTA_DE_GENERO&quot;, joinColumns=@JoinColumn(name=&quot;NOMBRE_GENERO&quot;),inverseJoinColumns=@JoinColumn(name=&quot;LISTA_GENERO&quot;)) 
     private List&lt;ListaDeReproduccion&gt; listas;
 
-<span class="fc" id="L42">    public Genero(String nombre) {</span>
-<span class="fc" id="L43">        this.nombre = nombre;</span>
-<span class="fc" id="L44">        this.hijos = new ArrayList();</span>
-<span class="fc" id="L45">        this.albums = new ArrayList();</span>
-<span class="fc" id="L46">        this.listas = new ArrayList();</span>
-<span class="fc" id="L47">        this.padre = null;</span>
-<span class="fc" id="L48">    }</span>
+<span class="fc" id="L41">    public Genero(String nombre) {</span>
+<span class="fc" id="L42">        this.nombre = nombre;</span>
+<span class="fc" id="L43">        this.hijos = new ArrayList();</span>
+<span class="fc" id="L44">        this.albums = new ArrayList();</span>
+<span class="fc" id="L45">        this.listas = new ArrayList();</span>
+<span class="fc" id="L46">        this.padre = null;</span>
+<span class="fc" id="L47">    }</span>
     
-<span class="fc" id="L50">    public Genero(){</span>
+<span class="fc" id="L49">    public Genero(){</span>
     
-<span class="fc" id="L52">    }</span>
+<span class="fc" id="L51">    }</span>
 
     //GETTERS
     public String getNombre() {
-<span class="fc" id="L56">        return nombre;</span>
+<span class="fc" id="L55">        return nombre;</span>
     }
 
     public List&lt;Genero&gt; getHijos() {
-<span class="nc" id="L60">        return hijos;</span>
+<span class="nc" id="L59">        return hijos;</span>
     }
     
     public List&lt;Album&gt; getAlbums() {
-<span class="nc" id="L64">        return albums;</span>
+<span class="nc" id="L63">        return albums;</span>
     }
     
     public List&lt;ListaDeReproduccion&gt; getListas(){
-<span class="nc" id="L68">        return listas;</span>
+<span class="nc" id="L67">        return listas;</span>
     }
     
     
     //SETTERS
     public void setNombre(String nombre) {
-<span class="nc" id="L74">        this.nombre = nombre;</span>
-<span class="nc" id="L75">    } </span>
+<span class="nc" id="L73">        this.nombre = nombre;</span>
+<span class="nc" id="L74">    } </span>
     
     
     //Funciones
     public void addHijo(Genero g) {
-<span class="fc" id="L80">        Iterator it=hijos.iterator();</span>
+<span class="fc" id="L79">        Iterator it=hijos.iterator();</span>
         Genero aux;
-<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L83">            aux=(Genero)it.next();</span>
-<span class="nc bnc" id="L84" title="All 2 branches missed.">            if(aux.getNombre().equals(g.getNombre()))</span>
-<span class="nc" id="L85">                return;</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">        while(it.hasNext()){</span>
+<span class="fc" id="L82">            aux=(Genero)it.next();</span>
+<span class="pc bpc" id="L83" title="1 of 2 branches missed.">            if(aux.getNombre().equals(g.getNombre()))</span>
+<span class="nc" id="L84">                return;</span>
         }
-<span class="fc" id="L87">        g.setPadre(this);</span>
-<span class="fc" id="L88">        hijos.add(g);</span>
-<span class="fc" id="L89">    }</span>
+<span class="fc" id="L86">        g.setPadre(this);</span>
+<span class="fc" id="L87">        hijos.add(g);</span>
+<span class="fc" id="L88">    }</span>
     
     private void setPadre(Genero dad){
-<span class="fc" id="L92">        padre=dad.getNombre();</span>
-<span class="fc" id="L93">    }</span>
+<span class="fc" id="L91">        padre=dad.getNombre();</span>
+<span class="fc" id="L92">    }</span>
     
     public String getPadre(){
-<span class="fc" id="L96">        return padre;</span>
+<span class="nc" id="L95">        return padre;</span>
     }
     
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Funciones del @Entity
     
     public Long getId() {
-<span class="nc" id="L103">        return id;</span>
+<span class="nc" id="L102">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="nc" id="L107">        this.id = id;</span>
-<span class="nc" id="L108">    }</span>
+<span class="nc" id="L106">        this.id = id;</span>
+<span class="nc" id="L107">    }</span>
 
     @Override
     public int hashCode() {
-<span class="nc" id="L112">        int hash = 0;</span>
-<span class="nc bnc" id="L113" title="All 2 branches missed.">        hash += (id != null ? id.hashCode() : 0);</span>
-<span class="nc" id="L114">        return hash;</span>
+<span class="nc" id="L111">        int hash = 0;</span>
+<span class="nc bnc" id="L112" title="All 2 branches missed.">        hash += (id != null ? id.hashCode() : 0);</span>
+<span class="nc" id="L113">        return hash;</span>
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-<span class="nc bnc" id="L120" title="All 2 branches missed.">        if (!(object instanceof Album)) {</span>
-<span class="nc" id="L121">            return false;</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">        if (!(object instanceof Album)) {</span>
+<span class="nc" id="L120">            return false;</span>
         }
-<span class="nc" id="L123">        Album other = (Album) object;</span>
-<span class="nc bnc" id="L124" title="All 8 branches missed.">        if ((this.id == null &amp;&amp; other.id != null) || (this.id != null &amp;&amp; !this.id.equals(other.id))) {</span>
-<span class="nc" id="L125">            return false;</span>
+<span class="nc" id="L122">        Album other = (Album) object;</span>
+<span class="nc bnc" id="L123" title="All 8 branches missed.">        if ((this.id == null &amp;&amp; other.id != null) || (this.id != null &amp;&amp; !this.id.equals(other.id))) {</span>
+<span class="nc" id="L124">            return false;</span>
         }
-<span class="nc" id="L127">        return true;</span>
+<span class="nc" id="L126">        return true;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L132">        return &quot;Logica.Album[ id=&quot; + id + &quot; ]&quot;;</span>
+<span class="nc" id="L131">        return &quot;Logica.Album[ id=&quot; + id + &quot; ]&quot;;</span>
     }    
     
     public void addAlbum(Album album){
-<span class="nc" id="L136">        this.albums.add(album);</span>
-<span class="nc" id="L137">    }</span>
+<span class="nc" id="L135">        this.albums.add(album);</span>
+<span class="nc" id="L136">    }</span>
     
    
     

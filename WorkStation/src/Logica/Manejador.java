@@ -409,11 +409,14 @@ public class Manejador {
     }
     
     public void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath){
-        this.TemporalAlbum.setArtista(artist);
-        this.TemporalAlbum.setNombre(nombre);
-        this.TemporalAlbum.setGenero(generos);
-        this.TemporalAlbum.setAnio(año);
-        this.TemporalAlbum.setImg(imagePath);
+        if(artist != null && generos != null){
+            this.TemporalAlbum.setArtista(artist);
+            this.TemporalAlbum.setNombre(nombre);
+            this.TemporalAlbum.setGenero(generos);
+            this.TemporalAlbum.setAnio(año);
+            this.TemporalAlbum.setImg(imagePath);    
+        }
+        
     }
     
     public void addTemporalAlbum(Artista artist){        
@@ -451,7 +454,10 @@ public class Manejador {
     }
     
     public void addToTemporalGenres(Genero genero){
-        this.TemporalGeneros.add(genero);
+        if(genero != null){
+            this.TemporalGeneros.add(genero);
+        }
+        
     }
     
     public void wipeTemporalGenres(){

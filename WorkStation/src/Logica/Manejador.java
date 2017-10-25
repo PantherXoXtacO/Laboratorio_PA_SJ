@@ -57,10 +57,6 @@ public class Manejador {
         generosList = QGeneros.getResultList();
         Albums = q3.getResultList();
         Temas = q4.getResultList();
-        
-        
-        
-        
         GeneralGetHijos();
     }
     

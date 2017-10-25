@@ -36,10 +36,16 @@ public class myPerfil extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
             HttpSession session = request.getSession();
-            String nick  = (String) session.getAttribute("UserNick");
-            IControlador controlador = new Controlador();
-            DTUsuario user = controlador.getUserData(nick);
-            request.setAttribute("userInfo", user);
+            if(session.getAttribute("UserNick")!=null){
+                String nick  = (String) session.getAttribute("UserNick");
+                IControlador controlador = new Controlador();
+                DTUsuario user = controlador.getUserData(nick);
+                request.setAttribute("userInfo", user);
+                getServletConfig().getServletContext().getRequestDispatcher("/MiPerfil.jsp").forward(request,response); 
+            }
+            else{
+                response.sendRedirect("index.html");
+            }
         }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

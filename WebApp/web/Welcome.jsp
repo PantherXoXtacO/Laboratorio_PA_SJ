@@ -13,14 +13,12 @@
     </head>
     <body>
         <%
-          if(session.getAttribute("UserNick")==null){
+          if(request.getSession()==null){
               response.sendRedirect("index.html");
           }
         %>
         <h1>Ususario logueado : ${UserNick}</h1>
         
-        <form action ="Logout" method="POST">
-            <input type="submit" value="Logout"><br>            
-        </form>
+
     </body>
 </html>

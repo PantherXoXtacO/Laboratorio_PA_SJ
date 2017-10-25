@@ -10,6 +10,7 @@ import DataType.DataSession;
 import Logica.Controlador;
 import Logica.IControlador;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,7 +44,8 @@ public class Login extends HttpServlet {
             session.setAttribute("UserNick", nick);
             session.setAttribute("UserMail", user.getMail());
             session.setAttribute("EsArtista", user.getEsArtista());
-            response.sendRedirect("Welcome.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("myPerfil");
+            rd.forward(request,response);
             }
         else{
             response.sendRedirect("index.html");

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Logica;
+import java.time.LocalDate;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import javax.persistence.Column;
@@ -84,6 +85,13 @@ public class Fecha{
 
     public int getAño() {
         return año;
+    }
+    
+    public void setCurrentDate(){
+        LocalDate localDate = LocalDate.now();
+        this.dia = localDate.getDayOfMonth();
+        this.mes = localDate.getMonthValue();
+        this.año = localDate.getYear();
     }
     
 }

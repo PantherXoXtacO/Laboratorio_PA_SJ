@@ -393,6 +393,16 @@ public class Main extends javax.swing.JFrame {
         jCBsaveListFavList4 = new javax.swing.JComboBox<>();
         Clienteasd = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        ActualizarEstadoDeSuscripciones = new javax.swing.JInternalFrame();
+        AES_ListaDeSuscripciones = new javax.swing.JComboBox<>();
+        AES_Label1 = new javax.swing.JLabel();
+        AES_BotonCancelar = new javax.swing.JButton();
+        AES_BotonActualizar = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        AES_Vigente = new javax.swing.JRadioButton();
+        AES_Cancelada = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuRegistros = new javax.swing.JMenu();
         jMenuItemRegUsu = new javax.swing.JMenuItem();
@@ -426,6 +436,8 @@ public class Main extends javax.swing.JFrame {
         jMenuAgregarTema = new javax.swing.JMenu();
         jMAgregarTemaListaPart = new javax.swing.JMenuItem();
         jMAgregarTemaListDef = new javax.swing.JMenuItem();
+        jMenuSuscripciones = new javax.swing.JMenu();
+        jMenuItemAES = new javax.swing.JMenuItem();
 
         ToBeHonestIHaveNoClue.setVisible(true);
 
@@ -1448,7 +1460,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(313, Short.MAX_VALUE))
+                .addContainerGap(317, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameRemoveTemaFav);
@@ -3191,6 +3203,82 @@ public class Main extends javax.swing.JFrame {
 
         getContentPane().add(ConsultaListaReproduccion1);
 
+        ActualizarEstadoDeSuscripciones.setVisible(false);
+
+        AES_ListaDeSuscripciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        AES_Label1.setText("Suscripciones:");
+
+        AES_BotonCancelar.setText("Cancelar");
+
+        AES_BotonActualizar.setText("Actualizar");
+
+        jTextField1.setFocusable(false);
+
+        jLabel1.setText("Estado de la suscripcion:");
+
+        jLabel3.setText("Estado actualizado:");
+
+        AES_Vigente.setText("Vigente");
+
+        AES_Cancelada.setText("Cancelada");
+
+        javax.swing.GroupLayout ActualizarEstadoDeSuscripcionesLayout = new javax.swing.GroupLayout(ActualizarEstadoDeSuscripciones.getContentPane());
+        ActualizarEstadoDeSuscripciones.getContentPane().setLayout(ActualizarEstadoDeSuscripcionesLayout);
+        ActualizarEstadoDeSuscripcionesLayout.setHorizontalGroup(
+            ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
+                        .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
+                                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AES_Label1)
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
+                                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(AES_ListaDeSuscripciones, 0, 150, Short.MAX_VALUE)
+                                    .addComponent(jTextField1)))
+                            .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(27, 27, 27)
+                                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AES_Cancelada)
+                                    .addComponent(AES_Vigente))))
+                        .addGap(0, 65, Short.MAX_VALUE))
+                    .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
+                        .addComponent(AES_BotonCancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(AES_BotonActualizar)))
+                .addContainerGap())
+        );
+        ActualizarEstadoDeSuscripcionesLayout.setVerticalGroup(
+            ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AES_ListaDeSuscripciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AES_Label1))
+                .addGap(61, 61, 61)
+                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(75, 75, 75)
+                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(AES_Vigente))
+                .addGap(18, 18, 18)
+                .addComponent(AES_Cancelada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AES_BotonCancelar)
+                    .addComponent(AES_BotonActualizar))
+                .addContainerGap())
+        );
+
+        getContentPane().add(ActualizarEstadoDeSuscripciones);
+
         jMenuRegistros.setText("Registros");
         jMenuRegistros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -3426,6 +3514,18 @@ public class Main extends javax.swing.JFrame {
         jMenuListas.add(jMenuAgregarTema);
 
         jMenuBar1.add(jMenuListas);
+
+        jMenuSuscripciones.setText("Suscripciones");
+
+        jMenuItemAES.setText("Actualizar estado de Suscripcion");
+        jMenuItemAES.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAESActionPerformed(evt);
+            }
+        });
+        jMenuSuscripciones.add(jMenuItemAES);
+
+        jMenuBar1.add(jMenuSuscripciones);
 
         setJMenuBar(jMenuBar1);
 
@@ -4892,6 +4992,10 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CBsaveAlbumFavAlbumActionPerformed
 
+    private void jMenuItemAESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAESActionPerformed
+        ActualizarEstadoDeSuscripciones.setVisible(true);
+    }//GEN-LAST:event_jMenuItemAESActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -4928,12 +5032,19 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AES_BotonActualizar;
+    private javax.swing.JButton AES_BotonCancelar;
+    private javax.swing.JRadioButton AES_Cancelada;
+    private javax.swing.JLabel AES_Label1;
+    private javax.swing.JComboBox<String> AES_ListaDeSuscripciones;
+    private javax.swing.JRadioButton AES_Vigente;
     private javax.swing.JButton ALButton4;
     private javax.swing.JButton ALButton5;
     private javax.swing.JLabel ALLabel14;
     private javax.swing.JScrollPane ALUserListScroll1;
     private javax.swing.JPanel ALUserListUsers1;
     private javax.swing.JFileChooser AUFileChooser;
+    private javax.swing.JInternalFrame ActualizarEstadoDeSuscripciones;
     private javax.swing.JInternalFrame AgregarTemaListDefecto;
     private javax.swing.JInternalFrame AgregarTemaListaPart;
     private javax.swing.JButton AltaALbumAgrTema;
@@ -5211,9 +5322,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLRemoveAlbumFav2;
     private javax.swing.JLabel jLRemoveListFavList;
     private javax.swing.JLabel jLRemoveListFavUsr;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -5235,6 +5348,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuConsultarAlbumGen1;
     private javax.swing.JMenu jMenuConsultarLista;
     private javax.swing.JMenu jMenuConsultas;
+    private javax.swing.JMenuItem jMenuItemAES;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;
     private javax.swing.JMenuItem jMenuItemCrearAlb;
@@ -5254,6 +5368,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuSaveAlbum;
     private javax.swing.JMenuItem jMenuSaveLista;
     private javax.swing.JMenuItem jMenuSaveTema;
+    private javax.swing.JMenu jMenuSuscripciones;
     private javax.swing.JMenu jMenuUsuarios;
     private javax.swing.JTextField jRegisterApellidolField;
     private javax.swing.JTextField jRegisterEmailField;
@@ -5266,5 +5381,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTree jTConsultarAlbum;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

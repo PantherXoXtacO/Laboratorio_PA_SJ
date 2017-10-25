@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import DataType.*;
+import Enums.EstadosDeSuscripcion;
 
 /**
  *
@@ -493,5 +494,16 @@ public class Controlador implements IControlador {
     public DataSession getUserSession(String nick){
         Manejador M=Manejador.getinstance();
         return M.getUserSession(nick);
+    }
+    
+    @Override
+    public void actualizarEstadoDeSuscripcion(Suscripcion s, EstadosDeSuscripcion estado){
+        if(s!=null && s.getEstado()==EstadosDeSuscripcion.Pendiente){
+            s.setEstado(estado);
+            Fecha fechaDeInicio = new Fecha();
+            fechaDeInicio.setCurrentDate(); 
+            s.setFechaDeInicio(fechaDeInicio);
+            s.updateFechaDeVencimiento();
+        }
     }
 }

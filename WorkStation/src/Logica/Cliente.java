@@ -7,6 +7,8 @@ import DataType.DTListaPrticular;
 import DataType.DTListaRepro;
 import DataType.DTTema;
 import DataType.DataSession;
+import Enums.EstadosDeSuscripcion;
+import Enums.TiposDeSuscripcion;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -23,6 +25,7 @@ public class Cliente extends Usuario{
     private List<Album> albumsFav;
     private List<ListaDeReproduccion> listasFav;
     private List<ListaDeReproduccion> Listas; //Listas propias creadas por el usuario
+    private Suscripcion suscripcion;
 
     
     
@@ -35,6 +38,7 @@ public class Cliente extends Usuario{
         this.albumsFav = new ArrayList();
         this.listasFav = new ArrayList();
         this.Listas = new ArrayList();
+        this.suscripcion = null;
     }
 
     public Cliente() {

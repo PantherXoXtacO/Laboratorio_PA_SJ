@@ -23,6 +23,7 @@ public class Manejador {
     private List<Album> Albums;
     private Album TemporalAlbum;
     private List<Genero> TemporalGeneros;
+    private List<Suscripcion> suscripciones;
     
     //Ids para la identificadores
     private double IdTema;

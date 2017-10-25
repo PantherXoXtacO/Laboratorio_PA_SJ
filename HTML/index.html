@@ -4,9 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="./resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap-treeview.min.css"></link>
     <link rel="stylesheet" type="text/css" href="./resources/css/general.css"></link>
-    <link rel="stylesheet" type="text/css" href="./resources/css/categories.css"></link>
     
 
     <title> Espotify </title>
@@ -16,7 +14,7 @@
 <body>
 
     <header class="header">
-        <span id="header-tit" onclick="location.reload()"><img class="img" src="/PROGRAMACION DE APLICACIONES/Espotify Background/espotify-drowlogo.png"></span>
+        <span id="header-tit" onclick="location.reload()"><img class="img" src="./resources/images/espotify-drowlogo.png"></span>
         <h1 id="header-titl" onclick="location.reload()">Espotify </h1>
 
         <nav class="nav-bar">
@@ -26,9 +24,84 @@
         </nav>
     </header>
 
-    <div class="containerD"></div>
+      <ul class="tree">
+        <li>
+          <input type="checkbox" checked="checked" id="c1" />
+          <label class="tree_label" for="c1"> Registros</label>
+          <ul>
+              <li><span class="tree_label">Registrar Usuario</span></li>
+              <li><span class="tree_label">Crear Genero</span></li>
+              <li><span class="tree_label">Crear Album</span></li>
+              <li>
+              <input type="checkbox" checked="checked" id="c2" />
+              <label for="c2" class="tree_label">Crear Lista de Reproduccion</label>
+              <ul>
+                <li><span class="tree_label">Por Defecto</span></li>
+                <li><span class="tree_label">Particular</span></li>
+              </ul>
+          </ul>
+            
+            <li>
+            <input type="checkbox" checked="checked" id="c3" />
+            <label class="tree_label" for="c3"> Consultas</label>
+            <ul>
+                <li><span class="tree_label">Consultar Cliente</span></li>
+                <li><span class="tree_label">Consultar Artista</span></li>
+                <li>
+                <input type="checkbox" checked="checked" id="c4" />
+                <label for="c4" class="tree_label">Consultar Album</label>
+                <ul>
+                  <li><span class="tree_label">Por Genero</span></li>
+                  <li><span class="tree_label">Por Artista</span></li>
+                </ul>
+                <li>
+                <input type="checkbox" checked="checked" id="c5" />
+                <label for="c5" class="tree_label">Consultar Lista</label>
+                <ul>
+                  <li><span class="tree_label">Por Genero</span></li>
+                  <li><span class="tree_label">Por Cliente</span></li>
+                </ul>
+            </ul>
+            
+            <li>
+            <input type="checkbox" checked="checked" id="c6" />
+            <label class="tree_label" for="c6"> Usuarios</label>
+            <ul>
+                <li><span class="tree_label">Seguir Usuario</span></li>
+                <li><span class="tree_label">Dejar de Seguir Usuario</span></li>
+                <li>
+                <input type="checkbox" checked="checked" id="c7" />
+                <label for="c7" class="tree_label">Agregar a Favoritos</label>
+                <ul>
+                    <li><span class="tree_label">Tema</span></li>
+                    <li><span class="tree_label">Lista</span></li>
+                    <li><span class="tree_label">Album</span></li>
+                </ul>
+                <li>
+                <input type="checkbox" checked="checked" id="c8" />
+                <label for="c8" class="tree_label">Quitar de Favoritos</label>
+                <ul>
+                    <li><span class="tree_label">Tema</span></li>
+                    <li><span class="tree_label">Lista</span></li>
+                    <li><span class="tree_label">Album</span></li>
+                </ul>
+            </ul>
+    
+            <li>
+                    <input type="checkbox" checked="checked" id="c9" />
+                    <label class="tree_label" for="c9"> Listas</label>
+                    <ul>
+                        <li><span class="tree_label">Publicar Lista</span></li>
+                        <li>
+                        <input type="checkbox" checked="checked" id="c10" />
+                        <label for="c10" class="tree_label">Agregar Tema</label>
+                        <ul>
+                            <li><span class="tree_label">Lista Particular</span></li>
+                            <li><span class="tree_label">Lista Por Defecto</span></li>
+                        </ul>
 
-    <div class="container-tree"></div>
+      </ul>
+
 
     <footer class="footer">
             Copyright &copy; 2017

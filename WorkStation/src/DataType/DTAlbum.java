@@ -24,7 +24,7 @@ public class DTAlbum {
     private List<DTTema> temas;
     private List generos;
     
-    DTAlbum(Album album) {
+    public DTAlbum(Album album) {
         nombre=album.getNombre();
         anio=album.getAnio();
         imagen=album.getImg();

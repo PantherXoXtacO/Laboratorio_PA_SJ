@@ -28,5 +28,9 @@ public class ListaParticular extends ListaDeReproduccion {
     public boolean getPrivacidad(){
         return this.privacidad;
     }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
         
 }

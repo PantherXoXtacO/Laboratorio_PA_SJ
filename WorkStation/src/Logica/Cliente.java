@@ -1,15 +1,19 @@
 package Logica;
 
 
-
+import DataType.DTAlbum;
+import DataType.DTListaDefecto;
+import DataType.DTListaPrticular;
+import DataType.DTListaRepro;
+import DataType.DTTema;
 import DataType.DataSession;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "CLIENTE")
@@ -177,6 +181,53 @@ public class Cliente extends Usuario{
         }
         return ret;
     }
+    public List getTemasWeb(){
+        List ret = new ArrayList();
+        Iterator it = temasFav.iterator();
+        Tema t;
+        while(it.hasNext()){
+            t=(Tema) it.next();
+            ret.add(new DTTema(t));
+        }        
+        return ret;
+    }
     
+    public List getAlbumWeb(){
+        List ret = new ArrayList();
+        Iterator it = albumsFav.iterator();
+        Album a;
+        while(it.hasNext()){
+            a = (Album) it.next();
+            ret.add(new DTAlbum(a));
+        }
+        return ret;
+    }
     
+    public List getListasFavWeb(){
+        List ret = new ArrayList();
+        Iterator it = listasFav.iterator();
+        ListaDeReproduccion L;
+        while(it.hasNext()){
+            L=(ListaDeReproduccion) it.next();
+            ret.add(new DTListaRepro(L));
+        }
+        return ret;
+    }
+    
+    public List getListasWeb(){
+        List ret = new ArrayList();
+        Iterator it = Listas.iterator();
+        ListaDeReproduccion L;
+        while(it.hasNext()){
+            L=(ListaDeReproduccion) it.next();
+            if(L instanceof ListaParticular){
+                ret.add(new DTListaPrticular(L));
+            }
+            else{
+                ret.add(new DTListaDefecto(L));
+            }            
+        }
+        return ret;
+    }
+ 
 }

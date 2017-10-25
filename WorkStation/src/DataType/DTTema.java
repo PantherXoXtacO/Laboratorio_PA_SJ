@@ -3,7 +3,7 @@ package DataType;
 import Logica.Tema;
 
 
-class DTTema {
+public class DTTema {
 
     private String nombre;
     private int duracion;
@@ -12,7 +12,7 @@ class DTTema {
     private String album;
     
     
-    DTTema(Tema t) {
+    public DTTema(Tema t) {
         this.nombre=t.getNombre();
         this.duracion=t.getDuracion();
         this.orden=t.getOrden();

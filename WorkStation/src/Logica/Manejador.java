@@ -595,6 +595,10 @@ public class Manejador {
         }
         return ret;
     }
+    
+    public void addSuscripcion(Suscripcion s){
+        suscripciones.add(s);
+    }
 
 
 }

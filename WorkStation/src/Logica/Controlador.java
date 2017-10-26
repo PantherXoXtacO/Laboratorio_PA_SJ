@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import DataType.*;
 import Enums.EstadosDeSuscripcion;
+import Enums.TiposDeSuscripcion;
 
 /**
  *
@@ -513,4 +514,20 @@ public class Controlador implements IControlador {
             s.updateFechaDeVencimiento();
         }
     }
+
+    @Override
+    public void actualizarEstadoDeSuscripcionWeb(Cliente cliente, EstadosDeSuscripcion estado) {
+        Suscripcion s = cliente.getSuscripcion();
+        s.setEstado(estado);
+    }
+
+    @Override
+    public void contratarSuscripcion(Cliente cliente, TiposDeSuscripcion tipo) {
+        Manejador M=Manejador.getinstance();
+        Suscripcion s = new Suscripcion(cliente, tipo);
+        cliente.setSuscripcion(s);
+        M.addSuscripcion(s);
+    }
+    
+    
 }

@@ -5,6 +5,7 @@
  */
 package Presentacion;
 
+import Enums.EstadosDeSuscripcion;
 import Logica.Album;
 import Logica.Item;
 import Logica.Artista;
@@ -39,6 +40,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 import Logica.Item;
 import Logica.ListaDeReproduccion;
+import Logica.Suscripcion;
 import Logica.Tema;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -3205,6 +3207,11 @@ public class Main extends javax.swing.JFrame {
         ActualizarEstadoDeSuscripciones.setVisible(false);
 
         AES_ListaDeSuscripciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
+        AES_ListaDeSuscripciones.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                AES_ListaDeSuscripcionesItemStateChanged(evt);
+            }
+        });
 
         AES_Label1.setText("Suscripciones:");
 
@@ -3216,6 +3223,11 @@ public class Main extends javax.swing.JFrame {
         });
 
         AES_BotonActualizar.setText("Actualizar");
+        AES_BotonActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AES_BotonActualizarActionPerformed(evt);
+            }
+        });
 
         AES_Textfield.setFocusable(false);
 
@@ -5005,6 +5017,27 @@ public class Main extends javax.swing.JFrame {
     private void AES_BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AES_BotonCancelarActionPerformed
         ActualizarEstadoDeSuscripciones.setVisible(false);
     }//GEN-LAST:event_AES_BotonCancelarActionPerformed
+
+    private void AES_ListaDeSuscripcionesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_AES_ListaDeSuscripcionesItemStateChanged
+        Suscripcion s = (Suscripcion) AES_ListaDeSuscripciones.getSelectedItem();
+        AES_Textfield.setText(s.getCliente().getNickname());
+    }//GEN-LAST:event_AES_ListaDeSuscripcionesItemStateChanged
+
+    private void AES_BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AES_BotonActualizarActionPerformed
+        Suscripcion s = (Suscripcion) AES_ListaDeSuscripciones.getSelectedItem();
+        String s_mode = AES_EA.getSelectedItem().toString();          
+        if(s_mode != null && s != null){
+            EstadosDeSuscripcion estado;
+            if(s_mode.equalsIgnoreCase("Vigente"))
+                estado = EstadosDeSuscripcion.Vigente;
+            else
+                estado = EstadosDeSuscripcion.Cancelada;
+            ICU.actualizarEstadoDeSuscripcion(s, estado);
+        }
+        else
+            JOptionPane.showMessageDialog(this, "ERROR: Campos vacios", "Actualizar sucripcion", JOptionPane.ERROR_MESSAGE);
+            
+    }//GEN-LAST:event_AES_BotonActualizarActionPerformed
 
     /**
      * @param args the command line arguments

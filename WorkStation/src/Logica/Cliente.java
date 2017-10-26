@@ -7,8 +7,6 @@ import DataType.DTListaPrticular;
 import DataType.DTListaRepro;
 import DataType.DTTema;
 import DataType.DataSession;
-import Enums.EstadosDeSuscripcion;
-import Enums.TiposDeSuscripcion;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -20,6 +18,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "CLIENTE")
 public class Cliente extends Usuario{
+
+    
     private List<Usuario> siguiendo;
     private List<Tema> temasFav;
     private List<Album> albumsFav;
@@ -130,6 +130,10 @@ public class Cliente extends Usuario{
         return ret;
     }
     
+    public Suscripcion getSuscripcion() {
+        return suscripcion;
+    }
+    
     void guardarListFav(ListaDeReproduccion lista) {
         listasFav.add(lista);
     }
@@ -232,6 +236,10 @@ public class Cliente extends Usuario{
             }            
         }
         return ret;
+    }
+
+    public void setSuscripcion(Suscripcion suscripcion) {
+        this.suscripcion = suscripcion;
     }
  
 }

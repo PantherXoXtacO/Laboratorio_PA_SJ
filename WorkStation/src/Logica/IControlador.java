@@ -3,6 +3,7 @@ import java.awt.image.BufferedImage;
 import java.util.List;
 import DataType.*;
 import Enums.EstadosDeSuscripcion;
+import Enums.TiposDeSuscripcion;
 /**
  *
  * @author Casca
@@ -93,6 +94,8 @@ public interface IControlador{
     public abstract void WebAltaCliente(String nick, String mail, String fecha, String pass, String nombre, String apellido);
     public abstract DataSession getUserSession(String nick);
     public abstract void actualizarEstadoDeSuscripcion(Suscripcion s, EstadosDeSuscripcion estado);
+    public abstract void actualizarEstadoDeSuscripcionWeb(Cliente cliente, EstadosDeSuscripcion estado);
+    public abstract void contratarSuscripcion(Cliente cliente, TiposDeSuscripcion tipo);
     
     
 }

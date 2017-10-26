@@ -161,6 +161,10 @@ public class Main extends javax.swing.JFrame {
         RegFrameLabel10 = new javax.swing.JLabel();
         RegFrameLabelButton1 = new javax.swing.JButton();
         ImagePathTextField = new javax.swing.JTextField();
+        PasswordTextFieldRU = new javax.swing.JTextField();
+        ConfirmPasswordTextFieldRU = new javax.swing.JTextField();
+        jLabel5Password = new javax.swing.JLabel();
+        jLabel6ConfirmPassword = new javax.swing.JLabel();
         FrameNewGen = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         TreeNewGen = new javax.swing.JTree();
@@ -917,56 +921,67 @@ public class Main extends javax.swing.JFrame {
 
         ImagePathTextField.setFocusable(false);
 
+        jLabel5Password.setText("Password");
+
+        jLabel6ConfirmPassword.setText("Confirm Password");
+
         javax.swing.GroupLayout jRegisterFrameLayout = new javax.swing.GroupLayout(jRegisterFrame.getContentPane());
         jRegisterFrame.getContentPane().setLayout(jRegisterFrameLayout);
         jRegisterFrameLayout.setHorizontalGroup(
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addComponent(RegisterCancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
                 .addComponent(RegisterAcceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jRegisterFrameLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                        .addComponent(RegFrameLabel1)
-                        .addGap(25, 25, 25)
-                        .addComponent(jRegisterNicknameField))
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5Password)
+                            .addComponent(RegFrameLabel4))
+                        .addGap(44, 44, 44)
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRegisterNombreField)
+                            .addComponent(PasswordTextFieldRU)))
                     .addGroup(jRegisterFrameLayout.createSequentialGroup()
                         .addComponent(RegFrameLabel3)
-                        .addGap(46, 46, 46)
+                        .addGap(66, 66, 66)
                         .addComponent(jRegisterEmailField))
                     .addGroup(jRegisterFrameLayout.createSequentialGroup()
                         .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RegFrameLabel4)
+                            .addComponent(jLabel6ConfirmPassword)
                             .addComponent(RegFrameLabel5))
-                        .addGap(33, 33, 33)
-                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRegisterNombreField)
-                            .addComponent(jRegisterApellidolField)))
-                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(RegFrameLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(RegFrameLabel6)
-                                .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                    .addComponent(RegFrameLabel10)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ConfirmPasswordTextFieldRU)
+                            .addComponent(jRegisterApellidolField)))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addComponent(RegFrameLabel1)
+                        .addGap(45, 45, 45)
+                        .addComponent(jRegisterNicknameField))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addComponent(RegFrameLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ImagePathTextField)
+                        .addGap(18, 18, 18)
+                        .addComponent(RegFrameLabelButton1))
+                    .addGroup(jRegisterFrameLayout.createSequentialGroup()
+                        .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                .addGap(0, 29, Short.MAX_VALUE)
-                                .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(RegFrameLabel6)
                                 .addGap(18, 18, 18)
+                                .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jRegisterFrameLayout.createSequentialGroup()
-                                .addComponent(ImagePathTextField)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(RegFrameLabelButton1)))))
-                .addGap(249, 249, 249))
+                                .addComponent(RegFrameLabel10)
+                                .addGap(18, 18, 18)
+                                .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jRegisterFrameLayout.setVerticalGroup(
             jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -974,34 +989,42 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRegisterNicknameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRegisterNombreField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PasswordTextFieldRU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5Password))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ConfirmPasswordTextFieldRU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6ConfirmPassword))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRegisterApellidolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRegisterEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegFrameLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(RegFrameLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRegisterEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBoxAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegFrameLabelButton1)
-                    .addComponent(ImagePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14)
+                    .addComponent(ImagePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegFrameLabelButton1))
+                .addGap(18, 18, 18)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegFrameLabel10)
                     .addComponent(UserTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jRegisterFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(RegisterCancelButton)
                     .addComponent(RegisterAcceptButton)))
@@ -1056,7 +1079,7 @@ public class Main extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(bCancelNewGen))
                         .addComponent(TFNewGen, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(319, Short.MAX_VALUE))
+                .addContainerGap(407, Short.MAX_VALUE))
         );
         FrameNewGenLayout.setVerticalGroup(
             FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1073,7 +1096,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameNewGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bAddNewGen)
                     .addComponent(bCancelNewGen))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameNewGen);
@@ -1114,7 +1137,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLCUserListUsers2Layout.setVerticalGroup(
             CLCUserListUsers2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 267, Short.MAX_VALUE)
         );
 
         CLCUserListScroll2.setViewportView(CLCUserListUsers2);
@@ -1130,15 +1153,15 @@ public class Main extends javax.swing.JFrame {
             .addGroup(CLClientListLayout.createSequentialGroup()
                 .addComponent(CLCLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
+                .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE))
             .addGroup(CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                 .addContainerGap())
         );
         CLClientListLayout.setVerticalGroup(
             CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLClientListLayout.createSequentialGroup()
-                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
+                .addComponent(CLCUserListScroll2, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1194,7 +1217,7 @@ public class Main extends javax.swing.JFrame {
         );
         PCLClientListLayout.setVerticalGroup(
             PCLClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 483, Short.MAX_VALUE)
         );
 
         PCLUserListScroll4.setViewportView(PCLClientList);
@@ -1209,10 +1232,10 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(PCLBotonAceptar))
             .addGroup(PrivacidadClientListLayout.createSequentialGroup()
                 .addGroup(PrivacidadClientListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PCLUserListScroll4, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                    .addComponent(PCLUserListScroll4, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addGroup(PrivacidadClientListLayout.createSequentialGroup()
                         .addComponent(PCLLabelDeUsuario_Lista, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 249, Short.MAX_VALUE)
                         .addComponent(ConsultUserTextFIeld2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)))
                 .addContainerGap())
@@ -1272,7 +1295,7 @@ public class Main extends javax.swing.JFrame {
         );
         PCLClientList1Layout.setVerticalGroup(
             PCLClientList1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 483, Short.MAX_VALUE)
         );
 
         PCLUserListScroll5.setViewportView(PCLClientList1);
@@ -1291,7 +1314,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(PCLBotonAceptar1))
             .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
                 .addGroup(PrivacidadClientList2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PCLUserListScroll5, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                    .addComponent(PCLUserListScroll5, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                     .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
                         .addComponent(PCLLabel29)
                         .addGap(57, 57, 57)
@@ -1299,7 +1322,7 @@ public class Main extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(PrivacidadClientList2Layout.createSequentialGroup()
                         .addComponent(PCLLabelDeUsuario_Lista1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 304, Short.MAX_VALUE)
                         .addComponent(ConsultUserTextFIeld3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -1376,7 +1399,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCBRemoveListFavClnt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jCBRemoveListFavList, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(437, Short.MAX_VALUE))
         );
         jFrameRemoveListFavLayout.setVerticalGroup(
             jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1393,7 +1416,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFrameRemoveListFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JBEliminarFavAcept)
                     .addComponent(jBEliminarListFavCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFrameRemoveListFav);
@@ -1444,7 +1467,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(CBRemoveFavTemaCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CBRemoveFavTemaTema, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(349, Short.MAX_VALUE))
+                .addContainerGap(437, Short.MAX_VALUE))
         );
         FrameRemoveTemaFavLayout.setVerticalGroup(
             FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1461,7 +1484,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveTemaFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BRemoveTemaFavAcept)
                     .addComponent(BRemoveTemaFavCancel))
-                .addContainerGap(317, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameRemoveTemaFav);
@@ -1513,7 +1536,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(CBRemoveAlbumFavCliente, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CBRemoveAlbumFavAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(323, Short.MAX_VALUE))
+                .addContainerGap(411, Short.MAX_VALUE))
         );
         FrameRemoveAlbumFavLayout.setVerticalGroup(
             FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1530,7 +1553,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameRemoveAlbumFavLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBRemoveAlbumFavAcept)
                     .addComponent(jBRemoveAlbumFavCancel))
-                .addContainerGap(288, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameRemoveAlbumFav);
@@ -1578,7 +1601,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jBConsultarGenSelectGen)
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
             .addGroup(jFConsultarAlbumGenLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBConsultarAlbumGen)
@@ -1602,7 +1625,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jFConsultarAlbumGenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBConsultarAlbumGenCancel)
                     .addComponent(jBConsultarAlbumGen))
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         getContentPane().add(jFConsultarAlbumGen);
@@ -1661,7 +1684,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameConsultarAlbumLayout.createSequentialGroup()
                         .addComponent(BConsultAlbAceptar)
                         .addGap(20, 20, 20)))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
         FrameConsultarAlbumLayout.setVerticalGroup(
             FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1690,7 +1713,7 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(FrameConsultarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLConsultAlb4)
                             .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLConsultAlbImg.getAccessibleContext().setAccessibleName("jLConsultAlbImg");
@@ -1759,7 +1782,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(FrameConsultarAlbArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton9))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         getContentPane().add(FrameConsultarAlbArt);
@@ -1921,7 +1944,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(DejarSeguirUsuarioCancelar1)
                         .addGap(18, 18, 18)
                         .addComponent(DejarSeguirUsuarioConfirmar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(252, Short.MAX_VALUE))
+                        .addContainerGap(340, Short.MAX_VALUE))
                     .addGroup(DejarDeSeguirUsuarioLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1950,7 +1973,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(DejarDeSeguirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DejarSeguirUsuarioCancelar1)
                     .addComponent(DejarSeguirUsuarioConfirmar1))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
 
         getContentPane().add(DejarDeSeguirUsuario);
@@ -1987,7 +2010,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
                         .addComponent(jCBsaveListFavList2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
                         .addComponent(Generoasd, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2006,7 +2029,7 @@ public class Main extends javax.swing.JFrame {
         ConsultaListaReproduccionLayout.setVerticalGroup(
             ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConsultaListaReproduccionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(100, Short.MAX_VALUE)
                 .addComponent(ConsultaListaReproduccionTitle)
                 .addGap(42, 42, 42)
                 .addGroup(ConsultaListaReproduccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2090,7 +2113,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(CLTitulo2)
-                        .addGap(0, 266, Short.MAX_VALUE))
+                        .addGap(0, 354, Short.MAX_VALUE))
                     .addGroup(CrearListaParticularLayout.createSequentialGroup()
                         .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(CrearListaParticularLayout.createSequentialGroup()
@@ -2129,7 +2152,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLPClienteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CLPButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
                 .addGroup(CrearListaParticularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton2)
                     .addComponent(CLCancelButton2)))
@@ -2247,7 +2270,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(CLLabel0))
                 .addGap(5, 5, 5)
                 .addComponent(CLButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
                 .addGroup(CrearListaPorDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLRegisterButton)
                     .addComponent(CLCancelButton)))
@@ -2291,7 +2314,7 @@ public class Main extends javax.swing.JFrame {
         );
         ALUserListUsers1Layout.setVerticalGroup(
             ALUserListUsers1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 267, Short.MAX_VALUE)
         );
 
         ALUserListScroll1.setViewportView(ALUserListUsers1);
@@ -2307,15 +2330,15 @@ public class Main extends javax.swing.JFrame {
             .addGroup(ArtistListLayout.createSequentialGroup()
                 .addComponent(ALLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
+                .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE))
             .addGroup(ArtistListLayout.createSequentialGroup()
-                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                 .addContainerGap())
         );
         ArtistListLayout.setVerticalGroup(
             ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ArtistListLayout.createSequentialGroup()
-                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
+                .addComponent(ALUserListScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(ArtistListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2374,7 +2397,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(CBSeguirUserSeguidor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(CBSeguirUserSeguido, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 334, Short.MAX_VALUE))
+                        .addGap(0, 422, Short.MAX_VALUE))
                     .addGroup(FrameSeguirUserLayout.createSequentialGroup()
                         .addComponent(followAccept)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2385,7 +2408,7 @@ public class Main extends javax.swing.JFrame {
         FrameSeguirUserLayout.setVerticalGroup(
             FrameSeguirUserLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FrameSeguirUserLayout.createSequentialGroup()
-                .addContainerGap(244, Short.MAX_VALUE)
+                .addContainerGap(137, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CBSeguirUserSeguidor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2433,7 +2456,7 @@ public class Main extends javax.swing.JFrame {
         );
         UserListUsersLayout.setVerticalGroup(
             UserListUsersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 480, Short.MAX_VALUE)
         );
 
         CLScroll.setViewportView(UserListUsers);
@@ -2446,11 +2469,11 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(CLButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CLButton2))
-            .addComponent(CLScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+            .addComponent(CLScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
             .addGroup(ClientListLayout.createSequentialGroup()
                 .addComponent(CLLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
+                .addComponent(ConsultUserTextFIeld, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
                 .addContainerGap())
         );
         ClientListLayout.setVerticalGroup(
@@ -2510,7 +2533,7 @@ public class Main extends javax.swing.JFrame {
         );
         CLListaDeGeneroLayout.setVerticalGroup(
             CLListaDeGeneroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 256, Short.MAX_VALUE)
         );
 
         CLGUserListScroll3.setViewportView(CLListaDeGenero);
@@ -2523,20 +2546,20 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(CLGLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
                 .addComponent(CLGButton11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CLGLButton10))
             .addGroup(CLGeneroListLayout.createSequentialGroup()
-                .addGap(0, 294, Short.MAX_VALUE)
+                .addGap(0, 382, Short.MAX_VALUE)
                 .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         CLGeneroListLayout.setVerticalGroup(
             CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CLGeneroListLayout.createSequentialGroup()
-                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                .addComponent(CLGUserListScroll3, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(CLGeneroListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CLConsultUserTextFIeld1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2603,7 +2626,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(jCBAgregarTemaLista3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(jBAgregarLista2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(281, Short.MAX_VALUE))
         );
         AgregarTemaListaPartLayout.setVerticalGroup(
             AgregarTemaListaPartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2621,7 +2644,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jLAgregarTemaLista3)
                     .addComponent(jCBAgregarTemaLista3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBAgregarLista2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
                 .addComponent(jBAgregarLista4)
                 .addGap(37, 37, 37))
         );
@@ -2671,7 +2694,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jAgregarTemaListDCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBAgregarTemaListD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(297, Short.MAX_VALUE))
         );
         AgregarTemaListDefectoLayout.setVerticalGroup(
             AgregarTemaListDefectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2685,7 +2708,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jCAgregarTemaListDefectoTema, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LbATLD2)
                     .addComponent(jBAgregarTemaListD))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                 .addComponent(jAgregarTemaListDCerrar)
                 .addGap(45, 45, 45))
         );
@@ -2752,7 +2775,7 @@ public class Main extends javax.swing.JFrame {
         GuardarListaLayout.setVerticalGroup(
             GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(GuardarListaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(201, Short.MAX_VALUE)
                 .addComponent(GuardarListaTitle)
                 .addGap(18, 18, 18)
                 .addGroup(GuardarListaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2840,7 +2863,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(GuardarTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BsaveTemaFavAcept)
                     .addComponent(BsaveTemaFavCancel))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         getContentPane().add(GuardarTema);
@@ -2912,7 +2935,7 @@ public class Main extends javax.swing.JFrame {
             .addGroup(GuardarAlbumLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(GuardarAlbumTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
                 .addGroup(GuardarAlbumLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLsaveAlbumFav)
                     .addComponent(CBsaveAlbumFavCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -3011,9 +3034,9 @@ public class Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(AltaAlbum1Layout.createSequentialGroup()
-                                .addComponent(jComboBoxGeneroPert1, 0, 56, Short.MAX_VALUE)
+                                .addComponent(jComboBoxGeneroPert1, 0, 100, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
+                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE))
                             .addComponent(AltaAlbumtxtNom1)
                             .addComponent(AltaAlbumAnio, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(18, 18, 18))
@@ -3058,7 +3081,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(AltaAlbum1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(AltaALbumAgrTema1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
                 .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1)))
@@ -3107,7 +3130,7 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(AltaALbumAgrTemaDur)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AltaTemaLayout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 364, Short.MAX_VALUE)
                         .addComponent(AltaALbumAgrTema, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -3126,7 +3149,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(AltaTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumUbi)
                     .addComponent(AltaALbumAgrTemaUbi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                 .addGroup(AltaTemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaALbumAgrTema)
                     .addComponent(jButton2))
@@ -3167,7 +3190,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
                         .addComponent(jCBsaveListFavList4, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
                         .addComponent(Clienteasd, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3186,7 +3209,7 @@ public class Main extends javax.swing.JFrame {
         ConsultaListaReproduccion1Layout.setVerticalGroup(
             ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ConsultaListaReproduccion1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addComponent(ConsultaListaReproduccionTitle1)
                 .addGap(42, 42, 42)
                 .addGroup(ConsultaListaReproduccion1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3255,7 +3278,7 @@ public class Main extends javax.swing.JFrame {
                             .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(AES_ListaDeSuscripciones, 0, 150, Short.MAX_VALUE)
                                 .addComponent(AES_Textfield)))
-                        .addGap(0, 205, Short.MAX_VALUE))
+                        .addGap(0, 293, Short.MAX_VALUE))
                     .addGroup(ActualizarEstadoDeSuscripcionesLayout.createSequentialGroup()
                         .addComponent(AES_BotonCancelar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3277,7 +3300,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(AES_EA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 206, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
                 .addGroup(ActualizarEstadoDeSuscripcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AES_BotonCancelar)
                     .addComponent(AES_BotonActualizar))
@@ -3680,6 +3703,8 @@ public class Main extends javax.swing.JFrame {
 
     private void RegisterAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterAcceptButtonActionPerformed
         String nick = this.jRegisterNicknameField.getText();
+        String pass = this.PasswordTextFieldRU.getText();
+        String cpass = this.ConfirmPasswordTextFieldRU.getText();
         String apellido = this.jRegisterApellidolField.getText();
         String nombre= this.jRegisterNombreField.getText();
         String email = this.jRegisterEmailField.getText();
@@ -3689,56 +3714,52 @@ public class Main extends javax.swing.JFrame {
         int dia = this.jComboBoxDia.getSelectedIndex() + 1;
         int mes = this.jComboBoxMes.getSelectedIndex() + 1;
         int año = this.jComboBoxAño.getSelectedIndex() + 1900;
-        Fecha fechaDeNac = new Fecha(dia, mes, año);
+        Fecha fechaDeNac = new Fecha(dia, mes, año);        
         if(fechaDeNac.validarFecha()){
             if(!nick.isEmpty() && !email.isEmpty() && !nombre.isEmpty() &&
-                    !apellido.isEmpty()){
-               if(!this.ImagePathTextField.getText().equals("")){
-                   System.out.println(this.ImagePathTextField.getText());
-                   String relativePath = ICU.absolutePathToRelative(this.ImagePathTextField.getText());
-                   System.out.println(relativePath);
-                   imagePath = relativePath;                   
-               }                    
-               if(userType=="Cliente")
-                    if(ICU.nicknameLibre(nick)){
-                        if(ICU.mailLibre(email)){
-                            ICU.registrarCliente(nick, "", email, nombre, apellido, fechaDeNac, imagePath);
-                            JOptionPane.showMessageDialog(this, "El Cliente se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);                
-                            this.jRegisterFrame.setVisible(false);
-                            return;   
+               !apellido.isEmpty() && !pass.isEmpty() && !cpass.isEmpty()){
+               if(pass.equals(cpass)){
+                   if(!this.ImagePathTextField.getText().equals("")){
+                        System.out.println(this.ImagePathTextField.getText());
+                        String relativePath = ICU.absolutePathToRelative(this.ImagePathTextField.getText());
+                        System.out.println(relativePath);
+                        imagePath = relativePath;                   
+                        }                    
+                    if(userType=="Cliente")
+                        if(ICU.nicknameLibre(nick)){
+                            if(ICU.mailLibre(email)){
+                                ICU.registrarCliente(nick, pass, email, nombre, apellido, fechaDeNac, imagePath);
+                                JOptionPane.showMessageDialog(this, "El Cliente se ha creado con éxito", "Registrar Usuario", JOptionPane.INFORMATION_MESSAGE);                
+                                this.jRegisterFrame.setVisible(false);
+                                return;   
+                                }
+                            else{
+                                JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
+                                return; 
+                            }
                         }
                         else{
-                            JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
-                            return; 
-                        }
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(this, "Nickname en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
-                        return;
-                    }     
-            
-                if(userType=="Artista")      
-                    if(ICU.nicknameLibre(nick)){
-                        if(ICU.mailLibre(email)){
-                            this.RegistrarArtista.setSize(500, 500);
-                            this.RegistrarArtista.setVisible(true);
-                            
-                        }
+                            JOptionPane.showMessageDialog(this, "Nickname en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
+                            return;
+                        }    
+                    if(userType=="Artista")      
+                        if(ICU.nicknameLibre(nick)){
+                            if(ICU.mailLibre(email)){
+                                this.RegistrarArtista.setSize(500, 500);
+                                this.RegistrarArtista.setVisible(true);
+                                }
+                            else
+                                JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
+                            }
                         else
-                            JOptionPane.showMessageDialog(this, "Email en uso", "Error", JOptionPane.INFORMATION_MESSAGE); 
-                    }
-                    else
-                        JOptionPane.showMessageDialog(this, "Nickname en uso", "Error", JOptionPane.INFORMATION_MESSAGE);
-                    
-                     
+                            JOptionPane.showMessageDialog(this, "Nickname en uso", "Error", JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                    JOptionPane.showMessageDialog(this, "Todos los campos son necesarios", "Error", JOptionPane.INFORMATION_MESSAGE); 
             }
             else
-               JOptionPane.showMessageDialog(this, "Todos los campos son necesarios", "Error", JOptionPane.INFORMATION_MESSAGE); 
-            
-        }
-        else
-            JOptionPane.showMessageDialog(this, "Fecha invalida", "Error", JOptionPane.INFORMATION_MESSAGE);       
-        
+                JOptionPane.showMessageDialog(this, "Fecha invalida", "Error", JOptionPane.INFORMATION_MESSAGE);   
+    }
         
     }//GEN-LAST:event_RegisterAcceptButtonActionPerformed
 
@@ -4648,6 +4669,7 @@ public class Main extends javax.swing.JFrame {
 
     private void RegistrarArtistaAcceptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarArtistaAcceptButtonActionPerformed
         String nick = this.jRegisterNicknameField.getText();
+        String pass = this.PasswordTextFieldRU.getText();
         String email = this.jRegisterApellidolField.getText();
         String nombre= this.jRegisterNombreField.getText();
         String apellido = this.jRegisterEmailField.getText();
@@ -4660,7 +4682,7 @@ public class Main extends javax.swing.JFrame {
         String imagePath = "I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images\\default.jpg";
         if(!this.ImagePathTextField.getText().equals(""))
                     imagePath = this.ImagePathTextField.getText();        
-        ICU.registrarArtista(nick, "", email, nombre, apellido, fechaDeNac, imagePath, biografia, website);
+        ICU.registrarArtista(nick, pass, email, nombre, apellido, fechaDeNac, imagePath, biografia, website);
         this.BiografiaTextArea.setText("");
         this.LinkWebTextField.setText("");
         this.RegistrarArtista.setVisible(false);
@@ -5182,6 +5204,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel CLTitulo2;
     private javax.swing.JInternalFrame ClientList;
     private javax.swing.JLabel Clienteasd;
+    private javax.swing.JTextField ConfirmPasswordTextFieldRU;
     private javax.swing.JTextField ConsultUserTextFIeld;
     private javax.swing.JTextField ConsultUserTextFIeld1;
     private javax.swing.JTextField ConsultUserTextFIeld2;
@@ -5260,6 +5283,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel PCLLabelDeUsuario_Lista1;
     private javax.swing.JScrollPane PCLUserListScroll4;
     private javax.swing.JScrollPane PCLUserListScroll5;
+    private javax.swing.JTextField PasswordTextFieldRU;
     private javax.swing.JInternalFrame PrivacidadClientList;
     private javax.swing.JInternalFrame PrivacidadClientList2;
     private javax.swing.JButton QuitarListaCancelar1;
@@ -5371,6 +5395,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5Password;
+    private javax.swing.JLabel jLabel6ConfirmPassword;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<Item> jListConsultarAlbumGen;

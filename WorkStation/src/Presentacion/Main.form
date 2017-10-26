@@ -907,7 +907,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-13,0,0,2,15"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-108,0,0,2,103"/>
   </AuxValues>
   <SubComponents>
     <Container class="javax.swing.JInternalFrame" name="jRegisterFrame">
@@ -918,66 +918,74 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <Component id="RegisterCancelButton" min="-2" pref="120" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="359" max="32767" attributes="0"/>
                   <Component id="RegisterAcceptButton" min="-2" pref="120" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="RegFrameLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Component id="jRegisterNicknameField" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel5Password" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="RegFrameLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jRegisterNombreField" max="32767" attributes="0"/>
+                              <Component id="PasswordTextFieldRU" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="RegFrameLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                           <Component id="jRegisterEmailField" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="RegFrameLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel6ConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="RegFrameLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jRegisterNombreField" max="32767" attributes="0"/>
+                              <Component id="ConfirmPasswordTextFieldRU" max="32767" attributes="0"/>
                               <Component id="jRegisterApellidolField" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="RegFrameLabel7" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="RegFrameLabel6" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="RegFrameLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="UserTypeComboBox" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+                          <Component id="RegFrameLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="jRegisterNicknameField" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="RegFrameLabel7" min="-2" pref="105" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="ImagePathTextField" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="RegFrameLabelButton1" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="29" max="32767" attributes="0"/>
-                                  <Component id="jComboBoxDia" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="RegFrameLabel6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxDia" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jComboBoxMes" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jComboBoxAño" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="ImagePathTextField" max="32767" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="RegFrameLabelButton1" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="RegFrameLabel10" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="UserTypeComboBox" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="249" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -988,40 +996,50 @@
                       <Component id="RegFrameLabel1" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jRegisterNicknameField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegFrameLabel4" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jRegisterNombreField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="PasswordTextFieldRU" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5Password" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="ConfirmPasswordTextFieldRU" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel6ConfirmPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegFrameLabel5" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jRegisterApellidolField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jRegisterEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RegFrameLabel3" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jRegisterEmailField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegFrameLabel6" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                       <Component id="jComboBoxDia" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxMes" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBoxAño" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegFrameLabel7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="RegFrameLabelButton1" alignment="3" max="-2" attributes="0"/>
                       <Component id="ImagePathTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="RegFrameLabelButton1" alignment="3" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegFrameLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="UserTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="194" max="32767" attributes="0"/>
+                  <EmptySpace pref="36" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="RegisterCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="RegisterAcceptButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1157,6 +1175,20 @@
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JTextField" name="PasswordTextFieldRU">
+        </Component>
+        <Component class="javax.swing.JTextField" name="ConfirmPasswordTextFieldRU">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5Password">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Password"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6ConfirmPassword">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Confirm Password"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JInternalFrame" name="FrameNewGen">
@@ -1185,7 +1217,7 @@
                           <Component id="TFNewGen" min="-2" pref="174" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="319" max="32767" attributes="0"/>
+                  <EmptySpace pref="407" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1205,7 +1237,7 @@
                       <Component id="bAddNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bCancelNewGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="116" max="32767" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1278,10 +1310,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="CLCLabel18" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="CLConsultUserTextFIeld" pref="349" max="32767" attributes="0"/>
+                  <Component id="CLConsultUserTextFIeld" pref="437" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="CLCUserListScroll2" pref="501" max="32767" attributes="0"/>
+                  <Component id="CLCUserListScroll2" pref="589" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -1289,7 +1321,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="CLCUserListScroll2" pref="384" max="32767" attributes="0"/>
+                  <Component id="CLCUserListScroll2" pref="286" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1344,7 +1376,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="267" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1370,10 +1402,10 @@
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="PCLUserListScroll4" pref="501" max="32767" attributes="0"/>
+                      <Component id="PCLUserListScroll4" pref="589" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="PCLLabelDeUsuario_Lista" min="-2" pref="158" max="-2" attributes="0"/>
-                          <EmptySpace pref="161" max="32767" attributes="0"/>
+                          <EmptySpace pref="249" max="32767" attributes="0"/>
                           <Component id="ConsultUserTextFIeld2" min="-2" pref="180" max="-2" attributes="0"/>
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                       </Group>
@@ -1441,7 +1473,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="483" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1467,7 +1499,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="PCLUserListScroll5" alignment="0" pref="501" max="32767" attributes="0"/>
+                      <Component id="PCLUserListScroll5" alignment="0" pref="589" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="PCLLabel29" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
@@ -1476,7 +1508,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="PCLLabelDeUsuario_Lista1" min="-2" pref="118" max="-2" attributes="0"/>
-                          <EmptySpace pref="216" max="32767" attributes="0"/>
+                          <EmptySpace pref="304" max="32767" attributes="0"/>
                           <Component id="ConsultUserTextFIeld3" min="-2" pref="167" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -1548,7 +1580,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="483" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1604,7 +1636,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="349" max="32767" attributes="0"/>
+                  <EmptySpace pref="437" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1626,7 +1658,7 @@
                       <Component id="JBEliminarFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBEliminarListFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="231" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1715,7 +1747,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="349" max="32767" attributes="0"/>
+                  <EmptySpace pref="437" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1737,7 +1769,7 @@
                       <Component id="BRemoveTemaFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BRemoveTemaFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="317" max="32767" attributes="0"/>
+                  <EmptySpace pref="218" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1826,7 +1858,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="323" max="32767" attributes="0"/>
+                  <EmptySpace pref="411" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1848,7 +1880,7 @@
                       <Component id="jBRemoveAlbumFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBRemoveAlbumFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="288" max="32767" attributes="0"/>
+                  <EmptySpace pref="193" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1924,7 +1956,7 @@
                   <Component id="jBConsultarGenSelectGen" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="jScrollPane7" min="-2" pref="130" max="-2" attributes="0"/>
-                  <EmptySpace pref="59" max="32767" attributes="0"/>
+                  <EmptySpace pref="147" max="32767" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -1956,7 +1988,7 @@
                       <Component id="jBConsultarAlbumGenCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBConsultarAlbumGen" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="162" max="32767" attributes="0"/>
+                  <EmptySpace pref="55" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2069,7 +2101,7 @@
                           <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="93" max="32767" attributes="0"/>
+                  <EmptySpace pref="181" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2109,7 +2141,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="108" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2246,7 +2278,7 @@
                       <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="155" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2499,7 +2531,7 @@
                           <Component id="DejarSeguirUsuarioCancelar1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="DejarSeguirUsuarioConfirmar1" min="-2" pref="83" max="-2" attributes="0"/>
-                          <EmptySpace pref="252" max="32767" attributes="0"/>
+                          <EmptySpace pref="340" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -2538,7 +2570,7 @@
                       <Component id="DejarSeguirUsuarioCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="DejarSeguirUsuarioConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="43" max="32767" attributes="0"/>
+                  <EmptySpace pref="180" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2623,7 +2655,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="jLabel2" min="-2" pref="168" max="-2" attributes="0"/>
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <EmptySpace pref="158" max="32767" attributes="0"/>
                           <Component id="jCBsaveListFavList2" min="-2" pref="237" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -2649,7 +2681,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="100" max="32767" attributes="0"/>
                   <Component id="ConsultaListaReproduccionTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -2754,7 +2786,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
                           <Component id="CLTitulo2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="266" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="354" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -2806,7 +2838,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CLPButton6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="283" max="32767" attributes="0"/>
+                  <EmptySpace pref="184" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLRegisterButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCancelButton2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2971,7 +3003,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                   <Component id="CLButton7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="170" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLRegisterButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CLCancelButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3064,10 +3096,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="ALLabel14" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ConsultUserTextFIeld1" pref="349" max="32767" attributes="0"/>
+                  <Component id="ConsultUserTextFIeld1" pref="437" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="ALUserListScroll1" pref="501" max="32767" attributes="0"/>
+                  <Component id="ALUserListScroll1" pref="589" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -3075,7 +3107,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="ALUserListScroll1" pref="381" max="32767" attributes="0"/>
+                  <Component id="ALUserListScroll1" pref="286" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ConsultUserTextFIeld1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3129,7 +3161,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="267" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -3156,7 +3188,7 @@
                               <Component id="CBSeguirUserSeguidor" max="32767" attributes="0"/>
                               <Component id="CBSeguirUserSeguido" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="334" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="422" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="followAccept" min="-2" max="-2" attributes="0"/>
@@ -3172,7 +3204,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace pref="244" max="32767" attributes="0"/>
+                  <EmptySpace pref="137" max="32767" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="CBSeguirUserSeguidor" min="-2" max="-2" attributes="0"/>
@@ -3256,11 +3288,11 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="CLButton2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <Component id="CLScroll" alignment="0" pref="511" max="32767" attributes="0"/>
+              <Component id="CLScroll" alignment="0" pref="599" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <Component id="CLLabel12" min="-2" pref="158" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="ConsultUserTextFIeld" pref="339" max="32767" attributes="0"/>
+                  <Component id="ConsultUserTextFIeld" pref="427" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -3322,7 +3354,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="480" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -3344,7 +3376,7 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="CLGUserListScroll3" pref="501" max="32767" attributes="0"/>
+                  <Component id="CLGUserListScroll3" pref="589" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
@@ -3353,7 +3385,7 @@
                   <Component id="CLGLButton10" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" attributes="0">
-                  <EmptySpace min="0" pref="294" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="382" max="32767" attributes="0"/>
                   <Component id="CLConsultUserTextFIeld1" min="-2" pref="217" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -3361,7 +3393,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="CLGUserListScroll3" pref="370" max="32767" attributes="0"/>
+                  <Component id="CLGUserListScroll3" pref="275" max="32767" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="CLConsultUserTextFIeld1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3416,7 +3448,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="256" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -3455,7 +3487,7 @@
                           <Component id="jBAgregarLista2" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                  <EmptySpace pref="281" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -3478,7 +3510,7 @@
                       <Component id="jCBAgregarTemaLista3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBAgregarLista2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="100" max="32767" attributes="0"/>
+                  <EmptySpace pref="136" max="32767" attributes="0"/>
                   <Component id="jBAgregarLista4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
@@ -3581,7 +3613,7 @@
                       <Component id="jAgregarTemaListDCerrar" max="32767" attributes="0"/>
                       <Component id="jBAgregarTemaListD" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="209" max="32767" attributes="0"/>
+                  <EmptySpace pref="297" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -3599,7 +3631,7 @@
                       <Component id="LbATLD2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jBAgregarTemaListD" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="246" max="32767" attributes="0"/>
+                  <EmptySpace pref="151" max="32767" attributes="0"/>
                   <Component id="jAgregarTemaListDCerrar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               </Group>
@@ -3707,7 +3739,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="201" max="32767" attributes="0"/>
                   <Component id="GuardarListaTitle" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -3848,7 +3880,7 @@
                       <Component id="BsaveTemaFavAcept" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="BsaveTemaFavCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="148" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -3961,7 +3993,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="GuardarAlbumTitle" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="191" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLsaveAlbumFav" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="CBsaveAlbumFavCliente" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4073,9 +4105,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jComboBoxGeneroPert1" pref="56" max="32767" attributes="0"/>
+                                  <Component id="jComboBoxGeneroPert1" pref="100" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButton1" pref="137" max="32767" attributes="0"/>
+                                  <Component id="jButton1" pref="181" max="32767" attributes="0"/>
                               </Group>
                               <Component id="AltaAlbumtxtNom1" max="32767" attributes="0"/>
                               <Component id="AltaAlbumAnio" alignment="1" max="32767" attributes="0"/>
@@ -4138,7 +4170,7 @@
                           <Component id="AltaALbumAgrTema1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="236" max="32767" attributes="0"/>
+                  <EmptySpace pref="133" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="AltaAlbumbtnCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="AltaAlbumbtnConfirmar1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4274,7 +4306,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="276" max="32767" attributes="0"/>
+                          <EmptySpace pref="364" max="32767" attributes="0"/>
                           <Component id="AltaALbumAgrTema" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -4300,7 +4332,7 @@
                       <Component id="AltaAlbumUbi" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="AltaALbumAgrTemaUbi" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="207" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="AltaALbumAgrTema" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4365,7 +4397,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" pref="168" max="-2" attributes="0"/>
-                          <EmptySpace pref="70" max="32767" attributes="0"/>
+                          <EmptySpace pref="158" max="32767" attributes="0"/>
                           <Component id="jCBsaveListFavList4" min="-2" pref="237" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -4391,7 +4423,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="96" max="32767" attributes="0"/>
                   <Component id="ConsultaListaReproduccionTitle1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -4496,7 +4528,7 @@
                                   <Component id="AES_Textfield" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="205" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="293" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="AES_BotonCancelar" min="-2" max="-2" attributes="0"/>
@@ -4526,7 +4558,7 @@
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="AES_EA" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="206" max="32767" attributes="0"/>
+                  <EmptySpace pref="112" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="AES_BotonCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="AES_BotonActualizar" alignment="3" min="-2" max="-2" attributes="0"/>

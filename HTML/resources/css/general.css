@@ -6,7 +6,7 @@ body{
 header, footer {
     padding: 1em;
     margin-top: 50px;
-    background-color: rgba(22, 201, 22, 0.43);
+    background-color: rgba(14, 152, 14, 0.35);
 }
 
 h1{
@@ -18,8 +18,9 @@ h1{
 
 footer{
     text-align: center;
-    width:100%; 
+    width:102%;
     height:50px;
+    margin-left: -40px;
 }
 
 

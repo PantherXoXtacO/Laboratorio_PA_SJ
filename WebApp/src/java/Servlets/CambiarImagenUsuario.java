@@ -51,7 +51,7 @@ public class CambiarImagenUsuario extends HttpServlet {
                 for(FileItem item : multiparts){
                     if(!item.isFormField()){
                         String name = new File(item.getName()).getName();
-                        item.write( new File(UPLOAD_DIRECTORY + File.separator + "pepe_tira_piedras.jpg"));
+                        item.write( new File(UPLOAD_DIRECTORY + File.separator + name));
                     }
                 }
            

@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <!DOCTYPE HTML>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="./resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"></link>
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap-treeview.min.css"></link>
     <link rel="stylesheet" type="text/css" href="./resources/css/general.css"></link>
-    <link rel="stylesheet" type="text/css" href="./resources/css/categories.css"></link>
     
 
     <title> Espotify </title>
@@ -27,37 +19,89 @@ and open the template in the editor.
 
         <nav class="nav-bar">
             <ul>
-                <li class="button_nav"><a  href="#" onclick="">Ingresar</a></li>
+                <li class="button_nav"><a  href="/Lab/Login.jsp">Ingresar</a></li>
             </ul>
         </nav>
     </header>
 
-    <!--<div class="containerD"></div>
-    <div class="container-tree"></div>-->
+      <ul class="tree">
+        <li>
+          <input type="checkbox" checked="checked" id="c1" />
+          <label class="tree_label" for="c1"> Registros</label>
+          <ul>
+              <li><a href="Registrar.jsp" class="tree_label"> Registrar Usuario</a></li>
+              <li><a href=".java" class="tree_label"> Crear Genero</a></li>
+              <li><a href=".java" class="tree_label"> Crear Album</a></li>
+              <li>
+              <input type="checkbox" checked="checked" id="c2" />
+              <label for="c2" class="tree_label">Crear Lista de Reproduccion</label>
+              <ul>
+                <li><a href=".java" class="tree_label"> Por Defecto</a></li>
+                <li><a href=".java" class="tree_label"> Particular</a></li>
+              </ul>
+          </ul>
+            
+            <li>
+            <input type="checkbox" checked="checked" id="c3" />
+            <label class="tree_label" for="c3"> Consultas</label>
+            <ul>
+                <li><a href=".java" class="tree_label"> Consultar Cliente</a></li>
+                <li><a href=".java" class="tree_label"> Consultar Artista</a></li>
+                <li>
+                <input type="checkbox" checked="checked" id="c4" />
+                <label for="c4" class="tree_label">Consultar Album</label>
+                <ul>
+                    <li><a href=".java" class="tree_label"> Por Genero</a></li>
+                    <li><a href=".java" class="tree_label"> Por Artista</a></li>
+                </ul>
+                <li>
+                <input type="checkbox" checked="checked" id="c5" />
+                <label for="c5" class="tree_label">Consultar Lista</label>
+                <ul>
+                    <li><a href=".java" class="tree_label"> Por Genero</a></li>
+                    <li><a href=".java" class="tree_label"> Por Cliente</a></li>
+                </ul>
+            </ul>
+            
+            <li>
+            <input type="checkbox" checked="checked" id="c6" />
+            <label class="tree_label" for="c6"> Usuarios</label>
+            <ul>
+                <li><a href=".java" class="tree_label"> Seguir Usuario</a></li>
+                <li><a href=".java" class="tree_label"> Dejar de Seguir Usuario</a></li>
+                <li>
+                <input type="checkbox" checked="checked" id="c7" />
+                <label for="c7" class="tree_label">Agregar a Favoritos</label>
+                <ul>
+                    <li><a href=".java" class="tree_label"> Tema</a></li>
+                    <li><a href=".java" class="tree_label"> Lista</a></li>
+                    <li><a href=".java" class="tree_label"> Album</a></li>
+                </ul>
+                <li>
+                <input type="checkbox" checked="checked" id="c8" />
+                <label for="c8" class="tree_label">Quitar de Favoritos</label>
+                <ul>
+                    <li><a href=".java" class="tree_label"> Tema</a></li>
+                    <li><a href=".java" class="tree_label"> Lista</a></li>
+                    <li><a href=".java" class="tree_label"> Album</a></li>
+                </ul>
+            </ul>
     
-    <form action="/Lab/VerInfoUser" method="POST">
-        Consultar datos de cliente<br>
-        Nick:
-        <input type="text" size="20" name="dataname"><br>
-        <input type="submit"><br>
-    </form>
-    <br>
-    <br>
-    <form action="/Lab/Login" method="POST">
-        Login<br>
-        Nick o Mail:
-        <input type="text" size="20" name="name"><br>
-        Pass:
-        <input type="password" size="20" name="pass"><br>
-        <input type="submit"><br>
-    </form>
-    
-    
-    <form action="/Lab/myPerfil" method="POST">
-        <input type="submit" value="Mi perfil"><br>        
-    </form>
-    
-    <a href="./Registrar.jsp">Registrar</a>
+            <li>
+                    <input type="checkbox" checked="checked" id="c9" />
+                    <label class="tree_label" for="c9"> Listas</label>
+                    <ul>
+                        <li><a href=".java" class="tree_label"> Publicar Lista</a></li>
+                        <li>
+                        <input type="checkbox" checked="checked" id="c10" />
+                        <label for="c10" class="tree_label">Agregar Tema</label>
+                        <ul>
+                            <li><a href=".java" class="tree_label"> Lista Particual</a></li>
+                            <li><a href=".java" class="tree_label"> Lista Por Defecto</a></li>
+                        </ul>
+
+      </ul>
+
 
     <footer class="footer">
             Copyright &copy; 2017

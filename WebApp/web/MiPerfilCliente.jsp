@@ -27,7 +27,7 @@
                 out.println("<img src=\""+user.getImg().substring(14)+"\" height=\"200\" width=\"200\">");
                 out.println("<form action=\"/Lab/CambiarImagenUsuario\" method=\"POST\" encType=\"multipart/form-data\">"
                         + "Cambiar imagen <br>"
-                        + "<input type=\"file\" name=\"pic\" accept=\"image/*\">"
+                        + "<input type=\"file\" name=\"pic\" >" //multiple para varios archivos
                         + "<input type=\"submit\" value=\"Cambiar\">"
                         + "</form>");
                 out.println("<p> Nick: "+ user.getNick() + "<br>"

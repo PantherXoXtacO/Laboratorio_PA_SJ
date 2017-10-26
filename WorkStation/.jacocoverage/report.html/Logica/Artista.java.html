@@ -97,5 +97,19 @@ public class Artista extends Usuario {
     
     @Override
 <span class="nc" id="L99">    public List getSiguiendoWeb(){return null;}</span>
+
+    public Tema getTema(String album, String tema) {
+<span class="nc" id="L102">        Iterator it = albums.iterator();</span>
+        Album a;
+<span class="nc" id="L104">        Tema ret=null;</span>
+<span class="nc bnc" id="L105" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L106">            a = (Album) it.next();</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">            if(a.getNombre().equals(album)){</span>
+<span class="nc" id="L108">                ret=a.getTema(tema);</span>
+<span class="nc" id="L109">                return ret;</span>
+            }
+        }
+<span class="nc" id="L112">        return ret;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

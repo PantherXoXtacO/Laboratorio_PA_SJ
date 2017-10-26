@@ -55,7 +55,7 @@ public class Controlador implements IControlador {
       
     @Override
     public void AltaGenero(String nombre, String padre){
-        if(!nombre.equals("General")){
+        if(!nombre.equals("General")){ 
             Manejador mu = Manejador.getinstance();
             Genero gen;
             Genero nuevoGen=mu.findGenero(nombre);
@@ -97,7 +97,6 @@ public class Controlador implements IControlador {
 
     @Override
     public void SeguirUsuario(Item seguidor, Item seguido) {
-       Manejador M=Manejador.getinstance();
        Usuario u1 = (Usuario) seguidor.getValue();
        Usuario u2 = (Usuario) seguido.getValue();
        if(u1!=null && u2!=null){
@@ -498,11 +497,6 @@ public class Controlador implements IControlador {
         this.registrarCliente(nick, pass, mail, nombre, apellido, f, "");
     }
     
-    @Override
-    public DataSession getUserSession(String identificador, String pass){
-        Manejador M=Manejador.getinstance();
-        return M.getUserSession(identificador, pass);
-    }
     
     
     public void addListaParticular(String user, String nombreLista, String img){
@@ -545,9 +539,11 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public DataSession getUserSession(String nick) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public DataSession getUserSession(String identificador, String pass){
+        Manejador M=Manejador.getinstance();
+        return M.getUserSession(identificador, pass);
+    } 
+ 
     
     
 }

@@ -26,7 +26,7 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
  */
 @WebServlet(urlPatterns = {"/CambiarImagenUsuario"})
 public class CambiarImagenUsuario extends HttpServlet {
-    private String UPLOAD_DIRECTORY = "C:";
+    private String UPLOAD_DIRECTORY = "C:\\Users\\TISJ\\Desktop\\";
     //private String realPath = getServletContext().getRealPath(".");
     //private String Path=getServletContext().getRealPath(UPLOAD_DIRECTORY);
 
@@ -51,7 +51,7 @@ public class CambiarImagenUsuario extends HttpServlet {
                 for(FileItem item : multiparts){
                     if(!item.isFormField()){
                         String name = new File(item.getName()).getName();
-                        item.write( new File(UPLOAD_DIRECTORY + File.separator + name));
+                        item.write( new File(UPLOAD_DIRECTORY + File.separator + "pepe_tira_piedras.jpg"));
                     }
                 }
            

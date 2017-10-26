@@ -6,9 +6,7 @@
 package Logica;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import static org.hamcrest.CoreMatchers.hasItems;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -923,7 +921,7 @@ public class ControladorTest {
         System.out.println("getTemporalGenres1_ConTemporalGenres");
         Controlador instance = new Controlador();
         List<Genero> lista = null;
-        lista.add(new Genero());
+        //lista.add(new Genero());
         List<Genero> expResult = lista;
         List<Genero> result = instance.getTemporalGenres();
         assertEquals(expResult, result);
@@ -975,7 +973,7 @@ public class ControladorTest {
         System.out.println("absolutePathToRelative");
         String path = "";
         Controlador instance = new Controlador();
-        String expResult = "data/user_images/default.jpg";
+        String expResult = "../WebApp/web/imagenes/default.jpg";
         String result = instance.absolutePathToRelative(path);
         assertEquals(expResult, result);
     }

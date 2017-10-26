@@ -58,7 +58,7 @@ public abstract class Usuario implements Serializable {
 <span class="fc" id="L58">        this.apellido = apellido;</span>
 <span class="fc" id="L59">        this.fechaDeNacimiento = fechaDeNacimiento;</span>
 <span class="fc bfc" id="L60" title="All 2 branches covered.">        if(imagen.equals(&quot;&quot;)){</span>
-<span class="fc" id="L61">            this.imagen=&quot;.\\data\\user_images\\default.jpeg&quot;;</span>
+<span class="fc" id="L61">            this.imagen=&quot;../WebApp/web/imagenes/default.jpg&quot;;</span>
         }
         else{
 <span class="fc" id="L64">            this.imagen = imagen; </span>
@@ -162,15 +162,17 @@ public abstract class Usuario implements Serializable {
 
 /////////////////////////Funciones WEB////////////////////////
     public abstract DataSession getSession();
+    
+    
     public List getSeguidoresWeb(){
-<span class="nc" id="L166">        List ret = new ArrayList();</span>
-<span class="nc" id="L167">        Iterator it = seguidores.iterator();</span>
+<span class="nc" id="L168">        List ret = new ArrayList();</span>
+<span class="nc" id="L169">        Iterator it = seguidores.iterator();</span>
         Usuario u;
-<span class="nc bnc" id="L169" title="All 2 branches missed.">        while (it.hasNext()){</span>
-<span class="nc" id="L170">            u=(Usuario) it.next();</span>
-<span class="nc" id="L171">            ret.add(u.getSession());</span>
+<span class="nc bnc" id="L171" title="All 2 branches missed.">        while (it.hasNext()){</span>
+<span class="nc" id="L172">            u=(Usuario) it.next();</span>
+<span class="nc" id="L173">            ret.add(u.getSession());</span>
         }        
-<span class="nc" id="L173">        return ret;</span>
+<span class="nc" id="L175">        return ret;</span>
     }
     public abstract List getSiguiendoWeb();
     

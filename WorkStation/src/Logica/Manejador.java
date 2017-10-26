@@ -61,7 +61,7 @@ public class Manejador {
         Albums = q3.getResultList();
         Temas = q4.getResultList();
         GeneralGetHijos();
-        testSuscripcion();
+        //testSuscripcion();
     }
     
     private void GeneralGetHijos(){

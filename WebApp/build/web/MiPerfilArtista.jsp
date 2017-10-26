@@ -25,7 +25,7 @@
         
             <%
                 out.println("<img src=\""+user.getImg().substring(14)+"\" height=\"200\" width=\"200\">");
-                out.println("<form action=\"/Lab/CambiarImagen\" method=\"POST\">"
+                out.println("<form action=\"/Lab/CambiarImagenUsuario\" method=\"POST\" encType=\"multipart/form-data\">"
                         + "Cambiar imagen <br>"
                         + "<input type=\"file\" name=\"pic\" accept=\"image/*\">"
                         + "<input type=\"submit\" value=\"Cambiar\">"

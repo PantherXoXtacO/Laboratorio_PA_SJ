@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 import javax.persistence.CascadeType;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -148,4 +149,16 @@ public class Album implements Serializable {
         return "Logica.Album[ id=" + id + " ]";
     }    
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public Tema getTema(String tema) {
+        Iterator it = temas.iterator();
+        Tema t=null;
+        while(it.hasNext()){
+            t=(Tema)it.next();
+            if(t.getNombre().equals(tema)){
+                return t;
+            }
+        }
+        return t;
+    }
 }

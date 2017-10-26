@@ -581,4 +581,26 @@ public class Manejador {
         }
         return ret;
     }
+
+    void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema) {
+        Iterator itArt = artistas.iterator();
+        Artista a;
+        Tema t=null;
+        while(itArt.hasNext()){
+            a=(Artista) itArt.next();
+            if(a.getNickname().equals(artista)){
+                t=a.getTema(album, tema);
+                break;
+            }
+        }
+        Iterator itC = clientes.iterator();
+        Cliente c;
+        while(itC.hasNext()){
+            c=(Cliente) itC.next();
+            if(c.getNickname().equals(user)){
+                c.AgregarTemaLista(lista, t);
+                break;
+            }
+        }
+    }
 }

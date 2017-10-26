@@ -90,6 +90,8 @@ public interface IControlador{
     public abstract DTUsuario getUserData(String nick);
     public abstract void WebAltaCliente(String nick, String mail, String fecha, String pass, String nombre, String apellido);
     public abstract DataSession getUserSession(String identificador, String pass);
+    public abstract void addListaParticular(String user, String nombreLista, String img);
+    public abstract void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema);
     
     
 }

@@ -494,4 +494,19 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         return M.getUserSession(identificador, pass);
     }
+    
+    
+    public void addListaParticular(String user, String nombreLista, String img){
+        Manejador m = Manejador.getinstance();
+        Cliente c = m.obtenerCliente(user);
+        if(c!=null){
+            this.addListaParticular(c, nombreLista, img);
+        }
+    }
+
+    @Override
+    public void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema) {
+        Manejador m = Manejador.getinstance();
+        m.AgregarTemaListaWeb(user, lista, artista, album, tema);
+    }
 }

@@ -229,5 +229,16 @@ public class Cliente extends Usuario{
         }
         return ret;
     }
+
+    public void AgregarTemaLista(String lista, Tema t) {
+        Iterator itLista=Listas.iterator();
+        ListaDeReproduccion L;
+        while(itLista.hasNext()){
+            L=(ListaDeReproduccion) itLista.next();
+            if(L.getNombre().equals(lista)){
+                L.agregarTema(t);
+            }
+        }
+    }
  
 }

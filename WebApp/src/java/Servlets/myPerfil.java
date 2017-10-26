@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+import DataType.DTCliente;
 import DataType.DTUsuario;
 import Logica.Controlador;
 import Logica.IControlador;
@@ -41,7 +42,12 @@ public class myPerfil extends HttpServlet {
                 IControlador controlador = new Controlador();
                 DTUsuario user = controlador.getUserData(nick);
                 request.setAttribute("userInfo", user);
-                getServletConfig().getServletContext().getRequestDispatcher("/MiPerfil.jsp").forward(request,response); 
+                if(user instanceof DTCliente){
+                   getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilCliente.jsp").forward(request,response); 
+                }
+                else{
+                  getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilArtista.jsp").forward(request,response);  
+                }                 
             }
             else{
                 response.sendRedirect("index.html");

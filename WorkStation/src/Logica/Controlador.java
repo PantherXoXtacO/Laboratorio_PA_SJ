@@ -490,8 +490,8 @@ public class Controlador implements IControlador {
     }
     
     @Override
-    public DataSession getUserSession(String nick){
+    public DataSession getUserSession(String identificador, String pass){
         Manejador M=Manejador.getinstance();
-        return M.getUserSession(nick);
+        return M.getUserSession(identificador, pass);
     }
 }

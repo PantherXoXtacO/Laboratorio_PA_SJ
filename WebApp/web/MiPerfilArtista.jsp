@@ -1,10 +1,10 @@
 <%-- 
-    Document   : MiPerfil
-    Created on : 25-oct-2017, 12:22:24
+    Document   : MiPerfilArtista
+    Created on : 26-oct-2017, 0:47:09
     Author     : Usuario
 --%>
 
-<%@page import="DataType.DTCliente"%>
+<%@page import="DataType.DTArtista"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -12,7 +12,7 @@
         response.sendRedirect("index.html");
     }
     
-    DTCliente user = (DTCliente) request.getAttribute("userInfo");
+    DTArtista user = (DTArtista) request.getAttribute("userInfo");
 %>
     
 <!DOCTYPE html>
@@ -41,8 +41,3 @@
             <input type="submit" value="Logout"><br>            
             </form>
     </body>
-
-            
-        
-    
-

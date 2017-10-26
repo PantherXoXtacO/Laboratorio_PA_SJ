@@ -162,6 +162,8 @@ public abstract class Usuario implements Serializable {
 
 /////////////////////////Funciones WEB////////////////////////
     public abstract DataSession getSession();
+    
+    
     public List getSeguidoresWeb(){
         List ret = new ArrayList();
         Iterator it = seguidores.iterator();

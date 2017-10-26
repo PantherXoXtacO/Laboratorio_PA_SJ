@@ -4,7 +4,7 @@
     Author     : Usuario
 --%>
 
-<%@page import="DataType.DTUsuario"%>
+<%@page import="DataType.DTCliente"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -12,7 +12,7 @@
         response.sendRedirect("index.html");
     }
     
-    DTUsuario user = (DTUsuario) request.getAttribute("userInfo");
+    DTCliente user = (DTCliente) request.getAttribute("userInfo");
 %>
     
 <!DOCTYPE html>

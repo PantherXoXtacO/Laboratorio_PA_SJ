@@ -544,24 +544,41 @@ public class Manejador {
         while(it.hasNext()){
             u=(Usuario) it.next();
             if(u.getNickname().equals(nick)){
-                ret=new DTUsuario(u);
+                ret=new DTCliente(u);
             }            
         }
+        
+        if(ret==null){
+            Iterator itArt = artistas.iterator();
+            while(itArt.hasNext()){
+                u=(Usuario) itArt.next();
+                if(u.getNickname().equals(nick)){
+                    ret=new DTArtista(u);
+                }
+            }
+        }        
         return ret;
     }
 
-    public DataSession getUserSession(String nick) {
+    public DataSession getUserSession(String identificador, String pass) {
         DataSession ret = null;
         Usuario u;
         Iterator it=clientes.iterator();
         while(it.hasNext()){
             u=(Usuario) it.next();
-            if(u.getNickname().equals(nick)){
+            if((u.getNickname().equals(identificador) || u.getMail().equals(identificador)) && (u.getContraseña().equals(pass))){
                 ret=u.getSession();
+            }
+        }
+        if(ret==null){
+            Iterator itArt = artistas.iterator();
+            while(itArt.hasNext()){
+                u=(Usuario) itArt.next();
+                if((u.getNickname().equals(identificador) || u.getMail().equals(identificador)) && (u.getContraseña().equals(pass))){
+                    ret=u.getSession();
+                }
             }
         }
         return ret;
     }
-
-
 }

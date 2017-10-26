@@ -5,11 +5,10 @@
  */
 package Servlets;
 
-import DataType.DTCliente;
-import DataType.DTUsuario;
 import Logica.Controlador;
 import Logica.IControlador;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +20,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Usuario
  */
-@WebServlet(name = "myPerfil", urlPatterns = {"/myPerfil"})
-public class myPerfil extends HttpServlet {
+@WebServlet(name = "CrearLista", urlPatterns = {"/NewServlet"})
+public class CrearList extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,25 +32,21 @@ public class myPerfil extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-            HttpSession session = request.getSession();
-            if(session.getAttribute("UserNick")!=null){
-                String nick  = (String) session.getAttribute("UserNick");
-                IControlador controlador = new Controlador();
-                DTUsuario user = controlador.getUserData(nick);
-                request.setAttribute("userInfo", user);
-                if(user instanceof DTCliente){
-                   getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilCliente.jsp").forward(request,response); 
-                }
-                else{
-                  getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilArtista.jsp").forward(request,response);  
-                }                 
-            }
-            else{
-                response.sendRedirect("index.html");
-            }
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+        if(session.getAttribute("UserNick")!=null){
+            String nombreLista = request.getParameter("nombreLista");
+            String user = (String) session.getAttribute("UserNick");
+            IControlador controlador = new Controlador();
+            controlador.addListaParticular(user, nombreLista, "");//La imagen va vacia porque no podemos cargar aun
+            out.println("Lista creada");
         }
+        else{
+            response.sendRedirect("index.html");
+        }
+        
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

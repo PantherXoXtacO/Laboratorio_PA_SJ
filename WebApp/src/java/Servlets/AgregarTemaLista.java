@@ -5,11 +5,10 @@
  */
 package Servlets;
 
-import DataType.DTCliente;
-import DataType.DTUsuario;
 import Logica.Controlador;
 import Logica.IControlador;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +20,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Usuario
  */
-@WebServlet(name = "myPerfil", urlPatterns = {"/myPerfil"})
-public class myPerfil extends HttpServlet {
+@WebServlet(name = "AgregarTemaLista", urlPatterns = {"/AgregarTemaLista"})
+public class AgregarTemaLista extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,25 +32,25 @@ public class myPerfil extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
-            HttpSession session = request.getSession();
-            if(session.getAttribute("UserNick")!=null){
-                String nick  = (String) session.getAttribute("UserNick");
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+        if(session.getAttribute("UserNick")!=null){
+            if(session.getAttribute("Suscripcion") == "Vigente"){
+                String lista = request.getParameter("lista");
+                String user = (String) session.getAttribute("UserNick");
+                String artista = request.getParameter("Artista");
+                String album = request.getParameter("album");
+                String tema = request.getParameter("tema");
                 IControlador controlador = new Controlador();
-                DTUsuario user = controlador.getUserData(nick);
-                request.setAttribute("userInfo", user);
-                if(user instanceof DTCliente){
-                   getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilCliente.jsp").forward(request,response); 
-                }
-                else{
-                  getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilArtista.jsp").forward(request,response);  
-                }                 
+                controlador.AgregarTemaListaWeb(user, lista, artista, album, tema);
+                out.println("Tema agregado");                
             }
             else{
                 response.sendRedirect("index.html");
             }
-        }
+        }        
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

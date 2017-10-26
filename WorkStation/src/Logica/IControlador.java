@@ -96,6 +96,9 @@ public interface IControlador{
     public abstract void actualizarEstadoDeSuscripcion(Suscripcion s, EstadosDeSuscripcion estado);
     public abstract void actualizarEstadoDeSuscripcionWeb(Cliente cliente, EstadosDeSuscripcion estado);
     public abstract void contratarSuscripcion(Cliente cliente, TiposDeSuscripcion tipo);
+    public abstract DataSession getUserSession(String identificador, String pass);
+    public abstract void addListaParticular(String user, String nombreLista, String img);
+    public abstract void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema);
     
     
 }

@@ -60,9 +60,6 @@ public class Manejador {
         generosList = QGeneros.getResultList();
         Albums = q3.getResultList();
         Temas = q4.getResultList();
-        
-        
-       
         GeneralGetHijos();
         testSuscripcion();
     }
@@ -577,20 +574,39 @@ public class Manejador {
         while(it.hasNext()){
             u=(Usuario) it.next();
             if(u.getNickname().equals(nick)){
-                ret=new DTUsuario(u);
+                ret=new DTCliente(u);
             }            
         }
+        
+        if(ret==null){
+            Iterator itArt = artistas.iterator();
+            while(itArt.hasNext()){
+                u=(Usuario) itArt.next();
+                if(u.getNickname().equals(nick)){
+                    ret=new DTArtista(u);
+                }
+            }
+        }        
         return ret;
     }
 
-    public DataSession getUserSession(String nick) {
+    public DataSession getUserSession(String identificador, String pass) {
         DataSession ret = null;
         Usuario u;
         Iterator it=clientes.iterator();
         while(it.hasNext()){
             u=(Usuario) it.next();
-            if(u.getNickname().equals(nick)){
+            if((u.getNickname().equals(identificador) || u.getMail().equals(identificador)) && (u.getContraseña().equals(pass))){
                 ret=u.getSession();
+            }
+        }
+        if(ret==null){
+            Iterator itArt = artistas.iterator();
+            while(itArt.hasNext()){
+                u=(Usuario) itArt.next();
+                if((u.getNickname().equals(identificador) || u.getMail().equals(identificador)) && (u.getContraseña().equals(pass))){
+                    ret=u.getSession();
+                }
             }
         }
         return ret;
@@ -600,5 +616,25 @@ public class Manejador {
         suscripciones.add(s);
     }
 
-
+    void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema) {
+        Iterator itArt = artistas.iterator();
+        Artista a;
+        Tema t=null;
+        while(itArt.hasNext()){
+            a=(Artista) itArt.next();
+            if(a.getNickname().equals(artista)){
+                t=a.getTema(album, tema);
+                break;
+            }
+        }
+        Iterator itC = clientes.iterator();
+        Cliente c;
+        while(itC.hasNext()){
+            c=(Cliente) itC.next();
+            if(c.getNickname().equals(user)){
+                c.AgregarTemaLista(lista, t);
+                break;
+            }
+        }
+    }
 }

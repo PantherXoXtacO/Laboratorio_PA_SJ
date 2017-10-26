@@ -97,4 +97,18 @@ public class Artista extends Usuario {
     
     @Override
     public List getSiguiendoWeb(){return null;}
+
+    public Tema getTema(String album, String tema) {
+        Iterator it = albums.iterator();
+        Album a;
+        Tema ret=null;
+        while(it.hasNext()){
+            a = (Album) it.next();
+            if(a.getNombre().equals(album)){
+                ret=a.getTema(tema);
+                return ret;
+            }
+        }
+        return ret;
+    }
 }

@@ -10,6 +10,7 @@ import DataType.DataSession;
 import Logica.Controlador;
 import Logica.IControlador;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,15 +36,17 @@ public class Login extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String nick = request.getParameter("name");
+        String nick_mail = request.getParameter("name");
+        String pass = request.getParameter("pass");
         IControlador controlador = new Controlador();
-        DataSession user = controlador.getUserSession(nick);
+        DataSession user = controlador.getUserSession(nick_mail, pass);
         if(user!=null){
             HttpSession session = request.getSession();
-            session.setAttribute("UserNick", nick);
+            session.setAttribute("UserNick", user.getNick());
             session.setAttribute("UserMail", user.getMail());
             session.setAttribute("EsArtista", user.getEsArtista());
-            response.sendRedirect("Welcome.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("myPerfil");
+            rd.forward(request,response);
             }
         else{
             response.sendRedirect("index.html");

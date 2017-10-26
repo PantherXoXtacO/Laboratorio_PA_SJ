@@ -13,10 +13,10 @@
     </head>
     <body>
         <form id="FormRegistro" name="FormRegistro" action ="/Lab/Registrar" method="POST">
-            Nick:
-            <input type="Text" size="20" name="userNick"><br>
-            Mail:
-            <input type="Text" size="20" name="userMail"><br>
+            Nick*:
+            <input id="userNick" type="Text" size="20" name="userNick"><br>
+            Mail*:
+            <input id="userMail" type="email" size="20" name="userMail"><br>
             Nombre:
             <input type="Text" size="20" name="userNom"><br>
             Apellido:
@@ -59,10 +59,15 @@
     }
     </script>
     
-    <script>function checkCampos() {
-        //Funcion que checkea que todos los campos esten llenos
+    <!--<script>function checkMail() {
+        var mail = document.getElementById("userMail").value;
+        if(mail === ""){
+            document.getElementById('botonRegistro').disabled = false;
+        }
+        else{
+        }
     }
-    </script>
+    </script>-->
     
     <script>function setArtInfoVisible(){
         var r = document.getElementById('radioButtonEsArtista');

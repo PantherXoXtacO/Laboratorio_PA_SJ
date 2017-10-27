@@ -41,8 +41,3 @@
             <input type="submit" value="Logout"><br>            
             </form>
     </body>
-
-            
-        
-    
-

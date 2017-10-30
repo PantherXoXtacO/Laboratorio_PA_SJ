@@ -4,7 +4,20 @@
     Author     : Casca
 --%>
 
+<%@page import="DataType.DTArtista"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<% if(request.getSession()==null){
+        response.sendRedirect("index.html");
+    }
+    
+    DTArtista user = (DTArtista) request.getAttribute("userInfo");
+    String username = "userNotFound";
+    if(user!=null){
+         username = user.getNick();
+    }
+        
+    %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +25,9 @@
         <title>ActualizarSuscripcion</title>
     </head>
     <body>
-        <h1>Estado de suscripcion:</h1>
+        <h1>Estado de suscripcion del usuario:</h1>
+        <% System.out.println(username);
+            %>
         <h1>Estado</h1>
         <h1>Nuevo estado:</h1>
         <h1 name="EstadoSiPendiente"> Deseo cancelar mi suscripcion  </h1>

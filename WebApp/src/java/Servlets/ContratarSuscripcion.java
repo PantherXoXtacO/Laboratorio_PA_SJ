@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -32,12 +33,14 @@ public class ContratarSuscripcion extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-         if(request.getSession()==null){
-        response.sendRedirect("index.html");
+        HttpSession session = request.getSession();
+         if(session.getAttribute("UserNick")==null){
+             response.sendRedirect("index.html");
         }
-    
-        DTCliente user = (DTCliente) request.getAttribute("userInfo");
+         
         String TiposDeSuscripciones = request.getParameter("TiposDeSuscripciones");
+        String usernick = "UsuarioNoEncontrado";
+        usernick = (String) session.getAttribute("UserNick");
         
         
         response.setContentType("text/html;charset=UTF-8");        
@@ -51,9 +54,7 @@ public class ContratarSuscripcion extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet ContratarSuscripcion at " + request.getContextPath() + "</h1>");
             out.println("<h1>"+ TiposDeSuscripciones + "</h1>");
-            if(user != null){
-                out.println("<h1>"+ "Nick:" + user.getNick() + "</h1>");    
-            }            
+            out.println("<h1>"+ "Nick:" + usernick + "</h1>");                          
             out.println("<h1>Thanks for the money m8</h1>");
             out.println("</body>");
             out.println("</html>");

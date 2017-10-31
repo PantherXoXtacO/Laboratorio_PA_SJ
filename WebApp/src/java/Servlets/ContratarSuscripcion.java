@@ -5,7 +5,17 @@
  */
 package Servlets;
 
+import Logica.Controlador;
+import Logica.IControlador;
 import DataType.DTCliente;
+import Enums.TiposDeSuscripcion;
+import Logica.Cliente;
+import Logica.Fabrica;
+import Logica.Suscripcion;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -34,13 +44,28 @@ public class ContratarSuscripcion extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
         HttpSession session = request.getSession();
-         if(session.getAttribute("UserNick")==null){
-             response.sendRedirect("index.html");
-        }
-         
-        String TiposDeSuscripciones = request.getParameter("TiposDeSuscripciones");
-        String usernick = "UsuarioNoEncontrado";
-        usernick = (String) session.getAttribute("UserNick");
+        EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Lab_Pro_AplPU" );
+        EntityManager em = emfactory.createEntityManager();
+        Fabrica fabrica = Fabrica.getInstance();
+        IControlador ICU = fabrica.getIControlador();
+        String TiposDeSuscripciones = request.getParameter("TiposDeSuscripciones"); 
+        String usernick = (String) session.getAttribute("UserNick");        
+        Cliente cliente = ICU.consultarCliente(usernick);
+        Suscripcion s = null;
+        if(TiposDeSuscripciones.equals("Anual"))
+           s= new Suscripcion(cliente, TiposDeSuscripcion.Anual); 
+        if(TiposDeSuscripciones.equals("Mensual"))
+            s= new Suscripcion(cliente, TiposDeSuscripcion.Mensual);
+        if(TiposDeSuscripciones.equals("Semanal"))
+            s= new Suscripcion(cliente, TiposDeSuscripcion.Semanal);       
+        ICU.contratarSuscripcion(cliente, s.getTipo());
+        em.getTransaction().begin();
+        em.persist(s);
+        em.persist(cliente);
+        em.close();        
+        TiposDeSuscripciones = s.getTipo().toString();
+        System.out.println("Usernick: " + cliente.getNickname());
+        System.out.println("User suscr:" + cliente.getSuscripcion().getTipo().toString());
         
         
         response.setContentType("text/html;charset=UTF-8");        

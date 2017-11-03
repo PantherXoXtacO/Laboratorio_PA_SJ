@@ -533,9 +533,8 @@ public class Controlador implements IControlador {
     @Override
     public void contratarSuscripcion(Cliente cliente, TiposDeSuscripcion tipo) {
         Manejador M=Manejador.getinstance();
-        Suscripcion s = new Suscripcion(cliente, tipo);
-        cliente.setSuscripcion(s);
-        M.addSuscripcion(s);
+        Suscripcion s = new Suscripcion(cliente, tipo);        
+        M.addSuscripcion(cliente, s);
     }
 
     @Override

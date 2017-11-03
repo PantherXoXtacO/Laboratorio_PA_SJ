@@ -1,23 +1,21 @@
+package Servlets;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
-import DataType.DTCliente;
-import Enums.TiposDeSuscripcion;
+import Enums.EstadosDeSuscripcion;
 import Logica.Cliente;
 import Logica.Fabrica;
+import Logica.IControlador;
 import Logica.Suscripcion;
+import java.io.IOException;
+import java.io.PrintWriter;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
-import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,8 +27,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Casca
  */
-@WebServlet(name = "ContratarSuscripcion", urlPatterns = {"/ContratarSuscripcion"})
-public class ContratarSuscripcion extends HttpServlet {
+@WebServlet(urlPatterns = {"/ActualizarSuscripcion"})
+public class ActualizarSuscripcion extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,40 +40,45 @@ public class ContratarSuscripcion extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
+        
         HttpSession session = request.getSession();
         EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Lab_Pro_AplPU" );
         EntityManager em = emfactory.createEntityManager();
         Fabrica fabrica = Fabrica.getInstance();
         IControlador ICU = fabrica.getIControlador();
-        String TiposDeSuscripciones = request.getParameter("TiposDeSuscripciones"); 
-        String usernick = (String) session.getAttribute("UserNick");        
+        
+        String usernick = (String) session.getAttribute("UserNick");
         Cliente cliente = ICU.consultarCliente(usernick);
-        Suscripcion s = null;
-        if(TiposDeSuscripciones.equals("Anual"))
-           s= new Suscripcion(cliente, TiposDeSuscripcion.Anual); 
-        else if(TiposDeSuscripciones.equals("Mensual"))
-            s= new Suscripcion(cliente, TiposDeSuscripcion.Mensual);
-        else
-            s= new Suscripcion(cliente, TiposDeSuscripcion.Semanal);       
-        ICU.contratarSuscripcion(cliente, s.getTipo());
-        TiposDeSuscripciones = s.getTipo().toString();
+        Suscripcion s = cliente.getSuscripcion();
         
-       
+        String cancelar = request.getParameter("Cancelar");            
+        boolean wantToCancel = false;
+        if(cancelar!=null && cancelar.equals("ON"))
+            wantToCancel= true;
+        if(wantToCancel==true){
+            cliente.setSuscripcion(null);
+        }        
         
-        response.setContentType("text/html;charset=UTF-8");        
+        else{   
+            String estadoObjetivo = request.getParameter("EstadoSiVencida"); 
+            if(estadoObjetivo.equals("Cancelar"))
+                cliente.getSuscripcion().setEstado(EstadosDeSuscripcion.Cancelada);
+            else if(estadoObjetivo.equals("Renovar"))
+                cliente.getSuscripcion().setEstado(EstadosDeSuscripcion.Vigente);            
+        }
+        
+        
+        response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ContratarSuscripcion</title>");            
+            out.println("<title>Servlet ActualizarSuscripcion</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ContratarSuscripcion at " + request.getContextPath() + "</h1>");
-            out.println("<h1>"+ TiposDeSuscripciones + "</h1>");
-            out.println("<h1>"+ "Nick:" + usernick + "</h1>");                          
-            out.println("<h1>Thanks for the money m8</h1>");
+            out.println("<h1>Servlet ActualizarSuscripcion at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

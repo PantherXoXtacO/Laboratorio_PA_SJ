@@ -612,8 +612,21 @@ public class Manejador {
         return ret;
     }
     
-    public void addSuscripcion(Suscripcion s){
-        suscripciones.add(s);
+    public void addSuscripcion(Cliente cliente, Suscripcion s){       
+        EntityManager em = emfactory.createEntityManager( );
+        
+            
+        if(cliente!=null && s!=null){
+            cliente.setSuscripcion(s);
+            suscripciones.add(s);        
+            //em.getTransaction().begin();
+            //em.persist(s);
+            //em.persist(cliente);
+            //em.getTransaction().commit();
+            //em.close();      
+        }
+       
+        
     }
 
     void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema) {

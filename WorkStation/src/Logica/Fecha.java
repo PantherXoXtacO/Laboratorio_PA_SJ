@@ -12,15 +12,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author Casca
  */
 @Entity
+@Table(name = "FECHA")
 public class Fecha{
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO) 
+    @GeneratedValue(strategy= GenerationType.TABLE) 
     long id;
     @Column(name = "DIA")
     private int dia;

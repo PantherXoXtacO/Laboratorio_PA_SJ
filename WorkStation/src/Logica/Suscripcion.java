@@ -9,10 +9,14 @@ import Enums.TiposDeSuscripcion;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Calendar;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -32,7 +36,11 @@ public class Suscripcion implements Serializable {
     private EstadosDeSuscripcion estado;
     private TiposDeSuscripcion tipo;
     private float costo;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn
     private Fecha fechaDeInicio;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn
     private Fecha fechaDeVencimiento;
     
 

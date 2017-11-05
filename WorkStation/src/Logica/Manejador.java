@@ -265,6 +265,10 @@ public class Manejador {
         return this.TemporalAlbum;
     }
     
+    public void setTemporalAlbum(Album album){
+        this.TemporalAlbum = album;
+    }
+    
     public Genero getGeneroPorNombre(String nombre){
         Iterator it = generosList.iterator();
         Genero user;

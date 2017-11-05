@@ -542,6 +542,12 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         return M.getUserSession(identificador, pass);
     } 
+
+    @Override
+    public void setTemporalAlbum(Album album) {
+        Manejador M=Manejador.getinstance();
+        M.setTemporalAlbum(album);
+    }
  
     
     

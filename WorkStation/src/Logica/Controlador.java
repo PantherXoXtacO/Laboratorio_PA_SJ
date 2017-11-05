@@ -1,6 +1,5 @@
 package Logica;
 
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -543,6 +542,12 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         return M.getUserSession(identificador, pass);
     } 
+
+    @Override
+    public void ActualizarImagenUsuario(String UserNick, String path) {
+        Manejador M = Manejador.getinstance();
+        M.ActualizarImagenUsuario(UserNick, path);
+    }
  
     
     

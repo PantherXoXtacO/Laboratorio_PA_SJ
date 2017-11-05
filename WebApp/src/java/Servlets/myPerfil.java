@@ -42,7 +42,7 @@ public class myPerfil extends HttpServlet {
                 DTUsuario user = controlador.getUserData(nick);
                 request.setAttribute("userInfo", user);
                 if(user instanceof DTCliente){
-                   getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilCliente.jsp").forward(request,response); 
+                  getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilCliente.jsp").forward(request,response); 
                 }
                 else{
                   getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilArtista.jsp").forward(request,response);  

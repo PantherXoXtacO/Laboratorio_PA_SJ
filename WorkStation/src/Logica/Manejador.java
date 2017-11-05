@@ -637,4 +637,26 @@ public class Manejador {
             }
         }
     }
+
+    void ActualizarImagenUsuario(String UserNick, String path) {
+        Iterator itC = clientes.iterator();
+        Cliente c;
+        while(itC.hasNext()){
+            c=(Cliente) itC.next();
+            if(c.getNickname().equals(UserNick)){
+                c.setImagen(path);
+                return;
+            }
+        }
+        
+        Iterator itA = artistas.iterator();
+        Artista a;
+        while(itA.hasNext()){
+            a=(Artista) itA.next();
+            if(a.getNickname().equals(UserNick)){
+                a.setImagen(path);
+                return;
+            }
+        }        
+    }
 }

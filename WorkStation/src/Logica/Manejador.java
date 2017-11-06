@@ -41,6 +41,7 @@ public class Manejador {
         usuarios =new ArrayList();
         clientes=new ArrayList();
         artistas=new ArrayList();
+        Albums = new ArrayList();
         Listas=new ArrayList(); // Listas por defecto
         generosList=new ArrayList();
         Temas=new ArrayList();

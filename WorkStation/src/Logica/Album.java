@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,16 +26,15 @@ public class Album implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    
+    @Column(name = "Nombre")
     private String nombre;
+    @Column(name = "Año")
     private int anio;
+    @Column(name = "ImgPath")
     private String img;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "ARTISTA_DEL_ALBUM")
+    @JoinColumn(name = "Artista")
     private Artista artista;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(name="TEMAS_DEL_ALBUM", joinColumns=@JoinColumn(name="ALBUM_ID"),
-               inverseJoinColumns=@JoinColumn(name="TEMAS_ID")) 
     private List<Tema> temas;
     private List<Genero> genero;
 

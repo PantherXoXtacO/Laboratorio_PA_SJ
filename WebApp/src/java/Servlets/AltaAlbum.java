@@ -33,7 +33,8 @@ public class AltaAlbum extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String hiddenParam=request.getParameter("formSelect");Fabrica fabrica = Fabrica.getInstance();
+        String hiddenParam=request.getParameter("formSelect");
+        Fabrica fabrica = Fabrica.getInstance();
         IControlador ICU = fabrica.getIControlador();        
         String nombre = request.getParameter("nombre_tema");
         String duracion = request.getParameter("duracion_tema");
@@ -42,7 +43,7 @@ public class AltaAlbum extends HttpServlet {
         System.out.println("hidden: " + hiddenParam);
         
         
-        if(hiddenParam.equalsIgnoreCase("tema")){
+        if(hiddenParam!=null){
             if(nombre!=null && duracion!=null && ubicacion!=null 
             && duracion.matches("\\d+") && ubicacion.matches("\\d+")){
                 album = ICU.getTemporalAlbum();
@@ -81,15 +82,15 @@ public class AltaAlbum extends HttpServlet {
         Album tempAlbum = ICU.getTemporalAlbum();
         String nombreAlbum = request.getParameter("nombre_album");
         String año_album = request.getParameter("año_album");
-        System.out.println("nombre: " + nombreAlbum);
-        System.out.println("creacion: " + año_album);
+        //System.out.println("nombre: " + nombreAlbum);
+        //System.out.println("creacion: " + año_album);
         if(nombreAlbum!=null && !nombreAlbum.equalsIgnoreCase("")){
             String kek;
             System.out.println("ZORRA");
         }
         else{
             System.out.println("NoZorra");
-            response.sendRedirect("AltaAlbum.jsp"); 
+            //response.sendRedirect("AltaAlbum.jsp"); 
         }
              
         

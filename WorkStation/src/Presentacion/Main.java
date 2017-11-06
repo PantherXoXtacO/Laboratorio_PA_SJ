@@ -3591,6 +3591,8 @@ public class Main extends javax.swing.JFrame {
         this.jRegisterApellidolField.setText("");
         this.jRegisterNombreField.setText("");
         this.jRegisterEmailField.setText("");
+        this.PasswordTextFieldRU.setText("");
+        this.ConfirmPasswordTextFieldRU.setText("");
     }//GEN-LAST:event_jMenuItemRegUsuActionPerformed
 
     private void RegisterAcceptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterAcceptButtonMouseClicked

@@ -4,6 +4,7 @@
     Author     : Casca
 --%>
 
+<%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
 <%@page import="Logica.Genero"%>
 <%@page import="Logica.Album"%>
@@ -14,6 +15,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
+    //Scriptlet
     Object username = session.getAttribute("UserNick");
     if(username==null){
         response.sendRedirect("index.html"); 
@@ -34,10 +36,13 @@
         ICU.createTemporalAlbum();
         album = ICU.getTemporalAlbum();
     }
-    List<Genero> generos = ICU.getGeneroItem();
-    System.out.println(generos);
+    
+    List<String> generos = ICU.getGenerosInString();    
+    //List<Genero> generos = ICU.getGeneroItem();
+    //List<String> generos = ICU.getGenerosInString();    
+    //List<String> generos_string = ICU.GenerosToString(generos);
+    //System.out.println(generos_string);
 %>
-
 
 
 <!DOCTYPE html>
@@ -48,20 +53,38 @@
     </head>
     <body>
         <form action="/Lab/AltaAlbum" method="post">
+            <input type="hidden" name="hiddenTemp1" id="hiddenTemp1" value="<%=generos%>">
             <p>Nombre: </p>
             <input type="text" name="nombre_album" value="" />
             <p>Año de creacion: </p>
             <input type="text" name="año_album" value="" />
             <p>Genero: </p>
-            <select name="Generos">
-                <option></option>
-                <option></option>
+            <select id="mySelect">
+                <script type="text/javascript">
+                    
+                    function myFunction(){
+                        var generos = document.getElementById("hiddenTemp1").value;
+                        var arrayLength = generos.length;
+                        var x = document.getElementById("mySelect");                           
+                        
+                        var option = document.createElement("option");
+                        var test =["pepe", "mujica"];
+                        option.text = "Kiwi";
+                        x.add(option);
+                        for (var i = 0; i < arrayLength; i++) {
+                            option.text = generos[i];
+                            x.add(option);   
+                        }
+                        
+                    }
+                    window.onload = myFunction;
+                    document.write(fLen);  
+                </script>
             </select>
             <h1>imagen </h1>
             <input type="submit" value="Crear Album" />
-            <input type="hidden" name="formSelect" values="album"/>
         </form>
-        
+            
         <h1>Agregar temas al album:</h1>
         <form action="/Lab/AltaAlbum" method="post">
            <p>Nombre: </p>
@@ -84,18 +107,5 @@
     </body>
 </html>
 
-<script>function addTema() {    
-    var album = session.getAttribute("Album")
-    var nombre_tema = document.getElementById('nombre_tema').value;
-    var duracion_tema = document.getElementById('duracion_tema').value;
-    var ubicacion_tema = document.getElementById('ubicacion_tema').value;
-    var tema = {
-        nombre_tema: nombre_tema,
-        duracion_tema: duracion_tema,
-        ubicacion_tema: ubicacion_tema
-        
-    };
-    album.
-    return tema;        
-}</script>
+
     

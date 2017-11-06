@@ -51,8 +51,7 @@ public class Album implements Serializable {
         nombre=nom;
         anio=year;
         img=imagen;
-        artista=artist;
-        
+        artista=artist;        
         temas=new ArrayList();
         genero=new ArrayList();
     }

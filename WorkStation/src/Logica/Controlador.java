@@ -548,6 +548,34 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         M.setTemporalAlbum(album);
     }
+
+    @Override
+    public List<String> GenerosToString(List<Genero> generos) {
+       Iterator it =generos.iterator();
+       Genero gen;
+       String genString;
+       List<String> ret = new ArrayList();
+       while(it.hasNext()){
+           gen = (Genero) it.next();
+           genString = gen.getNombre();
+           ret.add(genString);
+       }
+       return ret;
+    }
+
+    @Override
+    public List<String> getGenerosInString() {
+        Manejador M=Manejador.getinstance();
+        List<Genero> generosRet = M.getListGeneros();
+        List<String> ret = GenerosToString(generosRet);
+        return ret;
+    }
+
+    @Override
+    public List<Genero> getGeneros() {
+        Manejador M=Manejador.getinstance();
+        return M.getListGeneros();
+    }
  
     
     

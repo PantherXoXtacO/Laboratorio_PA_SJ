@@ -60,21 +60,23 @@
             <input type="text" name="año_album" value="" />
             <p>Genero: </p>
             <select id="mySelect">
-                <script type="text/javascript">
-                    
+                <script type="text/javascript">                    
                     function myFunction(){
                         var generos = document.getElementById("hiddenTemp1").value;
                         var arrayLength = generos.length;
-                        var x = document.getElementById("mySelect");                           
+                        var x = document.getElementById("mySelect"); 
                         
-                        var option = document.createElement("option");
-                        var test =["pepe", "mujica"];
-                        option.text = "Kiwi";
-                        x.add(option);
-                        for (var i = 0; i < arrayLength; i++) {
-                            option.text = generos[i];
-                            x.add(option);   
+                       
+                        
+                        var test =["Rock", "Nacional", "Pop"];
+                        
+                        var test2 = [];
+                        for (var i = 0; i < 3; i++) {
+                            test2[i] = document.createElement("option");
+                            test2[i].text = test[i];
+                            x.add(test2[i]);
                         }
+                        
                         
                     }
                     window.onload = myFunction;

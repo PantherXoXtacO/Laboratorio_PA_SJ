@@ -82,14 +82,16 @@ public class AltaAlbum extends HttpServlet {
         Album tempAlbum = ICU.getTemporalAlbum();
         String nombreAlbum = request.getParameter("nombre_album");
         String año_album = request.getParameter("año_album");
-        //System.out.println("nombre: " + nombreAlbum);
-        //System.out.println("creacion: " + año_album);
+        String genero = request.getParameter("mySelect");
+        System.out.println("nombre: " + nombreAlbum);
+        System.out.println("creacion: " + año_album);
+        System.out.println("genero: " + genero);
         if(nombreAlbum!=null && !nombreAlbum.equalsIgnoreCase("")){
             String kek;
-            System.out.println("ZORRA");
+            System.out.println("entra al if");
         }
         else{
-            System.out.println("NoZorra");
+            System.out.println("No entra al if");
             //response.sendRedirect("AltaAlbum.jsp"); 
         }
              

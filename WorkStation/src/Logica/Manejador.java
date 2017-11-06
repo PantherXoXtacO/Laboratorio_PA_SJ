@@ -454,14 +454,14 @@ public class Manejador {
         EntityManager em = emfactory.createEntityManager( );
         //Artista artista = em.find(Artista.class, artist.id);
         try {
-            em.getTransaction().begin();
+            //em.getTransaction().begin();
             Album albumToAdd = new Album(this.TemporalAlbum);
             List<Genero> generos = this.TemporalAlbum.getGeneros();
             addAlbumToGeneros(generos, albumToAdd);
-            em.persist(albumToAdd);
+            //em.persist(albumToAdd);
             albumToAdd.addTema(new Tema("1",1,1,albumToAdd));
-            em.getTransaction().commit(); 
-            em.close();         
+            //em.getTransaction().commit(); 
+            //em.close();         
         }
         catch (Exception e) {
             e.printStackTrace();

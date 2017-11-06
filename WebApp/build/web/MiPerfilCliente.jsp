@@ -22,7 +22,6 @@
         <title>Mi Perfil</title>
     </head>
     <body>
-        
             <%
                 out.println("<img src=\""+user.getImg().substring(14)+"\" height=\"200\" width=\"200\">");
                 out.println("<form action=\"/Lab/CambiarImagenUsuario\" method=\"POST\" encType=\"multipart/form-data\">"

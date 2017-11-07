@@ -412,7 +412,6 @@ public class Main extends javax.swing.JFrame {
         jMenuRegistros = new javax.swing.JMenu();
         jMenuItemRegUsu = new javax.swing.JMenuItem();
         jMenuItemCrearGen = new javax.swing.JMenuItem();
-        jMenuItemCrearAlb = new javax.swing.JMenuItem();
         jMenuItemCrearLis = new javax.swing.JMenu();
         jMenuItemCrearListaPorDefecto = new javax.swing.JMenuItem();
         jMenuItemCrearListaParticular = new javax.swing.JMenuItem();
@@ -3337,14 +3336,6 @@ public class Main extends javax.swing.JFrame {
         });
         jMenuRegistros.add(jMenuItemCrearGen);
 
-        jMenuItemCrearAlb.setText("Crear Album");
-        jMenuItemCrearAlb.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemCrearAlbActionPerformed(evt);
-            }
-        });
-        jMenuRegistros.add(jMenuItemCrearAlb);
-
         jMenuItemCrearLis.setText("Crear Lista de Reproduccion");
 
         jMenuItemCrearListaPorDefecto.setText("Por Defecto");
@@ -3561,13 +3552,6 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuItemCrearAlbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCrearAlbActionPerformed
-        this.ExistArtistAltaAlbum.setVisible(true);
-        ExistArtistAltaAlbumArtistText.setText("");
-        ICU.createTemporalAlbum();
-        ICU.createTemporalGenres();
-    }//GEN-LAST:event_jMenuItemCrearAlbActionPerformed
 
     private void jMenuItemRegUsuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemRegUsuMouseClicked
         
@@ -4681,7 +4665,7 @@ public class Main extends javax.swing.JFrame {
         Fecha fechaDeNac = new Fecha(dia, mes, año);
         String biografia = this.BiografiaTextArea.getText();
         String website = this.LinkWebTextField.getText();
-        String imagePath = "I:\\Gian\\Coding\\Instituto\\Laboratorio_PA_SJ\\data\\user_images\\default.jpg";
+        String imagePath = "data/user_images/default.jpg";
         if(!this.ImagePathTextField.getText().equals(""))
                     imagePath = this.ImagePathTextField.getText();        
         ICU.registrarArtista(nick, pass, email, nombre, apellido, fechaDeNac, imagePath, biografia, website);
@@ -5422,7 +5406,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemAES;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;
-    private javax.swing.JMenuItem jMenuItemCrearAlb;
     private javax.swing.JMenuItem jMenuItemCrearGen;
     private javax.swing.JMenu jMenuItemCrearLis;
     private javax.swing.JMenuItem jMenuItemCrearListaParticular;

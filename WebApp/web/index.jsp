@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 
@@ -26,7 +27,7 @@
                     else{
                         out.println("<li class=\"button_nav\"><a  href=\"/Lab/myPerfil\">Mi perfil</a></li>");
                     }                        
-                %>        
+                %>
             </ul>
         </nav>
     </header>
@@ -52,7 +53,7 @@
             <input type="checkbox" checked="checked" id="c3" />
             <label class="tree_label" for="c3"> Consultas</label>
             <ul>
-                <li><a href="/Lab/ConsultarUsuario.jsp" class="tree_label"> Consultar Usuario</a></li>
+                <li><a href="ConsultarUsuario.jsp" class="tree_label"> Consultar Usuario</a></li>
                 <li>
                 <input type="checkbox" checked="checked" id="c4" />
                 <label for="c4" class="tree_label">Consultar Album</label>
@@ -64,8 +65,8 @@
                 <input type="checkbox" checked="checked" id="c5" />
                 <label for="c5" class="tree_label">Consultar Lista</label>
                 <ul>
-                    <li><a href=".java" class="tree_label"> Por Genero</a></li>
-                    <li><a href=".java" class="tree_label"> Por Cliente</a></li>
+                    <li><a href="ConsultarAlbumGenero.jsp" class="tree_label"> Por Genero</a></li>
+                    <li><a href="ConsultarAlbumArtista.jsp" class="tree_label"> Por Cliente</a></li>
                 </ul>
             </ul>
             
@@ -121,4 +122,4 @@
     </footer>
 
 </body>
-</html>
+</html>   

@@ -18,7 +18,7 @@
     //Scriptlet
     Object username = session.getAttribute("UserNick");
     if(username==null){
-        response.sendRedirect("index.html"); 
+        response.sendRedirect("index.jsp"); 
     } 
      else{
        String usernick = (String) username;
@@ -26,7 +26,7 @@
        IControlador ICU = fabrica.getIControlador();
        DTUsuario user= ICU.getUserData(usernick);
        if(user instanceof DTCliente){
-           response.sendRedirect("index.html"); 
+           response.sendRedirect("index.jsp"); 
        }
     }
     Fabrica fabrica = Fabrica.getInstance();

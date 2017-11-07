@@ -32,8 +32,7 @@
                 out.println("<p> Nick: "+ user.getNick() + "<br>"
                             + "Mail: " + user.getMail()+ "<br>"
                             + "Nombre: " + user.getNom() + "<br>"
-                            + "Apellido: " + user.getAp() + "<br>");
-            
+                            + "Apellido: " + user.getAp() + "<br>");            
             %>
             
             <form action ="Logout" method="POST">

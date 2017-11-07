@@ -576,6 +576,22 @@ public class Controlador implements IControlador {
         Manejador M=Manejador.getinstance();
         return M.getListGeneros();
     }
+
+    @Override
+    public List<String> getArtistas() {
+        Manejador M=Manejador.getinstance();
+        List<Artista> artistas = M.getArtistas();        
+        Iterator it =artistas.iterator();
+        Artista art;
+        String artString;
+        List<String> ret = new ArrayList();
+        while(it.hasNext()){
+            art = (Artista) it.next();
+            artString = art.getNickname();
+            ret.add(artString);
+       }
+        return ret;
+    }
  
     
     

@@ -4,7 +4,17 @@
     Author     : Casca
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="Logica.IControlador"%>
+<%@page import="Logica.Fabrica"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+       Fabrica fabrica = Fabrica.getInstance();
+       IControlador ICU = fabrica.getIControlador();
+       List<String> generos = ICU.getGenerosInString(); 
+    %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +22,46 @@
         <title>Consultar Album</title>
     </head>
     <body>
-        <h1>Hello Album World!</h1>
+        <form action="/Lab/ConsultarAlbumGenero" method="POST">
+            <h1>Generos: </h1>
+            <input type="hidden" name="hiddenTemp1" id="hiddenTemp1" value="<%=generos%>">
+            <select id="dropdown1" name="generos" onchange="myFunction2();">
+                <script type="text/javascript" >                    
+                    function myFunction(){
+                        var generos = document.getElementById("hiddenTemp1").value;
+                        var generos2 = generos.match(/\w+/g);
+                        var arrayLength = generos2.length;
+                        var x = document.getElementById("dropdown1"); 
+                        var test2 = [];
+                        for (var i = 0; i < arrayLength; i++) {
+                            test2[i] = document.createElement("option");
+                            test2[i].text = generos2[i];
+                            x.add(test2[i]);
+                        }                        
+                    }
+                    window.onload = myFunction;                    
+                    document.write(fLen);
+                </script>
+            </select>
+            <h1>Albums: </h1>
+            <select id="dropdown2">
+                <script type="text/javascript">                    
+                    function myFunction2(){
+                        var array = document.getElementById("hiddenTemp1").value;
+                        var array2 = array.match(/\w+/g);
+                        var arrayLength = array2.length;
+                        var x = document.getElementById("dropdown2"); 
+                        var test2 = [];
+                        for (var i = 0; i < 1; i++) {
+                            test2[i] = document.createElement("option");
+                            test2[i].text = "array2[i]";
+                            x.add(test2[i]);
+                        }                        
+                    }                    
+                </script>                
+            </select>
+            <input type="submit" value="Consultar Album" />
+        </form>            
     </body>
 </html>
+

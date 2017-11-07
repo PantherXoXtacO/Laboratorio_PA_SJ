@@ -102,5 +102,6 @@ public interface IControlador{
     public abstract List<String> GenerosToString(List<Genero> generos);
     public abstract List<String> getGenerosInString(); 
     public abstract List<Genero> getGeneros();
+    public abstract List<String> getArtistas();
 }
 

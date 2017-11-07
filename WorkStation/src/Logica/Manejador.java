@@ -62,7 +62,6 @@ public class Manejador {
         Albums = q3.getResultList();
         Temas = q4.getResultList();
         GeneralGetHijos();
-        //testSuscripcion();
     }
     
     private void GeneralGetHijos(){
@@ -84,12 +83,6 @@ public class Manejador {
 
     public List<Suscripcion> getSuscripciones() {
         return suscripciones;
-    }
-    
-    public void testSuscripcion(){
-        Cliente client = new Cliente("qweasd", "a", "qweasd", "a", "a", new Fecha(1, 1, 1234), "path");
-        Suscripcion s = new Suscripcion(client, TiposDeSuscripcion.Anual);
-        suscripciones.add(s);
     }
     
      public List getAlbumsItem() {

@@ -24,12 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "AltaAlbum", urlPatterns = {"/AltaAlbum"})
 public class AltaAlbum extends HttpServlet {
     
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Album album = new Album();
-        request.setAttribute("Albumserv", album); // Will be available as ${Albumserv} in JSP
-        request.getRequestDispatcher("/WEB-INF/products.jsp").forward(request, response);
-    }
+   
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -86,6 +81,7 @@ public class AltaAlbum extends HttpServlet {
         System.out.println("nombre: " + nombreAlbum);
         System.out.println("creacion: " + año_album);
         System.out.println("genero: " + genero);
+        
         if(nombreAlbum!=null && !nombreAlbum.equalsIgnoreCase("")){
             String kek;
             System.out.println("entra al if");
@@ -107,6 +103,10 @@ public class AltaAlbum extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet AltaAlbum at " + request.getContextPath() + "</h1>");
+            out.println("<h1>nombre: " + nombreAlbum + "</h1>");
+            out.println("<h1>creacion: " + año_album+ "</h1>");
+            out.println("<h1>genero: " + genero+ "</h1>");
+             out.println("<h1>WHYYYYYYYYYYY" +"</h1>");
             out.println("</body>");
             out.println("</html>");
         }

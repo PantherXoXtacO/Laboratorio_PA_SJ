@@ -63,24 +63,17 @@
                 <script type="text/javascript">                    
                     function myFunction(){
                         var generos = document.getElementById("hiddenTemp1").value;
-                        var arrayLength = generos.length;
+                        var generos2 = generos.match(/\w+/g);
+                        var arrayLength = generos2.length;
                         var x = document.getElementById("mySelect"); 
-                        
-                       
-                        
-                        var test =["Rock", "Nacional", "Pop"];
-                        
                         var test2 = [];
-                        for (var i = 0; i < 3; i++) {
+                        for (var i = 0; i < arrayLength; i++) {
                             test2[i] = document.createElement("option");
-                            test2[i].text = test[i];
+                            test2[i].text = generos2[i];
                             x.add(test2[i]);
-                        }
-                        
-                        
+                        }                        
                     }
                     window.onload = myFunction;
-                    document.write(fLen);  
                 </script>
             </select>
             <h1>imagen </h1>

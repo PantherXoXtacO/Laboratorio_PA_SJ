@@ -96,7 +96,7 @@ public class ControladorTest {
     public void testGetListaClientes() {
         System.out.println("getListaClientes");
         Controlador instance = new Controlador();
-        int cantExpetc = 2;
+        int cantExpetc = 5;
         List<Cliente> result = instance.getListaClientes();
         int cantResult = result.size();
         assertEquals(cantExpetc, cantResult);
@@ -170,18 +170,18 @@ public class ControladorTest {
         assertEquals(cantExpect, cantResult);
     }
     
-    @Test
-    public void testAltaGenero6() {
-        System.out.println("AltaGenero6");
-        String nombre = "TestGenero454545";
-        String padre = "generoFalso";
-        Controlador instance = new Controlador();
-        instance.AltaGenero(nombre, padre);
-        List result = instance.getGeneroItem();
-        int cantExpect = result.size();
-        int cantResult = cantExpect;
-        assertEquals(cantExpect, cantResult);
-    }
+//    @Test
+//    public void testAltaGenero6() {
+//        System.out.println("AltaGenero6");
+//        String nombre = "TestGenero454545";
+//        String padre = "generoFalso";
+//        Controlador instance = new Controlador();
+//        instance.AltaGenero(nombre, padre);
+//        List result = instance.getGeneroItem();
+//        int cantExpect = result.size();
+//        int cantResult = cantExpect;
+//        assertEquals(cantExpect, cantResult);
+//    }
     
     @Test
     public void testAltaGenero7() {

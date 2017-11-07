@@ -21,7 +21,7 @@
     if(request.getSession().getAttribute("UserNick")==null ||
         ICU.consultarCliente(request.getSession().getAttribute("UserNick").toString()).getSuscripcion()==null ||
         ICU.consultarCliente(request.getSession().getAttribute("UserNick").toString()).getSuscripcion().getEstado()!=EstadosDeSuscripcion.Pendiente){
-        response.sendRedirect("index.html");
+        response.sendRedirect("index.jsp");
         out.println("<html><body onload=\"alert('No hay cliente logeado o una suscripcion que actualizar')\"></body></html>");
     }
             

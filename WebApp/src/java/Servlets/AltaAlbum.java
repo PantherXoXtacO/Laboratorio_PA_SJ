@@ -7,15 +7,19 @@ package Servlets;
 
 import Logica.Album;
 import Logica.Fabrica;
+import Logica.Genero;
 import Logica.IControlador;
 import Logica.Tema;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -75,12 +79,26 @@ public class AltaAlbum extends HttpServlet {
         Fabrica fabrica = Fabrica.getInstance();
         IControlador ICU = fabrica.getIControlador();  
         Album tempAlbum = ICU.getTemporalAlbum();
+        
+        System.out.println("Anio valor: " + request.getParameterValues("anio_album"));
+        System.out.println("Anio valor: " + request.getParameterValues("dropdown3"));
         String nombreAlbum = request.getParameter("nombre_album");
-        String año_album = request.getParameter("año_album");
-        String genero = request.getParameter("mySelect");
+        System.out.println(nombreAlbum);
+        String año_album = request.getParameter("anio_album");
+        String genero = request.getParameter("dropdown3");
         System.out.println("nombre: " + nombreAlbum);
         System.out.println("creacion: " + año_album);
         System.out.println("genero: " + genero);
+        List<Genero> listgen = new ArrayList();
+        listgen.add(ICU.getGeneroPorNombre(genero));        
+        ICU.configTemporalAlbum(null, nombreAlbum, listgen, Integer.parseInt(año_album), "");
+        
+        Album album = ICU.getTemporalAlbum();
+        System.out.println("Nombre: " + album.getNombre());
+        HttpSession session = request.getSession();
+        session.setAttribute("albumTemporal", album);
+        Album album2 = (Album) session.getAttribute("albumTemporal");
+        System.out.println("Nombre: " + album2.getNombre());
         
         if(nombreAlbum!=null && !nombreAlbum.equalsIgnoreCase("")){
             String kek;
@@ -105,8 +123,7 @@ public class AltaAlbum extends HttpServlet {
             out.println("<h1>Servlet AltaAlbum at " + request.getContextPath() + "</h1>");
             out.println("<h1>nombre: " + nombreAlbum + "</h1>");
             out.println("<h1>creacion: " + año_album+ "</h1>");
-            out.println("<h1>genero: " + genero+ "</h1>");
-             out.println("<h1>WHYYYYYYYYYYY" +"</h1>");
+            out.println("<h1>genero: " + genero + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

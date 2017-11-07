@@ -9,10 +9,14 @@ import Enums.TiposDeSuscripcion;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Calendar;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -32,114 +36,118 @@ public class Suscripcion implements Serializable {
     private EstadosDeSuscripcion estado;
     private TiposDeSuscripcion tipo;
     private float costo;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn
     private Fecha fechaDeInicio;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn
     private Fecha fechaDeVencimiento;
     
 
-<span class="nc" id="L39">    public Suscripcion(Cliente cliente, TiposDeSuscripcion tipo) {</span>
-<span class="nc" id="L40">        this.cliente = cliente;</span>
-<span class="nc" id="L41">        this.estado = EstadosDeSuscripcion.Pendiente;</span>
-<span class="nc" id="L42">        this.tipo = tipo;</span>
-<span class="nc bnc" id="L43" title="All 4 branches missed.">        switch(tipo){</span>
+<span class="nc" id="L47">    public Suscripcion(Cliente cliente, TiposDeSuscripcion tipo) {</span>
+<span class="nc" id="L48">        this.cliente = cliente;</span>
+<span class="nc" id="L49">        this.estado = EstadosDeSuscripcion.Pendiente;</span>
+<span class="nc" id="L50">        this.tipo = tipo;</span>
+<span class="nc bnc" id="L51" title="All 4 branches missed.">        switch(tipo){</span>
             case Anual:
-<span class="nc" id="L45">                this.costo = 300;</span>
+<span class="nc" id="L53">                this.costo = 300;</span>
             case Mensual:
-<span class="nc" id="L47">                this.costo = 20;</span>
+<span class="nc" id="L55">                this.costo = 20;</span>
             case Semanal:
-<span class="nc" id="L49">                this.costo = 7;</span>
+<span class="nc" id="L57">                this.costo = 7;</span>
         }
-<span class="nc" id="L51">        this.fechaDeInicio = this.getCurrentDate();</span>
-<span class="nc" id="L52">        this.fechaDeVencimiento = new Fecha();</span>
-<span class="nc bnc" id="L53" title="All 4 branches missed.">        switch(tipo){</span>
+<span class="nc" id="L59">        this.fechaDeInicio = this.getCurrentDate();</span>
+<span class="nc" id="L60">        this.fechaDeVencimiento = new Fecha();</span>
+<span class="nc bnc" id="L61" title="All 4 branches missed.">        switch(tipo){</span>
             case Anual:
-<span class="nc" id="L55">                this.fechaDeVencimiento.setAño(fechaDeInicio.getAño()+1);</span>
+<span class="nc" id="L63">                this.fechaDeVencimiento.setAño(fechaDeInicio.getAño()+1);</span>
             case Mensual:
-<span class="nc" id="L57">                this.fechaDeVencimiento.setMes(fechaDeInicio.getMes()+1);</span>
+<span class="nc" id="L65">                this.fechaDeVencimiento.setMes(fechaDeInicio.getMes()+1);</span>
             case Semanal:
-<span class="nc" id="L59">                agregarSemanaAFecha(fechaDeInicio);</span>
+<span class="nc" id="L67">                agregarSemanaAFecha(fechaDeInicio);</span>
         }
-<span class="nc" id="L61">    }</span>
+<span class="nc" id="L69">    }</span>
     
-<span class="fc" id="L63">    public Suscripcion(){</span>
+<span class="fc" id="L71">    public Suscripcion(){</span>
                 
-<span class="fc" id="L65">    }</span>
+<span class="fc" id="L73">    }</span>
 
     public void setCliente(Cliente cliente) {
-<span class="nc" id="L68">        this.cliente = cliente;</span>
-<span class="nc" id="L69">    }</span>
-
-    public void setEstado(EstadosDeSuscripcion estado) {
-<span class="nc" id="L72">        this.estado = estado;</span>
-<span class="nc" id="L73">    }</span>
-
-    public void setTipo(TiposDeSuscripcion tipo) {
-<span class="nc" id="L76">        this.tipo = tipo;</span>
+<span class="nc" id="L76">        this.cliente = cliente;</span>
 <span class="nc" id="L77">    }</span>
 
-    public void setCosto(float costo) {
-<span class="nc" id="L80">        this.costo = costo;</span>
+    public void setEstado(EstadosDeSuscripcion estado) {
+<span class="nc" id="L80">        this.estado = estado;</span>
 <span class="nc" id="L81">    }</span>
 
-    public void setFechaDeInicio(Fecha fechaDeInicio) {
-<span class="nc" id="L84">        this.fechaDeInicio = fechaDeInicio;</span>
+    public void setTipo(TiposDeSuscripcion tipo) {
+<span class="nc" id="L84">        this.tipo = tipo;</span>
 <span class="nc" id="L85">    }</span>
 
-    public void setFechaDeVencimiento(Fecha fechaDeVencimiento) {
-<span class="nc" id="L88">        this.fechaDeVencimiento = fechaDeVencimiento;</span>
+    public void setCosto(float costo) {
+<span class="nc" id="L88">        this.costo = costo;</span>
 <span class="nc" id="L89">    }</span>
 
+    public void setFechaDeInicio(Fecha fechaDeInicio) {
+<span class="nc" id="L92">        this.fechaDeInicio = fechaDeInicio;</span>
+<span class="nc" id="L93">    }</span>
+
+    public void setFechaDeVencimiento(Fecha fechaDeVencimiento) {
+<span class="nc" id="L96">        this.fechaDeVencimiento = fechaDeVencimiento;</span>
+<span class="nc" id="L97">    }</span>
+
     public Cliente getCliente() {
-<span class="nc" id="L92">        return cliente;</span>
+<span class="nc" id="L100">        return cliente;</span>
     }
 
     public EstadosDeSuscripcion getEstado() {
-<span class="nc" id="L96">        return estado;</span>
+<span class="nc" id="L104">        return estado;</span>
     }
 
     public TiposDeSuscripcion getTipo() {
-<span class="nc" id="L100">        return tipo;</span>
+<span class="nc" id="L108">        return tipo;</span>
     }
 
     public float getCosto() {
-<span class="nc" id="L104">        return costo;</span>
+<span class="nc" id="L112">        return costo;</span>
     }
 
     public Fecha getFechaDeInicio() {
-<span class="nc" id="L108">        return fechaDeInicio;</span>
+<span class="nc" id="L116">        return fechaDeInicio;</span>
     }
 
     public Fecha getFechaDeVencimiento() {
-<span class="nc" id="L112">        return fechaDeVencimiento;</span>
+<span class="nc" id="L120">        return fechaDeVencimiento;</span>
     }
     
     public Fecha getCurrentDate(){
-<span class="nc" id="L116">        LocalDate localDate = LocalDate.now();</span>
-<span class="nc" id="L117">        int day = localDate.getDayOfMonth();</span>
-<span class="nc" id="L118">        int month = localDate.getMonthValue();</span>
-<span class="nc" id="L119">        int year = localDate.getYear();</span>
-<span class="nc" id="L120">        Fecha fecha = new Fecha(day, month, year);</span>
-<span class="nc" id="L121">        return fecha;</span>
+<span class="nc" id="L124">        LocalDate localDate = LocalDate.now();</span>
+<span class="nc" id="L125">        int day = localDate.getDayOfMonth();</span>
+<span class="nc" id="L126">        int month = localDate.getMonthValue();</span>
+<span class="nc" id="L127">        int year = localDate.getYear();</span>
+<span class="nc" id="L128">        Fecha fecha = new Fecha(day, month, year);</span>
+<span class="nc" id="L129">        return fecha;</span>
     }
     
     public void agregarSemanaAFecha(Fecha fecha){
-<span class="nc" id="L125">        Calendar c = Calendar.getInstance();</span>
-<span class="nc" id="L126">        c.set(fecha.getAño(), fecha.getMes(), fecha.getDia());</span>
-<span class="nc" id="L127">        c.add(Calendar.DATE, 7);</span>
-<span class="nc" id="L128">        fecha.setDia(c.get(Calendar.DAY_OF_MONTH));</span>
-<span class="nc" id="L129">        fecha.setMes(c.get(Calendar.MONTH));</span>
-<span class="nc" id="L130">        fecha.setAño(c.get(Calendar.YEAR));</span>
-<span class="nc" id="L131">    }</span>
+<span class="nc" id="L133">        Calendar c = Calendar.getInstance();</span>
+<span class="nc" id="L134">        c.set(fecha.getAño(), fecha.getMes(), fecha.getDia());</span>
+<span class="nc" id="L135">        c.add(Calendar.DATE, 7);</span>
+<span class="nc" id="L136">        fecha.setDia(c.get(Calendar.DAY_OF_MONTH));</span>
+<span class="nc" id="L137">        fecha.setMes(c.get(Calendar.MONTH));</span>
+<span class="nc" id="L138">        fecha.setAño(c.get(Calendar.YEAR));</span>
+<span class="nc" id="L139">    }</span>
     
     public void updateFechaDeVencimiento(){
-<span class="nc bnc" id="L134" title="All 4 branches missed.">        switch(this.tipo){</span>
+<span class="nc bnc" id="L142" title="All 4 branches missed.">        switch(this.tipo){</span>
             case Anual:
-<span class="nc" id="L136">                this.fechaDeVencimiento.setAño(fechaDeInicio.getAño()+1);</span>
+<span class="nc" id="L144">                this.fechaDeVencimiento.setAño(fechaDeInicio.getAño()+1);</span>
             case Mensual:
-<span class="nc" id="L138">                this.fechaDeVencimiento.setMes(fechaDeInicio.getMes()+1);</span>
+<span class="nc" id="L146">                this.fechaDeVencimiento.setMes(fechaDeInicio.getMes()+1);</span>
             case Semanal:
-<span class="nc" id="L140">                agregarSemanaAFecha(fechaDeInicio);</span>
+<span class="nc" id="L148">                agregarSemanaAFecha(fechaDeInicio);</span>
         }
-<span class="nc" id="L142">    }</span>
+<span class="nc" id="L150">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

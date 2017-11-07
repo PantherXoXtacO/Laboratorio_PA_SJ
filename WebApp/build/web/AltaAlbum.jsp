@@ -38,10 +38,6 @@
     }
     
     List<String> generos = ICU.getGenerosInString();    
-    //List<Genero> generos = ICU.getGeneroItem();
-    //List<String> generos = ICU.getGenerosInString();    
-    //List<String> generos_string = ICU.GenerosToString(generos);
-    //System.out.println(generos_string);
 %>
 
 
@@ -57,9 +53,9 @@
             <p>Nombre: </p>
             <input type="text" name="nombre_album" value="" />
             <p>Año de creacion: </p>
-            <input type="text" name="año_album" value="" />
+            <input type="text" name="anio_album" value="" />
             <p>Genero: </p>
-            <select id="mySelect">
+            <select name="dropdown3" id="mySelect">
                 <script type="text/javascript">                    
                     function myFunction(){
                         var generos = document.getElementById("hiddenTemp1").value;
@@ -79,18 +75,7 @@
             <h1>imagen </h1>
             <input type="submit" value="Crear Album" />
         </form>
-            
-        <h1>Agregar temas al album:</h1>
-        <form action="/Lab/AltaAlbum" method="post">
-           <p>Nombre: </p>
-           <input type="text" name="nombre_tema" value="" />
-           <p>Duracion: </p>
-           <input type="text" name="duracion_tema" value="" />
-           <p>Ubicacion en el album: </p>
-           <input type="text" name="ubicacion_tema" value="" />            
-           <input type="submit" value="Agregar tema" />    
-           <input type="hidden" name="formSelect" values="tema"/>
-        </form>
+        
         
         <%
         out.println("<h1>"+ "Temas agregados: " + album.getTemas().size() +"</h1>"); 

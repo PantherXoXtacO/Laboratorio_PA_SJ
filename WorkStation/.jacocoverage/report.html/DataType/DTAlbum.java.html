@@ -41,6 +41,30 @@ public class DTAlbum {
 <span class="nc" id="L41">            t = (Tema) temaIt.next();</span>
 <span class="nc" id="L42">            temas.add(new DTTema (t));</span>
         }
-<span class="nc" id="L44">    }    </span>
+<span class="nc" id="L44">    }</span>
+
+    public String getNombre() {
+<span class="nc" id="L47">        return nombre;</span>
+    }
+
+    public int getAnio() {
+<span class="nc" id="L51">        return anio;</span>
+    }
+
+    public String getImagen() {
+<span class="nc" id="L55">        return imagen;</span>
+    }
+
+    public String getArtista() {
+<span class="nc" id="L59">        return artista;</span>
+    }
+
+    public List&lt;DTTema&gt; getTemas() {
+<span class="nc" id="L63">        return temas;</span>
+    }
+
+    public List getGeneros() {
+<span class="nc" id="L67">        return generos;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

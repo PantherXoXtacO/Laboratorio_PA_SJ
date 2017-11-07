@@ -29,7 +29,7 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
  */
 @WebServlet(urlPatterns = {"/CambiarImagenUsuario"})
 public class CambiarImagenUsuario extends HttpServlet {
-    private String UPLOAD_DIRECTORY = "C:\\Users\\Usuario\\Desktop\\GitKraken\\Programacion de Aplicaciones\\PA LAB\\Laboratorio_PA_SJ\\WebApp\\web\\imagenes\\Usr_img";
+    private String UPLOAD_DIRECTORY = "C:\\Users\\TISJ\\Desktop\\Grupo Magico de atras\\Programacion de aplicaciones\\Laboratorio_PA_SJ\\WebApp\\web\\imagenes\\Usr_img";
     private String UserNick;
 
     /**

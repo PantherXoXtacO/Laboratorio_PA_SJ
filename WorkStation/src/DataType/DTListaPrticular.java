@@ -23,5 +23,14 @@ public class DTListaPrticular extends DTListaRepro{
         cliente = LP.getCliente().getNickname();
         privacidad = LP.getPrivacidad();
     }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public boolean isPrivacidad() {
+        return privacidad;
+    }
+    
     
 }

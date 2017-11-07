@@ -32,4 +32,17 @@ public class DTListaRepro {
             temas.add(new DTTema(t));
         }
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public List getTemas() {
+        return temas;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+    
 }

@@ -47,7 +47,7 @@ public class AgregarTemaLista extends HttpServlet {
                 out.println("Tema agregado");                
             }
             else{
-                response.sendRedirect("index.html");
+                response.sendRedirect("index.jsp");
             }
         }        
     }

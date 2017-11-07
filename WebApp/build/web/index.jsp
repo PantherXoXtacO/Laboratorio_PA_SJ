@@ -19,7 +19,14 @@
 
         <nav class="nav-bar">
             <ul>
-                <li class="button_nav"><a  href="/Lab/Login.jsp">Ingresar</a></li>
+                <%
+                    if(request.getSession().getAttribute("UserNick")==null){
+                        out.println("<li class=\"button_nav\"><a  href=\"/Lab/Login.jsp\">Ingresar</a></li>");
+                    }
+                    else{
+                        out.println("<li class=\"button_nav\"><a  href=\"/Lab/myPerfil\">Mi perfil</a></li>");
+                    }                        
+                %>        
             </ul>
         </nav>
     </header>
@@ -45,8 +52,7 @@
             <input type="checkbox" checked="checked" id="c3" />
             <label class="tree_label" for="c3"> Consultas</label>
             <ul>
-                <li><a href=".java" class="tree_label"> Consultar Cliente</a></li>
-                <li><a href=".java" class="tree_label"> Consultar Artista</a></li>
+                <li><a href="/Lab/ConsultarUsuario.jsp" class="tree_label"> Consultar Usuario</a></li>
                 <li>
                 <input type="checkbox" checked="checked" id="c4" />
                 <label for="c4" class="tree_label">Consultar Album</label>

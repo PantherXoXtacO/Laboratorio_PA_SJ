@@ -567,23 +567,25 @@ public class Manejador {
 
 
 
-    public DTUsuario getUserData(String nick) {
+    public DTUsuario getUserData(String identificador) {
         DTUsuario ret = null;
-        Usuario u;
+        Cliente c;
         Iterator it = clientes.iterator();
         while(it.hasNext()){
-            u=(Usuario) it.next();
-            if(u.getNickname().equals(nick)){
-                ret=new DTCliente(u);
+            c=(Cliente) it.next();
+            if(c.getNickname().equals(identificador) || c.getMail().equals(identificador)){
+                ret=new DTCliente(c);
+                break;
             }            
-        }
-        
+        }        
         if(ret==null){
+            Artista a;
             Iterator itArt = artistas.iterator();
             while(itArt.hasNext()){
-                u=(Usuario) itArt.next();
-                if(u.getNickname().equals(nick)){
-                    ret=new DTArtista(u);
+                a=(Artista) itArt.next();
+                if(a.getNickname().equals(identificador) || a.getMail().equals(identificador)){
+                    ret=new DTArtista(a);
+                    break;
                 }
             }
         }        
@@ -598,6 +600,7 @@ public class Manejador {
             u=(Usuario) it.next();
             if((u.getNickname().equals(identificador) || u.getMail().equals(identificador)) && (u.getContraseña().equals(pass))){
                 ret=u.getSession();
+                break;
             }
         }
         if(ret==null){
@@ -606,6 +609,7 @@ public class Manejador {
                 u=(Usuario) itArt.next();
                 if((u.getNickname().equals(identificador) || u.getMail().equals(identificador)) && (u.getContraseña().equals(pass))){
                     ret=u.getSession();
+                    break;
                 }
             }
         }

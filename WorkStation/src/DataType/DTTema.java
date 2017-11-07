@@ -19,5 +19,24 @@ public class DTTema {
         //this.path=t.getPath();
         this.album=t.getAlbum().getNombre();
     }
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public int getOrden() {
+        return orden;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public String getAlbum() {
+        return album;
+    }    
 }

@@ -45,11 +45,13 @@ public class Login extends HttpServlet {
             session.setAttribute("UserNick", user.getNick());
             session.setAttribute("UserMail", user.getMail());
             session.setAttribute("EsArtista", user.getEsArtista());
-            RequestDispatcher rd = request.getRequestDispatcher("myPerfil");
-            rd.forward(request,response);
+            
+          //  RequestDispatcher rd = request.getRequestDispatcher("myPerfil");
+           // rd.forward(request,response);
+            response.sendRedirect("myPerfil");
             }
         else{
-            response.sendRedirect("index.html");
+            response.sendRedirect("index.jsp");
         }
     }
 

@@ -125,7 +125,7 @@ public abstract class Usuario implements Serializable {
     }
 
     public void setImagen(String imagen) {
-        this.imagen = imagen;
+        this.imagen = "../WebApp/web/imagenes/Usr_img/" + imagen;
     }
     
     public void addFollower(Usuario u1) {

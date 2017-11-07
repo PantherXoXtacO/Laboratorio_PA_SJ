@@ -6,10 +6,13 @@ package Servlets;
  * and open the template in the editor.
  */
 
+import Logica.Controlador;
+import Logica.IControlador;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,9 +29,8 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
  */
 @WebServlet(urlPatterns = {"/CambiarImagenUsuario"})
 public class CambiarImagenUsuario extends HttpServlet {
-    private String UPLOAD_DIRECTORY = "C:\\Users\\TISJ\\Desktop\\";
-    //private String realPath = getServletContext().getRealPath(".");
-    //private String Path=getServletContext().getRealPath(UPLOAD_DIRECTORY);
+    private String UPLOAD_DIRECTORY = "C:\\Users\\Usuario\\Desktop\\GitKraken\\Programacion de Aplicaciones\\PA LAB\\Laboratorio_PA_SJ\\WebApp\\web\\imagenes\\Usr_img";
+    private String UserNick;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -50,13 +52,22 @@ public class CambiarImagenUsuario extends HttpServlet {
               
                 for(FileItem item : multiparts){
                     if(!item.isFormField()){
-                        String name = new File(item.getName()).getName();
+                        String OldName = new File(item.getName()).getName();
+                        int n = OldName.length();
+                        UserNick = (String) request.getSession().getAttribute("UserNick");
+                        String name = UserNick + OldName.substring(n-4);
                         item.write( new File(UPLOAD_DIRECTORY + File.separator + name));
+                        IControlador controlador = new Controlador();
+                        controlador.ActualizarImagenUsuario(UserNick, name);                        
                     }
                 }
+                
+                response.sendRedirect("myPerfil");
+
+                
            
                //File uploaded successfully
-               request.setAttribute("message", "File Uploaded Successfully");
+               //response.sendRedirect("");
             } catch (Exception ex) {
                 out.println(ex);
                request.setAttribute("message", "File Upload Failed due to " + ex);

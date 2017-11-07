@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+import DataType.DTCliente;
 import DataType.DTUsuario;
 import Logica.Controlador;
 import java.io.IOException;
@@ -30,31 +31,23 @@ public class VerInfoUser extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)            
-            
-        throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
         String nick = request.getParameter("dataname");
         IControlador controlador = new Controlador();
         DTUsuario u = controlador.getUserData(nick);
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet at " + request.getContextPath() + "</h1>");
-            if(u!=null){
-                out.println("<p> Nombre: " + u.getNom() + "<br> Apellido: " + u.getAp() + "<br> Mail: " + u.getMail() + "<br> Nick: " + u.getNick() + "<br></p>");
-                out.println("<img src=\"..\\WorkStation\\" + u.getImg().substring(2) + "\"  height=\"42\" width=\"42\">");
+        if(u!=null){
+            request.setAttribute("userInfo", u);
+            if(u instanceof DTCliente){
+               getServletConfig().getServletContext().getRequestDispatcher("/ConsultarCliente.jsp").forward(request,response);
             }
             else{
-                out.println("<p>No se encontro el usuario</p>");
-            }
-            out.println("</body>");
-            out.println("</html>");
+                getServletConfig().getServletContext().getRequestDispatcher("/ConsultarArtista.jsp").forward(request,response);
+            } 
+        }
+        else{
+            out.println("<html><body onload=\"alert('Usuario no encontrado')\"></body></html>");
+            response.setHeader("Refresh", "0; URL=http://localhost:8080/Lab/");
         }
     }
 

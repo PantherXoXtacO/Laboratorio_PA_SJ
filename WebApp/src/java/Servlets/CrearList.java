@@ -43,7 +43,7 @@ public class CrearList extends HttpServlet {
             out.println("Lista creada");
         }
         else{
-            response.sendRedirect("index.html");
+            response.sendRedirect("index.jsp");
         }
         
     }

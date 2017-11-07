@@ -41,5 +41,29 @@ public class DTAlbum {
             t = (Tema) temaIt.next();
             temas.add(new DTTema (t));
         }
-    }    
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public String getArtista() {
+        return artista;
+    }
+
+    public List<DTTema> getTemas() {
+        return temas;
+    }
+
+    public List getGeneros() {
+        return generos;
+    }
 }

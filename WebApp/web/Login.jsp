@@ -15,7 +15,7 @@
         <form action="/Lab/Login" method="POST">
             <input type="text" name="name" size="20">
             <input type="password" name="pass" size="20">
-            <input type="submit" value="submit">            
+            <input type="submit" value="Ingresar">            
         </form>
     </body>
 </html>

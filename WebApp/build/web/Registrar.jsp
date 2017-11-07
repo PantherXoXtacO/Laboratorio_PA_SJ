@@ -4,6 +4,8 @@
     Author     : Usuario
 --%>
 
+<%@page import="Logica.IControlador"%>
+<%@page import="Logica.Controlador"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +18,7 @@
             Nick*:
             <input id="userNick" type="Text" size="20" name="userNick"><br>
             Mail*:
-            <input id="userMail" type="email" size="20" name="userMail"><br>
+            <input id="userMail" type="email" size="20" name="userMail"><z id="UsedMail"></z><br> 
             Nombre:
             <input type="Text" size="20" name="userNom"><br>
             Apellido:
@@ -24,9 +26,9 @@
             Fecha de Nacimiento:
             <input type="date" name="FechaDeNacimiento"><br>  
             Pass:
-            <input id="contra" type="password" size="20" name="userPass" onkeyup="checkPasswordMatch();"><br>
+            <input id="contra" type="password" size="20" name="userPass" onkeyup="HabilitarBoton();"><br>
             Confirmar Pass:
-            <input id="contra2" type="password" size="20" name="userPass2" onkeyup="checkPasswordMatch();"><div id="passMatch"> </div> <br>
+            <input id="contra2" type="password" size="20" name="userPass2" onkeyup="HabilitarBoton();"><div id="passMatch"> </div> <br>
             ¿Eres artista?
             <input id="radioButtonEsArtista" type="radio" name="IsArtist" value="si" onchange="setArtInfoVisible();">Si
             <input id="radioButtonNoEsArtista" type="radio" name="IsArtist" value="no" onchange="setArtInfoVisible();" checked="checked">No<br>
@@ -50,24 +52,38 @@
 
         if (password !== confirmPassword){
             document.getElementById('passMatch').innerHTML = ' Las contraseñas no coinsiden';
-            document.getElementById('botonRegistro').disabled = true;
+            return false;
         }
         else{
             document.getElementById('passMatch').innerHTML = '';
-            document.getElementById('botonRegistro').disabled = false;
+            return true;
         }
     }
     </script>
     
-    <!--<script>function checkMail() {
+    <script>function checkMail() {
         var mail = document.getElementById("userMail").value;
         if(mail === ""){
-            document.getElementById('botonRegistro').disabled = false;
+            return false;
         }
         else{
+            function request(){
+                var url = "checkValidation?action=checkMail&?mail=" + mail;
+                req.open("GET", url, true);
+                req.onreadystatechange = callback;
+                req.send(null);
+            }
+            function callback(){
+                if (req.readyState === 4 ){
+                    if(req.status === 200){
+                        parseMassages()
+                    }
+                }
+            }
+
         }
     }
-    </script>-->
+    </script>
     
     <script>function setArtInfoVisible(){
         var r = document.getElementById('radioButtonEsArtista');
@@ -79,6 +95,17 @@
         }
     }
     </script>
+    
+    <script>function HabilitarBoton(){
+        if(checkPasswordMatch.call()){
+            document.getElementById('botonRegistro').disabled = false;
+        }
+        else{
+           document.getElementById('botonRegistro').disabled = true; 
+        }
+    }
+    </script>
+    
     
 </html>
 

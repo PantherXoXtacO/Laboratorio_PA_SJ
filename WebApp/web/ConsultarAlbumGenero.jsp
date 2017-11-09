@@ -4,6 +4,8 @@
     Author     : Casca
 --%>
 
+<%@page import="Logica.Album"%>
+<%@page import="Logica.Genero"%>
 <%@page import="java.util.List"%>
 <%@page import="Logica.IControlador"%>
 <%@page import="Logica.Fabrica"%>
@@ -47,17 +49,31 @@
             <select id="dropdown2" name="dropdown2">
                 <script type="text/javascript">                    
                     function myFunction2(){
-                        var array = document.getElementById("hiddenTemp1").value;
-                        var array2 = array.match(/\w+/g);
+                        var genero = (String) document.getElementById("dropdown1").value;
+                        
+                        <%
+                            
+                            //Genero gen = ICU.getGeneroPorNombre(genero);
+                            //List<Album> albumsDelGenero = gen.getAlbums();
+                            //List<String> albums = ICU.albumListToString(albumsDelGenero);
+                            
+                        %>                 
+                               
+                        var array2 = albums.match(/\w+/g);
                         var arrayLength = array2.length;
                         var x = document.getElementById("dropdown2"); 
+                        var length = x.options.length;
+                        for (i = 0; i < length; i++) {
+                          select.x[i] = null;
+                        }
                         var test2 = [];
                         for (var i = 0; i < arrayLength; i++) {
                             test2[i] = document.createElement("option");
-                            test2[i].text = "array2[i]";
+                            test2[i].text = array2[i];
                             x.add(test2[i]);
                         }                        
-                    }                    
+                    }                
+                    
                 </script>                
             </select>
             <input type="submit" value="Consultar Album" />

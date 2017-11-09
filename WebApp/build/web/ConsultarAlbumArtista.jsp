@@ -51,10 +51,14 @@
                         var array2 = array.match(/\w+/g);
                         var arrayLength = array2.length;
                         var x = document.getElementById("dropdown2"); 
+                        var length = x.options.length;
+                        for (i = 0; i < length; i++) {
+                          select.x[i] = null;
+                        }
                         var test2 = [];
-                        for (var i = 0; i < 1; i++) {
+                        for (var i = 0; i < arrayLength; i++) {
                             test2[i] = document.createElement("option");
-                            test2[i].text = "array2[i]";
+                            test2[i].text = array2[i];
                             x.add(test2[i]);
                         }                        
                     }                    

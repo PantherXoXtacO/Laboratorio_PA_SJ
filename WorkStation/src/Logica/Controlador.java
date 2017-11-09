@@ -624,5 +624,20 @@ public class Controlador implements IControlador {
        }
        return ret;
     }
+
+    @Override
+    public List<String> albumListToString(List<Album> albums) {
+        Iterator it = albums.iterator();
+        List<String> ret = null;
+        Album album;
+        String str;
+        while(it.hasNext()){
+            album = (Album) it.next();
+            str = album.getNombre();
+            ret.add(str);
+        }
+        
+        return ret;
+    }
  
  }

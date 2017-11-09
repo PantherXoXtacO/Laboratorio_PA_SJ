@@ -5,6 +5,9 @@
  */
 package Servlets;
 
+import Logica.Album;
+import Logica.Fabrica;
+import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -39,7 +42,9 @@ public class ConsultarAlbumGenero extends HttpServlet {
             response.sendRedirect("index.jsp");
         }
         else{
-            
+            Fabrica fabrica = Fabrica.getInstance();
+            IControlador ICU = fabrica.getIControlador();
+            Album album = ICU.getAlbumByName(albumName);
             
             
           response.setContentType("text/html;charset=UTF-8");
@@ -52,9 +57,9 @@ public class ConsultarAlbumGenero extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ConsultarAlbumGenero at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Nombre del album: " + "</h1>");
-            out.println("<h1>Año de creacion: " + "</h1>");
-            out.println("<h1>Generos: " + "</h1>");
+            out.println("<h1>Nombre del album: " + albumName + "</h1>");
+            out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
+            out.println("<h1>Generos: " + generoName + "</h1>");
             out.println("<h1>IMAGEN"+ "</h1>");
             out.println("<select  name = temas>" +
                     

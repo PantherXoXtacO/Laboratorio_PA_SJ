@@ -106,5 +106,8 @@ public interface IControlador{
     public abstract List<String> getGenerosInString(); 
     public abstract List<Genero> getGeneros();
     public abstract List<String> getArtistas();
+    public abstract List<Album> getAlbumsList();
+    public abstract Album getAlbumByName(String albumname);
+    public abstract List<String> getAlbumsListtoString();
 }
 

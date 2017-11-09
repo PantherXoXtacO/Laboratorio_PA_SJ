@@ -6,6 +6,7 @@
 package Servlets;
 
 import Logica.Album;
+import Logica.Artista;
 import Logica.Fabrica;
 import Logica.Genero;
 import Logica.IControlador;
@@ -32,33 +33,24 @@ public class AltaAlbum extends HttpServlet {
     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String hiddenParam=request.getParameter("formSelect");
         Fabrica fabrica = Fabrica.getInstance();
         IControlador ICU = fabrica.getIControlador();        
-        String nombre = request.getParameter("nombre_tema");
-        String duracion = request.getParameter("duracion_tema");
-        String ubicacion = request.getParameter("ubicacion_tema");
-        Album album;
-        System.out.println("hidden: " + hiddenParam);
+        String nombreAlbum = request.getParameter("nombre_album");
+        String año_album = request.getParameter("anio_album");
+        String genero = request.getParameter("dropdown3");
+        System.out.println(nombreAlbum);
+        System.out.println(año_album);
+        System.out.println(genero);
         
         
-        if(hiddenParam!=null){
-            if(nombre!=null && duracion!=null && ubicacion!=null 
-            && duracion.matches("\\d+") && ubicacion.matches("\\d+")){
-                album = ICU.getTemporalAlbum();
-                Tema tema =new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
-                if (album != null) {
-                    album.addTema(tema);
-                    response.sendRedirect("AltaAlbum.jsp");
-                }    
+        if(nombreAlbum!=null && año_album!=null && genero!=null 
+            && año_album.matches("\\d+")){
+                processRequest(request, response);
             }
             else
                 response.sendRedirect("AltaAlbum.jsp"); 
         }
-        else{
-            processRequest(request, response);
-        }
-    }
+    
             
         
     
@@ -78,37 +70,21 @@ public class AltaAlbum extends HttpServlet {
             throws ServletException, IOException {
         Fabrica fabrica = Fabrica.getInstance();
         IControlador ICU = fabrica.getIControlador();  
-        Album tempAlbum = ICU.getTemporalAlbum();
-        
-        System.out.println("Anio valor: " + request.getParameterValues("anio_album"));
-        System.out.println("Anio valor: " + request.getParameterValues("dropdown3"));
         String nombreAlbum = request.getParameter("nombre_album");
-        System.out.println(nombreAlbum);
         String año_album = request.getParameter("anio_album");
         String genero = request.getParameter("dropdown3");
-        System.out.println("nombre: " + nombreAlbum);
-        System.out.println("creacion: " + año_album);
-        System.out.println("genero: " + genero);
         List<Genero> listgen = new ArrayList();
-        listgen.add(ICU.getGeneroPorNombre(genero));        
-        ICU.configTemporalAlbum(null, nombreAlbum, listgen, Integer.parseInt(año_album), "");
-        
-        Album album = ICU.getTemporalAlbum();
-        System.out.println("Nombre: " + album.getNombre());
-        HttpSession session = request.getSession();
-        session.setAttribute("albumTemporal", album);
-        Album album2 = (Album) session.getAttribute("albumTemporal");
-        System.out.println("Nombre: " + album2.getNombre());
-        
-        if(nombreAlbum!=null && !nombreAlbum.equalsIgnoreCase("")){
-            String kek;
-            System.out.println("entra al if");
-        }
-        else{
-            System.out.println("No entra al if");
-            //response.sendRedirect("AltaAlbum.jsp"); 
-        }
-             
+        listgen.add(ICU.getGeneroPorNombre(genero));       
+                
+        HttpSession session = request.getSession();   
+        String artistname =(String) session.getAttribute("UserNick");
+        Artista artist = ICU.consultarArtista(artistname);
+        ICU.createTemporalAlbum();
+        ICU.configTemporalAlbum(artist, nombreAlbum, listgen, Integer.parseInt(año_album), "");
+        Album album = ICU.getTemporalAlbum();        
+        ICU.addTemporalAlbum(artist);
+        ICU.deleteTemporalAlbum();
+               
         
         
         response.setContentType("text/html;charset=UTF-8");

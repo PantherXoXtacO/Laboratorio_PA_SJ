@@ -42,13 +42,17 @@ public class AltaTema extends HttpServlet {
         String nombre = request.getParameter("nombre_tema");
         String duracion = request.getParameter("duracion_tema");
         String ubicacion = request.getParameter("ubicacion_tema");
+        String albumname = request.getParameter("albums");
         
+        if(nombre==null || duracion==null || ubicacion==null || albumname==null
+                || !duracion.matches("\\d+") || !ubicacion.matches("\\d+")){
+            
+             response.sendRedirect("AltaTema.jsp"); 
+        }
         
-        HttpSession session = request.getSession();
-        Album album = (Album) session.getAttribute("albumTemporal");        
+        Album album = ICU.getAlbumByName(albumname);                
         Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
         album.addTema(tema);
-        session.setAttribute("albumTemporal", album);
         
         
         response.setContentType("text/html;charset=UTF-8");

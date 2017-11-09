@@ -450,9 +450,12 @@ public class Manejador {
             //em.getTransaction().begin();
             Album albumToAdd = new Album(this.TemporalAlbum);
             List<Genero> generos = this.TemporalAlbum.getGeneros();
+            
+            
             addAlbumToGeneros(generos, albumToAdd);
-            //em.persist(albumToAdd);
-            albumToAdd.addTema(new Tema("1",1,1,albumToAdd));
+            artist.addAlbum(albumToAdd);
+            this.Albums.add(albumToAdd);
+            
             //em.getTransaction().commit(); 
             //em.close();         
         }
@@ -673,5 +676,20 @@ public class Manejador {
                 return;
             }
         }        
+    }
+      public List<Album> getAlbumList(){
+        return this.Albums;
+    }
+    
+    Album getAlbumByName(String albunname) {
+        Iterator it = Albums.iterator();
+        Album a;
+        while(it.hasNext()){
+            a=(Album) it.next();
+            if(a.getNombre().equals(albunname)){
+                return a;
+            }
+        }
+        return null;        
     }
 }

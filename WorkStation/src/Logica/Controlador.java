@@ -597,7 +597,32 @@ public class Controlador implements IControlador {
         Manejador M = Manejador.getinstance();
         M.ActualizarImagenUsuario(UserNick, path);
     }
+    
+    @Override
+    public List<Album> getAlbumsList() {
+        Manejador M = Manejador.getinstance();
+        return M.getAlbumList();
+    }
+
+    @Override
+    public Album getAlbumByName(String albumname) {
+        Manejador M = Manejador.getinstance();
+        return M.getAlbumByName(albumname);
+    }
+
+    @Override
+    public List<String> getAlbumsListtoString() {
+       List<Album> albums = getAlbumsList();
+       Iterator it = albums.iterator();
+       List<String> ret = new ArrayList();
+       Album alb;
+       String albString;
+       while(it.hasNext()){
+           alb = (Album) it.next();
+           albString = alb.getNombre();
+           ret.add(albString);
+       }
+       return ret;
+    }
  
-    
-    
-}
+ }

@@ -4,7 +4,35 @@
     Author     : TISJ
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="Logica.Album"%>
+<%@page import="DataType.DTCliente"%>
+<%@page import="DataType.DTUsuario"%>
+<%@page import="Logica.IControlador"%>
+<%@page import="Logica.Fabrica"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<% 
+    //Scriptlet
+    Object username = session.getAttribute("UserNick");
+    if(username==null){
+        response.sendRedirect("index.jsp"); 
+    } 
+     else{
+       String usernick = (String) username;
+       Fabrica fabrica = Fabrica.getInstance();
+       IControlador ICU = fabrica.getIControlador();
+       DTUsuario user= ICU.getUserData(usernick);
+       if(user instanceof DTCliente){
+           response.sendRedirect("index.jsp"); 
+       }
+    }
+    Fabrica fabrica = Fabrica.getInstance();
+    IControlador ICU = fabrica.getIControlador();    
+    List<String> albums = ICU.getAlbumsListtoString();
+    System.out.println(albums);
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,14 +42,32 @@
     <body>            
         <h1>Agregar temas al album:</h1>
         <form action="/Lab/AltaTema" method="post">
+            <input type="hidden" name="hiddenTemp1" id="hiddenTemp1" value="<%=albums%>">
            <p>Nombre: </p>
            <input type="text" name="nombre_tema" value="" />
            <p>Duracion: </p>
            <input type="text" name="duracion_tema" value="" />
            <p>Ubicacion en el album: </p>
-           <input type="text" name="ubicacion_tema" value="" />            
+           <input type="text" name="ubicacion_tema" value="" />   
+           <p>Album: </p>
+           <select id="albums" name="albums">
+               <script type="text/javascript">                    
+                    function myFunction(){
+                        var generos = document.getElementById("hiddenTemp1").value;
+                        var generos2 = generos.match(/\w+/g);
+                        var arrayLength = generos2.length;
+                        var x = document.getElementById("albums"); 
+                        var test2 = [];
+                        for (var i = 0; i < arrayLength; i++) {
+                            test2[i] = document.createElement("option");
+                            test2[i].text = generos2[i];
+                            x.add(test2[i]);
+                        }                        
+                    }
+                    window.onload = myFunction;
+                </script>
+           </select>
            <input type="submit" value="Agregar tema" />    
-           <input type="hidden" name="formSelect" values="tema"/>
         </form>
     </body>
 </html>

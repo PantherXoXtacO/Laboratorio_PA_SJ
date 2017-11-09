@@ -37,7 +37,9 @@
         album = ICU.getTemporalAlbum();
     }
     
-    List<String> generos = ICU.getGenerosInString();    
+    List<String> generos = ICU.getGenerosInString();   
+    List<String> albums = ICU.getAlbumsListtoString();
+    System.out.println(albums);
 %>
 
 
@@ -76,13 +78,6 @@
             <input type="submit" value="Crear Album" />
         </form>
         
-        
-        <%
-        out.println("<h1>"+ "Temas agregados: " + album.getTemas().size() +"</h1>"); 
-         %>
-            
-            
-           
         
     </body>
 </html>

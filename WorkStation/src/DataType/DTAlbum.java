@@ -25,22 +25,22 @@ public class DTAlbum {
     private List generos;
     
     public DTAlbum(Album album) {
-        nombre=album.getNombre();
-        anio=album.getAnio();
-        imagen=album.getImg();
-        artista=album.getArtista().getNombre();
-        Iterator genIt = album.getGeneros().iterator();
-        Genero g;
-        while(genIt.hasNext()){
-            g=(Genero) genIt.next();
-            generos.add(g.getNombre());
-        }
-        Iterator temaIt = album.getTemas().iterator();
-        Tema t;
-        while(temaIt.hasNext()){
-            t = (Tema) temaIt.next();
-            temas.add(new DTTema (t));
-        }
+//        nombre=album.getNombre();
+//        anio=album.getAnio();
+//        imagen=album.getImg();
+//        artista=album.getArtista().getNombre();
+//        Iterator genIt = album.getGeneros().iterator();
+//        Genero g;
+//        while(genIt.hasNext()){
+//            g=(Genero) genIt.next();
+//            generos.add(g.getNombre());
+//        }
+//        Iterator temaIt = album.getTemas().iterator();
+//        Tema t;
+//        while(temaIt.hasNext()){
+//            t = (Tema) temaIt.next();
+//            temas.add(new DTTema (t));
+//        }
     }
 
     public String getNombre() {

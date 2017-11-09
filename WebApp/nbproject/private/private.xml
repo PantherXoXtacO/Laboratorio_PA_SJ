@@ -3,10 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/AltaAlbum.java</file>
-            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/web/AltaTema.jsp</file>
-            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/web/AltaAlbum.jsp</file>
-            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/AltaTema.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/ConsultarAlbumGenero.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/ConsultarAlbumArtista.java</file>
         </group>
     </open-files>
 </project-private>

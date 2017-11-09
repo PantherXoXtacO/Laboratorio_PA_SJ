@@ -7,10 +7,13 @@ package Servlets;
 
 import Logica.Album;
 import Logica.Fabrica;
+import Logica.Genero;
 import Logica.IControlador;
 import Logica.Tema;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,15 +48,22 @@ public class AltaTema extends HttpServlet {
         String albumname = request.getParameter("albums");
         
         if(nombre==null || duracion==null || ubicacion==null || albumname==null
-                || !duracion.matches("\\d+") || !ubicacion.matches("\\d+")){
-            
+                || !duracion.matches("\\d+") || !ubicacion.matches("\\d+")){            
              response.sendRedirect("AltaTema.jsp"); 
+             System.out.println("Error en alguno de los campos");
         }
-        
-        Album album = ICU.getAlbumByName(albumname);                
+        else{
+            Album album = ICU.getAlbumByName(albumname);                
         Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
         album.addTema(tema);
-        
+        String generosEnString = "";
+        List<Genero> generos = album.getGeneros();
+        Genero gen;
+        Iterator it = generos.iterator();
+        while(it.hasNext()){
+            gen = (Genero) it.next();
+            generosEnString += "[" + gen.getNombre() + "] ";
+        }
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -67,10 +77,13 @@ public class AltaTema extends HttpServlet {
             out.println("<h1>Servlet AltaTema at " + request.getContextPath() + "</h1>");
             out.println("<h1>Albun name: " + album.getNombre() + "</h1>");
             out.println("<h1>Albun año de cracion: " + album.getAnio() + "</h1>");
-            out.println("<h1>Albun genero: " + album.getGeneros() + "</h1>");
+            out.println("<h1>Albun genero: " + generosEnString + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
+        }
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

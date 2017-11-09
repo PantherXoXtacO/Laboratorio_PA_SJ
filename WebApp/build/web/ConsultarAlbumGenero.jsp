@@ -25,7 +25,7 @@
         <form action="/Lab/ConsultarAlbumGenero" method="POST">
             <h1>Generos: </h1>
             <input type="hidden" name="hiddenTemp1" id="hiddenTemp1" value="<%=generos%>">
-            <select id="dropdown1" name="generos" onchange="myFunction2();">
+            <select id="dropdown1" name="dropdown1" onchange="myFunction2();">
                 <script type="text/javascript" >                    
                     function myFunction(){
                         var generos = document.getElementById("hiddenTemp1").value;
@@ -44,7 +44,7 @@
                 </script>
             </select>
             <h1>Albums: </h1>
-            <select id="dropdown2">
+            <select id="dropdown2" name="dropdown2">
                 <script type="text/javascript">                    
                     function myFunction2(){
                         var array = document.getElementById("hiddenTemp1").value;
@@ -52,7 +52,7 @@
                         var arrayLength = array2.length;
                         var x = document.getElementById("dropdown2"); 
                         var test2 = [];
-                        for (var i = 0; i < 1; i++) {
+                        for (var i = 0; i < arrayLength; i++) {
                             test2[i] = document.createElement("option");
                             test2[i].text = "array2[i]";
                             x.add(test2[i]);

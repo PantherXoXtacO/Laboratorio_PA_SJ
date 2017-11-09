@@ -74,6 +74,7 @@
                     window.onload = myFunction;
                 </script>
             </select>
+            <input type="submit" value="Agregar Genero" />
             <h1>imagen </h1>
             <input type="submit" value="Crear Album" />
         </form>

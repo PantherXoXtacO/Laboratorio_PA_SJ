@@ -58,7 +58,7 @@ public class ConsultarAlbumGenero extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet ConsultarAlbumGenero at " + request.getContextPath() + "</h1>");
             out.println("<h1>Nombre del album: " + albumName + "</h1>");
-            out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
+            //out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
             out.println("<h1>Generos: " + generoName + "</h1>");
             out.println("<h1>IMAGEN"+ "</h1>");
             out.println("<select  name = temas>" +

@@ -443,21 +443,29 @@ public class Manejador {
         
     }
     
-    public void addTemporalAlbum(Artista artist){        
+    public void addTemporalAlbum(){        
         EntityManager em = emfactory.createEntityManager( );
         //Artista artista = em.find(Artista.class, artist.id);
         try {
-            //em.getTransaction().begin();
+            em.getTransaction().begin();
             Album albumToAdd = new Album(this.TemporalAlbum);
             List<Genero> generos = this.TemporalAlbum.getGeneros();
             
-            
+            Artista artist = this.TemporalAlbum.getArtista();
             addAlbumToGeneros(generos, albumToAdd);
-            artist.addAlbum(albumToAdd);
+            artist.addAlbum(albumToAdd); 
             this.Albums.add(albumToAdd);
             
-            //em.getTransaction().commit(); 
-            //em.close();         
+            
+            em.merge(artist);
+            em.persist(albumToAdd);
+            
+            
+            
+            em.getTransaction().commit(); 
+            em.close();         
+            
+            
         }
         catch (Exception e) {
             e.printStackTrace();

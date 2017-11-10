@@ -415,6 +415,7 @@ public class Main extends javax.swing.JFrame {
         jMenuItemCrearLis = new javax.swing.JMenu();
         jMenuItemCrearListaPorDefecto = new javax.swing.JMenuItem();
         jMenuItemCrearListaParticular = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuConsultas = new javax.swing.JMenu();
         jMenuItemConCliente = new javax.swing.JMenuItem();
         jMenuItemConArtista = new javax.swing.JMenuItem();
@@ -3356,6 +3357,14 @@ public class Main extends javax.swing.JFrame {
 
         jMenuRegistros.add(jMenuItemCrearLis);
 
+        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenuRegistros.add(jMenuItem1);
+
         jMenuBar1.add(jMenuRegistros);
 
         jMenuConsultas.setText("Consultas");
@@ -4825,21 +4834,29 @@ public class Main extends javax.swing.JFrame {
         
         int año = Integer.parseInt(AltaAlbumAnio.getText());
         String imagePath = "";
+        if(imagePath.equals("")){
+            //cambiar a default
+        }
         String artista = ExistArtistAltaAlbumArtistText.getText();
         
-        Artista artist = ICU.consultarArtista(artista);
-        List<Genero> generos = ICU.getTemporalGenres();
+       Artista artist = ICU.consultarArtista(artista);
+       List<Genero> generos = ICU.getTemporalGenres();
+       Genero generotest = ICU.getGeneroPorNombre("Rock");
+       if(generos!=null && generotest!=null)
+            generos.add(generotest);
+           
         if(artist!=null){
+            ICU.createTemporalAlbum();
             ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-            ICU.addTemporalAlbum(artist);
+            ICU.addTemporalAlbum();
             ICU.deleteTemporalAlbum();
             ICU.wipeTemporalGenres();
             JOptionPane.showMessageDialog(this, "Album creado con exito", "Alta album", JOptionPane.INFORMATION_MESSAGE);
             AltaAlbum1.setVisible(false);
-        }
+      }
         else{
             JOptionPane.showMessageDialog(this, "era null", "Alta album", JOptionPane.ERROR_MESSAGE);
-        }
+       }
  
     }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed
 
@@ -4883,7 +4900,7 @@ public class Main extends javax.swing.JFrame {
                 while(itCliente2.hasNext()){
                     itemCliente2=(Item) itCliente2.next();
                     jComboBoxGeneroPert1.addItem(itemCliente2);
-            }
+                }
             }else{
                 JOptionPane.showMessageDialog(this, "ERROR: No existe el artista", "ERROR: Elección de artista", JOptionPane.ERROR_MESSAGE);
                 this.ExistArtistAltaAlbum.setVisible(false);
@@ -5046,6 +5063,10 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "ERROR: Campos vacios", "Actualizar sucripcion", JOptionPane.ERROR_MESSAGE);
             
     }//GEN-LAST:event_AES_BotonActualizarActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        ExistArtistAltaAlbum.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -5403,6 +5424,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuConsultarAlbumGen1;
     private javax.swing.JMenu jMenuConsultarLista;
     private javax.swing.JMenu jMenuConsultas;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemAES;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;

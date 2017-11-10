@@ -882,7 +882,7 @@ public class ControladorTest {
         System.out.println("addTemporalAlbum");
         Artista artist = null;
         Controlador instance = new Controlador();
-        instance.addTemporalAlbum(artist);
+        instance.addTemporalAlbum();
     }
 
     /**

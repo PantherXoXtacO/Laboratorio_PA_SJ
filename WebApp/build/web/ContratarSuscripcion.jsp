@@ -4,14 +4,26 @@
     Author     : Casca
 --%>
 
+<%@page import="DataType.DTArtista"%>
+<%@page import="Logica.IControlador"%>
+<%@page import="Logica.Fabrica"%>
 <%@page import="DataType.DTUsuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
     if(session.getAttribute("UserNick")==null){
-             response.sendRedirect("index.html");
-        }
-    %>
+             response.sendRedirect("index.jsp");
+    }
+    else{
+       String usernick = (String) session.getAttribute("UserNick");
+       Fabrica fabrica = Fabrica.getInstance();
+       IControlador ICU = fabrica.getIControlador();
+       DTUsuario user= ICU.getUserData(usernick);
+       if(user instanceof DTArtista){
+           response.sendRedirect("index.jsp"); 
+       }
+    }
+%>
  
 <!DOCTYPE html>
 <html>

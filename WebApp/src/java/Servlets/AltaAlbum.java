@@ -82,7 +82,7 @@ public class AltaAlbum extends HttpServlet {
         ICU.createTemporalAlbum();
         ICU.configTemporalAlbum(artist, nombreAlbum, listgen, Integer.parseInt(año_album), "");
         Album album = ICU.getTemporalAlbum();        
-        ICU.addTemporalAlbum(artist);
+        ICU.addTemporalAlbum();
         ICU.deleteTemporalAlbum();
                
         

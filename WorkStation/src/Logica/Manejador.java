@@ -445,26 +445,19 @@ public class Manejador {
     
     public void addTemporalAlbum(){        
         EntityManager em = emfactory.createEntityManager( );
-        //Artista artista = em.find(Artista.class, artist.id);
         try {
             em.getTransaction().begin();
-            Album albumToAdd = new Album(this.TemporalAlbum);
             List<Genero> generos = this.TemporalAlbum.getGeneros();
             
             Artista artist = this.TemporalAlbum.getArtista();
-            addAlbumToGeneros(generos, albumToAdd);
-            artist.addAlbum(albumToAdd); 
-            this.Albums.add(albumToAdd);
-            
-            
+            addAlbumToGeneros(generos, this.TemporalAlbum);
+            artist.addAlbum(this.TemporalAlbum); 
+            this.Albums.add(this.TemporalAlbum);           
             em.merge(artist);
-            em.persist(albumToAdd);
-            
-            
+            em.merge(this.TemporalAlbum);
             
             em.getTransaction().commit(); 
-            em.close();         
-            
+            em.close();                     
             
         }
         catch (Exception e) {
@@ -632,11 +625,11 @@ public class Manejador {
         if(cliente!=null && s!=null){
             cliente.setSuscripcion(s);
             suscripciones.add(s);        
-            //em.getTransaction().begin();
-            //em.persist(s);
-            //em.persist(cliente);
-            //em.getTransaction().commit();
-            //em.close();      
+            em.getTransaction().begin();
+            em.merge(s);
+            em.merge(cliente);
+            em.getTransaction().commit();
+            em.close();      
         }
        
         

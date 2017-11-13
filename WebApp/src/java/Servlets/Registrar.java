@@ -69,7 +69,7 @@ public class Registrar extends HttpServlet {
                 controlador.registrarCliente(nick, pass, mail, nombre, apellido, f, "");
                 out.println("<html><body onload=\"alert('Cliente: "+ nick  +" creado')\"></body></html>");
             }
-            response.setHeader("Refresh", "0; URL=http://localhost:8080/Lab/");
+            response.setHeader("Refresh", "0; URL=http://localhost:8084/Lab/");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

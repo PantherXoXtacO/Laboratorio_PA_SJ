@@ -4,6 +4,8 @@
     Author     : Casca
 --%>
 
+<%@page import="Logica.Album"%>
+<%@page import="Logica.Artista"%>
 <%@page import="java.util.List"%>
 <%@page import="Logica.IControlador"%>
 <%@page import="Logica.Fabrica"%>
@@ -13,7 +15,7 @@
        Fabrica fabrica = Fabrica.getInstance();
        IControlador ICU = fabrica.getIControlador();
        List<String> artistas = ICU.getArtistas();
-    %>
+%>
 
 <!DOCTYPE html>
 <html>
@@ -47,7 +49,23 @@
             <select id="dropdown2"  name="dropdown2">
                 <script type="text/javascript">                    
                     function myFunction2(){
-                        var array = document.getElementById("hiddenTemp1").value;
+                        var name =  document.getElementById("dropdown1").value;
+                        
+                        //window.location.replace("ConsultarAlbumArtista.jsp?name=" + name);
+                        
+                    <%
+                        String str = "<script>document.writeln(name)</script>";
+                        out.println("value: " + str);
+                        
+                        //String name = request.getParameter("Hidden2");
+                        //System.out.println(name);
+                        //String artistanick = ""; //traer de dropdown 1
+                        //Artista artist = (Artista) ICU.consultarArtista(artistanick);
+                        //List<Album> albums = artist.getAlbums();
+                        //List<String> albumsString = ICU.albumListToString(albums);
+                        //pasar albumsstring abajo
+                     %>
+                        
                         var array2 = array.match(/\w+/g);
                         var arrayLength = array2.length;
                         var x = document.getElementById("dropdown2"); 

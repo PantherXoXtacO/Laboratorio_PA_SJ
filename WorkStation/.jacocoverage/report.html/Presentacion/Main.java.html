@@ -3080,7 +3080,7 @@ public class Main extends javax.swing.JFrame {
 <span class="nc" id="L3080">                    .addGroup(AltaAlbum1Layout.createSequentialGroup()</span>
 <span class="nc" id="L3081">                        .addGap(24, 24, 24)</span>
 <span class="nc" id="L3082">                        .addComponent(AltaALbumAgrTema1)))</span>
-<span class="nc" id="L3083">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)</span>
+<span class="nc" id="L3083">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)</span>
 <span class="nc" id="L3084">                .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
 <span class="nc" id="L3085">                    .addComponent(AltaAlbumbtnCancelar1)</span>
 <span class="nc" id="L3086">                    .addComponent(AltaAlbumbtnConfirmar1)))</span>
@@ -4825,227 +4825,235 @@ public class Main extends javax.swing.JFrame {
         
 <span class="nc" id="L4826">        int año = Integer.parseInt(AltaAlbumAnio.getText());</span>
 <span class="nc" id="L4827">        String imagePath = &quot;&quot;;</span>
-<span class="nc" id="L4828">        String artista = ExistArtistAltaAlbumArtistText.getText();</span>
+<span class="nc bnc" id="L4828" title="All 2 branches missed.">        if(imagePath.equals(&quot;&quot;)){</span>
+            //cambiar a default
+        }
+<span class="nc" id="L4831">        String artista = ExistArtistAltaAlbumArtistText.getText();</span>
         
-<span class="nc" id="L4830">        Artista artist = ICU.consultarArtista(artista);</span>
-<span class="nc" id="L4831">        List&lt;Genero&gt; generos = ICU.getTemporalGenres();</span>
-<span class="nc bnc" id="L4832" title="All 2 branches missed.">        if(artist!=null){</span>
-<span class="nc" id="L4833">            ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);</span>
-<span class="nc" id="L4834">            ICU.addTemporalAlbum(artist);</span>
-<span class="nc" id="L4835">            ICU.deleteTemporalAlbum();</span>
-<span class="nc" id="L4836">            ICU.wipeTemporalGenres();</span>
-<span class="nc" id="L4837">            JOptionPane.showMessageDialog(this, &quot;Album creado con exito&quot;, &quot;Alta album&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc" id="L4838">            AltaAlbum1.setVisible(false);</span>
-        }
+<span class="nc" id="L4833">       Artista artist = ICU.consultarArtista(artista);</span>
+<span class="nc" id="L4834">       List&lt;Genero&gt; generos = ICU.getTemporalGenres();</span>
+<span class="nc" id="L4835">       Genero generotest = ICU.getGeneroPorNombre(&quot;Rock&quot;);</span>
+<span class="nc bnc" id="L4836" title="All 4 branches missed.">       if(generos!=null &amp;&amp; generotest!=null)</span>
+<span class="nc" id="L4837">            generos.add(generotest);</span>
+           
+<span class="nc bnc" id="L4839" title="All 2 branches missed.">        if(artist!=null){</span>
+<span class="nc" id="L4840">            ICU.createTemporalAlbum();</span>
+<span class="nc" id="L4841">            ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);</span>
+<span class="nc" id="L4842">            ICU.addTemporalAlbum();</span>
+<span class="nc" id="L4843">            ICU.deleteTemporalAlbum();</span>
+<span class="nc" id="L4844">            ICU.wipeTemporalGenres();</span>
+<span class="nc" id="L4845">            JOptionPane.showMessageDialog(this, &quot;Album creado con exito&quot;, &quot;Alta album&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc" id="L4846">            AltaAlbum1.setVisible(false);</span>
+      }
         else{
-<span class="nc" id="L4841">            JOptionPane.showMessageDialog(this, &quot;era null&quot;, &quot;Alta album&quot;, JOptionPane.ERROR_MESSAGE);</span>
-        }
+<span class="nc" id="L4849">            JOptionPane.showMessageDialog(this, &quot;era null&quot;, &quot;Alta album&quot;, JOptionPane.ERROR_MESSAGE);</span>
+       }
  
-<span class="nc" id="L4844">    }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed</span>
+<span class="nc" id="L4852">    }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed</span>
 
     private void AltaALbumAgrTemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaALbumAgrTemaActionPerformed
-<span class="nc" id="L4847">        String nom = this.AltaALbumAgrTemaNom.getText();</span>
-<span class="nc" id="L4848">        String dur = this.AltaALbumAgrTemaDur.getText();</span>
-<span class="nc" id="L4849">        String ubi = this.AltaALbumAgrTemaUbi.getText();</span>
-<span class="nc" id="L4850">        int duracion = Integer.parseInt(dur);</span>
-<span class="nc" id="L4851">        int ubicacion = Integer.parseInt(ubi);</span>
-<span class="nc" id="L4852">        Album album = ICU.getTemporalAlbum();</span>
-<span class="nc" id="L4853">        Tema tema = new Tema(nom, duracion, ubicacion, album);</span>
-<span class="nc" id="L4854">        album.addTema(tema);</span>
-<span class="nc" id="L4855">        ICU.addTemaToM(tema);</span>
+<span class="nc" id="L4855">        String nom = this.AltaALbumAgrTemaNom.getText();</span>
+<span class="nc" id="L4856">        String dur = this.AltaALbumAgrTemaDur.getText();</span>
+<span class="nc" id="L4857">        String ubi = this.AltaALbumAgrTemaUbi.getText();</span>
+<span class="nc" id="L4858">        int duracion = Integer.parseInt(dur);</span>
+<span class="nc" id="L4859">        int ubicacion = Integer.parseInt(ubi);</span>
+<span class="nc" id="L4860">        Album album = ICU.getTemporalAlbum();</span>
+<span class="nc" id="L4861">        Tema tema = new Tema(nom, duracion, ubicacion, album);</span>
+<span class="nc" id="L4862">        album.addTema(tema);</span>
+<span class="nc" id="L4863">        ICU.addTemaToM(tema);</span>
 
-<span class="nc" id="L4857">        this.AltaALbumAgrTemaNom.setText(&quot;&quot;);</span>
-<span class="nc" id="L4858">        this.AltaALbumAgrTemaDur.setText(&quot;&quot;);</span>
-<span class="nc" id="L4859">        this.AltaALbumAgrTemaUbi.setText(&quot;&quot;);</span>
-<span class="nc" id="L4860">        AltaAlbum1.setVisible(true);    </span>
-<span class="nc" id="L4861">        AltaTema.setVisible(false);</span>
-<span class="nc" id="L4862">        JOptionPane.showMessageDialog(this, &quot;Tema agregado&quot;, &quot;Agregar tema&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
-<span class="nc" id="L4863">    }//GEN-LAST:event_AltaALbumAgrTemaActionPerformed</span>
+<span class="nc" id="L4865">        this.AltaALbumAgrTemaNom.setText(&quot;&quot;);</span>
+<span class="nc" id="L4866">        this.AltaALbumAgrTemaDur.setText(&quot;&quot;);</span>
+<span class="nc" id="L4867">        this.AltaALbumAgrTemaUbi.setText(&quot;&quot;);</span>
+<span class="nc" id="L4868">        AltaAlbum1.setVisible(true);    </span>
+<span class="nc" id="L4869">        AltaTema.setVisible(false);</span>
+<span class="nc" id="L4870">        JOptionPane.showMessageDialog(this, &quot;Tema agregado&quot;, &quot;Agregar tema&quot;, JOptionPane.INFORMATION_MESSAGE);</span>
+<span class="nc" id="L4871">    }//GEN-LAST:event_AltaALbumAgrTemaActionPerformed</span>
 
     private void ExistArtistAltaAlbumArtistTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTextActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4867">    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed</span>
+<span class="nc" id="L4875">    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTextActionPerformed</span>
 
     private void ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed
-<span class="nc" id="L4870">        this.ExistArtistAltaAlbum.setVisible(false);</span>
-<span class="nc" id="L4871">    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed</span>
+<span class="nc" id="L4878">        this.ExistArtistAltaAlbum.setVisible(false);</span>
+<span class="nc" id="L4879">    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnCancelar1ActionPerformed</span>
 
     private void ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed
-<span class="nc" id="L4874">        String artistAlbum = this.ExistArtistAltaAlbumArtistText.getText();</span>
-<span class="nc bnc" id="L4875" title="All 2 branches missed.">        if (!artistAlbum.equals(&quot;&quot;) ) {</span>
-<span class="nc bnc" id="L4876" title="All 2 branches missed.">            if(!ICU.artistLibre(artistAlbum)){</span>
-<span class="nc" id="L4877">                this.AltaAlbum1.setVisible(true);</span>
-<span class="nc" id="L4878">                this.ExistArtistAltaAlbum.setVisible(false);</span>
-<span class="nc" id="L4879">                this.jComboBoxGeneroPert1.removeAllItems();                </span>
-<span class="nc" id="L4880">                jComboBoxGeneroPert1.removeAllItems();</span>
-<span class="nc" id="L4881">                Iterator itCliente2 = ICU.getGeneroItem().iterator();</span>
+<span class="nc" id="L4882">        String artistAlbum = this.ExistArtistAltaAlbumArtistText.getText();</span>
+<span class="nc bnc" id="L4883" title="All 2 branches missed.">        if (!artistAlbum.equals(&quot;&quot;) ) {</span>
+<span class="nc bnc" id="L4884" title="All 2 branches missed.">            if(!ICU.artistLibre(artistAlbum)){</span>
+<span class="nc" id="L4885">                this.AltaAlbum1.setVisible(true);</span>
+<span class="nc" id="L4886">                this.ExistArtistAltaAlbum.setVisible(false);</span>
+<span class="nc" id="L4887">                this.jComboBoxGeneroPert1.removeAllItems();                </span>
+<span class="nc" id="L4888">                jComboBoxGeneroPert1.removeAllItems();</span>
+<span class="nc" id="L4889">                Iterator itCliente2 = ICU.getGeneroItem().iterator();</span>
                 Item itemCliente2;
-<span class="nc bnc" id="L4883" title="All 2 branches missed.">                while(itCliente2.hasNext()){</span>
-<span class="nc" id="L4884">                    itemCliente2=(Item) itCliente2.next();</span>
-<span class="nc" id="L4885">                    jComboBoxGeneroPert1.addItem(itemCliente2);</span>
-            }
-<span class="nc" id="L4887">            }else{</span>
-<span class="nc" id="L4888">                JOptionPane.showMessageDialog(this, &quot;ERROR: No existe el artista&quot;, &quot;ERROR: Elección de artista&quot;, JOptionPane.ERROR_MESSAGE);</span>
-<span class="nc" id="L4889">                this.ExistArtistAltaAlbum.setVisible(false);</span>
+<span class="nc bnc" id="L4891" title="All 2 branches missed.">                while(itCliente2.hasNext()){</span>
+<span class="nc" id="L4892">                    itemCliente2=(Item) itCliente2.next();</span>
+<span class="nc" id="L4893">                    jComboBoxGeneroPert1.addItem(itemCliente2);</span>
+                }
+<span class="nc" id="L4895">            }else{</span>
+<span class="nc" id="L4896">                JOptionPane.showMessageDialog(this, &quot;ERROR: No existe el artista&quot;, &quot;ERROR: Elección de artista&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L4897">                this.ExistArtistAltaAlbum.setVisible(false);</span>
             }
         }
-<span class="nc" id="L4892">    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed</span>
+<span class="nc" id="L4900">    }//GEN-LAST:event_ExistArtistAltaAlbumArtistTexttnConfirmar1ActionPerformed</span>
 
     private void AltaALbumAgrTema1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaALbumAgrTema1ActionPerformed
-<span class="nc" id="L4895">        AltaAlbum1.setVisible(false);</span>
-<span class="nc" id="L4896">        AltaTema.setVisible(true);</span>
-<span class="nc" id="L4897">    }//GEN-LAST:event_AltaALbumAgrTema1ActionPerformed</span>
+<span class="nc" id="L4903">        AltaAlbum1.setVisible(false);</span>
+<span class="nc" id="L4904">        AltaTema.setVisible(true);</span>
+<span class="nc" id="L4905">    }//GEN-LAST:event_AltaALbumAgrTema1ActionPerformed</span>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-<span class="nc" id="L4900">        String genero = jComboBoxGeneroPert1.getSelectedItem().toString();</span>
-<span class="nc" id="L4901">        Genero genre = ICU.getGeneroPorNombre(genero);</span>
-<span class="nc" id="L4902">        ICU.addToTemporalGenres(genre);</span>
-<span class="nc" id="L4903">        JOptionPane.showMessageDialog(this, &quot;Genero agregado con exito&quot;, &quot;Agregar genero&quot;, JOptionPane.ERROR_MESSAGE);</span>
-<span class="nc" id="L4904">    }//GEN-LAST:event_jButton1ActionPerformed</span>
+<span class="nc" id="L4908">        String genero = jComboBoxGeneroPert1.getSelectedItem().toString();</span>
+<span class="nc" id="L4909">        Genero genre = ICU.getGeneroPorNombre(genero);</span>
+<span class="nc" id="L4910">        ICU.addToTemporalGenres(genre);</span>
+<span class="nc" id="L4911">        JOptionPane.showMessageDialog(this, &quot;Genero agregado con exito&quot;, &quot;Agregar genero&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L4912">    }//GEN-LAST:event_jButton1ActionPerformed</span>
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<span class="nc" id="L4907">        AltaTema.setVisible(false);</span>
-<span class="nc" id="L4908">        AltaALbumAgrTemaNom.setText(&quot;&quot;);</span>
-<span class="nc" id="L4909">        AltaALbumAgrTemaDur.setText(&quot;&quot;);</span>
-<span class="nc" id="L4910">        AltaALbumAgrTemaUbi.setText(&quot;&quot;);</span>
-<span class="nc" id="L4911">        AltaAlbum1.setVisible(true);</span>
-<span class="nc" id="L4912">    }//GEN-LAST:event_jButton2ActionPerformed</span>
+<span class="nc" id="L4915">        AltaTema.setVisible(false);</span>
+<span class="nc" id="L4916">        AltaALbumAgrTemaNom.setText(&quot;&quot;);</span>
+<span class="nc" id="L4917">        AltaALbumAgrTemaDur.setText(&quot;&quot;);</span>
+<span class="nc" id="L4918">        AltaALbumAgrTemaUbi.setText(&quot;&quot;);</span>
+<span class="nc" id="L4919">        AltaAlbum1.setVisible(true);</span>
+<span class="nc" id="L4920">    }//GEN-LAST:event_jButton2ActionPerformed</span>
 
     private void jComboBoxGeneroPert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxGeneroPert1ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4916">    }//GEN-LAST:event_jComboBoxGeneroPert1ActionPerformed</span>
+<span class="nc" id="L4924">    }//GEN-LAST:event_jComboBoxGeneroPert1ActionPerformed</span>
 
     private void jMenuConsultarAlbumGen1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumGen1ActionPerformed
-<span class="nc" id="L4919">        this.ConsultaListaReproduccion.setVisible(true);      </span>
+<span class="nc" id="L4927">        this.ConsultaListaReproduccion.setVisible(true);      </span>
         
-<span class="nc" id="L4921">        jCBsaveListFavList1.removeAllItems();</span>
-<span class="nc" id="L4922">        jCBsaveListFavList2.removeAllItems();</span>
-<span class="nc" id="L4923">        List generos = ICU.getGeneroItem();</span>
-<span class="nc" id="L4924">        Iterator itGen = generos.iterator();</span>
-<span class="nc bnc" id="L4925" title="All 2 branches missed.">        while(itGen.hasNext()){</span>
-<span class="nc" id="L4926">            jCBsaveListFavList1.addItem((Item)itGen.next());</span>
+<span class="nc" id="L4929">        jCBsaveListFavList1.removeAllItems();</span>
+<span class="nc" id="L4930">        jCBsaveListFavList2.removeAllItems();</span>
+<span class="nc" id="L4931">        List generos = ICU.getGeneroItem();</span>
+<span class="nc" id="L4932">        Iterator itGen = generos.iterator();</span>
+<span class="nc bnc" id="L4933" title="All 2 branches missed.">        while(itGen.hasNext()){</span>
+<span class="nc" id="L4934">            jCBsaveListFavList1.addItem((Item)itGen.next());</span>
         }
-<span class="nc" id="L4928">        Item selected = (Item)jCBsaveListFavList1.getSelectedItem();</span>
-<span class="nc bnc" id="L4929" title="All 2 branches missed.">        if(selected!=null){</span>
-<span class="nc" id="L4930">            Genero g = (Genero) selected.getValue();</span>
-<span class="nc" id="L4931">            Iterator it = g.getListas().iterator();</span>
-<span class="nc bnc" id="L4932" title="All 2 branches missed.">            while(it.hasNext()){</span>
-<span class="nc" id="L4933">                jCBsaveListFavList2.addItem((Item)it.next()); </span>
+<span class="nc" id="L4936">        Item selected = (Item)jCBsaveListFavList1.getSelectedItem();</span>
+<span class="nc bnc" id="L4937" title="All 2 branches missed.">        if(selected!=null){</span>
+<span class="nc" id="L4938">            Genero g = (Genero) selected.getValue();</span>
+<span class="nc" id="L4939">            Iterator it = g.getListas().iterator();</span>
+<span class="nc bnc" id="L4940" title="All 2 branches missed.">            while(it.hasNext()){</span>
+<span class="nc" id="L4941">                jCBsaveListFavList2.addItem((Item)it.next()); </span>
             }
         }  
-<span class="nc" id="L4936">    }//GEN-LAST:event_jMenuConsultarAlbumGen1ActionPerformed</span>
+<span class="nc" id="L4944">    }//GEN-LAST:event_jMenuConsultarAlbumGen1ActionPerformed</span>
 
     private void jMenuConsultarAlbumArtist1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuConsultarAlbumArtist1ActionPerformed
-<span class="nc" id="L4939">        this.ConsultaListaReproduccion1.setVisible(true);</span>
+<span class="nc" id="L4947">        this.ConsultaListaReproduccion1.setVisible(true);</span>
         
-<span class="nc" id="L4941">        jCBsaveListFavList3.removeAllItems();</span>
-<span class="nc" id="L4942">        jCBsaveListFavList4.removeAllItems();</span>
-<span class="nc" id="L4943">        List clientes = ICU.getItemCliente();</span>
-<span class="nc" id="L4944">        Iterator itGen = clientes.iterator();</span>
-<span class="nc bnc" id="L4945" title="All 2 branches missed.">        while(itGen.hasNext()){</span>
-<span class="nc" id="L4946">            jCBsaveListFavList3.addItem((Item)itGen.next());</span>
+<span class="nc" id="L4949">        jCBsaveListFavList3.removeAllItems();</span>
+<span class="nc" id="L4950">        jCBsaveListFavList4.removeAllItems();</span>
+<span class="nc" id="L4951">        List clientes = ICU.getItemCliente();</span>
+<span class="nc" id="L4952">        Iterator itGen = clientes.iterator();</span>
+<span class="nc bnc" id="L4953" title="All 2 branches missed.">        while(itGen.hasNext()){</span>
+<span class="nc" id="L4954">            jCBsaveListFavList3.addItem((Item)itGen.next());</span>
         }
-<span class="nc" id="L4948">        Item selected = (Item)jCBsaveListFavList3.getSelectedItem();</span>
-<span class="nc bnc" id="L4949" title="All 2 branches missed.">        if(selected!=null){</span>
-<span class="nc" id="L4950">            Cliente g = (Cliente) selected.getValue();</span>
-<span class="nc" id="L4951">            Iterator it = g.getListas().iterator();</span>
-<span class="nc bnc" id="L4952" title="All 2 branches missed.">            while(it.hasNext()){</span>
-<span class="nc" id="L4953">                jCBsaveListFavList4.addItem((Item)it.next()); </span>
+<span class="nc" id="L4956">        Item selected = (Item)jCBsaveListFavList3.getSelectedItem();</span>
+<span class="nc bnc" id="L4957" title="All 2 branches missed.">        if(selected!=null){</span>
+<span class="nc" id="L4958">            Cliente g = (Cliente) selected.getValue();</span>
+<span class="nc" id="L4959">            Iterator it = g.getListas().iterator();</span>
+<span class="nc bnc" id="L4960" title="All 2 branches missed.">            while(it.hasNext()){</span>
+<span class="nc" id="L4961">                jCBsaveListFavList4.addItem((Item)it.next()); </span>
             }
         }  
         
-<span class="nc" id="L4957">    }//GEN-LAST:event_jMenuConsultarAlbumArtist1ActionPerformed</span>
+<span class="nc" id="L4965">    }//GEN-LAST:event_jMenuConsultarAlbumArtist1ActionPerformed</span>
 
     private void AltaAlbumbtnCancelar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnCancelar3ActionPerformed
-<span class="nc" id="L4960">        ConsultaListaReproduccion1.setVisible(false);</span>
-<span class="nc" id="L4961">    }//GEN-LAST:event_AltaAlbumbtnCancelar3ActionPerformed</span>
+<span class="nc" id="L4968">        ConsultaListaReproduccion1.setVisible(false);</span>
+<span class="nc" id="L4969">    }//GEN-LAST:event_AltaAlbumbtnCancelar3ActionPerformed</span>
 
     private void AltaAlbumbtnConfirmar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AltaAlbumbtnConfirmar3ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4965">    }//GEN-LAST:event_AltaAlbumbtnConfirmar3ActionPerformed</span>
+<span class="nc" id="L4973">    }//GEN-LAST:event_AltaAlbumbtnConfirmar3ActionPerformed</span>
 
     private void jCBsaveListFavClnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClnt1ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4969">    }//GEN-LAST:event_jCBsaveListFavClnt1ActionPerformed</span>
+<span class="nc" id="L4977">    }//GEN-LAST:event_jCBsaveListFavClnt1ActionPerformed</span>
 
     private void jCBsaveListFavClnt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClnt2ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4973">    }//GEN-LAST:event_jCBsaveListFavClnt2ActionPerformed</span>
+<span class="nc" id="L4981">    }//GEN-LAST:event_jCBsaveListFavClnt2ActionPerformed</span>
 
     private void jCBsaveListFavClnt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCBsaveListFavClnt3ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4977">    }//GEN-LAST:event_jCBsaveListFavClnt3ActionPerformed</span>
+<span class="nc" id="L4985">    }//GEN-LAST:event_jCBsaveListFavClnt3ActionPerformed</span>
 
     private void CBSeguirUserSeguidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBSeguirUserSeguidorActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4981">    }//GEN-LAST:event_CBSeguirUserSeguidorActionPerformed</span>
+<span class="nc" id="L4989">    }//GEN-LAST:event_CBSeguirUserSeguidorActionPerformed</span>
 
     private void CBSeguirUserSeguidor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBSeguirUserSeguidor1ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4985">    }//GEN-LAST:event_CBSeguirUserSeguidor1ActionPerformed</span>
+<span class="nc" id="L4993">    }//GEN-LAST:event_CBSeguirUserSeguidor1ActionPerformed</span>
 
     private void CBSeguirUserSeguidor2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBSeguirUserSeguidor2ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L4989">    }//GEN-LAST:event_CBSeguirUserSeguidor2ActionPerformed</span>
+<span class="nc" id="L4997">    }//GEN-LAST:event_CBSeguirUserSeguidor2ActionPerformed</span>
 
     private void CBSeguirUserSeguidor1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CBSeguirUserSeguidor1ItemStateChanged
-<span class="nc" id="L4992">        CBSeguirUserSeguidor2.removeAllItems();</span>
-<span class="nc" id="L4993">        Item asditem = (Item) CBSeguirUserSeguidor1.getSelectedItem();</span>
-<span class="nc bnc" id="L4994" title="All 2 branches missed.">        if(asditem!=null){</span>
-<span class="nc" id="L4995">            Cliente cliente = (Cliente) asditem.getValue();</span>
-<span class="nc" id="L4996">            Iterator it = cliente.ItemSiguiendo().iterator();</span>
+<span class="nc" id="L5000">        CBSeguirUserSeguidor2.removeAllItems();</span>
+<span class="nc" id="L5001">        Item asditem = (Item) CBSeguirUserSeguidor1.getSelectedItem();</span>
+<span class="nc bnc" id="L5002" title="All 2 branches missed.">        if(asditem!=null){</span>
+<span class="nc" id="L5003">            Cliente cliente = (Cliente) asditem.getValue();</span>
+<span class="nc" id="L5004">            Iterator it = cliente.ItemSiguiendo().iterator();</span>
             Item item;
-<span class="nc bnc" id="L4998" title="All 2 branches missed.">            while(it.hasNext()){</span>
-<span class="nc" id="L4999">                item = (Item) it.next();</span>
-<span class="nc" id="L5000">                CBSeguirUserSeguidor2.addItem(item);</span>
+<span class="nc bnc" id="L5006" title="All 2 branches missed.">            while(it.hasNext()){</span>
+<span class="nc" id="L5007">                item = (Item) it.next();</span>
+<span class="nc" id="L5008">                CBSeguirUserSeguidor2.addItem(item);</span>
             }   
         }
      
-<span class="nc" id="L5004">    }//GEN-LAST:event_CBSeguirUserSeguidor1ItemStateChanged</span>
+<span class="nc" id="L5012">    }//GEN-LAST:event_CBSeguirUserSeguidor1ItemStateChanged</span>
 
     private void CBsaveAlbumFavAlbumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBsaveAlbumFavAlbumActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L5008">    }//GEN-LAST:event_CBsaveAlbumFavAlbumActionPerformed</span>
+<span class="nc" id="L5016">    }//GEN-LAST:event_CBsaveAlbumFavAlbumActionPerformed</span>
 
     private void jMenuItemAESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAESActionPerformed
-<span class="nc" id="L5011">        ActualizarEstadoDeSuscripciones.setVisible(true);</span>
-<span class="nc" id="L5012">        AES_Textfield.setText(&quot;&quot;);</span>
-<span class="nc" id="L5013">        AES_ListaDeSuscripciones.removeAllItems();</span>
-<span class="nc" id="L5014">        List suscripciones = ICU.getItemSuscripciones();</span>
-<span class="nc bnc" id="L5015" title="All 2 branches missed.">        if(suscripciones!=null){</span>
-<span class="nc" id="L5016">            Iterator it = suscripciones.iterator();</span>
-<span class="nc bnc" id="L5017" title="All 2 branches missed.">            while(it.hasNext()){</span>
-<span class="nc" id="L5018">                Item suscItem = (Item)it.next();</span>
-<span class="nc" id="L5019">                AES_ListaDeSuscripciones.addItem(suscItem.toString());</span>
-<span class="nc" id="L5020">            }    </span>
+<span class="nc" id="L5019">        ActualizarEstadoDeSuscripciones.setVisible(true);</span>
+<span class="nc" id="L5020">        AES_Textfield.setText(&quot;&quot;);</span>
+<span class="nc" id="L5021">        AES_ListaDeSuscripciones.removeAllItems();</span>
+<span class="nc" id="L5022">        List suscripciones = ICU.getItemSuscripciones();</span>
+<span class="nc bnc" id="L5023" title="All 2 branches missed.">        if(suscripciones!=null){</span>
+<span class="nc" id="L5024">            Iterator it = suscripciones.iterator();</span>
+<span class="nc bnc" id="L5025" title="All 2 branches missed.">            while(it.hasNext()){</span>
+<span class="nc" id="L5026">                Item suscItem = (Item)it.next();</span>
+<span class="nc" id="L5027">                AES_ListaDeSuscripciones.addItem(suscItem.toString());</span>
+<span class="nc" id="L5028">            }    </span>
         }
         
-<span class="nc" id="L5023">    }//GEN-LAST:event_jMenuItemAESActionPerformed</span>
+<span class="nc" id="L5031">    }//GEN-LAST:event_jMenuItemAESActionPerformed</span>
 
     private void AES_BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AES_BotonCancelarActionPerformed
-<span class="nc" id="L5026">        ActualizarEstadoDeSuscripciones.setVisible(false);</span>
-<span class="nc" id="L5027">    }//GEN-LAST:event_AES_BotonCancelarActionPerformed</span>
+<span class="nc" id="L5034">        ActualizarEstadoDeSuscripciones.setVisible(false);</span>
+<span class="nc" id="L5035">    }//GEN-LAST:event_AES_BotonCancelarActionPerformed</span>
 
     private void AES_ListaDeSuscripcionesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_AES_ListaDeSuscripcionesItemStateChanged
-<span class="nc" id="L5030">        Suscripcion s = (Suscripcion) AES_ListaDeSuscripciones.getSelectedItem();</span>
-<span class="nc" id="L5031">        AES_Textfield.setText(s.getCliente().getNickname());</span>
-<span class="nc" id="L5032">    }//GEN-LAST:event_AES_ListaDeSuscripcionesItemStateChanged</span>
+<span class="nc" id="L5038">        Suscripcion s = (Suscripcion) AES_ListaDeSuscripciones.getSelectedItem();</span>
+<span class="nc" id="L5039">        AES_Textfield.setText(s.getCliente().getNickname());</span>
+<span class="nc" id="L5040">    }//GEN-LAST:event_AES_ListaDeSuscripcionesItemStateChanged</span>
 
     private void AES_BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AES_BotonActualizarActionPerformed
-<span class="nc" id="L5035">        Suscripcion s = (Suscripcion) AES_ListaDeSuscripciones.getSelectedItem();</span>
-<span class="nc" id="L5036">        String s_mode = AES_EA.getSelectedItem().toString();          </span>
-<span class="nc bnc" id="L5037" title="All 4 branches missed.">        if(s_mode != null &amp;&amp; s != null){</span>
+<span class="nc" id="L5043">        Suscripcion s = (Suscripcion) AES_ListaDeSuscripciones.getSelectedItem();</span>
+<span class="nc" id="L5044">        String s_mode = AES_EA.getSelectedItem().toString();          </span>
+<span class="nc bnc" id="L5045" title="All 4 branches missed.">        if(s_mode != null &amp;&amp; s != null){</span>
             EstadosDeSuscripcion estado;
-<span class="nc bnc" id="L5039" title="All 2 branches missed.">            if(s_mode.equalsIgnoreCase(&quot;Vigente&quot;))</span>
-<span class="nc" id="L5040">                estado = EstadosDeSuscripcion.Vigente;</span>
+<span class="nc bnc" id="L5047" title="All 2 branches missed.">            if(s_mode.equalsIgnoreCase(&quot;Vigente&quot;))</span>
+<span class="nc" id="L5048">                estado = EstadosDeSuscripcion.Vigente;</span>
             else
-<span class="nc" id="L5042">                estado = EstadosDeSuscripcion.Cancelada;</span>
-<span class="nc" id="L5043">            ICU.actualizarEstadoDeSuscripcion(s, estado);</span>
-<span class="nc" id="L5044">        }</span>
+<span class="nc" id="L5050">                estado = EstadosDeSuscripcion.Cancelada;</span>
+<span class="nc" id="L5051">            ICU.actualizarEstadoDeSuscripcion(s, estado);</span>
+<span class="nc" id="L5052">        }</span>
         else
-<span class="nc" id="L5046">            JOptionPane.showMessageDialog(this, &quot;ERROR: Campos vacios&quot;, &quot;Actualizar sucripcion&quot;, JOptionPane.ERROR_MESSAGE);</span>
+<span class="nc" id="L5054">            JOptionPane.showMessageDialog(this, &quot;ERROR: Campos vacios&quot;, &quot;Actualizar sucripcion&quot;, JOptionPane.ERROR_MESSAGE);</span>
             
-<span class="nc" id="L5048">    }//GEN-LAST:event_AES_BotonActualizarActionPerformed</span>
+<span class="nc" id="L5056">    }//GEN-LAST:event_AES_BotonActualizarActionPerformed</span>
 
     /**
      * @param args the command line arguments
@@ -5057,30 +5065,30 @@ public class Main extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L5060" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L5061" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L5062">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L5063">                    break;</span>
+<span class="nc bnc" id="L5068" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L5069" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L5070">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L5071">                    break;</span>
                 }
             }
-<span class="nc" id="L5066">        } catch (ClassNotFoundException ex) {</span>
-<span class="nc" id="L5067">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L5068">        } catch (InstantiationException ex) {</span>
-<span class="nc" id="L5069">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L5070">        } catch (IllegalAccessException ex) {</span>
-<span class="nc" id="L5071">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L5072">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
-<span class="nc" id="L5073">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L5074">        }</span>
+<span class="nc" id="L5074">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L5075">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L5076">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L5077">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L5078">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L5079">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L5080">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L5081">            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L5082">        }</span>
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L5078">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L5086">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L5080">                new Main().setVisible(true);</span>
-<span class="nc" id="L5081">            }</span>
+<span class="nc" id="L5088">                new Main().setVisible(true);</span>
+<span class="nc" id="L5089">            }</span>
         });
-<span class="nc" id="L5083">    }</span>
+<span class="nc" id="L5091">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AES_BotonActualizar;

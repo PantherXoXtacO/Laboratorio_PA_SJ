@@ -452,7 +452,8 @@ public class Manejador {
             Artista artist = this.TemporalAlbum.getArtista();
             addAlbumToGeneros(generos, this.TemporalAlbum);
             artist.addAlbum(this.TemporalAlbum); 
-            this.Albums.add(this.TemporalAlbum);           
+            this.Albums.add(this.TemporalAlbum);
+            
             em.merge(artist);
             em.merge(this.TemporalAlbum);
             
@@ -468,12 +469,23 @@ public class Manejador {
         
     }
     
-    public void addAlbumToGeneros(List<Genero> generos, Album album){
+    public void addAlbumToGeneros(List<Genero> generos, Album album){        
+        EntityManager em = emfactory.createEntityManager( );
         Iterator it=generos.iterator();
         Genero g;
         while(it.hasNext()){
             g=(Genero) it.next();
             g.addAlbum(album);
+            try {
+            em.getTransaction().begin();
+            em.merge(g);            
+            em.getTransaction().commit(); 
+            em.close();  
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                em.getTransaction().rollback();
+            }
         }
     }
     
@@ -502,6 +514,17 @@ public class Manejador {
     
     public void addTema(Tema tema){
         this.Temas.add(tema);
+        EntityManager em = emfactory.createEntityManager( );
+        try {
+            em.getTransaction().begin();
+            em.persist(tema);            
+            em.getTransaction().commit(); 
+            em.close();  
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            em.getTransaction().rollback();
+        }
     }
 
     public List getAllListsAsItem() {

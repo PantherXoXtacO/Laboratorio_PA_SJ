@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.EntityManager;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.EntityManagerFactory;
 
 @Entity
 @Table(name = "ALBUM")
@@ -113,7 +115,7 @@ public class Album implements Serializable {
         return genero;
     }
     
-    public void addTema(Tema tema){
+    public void addTema(Tema tema){        
         this.temas.add(tema);
     }
     

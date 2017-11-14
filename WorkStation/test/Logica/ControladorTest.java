@@ -183,18 +183,18 @@ public class ControladorTest {
 //        assertEquals(cantExpect, cantResult);
 //    }
     
-    @Test
-    public void testAltaGenero7() {
-        System.out.println("AltaGenero7");
-        String nombre = "General";
-        String padre = "";
-        Controlador instance = new Controlador();
-        instance.AltaGenero(nombre, padre);
-        List result = instance.getGeneroItem();
-        int cantExpect = result.size();
-        int cantResult = cantExpect;
-        assertEquals(cantExpect, cantResult);
-    }
+//    @Test
+//    public void testAltaGenero7() {
+//        System.out.println("AltaGenero7");
+//        String nombre = "General";
+//        String padre = "";
+//        Controlador instance = new Controlador();
+//        instance.AltaGenero(nombre, padre);
+//        List result = instance.getGeneroItem();
+//        int cantExpect = result.size();
+//        int cantResult = cantExpect;
+//        assertEquals(cantExpect, cantResult);
+//    }
 
 //
 //    /**

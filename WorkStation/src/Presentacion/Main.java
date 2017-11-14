@@ -415,7 +415,6 @@ public class Main extends javax.swing.JFrame {
         jMenuItemCrearLis = new javax.swing.JMenu();
         jMenuItemCrearListaPorDefecto = new javax.swing.JMenuItem();
         jMenuItemCrearListaParticular = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuConsultas = new javax.swing.JMenu();
         jMenuItemConCliente = new javax.swing.JMenuItem();
         jMenuItemConArtista = new javax.swing.JMenuItem();
@@ -3081,7 +3080,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(AltaAlbum1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(AltaALbumAgrTema1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                 .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1)))
@@ -3356,14 +3355,6 @@ public class Main extends javax.swing.JFrame {
         jMenuItemCrearLis.add(jMenuItemCrearListaParticular);
 
         jMenuRegistros.add(jMenuItemCrearLis);
-
-        jMenuItem1.setText("jMenuItem1");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenuRegistros.add(jMenuItem1);
 
         jMenuBar1.add(jMenuRegistros);
 
@@ -5064,10 +5055,6 @@ public class Main extends javax.swing.JFrame {
             
     }//GEN-LAST:event_AES_BotonActualizarActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        ExistArtistAltaAlbum.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -5424,7 +5411,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuConsultarAlbumGen1;
     private javax.swing.JMenu jMenuConsultarLista;
     private javax.swing.JMenu jMenuConsultas;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemAES;
     private javax.swing.JMenuItem jMenuItemConArtista;
     private javax.swing.JMenuItem jMenuItemConCliente;

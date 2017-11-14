@@ -23,7 +23,6 @@ public class Tema implements Serializable{
     private String nombre;
     private int duracion;
     private int orden;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "ALBUM_DEL_TEMA")
     private Album album;
 

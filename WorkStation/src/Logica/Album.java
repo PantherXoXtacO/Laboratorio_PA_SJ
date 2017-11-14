@@ -34,13 +34,10 @@ public class Album implements Serializable {
     private int anio;
     @Column(name = "ImgPath")
     private String img;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "ArtistasDelAlbum")
     private Artista artista;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "TemasDelAlbum")
     private List<Tema> temas;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "GenerosDelAlbum")
     private List<Genero> genero;
 

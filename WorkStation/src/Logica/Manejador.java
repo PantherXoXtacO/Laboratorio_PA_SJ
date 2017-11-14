@@ -517,7 +517,7 @@ public class Manejador {
         EntityManager em = emfactory.createEntityManager( );
         try {
             em.getTransaction().begin();
-            em.persist(tema);            
+            em.merge(tema);            
             em.getTransaction().commit(); 
             em.close();  
         }

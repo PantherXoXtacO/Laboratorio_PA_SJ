@@ -58,7 +58,7 @@ public class AltaTema extends HttpServlet {
             Album album = ICU.getAlbumByName(albumname);                
         Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
         album.addTema(tema);
-            System.out.println("Se persiste el tema");
+        ICU.addTemaToM(tema);
         
         String generosEnString = "";
         List<Genero> generos = album.getGeneros();

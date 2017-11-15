@@ -33,132 +33,136 @@ public class Album implements Serializable {
     @Column(name = &quot;ImgPath&quot;)
     private String img;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = &quot;Artista&quot;)
+    @JoinColumn(name = &quot;ArtistasDelAlbum&quot;)
     private Artista artista;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = &quot;TemasDelAlbum&quot;)
     private List&lt;Tema&gt; temas;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = &quot;GenerosDelAlbum&quot;)
     private List&lt;Genero&gt; genero;
 
-<span class="fc" id="L41">    public Album() {</span>
-<span class="fc" id="L42">        nombre=&quot;&quot;;</span>
-<span class="fc" id="L43">        anio = 0;</span>
-<span class="fc" id="L44">        img=&quot;&quot;;</span>
-<span class="fc" id="L45">        artista= null;</span>
-<span class="fc" id="L46">        temas = new ArrayList();</span>
-<span class="fc" id="L47">        genero = new ArrayList();</span>
-<span class="fc" id="L48">    }</span>
+<span class="fc" id="L45">    public Album() {</span>
+<span class="fc" id="L46">        nombre=&quot;&quot;;</span>
+<span class="fc" id="L47">        anio = 0;</span>
+<span class="fc" id="L48">        img=&quot;&quot;;</span>
+<span class="fc" id="L49">        artista= null;</span>
+<span class="fc" id="L50">        temas = new ArrayList();</span>
+<span class="fc" id="L51">        genero = new ArrayList();</span>
+<span class="fc" id="L52">    }</span>
     
-<span class="nc" id="L50">    public Album(String nom, int year, String imagen, Artista artist){</span>
-<span class="nc" id="L51">        nombre=nom;</span>
-<span class="nc" id="L52">        anio=year;</span>
-<span class="nc" id="L53">        img=imagen;</span>
-<span class="nc" id="L54">        artista=artist;        </span>
-<span class="nc" id="L55">        temas=new ArrayList();</span>
-<span class="nc" id="L56">        genero=new ArrayList();</span>
-<span class="nc" id="L57">    }</span>
+<span class="nc" id="L54">    public Album(String nom, int year, String imagen, Artista artist){</span>
+<span class="nc" id="L55">        nombre=nom;</span>
+<span class="nc" id="L56">        anio=year;</span>
+<span class="nc" id="L57">        img=imagen;</span>
+<span class="nc" id="L58">        artista=artist;        </span>
+<span class="nc" id="L59">        temas=new ArrayList();</span>
+<span class="nc" id="L60">        genero=new ArrayList();</span>
+<span class="nc" id="L61">    }</span>
     
-<span class="nc" id="L59">    public Album(Album album){</span>
-<span class="nc" id="L60">        nombre = album.nombre;</span>
-<span class="nc" id="L61">        anio = album.anio;</span>
-<span class="nc" id="L62">        img = album.img;</span>
-<span class="nc" id="L63">        artista = album.artista;</span>
-<span class="nc" id="L64">        temas = album.temas;</span>
-<span class="nc" id="L65">        genero = album.genero;</span>
-<span class="nc" id="L66">    }</span>
+<span class="nc" id="L63">    public Album(Album album){</span>
+<span class="nc" id="L64">        nombre = album.nombre;</span>
+<span class="nc" id="L65">        anio = album.anio;</span>
+<span class="nc" id="L66">        img = album.img;</span>
+<span class="nc" id="L67">        artista = album.artista;</span>
+<span class="nc" id="L68">        temas = album.temas;</span>
+<span class="nc" id="L69">        genero = album.genero;</span>
+<span class="nc" id="L70">    }</span>
     
     public String getNombre(){
-<span class="nc" id="L69">        return nombre;</span>
+<span class="nc" id="L73">        return nombre;</span>
     }
 
     public void setNombre(String nombre) {
-<span class="nc" id="L73">        this.nombre = nombre;</span>
-<span class="nc" id="L74">    }</span>
-
-    public void setAnio(int anio) {
-<span class="nc" id="L77">        this.anio = anio;</span>
+<span class="nc" id="L77">        this.nombre = nombre;</span>
 <span class="nc" id="L78">    }</span>
 
-    public void setImg(String img) {
-<span class="nc" id="L81">        this.img = img;</span>
+    public void setAnio(int anio) {
+<span class="nc" id="L81">        this.anio = anio;</span>
 <span class="nc" id="L82">    }</span>
 
-    public void setArtista(Artista artista) {
-<span class="nc" id="L85">        this.artista = artista;</span>
+    public void setImg(String img) {
+<span class="nc" id="L85">        this.img = img;</span>
 <span class="nc" id="L86">    }</span>
 
-    public void setGenero(List&lt;Genero&gt; genero) {
-<span class="nc" id="L89">        this.genero = genero;</span>
+    public void setArtista(Artista artista) {
+<span class="nc" id="L89">        this.artista = artista;</span>
 <span class="nc" id="L90">    }</span>
+
+    public void setGenero(List&lt;Genero&gt; genero) {
+<span class="nc" id="L93">        this.genero = genero;</span>
+<span class="nc" id="L94">    }</span>
     
     public int getAnio(){
-<span class="nc" id="L93">        return anio;</span>
+<span class="nc" id="L97">        return anio;</span>
     }
     
     public String getImg(){
-<span class="nc" id="L97">        return img;</span>
+<span class="nc" id="L101">        return img;</span>
     }
     
     public Artista getArtista(){
-<span class="nc" id="L101">        return artista;</span>
+<span class="nc" id="L105">        return artista;</span>
     }
     
     public List&lt;Tema&gt; getTemas(){
-<span class="nc" id="L105">        return temas;</span>
+<span class="nc" id="L109">        return temas;</span>
     }
     
     public List&lt;Genero&gt; getGeneros(){
-<span class="nc" id="L109">        return genero;</span>
+<span class="nc" id="L113">        return genero;</span>
     }
     
     public void addTema(Tema tema){
-<span class="nc" id="L113">        this.temas.add(tema);</span>
-<span class="nc" id="L114">    }</span>
+<span class="nc" id="L117">        this.temas.add(tema);</span>
+<span class="nc" id="L118">    }</span>
     
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //Funciones del @Entity
         public Long getId() {
-<span class="nc" id="L119">        return id;</span>
+<span class="nc" id="L123">        return id;</span>
     }
 
     public void setId(Long id) {
-<span class="nc" id="L123">        this.id = id;</span>
-<span class="nc" id="L124">    }</span>
+<span class="nc" id="L127">        this.id = id;</span>
+<span class="nc" id="L128">    }</span>
 
     @Override
     public int hashCode() {
-<span class="nc" id="L128">        int hash = 0;</span>
-<span class="nc bnc" id="L129" title="All 2 branches missed.">        hash += (id != null ? id.hashCode() : 0);</span>
-<span class="nc" id="L130">        return hash;</span>
+<span class="nc" id="L132">        int hash = 0;</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">        hash += (id != null ? id.hashCode() : 0);</span>
+<span class="nc" id="L134">        return hash;</span>
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-<span class="pc bpc" id="L136" title="1 of 2 branches missed.">        if (!(object instanceof Album)) {</span>
-<span class="nc" id="L137">            return false;</span>
-        }
-<span class="fc" id="L139">        Album other = (Album) object;</span>
-<span class="pc bpc" id="L140" title="5 of 8 branches missed.">        if ((this.id == null &amp;&amp; other.id != null) || (this.id != null &amp;&amp; !this.id.equals(other.id))) {</span>
+<span class="pc bpc" id="L140" title="1 of 2 branches missed.">        if (!(object instanceof Album)) {</span>
 <span class="nc" id="L141">            return false;</span>
         }
-<span class="fc" id="L143">        return true;</span>
+<span class="fc" id="L143">        Album other = (Album) object;</span>
+<span class="pc bpc" id="L144" title="5 of 8 branches missed.">        if ((this.id == null &amp;&amp; other.id != null) || (this.id != null &amp;&amp; !this.id.equals(other.id))) {</span>
+<span class="nc" id="L145">            return false;</span>
+        }
+<span class="fc" id="L147">        return true;</span>
     }
 
     @Override
     public String toString() {
-<span class="nc" id="L148">        return &quot;Logica.Album[ id=&quot; + id + &quot; ]&quot;;</span>
+<span class="nc" id="L152">        return &quot;Logica.Album[ id=&quot; + id + &quot; ]&quot;;</span>
     }    
  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public Tema getTema(String tema) {
-<span class="nc" id="L153">        Iterator it = temas.iterator();</span>
-<span class="nc" id="L154">        Tema t=null;</span>
-<span class="nc bnc" id="L155" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L156">            t=(Tema)it.next();</span>
-<span class="nc bnc" id="L157" title="All 2 branches missed.">            if(t.getNombre().equals(tema)){</span>
-<span class="nc" id="L158">                return t;</span>
+<span class="nc" id="L157">        Iterator it = temas.iterator();</span>
+<span class="nc" id="L158">        Tema t=null;</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L160">            t=(Tema)it.next();</span>
+<span class="nc bnc" id="L161" title="All 2 branches missed.">            if(t.getNombre().equals(tema)){</span>
+<span class="nc" id="L162">                return t;</span>
             }
         }
-<span class="nc" id="L161">        return t;</span>
+<span class="nc" id="L165">        return t;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

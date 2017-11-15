@@ -4,6 +4,7 @@
     Author     : Casca
 --%>
 
+<%@page import="DataType.DTUsuario"%>
 <%@page import="Enums.EstadosDeSuscripcion"%>
 <%@page import="Logica.Suscripcion"%>
 <%@page import="Logica.Fabrica"%>
@@ -16,20 +17,22 @@
     String username = (String )request.getSession().getAttribute("UserNick");
     Fabrica fabrica = Fabrica.getInstance();
     IControlador ICU = fabrica.getIControlador();
+    DTUsuario user= ICU.getUserData(username);
+    Suscripcion s = null;
     
     
-    if(request.getSession().getAttribute("UserNick")==null ||
+    if(request.getSession().getAttribute("UserNick")==null || user instanceof DTArtista ||
         ICU.consultarCliente(request.getSession().getAttribute("UserNick").toString()).getSuscripcion()==null ||
         ICU.consultarCliente(request.getSession().getAttribute("UserNick").toString()).getSuscripcion().getEstado()!=EstadosDeSuscripcion.Pendiente){
         response.sendRedirect("index.jsp");
         out.println("<html><body onload=\"alert('No hay cliente logeado o una suscripcion que actualizar')\"></body></html>");
     }
-            
-        String usernick = (String) session.getAttribute("UserNick");        
-        Cliente cliente = ICU.consultarCliente(usernick);
-        if(cliente!=null){
-            Suscripcion s = cliente.getSuscripcion();
-        }
+    else{
+       Cliente cliente = ICU.consultarCliente(username);
+       s = cliente.getSuscripcion();
+        
+    }
+       
             
     %>
 <!DOCTYPE html>
@@ -47,12 +50,14 @@
             %>
         <h1>Estado:    </h1> 
         <% 
-            if(cliente!=null){
-                Suscripcion s = cliente.getSuscripcion();
-                if(s!=null)
-                    out.println("<h1>" + s.getEstado().toString() + " (" + s.getTipo().toString() + ")" + "</h1>");
+            String usernick = (String) session.getAttribute("UserNick"); 
+            Cliente cliente = ICU.consultarCliente(usernick);
+            if(cliente!=null)
+                s = cliente.getSuscripcion();
+                    if(s!=null)
+                        out.println("<h1>" + s.getEstado().toString() + " (" + s.getTipo().toString() + ")" + "</h1>");
                     
-                }
+                
             %>
             
           

@@ -54,20 +54,20 @@ public class Controlador implements IControlador {
       
     @Override
     public void AltaGenero(String nombre, String padre){
-<span class="fc bfc" id="L57" title="All 2 branches covered.">        if(!nombre.equals(&quot;General&quot;)){ </span>
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">        if(!nombre.equals(&quot;General&quot;)){ </span>
 <span class="fc" id="L58">            Manejador mu = Manejador.getinstance();</span>
             Genero gen;
 <span class="fc" id="L60">            Genero nuevoGen=mu.findGenero(nombre);</span>
-<span class="fc bfc" id="L61" title="All 2 branches covered.">            if(nuevoGen==null){</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">            if(nuevoGen==null){</span>
 <span class="fc" id="L62">                nuevoGen=new Genero(nombre);</span>
-<span class="fc bfc" id="L63" title="All 4 branches covered.">                if(padre.equals(&quot;&quot;) || padre.equals(&quot;General&quot;)){</span>
+<span class="pc bpc" id="L63" title="3 of 4 branches missed.">                if(padre.equals(&quot;&quot;) || padre.equals(&quot;General&quot;)){</span>
 <span class="fc" id="L64">                    gen=mu.getGenero();</span>
 <span class="fc" id="L65">                    gen.addHijo(nuevoGen);</span>
                 }
                 else{
-<span class="fc" id="L68">                   gen=mu.findGenero(padre);</span>
-<span class="fc bfc" id="L69" title="All 2 branches covered.">                    if(gen!=null){</span>
-<span class="fc" id="L70">                       gen.addHijo(nuevoGen);</span>
+<span class="nc" id="L68">                   gen=mu.findGenero(padre);</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">                    if(gen!=null){</span>
+<span class="nc" id="L70">                       gen.addHijo(nuevoGen);</span>
                     }
                 }
 <span class="fc" id="L73">                mu.addGeneroToList(nuevoGen);</span>
@@ -413,10 +413,10 @@ public class Controlador implements IControlador {
 <span class="fc" id="L413">    }</span>
     
     @Override
-    public void addTemporalAlbum(Artista artist){
+    public void addTemporalAlbum(){
 <span class="fc" id="L417">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L418">        M.addTemporalAlbum(artist);</span>
-<span class="nc" id="L419">    }</span>
+<span class="fc" id="L418">        M.addTemporalAlbum();</span>
+<span class="fc" id="L419">    }</span>
     
     @Override
     public void createTemporalGenres(){
@@ -597,8 +597,48 @@ public class Controlador implements IControlador {
 <span class="nc" id="L597">        Manejador M = Manejador.getinstance();</span>
 <span class="nc" id="L598">        M.ActualizarImagenUsuario(UserNick, path);</span>
 <span class="nc" id="L599">    }</span>
+    
+    @Override
+    public List&lt;Album&gt; getAlbumsList() {
+<span class="nc" id="L603">        Manejador M = Manejador.getinstance();</span>
+<span class="nc" id="L604">        return M.getAlbumList();</span>
+    }
+
+    @Override
+    public Album getAlbumByName(String albumname) {
+<span class="nc" id="L609">        Manejador M = Manejador.getinstance();</span>
+<span class="nc" id="L610">        return M.getAlbumByName(albumname);</span>
+    }
+
+    @Override
+    public List&lt;String&gt; getAlbumsListtoString() {
+<span class="nc" id="L615">       List&lt;Album&gt; albums = getAlbumsList();</span>
+<span class="nc" id="L616">       Iterator it = albums.iterator();</span>
+<span class="nc" id="L617">       List&lt;String&gt; ret = new ArrayList();</span>
+       Album alb;
+       String albString;
+<span class="nc bnc" id="L620" title="All 2 branches missed.">       while(it.hasNext()){</span>
+<span class="nc" id="L621">           alb = (Album) it.next();</span>
+<span class="nc" id="L622">           albString = alb.getNombre();</span>
+<span class="nc" id="L623">           ret.add(albString);</span>
+       }
+<span class="nc" id="L625">       return ret;</span>
+    }
+
+    @Override
+    public List&lt;String&gt; albumListToString(List&lt;Album&gt; albums) {
+<span class="nc" id="L630">        Iterator it = albums.iterator();</span>
+<span class="nc" id="L631">        List&lt;String&gt; ret = null;</span>
+        Album album;
+        String str;
+<span class="nc bnc" id="L634" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L635">            album = (Album) it.next();</span>
+<span class="nc" id="L636">            str = album.getNombre();</span>
+<span class="nc" id="L637">            ret.add(str);</span>
+        }
+        
+<span class="nc" id="L640">        return ret;</span>
+    }
  
-    
-    
-}
+ }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

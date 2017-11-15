@@ -59,12 +59,13 @@ public class ContratarSuscripcion extends HttpServlet {
         else
             s= new Suscripcion(cliente, TiposDeSuscripcion.Semanal);       
         ICU.contratarSuscripcion(cliente, s.getTipo());
-        TiposDeSuscripciones = s.getTipo().toString();
+        
         
        
         
         response.setContentType("text/html;charset=UTF-8");        
         try (PrintWriter out = response.getWriter()) {
+            TiposDeSuscripciones = s.getTipo().toString();
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");

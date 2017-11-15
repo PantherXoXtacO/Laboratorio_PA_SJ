@@ -50,15 +50,21 @@
                 <script type="text/javascript">                    
                     function myFunction2(){
                         var genero = (String) document.getElementById("dropdown1").value;
-                        
+                        <c:set var="generoTraido" value=genero/>
                         <%
                             
-                            //Genero gen = ICU.getGeneroPorNombre(genero);
-                            //List<Album> albumsDelGenero = gen.getAlbums();
-                            //List<String> albums = ICU.albumListToString(albumsDelGenero);
-                            
+                            String genero = (String) pageContext.getAttribute("generoTraido");
+                            System.out.println(genero);
+                            if(genero!=null){
+                                Genero gen = ICU.getGeneroPorNombre(genero);
+                                List<Album> albumsDelGenero = gen.getAlbums();
+                                List<String> albums = ICU.albumListToString(albumsDelGenero); 
+                                pageContext.setAttribute("albumsEnString", albums); 
+                            }                         
+                                                       
                         %>                 
-                               
+                        <c:out id="albumsTraidos" value="${albumsEnString}"/>                        
+                        var albumsTraidos2 = document.getElementById("albumsTraidos");
                         var array2 = albums.match(/\w+/g);
                         var arrayLength = array2.length;
                         var x = document.getElementById("dropdown2"); 

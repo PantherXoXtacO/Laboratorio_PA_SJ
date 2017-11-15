@@ -3080,7 +3080,7 @@ public class Main extends javax.swing.JFrame {
                     .addGroup(AltaAlbum1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(AltaALbumAgrTema1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                 .addGroup(AltaAlbum1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AltaAlbumbtnCancelar1)
                     .addComponent(AltaAlbumbtnConfirmar1)))
@@ -4825,21 +4825,29 @@ public class Main extends javax.swing.JFrame {
         
         int año = Integer.parseInt(AltaAlbumAnio.getText());
         String imagePath = "";
+        if(imagePath.equals("")){
+            //cambiar a default
+        }
         String artista = ExistArtistAltaAlbumArtistText.getText();
         
-        Artista artist = ICU.consultarArtista(artista);
-        List<Genero> generos = ICU.getTemporalGenres();
+       Artista artist = ICU.consultarArtista(artista);
+       List<Genero> generos = ICU.getTemporalGenres();
+       Genero generotest = ICU.getGeneroPorNombre("Rock");
+       if(generos!=null && generotest!=null)
+            generos.add(generotest);
+           
         if(artist!=null){
+            ICU.createTemporalAlbum();
             ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-            ICU.addTemporalAlbum(artist);
+            ICU.addTemporalAlbum();
             ICU.deleteTemporalAlbum();
             ICU.wipeTemporalGenres();
             JOptionPane.showMessageDialog(this, "Album creado con exito", "Alta album", JOptionPane.INFORMATION_MESSAGE);
             AltaAlbum1.setVisible(false);
-        }
+      }
         else{
             JOptionPane.showMessageDialog(this, "era null", "Alta album", JOptionPane.ERROR_MESSAGE);
-        }
+       }
  
     }//GEN-LAST:event_AltaAlbumbtnConfirmar1ActionPerformed
 
@@ -4883,7 +4891,7 @@ public class Main extends javax.swing.JFrame {
                 while(itCliente2.hasNext()){
                     itemCliente2=(Item) itCliente2.next();
                     jComboBoxGeneroPert1.addItem(itemCliente2);
-            }
+                }
             }else{
                 JOptionPane.showMessageDialog(this, "ERROR: No existe el artista", "ERROR: Elección de artista", JOptionPane.ERROR_MESSAGE);
                 this.ExistArtistAltaAlbum.setVisible(false);

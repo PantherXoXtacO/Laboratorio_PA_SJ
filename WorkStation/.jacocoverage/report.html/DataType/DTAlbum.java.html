@@ -25,22 +25,22 @@ public class DTAlbum {
     private List generos;
     
 <span class="nc" id="L27">    public DTAlbum(Album album) {</span>
-<span class="nc" id="L28">        nombre=album.getNombre();</span>
-<span class="nc" id="L29">        anio=album.getAnio();</span>
-<span class="nc" id="L30">        imagen=album.getImg();</span>
-<span class="nc" id="L31">        artista=album.getArtista().getNombre();</span>
-<span class="nc" id="L32">        Iterator genIt = album.getGeneros().iterator();</span>
-        Genero g;
-<span class="nc bnc" id="L34" title="All 2 branches missed.">        while(genIt.hasNext()){</span>
-<span class="nc" id="L35">            g=(Genero) genIt.next();</span>
-<span class="nc" id="L36">            generos.add(g.getNombre());</span>
-        }
-<span class="nc" id="L38">        Iterator temaIt = album.getTemas().iterator();</span>
-        Tema t;
-<span class="nc bnc" id="L40" title="All 2 branches missed.">        while(temaIt.hasNext()){</span>
-<span class="nc" id="L41">            t = (Tema) temaIt.next();</span>
-<span class="nc" id="L42">            temas.add(new DTTema (t));</span>
-        }
+//        nombre=album.getNombre();
+//        anio=album.getAnio();
+//        imagen=album.getImg();
+//        artista=album.getArtista().getNombre();
+//        Iterator genIt = album.getGeneros().iterator();
+//        Genero g;
+//        while(genIt.hasNext()){
+//            g=(Genero) genIt.next();
+//            generos.add(g.getNombre());
+//        }
+//        Iterator temaIt = album.getTemas().iterator();
+//        Tema t;
+//        while(temaIt.hasNext()){
+//            t = (Tema) temaIt.next();
+//            temas.add(new DTTema (t));
+//        }
 <span class="nc" id="L44">    }</span>
 
     public String getNombre() {

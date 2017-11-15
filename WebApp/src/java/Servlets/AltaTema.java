@@ -9,11 +9,13 @@ import Logica.Album;
 import Logica.Fabrica;
 import Logica.Genero;
 import Logica.IControlador;
+import Logica.Manejador;
 import Logica.Tema;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
+import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -56,6 +58,8 @@ public class AltaTema extends HttpServlet {
             Album album = ICU.getAlbumByName(albumname);                
         Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
         album.addTema(tema);
+        ICU.addTemaToM(tema);
+        
         String generosEnString = "";
         List<Genero> generos = album.getGeneros();
         Genero gen;

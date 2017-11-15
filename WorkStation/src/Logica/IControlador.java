@@ -110,5 +110,6 @@ public interface IControlador{
     public abstract Album getAlbumByName(String albumname);
     public abstract List<String> getAlbumsListtoString();
     public abstract List<String> albumListToString(List<Album> albums);
+    public abstract Boolean YaSigue(String seguidor, String seguido); //Retorna true si el seguidor sigue al seguido 
 }
 

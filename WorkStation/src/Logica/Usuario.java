@@ -176,4 +176,15 @@ public abstract class Usuario implements Serializable {
     }
     public abstract List getSiguiendoWeb();
     
+    
+    public Boolean YaSigue(String seguido) {
+        Iterator it = seguidores.iterator();
+        Usuario aux;
+        while(it.hasNext()){
+            aux = (Usuario) it.next();
+            if(aux.getNickname().equals(seguido))
+                return true;
+        }
+        return false;
+    }    
 }    

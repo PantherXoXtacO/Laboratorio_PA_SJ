@@ -716,4 +716,16 @@ public class Manejador {
         }
         return null;        
     }
+
+    public Boolean YaSigue(String seguidor, String seguido) {
+        Cliente c;
+        Iterator it = clientes.iterator();
+        while(it.hasNext()){
+            c=(Cliente) it.next();
+            if(c.getNickname().equals(seguidor)){
+                return c.YaSigue(seguido);
+            }       
+        }
+        return false;
+    }
 }

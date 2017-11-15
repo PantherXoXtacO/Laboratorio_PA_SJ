@@ -1,26 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
-import DataType.DTCliente;
-import DataType.DTUsuario;
 import Logica.Controlador;
+import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Logica.IControlador;
 
-/**
- *
- * @author Usuario
- */
-public class VerInfoUser extends HttpServlet {
+
+@WebServlet(name = "SeguirUser", urlPatterns = {"/SeguirUser"})
+public class SeguirUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,21 +25,12 @@ public class VerInfoUser extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        String nick = request.getParameter("dataname");
-        IControlador controlador = new Controlador();
-        DTUsuario u = controlador.getUserData(nick);
-        if(u!=null){
-            request.getSession().setAttribute("userConsult", u.getNick());
-            request.setAttribute("userInfo", u);
-            if(u instanceof DTCliente){
-               getServletConfig().getServletContext().getRequestDispatcher("/ConsultarCliente.jsp").forward(request,response);
-            }
-            else{
-                getServletConfig().getServletContext().getRequestDispatcher("/ConsultarArtista.jsp").forward(request,response);
-            } 
-        }
-        else{
-            out.println("<html><body onload=\"alert('Usuario no encontrado')\"></body></html>");
+        String user = (String) request.getSession().getAttribute("UserNick");
+        String user_seguir = (String) request.getSession().getAttribute("userConsult");
+        if(!(user.equals(user_seguir))){
+            IControlador controlador = new Controlador();
+            controlador.SeguirUsuario(user, user);
+            out.println("<html><body onload=\"alert('Ahora Sigues a: "+ user_seguir +"')\"></body></html>");
             response.setHeader("Refresh", "0; URL=http://localhost:8080/Lab/");
         }
     }

@@ -68,4 +68,8 @@ public class DTUsuario {
     public String getImg() {
         return img;
     }
+    
+    public List getSeguidores(){
+        return seguidores;
+    }
 }

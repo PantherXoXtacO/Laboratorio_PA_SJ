@@ -1,3 +1,5 @@
+<%@page import="Logica.Controlador"%>
+<%@page import="Logica.IControlador"%>
 <%@page import="DataType.*"%>
 <%@page import="java.util.Iterator"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
@@ -89,6 +91,58 @@
                 %>
             </ul>
         </div>
+        
+        <h2>Siguiendo</h2>            
+        <div>
+            <ul>
+               <%
+                   Iterator itSiguiendo = user.getSiguiendo().iterator();
+                   DTUsuario user_siguiendo;
+                   while(itSiguiendo.hasNext()){
+                       user_siguiendo = (DTUsuario) itSiguiendo.next();
+                       out.println("<li>" + user_siguiendo.getNick() + "</li>");
+                   }
+               %>
+            </ul>    
+        </div>
+            
+        <h2>Seguidores</h2>
+        <div>
+            <ul>
+                <%
+                    Iterator itSeguidores = user.getSeguidores().iterator();
+                    DTUsuario user_seguidores;
+                    while(itSeguidores.hasNext()){
+                        user_seguidores = (DTUsuario) itSeguidores.next();
+                        out.println("<li>" + user_seguidores.getNick() + "</li>");
+                    }
+                %>
+            </ul>
+        </div>
+   <%
+        if(request.getSession().getAttribute("UserNick")!=null){
+            if((Boolean)request.getSession().getAttribute("EsArtista") == false){
+                IControlador controlador = new Controlador();
+                String seguidor = (String) request.getSession().getAttribute("UserNick");
+                String seguido = (String) request.getSession().getAttribute("userConsult");
+                if(!controlador.YaSigue(seguidor, seguido)){
+                    out.println("<form name=\"SeguirUser\" action=\"/Lab/SeguirUser\" method=\"POST\">");
+                    if(user.getNick().equals(request.getSession().getAttribute("UserNick"))){
+                        out.println("<input type=\"submit\" value=\"Seguir\" disabled=\"true\">");
+                    }
+                    else{
+                        out.println("<input type=\"submit\" value=\"Seguir\" >");
+                    }
+                    out.println("</form>"); 
+                }
+                else{
+                    out.println("<form name=\"SeguirUser\" action=\"/Lab/DejarDeSeguirUser\" method=\"POST\">");
+                    out.println("<input type=\"submit\" value=\"Dejar De Seguir\" >");
+                    out.println("</form>");
+                }
+            }
+        }
+    %>
         
     </body>
 </html>

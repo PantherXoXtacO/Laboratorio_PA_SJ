@@ -639,5 +639,11 @@ public class Controlador implements IControlador {
         
         return ret;
     }
+
+    @Override
+    public Boolean YaSigue(String seguidor, String seguido) {
+        Manejador m = Manejador.getinstance();
+        return m.YaSigue(seguidor, seguido);
+    }
  
  }

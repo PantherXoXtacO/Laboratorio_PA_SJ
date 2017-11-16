@@ -66,13 +66,13 @@
             </ul>
         </div>
             
-    <%
+   <%
         if(request.getSession().getAttribute("UserNick")!=null){
             if((Boolean)request.getSession().getAttribute("EsArtista") == false){
                 IControlador controlador = new Controlador();
                 String seguidor = (String) request.getSession().getAttribute("UserNick");
-                String seguido = (String) request.getSession().getAttribute("userConsult");
-                if(!controlador.YaSigue(seguidor, seguido)){
+                //String seguido = (String) request.getSession().getAttribute("userConsult");
+                if(!user.yaSigue(seguidor)){
                     out.println("<form name=\"SeguirUser\" action=\"/Lab/SeguirUser\" method=\"POST\">");
                     if(user.getNick().equals(request.getSession().getAttribute("UserNick"))){
                         out.println("<input type=\"submit\" value=\"Seguir\" disabled=\"true\">");
@@ -83,7 +83,7 @@
                     out.println("</form>"); 
                 }
                 else{
-                    out.println("<form name=\"SeguirUser\" action=\"/Lab/DejarDeSeguirUser\" method=\"POST\">");
+                    out.println("<form name=\"DejarDeSeguirUser\" action=\"/Lab/DejarDeSeguirUser\" method=\"POST\">");
                     out.println("<input type=\"submit\" value=\"Dejar De Seguir\" >");
                     out.println("</form>");
                 }

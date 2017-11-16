@@ -7,29 +7,19 @@ package Presentacion;
 
 import Enums.EstadosDeSuscripcion;
 import Logica.Album;
-import Logica.Item;
 import Logica.Artista;
 import Logica.Cliente;
 import Logica.Fabrica;
 import Logica.IControlador;
 import javax.swing.JOptionPane;
 import Logica.Fecha;
-import java.awt.image.BufferedImage;
 import javax.swing.tree.DefaultTreeModel;
 import Logica.Genero;
-import Logica.ListaDeReproduccion;
 import Logica.ListaParticular;
 import Logica.Manejador;
-import Logica.Usuario;
-import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.Image;
-import java.beans.PropertyVetoException;
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.List;
-import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import java.util.Iterator;
 import javax.swing.ImageIcon;
@@ -37,18 +27,13 @@ import javax.swing.JTree;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeNode;
 import Logica.Item;
 import Logica.ListaDeReproduccion;
 import Logica.Suscripcion;
 import Logica.Tema;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JList;
-import static jdk.nashorn.internal.runtime.regexp.joni.Syntax.Java;
 
 /**
  *

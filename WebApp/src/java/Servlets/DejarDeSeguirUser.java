@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Servlets;
 
 import Logica.Controlador;
@@ -10,9 +15,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet(name = "SeguirUser", urlPatterns = {"/SeguirUser"})
-public class SeguirUser extends HttpServlet {
+/**
+ *
+ * @author Usuario
+ */
+@WebServlet(name = "DejarDeSeguirUser", urlPatterns = {"/DejarDeSeguirUser"})
+public class DejarDeSeguirUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,8 +37,8 @@ public class SeguirUser extends HttpServlet {
         String user_seguir = (String) request.getSession().getAttribute("userConsult");
         if(!(user.equals(user_seguir))){
             IControlador controlador = new Controlador();
-            controlador.SeguirUsuario(user, user_seguir);
-            out.println("<html><body onload=\"alert('Ahora Sigues a: "+ user_seguir +"')\"></body></html>");
+            controlador.DejarDeSeguirUsuario(user, user_seguir);
+            out.println("<html><body onload=\"alert('Dejaste de seguir a: "+ user_seguir +"')\"></body></html>");
             response.setHeader("Refresh", "0; URL=/Lab/");
         }
     }

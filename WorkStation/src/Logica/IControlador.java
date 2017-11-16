@@ -62,7 +62,6 @@ public interface IControlador{
     
     
     public abstract void AgregarTema(Usuario user);
-    public abstract void SeguirUsuario(String seguidor, String seguido);
     
     public abstract void quitarTemaDeLista(Object selectedItem, Object selectedItem0);
 
@@ -72,7 +71,6 @@ public interface IControlador{
 
     public abstract void QuitarListaFav(Object selectedItem, Object selectedItem0);
     public abstract void GuardarTemaFavorito(Object selectedItem, Object selectedItem0);
-    public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
     public abstract void createTemporalAlbum();
     public abstract void deleteTemporalAlbum();
     public abstract void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath);
@@ -110,6 +108,7 @@ public interface IControlador{
     public abstract Album getAlbumByName(String albumname);
     public abstract List<String> getAlbumsListtoString();
     public abstract List<String> albumListToString(List<Album> albums);
-    public abstract Boolean YaSigue(String seguidor, String seguido); //Retorna true si el seguidor sigue al seguido 
+    public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
+    public abstract void SeguirUsuario(String seguidor, String seguido);
 }
 

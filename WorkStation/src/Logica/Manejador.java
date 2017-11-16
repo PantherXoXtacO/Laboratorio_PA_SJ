@@ -207,14 +207,11 @@ public class Manejador {
         
     
     public Usuario obtenerUsuario(String nickname){
-        Iterator it = usuarios.iterator();
-        Usuario user;
-        while(it.hasNext()){
-            user = (Usuario)it.next();
-            if(user.getNickname().equals(nickname))
-                return user;
-        }
-        return null;
+        Usuario ret = null;
+        ret=obtenerCliente(nickname);
+        if(ret==null)
+            ret=obtenerArtista(nickname);
+        return ret;
     }
     
     
@@ -738,15 +735,4 @@ public class Manejador {
         return null;        
     }
 
-    public Boolean YaSigue(String seguidor, String seguido) {
-        Cliente c;
-        Iterator it = clientes.iterator();
-        while(it.hasNext()){
-            c=(Cliente) it.next();
-            if(c.getNickname().equals(seguidor)){
-                return c.YaSigue(seguido);
-            }       
-        }
-        return false;
-    }
 }

@@ -105,7 +105,7 @@ public class Controlador implements IControlador {
             m.ActualizarUsuario(u1);
             m.ActualizarUsuario(u2);
        }
-    }    
+    }   
     
     @Override
     public boolean nicknameLibre(String nickname){
@@ -324,21 +324,6 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public void SeguirUsuario(String seguidor, String seguido) {
-         Manejador M=Manejador.getinstance();
-         Usuario u1 = M.obtenerUsuario(seguidor);
-         Usuario u2 = M.obtenerUsuario(seguido);
-         if(u1!=null && u2!=null){
-            u1.addFollow(u2);
-            u2.addFollower(u1);
-            M.ActualizarUsuario(u1);
-            M.ActualizarUsuario(u2);
-       }else{
-             System.out.println("nope");
-         }
-    }
-
-    @Override
     public void quitarTemaDeLista(Object selectedItem, Object selectedItem0) {
         Item l = (Item) selectedItem;
         Item t = (Item) selectedItem0;
@@ -386,12 +371,14 @@ public class Controlador implements IControlador {
     @Override
     public void DejarDeSeguirUsuario(String seguidor, String seguido){
         Manejador M=Manejador.getinstance();
-         Usuario u1 = M.obtenerUsuario(seguidor);
-         Usuario u2 = M.obtenerUsuario(seguido);
-         if(u1!=null && u2!=null){
-             u1.removeFollow(u2);
-             u2.removeFollower(u1);
-       }
+        Usuario u1 = M.obtenerUsuario(seguidor);
+        Usuario u2 = M.obtenerUsuario(seguido);
+        if(u1!=null && u2!=null){
+            u1.removeFollow(u2);
+            u2.removeFollower(u1);
+            M.ActualizarUsuario(u1);
+            M.ActualizarUsuario(u2);
+        }
     }
     
     @Override
@@ -647,10 +634,18 @@ public class Controlador implements IControlador {
         return ret;
     }
 
+    
     @Override
-    public Boolean YaSigue(String seguidor, String seguido) {
-        Manejador m = Manejador.getinstance();
-        return m.YaSigue(seguidor, seguido);
+    public void SeguirUsuario(String seguidor, String seguido) {
+         Manejador M=Manejador.getinstance();
+         Usuario u1 = M.obtenerUsuario(seguidor);
+         Usuario u2 = M.obtenerUsuario(seguido);
+         if(u1!=null && u2!=null){
+            u1.addFollow(u2);
+            u2.addFollower(u1);
+            M.ActualizarUsuario(u1);
+            M.ActualizarUsuario(u2);
+       }
     }
  
  }

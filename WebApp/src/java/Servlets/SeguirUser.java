@@ -31,7 +31,7 @@ public class SeguirUser extends HttpServlet {
             IControlador controlador = new Controlador();
             controlador.SeguirUsuario(user, user);
             out.println("<html><body onload=\"alert('Ahora Sigues a: "+ user_seguir +"')\"></body></html>");
-            response.setHeader("Refresh", "0; URL=http://localhost:8080/Lab/");
+            response.setHeader("Refresh", "0; URL=/Lab/");
         }
     }
 

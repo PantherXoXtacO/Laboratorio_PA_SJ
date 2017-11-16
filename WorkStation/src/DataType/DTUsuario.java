@@ -72,4 +72,16 @@ public class DTUsuario {
     public List getSeguidores(){
         return seguidores;
     }
+    
+    public boolean yaSigue(String s){
+        DTUsuario aux;
+        Iterator it = seguidores.iterator();
+        while(it.hasNext()){
+            aux=(DTUsuario) it.next();
+            if(aux.getNick().equals(s)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

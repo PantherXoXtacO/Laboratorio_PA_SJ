@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Logica;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -20,7 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FECHA")
-public class Fecha{
+public class Fecha implements Serializable{
     @Id
     @GeneratedValue(strategy= GenerationType.TABLE) 
     long id;

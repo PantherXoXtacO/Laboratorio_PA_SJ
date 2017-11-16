@@ -8,7 +8,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import DataType.*;
-import Enums.TiposDeSuscripcion;
 
 
 public class Manejador {
@@ -587,6 +586,28 @@ public class Manejador {
         return false;
     }
 
+    
+    public void ActualizarUsuario(Usuario u){
+        EntityManager em = emfactory.createEntityManager();        
+            try{
+                if(u instanceof Cliente){
+                    em.getTransaction().begin();
+                    em.merge((Cliente)u);
+                    em.getTransaction().commit(); 
+                    em.close();
+                }
+                else{
+                    em.getTransaction().begin();
+                    em.merge((Artista)u);
+                    em.getTransaction().commit(); 
+                    em.close();
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+                em.getTransaction().rollback();
+            }
+    }
 
 /////////////////////////////////////FUNCIONES DE SERVLET//////////////////////////////////////////////
 

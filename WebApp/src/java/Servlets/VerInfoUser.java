@@ -48,7 +48,7 @@ public class VerInfoUser extends HttpServlet {
         }
         else{
             out.println("<html><body onload=\"alert('Usuario no encontrado')\"></body></html>");
-            response.setHeader("Refresh", "0; URL=http://localhost:8080/Lab/");
+            response.setHeader("Refresh", "0; URL=/Lab/");
         }
     }
 

@@ -719,6 +719,19 @@ public class Manejador {
             }
         }        
     }
+    
+    void ActualizarImagenAlbum(String AlbumNombre, String path) {
+        Iterator itC = Albums.iterator();
+        Album c;
+        while(itC.hasNext()){
+            c=(Album) itC.next();
+            if(c.getNombre().equals(AlbumNombre)){
+                c.setImg(path);
+                return;
+            }
+        }
+    }
+    
       public List<Album> getAlbumList(){
         return this.Albums;
     }

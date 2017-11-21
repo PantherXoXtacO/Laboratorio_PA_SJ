@@ -11,12 +11,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro</title>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"
+	type="text/javascript"></script>
+        <script src="resources/js/CheckMailUse.js" type="text/javascript"></script>
     </head>
+    
     <body>
         <form id="FormRegistro" name="FormRegistro" action ="/Lab/Registrar" method="POST">
             Nick*:
-            <input id="userNick" type="Text" size="20" name="userNick"><br>
+            <input id="userNick" type="Text" size="20" name="userNick"><z id="UsedNick"></z><br> 
             Mail*:
             <input id="userMail" type="email" size="20" name="userMail"><z id="UsedMail"></z><br> 
             Nombre:
@@ -61,30 +65,6 @@
     }
     </script>
     
-    <script>function checkMail() {
-        var mail = document.getElementById("userMail").value;
-        if(mail === ""){
-            return false;
-        }
-        else{
-            function request(){
-                var url = "checkValidation?action=checkMail&?mail=" + mail;
-                req.open("GET", url, true);
-                req.onreadystatechange = callback;
-                req.send(null);
-            }
-            function callback(){
-                if (req.readyState === 4 ){
-                    if(req.status === 200){
-                        parseMassages()
-                    }
-                }
-            }
-
-        }
-    }
-    </script>
-    
     <script>function setArtInfoVisible(){
         var r = document.getElementById('radioButtonEsArtista');
         if(r.checked){
@@ -105,7 +85,6 @@
         }
     }
     </script>
-    
     
 </html>
 

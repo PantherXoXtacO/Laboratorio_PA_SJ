@@ -175,7 +175,7 @@ public class Manejador {
                 return true;
         }
         return false;
-    } 
+    }
     
     public boolean artistLibre(String nombre){
             if(this.obtenerArtista(nombre)== null)

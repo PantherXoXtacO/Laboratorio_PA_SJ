@@ -98,6 +98,7 @@ public interface IControlador{
     public abstract void addListaParticular(String user, String nombreLista, String img);
     public abstract void AgregarTemaListaWeb(String user, String lista, String artista, String album, String tema);
     public abstract void ActualizarImagenUsuario(String UserNick, String path);
+    public abstract void ActualizarImagenAlbum(String AlbumNombre, String path);
     
     
     public abstract List<String> GenerosToString(List<Genero> generos);

@@ -593,6 +593,12 @@ public class Controlador implements IControlador {
     }
     
     @Override
+    public void ActualizarImagenAlbum(String AlbumNombre, String path) {
+        Manejador M = Manejador.getinstance();
+        M.ActualizarImagenAlbum(AlbumNombre, path);
+    }
+    
+    @Override
     public List<Album> getAlbumsList() {
         Manejador M = Manejador.getinstance();
         return M.getAlbumList();

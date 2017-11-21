@@ -15,8 +15,8 @@ public class DTArtista extends DTUsuario{
     public DTArtista(Usuario u) {
         super(u);
         Artista a = (Artista) u;
-        String biografia = a.getBiografia();
-        String dir_web = a.getDir_web();
+        biografia = a.getBiografia();
+        dir_web = a.getDir_web();
         Iterator it = a.getAlbums().iterator();
         albums = new ArrayList();
         while(it.hasNext()){

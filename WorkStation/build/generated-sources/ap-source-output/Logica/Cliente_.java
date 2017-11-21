@@ -9,7 +9,11 @@ import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
+<<<<<<< HEAD
 @Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-11-20T23:46:37")
+=======
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-11-16T19:32:40")
+>>>>>>> Diego
 @StaticMetamodel(Cliente.class)
 public class Cliente_ extends Usuario_ {
 

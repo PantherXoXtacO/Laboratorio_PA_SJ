@@ -39,7 +39,6 @@
     
     List<String> generos = ICU.getGenerosInString();   
     List<String> albums = ICU.getAlbumsListtoString();
-    System.out.println(albums);
 %>
 
 
@@ -47,6 +46,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/agregarGenero.js" type="text/javascript"></script>
         <title>Alta Album</title>
     </head>
     <body>
@@ -56,8 +57,8 @@
             <input type="text" name="nombre_album" value="" />
             <p>Año de creacion: </p>
             <input type="text" name="anio_album" value="" />
-            <p>Genero: </p>
-            <select name="dropdown3" id="mySelect">
+            <p id="p2">Genero: </p>
+            <select name="mySelect" id="mySelect">
                 <script type="text/javascript">                    
                     function myFunction(){
                         var generos = document.getElementById("hiddenTemp1").value;
@@ -74,10 +75,31 @@
                     window.onload = myFunction;
                 </script>
             </select>
-            <input type="submit" value="Agregar Genero" />
-            <input type="submit" value="Cambiar imagen" />
             <input type="submit" value="Crear Album" />
+        </form>     
+            
+        <form>
+            <input type="hidden" name="hiddenTemp2" id="hiddenTemp2">
+            <input type="submit" value="Agregar Genero" id="agregarAlbumBtn" /> 
         </form>
+           
+            
+        
+        <input type="submit" value="Cambiar imagen" />
+        <h1 id="keker" name="keker"> lel </h1>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){            
+            //$("#p2").addClass("blue");
+            //$("#p2").hide();
+            var v = $("#mySelect option:selected").text();
+            //window.alert(v);
+            $("#keker").text("kek");
+            });
+        </script> 
+        <style type="text/css">
+            .blue { color: blue; }
+        </style>
         
     </body>
 </html>

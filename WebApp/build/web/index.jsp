@@ -6,13 +6,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="./resources/bootstrap-3.3.7-dist/css/bootstrap.min.css"></link>
     <link rel="stylesheet" type="text/css" href="./resources/css/general.css"></link>
-    
-
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+   
+   
     <title> Espotify </title>
 
 </head>
 
 <body>
+
 
     <header class="header">
         <span id="header-tit" onclick="location.reload()"><img class="img" src="./resources/images/espotify-drowlogo.png"></span>

@@ -15,8 +15,8 @@ public class DTArtista extends DTUsuario{
     public DTArtista(Usuario u) {
 <span class="nc" id="L16">        super(u);</span>
 <span class="nc" id="L17">        Artista a = (Artista) u;</span>
-<span class="nc" id="L18">        String biografia = a.getBiografia();</span>
-<span class="nc" id="L19">        String dir_web = a.getDir_web();</span>
+<span class="nc" id="L18">        biografia = a.getBiografia();</span>
+<span class="nc" id="L19">        dir_web = a.getDir_web();</span>
 <span class="nc" id="L20">        Iterator it = a.getAlbums().iterator();</span>
 <span class="nc" id="L21">        albums = new ArrayList();</span>
 <span class="nc bnc" id="L22" title="All 2 branches missed.">        while(it.hasNext()){</span>

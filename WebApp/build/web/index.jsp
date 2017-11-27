@@ -41,7 +41,7 @@
           <ul>
               <li><a href="Registrar.jsp" class="tree_label"> Registrar Usuario</a></li>
               <li><a href=".java" class="tree_label"> Crear Genero</a></li>
-              <li><a href="AltaAlbum.jsp" class="tree_label"> Crear Album</a></li>
+              <li><a href="AgregarGenerosAlAlbum.jsp" class="tree_label"> Crear Album</a></li>
               <li><a href="AltaTema.jsp" class="tree_label"> Crear Tema</a></li>
               <li>
               <input type="checkbox" checked="checked" id="c2" />

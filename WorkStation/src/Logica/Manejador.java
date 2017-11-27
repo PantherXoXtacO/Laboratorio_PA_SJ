@@ -429,7 +429,7 @@ public class Manejador {
     }
     
     public void configTemporalAlbum(Artista artist, String nombre, List<Genero> generos, int año, String imagePath){
-        if(artist != null && generos != null){
+        if(artist != null){
             this.TemporalAlbum.setArtista(artist);
             this.TemporalAlbum.setNombre(nombre);
             this.TemporalAlbum.setGenero(generos);
@@ -747,5 +747,6 @@ public class Manejador {
         }
         return null;        
     }
+
 
 }

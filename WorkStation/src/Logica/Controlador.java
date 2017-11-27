@@ -653,5 +653,31 @@ public class Controlador implements IControlador {
             M.ActualizarUsuario(u2);
        }
     }
+
+    @Override
+    public List<Genero> GenerosFromString(String generos) {
+        List<Genero> ret = new ArrayList();
+        String regex = "([^a-zA-Z']+)'*\\1*";
+        String[] split = generos.split(regex);
+        int size = split.length;
+        Genero g;                
+        for(int i=0; i<size;i++) {
+           g= getGeneroPorNombre(split[i]);
+           ret.add(g);
+        }            
+        return ret;
+    }
+
+    @Override
+    public String imprimirListaDeGeneros(List<Genero> generos) {
+        Iterator it = generos.iterator();
+        String ret = "";
+        Genero g;
+        while(it.hasNext()){
+            g = (Genero) it.next();
+            ret += g.getNombre() + " ";
+        }
+        return ret;
+    }
  
  }

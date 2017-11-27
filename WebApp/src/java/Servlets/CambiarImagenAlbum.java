@@ -61,22 +61,18 @@ public class CambiarImagenAlbum extends HttpServlet {
                 }
                 
                 response.sendRedirect("AltaAlbum");
-
                 
-           
                //File uploaded successfully
                //response.sendRedirect("");
             } catch (Exception ex) {
                 out.println(ex);
                request.setAttribute("message", "File Upload Failed due to " + ex);
             }          
-         
         }else{
             request.setAttribute("message",
                                  "Sorry this Servlet only handles file upload request");
         }    
         //request.getRequestDispatcher("/result.jsp").forward(request, response);
-     
     }
     
 

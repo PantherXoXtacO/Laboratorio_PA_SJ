@@ -27,33 +27,12 @@ import javax.servlet.http.HttpSession;
  * @author Casca
  */
 @WebServlet(name = "AltaAlbum", urlPatterns = {"/AltaAlbum"})
-public class AltaAlbum extends HttpServlet {
-    
-   
-    
+public class AltaAlbum extends HttpServlet {          
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador();        
-        String nombreAlbum = request.getParameter("nombre_album");
-        String año_album = request.getParameter("anio_album");
-        String genero = request.getParameter("dropdown3");
-        System.out.println(nombreAlbum);
-        System.out.println(año_album);
-        System.out.println(genero);
-        
-        
-        if(nombreAlbum!=null && año_album!=null && genero!=null 
-            && año_album.matches("\\d+")){
-                processRequest(request, response);
-            }
-            else
-                response.sendRedirect("AltaAlbum.jsp"); 
-        }
-    
-            
-        
-    
+        processRequest(request, response);
+    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -66,44 +45,56 @@ public class AltaAlbum extends HttpServlet {
      */
     
     
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador();  
-        String nombreAlbum = request.getParameter("nombre_album");
-        String año_album = request.getParameter("anio_album");
-        String genero = request.getParameter("dropdown3");
-        List<Genero> listgen = new ArrayList();
-        listgen.add(ICU.getGeneroPorNombre(genero));       
-                
-        HttpSession session = request.getSession();   
+        IControlador ICU = fabrica.getIControlador(); 
+        HttpSession session = request.getSession();
+        session.setAttribute("generosAgregados", null); 
         String artistname =(String) session.getAttribute("UserNick");
         Artista artist = ICU.consultarArtista(artistname);
-        ICU.createTemporalAlbum();
-        ICU.configTemporalAlbum(artist, nombreAlbum, listgen, Integer.parseInt(año_album), "");
-        ICU.addTemporalAlbum();
-        ICU.deleteTemporalAlbum();
-               
+         
+        String nombreAlbum = request.getParameter("nombre_album");
+        String año_album = request.getParameter("anio_album");
+        String generos_album = request.getParameter("generos_album");        
+        String imagen_album = request.getParameter("imagen_album");   
         
+        System.out.println("NombreAlbum: " + nombreAlbum);
+        System.out.println("Año Album: " + año_album);
+        System.out.println("Generos_album: " + generos_album);
+        System.out.println("imagen_album: " + imagen_album);
         
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AltaAlbum</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AltaAlbum at " + request.getContextPath() + "</h1>");
-            out.println("<h1>nombre: " + nombreAlbum + "</h1>");
-            out.println("<h1>creacion: " + año_album+ "</h1>");
-            out.println("<h1>genero: " + genero + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        if(nombreAlbum!=null && año_album!=null && año_album.matches("\\d+") && generos_album!=null){
+            
+            List<Genero> listgen = new ArrayList();
+            listgen = ICU.GenerosFromString(generos_album);             
+            
+            //ICU.createTemporalAlbum(); ya deberia estar creado
+            ICU.configTemporalAlbum(artist, nombreAlbum, listgen , Integer.parseInt(año_album), imagen_album);
+            ICU.addTemporalAlbum();
+            ICU.deleteTemporalAlbum();
+            ICU.wipeTemporalGenres();
+
+
+            response.setContentType("text/html;charset=UTF-8");
+            try (PrintWriter out = response.getWriter()) {
+                /* TODO output your page here. You may use following sample code. */
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet AltaAlbum</title>");            
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Servlet AltaAlbum at " + request.getContextPath() + "</h1>");
+                out.println("<h1>nombre: " + nombreAlbum + "</h1>");
+                out.println("<h1>creacion: " + año_album+ "</h1>");
+                out.println("<h1>generos: " + ICU.imprimirListaDeGeneros(listgen) + "</h1>");
+                out.println("<h1>path a imagen del album: " + imagen_album + "</h1>");
+                out.println("</body>");
+                out.println("</html>");
+            }
         }
-        
-        
+        else
+            response.sendRedirect("AltaAlbum.jsp");       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

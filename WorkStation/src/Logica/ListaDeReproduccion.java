@@ -58,4 +58,9 @@ public class ListaDeReproduccion {
      void quitarTema(Tema tem) {
         temas.remove(tem);
     } 
+     
+     public void GeneroListRecievingString(List<String> generos){
+         
+     }
+     
 }

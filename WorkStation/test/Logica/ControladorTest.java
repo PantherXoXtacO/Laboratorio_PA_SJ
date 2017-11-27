@@ -38,6 +38,14 @@ public class ControladorTest {
     @After
     public void tearDown() {
     }
+    
+    @Test
+    public void testGenerosFromString(){
+        System.out.println("Test: GenerosFromString");
+        Controlador instance = new Controlador();
+        String generos = "Rock pop Nacional";
+        instance.GenerosFromString(generos);
+    }
 
     /**
      * Test of registrarCliente method, of class Controlador.

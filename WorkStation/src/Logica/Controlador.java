@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 import DataType.*;
 import Enums.EstadosDeSuscripcion;
 import Enums.TiposDeSuscripcion;
+import java.util.Map;
 
 /**
  *
@@ -652,6 +653,12 @@ public class Controlador implements IControlador {
             M.ActualizarUsuario(u1);
             M.ActualizarUsuario(u2);
        }
+    }
+
+    @Override
+    public Map getListasConNombre(String nombreLista) {
+        Manejador M = Manejador.getinstance();
+        return M.getListasConNombre(nombreLista);
     }
  
  }

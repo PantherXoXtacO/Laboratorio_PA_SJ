@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import DataType.*;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Manejador {
@@ -55,11 +57,13 @@ public class Manejador {
         Query QGeneros = entitymanager.createQuery("SELECT a FROM Genero a");
         Query q3 = entitymanager.createQuery("SELECT a from Album a");
         Query q4 = entitymanager.createQuery("SELECT a from Tema a");
+        //Query q5 = entitymanager.createQuery("SELECT a from ListaDeReproduccion a");
         clientes = q.getResultList();
         artistas = q2.getResultList();
         generosList = QGeneros.getResultList();
         Albums = q3.getResultList();
         Temas = q4.getResultList();
+        //Listas = q5.getResultList();
         GeneralGetHijos();
     }
     
@@ -347,6 +351,7 @@ public class Manejador {
     void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
         ListaPorDefecto lista = new ListaPorDefecto(genero, nombreDeLista, imagenDeLista);
         this.Listas.add(lista);
+        persist(lista);
     }
     
 
@@ -746,6 +751,33 @@ public class Manejador {
             }
         }
         return null;        
+    }
+
+    Map getListasConNombre(String nombreLista) {
+        Map ret = new HashMap();
+        int id = 0;
+        Iterator itParticular = clientes.iterator();
+        Cliente c;
+        while(itParticular.hasNext()){
+            c = (Cliente) itParticular.next();
+            ListaParticular Lp = c.getListaConNombre(nombreLista);
+            if(Lp != null && !Lp.getPrivacidad()){
+                ret.put(id, new DTListaPrticular(Lp));
+                id++;
+            }
+        }
+        
+        Iterator itDefecto = Listas.iterator();
+        ListaPorDefecto Ld;
+        while(itDefecto.hasNext()){
+            Ld = (ListaPorDefecto) itDefecto.next();
+            if(Ld.getNombre().equals(nombreLista)){
+                ret.put(id,new DTListaDefecto (Ld));
+                id++;
+            }
+        }
+        
+        return ret;
     }
 
 }

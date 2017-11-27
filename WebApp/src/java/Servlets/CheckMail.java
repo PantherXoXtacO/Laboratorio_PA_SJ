@@ -33,9 +33,14 @@ public class CheckMail extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         String mail = request.getParameter("mail");
         IControlador controlador = new Controlador();
-        if(mail.equals("") || !mail.contains("@")){
+        if(mail.equals("")){
             response.setContentType("text/plain");
             response.getWriter().write("");
+            return;
+        }
+        if(!mail.contains("@")){
+            response.setContentType("text/plain");
+            response.getWriter().write(" Mail no valido");
             return;
         }
         if(!controlador.mailLibre(mail)){

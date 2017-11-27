@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/web/Registrar.jsp</file>
-            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/web/resources/js/CheckMailUse.js</file>
+            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/src/java/Servlets/ConsultarLista.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/src/java/Servlets/VerListaInfo.java</file>
+            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/web/ConsultarLista.jsp</file>
+            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/web/BuscarLista.jsp</file>
         </group>
     </open-files>
 </project-private>

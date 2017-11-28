@@ -168,4 +168,16 @@ public class Album implements Serializable {
         }
         return t;
     }
+    
+    public String getListaDeTemasEnString(){
+        Iterator it = this.temas.iterator();
+        Tema tema;
+        String ret = "";
+        System.out.println("getListaDeTEmasenString en album: ");
+        while(it.hasNext()){
+            tema = (Tema) it.next();
+            ret += tema.getNombre() + ": (Duracion: " + tema.getDuracion() + " Posicion: " + tema.getOrden() + ")<br>" ;
+        }        
+        return ret;
+    }
 }

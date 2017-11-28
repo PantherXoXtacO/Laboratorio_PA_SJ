@@ -78,10 +78,13 @@ public class AltaTema extends HttpServlet {
             out.println("<title>Servlet AltaTema</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AltaTema at " + request.getContextPath() + "</h1>");
-            out.println("<h1>Albun name: " + album.getNombre() + "</h1>");
-            out.println("<h1>Albun año de cracion: " + album.getAnio() + "</h1>");
-            out.println("<h1>Albun genero: " + generosEnString + "</h1>");
+            out.println("<h1>Tema agregado con exito</h1>");
+            out.println("<h1>Nombre: " + nombre + "</h1>");
+            out.println("<h1>Duracion: " + duracion + "</h1>");
+            out.println("<h1>Posicion: " + ubicacion + "</h1>");
+            out.println("<h1>Album name: " + album.getNombre() + "</h1>");
+            //out.println("<h1>Albun año de cracion: " + album.getAnio() + "</h1>");
+            //out.println("<h1>Albun genero: " + generosEnString + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

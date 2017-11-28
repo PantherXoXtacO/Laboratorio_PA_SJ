@@ -26,7 +26,7 @@
         <title>Consultar Album</title>
     </head>
     <body>
-        <form action="/Lab/ConsultarAlbumGenero" method="POST">
+        <form action="/Lab/ConsultarAlbumArtista" method="POST">
             <h1>Artistas: </h1>
             <input type="hidden" name="hiddenTemp1" id="hiddenTemp1" value="<%=artistas%>">
             <select id="dropdown1" name="dropdown1" >

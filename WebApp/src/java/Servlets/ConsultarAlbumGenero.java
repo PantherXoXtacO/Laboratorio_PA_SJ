@@ -58,19 +58,21 @@ public class ConsultarAlbumGenero extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet ConsultarAlbumGenero at " + request.getContextPath() + "</h1>");
             out.println("<h1>Nombre del album: " + albumName + "</h1>");
-            //out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
-            out.println("<h1>Generos: " + generoName + "</h1>");
+            //out.println("<h1>Artista: " + album.getArtista().getNickname() + "</h1>");
+            out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
+            out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(album.getGeneros()) + "</h1>");
             out.println("<h1>IMAGEN"+ "</h1>");
-            out.println("<select  name = temas>" +
-                    
-                    "< / select >");
-            out.println("<input  type =" + "submit" + " value = "+ "Ver tema" + "/>");
+            out.println("<h1>Lista de temas: <br>" + album.getListaDeTemasEnString() +  "</h1>");
+//          out.println("<select  name = temas>" + "< / select >");
+//          out.println("<input  type =" + "submit" + " value = "+ "Ver tema" + "/>");
             out.println("</body>");
             out.println("</html>");
         }  
         }
         
         
+        
+         
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

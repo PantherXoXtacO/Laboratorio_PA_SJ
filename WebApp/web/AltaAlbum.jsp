@@ -43,6 +43,8 @@
         ICU.createTemporalGenres();
         generosTemp = ICU.getTemporalGenres();
     }
+    //ICU.AltaGenero("GeneroTest3", "General");
+    //ICU.AltaGenero("GeneroTest2", "General");
     %>
 
 

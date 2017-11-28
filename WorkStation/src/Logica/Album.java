@@ -89,6 +89,11 @@ public class Album implements Serializable {
     }
 
     public void setGenero(List<Genero> genero) {
+        Iterator it= genero.iterator();
+        Genero gen;
+        while(it.hasNext()){
+            gen = (Genero) it.next();
+        }
         this.genero = genero;
     }
     

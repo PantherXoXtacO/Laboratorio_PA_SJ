@@ -110,7 +110,7 @@ public interface IControlador{
     public abstract List<Album> getAlbumsList();
     public abstract Album getAlbumByName(String albumname);
     public abstract List<String> getAlbumsListtoString();
-    public abstract List<String> albumListToString(List<Album> albums);
+    public abstract String albumListToString(List<Album> albums);
     public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
     public abstract void SeguirUsuario(String seguidor, String seguido);
 }

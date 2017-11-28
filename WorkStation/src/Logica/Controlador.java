@@ -8,6 +8,9 @@ import java.util.regex.Pattern;
 import DataType.*;
 import Enums.EstadosDeSuscripcion;
 import Enums.TiposDeSuscripcion;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -626,17 +629,14 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public List<String> albumListToString(List<Album> albums) {
+    public String albumListToString(List<Album> albums) {
         Iterator it = albums.iterator();
-        List<String> ret = null;
+        String ret = "";
         Album album;
-        String str;
         while(it.hasNext()){
             album = (Album) it.next();
-            str = album.getNombre();
-            ret.add(str);
+            ret += album.getNombre() + " ";
         }
-        
         return ret;
     }
 
@@ -657,12 +657,12 @@ public class Controlador implements IControlador {
     @Override
     public List<Genero> GenerosFromString(String generos) {
         List<Genero> ret = new ArrayList();
-        String regex = "([^a-zA-Z']+)'*\\1*";
-        String[] split = generos.split(regex);
-        int size = split.length;
+        String[] split = generos.split(" ");
+        Set<String> uniqueSplit = new HashSet<String>(Arrays.asList(split));
+        Iterator it = uniqueSplit.iterator();
         Genero g;                
-        for(int i=0; i<size;i++) {
-           g= getGeneroPorNombre(split[i]);
+        while(it.hasNext()) {
+           g= getGeneroPorNombre((String) it.next());
            ret.add(g);
         }            
         return ret;

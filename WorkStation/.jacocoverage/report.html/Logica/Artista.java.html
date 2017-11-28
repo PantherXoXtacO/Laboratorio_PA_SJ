@@ -25,34 +25,34 @@ public class Artista extends Usuario {
     private List&lt;Album&gt; albums;
 
     public String getBiografia() {
-<span class="nc" id="L28">        return biografia;</span>
+<span class="fc" id="L28">        return biografia;</span>
     }
 
     public String getDir_web() {
-<span class="nc" id="L32">        return dir_web;</span>
+<span class="fc" id="L32">        return dir_web;</span>
     }
 
     public Artista(String biografia, String dir_web, String nickname, String contraseña, String mail, String nombre, String apellido, Fecha fechaDeNacimiento, String imagen) {
-<span class="nc" id="L36">        super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);</span>
-<span class="nc" id="L37">        this.biografia = biografia;</span>
-<span class="nc" id="L38">        this.dir_web = dir_web;</span>
-<span class="nc" id="L39">        this.albums = new ArrayList();</span>
-<span class="nc" id="L40">    }</span>
+<span class="fc" id="L36">        super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);</span>
+<span class="fc" id="L37">        this.biografia = biografia;</span>
+<span class="fc" id="L38">        this.dir_web = dir_web;</span>
+<span class="fc" id="L39">        this.albums = new ArrayList();</span>
+<span class="fc" id="L40">    }</span>
     
-<span class="nc" id="L42">    public Artista(){</span>
-<span class="nc" id="L43">        this.albums = new ArrayList();</span>
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L42">    public Artista(){</span>
+<span class="fc" id="L43">        this.albums = new ArrayList();</span>
+<span class="fc" id="L44">    }</span>
     
     @Override
     public boolean equals(Object other) {
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (!(other instanceof Artista)) {</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if (!(other instanceof Artista)) {</span>
 <span class="nc" id="L49">            return false;</span>
     }
-<span class="nc" id="L51">    Artista that = (Artista) other;        </span>
-<span class="nc bnc" id="L52" title="All 4 branches missed.">    return (this.getBiografia().equals(that.getBiografia()) &amp;&amp; this.getDir_web().equals(that.getDir_web()) &amp;&amp;</span>
-<span class="nc bnc" id="L53" title="All 4 branches missed.">            this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
-<span class="nc bnc" id="L54" title="All 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
-<span class="nc bnc" id="L55" title="All 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
+<span class="fc" id="L51">    Artista that = (Artista) other;        </span>
+<span class="pc bpc" id="L52" title="2 of 4 branches missed.">    return (this.getBiografia().equals(that.getBiografia()) &amp;&amp; this.getDir_web().equals(that.getDir_web()) &amp;&amp;</span>
+<span class="pc bpc" id="L53" title="2 of 4 branches missed.">            this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
+<span class="pc bpc" id="L54" title="2 of 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
+<span class="pc bpc" id="L55" title="2 of 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
     }
     
     @Override

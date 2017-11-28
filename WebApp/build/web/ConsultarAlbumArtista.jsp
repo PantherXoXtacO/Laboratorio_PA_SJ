@@ -21,13 +21,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/ajax-cargarAlbumPorArtista.js" type="text/javascript"></script>
         <title>Consultar Album</title>
     </head>
     <body>
         <form action="/Lab/ConsultarAlbumGenero" method="POST">
             <h1>Artistas: </h1>
             <input type="hidden" name="hiddenTemp1" id="hiddenTemp1" value="<%=artistas%>">
-            <select id="dropdown1" name="dropdown1" onchange="myFunction2();" >
+            <select id="dropdown1" name="dropdown1" >
                 <script type="text/javascript">                    
                     function myFunction(){
                         var generos = document.getElementById("hiddenTemp1").value;
@@ -42,45 +44,10 @@
                         }                        
                     }
                     window.onload = myFunction;
-                    document.write(fLen);
                 </script>
             </select>
             <h1>Albums: </h1>
             <select id="dropdown2"  name="dropdown2">
-                <script type="text/javascript">                    
-                    function myFunction2(){
-                        var name =  document.getElementById("dropdown1").value;
-                        
-                        //window.location.replace("ConsultarAlbumArtista.jsp?name=" + name);
-                        
-                    <%
-                        String str = "<script>document.writeln(name)</script>";
-                        out.println("value: " + str);
-                        
-                        //String name = request.getParameter("Hidden2");
-                        //System.out.println(name);
-                        //String artistanick = ""; //traer de dropdown 1
-                        //Artista artist = (Artista) ICU.consultarArtista(artistanick);
-                        //List<Album> albums = artist.getAlbums();
-                        //List<String> albumsString = ICU.albumListToString(albums);
-                        //pasar albumsstring abajo
-                     %>
-                        
-                        var array2 = array.match(/\w+/g);
-                        var arrayLength = array2.length;
-                        var x = document.getElementById("dropdown2"); 
-                        var length = x.options.length;
-                        for (i = 0; i < length; i++) {
-                          select.x[i] = null;
-                        }
-                        var test2 = [];
-                        for (var i = 0; i < arrayLength; i++) {
-                            test2[i] = document.createElement("option");
-                            test2[i].text = array2[i];
-                            x.add(test2[i]);
-                        }                        
-                    }                    
-                </script>                
             </select>
             <input type="submit" value="Consultar Album" />
         </form>

@@ -32,27 +32,27 @@ public class Cliente extends Usuario{
     public Cliente(String nickname, String contraseña, String mail,
                     String nombre, String apellido, Fecha fechaDeNacimiento,
                     String imagen) {
-<span class="nc" id="L35">        super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);</span>
-<span class="nc" id="L36">        this.siguiendo = new ArrayList();</span>
-<span class="nc" id="L37">        this.temasFav = new ArrayList();</span>
-<span class="nc" id="L38">        this.albumsFav = new ArrayList();</span>
-<span class="nc" id="L39">        this.listasFav = new ArrayList();</span>
-<span class="nc" id="L40">        this.Listas = new ArrayList();</span>
-<span class="nc" id="L41">        this.suscripcion = null;</span>
-<span class="nc" id="L42">    }</span>
+<span class="fc" id="L35">        super(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);</span>
+<span class="fc" id="L36">        this.siguiendo = new ArrayList();</span>
+<span class="fc" id="L37">        this.temasFav = new ArrayList();</span>
+<span class="fc" id="L38">        this.albumsFav = new ArrayList();</span>
+<span class="fc" id="L39">        this.listasFav = new ArrayList();</span>
+<span class="fc" id="L40">        this.Listas = new ArrayList();</span>
+<span class="fc" id="L41">        this.suscripcion = null;</span>
+<span class="fc" id="L42">    }</span>
 
-<span class="nc" id="L44">    public Cliente() {</span>
-<span class="nc" id="L45">    }   </span>
+<span class="fc" id="L44">    public Cliente() {</span>
+<span class="fc" id="L45">    }   </span>
     
     @Override
     public boolean equals(Object other) {
-<span class="nc bnc" id="L49" title="All 2 branches missed.">        if (!(other instanceof Cliente)) {</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        if (!(other instanceof Cliente)) {</span>
 <span class="nc" id="L50">            return false;</span>
     }
-<span class="nc" id="L52">    Cliente that = (Cliente) other;</span>
-<span class="nc bnc" id="L53" title="All 4 branches missed.">    return (this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
-<span class="nc bnc" id="L54" title="All 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
-<span class="nc bnc" id="L55" title="All 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
+<span class="fc" id="L52">    Cliente that = (Cliente) other;</span>
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">    return (this.getNickname().equals(that.getNickname()) &amp;&amp; this.getMail().equals(that.getMail())</span>
+<span class="pc bpc" id="L54" title="2 of 4 branches missed.">            &amp;&amp; this.getNombre().equals(that.getNombre())  &amp;&amp; this.getApellido().equals(that.getApellido())</span>
+<span class="pc bpc" id="L55" title="2 of 4 branches missed.">            &amp;&amp; this.getFechaDeNacimiento().equals(that.getFechaDeNacimiento()) &amp;&amp; this.getImagen().equals(that.getImagen()));</span>
 }
     
     public List&lt;ListaDeReproduccion&gt; getListas(){
@@ -70,8 +70,8 @@ public class Cliente extends Usuario{
 <span class="nc" id="L70">    }</span>
     
     void setListaParticular(ListaDeReproduccion lista){
-<span class="nc" id="L73">        this.Listas.add(lista);</span>
-<span class="nc" id="L74">    }</span>
+<span class="fc" id="L73">        this.Listas.add(lista);</span>
+<span class="fc" id="L74">    }</span>
     
   
     public List getListsItem() {

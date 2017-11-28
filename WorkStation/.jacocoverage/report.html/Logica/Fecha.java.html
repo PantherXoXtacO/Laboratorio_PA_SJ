@@ -32,24 +32,24 @@ public class Fecha implements Serializable{
     @Column(name = &quot;AÑO&quot;)
     private int año;
     
-<span class="nc" id="L35">    public Fecha(){}</span>
+<span class="fc" id="L35">    public Fecha(){}</span>
     
-<span class="nc" id="L37">    public Fecha(int dia, int mes, int año){</span>
-<span class="nc" id="L38">        this.dia = dia;</span>
-<span class="nc" id="L39">        this.mes = mes;</span>
-<span class="nc" id="L40">        this.año = año;</span>
-<span class="nc" id="L41">    }</span>
+<span class="fc" id="L37">    public Fecha(int dia, int mes, int año){</span>
+<span class="fc" id="L38">        this.dia = dia;</span>
+<span class="fc" id="L39">        this.mes = mes;</span>
+<span class="fc" id="L40">        this.año = año;</span>
+<span class="fc" id="L41">    }</span>
     
     @Override
     public boolean equals(Object other) {
-<span class="nc bnc" id="L45" title="All 2 branches missed.">        if (!(other instanceof Fecha)) {</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">        if (!(other instanceof Fecha)) {</span>
 <span class="nc" id="L46">            return false;</span>
     }
 
-<span class="nc" id="L49">    Fecha that = (Fecha) other;</span>
+<span class="fc" id="L49">    Fecha that = (Fecha) other;</span>
 
-<span class="nc bnc" id="L51" title="All 4 branches missed.">    return this.getDia() == that.getDia() &amp;&amp; this.getMes() == that.getMes() </span>
-<span class="nc bnc" id="L52" title="All 2 branches missed.">            &amp;&amp; this.getAño() == that.getAño();</span>
+<span class="pc bpc" id="L51" title="2 of 4 branches missed.">    return this.getDia() == that.getDia() &amp;&amp; this.getMes() == that.getMes() </span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">            &amp;&amp; this.getAño() == that.getAño();</span>
 }
     
     
@@ -79,15 +79,15 @@ public class Fecha implements Serializable{
 
     //getters
     public int getDia() {
-<span class="nc" id="L82">        return dia;</span>
+<span class="fc" id="L82">        return dia;</span>
     }
 
     public int getMes() {
-<span class="nc" id="L86">        return mes;</span>
+<span class="fc" id="L86">        return mes;</span>
     }
 
     public int getAño() {
-<span class="nc" id="L90">        return año;</span>
+<span class="fc" id="L90">        return año;</span>
     }
     
     public void setCurrentDate(){

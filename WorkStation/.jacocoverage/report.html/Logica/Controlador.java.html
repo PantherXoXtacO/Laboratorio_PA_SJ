@@ -24,68 +24,68 @@ public class Controlador implements IControlador {
                     String mail, String nombre, String apellido,
                     Fecha fechaDeNacimiento, String imagen){
         
-<span class="nc" id="L27">        Manejador mu = Manejador.getinstance();</span>
-<span class="nc bnc" id="L28" title="All 4 branches missed.">        if (!mu.ClienteNickRepetido(nickname) &amp;&amp; !mu.ClienteMailRepetido(mail)){</span>
+<span class="fc" id="L27">        Manejador mu = Manejador.getinstance();</span>
+<span class="pc bpc" id="L28" title="3 of 4 branches missed.">        if (!mu.ClienteNickRepetido(nickname) &amp;&amp; !mu.ClienteMailRepetido(mail)){</span>
 <span class="nc" id="L29">            Cliente user = new Cliente(nickname, contraseña, mail, nombre, apellido,</span>
                                        fechaDeNacimiento, imagen);
 <span class="nc" id="L31">            mu.addCliente(user);</span>
         }
-<span class="nc" id="L33">    } </span>
+<span class="fc" id="L33">    } </span>
         
     public void registrarArtista(String nickname, String contraseña,
                     String mail, String nombre, String apellido,
                     Fecha fechaDeNacimiento, String imagen,
                     String biografia, String dir_web){
         
-<span class="nc" id="L40">        Manejador mu = Manejador.getinstance();</span>
-<span class="nc bnc" id="L41" title="All 4 branches missed.">        if(!mu.ArtistaNickRepetido(nickname) &amp;&amp; !mu.ArtistaMailRepetido(mail)){</span>
+<span class="fc" id="L40">        Manejador mu = Manejador.getinstance();</span>
+<span class="pc bpc" id="L41" title="3 of 4 branches missed.">        if(!mu.ArtistaNickRepetido(nickname) &amp;&amp; !mu.ArtistaMailRepetido(mail)){</span>
 <span class="nc" id="L42">            Artista user = new Artista(biografia, dir_web, nickname, contraseña, mail, nombre, apellido,</span>
                                             fechaDeNacimiento, imagen);
 <span class="nc" id="L44">            mu.addArtista(user);</span>
         }
-<span class="nc" id="L46">    }</span>
+<span class="fc" id="L46">    }</span>
     
     @Override
     public List&lt;Cliente&gt; getListaClientes(){
-<span class="nc" id="L50">        Manejador mu = Manejador.getinstance();</span>
-<span class="nc" id="L51">        List&lt;Cliente&gt; clientes = mu.getClientes();</span>
-<span class="nc" id="L52">        return clientes;</span>
+<span class="fc" id="L50">        Manejador mu = Manejador.getinstance();</span>
+<span class="fc" id="L51">        List&lt;Cliente&gt; clientes = mu.getClientes();</span>
+<span class="fc" id="L52">        return clientes;</span>
     }
       
     @Override
     public void AltaGenero(String nombre, String padre){
-<span class="nc bnc" id="L57" title="All 2 branches missed.">        if(!nombre.equals(&quot;General&quot;)){ </span>
-<span class="nc" id="L58">            Manejador mu = Manejador.getinstance();</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">        if(!nombre.equals(&quot;General&quot;)){ </span>
+<span class="fc" id="L58">            Manejador mu = Manejador.getinstance();</span>
             Genero gen;
-<span class="nc" id="L60">            Genero nuevoGen=mu.findGenero(nombre);</span>
-<span class="nc bnc" id="L61" title="All 2 branches missed.">            if(nuevoGen==null){</span>
-<span class="nc" id="L62">                nuevoGen=new Genero(nombre);</span>
-<span class="nc bnc" id="L63" title="All 4 branches missed.">                if(padre.equals(&quot;&quot;) || padre.equals(&quot;General&quot;)){</span>
-<span class="nc" id="L64">                    gen=mu.getGenero();</span>
-<span class="nc" id="L65">                    gen.addHijo(nuevoGen);</span>
+<span class="fc" id="L60">            Genero nuevoGen=mu.findGenero(nombre);</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">            if(nuevoGen==null){</span>
+<span class="fc" id="L62">                nuevoGen=new Genero(nombre);</span>
+<span class="pc bpc" id="L63" title="1 of 4 branches missed.">                if(padre.equals(&quot;&quot;) || padre.equals(&quot;General&quot;)){</span>
+<span class="fc" id="L64">                    gen=mu.getGenero();</span>
+<span class="fc" id="L65">                    gen.addHijo(nuevoGen);</span>
                 }
                 else{
-<span class="nc" id="L68">                   gen=mu.findGenero(padre);</span>
-<span class="nc bnc" id="L69" title="All 2 branches missed.">                    if(gen!=null){</span>
-<span class="nc" id="L70">                       gen.addHijo(nuevoGen);</span>
+<span class="fc" id="L68">                   gen=mu.findGenero(padre);</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">                    if(gen!=null){</span>
+<span class="fc" id="L70">                       gen.addHijo(nuevoGen);</span>
                     }
                 }
-<span class="nc" id="L73">                mu.addGeneroToList(nuevoGen);</span>
+<span class="fc" id="L73">                mu.addGeneroToList(nuevoGen);</span>
             }
         }
-<span class="nc" id="L76">    }</span>
+<span class="fc" id="L76">    }</span>
     
 
     @Override
     public Genero GetGenero(){
-<span class="nc" id="L81">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L82">        return M.getGenero();</span>
+<span class="fc" id="L81">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L82">        return M.getGenero();</span>
     }
     
     @Override
     public Genero getGeneroPorNombre(String nombre){
-<span class="nc" id="L87">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L88">        return M.getGeneroPorNombre(nombre);</span>
+<span class="fc" id="L87">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L88">        return M.getGeneroPorNombre(nombre);</span>
     }
 
     /*@Override
@@ -115,28 +115,28 @@ public class Controlador implements IControlador {
     
     @Override
     public boolean mailLibre(String mail){
-<span class="nc" id="L118">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L119">        return M.mailLibre(mail);</span>
+<span class="fc" id="L118">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L119">        return M.mailLibre(mail);</span>
     }
     
     @Override
     public Cliente consultarCliente(String nickname){
-<span class="nc" id="L124">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L125">        return M.obtenerCliente(nickname);</span>
+<span class="fc" id="L124">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L125">        return M.obtenerCliente(nickname);</span>
     }
     
     @Override
     public Artista consultarArtista(String nickname){
-<span class="nc" id="L130">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L131">        return M.obtenerArtista(nickname);</span>
+<span class="fc" id="L130">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L131">        return M.obtenerArtista(nickname);</span>
     }
     
     
     @Override
     public List getItemCliente(){
-<span class="nc" id="L137">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L138">        List ret=M.ItemCLiente();</span>
-<span class="nc" id="L139">        return ret;       </span>
+<span class="fc" id="L137">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L138">        List ret=M.ItemCLiente();</span>
+<span class="fc" id="L139">        return ret;       </span>
     }
     
     @Override
@@ -162,9 +162,9 @@ public class Controlador implements IControlador {
     
     @Override
     public List getGeneroItem(){
-<span class="nc" id="L165">     Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L166">     List ret=M.ItemGenero();</span>
-<span class="nc" id="L167">     return ret;</span>
+<span class="fc" id="L165">     Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L166">     List ret=M.ItemGenero();</span>
+<span class="fc" id="L167">     return ret;</span>
     } 
     
     @Override
@@ -228,37 +228,37 @@ public class Controlador implements IControlador {
     
     @Override
     public List getItemArtist(){
-<span class="nc" id="L231">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L232">        Iterator it=M.getArtistas().iterator();</span>
+<span class="fc" id="L231">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L232">        Iterator it=M.getArtistas().iterator();</span>
         Artista art;
-<span class="nc" id="L234">        List ret=new ArrayList();</span>
-<span class="nc bnc" id="L235" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L236">            art=(Artista)it.next();</span>
-<span class="nc" id="L237">            ret.add(new Item(art,art.getNickname()));</span>
+<span class="fc" id="L234">        List ret=new ArrayList();</span>
+<span class="fc bfc" id="L235" title="All 2 branches covered.">        while(it.hasNext()){</span>
+<span class="fc" id="L236">            art=(Artista)it.next();</span>
+<span class="fc" id="L237">            ret.add(new Item(art,art.getNickname()));</span>
         }
-<span class="nc" id="L239">        return ret;</span>
+<span class="fc" id="L239">        return ret;</span>
     }
     @Override
     public void addListaParticular(Cliente client, String nombreDeLista, String imagenDeLista){
-<span class="nc" id="L243">        Manejador M=Manejador.getinstance();</span>
-<span class="nc bnc" id="L244" title="All 6 branches missed.">        if (client != null &amp;&amp; !nombreDeLista.equals(&quot;&quot;) &amp;&amp; !imagenDeLista.equals(&quot;&quot;))</span>
-<span class="nc" id="L245">        M.addListaParticular(client, nombreDeLista, imagenDeLista);</span>
-<span class="nc" id="L246">    }</span>
+<span class="fc" id="L243">        Manejador M=Manejador.getinstance();</span>
+<span class="pc bpc" id="L244" title="2 of 6 branches missed.">        if (client != null &amp;&amp; !nombreDeLista.equals(&quot;&quot;) &amp;&amp; !imagenDeLista.equals(&quot;&quot;))</span>
+<span class="fc" id="L245">        M.addListaParticular(client, nombreDeLista, imagenDeLista);</span>
+<span class="fc" id="L246">    }</span>
     
     @Override
     public void addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista){
-<span class="nc" id="L250">        Manejador M=Manejador.getinstance();</span>
-<span class="nc bnc" id="L251" title="All 6 branches missed.">        if (genero != null &amp;&amp; !nombreDeLista.equals(&quot;&quot;) &amp;&amp; !imagenDeLista.equals(&quot;&quot;))</span>
-<span class="nc" id="L252">        M.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);</span>
-<span class="nc" id="L253">    }</span>
+<span class="fc" id="L250">        Manejador M=Manejador.getinstance();</span>
+<span class="pc bpc" id="L251" title="2 of 6 branches missed.">        if (genero != null &amp;&amp; !nombreDeLista.equals(&quot;&quot;) &amp;&amp; !imagenDeLista.equals(&quot;&quot;))</span>
+<span class="fc" id="L252">        M.addListaPorDefecto(genero, nombreDeLista, imagenDeLista);</span>
+<span class="fc" id="L253">    }</span>
     
     @Override
     public void privatizarLista(ListaParticular lista, boolean modo){
-<span class="nc bnc" id="L257" title="All 2 branches missed.">        if(lista != null){</span>
-<span class="nc" id="L258">            lista.setPrivacidad(modo);</span>
+<span class="fc bfc" id="L257" title="All 2 branches covered.">        if(lista != null){</span>
+<span class="fc" id="L258">            lista.setPrivacidad(modo);</span>
         }
         
-<span class="nc" id="L261">    }</span>
+<span class="fc" id="L261">    }</span>
     
     @Override
     public ListaParticular getListByName(Cliente user, String name){
@@ -268,8 +268,8 @@ public class Controlador implements IControlador {
     
      @Override
     public boolean artistLibre(String artistAlbum) {
-<span class="nc" id="L271">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L272">        return M.artistLibre(artistAlbum);</span>
+<span class="fc" id="L271">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L272">        return M.artistLibre(artistAlbum);</span>
     }
 
     @Override
@@ -383,78 +383,78 @@ public class Controlador implements IControlador {
     
     @Override
     public void createTemporalAlbum(){
-<span class="nc" id="L386">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L387">        M.createTemporalAlbum();</span>
-<span class="nc" id="L388">    }</span>
+<span class="fc" id="L386">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L387">        M.createTemporalAlbum();</span>
+<span class="fc" id="L388">    }</span>
     
     @Override
     public void deleteTemporalAlbum(){
-<span class="nc" id="L392">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L393">        M.deleteTemporalAlbum();</span>
-<span class="nc" id="L394">    }</span>
+<span class="fc" id="L392">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L393">        M.deleteTemporalAlbum();</span>
+<span class="fc" id="L394">    }</span>
     
     @Override
     public void configTemporalAlbum(Artista artist, String nombre, List&lt;Genero&gt; generos, int año, String imagePath){
-<span class="nc" id="L398">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L399">        M.configTemporalAlbum(artist, nombre, generos, año, imagePath);</span>
+<span class="fc" id="L398">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L399">        M.configTemporalAlbum(artist, nombre, generos, año, imagePath);</span>
         
-<span class="nc" id="L401">    }</span>
+<span class="fc" id="L401">    }</span>
     
     @Override
     public void addTemaToM(Tema tema){
-<span class="nc" id="L405">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L406">        M.addTema(tema);</span>
-<span class="nc" id="L407">    }</span>
+<span class="fc" id="L405">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L406">        M.addTema(tema);</span>
+<span class="fc" id="L407">    }</span>
     
     @Override
     public void addTemporalAlbum(){
-<span class="nc" id="L411">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L412">        M.addTemporalAlbum();</span>
-<span class="nc" id="L413">    }</span>
+<span class="fc" id="L411">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L412">        M.addTemporalAlbum();</span>
+<span class="fc" id="L413">    }</span>
     
     @Override
     public void createTemporalGenres(){
-<span class="nc" id="L417">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L418">        M.createTemporalGenres();</span>
-<span class="nc" id="L419">    }</span>
+<span class="fc" id="L417">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L418">        M.createTemporalGenres();</span>
+<span class="fc" id="L419">    }</span>
     
     @Override
     public void addToTemporalGenres(Genero genero){
-<span class="nc" id="L423">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L424">        M.addToTemporalGenres(genero);</span>
-<span class="nc" id="L425">    }</span>
+<span class="fc" id="L423">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L424">        M.addToTemporalGenres(genero);</span>
+<span class="fc" id="L425">    }</span>
     
     @Override
     public void wipeTemporalGenres(){
-<span class="nc" id="L429">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L430">        M.wipeTemporalGenres();</span>
-<span class="nc" id="L431">    }</span>
+<span class="fc" id="L429">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L430">        M.wipeTemporalGenres();</span>
+<span class="fc" id="L431">    }</span>
     
     @Override
     public List&lt;Genero&gt; getTemporalGenres(){
-<span class="nc" id="L435">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L436">        return M.getTemporalGenres();</span>
+<span class="fc" id="L435">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L436">        return M.getTemporalGenres();</span>
     }
     
     @Override
     public Album getTemporalAlbum(){
-<span class="nc" id="L441">        Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L442">        return M.getTemporalAlbum();</span>
+<span class="fc" id="L441">        Manejador M=Manejador.getinstance();</span>
+<span class="fc" id="L442">        return M.getTemporalAlbum();</span>
     }
     
     @Override
     public String absolutePathToRelative(String path){
-<span class="nc" id="L447">        Pattern p = Pattern.compile(&quot;\\w+\\\\data\\\\user_images\\\\\\w+.jpg|\\\\\\w+\\\\data\\\\user_images\\\\\\w+.png&quot;);</span>
-<span class="nc" id="L448">        Pattern p2 = Pattern.compile(&quot;(\\\\\\w+)+\\\\data\\\\user_images\\\\\\w+(.png|.jpg)&quot;);</span>
-<span class="nc" id="L449">        Matcher m = p2.matcher(path);</span>
-<span class="nc bnc" id="L450" title="All 2 branches missed.">        if(m.matches()){</span>
+<span class="fc" id="L447">        Pattern p = Pattern.compile(&quot;\\w+\\\\data\\\\user_images\\\\\\w+.jpg|\\\\\\w+\\\\data\\\\user_images\\\\\\w+.png&quot;);</span>
+<span class="fc" id="L448">        Pattern p2 = Pattern.compile(&quot;(\\\\\\w+)+\\\\data\\\\user_images\\\\\\w+(.png|.jpg)&quot;);</span>
+<span class="fc" id="L449">        Matcher m = p2.matcher(path);</span>
+<span class="pc bpc" id="L450" title="1 of 2 branches missed.">        if(m.matches()){</span>
 <span class="nc" id="L451">            int relativeIndex = path.indexOf(&quot;user_images/&quot;);</span>
 <span class="nc" id="L452">            int finalRelativeIndex = relativeIndex + 12;</span>
 <span class="nc" id="L453">            String relative = path.substring(finalRelativeIndex);</span>
 <span class="nc" id="L454">            return relative;</span>
         }
         else
-<span class="nc" id="L457">            return &quot;../WebApp/web/imagenes/default.jpg&quot;;</span>
+<span class="fc" id="L457">            return &quot;../WebApp/web/imagenes/default.jpg&quot;;</span>
     }
 
     @Override
@@ -626,44 +626,55 @@ public class Controlador implements IControlador {
     }
 
     @Override
-    public List&lt;String&gt; albumListToString(List&lt;Album&gt; albums) {
+    public String albumListToString(List&lt;Album&gt; albums) {
 <span class="nc" id="L630">        Iterator it = albums.iterator();</span>
-<span class="nc" id="L631">        List&lt;String&gt; ret = null;</span>
+<span class="nc" id="L631">        String ret = &quot;&quot;;</span>
         Album album;
-        String str;
-<span class="nc bnc" id="L634" title="All 2 branches missed.">        while(it.hasNext()){</span>
-<span class="nc" id="L635">            album = (Album) it.next();</span>
-<span class="nc" id="L636">            str = album.getNombre();</span>
-<span class="nc" id="L637">            ret.add(str);</span>
+<span class="nc bnc" id="L633" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L634">            album = (Album) it.next();</span>
+<span class="nc" id="L635">            ret += album.getNombre() + &quot; &quot;;</span>
         }
-        
-<span class="nc" id="L640">        return ret;</span>
+<span class="nc" id="L637">        return ret;</span>
     }
 
     
     @Override
     public void SeguirUsuario(String seguidor, String seguido) {
-<span class="nc" id="L646">         Manejador M=Manejador.getinstance();</span>
-<span class="nc" id="L647">         Usuario u1 = M.obtenerUsuario(seguidor);</span>
-<span class="nc" id="L648">         Usuario u2 = M.obtenerUsuario(seguido);</span>
-<span class="nc bnc" id="L649" title="All 4 branches missed.">         if(u1!=null &amp;&amp; u2!=null){</span>
-<span class="nc" id="L650">            u1.addFollow(u2);</span>
-<span class="nc" id="L651">            u2.addFollower(u1);</span>
-<span class="nc" id="L652">            M.ActualizarUsuario(u1);</span>
-<span class="nc" id="L653">            M.ActualizarUsuario(u2);</span>
+<span class="nc" id="L643">         Manejador M=Manejador.getinstance();</span>
+<span class="nc" id="L644">         Usuario u1 = M.obtenerUsuario(seguidor);</span>
+<span class="nc" id="L645">         Usuario u2 = M.obtenerUsuario(seguido);</span>
+<span class="nc bnc" id="L646" title="All 4 branches missed.">         if(u1!=null &amp;&amp; u2!=null){</span>
+<span class="nc" id="L647">            u1.addFollow(u2);</span>
+<span class="nc" id="L648">            u2.addFollower(u1);</span>
+<span class="nc" id="L649">            M.ActualizarUsuario(u1);</span>
+<span class="nc" id="L650">            M.ActualizarUsuario(u2);</span>
        }
-<span class="nc" id="L655">    }</span>
+<span class="nc" id="L652">    }</span>
 
     @Override
     public List&lt;Genero&gt; GenerosFromString(String generos) {
-<span class="nc" id="L659">        List&lt;Genero&gt; ret = null;</span>
-        
-<span class="nc" id="L661">        String regex = &quot;([^a-zA-Z']+)'*\\1*&quot;;</span>
-<span class="nc" id="L662">        String[] split = generos.split(regex);</span>
-        Genero g;        
-        
-<span class="nc" id="L665">        System.out.println(split);</span>
-<span class="nc" id="L666">        return ret;</span>
+<span class="fc" id="L656">        List&lt;Genero&gt; ret = new ArrayList();</span>
+<span class="fc" id="L657">        String regex = &quot;([^a-zA-Z']+)'*\\1*&quot;;</span>
+<span class="fc" id="L658">        String[] split = generos.split(regex);</span>
+<span class="fc" id="L659">        int size = split.length;</span>
+        Genero g;                
+<span class="fc bfc" id="L661" title="All 2 branches covered.">        for(int i=0; i&lt;size;i++) {</span>
+<span class="fc" id="L662">           g= getGeneroPorNombre(split[i]);</span>
+<span class="fc" id="L663">           ret.add(g);</span>
+        }            
+<span class="fc" id="L665">        return ret;</span>
+    }
+
+    @Override
+    public String imprimirListaDeGeneros(List&lt;Genero&gt; generos) {
+<span class="nc" id="L670">        Iterator it = generos.iterator();</span>
+<span class="nc" id="L671">        String ret = &quot;&quot;;</span>
+        Genero g;
+<span class="nc bnc" id="L673" title="All 2 branches missed.">        while(it.hasNext()){</span>
+<span class="nc" id="L674">            g = (Genero) it.next();</span>
+<span class="nc" id="L675">            ret += g.getNombre() + &quot; &quot;;</span>
+        }
+<span class="nc" id="L677">        return ret;</span>
     }
  
  }

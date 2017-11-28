@@ -450,7 +450,7 @@ public class Manejador {
             artist.addAlbum(this.TemporalAlbum); 
             this.Albums.add(this.TemporalAlbum);
             
-            //em.merge(artist);
+            em.merge(artist);
             //em.merge(this.TemporalAlbum);
             
             em.getTransaction().commit(); 

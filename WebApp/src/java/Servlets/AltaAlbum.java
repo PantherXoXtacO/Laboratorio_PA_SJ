@@ -55,13 +55,8 @@ public class AltaAlbum extends HttpServlet {
          
         String nombreAlbum = request.getParameter("nombre_album");
         String año_album = request.getParameter("anio_album");
-        String generos_album = request.getParameter("generos_album");        
+        String generos_album = request.getParameter("generos_album");         
         String imagen_album = request.getParameter("imagen_album");   
-        
-        System.out.println("NombreAlbum: " + nombreAlbum);
-        System.out.println("Año Album: " + año_album);
-        System.out.println("Generos_album: " + generos_album);
-        System.out.println("imagen_album: " + imagen_album);
         
         if(nombreAlbum!=null && año_album!=null && año_album.matches("\\d+") && generos_album!=null){
             
@@ -84,11 +79,12 @@ public class AltaAlbum extends HttpServlet {
                 out.println("<title>Servlet AltaAlbum</title>");            
                 out.println("</head>");
                 out.println("<body>");
-                out.println("<h1>Servlet AltaAlbum at " + request.getContextPath() + "</h1>");
-                out.println("<h1>nombre: " + nombreAlbum + "</h1>");
-                out.println("<h1>creacion: " + año_album+ "</h1>");
-                out.println("<h1>generos: " + ICU.imprimirListaDeGeneros(listgen) + "</h1>");
-                out.println("<h1>path a imagen del album: " + imagen_album + "</h1>");
+                out.println("<h1>Album creado con exito</h1>");
+                out.println("<h1>Nombre: " + nombreAlbum + "</h1>");
+                out.println("<h1>Artista: " + artistname + "</h1>");
+                out.println("<h1>Año de creacion: " + año_album+ "</h1>");
+                out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(listgen) + "</h1>");
+                out.println("<h1>Path a imagen del album: " + imagen_album + "</h1>");
                 out.println("</body>");
                 out.println("</html>");
             }

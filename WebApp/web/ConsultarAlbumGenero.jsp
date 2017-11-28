@@ -22,7 +22,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="js/app-ajax.js" type="text/javascript"></script>
+        <script src="js/ajax-cargarAlbumPorGenero.js" type="text/javascript"></script>
         <title>Consultar Album</title>
     </head>
     <body>
@@ -42,41 +42,14 @@
                             test2[i].text = generos2[i];
                             x.add(test2[i]);
                         }
-                        myFunction2();
                     }
                     window.onload = myFunction; 
                 </script>
             </select>
             <h1>Albums: </h1>
-            <select id="dropdown2" name="dropdown2">
-                <script type="text/javascript">                    
-                    function myFunction2(){
-                        var x = document.getElementById("dropdown2"); 
-                        
-                        var optionToAdd = [];
-                        for (var i = 0; i < 3; i++) {
-                            optionToAdd[i] = document.createElement("option");
-                            optionToAdd[i].text = "banana";
-                            x.add(optionToAdd[i]);
-                        }                                                                 
-                    }         
-                </script>                
+            <select id="dropdown2" name="dropdown2">         
             </select>
             <input type="submit" value="Consultar Album" />
-            <input type="button" value="kek" id="buttonTestAjax" name="buttonTestAjax" />
         </form>            
     </body>
 </html>
-
-<%
-
-    String genero = (String) pageContext.getAttribute("generoTraido");
-    System.out.println(genero);
-    if(genero!=null){
-        Genero gen = ICU.getGeneroPorNombre(genero);
-        List<Album> albumsDelGenero = gen.getAlbums();
-        List<String> albums = ICU.albumListToString(albumsDelGenero); 
-        pageContext.setAttribute("albumsEnString", albums); 
-    }                         
-
-%>  

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE HTML>
 <html>
 
@@ -28,7 +29,9 @@
                     }
                     else{
                         out.println("<li class=\"button_nav\"><a  href=\"/Lab/myPerfil\">Mi perfil</a></li>");
-                    }                        
+                    } 
+                    
+                    //Objetos para pruebas:                    
                 %>
             </ul>
         </nav>
@@ -40,9 +43,9 @@
           <label class="tree_label" for="c1"> Registros</label>
           <ul>
               <li><a href="Registrar.jsp" class="tree_label"> Registrar Usuario</a></li>
-              <li><a href=".java" class="tree_label"> Crear Genero</a></li>
               <li><a href="AgregarGenerosAlAlbum.jsp" class="tree_label"> Crear Album</a></li>
               <li><a href="AltaTema.jsp" class="tree_label"> Crear Tema</a></li>
+              <li><a href="cargarBD.jsp" class="tree_label"> Cargar generos para la base de datos</a></li>
               <li>
               <input type="checkbox" checked="checked" id="c2" />
               <label for="c2" class="tree_label">Crear Lista de Reproduccion</label>
@@ -79,15 +82,7 @@
                     <li><a href=".java" class="tree_label"> Tema</a></li>
                     <li><a href=".java" class="tree_label"> Lista</a></li>
                     <li><a href=".java" class="tree_label"> Album</a></li>
-                </ul>
-                <li>
-                <input type="checkbox" checked="checked" id="c8" />
-                <label for="c8" class="tree_label">Quitar de Favoritos</label>
-                <ul>
-                    <li><a href=".java" class="tree_label"> Tema</a></li>
-                    <li><a href=".java" class="tree_label"> Lista</a></li>
-                    <li><a href=".java" class="tree_label"> Album</a></li>
-                </ul>
+                </ul>           
             </ul>
     
             <li>

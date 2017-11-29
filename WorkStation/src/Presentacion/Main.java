@@ -4822,11 +4822,18 @@ public class Main extends javax.swing.JFrame {
             generos.add(generotest);
            
         if(artist!=null){
-            ICU.createTemporalAlbum();
-            ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
-            ICU.addTemporalAlbum();
-            ICU.deleteTemporalAlbum();
+            
+            Album album = new Album(nombre,  año, imagePath, artist);
+            album.setGenero(generos);
+            ICU.persistAlbum(album);
+            
+            //ICU.createTemporalAlbum();
+            //ICU.configTemporalAlbum(artist, nombre, generos, año, imagePath);
+            //ICU.addTemporalAlbum();
+            //ICU.deleteTemporalAlbum();
             ICU.wipeTemporalGenres();
+            
+            
             JOptionPane.showMessageDialog(this, "Album creado con exito", "Alta album", JOptionPane.INFORMATION_MESSAGE);
             AltaAlbum1.setVisible(false);
       }

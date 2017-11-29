@@ -32,7 +32,7 @@ public class Genero implements Serializable{
     @JoinTable(name="GENEROS_HIJOS", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="HIJOS")) 
     private List<Genero> hijos;
     @OneToMany
-    @JoinTable(name="ALBUMS_DE_GENERO", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="ALBUMS_GENERO"))
+    @JoinTable(name="TEMAS_GENEROS", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="ALBUMS_GENERO"))
     private List<Album> albums;
     //@OneToMany
     //@JoinTable(name="LISTA_DE_GENERO", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="LISTA_GENERO")) 

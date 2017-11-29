@@ -20,8 +20,9 @@ public class Artista extends Usuario {
     private String biografia;
     @Column(name = "DIR_WEB")
     private String dir_web;    
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinTable(name="ALBUMS_DE_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"), inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
+    //@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany
+    @JoinTable(name="ALBUMS_ARTISTA", joinColumns=@JoinColumn(name="ARTISTA_NICKNAME"), inverseJoinColumns=@JoinColumn(name="ALBUMS_ID")) 
     private List<Album> albums;
 
     public String getBiografia() {

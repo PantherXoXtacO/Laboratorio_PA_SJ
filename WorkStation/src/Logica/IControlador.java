@@ -115,5 +115,6 @@ public interface IControlador{
     public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
     public abstract void SeguirUsuario(String seguidor, String seguido);
     public abstract Map getListasConNombre(String nombreLista);
+    public abstract void persistAlbum(Album album);
 }
 

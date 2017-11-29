@@ -64,10 +64,14 @@ public class AltaAlbum extends HttpServlet {
             listgen = ICU.GenerosFromString(generos_album);             
             
             //ICU.createTemporalAlbum(); ya deberia estar creado
-            ICU.configTemporalAlbum(artist, nombreAlbum, listgen , Integer.parseInt(año_album), imagen_album);
-            ICU.addTemporalAlbum();
-            ICU.deleteTemporalAlbum();
-            ICU.wipeTemporalGenres();
+            //ICU.configTemporalAlbum(artist, nombreAlbum, listgen , Integer.parseInt(año_album), imagen_album);
+            //ICU.addTemporalAlbum();
+            //ICU.deleteTemporalAlbum();
+            //ICU.wipeTemporalGenres();
+            Album album = new Album(nombreAlbum,  Integer.parseInt(año_album), imagen_album, artist);
+            album.setGenero(listgen);
+            ICU.persistAlbum(album);
+            
 
             response.setContentType("text/html;charset=UTF-8");
             try (PrintWriter out = response.getWriter()) {

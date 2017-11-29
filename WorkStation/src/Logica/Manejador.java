@@ -445,47 +445,45 @@ public class Manejador {
     }
     
     public void addTemporalAlbum(){        
-        EntityManager em = emfactory.createEntityManager( );
-        try {
-            em.getTransaction().begin();
-            List<Genero> generos = this.TemporalAlbum.getGeneros();
-            
-            Artista artist = this.TemporalAlbum.getArtista();
-            addAlbumToGeneros(generos, this.TemporalAlbum);
-            artist.addAlbum(this.TemporalAlbum); 
-            this.Albums.add(this.TemporalAlbum);
-            
-            em.merge(artist);
-            //em.merge(this.TemporalAlbum);
-            
-            em.getTransaction().commit(); 
-            em.close();                     
-            
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            em.getTransaction().rollback();
-        }         
+        EntityManager em = emfactory.createEntityManager( );        
+        if(this.TemporalAlbum.id==null){
+            try {
+                em.getTransaction().begin();
+                List<Genero> generos = this.TemporalAlbum.getGeneros();
+                Artista artist = this.TemporalAlbum.getArtista();
+                addAlbumToGeneros(generos, this.TemporalAlbum); //Esto mergea los generos                
+                artist.addAlbum(this.TemporalAlbum);                      
+                this.Albums.add(this.TemporalAlbum);
+                em.merge(this.TemporalAlbum);
+                em.getTransaction().commit(); 
+                em.close();                     
+
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                em.getTransaction().rollback();
+            }     
+        }                
         deleteTemporalAlbum();        
         
     }
     
     public void addAlbumToGeneros(List<Genero> generos, Album album){        
-        EntityManager em = emfactory.createEntityManager( );
+        //EntityManager em = emfactory.createEntityManager( );
         Iterator it=generos.iterator();
         Genero g;
         while(it.hasNext()){
             g=(Genero) it.next();
-            g.addAlbum(album);
             try {
-            em.getTransaction().begin();
-            em.merge(g);            
-            em.getTransaction().commit(); 
-            em.close();  
+            //em.getTransaction().begin();            
+            g.addAlbum(album);
+            //em.merge(g);            
+            //em.getTransaction().commit(); 
+            //em.close();  
             }
             catch (Exception e) {
                 e.printStackTrace();
-                em.getTransaction().rollback();
+                //em.getTransaction().rollback();
             }
         }
     }
@@ -778,6 +776,20 @@ public class Manejador {
         }
         
         return ret;
+    }
+
+    void persistAlbum(Album album) {
+        Artista artist = album.getArtista();
+        EntityManager em = emfactory.createEntityManager( );
+        em.getTransaction().begin();
+        
+        artist.addAlbum(album);
+        em.merge(artist);
+        em.merge(album);
+        
+        
+        em.getTransaction().commit();
+        em.close(); 
     }
 
 }

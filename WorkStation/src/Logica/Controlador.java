@@ -686,5 +686,13 @@ public class Controlador implements IControlador {
         }
         return ret;
     }
+
+    @Override
+    public void persistAlbum(Album album) {
+        Manejador M = Manejador.getinstance();
+        List<Genero> generos = album.getGeneros();        
+        M.addAlbumToGeneros(generos, album);
+        M.persistAlbum(album); //tambien mergea artista
+    }
  
  }

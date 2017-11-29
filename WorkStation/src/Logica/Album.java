@@ -34,11 +34,14 @@ public class Album implements Serializable {
     private int anio;
     @Column(name = "ImgPath")
     private String img;
-    @JoinColumn(name = "ArtistasDelAlbum")
+    @OneToOne()
+    @JoinColumn(name = "ArtistaDelAlbum")
     private Artista artista;
-    @JoinColumn(name = "TemasDelAlbum")
+    @OneToMany
+    @JoinTable(name = "TEMAS_ALBUM")
     private List<Tema> temas;
-    @JoinColumn(name = "GenerosDelAlbum")
+    @OneToMany
+    @JoinTable(name = "TEMAS_GENEROS", joinColumns=@JoinColumn(name="NOMBRE_GENERO"),inverseJoinColumns=@JoinColumn(name="ALBUMS_GENERO"))
     private List<Genero> genero;
 
     public Album() {

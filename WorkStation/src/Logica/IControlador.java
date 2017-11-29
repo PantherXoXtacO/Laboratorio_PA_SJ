@@ -4,6 +4,7 @@ import java.util.List;
 import DataType.*;
 import Enums.EstadosDeSuscripcion;
 import Enums.TiposDeSuscripcion;
+import java.util.Map;
 /**
  *
  * @author Casca
@@ -113,5 +114,6 @@ public interface IControlador{
     public abstract String albumListToString(List<Album> albums);
     public abstract void DejarDeSeguirUsuario(String seguidor, String seguido);
     public abstract void SeguirUsuario(String seguidor, String seguido);
+    public abstract Map getListasConNombre(String nombreLista);
 }
 

@@ -47,7 +47,6 @@
               <input type="checkbox" checked="checked" id="c2" />
               <label for="c2" class="tree_label">Crear Lista de Reproduccion</label>
               <ul>
-                <li><a href=".java" class="tree_label"> Por Defecto</a></li>
                 <li><a href=".java" class="tree_label"> Particular</a></li>
               </ul>
           </ul>
@@ -57,19 +56,13 @@
             <label class="tree_label" for="c3"> Consultas</label>
             <ul>
                 <li><a href="ConsultarUsuario.jsp" class="tree_label"> Consultar Usuario</a></li>
+                <li><a href="BuscarLista.jsp" class="tree_label"> Consultar Lista</a></li>
                 <li>
                 <input type="checkbox" checked="checked" id="c4" />
                 <label for="c4" class="tree_label">Consultar Album</label>
                 <ul>
                     <li><a href="ConsultarAlbumGenero.jsp" class="tree_label"> Por Genero</a></li>
                     <li><a href="ConsultarAlbumArtista.jsp" class="tree_label"> Por Artista</a></li>
-                </ul>
-                <li>
-                <input type="checkbox" checked="checked" id="c5" />
-                <label for="c5" class="tree_label">Consultar Lista</label>
-                <ul>
-                    <li><a href="ConsultarAlbumGenero.jsp" class="tree_label"> Por Genero</a></li>
-                    <li><a href="ConsultarAlbumArtista.jsp" class="tree_label"> Por Cliente</a></li>
                 </ul>
             </ul>
             

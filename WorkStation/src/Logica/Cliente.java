@@ -252,5 +252,16 @@ public class Cliente extends Usuario{
             }
         }
     }
+
+    ListaParticular getListaConNombre(String nombreLista) {
+        Iterator it = Listas.iterator();
+        ListaParticular L;
+        while(it.hasNext()){
+            L=(ListaParticular) it.next();
+            if(L.getNombre().equals(nombreLista) && !L.getPrivacidad())
+                return L;
+        }
+        return null;
+    }
  
 }

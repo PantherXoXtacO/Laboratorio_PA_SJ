@@ -5,27 +5,46 @@
  */
 package Logica;
 
+//import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+/*import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;*/
 
 /**
  *
  * @author Casca
  */
-public class ListaDeReproduccion {
+//@Entity
+//@Table(name="ListaDeReproduccion")
+public class ListaDeReproduccion //implements Serializable 
+{
     
+    private static final long serialVersionUID = 1L;
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    //private Long id;
+    
+    //@Column(name = "NOMBRE")
     private String nombre;
+    //@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    //@JoinColumn(name = "TEMAS")
     private List<Tema> temas;
+    //@Column(name = "IMAGEN")
     private String imagen;
 
     public ListaDeReproduccion(String nombre, String imagen) {
         this.nombre = nombre;
         this.temas = new ArrayList();
         this.imagen = imagen;
-    }
-
-    ListaDeReproduccion() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     //GETTERS

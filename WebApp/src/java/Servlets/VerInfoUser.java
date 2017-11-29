@@ -40,7 +40,7 @@ public class VerInfoUser extends HttpServlet {
             request.getSession().setAttribute("userConsult", u.getNick());
             request.setAttribute("userInfo", u);
             if(u instanceof DTCliente){
-               getServletConfig().getServletContext().getRequestDispatcher("/ConsultarCliente.jsp").forward(request,response);
+                getServletConfig().getServletContext().getRequestDispatcher("/ConsultarCliente.jsp").forward(request,response);
             }
             else{
                 getServletConfig().getServletContext().getRequestDispatcher("/ConsultarArtista.jsp").forward(request,response);

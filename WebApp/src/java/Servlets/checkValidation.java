@@ -1,13 +1,13 @@
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 @WebServlet(name = "checkValidation", urlPatterns = {"/checkValidation"})
 public class checkValidation extends HttpServlet {
@@ -15,9 +15,10 @@ public class checkValidation extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         String action = request.getParameter("action");
         String identificador = request.getParameter("id");
-        IControlador controlador = new Controlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
         if(action == "CheckMail"){
-            if(controlador.mailLibre(identificador)){
+            if(ICU.mailLibre(identificador)){
                 
             }
             else{

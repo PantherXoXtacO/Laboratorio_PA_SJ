@@ -5,13 +5,6 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
-import DataType.DTCliente;
-import Enums.TiposDeSuscripcion;
-import Logica.Cliente;
-import Logica.Fabrica;
-import Logica.Suscripcion;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -24,6 +17,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.Cliente;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
+import pkgWS.Suscripcion;
+import pkgWS.TiposDeSuscripcion;
 
 /**
  *
@@ -46,18 +44,20 @@ public class ContratarSuscripcion extends HttpServlet {
         HttpSession session = request.getSession();
         EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Lab_Pro_AplPU" );
         EntityManager em = emfactory.createEntityManager();
-        Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador();
+        //Fabrica fabrica = Fabrica.getInstance();
+        //IControlador ICU = fabrica.getIControlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
         String TiposDeSuscripciones = request.getParameter("TiposDeSuscripciones"); 
         String usernick = (String) session.getAttribute("UserNick");        
         Cliente cliente = ICU.consultarCliente(usernick);
         Suscripcion s = null;
         if(TiposDeSuscripciones.equals("Anual"))
-           s= new Suscripcion(cliente, TiposDeSuscripcion.Anual); 
+           s= new Suscripcion(cliente, TiposDeSuscripcion.ANUAL); 
         else if(TiposDeSuscripciones.equals("Mensual"))
-            s= new Suscripcion(cliente, TiposDeSuscripcion.Mensual);
+            s= new Suscripcion(cliente, TiposDeSuscripcion.MENSUAL);
         else
-            s= new Suscripcion(cliente, TiposDeSuscripcion.Semanal);       
+            s= new Suscripcion(cliente, TiposDeSuscripcion.SEMANAL);       
         ICU.contratarSuscripcion(cliente, s.getTipo());
         
         

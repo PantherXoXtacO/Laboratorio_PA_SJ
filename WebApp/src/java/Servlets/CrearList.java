@@ -5,8 +5,7 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,6 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -38,8 +39,10 @@ public class CrearList extends HttpServlet {
         if(session.getAttribute("UserNick")!=null){
             String nombreLista = request.getParameter("nombreLista");
             String user = (String) session.getAttribute("UserNick");
-            IControlador controlador = new Controlador();
-            controlador.addListaParticular(user, nombreLista, "");//La imagen va vacia porque no podemos cargar aun
+            //IControlador controlador = new Controlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
+            ICU.addListaParticular(user, nombreLista, "");//La imagen va vacia porque no podemos cargar aun
             out.println("Lista creada");
         }
         else{

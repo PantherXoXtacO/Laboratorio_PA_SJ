@@ -5,10 +5,6 @@
  */
 package Servlets;
 
-import DataType.DTCliente;
-import DataType.DTUsuario;
-import Logica.Controlador;
-import Logica.IControlador;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import pkgWS.*;
 /**
  *
  * @author Usuario
@@ -38,10 +34,16 @@ public class myPerfil extends HttpServlet {
             HttpSession session = request.getSession();
             if(session.getAttribute("UserNick")!=null){
                 String nick  = (String) session.getAttribute("UserNick");
-                IControlador controlador = new Controlador();
-                DTUsuario user = controlador.getUserData(nick);
+                //IControlador controlador = new Controlador();
+                //DTUsuario user = controlador.getUserData(nick);
+                
+                PublicadorService service = new pkgWS.PublicadorService();
+                Publicador port = service.getPublicadorPort();
+                DtUsuario user = port.getUserData(nick);
+                
+                
                 request.setAttribute("userInfo", user);
-                if(user instanceof DTCliente){
+                if(user instanceof DtCliente){
                   getServletConfig().getServletContext().getRequestDispatcher("/MiPerfilCliente.jsp").forward(request,response); 
                 }
                 else{

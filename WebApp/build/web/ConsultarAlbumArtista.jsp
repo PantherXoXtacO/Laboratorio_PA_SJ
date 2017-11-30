@@ -4,17 +4,18 @@
     Author     : Casca
 --%>
 
-<%@page import="Logica.Album"%>
-<%@page import="Logica.Artista"%>
+<%@page import="pkgWS.ArrayList"%>
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page import="java.util.List"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Fabrica"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-       Fabrica fabrica = Fabrica.getInstance();
-       IControlador ICU = fabrica.getIControlador();
-       List<String> artistas = ICU.getArtistas();
+       //Fabrica fabrica = Fabrica.getInstance();
+       //IControlador ICU = fabrica.getIControlador();
+       PublicadorService service = new pkgWS.PublicadorService();
+       Publicador ICU = service.getPublicadorPort();
+       ArrayList artistas = ICU.getArtistas();
 %>
 
 <!DOCTYPE html>

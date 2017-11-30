@@ -7,11 +7,14 @@ package DataType;
 
 import Logica.ListaDeReproduccion;
 import Logica.ListaPorDefecto;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author Usuario
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DTListaDefecto extends DTListaRepro {
     private String genero;
 

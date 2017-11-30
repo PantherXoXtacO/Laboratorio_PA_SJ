@@ -5,14 +5,15 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -32,7 +33,9 @@ public class CheckMail extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         String mail = request.getParameter("mail");
-        IControlador controlador = new Controlador();
+        //IControlador controlador = new Controlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
         if(mail.equals("")){
             response.setContentType("text/plain");
             response.getWriter().write("");
@@ -43,7 +46,7 @@ public class CheckMail extends HttpServlet {
             response.getWriter().write(" Mail no valido");
             return;
         }
-        if(!controlador.mailLibre(mail)){
+        if(!ICU.mailLibre(mail)){
             response.setContentType("text/plain");
             response.getWriter().write(" Mail en uso");
         }

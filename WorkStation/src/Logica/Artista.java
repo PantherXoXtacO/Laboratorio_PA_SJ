@@ -12,9 +12,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 @Entity
 @Table(name = "ARTISTA")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Artista extends Usuario {
     @Column(name = "BIOGRAFIA")
     private String biografia;

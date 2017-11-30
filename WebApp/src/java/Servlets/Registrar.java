@@ -5,9 +5,6 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.Fecha;
-import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -21,6 +18,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Fecha;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -40,7 +40,9 @@ public class Registrar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, InterruptedException {
-            IControlador controlador = new Controlador();
+            //IControlador controlador = new Controlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
             PrintWriter out = response.getWriter();
             String nick = request.getParameter("userNick");
             String mail = request.getParameter("userMail");
@@ -53,7 +55,7 @@ public class Registrar extends HttpServlet {
                 numbers.add(Integer.parseInt(m.group()));
             }
             Fecha f = new Fecha(numbers.get(0), numbers.get(1), numbers.get(2));
-            //
+            
             
             String pass = request.getParameter("userPass");
             String nombre = request.getParameter("userNom");
@@ -62,11 +64,11 @@ public class Registrar extends HttpServlet {
             if(esArtista.equals("si")){
                 String bio = request.getParameter("bio");
                 String web_url = request.getParameter("web_url");
-                controlador.registrarArtista(nick, pass, mail, nombre, apellido, f, "", bio, web_url);
+                ICU.registrarArtista(nick, pass, mail, nombre, apellido, f, "", bio, web_url);
                 out.println("<html><body onload=\"alert('Artista Creado')\"></body></html>");
             }
             else{
-                controlador.registrarCliente(nick, pass, mail, nombre, apellido, f, "");
+                ICU.registrarCliente(nick, pass, mail, nombre, apellido, f, "");
                 out.println("<html><body onload=\"alert('Cliente: "+ nick  +" creado')\"></body></html>");
             }
             response.setHeader("Refresh", "0; URL=/Lab/");

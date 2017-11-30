@@ -6,8 +6,7 @@ package Servlets;
  * and open the template in the editor.
  */
 
-import Logica.Controlador;
-import Logica.IControlador;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -22,6 +21,8 @@ import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -57,8 +58,10 @@ public class CambiarImagenUsuario extends HttpServlet {
                         UserNick = (String) request.getSession().getAttribute("UserNick");
                         String name = UserNick + OldName.substring(n-4);
                         item.write( new File(UPLOAD_DIRECTORY + File.separator + name));
-                        IControlador controlador = new Controlador();
-                        controlador.ActualizarImagenUsuario(UserNick, name);                        
+                        //IControlador controlador = new Controlador();
+                        PublicadorService service = new pkgWS.PublicadorService();
+                        Publicador ICU = service.getPublicadorPort();
+                        ICU.actualizarImagenUsuario(UserNick, name);                        
                     }
                 }
                 

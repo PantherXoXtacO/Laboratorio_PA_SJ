@@ -5,9 +5,6 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Fabrica;
-import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,6 +12,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Album;
+import pkgWS.ArrayList;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -42,8 +43,10 @@ public class ConsultarAlbumArtista extends HttpServlet {
             response.sendRedirect("index.jsp");
         }
         else{
-            Fabrica fabrica = Fabrica.getInstance();
-            IControlador ICU = fabrica.getIControlador();
+            //Fabrica fabrica = Fabrica.getInstance();
+            //IControlador ICU = fabrica.getIControlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
             Album album = ICU.getAlbumByName(albumName);
             
             
@@ -60,7 +63,7 @@ public class ConsultarAlbumArtista extends HttpServlet {
             out.println("<h1>Nombre del album: " + albumName + "</h1>");
             out.println("<h1>Artista: " + artistaName + "</h1>");
             out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
-            out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(album.getGeneros())+ "</h1>");
+            out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros((ArrayList) album.getGenero())+ "</h1>");
             out.println("<h1>IMAGEN"+ "</h1>");
             out.println("<h1>Lista de temas: <br>" + album.getListaDeTemasEnString() +  "</h1>");
             out.println("</body>");

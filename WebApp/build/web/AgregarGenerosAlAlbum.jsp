@@ -4,12 +4,10 @@
     Author     : Casca
 --%>
 
+<%@page import="pkgWS.ArrayList"%>
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page import="java.util.List"%>
-<%@page import="Logica.Album"%>
-<%@page import="DataType.DTCliente"%>
-<%@page import="DataType.DTUsuario"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Fabrica"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
@@ -20,25 +18,21 @@
     } 
      else{
        String usernick = (String) username;
-       Fabrica fabrica = Fabrica.getInstance();
-       IControlador ICU = fabrica.getIControlador();
+       //Fabrica fabrica = Fabrica.getInstance();
+       //IControlador ICU = fabrica.getIControlador();
+       PublicadorService service = new pkgWS.PublicadorService();
+       Publicador ICU = service.getPublicadorPort();
        DTUsuario user= ICU.getUserData(usernick);
        if(user instanceof DTCliente){
            response.sendRedirect("index.jsp"); 
        }
     }
-    Fabrica fabrica = Fabrica.getInstance();
-    IControlador ICU = fabrica.getIControlador();    
-    
     //Fabrica fabrica = Fabrica.getInstance();
-    //IControlador ICU = fabrica.getIControlador(); 
-    //Album album = ICU.getTemporalAlbum();
-    //if(album==null){
-    //    ICU.createTemporalAlbum();
-    //    album = ICU.getTemporalAlbum();
-    //}
+    //IControlador ICU = fabrica.getIControlador();  
+    PublicadorService service = new pkgWS.PublicadorService();
+    Publicador ICU = service.getPublicadorPort();
     
-    List<String> generos = ICU.getGenerosInString();   
+    ArrayList generos = ICU.getGenerosInString();   
 %>
 
 <!DOCTYPE html>

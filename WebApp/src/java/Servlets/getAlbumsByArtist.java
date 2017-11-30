@@ -5,10 +5,6 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Artista;
-import Logica.Fabrica;
-import Logica.IControlador;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -16,6 +12,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Album;
+import pkgWS.ArrayList;
+import pkgWS.Artista;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -29,8 +30,10 @@ public class getAlbumsByArtist extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             
             System.out.println("getalbumsbyartist.java");          
-            Fabrica fabrica = Fabrica.getInstance();
-            IControlador ICU = fabrica.getIControlador();
+//            Fabrica fabrica = Fabrica.getInstance();
+//            IControlador ICU = fabrica.getIControlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
             String artista = request.getParameter("dropdown1").trim(); 
             if(artista!=null){
                 Artista art = ICU.consultarArtista(artista);
@@ -40,7 +43,7 @@ public class getAlbumsByArtist extends HttpServlet {
                     System.out.println("Artista sin albums");
                 }
                     
-                String albums = ICU.albumListToString(albumsDelArtista);
+                String albums = ICU.albumListToString((ArrayList) albumsDelArtista);
                 response.setContentType("text/plain");
                 response.getWriter().write(albums);
             }             

@@ -5,11 +5,6 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Artista;
-import Logica.Controlador;
-import Logica.Fabrica;
-import Logica.IControlador;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -23,6 +18,8 @@ import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *

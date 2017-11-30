@@ -5,8 +5,7 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -36,8 +37,10 @@ public class DejarDeSeguirUser extends HttpServlet {
         String user = (String) request.getSession().getAttribute("UserNick");
         String user_seguir = (String) request.getSession().getAttribute("userConsult");
         if(!(user.equals(user_seguir))){
-            IControlador controlador = new Controlador();
-            controlador.DejarDeSeguirUsuario(user, user_seguir);
+            //IControlador controlador = new Controlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
+            ICU.dejarDeSeguirUsuario(user, user_seguir);
             out.println("<html><body onload=\"alert('Dejaste de seguir a: "+ user_seguir +"')\"></body></html>");
             response.setHeader("Refresh", "0; URL=/Lab/");
         }

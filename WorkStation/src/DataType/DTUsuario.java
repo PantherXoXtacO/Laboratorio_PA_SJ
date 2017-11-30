@@ -11,11 +11,16 @@ import Logica.Usuario;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author Usuario
  */
+
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DTUsuario {
     
     private String nick;

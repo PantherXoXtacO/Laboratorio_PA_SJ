@@ -5,12 +5,7 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Fabrica;
-import Logica.Genero;
-import Logica.IControlador;
-import Logica.Manejador;
-import Logica.Tema;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
@@ -22,6 +17,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.Album;
+import pkgWS.Genero;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -42,8 +41,10 @@ public class AltaTema extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador();        
+        //Fabrica fabrica = Fabrica.getInstance();
+        //IControlador ICU = fabrica.getIControlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();      
         String nombre = request.getParameter("nombre_tema");
         String duracion = request.getParameter("duracion_tema");
         String ubicacion = request.getParameter("ubicacion_tema");
@@ -56,14 +57,15 @@ public class AltaTema extends HttpServlet {
         }
         else{
             Album album = ICU.getAlbumByName(albumname);                
-        Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
-        album.addTema(tema);
-        ICU.addTemaToM(tema);
+            Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
+            album.addTema(tema);
+            ICU.addTemaToM(tema);
         
         String generosEnString = "";
-        List<Genero> generos = album.getGeneros();
+        pkgWS.ArrayList generos = new pkgWS.ArrayList();
+        //List<Genero> generos = album.getGeneros();
         Genero gen;
-        Iterator it = generos.iterator();
+        Iterator it = generos.iterator();//ayayay
         while(it.hasNext()){
             gen = (Genero) it.next();
             generosEnString += "[" + gen.getNombre() + "] ";

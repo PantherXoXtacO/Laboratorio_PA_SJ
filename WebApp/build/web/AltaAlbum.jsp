@@ -53,6 +53,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/ajax-cargarImagenDeAlbum.js" type="text/javascript"></script>
         <title>Alta Album</title>
     </head>
     <body>
@@ -62,14 +63,15 @@
             <input type="text" name="nombre_album"/>
             <p>* Año de creacion: </p>
             <input type="text" name="anio_album"/>    
-            <p>Ruta de la imagen: </p>
-            <div> 
-            <input name="imagen_album">
-            <input type="button" name="imagen_album" value="Cambiar imagen" />
-            </div>
+            <p name="ruta" id="ruta">Ruta de la imagen: </p>
+            <input type="file" name="pic" id="pic" accept="image/*">
+            <br>
+            <input type="button" name="cambiar_img" id="cambiar_img" value="Subir imagen" />   
+            <br>
             <input type="submit" value="Crear Album" />   
             <p>Los campos necesarios estan marcados con *</p>
         </form>     
+        
     </body>
 </html>
 

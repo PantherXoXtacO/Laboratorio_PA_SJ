@@ -65,7 +65,7 @@ public class AltaTema extends HttpServlet {
         pkgWS.ArrayList generos = new pkgWS.ArrayList();
         //List<Genero> generos = album.getGeneros();
         Genero gen;
-        Iterator it = generos.iterator();
+        Iterator it = generos.iterator();//ayayay
         while(it.hasNext()){
             gen = (Genero) it.next();
             generosEnString += "[" + gen.getNombre() + "] ";

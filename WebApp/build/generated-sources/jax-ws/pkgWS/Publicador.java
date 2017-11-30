@@ -462,7 +462,7 @@ public interface Publicador {
      */
     @WebMethod
     @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/DejarDeSeguirUsuarioRequest", output = "http://Publicador/Publicador/DejarDeSeguirUsuarioResponse")
+    @Action(input = "http://Publicador/Publicador/nicknameLibreRequest", output = "http://Publicador/Publicador/nicknameLibreResponse")
     public boolean nicknameLibre(
         @WebParam(name = "arg0", partName = "arg0")
         String arg0);
@@ -473,7 +473,7 @@ public interface Publicador {
      * @param arg1
      */
     @WebMethod
-    @Action(input = "http://Publicador/Publicador/DejarDeSeguirUsuarioRequest", output = "http://Publicador/Publicador/DejarDeSeguirUsuarioResponse")
+    @Action(input = "http://Publicador/Publicador/ActualizarImagenUsuarioRequest", output = "http://Publicador/Publicador/ActualizarImagenUsuarioResponse")
     public void ActualizarImagenUsuario(
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
@@ -573,7 +573,42 @@ public interface Publicador {
             Fecha f,
             @WebParam(name = "string", partName = "string")
             String string);
+    
+    //***************    Listas para agregar si son necesarias    *****************
 
-    
-    
+//    getListaClientes();
+//    AltaGenero(String nombre, String padre);
+//    GetGenero();
+//    getGeneroPorNombre(String nombre);
+//    getItemCliente();
+//    getItemArtista();
+//    getTemasItem();
+//    getGeneroItem();
+//    getItemSuscripciones();
+//    agregarTemaALista(Object Lista, Object Tema);
+//    QuitarTemaFavorito(Item cliente, Item tema);
+//    QuitarAlbumFav(Item cliente, Item album);
+//    QuitarListaFav(Item cliente, Item lista);
+//    getAlbumPorGenItem(String s);
+//    //getItemArtist en el ICU hay 2 de estas
+//    addListaPorDefecto(Genero genero, String nombreDeLista, String imagenDeLista);
+//    privatizarLista(ListaParticular lista, boolean modo);
+//    getListByName(Cliente user, String name);
+//    getListasDefectoItem();
+//    artistLibre(String artistAlbum);
+//    GuardarListaFav(Object selectedItem, Object selectedItem0);
+//    GuardarTemaFav(Object selectedItem, Object selectedItem0);
+//    GuardarAlbumFav(Object selectedItem, Object selectedItem0);
+//    //DejarSeguirUsuario(Item seguidor, Item seguido); Tambien hay 2
+//    AgregarTema(Usuario user);
+//    quitarTemaDeLista(Object selectedItem, Object selectedItem0);
+//    //QuitarTemaFavorito(Object selectedItem, Object selectedItem0); Tambien hay 2
+//    //QuitarAlbumFav(Object selectedItem, Object selectedItem0); Tambien hay 2
+//    //QuitarListaFav(Object selectedItem, Object selectedItem0); Tambien hay 2
+//    GuardarTemaFavorito(Object selectedItem, Object selectedItem0);
+//    setTemporalAlbum(Album album);
+//    addTemaToM(Tema tema);
+//    absolutePathToRelative(String path);
+//    getAlbumsAsItem();
+//    getListasAsItem();
 }

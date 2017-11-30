@@ -6,11 +6,6 @@ package Servlets;
  * and open the template in the editor.
  */
 
-import Enums.EstadosDeSuscripcion;
-import Logica.Cliente;
-import Logica.Fabrica;
-import Logica.IControlador;
-import Logica.Suscripcion;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.persistence.EntityManager;
@@ -22,14 +17,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+import pkgWS.*;
 /**
  *
  * @author Casca
  */
 @WebServlet(urlPatterns = {"/ActualizarSuscripcion"})
 public class ActualizarSuscripcion extends HttpServlet {
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -45,11 +39,14 @@ public class ActualizarSuscripcion extends HttpServlet {
         HttpSession session = request.getSession();
         EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "Lab_Pro_AplPU" );
         EntityManager em = emfactory.createEntityManager();
-        Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador();
+        //Fabrica fabrica = Fabrica.getInstance();
+        //IControlador ICU = fabrica.getIControlador();
+        
+        PublicadorService service = new PublicadorService();
+        Publicador port = service.getPublicadorPort();
         
         String usernick = (String) session.getAttribute("UserNick");
-        Cliente cliente = ICU.consultarCliente(usernick);
+        Cliente cliente = port.consultarCliente(usernick);
         Suscripcion s = cliente.getSuscripcion();        
         String cancelar = request.getParameter("Cancelar");            
         boolean wantToCancel = false;
@@ -62,9 +59,9 @@ public class ActualizarSuscripcion extends HttpServlet {
         else{   
             String estadoObjetivo = request.getParameter("EstadoSiVencida"); 
             if(estadoObjetivo.equals("Cancelar"))
-                cliente.getSuscripcion().setEstado(EstadosDeSuscripcion.Cancelada);
+                cliente.getSuscripcion().setEstado(EstadosDeSuscripcion.CANCELADA);
             else if(estadoObjetivo.equals("Renovar"))
-                cliente.getSuscripcion().setEstado(EstadosDeSuscripcion.Vigente);            
+                cliente.getSuscripcion().setEstado(EstadosDeSuscripcion.VIGENTE);            
         }
         
         

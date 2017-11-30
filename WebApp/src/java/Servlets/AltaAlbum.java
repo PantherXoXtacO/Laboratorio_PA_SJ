@@ -5,12 +5,6 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Artista;
-import Logica.Fabrica;
-import Logica.Genero;
-import Logica.IControlador;
-import Logica.Tema;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -21,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.*;
 
 /**
  *
@@ -46,8 +41,10 @@ public class AltaAlbum extends HttpServlet {
     
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador(); 
+        //Fabrica fabrica = Fabrica.getInstance();
+        //IControlador ICU = fabrica.getIControlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
         HttpSession session = request.getSession();
         session.setAttribute("generosAgregados", null); 
         String artistname =(String) session.getAttribute("UserNick");
@@ -60,8 +57,8 @@ public class AltaAlbum extends HttpServlet {
         
         if(nombreAlbum!=null && año_album!=null && año_album.matches("\\d+") && generos_album!=null){
             
-            List<Genero> listgen = new ArrayList();
-            listgen = ICU.GenerosFromString(generos_album);             
+            List listgen = new ArrayList();
+            listgen = (List) ICU.generosFromString(año_album);           
             
             //ICU.createTemporalAlbum(); ya deberia estar creado
             ICU.configTemporalAlbum(artist, nombreAlbum, listgen , Integer.parseInt(año_album), imagen_album);
@@ -82,7 +79,8 @@ public class AltaAlbum extends HttpServlet {
                 out.println("<h1>Nombre: " + nombreAlbum + "</h1>");
                 out.println("<h1>Artista: " + artistname + "</h1>");
                 out.println("<h1>Año de creacion: " + año_album+ "</h1>");
-                out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(listgen) + "</h1>");
+                ArrayList arrayGen = (ArrayList)listgen;
+                out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(arrayGen) + "</h1>");
                 out.println("<h1>Path a imagen del album: " + imagen_album + "</h1>");
                 out.println("</body>");
                 out.println("</html>");

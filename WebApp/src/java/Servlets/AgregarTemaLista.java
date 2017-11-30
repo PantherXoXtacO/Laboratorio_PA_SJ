@@ -5,8 +5,6 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -42,8 +42,9 @@ public class AgregarTemaLista extends HttpServlet {
                 String artista = request.getParameter("Artista");
                 String album = request.getParameter("album");
                 String tema = request.getParameter("tema");
-                IControlador controlador = new Controlador();
-                controlador.AgregarTemaListaWeb(user, lista, artista, album, tema);
+                PublicadorService service = new pkgWS.PublicadorService();
+                Publicador port = service.getPublicadorPort();
+                port.agregarTemaListaWeb(user, lista, artista, album, tema);
                 out.println("Tema agregado");                
             }
             else{

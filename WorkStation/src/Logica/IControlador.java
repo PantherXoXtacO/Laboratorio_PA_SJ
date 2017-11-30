@@ -1,5 +1,4 @@
 package Logica;
-import java.awt.image.BufferedImage;
 import java.util.List;
 import DataType.*;
 import Enums.EstadosDeSuscripcion;

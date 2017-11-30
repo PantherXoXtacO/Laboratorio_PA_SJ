@@ -4,8 +4,6 @@
     Author     : Usuario
 --%>
 
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Controlador"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

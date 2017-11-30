@@ -1,14 +1,13 @@
-<%@page import="DataType.DTTema"%>
+
+<%@page import="pkgWS.DtListaRepro"%>
 <%@page import="java.util.Iterator"%>
-<%@page import="DataType.DTListaPrticular"%>
-<%@page import="DataType.DTListaRepro"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%
-            DTListaRepro L = (DTListaRepro) request.getAttribute("Lista");
+            DtListaRepro L = (DtListaRepro) request.getAttribute("Lista");
         %>
         <title><%out.println(L.getNombre());%></title>
     </head>
@@ -17,8 +16,8 @@
         <img src="<%out.println(L.getImagen());%>" alt="IMAGEN">
         <div>
         <%
-            if(L instanceof DTListaPrticular){
-                DTListaPrticular aux = (DTListaPrticular) L;
+            if(L instanceof DtListaPrticular){
+                DtListaPrticular aux = (DtListaPrticular) L;
                 out.println("Dueño" + aux.getCliente());
             }
             else{

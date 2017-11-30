@@ -69,7 +69,7 @@
             <ul>
                 <%
                     Iterator itAlbum = user.getAlbumFav().iterator();
-                    DTAlbum album;
+                    DtAlbum album;
                     while(itAlbum.hasNext()){
                         album = (DTAlbum) itAlbum.next();
                         out.println("<li>" + album.getNombre() + "</li>");
@@ -121,7 +121,8 @@
    <%
         if(request.getSession().getAttribute("UserNick")!=null){
             if((Boolean)request.getSession().getAttribute("EsArtista") == false){
-                IControlador controlador = new Controlador();
+                //IControlador controlador = new Controlador();
+                
                 String seguidor = (String) request.getSession().getAttribute("UserNick");
                 //String seguido = (String) request.getSession().getAttribute("userConsult");
                 if(!user.yaSigue(seguidor)){

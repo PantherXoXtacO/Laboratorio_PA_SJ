@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="año" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="a\u00f1o" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="dia" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="mes" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
@@ -35,24 +35,24 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Fecha {
 
-    protected int año;
+    protected int a\u00f1o;
     protected int dia;
     protected int mes;
 
     /**
-     * Obtiene el valor de la propiedad año.
+     * Obtiene el valor de la propiedad a\u00f1o.
      * 
      */
-    public int getAño() {
-        return año;
+    public int getA\u00f1o() {
+        return a\u00f1o;
     }
 
     /**
-     * Define el valor de la propiedad año.
+     * Define el valor de la propiedad a\u00f1o.
      * 
      */
-    public void setAño(int value) {
-        this.año = value;
+    public void setA\u00f1o(int value) {
+        this.a\u00f1o = value;
     }
 
     /**

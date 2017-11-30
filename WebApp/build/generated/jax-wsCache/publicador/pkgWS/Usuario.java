@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="apellido" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="contraseña" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="contrase\u00f1a" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="fechaDeNacimiento" type="{http://Publicador/}fecha" minOccurs="0"/>
  *         &lt;element name="imagen" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="mail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -49,7 +49,7 @@ import javax.xml.bind.annotation.XmlType;
 public abstract class Usuario {
 
     protected String apellido;
-    protected String contraseña;
+    protected String contrase\u00f1a;
     protected Fecha fechaDeNacimiento;
     protected String imagen;
     protected String mail;
@@ -81,27 +81,27 @@ public abstract class Usuario {
     }
 
     /**
-     * Obtiene el valor de la propiedad contraseña.
+     * Obtiene el valor de la propiedad contrase\u00f1a.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getContraseña() {
-        return contraseña;
+    public String getContrase\u00f1a() {
+        return contrase\u00f1a;
     }
 
     /**
-     * Define el valor de la propiedad contraseña.
+     * Define el valor de la propiedad contrase\u00f1a.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setContraseña(String value) {
-        this.contraseña = value;
+    public void setContrase\u00f1a(String value) {
+        this.contrase\u00f1a = value;
     }
 
     /**

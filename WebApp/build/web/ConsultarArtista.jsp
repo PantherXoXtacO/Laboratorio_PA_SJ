@@ -1,3 +1,4 @@
+<%@page import="pkgWS.DtUsuario"%>
 <%@page import="java.util.Iterator"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
@@ -7,7 +8,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="DataType.DTCliente"%>
 <%@page import="java.util.ArrayList"%>
 <%
     DTArtista user = (DTArtista) request.getAttribute("userInfo");
@@ -54,9 +54,9 @@
             <ul>
                 <%
                     Iterator itSeguidores = user.getSeguidores().iterator();
-                    DTUsuario user_seguidores;
+                    DtUsuario user_seguidores;
                     while(itSeguidores.hasNext()){
-                        user_seguidores = (DTUsuario) itSeguidores.next();
+                        user_seguidores = (DtUsuario) itSeguidores.next();
                         out.println("<li>" + user_seguidores.getNick() + "</li>");
                     }
                 %>
@@ -66,7 +66,7 @@
    <%
         if(request.getSession().getAttribute("UserNick")!=null){
             if((Boolean)request.getSession().getAttribute("EsArtista") == false){
-                IControlador controlador = new Controlador();
+                //IControlador controlador = new Controlador();
                 String seguidor = (String) request.getSession().getAttribute("UserNick");
                 //String seguido = (String) request.getSession().getAttribute("userConsult");
                 if(!user.yaSigue(seguidor)){

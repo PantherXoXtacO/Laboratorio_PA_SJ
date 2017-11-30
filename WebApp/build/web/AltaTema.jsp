@@ -4,12 +4,12 @@
     Author     : TISJ
 --%>
 
+<%@page import="pkgWS.ArrayList"%>
+<%@page import="pkgWS.DtCliente"%>
+<%@page import="pkgWS.PublicadorService"%>
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.DtUsuario"%>
 <%@page import="java.util.List"%>
-<%@page import="Logica.Album"%>
-<%@page import="DataType.DTCliente"%>
-<%@page import="DataType.DTUsuario"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Fabrica"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
@@ -20,16 +20,20 @@
     } 
      else{
        String usernick = (String) username;
-       Fabrica fabrica = Fabrica.getInstance();
-       IControlador ICU = fabrica.getIControlador();
-       DTUsuario user= ICU.getUserData(usernick);
-       if(user instanceof DTCliente){
+       //Fabrica fabrica = Fabrica.getInstance();
+       //IControlador ICU = fabrica.getIControlador();
+       PublicadorService service = new pkgWS.PublicadorService();
+       Publicador ICU = service.getPublicadorPort();
+       DtUsuario user= ICU.getUserData(usernick);
+       if(user instanceof DtCliente){
            response.sendRedirect("index.jsp"); 
        }
     }
-    Fabrica fabrica = Fabrica.getInstance();
-    IControlador ICU = fabrica.getIControlador();    
-    List<String> albums = ICU.getAlbumsListtoString();
+    //Fabrica fabrica = Fabrica.getInstance();
+    //IControlador ICU = fabrica.getIControlador();    
+    PublicadorService service = new pkgWS.PublicadorService();
+    Publicador ICU = service.getPublicadorPort();
+    ArrayList albums = ICU.getAlbumsListtoString();
     System.out.println(albums);
 %>
 

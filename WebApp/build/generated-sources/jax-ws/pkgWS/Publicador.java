@@ -521,5 +521,32 @@ public interface Publicador {
     @WebResult(partName = "return")
     @Action(input = "http://Publicador/Publicador/dtListaRequest", output = "http://Publicador/Publicador/dtListaResponse")
     public DtListaRepro dtLista();
+    
+    /**
+     *
+     * @param album
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/persistAlbumRequest", output = "http://Publicador/persistAlbumResponse")
+    public void persistAlbum(Album album);
+    
+    /**
+     * 
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/createTemporalGenresRequest", output = "http://Publicador/createTemporalGenresResponse")
+    public void createTemporalGenres();
 
+    /**
+     *
+     * @return
+     */ 
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/getTemporalGenresRequest", output = "http://Publicador/getTemporalGenresResponse")
+    public ArrayList getTemporalGenres();
+    
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/AltaGeneroRequest", output = "http://Publicador/AltaGeneroResponse")
+    public void AltaGenero(String nombre, String padre);
+    
 }

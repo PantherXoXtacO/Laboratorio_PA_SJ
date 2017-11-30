@@ -57,7 +57,8 @@ public class AltaTema extends HttpServlet {
         }
         else{
             Album album = ICU.getAlbumByName(albumname);                
-            Tema tema = new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
+            Tema tema = ICU.nuevoTema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
+                    //new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
             album.addTema(tema);
             ICU.addTemaToM(tema);
         

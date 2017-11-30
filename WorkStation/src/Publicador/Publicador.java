@@ -265,6 +265,11 @@ public class Publicador {
         return new Album(nombreAlbum, año_album, imagen_album, artist);
     }
     
+    @WebMethod
+    public Tema nuevoTema(String nombre, int duracion, int ubicacion, Album album){
+        return new Tema(nombre, duracion , ubicacion, album);
+    }
+    
     //////////////////////Funciones que no retornan nada, solo para incluir los .java
     @WebMethod
     public DTCliente dtCliente(){

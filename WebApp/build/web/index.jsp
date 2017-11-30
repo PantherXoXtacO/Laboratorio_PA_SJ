@@ -73,9 +73,6 @@
             <input type="checkbox" checked="checked" id="c6" />
             <label class="tree_label" for="c6"> Usuarios</label>
             <ul>
-                <li><a href=".java" class="tree_label"> Seguir Usuario</a></li>
-                <li><a href=".java" class="tree_label"> Dejar de Seguir Usuario</a></li>
-                <li>
                 <input type="checkbox" checked="checked" id="c7" />
                 <label for="c7" class="tree_label">Agregar a Favoritos</label>
                 <ul>

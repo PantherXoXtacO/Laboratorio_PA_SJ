@@ -30,7 +30,7 @@ public class Publicador {
     
     @WebMethod(exclude = true)
     public void publicar(){
-         endpoint = Endpoint.publish("http://localhost:9130/publicador", this);
+         endpoint = Endpoint.publish("http://192.168.0.103:9130/publicador", this);
     }
     
     @WebMethod(exclude = true)
@@ -246,7 +246,12 @@ public class Publicador {
     
     @WebMethod
     public boolean yaSigue(DTCliente c, String s){
-        return c.yaSigue(s);
+        if(c!=null){
+            return c.yaSigue(s);
+        }
+        else{
+            return false;
+        }
     }
     
     @WebMethod
@@ -270,6 +275,15 @@ public class Publicador {
         return new Tema(nombre, duracion , ubicacion, album);
     }
     
+    @WebMethod
+    public Suscripcion nuevaSus(Cliente c, TiposDeSuscripcion t){
+        return new Suscripcion(c, t);
+    }
+    
+    @WebMethod
+    public Fecha nuevaFecha(int dia, int mes, int ano){
+        return new Fecha(dia, mes, ano);
+    }
     //////////////////////Funciones que no retornan nada, solo para incluir los .java
     @WebMethod
     public DTCliente dtCliente(){

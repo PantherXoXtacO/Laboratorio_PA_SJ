@@ -4,8 +4,8 @@
   </services>
   <clients>
     <client name="publicador">
-      <wsdl-url>http://localhost:9130/publicador?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_9130/publicador.wsdl</local-wsdl-file>
+      <wsdl-url>http://192.168.0.103:9130/publicador?wsdl</wsdl-url>
+      <local-wsdl-file>192.168.0.103_9130/publicador.wsdl</local-wsdl-file>
       <package-name forceReplace="true">pkgWS</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -23,7 +23,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:9130/publicador?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://192.168.0.103:9130/publicador?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

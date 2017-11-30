@@ -21,6 +21,7 @@ import pkgWS.Album;
 import pkgWS.Genero;
 import pkgWS.Publicador;
 import pkgWS.PublicadorService;
+import pkgWS.Tema;
 
 /**
  *
@@ -59,18 +60,18 @@ public class AltaTema extends HttpServlet {
             Album album = ICU.getAlbumByName(albumname);                
             Tema tema = ICU.nuevoTema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
                     //new Tema(nombre, Integer.parseInt(duracion), Integer.parseInt(ubicacion), album);
-            album.addTema(tema);
-            ICU.addTemaToM(tema);
+            //album.addTema(tema);
+            //ICU.addTemaToM(tema);
         
         String generosEnString = "";
         pkgWS.ArrayList generos = new pkgWS.ArrayList();
         //List<Genero> generos = album.getGeneros();
-        Genero gen;
-        Iterator it = generos.iterator();//ayayay
-        while(it.hasNext()){
-            gen = (Genero) it.next();
-            generosEnString += "[" + gen.getNombre() + "] ";
-        }
+//        Genero gen;
+//        Iterator it = generos.iterator();//ayayay
+//        while(it.hasNext()){
+//            gen = (Genero) it.next();
+//            generosEnString += "[" + gen.getNombre() + "] ";
+//        }
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {

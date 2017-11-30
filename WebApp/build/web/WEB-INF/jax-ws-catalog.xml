@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:9130/publicador?wsdl" uri="wsdl/localhost_9130/publicador.wsdl"/>
     <system systemId="http://localhost:9130/publicador?xsd=1" uri="wsdl/localhost_9130/publicador.xsd_1.xsd"/>
+    <system systemId="http://192.168.0.103:9130/publicador?wsdl" uri="wsdl/192.168.0.103_9130/publicador.wsdl"/>
+    <system systemId="http://192.168.0.103:9130/publicador?xsd=1" uri="wsdl/192.168.0.103_9130/publicador.xsd_1.xsd"/>
 </catalog>

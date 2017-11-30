@@ -7,6 +7,8 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +18,7 @@ import pkgWS.Album;
 import pkgWS.ArrayList;
 import pkgWS.Publicador;
 import pkgWS.PublicadorService;
+import pkgWS.Tema;
 
 /**
  *
@@ -65,14 +68,27 @@ public class ConsultarAlbumArtista extends HttpServlet {
             out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
             out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros((ArrayList) album.getGenero())+ "</h1>");
             out.println("<h1>IMAGEN"+ "</h1>");
-            out.println("<h1>Lista de temas: <br>" + album.getListaDeTemasEnString() +  "</h1>");
+            List temas = album.getTemas();            
+            out.println("<h1>Lista de temas: <br>" + getListasDeTemasEnString(temas) +  "</h1>");
             out.println("</body>");
             out.println("</html>");
         }  
         }
         
         
-    } 
+    }
+    
+    
+    public String getListasDeTemasEnString(List temas){
+        Iterator it = temas.iterator();
+        Tema tema;
+        String ret = "";
+        while(it.hasNext()){
+            tema = (Tema) it.next();
+            ret += tema.getNombre() + ": (Duracion: " + tema.getDuracion() + " Posicion: " + tema.getOrden() + ")<br>" ;
+        }
+        return ret;
+    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

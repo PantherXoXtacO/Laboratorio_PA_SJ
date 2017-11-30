@@ -54,7 +54,8 @@ public class Registrar extends HttpServlet {
             while(m.find()) {
                 numbers.add(Integer.parseInt(m.group()));
             }
-            Fecha f = new Fecha(numbers.get(0), numbers.get(1), numbers.get(2));
+            Fecha f = ICU.nuevaFecha(numbers.get(0), numbers.get(1), numbers.get(2));
+            //new Fecha(numbers.get(0), numbers.get(1), numbers.get(2));
             
             
             String pass = request.getParameter("userPass");

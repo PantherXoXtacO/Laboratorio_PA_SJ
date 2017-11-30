@@ -13,7 +13,7 @@ public class DTCliente extends DTUsuario{
     private List albumFav;
     private List listasFav;
     private List ListasDeReproduccion;
-
+    
     public DTCliente(Usuario u) {
         super(u);
         Cliente c = (Cliente) u;

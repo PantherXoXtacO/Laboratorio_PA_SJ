@@ -53,11 +53,12 @@ public class ContratarSuscripcion extends HttpServlet {
         Cliente cliente = ICU.consultarCliente(usernick);
         Suscripcion s = null;
         if(TiposDeSuscripciones.equals("Anual"))
-           s= new Suscripcion(cliente, TiposDeSuscripcion.ANUAL); 
+           s= ICU.nuevaSus(cliente, TiposDeSuscripcion.ANUAL);
+                   //new Suscripcion(cliente, TiposDeSuscripcion.ANUAL); 
         else if(TiposDeSuscripciones.equals("Mensual"))
-            s= new Suscripcion(cliente, TiposDeSuscripcion.MENSUAL);
+            s= ICU.nuevaSus(cliente, TiposDeSuscripcion.MENSUAL);
         else
-            s= new Suscripcion(cliente, TiposDeSuscripcion.SEMANAL);       
+            s= ICU.nuevaSus(cliente, TiposDeSuscripcion.SEMANAL);       
         ICU.contratarSuscripcion(cliente, s.getTipo());
         
         

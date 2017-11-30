@@ -4,75 +4,6 @@
 <xsd:import namespace="http://Publicador/" schemaLocation="http://localhost:9130/publicador?xsd=1"></xsd:import>
 </xsd:schema>
 </types>
-<message name="getUserData">
-<part name="arg0" type="xsd:string"></part>
-</message>
-<message name="getUserDataResponse">
-<part name="return" type="tns:dtUsuario"></part>
-</message>
-<message name="WebAltaCliente">
-<part name="arg0" type="xsd:string"></part>
-<part name="arg1" type="xsd:string"></part>
-<part name="arg2" type="xsd:string"></part>
-<part name="arg3" type="xsd:string"></part>
-<part name="arg4" type="xsd:string"></part>
-<part name="arg5" type="xsd:string"></part>
-</message>
-<message name="WebAltaClienteResponse"></message>
-<message name="getUserSession">
-<part name="arg0" type="xsd:string"></part>
-<part name="arg1" type="xsd:string"></part>
-</message>
-<message name="getUserSessionResponse">
-<part name="return" type="tns:dataSession"></part>
-</message>
-<message name="GenerosToString">
-<part name="arg0" type="tns:arrayList"></part>
-</message>
-<message name="GenerosToStringResponse">
-<part name="return" type="tns:arrayList"></part>
-</message>
-<message name="getGeneros"></message>
-<message name="getGenerosResponse">
-<part name="return" type="tns:arrayList"></part>
-</message>
-<message name="getArtistas"></message>
-<message name="getArtistasResponse">
-<part name="return" type="tns:arrayList"></part>
-</message>
-<message name="getAlbumsList"></message>
-<message name="getAlbumsListResponse">
-<part name="return" type="tns:arrayList"></part>
-</message>
-<message name="getAlbumByName">
-<part name="arg0" type="xsd:string"></part>
-</message>
-<message name="getAlbumByNameResponse">
-<part name="return" type="tns:album"></part>
-</message>
-<message name="SeguirUsuario">
-<part name="arg0" type="xsd:string"></part>
-<part name="arg1" type="xsd:string"></part>
-</message>
-<message name="SeguirUsuarioResponse"></message>
-<message name="consultarCliente">
-<part name="arg0" type="xsd:string"></part>
-</message>
-<message name="consultarClienteResponse">
-<part name="return" type="tns:cliente"></part>
-</message>
-<message name="consultarArtista">
-<part name="arg0" type="xsd:string"></part>
-</message>
-<message name="consultarArtistaResponse">
-<part name="return" type="tns:artista"></part>
-</message>
-<message name="addTemporalAlbum"></message>
-<message name="addTemporalAlbumResponse"></message>
-<message name="nada"></message>
-<message name="nadaResponse">
-<part name="return" type="tns:dtCliente"></part>
-</message>
 <message name="actualizarEstadoDeSuscripcionWeb">
 <part name="arg0" type="tns:cliente"></part>
 <part name="arg1" type="tns:estadosDeSuscripcion"></part>
@@ -156,59 +87,124 @@
 <message name="deleteTemporalAlbumResponse"></message>
 <message name="wipeTemporalGenres"></message>
 <message name="wipeTemporalGenresResponse"></message>
+<message name="getGeneroPorNombre">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="getGeneroPorNombreResponse">
+<part name="return" type="tns:genero"></part>
+</message>
+<message name="getUserData">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="getUserDataResponse">
+<part name="return" type="tns:dtUsuario"></part>
+</message>
+<message name="WebAltaCliente">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:string"></part>
+<part name="arg2" type="xsd:string"></part>
+<part name="arg3" type="xsd:string"></part>
+<part name="arg4" type="xsd:string"></part>
+<part name="arg5" type="xsd:string"></part>
+</message>
+<message name="WebAltaClienteResponse"></message>
+<message name="getUserSession">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:string"></part>
+</message>
+<message name="getUserSessionResponse">
+<part name="return" type="tns:dataSession"></part>
+</message>
+<message name="tema"></message>
+<message name="temaResponse">
+<part name="return" type="tns:tema"></part>
+</message>
+<message name="GenerosToString">
+<part name="arg0" type="tns:arrayList"></part>
+</message>
+<message name="GenerosToStringResponse">
+<part name="return" type="tns:arrayList"></part>
+</message>
+<message name="getGeneros"></message>
+<message name="getGenerosResponse">
+<part name="return" type="tns:arrayList"></part>
+</message>
+<message name="getArtistas"></message>
+<message name="getArtistasResponse">
+<part name="return" type="tns:arrayList"></part>
+</message>
+<message name="getAlbumsList"></message>
+<message name="getAlbumsListResponse">
+<part name="return" type="tns:arrayList"></part>
+</message>
+<message name="getAlbumByName">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="getAlbumByNameResponse">
+<part name="return" type="tns:album"></part>
+</message>
+<message name="SeguirUsuario">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:string"></part>
+</message>
+<message name="SeguirUsuarioResponse"></message>
+<message name="consultarCliente">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="consultarClienteResponse">
+<part name="return" type="tns:cliente"></part>
+</message>
+<message name="consultarArtista">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="consultarArtistaResponse">
+<part name="return" type="tns:artista"></part>
+</message>
+<message name="addTemporalAlbum"></message>
+<message name="addTemporalAlbumResponse"></message>
+<message name="nicknameLibre">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="nicknameLibreResponse">
+<part name="return" type="xsd:boolean"></part>
+</message>
+<message name="mailLibre">
+<part name="arg0" type="xsd:string"></part>
+</message>
+<message name="mailLibreResponse">
+<part name="return" type="xsd:boolean"></part>
+</message>
+<message name="registrarCliente">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:string"></part>
+<part name="arg2" type="xsd:string"></part>
+<part name="arg3" type="xsd:string"></part>
+<part name="arg4" type="xsd:string"></part>
+<part name="arg5" type="tns:fecha"></part>
+<part name="arg6" type="xsd:string"></part>
+</message>
+<message name="registrarClienteResponse"></message>
+<message name="registrarArtista">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:string"></part>
+<part name="arg2" type="xsd:string"></part>
+<part name="arg3" type="xsd:string"></part>
+<part name="arg4" type="xsd:string"></part>
+<part name="arg5" type="tns:fecha"></part>
+<part name="arg6" type="xsd:string"></part>
+<part name="arg7" type="xsd:string"></part>
+<part name="arg8" type="xsd:string"></part>
+</message>
+<message name="registrarArtistaResponse"></message>
+<message name="dtCliente"></message>
+<message name="dtClienteResponse">
+<part name="return" type="tns:dtCliente"></part>
+</message>
+<message name="dtLista"></message>
+<message name="dtListaResponse">
+<part name="return" type="tns:dtListaRepro"></part>
+</message>
 <portType name="Publicador">
-<operation name="getUserData">
-<input wsam:Action="http://Publicador/Publicador/getUserDataRequest" message="tns:getUserData"></input>
-<output wsam:Action="http://Publicador/Publicador/getUserDataResponse" message="tns:getUserDataResponse"></output>
-</operation>
-<operation name="WebAltaCliente" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
-<input wsam:Action="http://Publicador/Publicador/WebAltaClienteRequest" message="tns:WebAltaCliente"></input>
-<output wsam:Action="http://Publicador/Publicador/WebAltaClienteResponse" message="tns:WebAltaClienteResponse"></output>
-</operation>
-<operation name="getUserSession" parameterOrder="arg0 arg1">
-<input wsam:Action="http://Publicador/Publicador/getUserSessionRequest" message="tns:getUserSession"></input>
-<output wsam:Action="http://Publicador/Publicador/getUserSessionResponse" message="tns:getUserSessionResponse"></output>
-</operation>
-<operation name="GenerosToString">
-<input wsam:Action="http://Publicador/Publicador/GenerosToStringRequest" message="tns:GenerosToString"></input>
-<output wsam:Action="http://Publicador/Publicador/GenerosToStringResponse" message="tns:GenerosToStringResponse"></output>
-</operation>
-<operation name="getGeneros">
-<input wsam:Action="http://Publicador/Publicador/getGenerosRequest" message="tns:getGeneros"></input>
-<output wsam:Action="http://Publicador/Publicador/getGenerosResponse" message="tns:getGenerosResponse"></output>
-</operation>
-<operation name="getArtistas">
-<input wsam:Action="http://Publicador/Publicador/getArtistasRequest" message="tns:getArtistas"></input>
-<output wsam:Action="http://Publicador/Publicador/getArtistasResponse" message="tns:getArtistasResponse"></output>
-</operation>
-<operation name="getAlbumsList">
-<input wsam:Action="http://Publicador/Publicador/getAlbumsListRequest" message="tns:getAlbumsList"></input>
-<output wsam:Action="http://Publicador/Publicador/getAlbumsListResponse" message="tns:getAlbumsListResponse"></output>
-</operation>
-<operation name="getAlbumByName">
-<input wsam:Action="http://Publicador/Publicador/getAlbumByNameRequest" message="tns:getAlbumByName"></input>
-<output wsam:Action="http://Publicador/Publicador/getAlbumByNameResponse" message="tns:getAlbumByNameResponse"></output>
-</operation>
-<operation name="SeguirUsuario" parameterOrder="arg0 arg1">
-<input wsam:Action="http://Publicador/Publicador/SeguirUsuarioRequest" message="tns:SeguirUsuario"></input>
-<output wsam:Action="http://Publicador/Publicador/SeguirUsuarioResponse" message="tns:SeguirUsuarioResponse"></output>
-</operation>
-<operation name="consultarCliente">
-<input wsam:Action="http://Publicador/Publicador/consultarClienteRequest" message="tns:consultarCliente"></input>
-<output wsam:Action="http://Publicador/Publicador/consultarClienteResponse" message="tns:consultarClienteResponse"></output>
-</operation>
-<operation name="consultarArtista">
-<input wsam:Action="http://Publicador/Publicador/consultarArtistaRequest" message="tns:consultarArtista"></input>
-<output wsam:Action="http://Publicador/Publicador/consultarArtistaResponse" message="tns:consultarArtistaResponse"></output>
-</operation>
-<operation name="addTemporalAlbum">
-<input wsam:Action="http://Publicador/Publicador/addTemporalAlbumRequest" message="tns:addTemporalAlbum"></input>
-<output wsam:Action="http://Publicador/Publicador/addTemporalAlbumResponse" message="tns:addTemporalAlbumResponse"></output>
-</operation>
-<operation name="nada">
-<input wsam:Action="http://Publicador/Publicador/nadaRequest" message="tns:nada"></input>
-<output wsam:Action="http://Publicador/Publicador/nadaResponse" message="tns:nadaResponse"></output>
-</operation>
 <operation name="actualizarEstadoDeSuscripcionWeb" parameterOrder="arg0 arg1">
 <input wsam:Action="http://Publicador/Publicador/actualizarEstadoDeSuscripcionWebRequest" message="tns:actualizarEstadoDeSuscripcionWeb"></input>
 <output wsam:Action="http://Publicador/Publicador/actualizarEstadoDeSuscripcionWebResponse" message="tns:actualizarEstadoDeSuscripcionWebResponse"></output>
@@ -273,126 +269,89 @@
 <input wsam:Action="http://Publicador/Publicador/wipeTemporalGenresRequest" message="tns:wipeTemporalGenres"></input>
 <output wsam:Action="http://Publicador/Publicador/wipeTemporalGenresResponse" message="tns:wipeTemporalGenresResponse"></output>
 </operation>
+<operation name="getGeneroPorNombre">
+<input wsam:Action="http://Publicador/Publicador/getGeneroPorNombreRequest" message="tns:getGeneroPorNombre"></input>
+<output wsam:Action="http://Publicador/Publicador/getGeneroPorNombreResponse" message="tns:getGeneroPorNombreResponse"></output>
+</operation>
+<operation name="getUserData">
+<input wsam:Action="http://Publicador/Publicador/getUserDataRequest" message="tns:getUserData"></input>
+<output wsam:Action="http://Publicador/Publicador/getUserDataResponse" message="tns:getUserDataResponse"></output>
+</operation>
+<operation name="WebAltaCliente" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
+<input wsam:Action="http://Publicador/Publicador/WebAltaClienteRequest" message="tns:WebAltaCliente"></input>
+<output wsam:Action="http://Publicador/Publicador/WebAltaClienteResponse" message="tns:WebAltaClienteResponse"></output>
+</operation>
+<operation name="getUserSession" parameterOrder="arg0 arg1">
+<input wsam:Action="http://Publicador/Publicador/getUserSessionRequest" message="tns:getUserSession"></input>
+<output wsam:Action="http://Publicador/Publicador/getUserSessionResponse" message="tns:getUserSessionResponse"></output>
+</operation>
+<operation name="tema">
+<input wsam:Action="http://Publicador/Publicador/temaRequest" message="tns:tema"></input>
+<output wsam:Action="http://Publicador/Publicador/temaResponse" message="tns:temaResponse"></output>
+</operation>
+<operation name="GenerosToString">
+<input wsam:Action="http://Publicador/Publicador/GenerosToStringRequest" message="tns:GenerosToString"></input>
+<output wsam:Action="http://Publicador/Publicador/GenerosToStringResponse" message="tns:GenerosToStringResponse"></output>
+</operation>
+<operation name="getGeneros">
+<input wsam:Action="http://Publicador/Publicador/getGenerosRequest" message="tns:getGeneros"></input>
+<output wsam:Action="http://Publicador/Publicador/getGenerosResponse" message="tns:getGenerosResponse"></output>
+</operation>
+<operation name="getArtistas">
+<input wsam:Action="http://Publicador/Publicador/getArtistasRequest" message="tns:getArtistas"></input>
+<output wsam:Action="http://Publicador/Publicador/getArtistasResponse" message="tns:getArtistasResponse"></output>
+</operation>
+<operation name="getAlbumsList">
+<input wsam:Action="http://Publicador/Publicador/getAlbumsListRequest" message="tns:getAlbumsList"></input>
+<output wsam:Action="http://Publicador/Publicador/getAlbumsListResponse" message="tns:getAlbumsListResponse"></output>
+</operation>
+<operation name="getAlbumByName">
+<input wsam:Action="http://Publicador/Publicador/getAlbumByNameRequest" message="tns:getAlbumByName"></input>
+<output wsam:Action="http://Publicador/Publicador/getAlbumByNameResponse" message="tns:getAlbumByNameResponse"></output>
+</operation>
+<operation name="SeguirUsuario" parameterOrder="arg0 arg1">
+<input wsam:Action="http://Publicador/Publicador/SeguirUsuarioRequest" message="tns:SeguirUsuario"></input>
+<output wsam:Action="http://Publicador/Publicador/SeguirUsuarioResponse" message="tns:SeguirUsuarioResponse"></output>
+</operation>
+<operation name="consultarCliente">
+<input wsam:Action="http://Publicador/Publicador/consultarClienteRequest" message="tns:consultarCliente"></input>
+<output wsam:Action="http://Publicador/Publicador/consultarClienteResponse" message="tns:consultarClienteResponse"></output>
+</operation>
+<operation name="consultarArtista">
+<input wsam:Action="http://Publicador/Publicador/consultarArtistaRequest" message="tns:consultarArtista"></input>
+<output wsam:Action="http://Publicador/Publicador/consultarArtistaResponse" message="tns:consultarArtistaResponse"></output>
+</operation>
+<operation name="addTemporalAlbum">
+<input wsam:Action="http://Publicador/Publicador/addTemporalAlbumRequest" message="tns:addTemporalAlbum"></input>
+<output wsam:Action="http://Publicador/Publicador/addTemporalAlbumResponse" message="tns:addTemporalAlbumResponse"></output>
+</operation>
+<operation name="nicknameLibre">
+<input wsam:Action="http://Publicador/Publicador/nicknameLibreRequest" message="tns:nicknameLibre"></input>
+<output wsam:Action="http://Publicador/Publicador/nicknameLibreResponse" message="tns:nicknameLibreResponse"></output>
+</operation>
+<operation name="mailLibre">
+<input wsam:Action="http://Publicador/Publicador/mailLibreRequest" message="tns:mailLibre"></input>
+<output wsam:Action="http://Publicador/Publicador/mailLibreResponse" message="tns:mailLibreResponse"></output>
+</operation>
+<operation name="registrarCliente" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5 arg6">
+<input wsam:Action="http://Publicador/Publicador/registrarClienteRequest" message="tns:registrarCliente"></input>
+<output wsam:Action="http://Publicador/Publicador/registrarClienteResponse" message="tns:registrarClienteResponse"></output>
+</operation>
+<operation name="registrarArtista" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5 arg6 arg7 arg8">
+<input wsam:Action="http://Publicador/Publicador/registrarArtistaRequest" message="tns:registrarArtista"></input>
+<output wsam:Action="http://Publicador/Publicador/registrarArtistaResponse" message="tns:registrarArtistaResponse"></output>
+</operation>
+<operation name="dtCliente">
+<input wsam:Action="http://Publicador/Publicador/dtClienteRequest" message="tns:dtCliente"></input>
+<output wsam:Action="http://Publicador/Publicador/dtClienteResponse" message="tns:dtClienteResponse"></output>
+</operation>
+<operation name="dtLista">
+<input wsam:Action="http://Publicador/Publicador/dtListaRequest" message="tns:dtLista"></input>
+<output wsam:Action="http://Publicador/Publicador/dtListaResponse" message="tns:dtListaResponse"></output>
+</operation>
 </portType>
 <binding name="PublicadorPortBinding" type="tns:Publicador">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"></soap:binding>
-<operation name="getUserData">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="WebAltaCliente">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="getUserSession">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="GenerosToString">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="getGeneros">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="getArtistas">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="getAlbumsList">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="getAlbumByName">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="SeguirUsuario">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="consultarCliente">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="consultarArtista">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="addTemporalAlbum">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
-<operation name="nada">
-<soap:operation soapAction=""></soap:operation>
-<input>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</input>
-<output>
-<soap:body use="literal" namespace="http://Publicador/"></soap:body>
-</output>
-</operation>
 <operation name="actualizarEstadoDeSuscripcionWeb">
 <soap:operation soapAction=""></soap:operation>
 <input>
@@ -529,6 +488,186 @@
 </output>
 </operation>
 <operation name="wipeTemporalGenres">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getGeneroPorNombre">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getUserData">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="WebAltaCliente">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getUserSession">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="tema">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="GenerosToString">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getGeneros">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getArtistas">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getAlbumsList">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getAlbumByName">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="SeguirUsuario">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="consultarCliente">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="consultarArtista">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="addTemporalAlbum">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="nicknameLibre">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="mailLibre">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="registrarCliente">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="registrarArtista">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtCliente">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtLista">
 <soap:operation soapAction=""></soap:operation>
 <input>
 <soap:body use="literal" namespace="http://Publicador/"></soap:body>

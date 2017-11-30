@@ -40,7 +40,7 @@ public class DejarDeSeguirUser extends HttpServlet {
             //IControlador controlador = new Controlador();
             PublicadorService service = new pkgWS.PublicadorService();
             Publicador ICU = service.getPublicadorPort();
-            ICU.DejarDeSeguirUsuario(user, user_seguir);
+            ICU.dejarDeSeguirUsuario(user, user_seguir);
             out.println("<html><body onload=\"alert('Dejaste de seguir a: "+ user_seguir +"')\"></body></html>");
             response.setHeader("Refresh", "0; URL=/Lab/");
         }

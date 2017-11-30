@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import pkgWS.Album;
 import pkgWS.ArrayList;
+import pkgWS.Genero;
 import pkgWS.Publicador;
 import pkgWS.PublicadorService;
 

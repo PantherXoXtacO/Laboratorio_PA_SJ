@@ -61,7 +61,7 @@ public class CambiarImagenUsuario extends HttpServlet {
                         //IControlador controlador = new Controlador();
                         PublicadorService service = new pkgWS.PublicadorService();
                         Publicador ICU = service.getPublicadorPort();
-                        ICU.ActualizarImagenUsuario(UserNick, name);                        
+                        ICU.actualizarImagenUsuario(UserNick, name);                        
                     }
                 }
                 

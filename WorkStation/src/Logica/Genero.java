@@ -13,10 +13,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 
 @Entity
 @Table(name="Genero")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Genero implements Serializable{
     
     private static final long serialVersionUID = 1L;

@@ -6,7 +6,6 @@ import Enums.*;
 import Logica.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -183,9 +182,58 @@ public class Publicador {
         IControlador controlador = new Controlador();
         controlador.wipeTemporalGenres();
     }
-
+    
     @WebMethod
-    public DTCliente nada(){
+    public boolean nicknameLibre(String nickname){
+        IControlador controlador = new Controlador();
+        return controlador.nicknameLibre(nickname);
+    }
+    
+    @WebMethod
+    public boolean mailLibre(String mail){
+        IControlador controlador = new Controlador();
+        return controlador.mailLibre(mail);
+    }
+    
+    @WebMethod
+    public void registrarCliente(String nickname, String contraseña,
+                    String mail, String nombre, String apellido,
+                    Fecha fechaDeNacimiento, String imagen){
+        IControlador controlador = new Controlador();
+        controlador.registrarCliente(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen);        
+    }
+    
+    @WebMethod
+    public void registrarArtista(String nickname, String contraseña,
+                    String mail, String nombre, String apellido,
+                    Fecha fechaDeNacimiento, String imagen,
+                    String biografia, String dir_web){
+        IControlador controlador = new Controlador();
+        controlador.registrarArtista(nickname, contraseña, mail, nombre, apellido, fechaDeNacimiento, imagen, biografia, dir_web);
+    }
+    
+    
+    @WebMethod    
+    public Genero getGeneroPorNombre(String nombre){
+        IControlador controlador = new Controlador();
+        return controlador.getGeneroPorNombre(nombre);
+    }
+    
+    
+    
+    //////////////////////Funciones que no retornan nada, solo para incluir los .java
+    @WebMethod
+    public DTCliente dtCliente(){
+        return null;
+    }
+    
+    @WebMethod
+    public Tema tema(){
+        return null;
+    }
+    
+    @WebMethod
+    public DTListaRepro dtLista(){
         return null;
     }
 }

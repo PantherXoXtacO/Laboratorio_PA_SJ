@@ -7,11 +7,14 @@ package DataType;
 
 import Logica.ListaDeReproduccion;
 import Logica.ListaParticular;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author Usuario
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DTListaPrticular extends DTListaRepro{
     private String cliente;
     private boolean privacidad;

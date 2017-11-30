@@ -31,7 +31,7 @@ public class SeguirUser extends HttpServlet {
             //IControlador controlador = new Controlador();
             PublicadorService service = new pkgWS.PublicadorService();
             Publicador ICU = service.getPublicadorPort();
-            ICU.SeguirUsuario(user, user_seguir);
+            ICU.seguirUsuario(user, user_seguir);
             out.println("<html><body onload=\"alert('Ahora Sigues a: "+ user_seguir +"')\"></body></html>");
             response.setHeader("Refresh", "0; URL=/Lab/");
         }

@@ -78,19 +78,67 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DtListaRepro }
+     * 
+     */
+    public DtListaRepro createDtListaRepro() {
+        return new DtListaRepro();
+    }
+
+    /**
+     * Create an instance of {@link Fecha }
+     * 
+     */
+    public Fecha createFecha() {
+        return new Fecha();
+    }
+
+    /**
      * Create an instance of {@link Cliente }
      * 
      */
     public Cliente createCliente() {
         return new Cliente();
     }
-    
+
+    /**
+     * Create an instance of {@link ListaDeReproduccion }
+     * 
+     */
+    public ListaDeReproduccion createListaDeReproduccion() {
+        return new ListaDeReproduccion();
+    }
+
+    /**
+     * Create an instance of {@link Tema }
+     * 
+     */
+    public Tema createTema() {
+        return new Tema();
+    }
+
+    /**
+     * Create an instance of {@link Genero }
+     * 
+     */
+    public Genero createGenero() {
+        return new Genero();
+    }
+
     /**
      * Create an instance of {@link ArrayList }
      * 
      */
     public ArrayList createArrayList() {
         return new ArrayList();
+    }
+
+    /**
+     * Create an instance of {@link DtTema }
+     * 
+     */
+    public DtTema createDtTema() {
+        return new DtTema();
     }
 
     /**

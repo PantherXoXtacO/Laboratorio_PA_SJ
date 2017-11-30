@@ -10,11 +10,14 @@ import Logica.Tema;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author Usuario
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DTListaRepro {
     private String nombre;
     private List temas;

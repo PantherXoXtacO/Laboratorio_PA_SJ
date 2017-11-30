@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import pkgWS.Album;
+import pkgWS.ArrayList;
 import pkgWS.Publicador;
 import pkgWS.PublicadorService;
 
@@ -62,7 +63,7 @@ public class ConsultarAlbumArtista extends HttpServlet {
             out.println("<h1>Nombre del album: " + albumName + "</h1>");
             out.println("<h1>Artista: " + artistaName + "</h1>");
             out.println("<h1>Año de creacion: " + album.getAnio() + "</h1>");
-            out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(album.getGeneros())+ "</h1>");
+            out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros((ArrayList) album.getGenero())+ "</h1>");
             out.println("<h1>IMAGEN"+ "</h1>");
             out.println("<h1>Lista de temas: <br>" + album.getListaDeTemasEnString() +  "</h1>");
             out.println("</body>");

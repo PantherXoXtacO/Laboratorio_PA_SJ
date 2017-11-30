@@ -46,7 +46,7 @@ public class Login extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("UserNick", user.getNick());
             session.setAttribute("UserMail", user.getMail());
-            session.setAttribute("EsArtista", user.getEsArtista());
+            session.setAttribute("EsArtista", user.isEsArtista());
             
           //  RequestDispatcher rd = request.getRequestDispatcher("myPerfil");
            // rd.forward(request,response);

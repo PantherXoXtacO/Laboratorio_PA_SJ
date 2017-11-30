@@ -39,10 +39,6 @@ public class Fecha {
     protected int dia;
     protected int mes;
 
-    public Fecha(Integer get, Integer get0, Integer get1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     /**
      * Obtiene el valor de la propiedad año.
      * 

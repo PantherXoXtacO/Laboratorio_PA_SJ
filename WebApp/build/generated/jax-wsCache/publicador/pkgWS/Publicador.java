@@ -26,172 +26,6 @@ public interface Publicador {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns pkgWS.DtUsuario
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/getUserDataRequest", output = "http://Publicador/Publicador/getUserDataResponse")
-    public DtUsuario getUserData(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
-
-    /**
-     * 
-     * @param arg3
-     * @param arg2
-     * @param arg5
-     * @param arg4
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod(operationName = "WebAltaCliente")
-    @Action(input = "http://Publicador/Publicador/WebAltaClienteRequest", output = "http://Publicador/Publicador/WebAltaClienteResponse")
-    public void webAltaCliente(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        String arg1,
-        @WebParam(name = "arg2", partName = "arg2")
-        String arg2,
-        @WebParam(name = "arg3", partName = "arg3")
-        String arg3,
-        @WebParam(name = "arg4", partName = "arg4")
-        String arg4,
-        @WebParam(name = "arg5", partName = "arg5")
-        String arg5);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns pkgWS.DataSession
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/getUserSessionRequest", output = "http://Publicador/Publicador/getUserSessionResponse")
-    public DataSession getUserSession(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns pkgWS.ArrayList
-     */
-    @WebMethod(operationName = "GenerosToString")
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/GenerosToStringRequest", output = "http://Publicador/Publicador/GenerosToStringResponse")
-    public ArrayList generosToString(
-        @WebParam(name = "arg0", partName = "arg0")
-        ArrayList arg0);
-
-    /**
-     * 
-     * @return
-     *     returns pkgWS.ArrayList
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/getGenerosRequest", output = "http://Publicador/Publicador/getGenerosResponse")
-    public ArrayList getGeneros();
-
-    /**
-     * 
-     * @return
-     *     returns pkgWS.ArrayList
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/getArtistasRequest", output = "http://Publicador/Publicador/getArtistasResponse")
-    public ArrayList getArtistas();
-
-    /**
-     * 
-     * @return
-     *     returns pkgWS.ArrayList
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/getAlbumsListRequest", output = "http://Publicador/Publicador/getAlbumsListResponse")
-    public ArrayList getAlbumsList();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns pkgWS.Album
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/getAlbumByNameRequest", output = "http://Publicador/Publicador/getAlbumByNameResponse")
-    public Album getAlbumByName(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod(operationName = "SeguirUsuario")
-    @Action(input = "http://Publicador/Publicador/SeguirUsuarioRequest", output = "http://Publicador/Publicador/SeguirUsuarioResponse")
-    public void seguirUsuario(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns pkgWS.Cliente
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/consultarClienteRequest", output = "http://Publicador/Publicador/consultarClienteResponse")
-    public Cliente consultarCliente(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns pkgWS.Artista
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/consultarArtistaRequest", output = "http://Publicador/Publicador/consultarArtistaResponse")
-    public Artista consultarArtista(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
-
-    /**
-     * 
-     */
-    @WebMethod
-    @Action(input = "http://Publicador/Publicador/addTemporalAlbumRequest", output = "http://Publicador/Publicador/addTemporalAlbumResponse")
-    public void addTemporalAlbum();
-
-    /**
-     * 
-     * @return
-     *     returns pkgWS.DtCliente
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://Publicador/Publicador/nadaRequest", output = "http://Publicador/Publicador/nadaResponse")
-    public DtCliente nada();
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      */
@@ -400,5 +234,292 @@ public interface Publicador {
     @WebMethod
     @Action(input = "http://Publicador/Publicador/wipeTemporalGenresRequest", output = "http://Publicador/Publicador/wipeTemporalGenresResponse")
     public void wipeTemporalGenres();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns pkgWS.Genero
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getGeneroPorNombreRequest", output = "http://Publicador/Publicador/getGeneroPorNombreResponse")
+    public Genero getGeneroPorNombre(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns pkgWS.DtUsuario
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getUserDataRequest", output = "http://Publicador/Publicador/getUserDataResponse")
+    public DtUsuario getUserData(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg5
+     * @param arg4
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod(operationName = "WebAltaCliente")
+    @Action(input = "http://Publicador/Publicador/WebAltaClienteRequest", output = "http://Publicador/Publicador/WebAltaClienteResponse")
+    public void webAltaCliente(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        String arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        String arg3,
+        @WebParam(name = "arg4", partName = "arg4")
+        String arg4,
+        @WebParam(name = "arg5", partName = "arg5")
+        String arg5);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns pkgWS.DataSession
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getUserSessionRequest", output = "http://Publicador/Publicador/getUserSessionResponse")
+    public DataSession getUserSession(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.Tema
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/temaRequest", output = "http://Publicador/Publicador/temaResponse")
+    public Tema tema();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns pkgWS.ArrayList
+     */
+    @WebMethod(operationName = "GenerosToString")
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/GenerosToStringRequest", output = "http://Publicador/Publicador/GenerosToStringResponse")
+    public ArrayList generosToString(
+        @WebParam(name = "arg0", partName = "arg0")
+        ArrayList arg0);
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.ArrayList
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getGenerosRequest", output = "http://Publicador/Publicador/getGenerosResponse")
+    public ArrayList getGeneros();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.ArrayList
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getArtistasRequest", output = "http://Publicador/Publicador/getArtistasResponse")
+    public ArrayList getArtistas();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.ArrayList
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getAlbumsListRequest", output = "http://Publicador/Publicador/getAlbumsListResponse")
+    public ArrayList getAlbumsList();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns pkgWS.Album
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getAlbumByNameRequest", output = "http://Publicador/Publicador/getAlbumByNameResponse")
+    public Album getAlbumByName(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod(operationName = "SeguirUsuario")
+    @Action(input = "http://Publicador/Publicador/SeguirUsuarioRequest", output = "http://Publicador/Publicador/SeguirUsuarioResponse")
+    public void seguirUsuario(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns pkgWS.Cliente
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/consultarClienteRequest", output = "http://Publicador/Publicador/consultarClienteResponse")
+    public Cliente consultarCliente(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns pkgWS.Artista
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/consultarArtistaRequest", output = "http://Publicador/Publicador/consultarArtistaResponse")
+    public Artista consultarArtista(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/addTemporalAlbumRequest", output = "http://Publicador/Publicador/addTemporalAlbumResponse")
+    public void addTemporalAlbum();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/nicknameLibreRequest", output = "http://Publicador/Publicador/nicknameLibreResponse")
+    public boolean nicknameLibre(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/mailLibreRequest", output = "http://Publicador/Publicador/mailLibreResponse")
+    public boolean mailLibre(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg5
+     * @param arg4
+     * @param arg1
+     * @param arg0
+     * @param arg6
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/registrarClienteRequest", output = "http://Publicador/Publicador/registrarClienteResponse")
+    public void registrarCliente(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        String arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        String arg3,
+        @WebParam(name = "arg4", partName = "arg4")
+        String arg4,
+        @WebParam(name = "arg5", partName = "arg5")
+        Fecha arg5,
+        @WebParam(name = "arg6", partName = "arg6")
+        String arg6);
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg5
+     * @param arg4
+     * @param arg1
+     * @param arg0
+     * @param arg7
+     * @param arg6
+     * @param arg8
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/registrarArtistaRequest", output = "http://Publicador/Publicador/registrarArtistaResponse")
+    public void registrarArtista(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        String arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        String arg3,
+        @WebParam(name = "arg4", partName = "arg4")
+        String arg4,
+        @WebParam(name = "arg5", partName = "arg5")
+        Fecha arg5,
+        @WebParam(name = "arg6", partName = "arg6")
+        String arg6,
+        @WebParam(name = "arg7", partName = "arg7")
+        String arg7,
+        @WebParam(name = "arg8", partName = "arg8")
+        String arg8);
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtCliente
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtClienteRequest", output = "http://Publicador/Publicador/dtClienteResponse")
+    public DtCliente dtCliente();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtListaRepro
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtListaRequest", output = "http://Publicador/Publicador/dtListaResponse")
+    public DtListaRepro dtLista();
 
 }

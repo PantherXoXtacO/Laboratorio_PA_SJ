@@ -58,7 +58,7 @@ public class CambiarImagenAlbum extends HttpServlet {
                         //IControlador controlador = new Controlador();
                         PublicadorService service = new pkgWS.PublicadorService();
                         Publicador ICU = service.getPublicadorPort();
-                        ICU.ActualizarImagenAlbum(AlbumNombre, OldName);                        
+                        ICU.actualizarImagenAlbum(AlbumNombre, OldName);
                     }
                 }
                 

@@ -4,16 +4,16 @@
     Author     : Usuario
 --%>
 
-<%@page import="DataType.DTCliente"%>
+<%@page import="pkgWS.DtCliente"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    DTCliente user = null;
+    DtCliente user = null;
     if(request.getSession().getAttribute("UserNick")==null){
         response.sendRedirect("index.html");
     }
     else{
-        user = (DTCliente) request.getAttribute("userInfo");
+        user = (DtCliente) request.getAttribute("userInfo");
     }    
 
 %>

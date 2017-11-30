@@ -6,6 +6,7 @@ import Enums.*;
 import Logica.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -218,6 +219,31 @@ public class Publicador {
         IControlador controlador = new Controlador();
         return controlador.getGeneroPorNombre(nombre);
     }
+    @WebMethod
+    public ArrayList<Genero> getTemporalGenres(){
+        IControlador controlador = new Controlador();
+        return (ArrayList)controlador.getTemporalGenres();
+    }
+    @WebMethod
+    public Album getTemporalAlbum(){
+        IControlador controlador = new Controlador();
+        return controlador.getTemporalAlbum();
+    }
+    @WebMethod
+    public void createTemporalAlbum(){
+        IControlador controlador = new Controlador();
+        controlador.createTemporalAlbum();
+    }
+    @WebMethod
+    public void createTemporalGenres(){
+        IControlador controlador = new Controlador();
+        controlador.createTemporalGenres();
+    }
+    @WebMethod
+    public void AltaGenero(String nombre, String padre){
+        IControlador controlador = new Controlador();
+        controlador.AltaGenero(nombre, padre);
+    }
     
     
     
@@ -236,4 +262,30 @@ public class Publicador {
     public DTListaRepro dtLista(){
         return null;
     }
+    
+    @WebMethod
+    public DTArtista dtArtista(){
+        return null;
+    }
+    
+    @WebMethod
+    public DTListaPrticular dtListaParticular(){
+        return null;
+    }
+    
+    @WebMethod
+    public DTTema dtTema(){
+        return null;
+    }
+    
+    @WebMethod
+    public DTAlbum dtAlbum(){
+        return null;
+    }
+    
+    @WebMethod
+    public DTListaDefecto dtListaDef(){
+        return null;
+    }
+    
 }

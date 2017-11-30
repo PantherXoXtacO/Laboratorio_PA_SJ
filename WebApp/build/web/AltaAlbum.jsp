@@ -6,6 +6,8 @@
 
 
 
+<%@page import="pkgWS.DtCliente"%>
+<%@page import="pkgWS.DtUsuario"%>
 <%@page import="pkgWS.ArrayList"%>
 <%@page import="pkgWS.Album"%>
 <%@page import="pkgWS.Publicador"%>
@@ -25,8 +27,8 @@
        //IControlador ICU = fabrica.getIControlador();
        PublicadorService service = new pkgWS.PublicadorService();
        Publicador ICU = service.getPublicadorPort();
-       DTUsuario user= ICU.getUserData(usernick);
-       if(user instanceof DTCliente){
+       DtUsuario user= ICU.getUserData(usernick);
+       if(user instanceof DtCliente){
            response.sendRedirect("index.jsp"); 
        }
     }

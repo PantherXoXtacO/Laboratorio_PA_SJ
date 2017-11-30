@@ -6,7 +6,11 @@ import Logica.Usuario;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DTArtista extends DTUsuario{
     private String biografia;
     private String dir_web;

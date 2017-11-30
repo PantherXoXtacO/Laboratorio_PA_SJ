@@ -93,6 +93,14 @@
 <message name="getGeneroPorNombreResponse">
 <part name="return" type="tns:genero"></part>
 </message>
+<message name="getTemporalGenres"></message>
+<message name="getTemporalGenresResponse">
+<part name="return" type="tns:arrayList"></part>
+</message>
+<message name="createTemporalAlbum"></message>
+<message name="createTemporalAlbumResponse"></message>
+<message name="createTemporalGenres"></message>
+<message name="createTemporalGenresResponse"></message>
 <message name="getUserData">
 <part name="arg0" type="xsd:string"></part>
 </message>
@@ -196,6 +204,15 @@
 <part name="arg8" type="xsd:string"></part>
 </message>
 <message name="registrarArtistaResponse"></message>
+<message name="getTemporalAlbum"></message>
+<message name="getTemporalAlbumResponse">
+<part name="return" type="tns:album"></part>
+</message>
+<message name="AltaGenero">
+<part name="arg0" type="xsd:string"></part>
+<part name="arg1" type="xsd:string"></part>
+</message>
+<message name="AltaGeneroResponse"></message>
 <message name="dtCliente"></message>
 <message name="dtClienteResponse">
 <part name="return" type="tns:dtCliente"></part>
@@ -203,6 +220,26 @@
 <message name="dtLista"></message>
 <message name="dtListaResponse">
 <part name="return" type="tns:dtListaRepro"></part>
+</message>
+<message name="dtArtista"></message>
+<message name="dtArtistaResponse">
+<part name="return" type="tns:dtArtista"></part>
+</message>
+<message name="dtTema"></message>
+<message name="dtTemaResponse">
+<part name="return" type="tns:dtTema"></part>
+</message>
+<message name="dtAlbum"></message>
+<message name="dtAlbumResponse">
+<part name="return" type="tns:dtAlbum"></part>
+</message>
+<message name="dtListaDef"></message>
+<message name="dtListaDefResponse">
+<part name="return" type="tns:dtListaDefecto"></part>
+</message>
+<message name="dtListaParticular"></message>
+<message name="dtListaParticularResponse">
+<part name="return" type="tns:dtListaPrticular"></part>
 </message>
 <portType name="Publicador">
 <operation name="actualizarEstadoDeSuscripcionWeb" parameterOrder="arg0 arg1">
@@ -273,6 +310,18 @@
 <input wsam:Action="http://Publicador/Publicador/getGeneroPorNombreRequest" message="tns:getGeneroPorNombre"></input>
 <output wsam:Action="http://Publicador/Publicador/getGeneroPorNombreResponse" message="tns:getGeneroPorNombreResponse"></output>
 </operation>
+<operation name="getTemporalGenres">
+<input wsam:Action="http://Publicador/Publicador/getTemporalGenresRequest" message="tns:getTemporalGenres"></input>
+<output wsam:Action="http://Publicador/Publicador/getTemporalGenresResponse" message="tns:getTemporalGenresResponse"></output>
+</operation>
+<operation name="createTemporalAlbum">
+<input wsam:Action="http://Publicador/Publicador/createTemporalAlbumRequest" message="tns:createTemporalAlbum"></input>
+<output wsam:Action="http://Publicador/Publicador/createTemporalAlbumResponse" message="tns:createTemporalAlbumResponse"></output>
+</operation>
+<operation name="createTemporalGenres">
+<input wsam:Action="http://Publicador/Publicador/createTemporalGenresRequest" message="tns:createTemporalGenres"></input>
+<output wsam:Action="http://Publicador/Publicador/createTemporalGenresResponse" message="tns:createTemporalGenresResponse"></output>
+</operation>
 <operation name="getUserData">
 <input wsam:Action="http://Publicador/Publicador/getUserDataRequest" message="tns:getUserData"></input>
 <output wsam:Action="http://Publicador/Publicador/getUserDataResponse" message="tns:getUserDataResponse"></output>
@@ -341,6 +390,14 @@
 <input wsam:Action="http://Publicador/Publicador/registrarArtistaRequest" message="tns:registrarArtista"></input>
 <output wsam:Action="http://Publicador/Publicador/registrarArtistaResponse" message="tns:registrarArtistaResponse"></output>
 </operation>
+<operation name="getTemporalAlbum">
+<input wsam:Action="http://Publicador/Publicador/getTemporalAlbumRequest" message="tns:getTemporalAlbum"></input>
+<output wsam:Action="http://Publicador/Publicador/getTemporalAlbumResponse" message="tns:getTemporalAlbumResponse"></output>
+</operation>
+<operation name="AltaGenero" parameterOrder="arg0 arg1">
+<input wsam:Action="http://Publicador/Publicador/AltaGeneroRequest" message="tns:AltaGenero"></input>
+<output wsam:Action="http://Publicador/Publicador/AltaGeneroResponse" message="tns:AltaGeneroResponse"></output>
+</operation>
 <operation name="dtCliente">
 <input wsam:Action="http://Publicador/Publicador/dtClienteRequest" message="tns:dtCliente"></input>
 <output wsam:Action="http://Publicador/Publicador/dtClienteResponse" message="tns:dtClienteResponse"></output>
@@ -348,6 +405,26 @@
 <operation name="dtLista">
 <input wsam:Action="http://Publicador/Publicador/dtListaRequest" message="tns:dtLista"></input>
 <output wsam:Action="http://Publicador/Publicador/dtListaResponse" message="tns:dtListaResponse"></output>
+</operation>
+<operation name="dtArtista">
+<input wsam:Action="http://Publicador/Publicador/dtArtistaRequest" message="tns:dtArtista"></input>
+<output wsam:Action="http://Publicador/Publicador/dtArtistaResponse" message="tns:dtArtistaResponse"></output>
+</operation>
+<operation name="dtTema">
+<input wsam:Action="http://Publicador/Publicador/dtTemaRequest" message="tns:dtTema"></input>
+<output wsam:Action="http://Publicador/Publicador/dtTemaResponse" message="tns:dtTemaResponse"></output>
+</operation>
+<operation name="dtAlbum">
+<input wsam:Action="http://Publicador/Publicador/dtAlbumRequest" message="tns:dtAlbum"></input>
+<output wsam:Action="http://Publicador/Publicador/dtAlbumResponse" message="tns:dtAlbumResponse"></output>
+</operation>
+<operation name="dtListaDef">
+<input wsam:Action="http://Publicador/Publicador/dtListaDefRequest" message="tns:dtListaDef"></input>
+<output wsam:Action="http://Publicador/Publicador/dtListaDefResponse" message="tns:dtListaDefResponse"></output>
+</operation>
+<operation name="dtListaParticular">
+<input wsam:Action="http://Publicador/Publicador/dtListaParticularRequest" message="tns:dtListaParticular"></input>
+<output wsam:Action="http://Publicador/Publicador/dtListaParticularResponse" message="tns:dtListaParticularResponse"></output>
 </operation>
 </portType>
 <binding name="PublicadorPortBinding" type="tns:Publicador">
@@ -497,6 +574,33 @@
 </output>
 </operation>
 <operation name="getGeneroPorNombre">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="getTemporalGenres">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="createTemporalAlbum">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="createTemporalGenres">
 <soap:operation soapAction=""></soap:operation>
 <input>
 <soap:body use="literal" namespace="http://Publicador/"></soap:body>
@@ -658,6 +762,24 @@
 <soap:body use="literal" namespace="http://Publicador/"></soap:body>
 </output>
 </operation>
+<operation name="getTemporalAlbum">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="AltaGenero">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
 <operation name="dtCliente">
 <soap:operation soapAction=""></soap:operation>
 <input>
@@ -668,6 +790,51 @@
 </output>
 </operation>
 <operation name="dtLista">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtArtista">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtTema">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtAlbum">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtListaDef">
+<soap:operation soapAction=""></soap:operation>
+<input>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</input>
+<output>
+<soap:body use="literal" namespace="http://Publicador/"></soap:body>
+</output>
+</operation>
+<operation name="dtListaParticular">
 <soap:operation soapAction=""></soap:operation>
 <input>
 <soap:body use="literal" namespace="http://Publicador/"></soap:body>

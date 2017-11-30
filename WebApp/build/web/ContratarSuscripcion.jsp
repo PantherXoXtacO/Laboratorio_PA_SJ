@@ -4,6 +4,8 @@
     Author     : Casca
 --%>
 
+<%@page import="pkgWS.DtArtista"%>
+<%@page import="pkgWS.DtUsuario"%>
 <%@page import="pkgWS.Publicador"%>
 <%@page import="pkgWS.PublicadorService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -18,8 +20,8 @@
        //IControlador ICU = fabrica.getIControlador();
        PublicadorService service = new pkgWS.PublicadorService();
        Publicador ICU = service.getPublicadorPort();
-       DTUsuario user= ICU.getUserData(usernick);
-       if(user instanceof DTArtista){
+       DtUsuario user= ICU.getUserData(usernick);
+       if(user instanceof DtArtista){
            response.sendRedirect("index.jsp"); 
        }
     }

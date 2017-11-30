@@ -1,7 +1,7 @@
-<%@page import="DataType.DTListaPrticular"%>
+<%@page import="pkgWS.DtListaPrticular"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.HashMap"%>
-<%@page import="DataType.DTListaRepro"%>
+<%@page import="pkgWS.DtListaRepro"%>
 <%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,9 +24,9 @@
                 Iterator itKey = listas.keySet().iterator();
                 while(itKey.hasNext()){
                     int key = (int) itKey.next();
-                    DTListaRepro L = (DTListaRepro) listas.get(key);
-                    if(L instanceof DTListaPrticular){
-                        DTListaPrticular lp = (DTListaPrticular) L;
+                    DtListaRepro L = (DtListaRepro) listas.get(key);
+                    if(L instanceof DtListaPrticular){
+                        DtListaPrticular lp = (DtListaPrticular) L;
                         out.println("<li><a href=\"Lab/VerListaInfo?id="+ key + "\">"+ lp.getNombre() + "(" + lp.getCliente() +")"+"</a></li>");
                     }
                     else{

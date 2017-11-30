@@ -1,5 +1,10 @@
 
-<%@page import="DataType.*"%>
+<%@page import="pkgWS.DtListaDefecto"%>
+<%@page import="pkgWS.DtAlbum"%>
+<%@page import="pkgWS.DtTema"%>
+<%@page import="pkgWS.DtListaPrticular"%>
+<%@page import="pkgWS.DtUsuario"%>
+<%@page import="pkgWS.DataSession"%>
 <%@page import="java.util.Iterator"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
@@ -9,10 +14,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="DataType.DTCliente"%>
+<%@page import="pkgWS.DtCliente"%>
 <%@page import="java.util.ArrayList"%>
 <%
-    DTCliente user = (DTCliente) request.getAttribute("userInfo");
+    DtCliente user = (DtCliente) request.getAttribute("userInfo");
 %>
 <!DOCTYPE html>
 <html>
@@ -39,9 +44,9 @@
             <ul>
             <%  
                 Iterator itListasRepro = user.getListasDeReproduccion().iterator();
-                DTListaPrticular L;
+                DtListaPrticular L;
                 while(itListasRepro.hasNext()){
-                    L = (DTListaPrticular) itListasRepro.next();
+                    L = (DtListaPrticular) itListasRepro.next();
                     if(!L.isPrivacidad()){
                         out.println("<li>" + L.getNombre() + "</li>");
                     }
@@ -56,9 +61,9 @@
             <ul>
             <%
                 Iterator itTemas = user.getTemasFav().iterator();
-                DTTema tema;
+                DtTema tema;
                 while(itTemas.hasNext()){
-                    tema = (DTTema) itTemas.next();
+                    tema = (DtTema) itTemas.next();
                     out.println("<li>" + tema.getNombre() + "</li>");
                 }
             %>
@@ -69,9 +74,9 @@
             <ul>
                 <%
                     Iterator itAlbum = user.getAlbumFav().iterator();
-                    DTAlbum album;
+                    DtAlbum album;
                     while(itAlbum.hasNext()){
-                        album = (DTAlbum) itAlbum.next();
+                        album = (DtAlbum) itAlbum.next();
                         out.println("<li>" + album.getNombre() + "</li>");
                     }
                 %>
@@ -82,9 +87,9 @@
             <ul>
                 <%
                     Iterator itListasFav = user.getListasFav().iterator();
-                    DTListaDefecto LD;
+                    DtListaDefecto LD;
                     while(itListasFav.hasNext()){
-                        LD = (DTListaDefecto) itListasFav.next();
+                        LD = (DtListaDefecto) itListasFav.next();
                         out.println("<li>" + LD.getNombre() + "</li>");
                     }
                 %>
@@ -110,9 +115,9 @@
             <ul>
                 <%
                     Iterator itSeguidores = user.getSeguidores().iterator();
-                    DTUsuario user_seguidores;
+                    DtUsuario user_seguidores;
                     while(itSeguidores.hasNext()){
-                        user_seguidores = (DTUsuario) itSeguidores.next();
+                        user_seguidores = (DtUsuario) itSeguidores.next();
                         out.println("<li>" + user_seguidores.getNick() + "</li>");
                     }
                 %>
@@ -121,7 +126,7 @@
    <%
         if(request.getSession().getAttribute("UserNick")!=null){
             if((Boolean)request.getSession().getAttribute("EsArtista") == false){
-                IControlador controlador = new Controlador();
+                //IControlador controlador = new Controlador();
                 String seguidor = (String) request.getSession().getAttribute("UserNick");
                 //String seguido = (String) request.getSession().getAttribute("userConsult");
                 if(!user.yaSigue(seguidor)){

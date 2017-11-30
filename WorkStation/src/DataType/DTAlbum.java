@@ -10,11 +10,15 @@ import Logica.Genero;
 import Logica.Tema;
 import java.util.Iterator;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
 /**
  *
  * @author Usuario
  */
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DTAlbum {
 
     private String nombre;

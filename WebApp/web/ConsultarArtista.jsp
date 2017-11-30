@@ -1,3 +1,6 @@
+<%@page import="pkgWS.DtUsuario"%>
+<%@page import="pkgWS.DtAlbum"%>
+<%@page import="pkgWS.DtArtista"%>
 <%@page import="java.util.Iterator"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
@@ -7,10 +10,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="DataType.DTCliente"%>
+<%@page import="pkgWS.DtCliente"%>
 <%@page import="java.util.ArrayList"%>
 <%
-    DTArtista user = (DTArtista) request.getAttribute("userInfo");
+    DtArtista user = (DtArtista) request.getAttribute("userInfo");
 %>
 <!DOCTYPE html>
 <html>
@@ -28,7 +31,7 @@
                 out.println("<li>Mail: " + user.getMail() + "</li>");
                 out.println("<li>Nombre: " + user.getNom() + "</li>");
                 out.println("<li>Apellido: " + user.getAp() + "</li>");
-                out.println("<li>WEB: " + user.getDir_web() + "</li>");
+                out.println("<li>WEB: " + user.getDirWeb() + "</li>");
                 out.println("<li>Tipo: Artista </li>");
             %>
             </ul>
@@ -41,9 +44,9 @@
         <div>
             <%
                 Iterator itAlbum = user.getAlbums().iterator();
-                DTAlbum album;
+                DtAlbum album;
                 while(itAlbum.hasNext()){
-                    album = (DTAlbum) itAlbum.next();
+                    album = (DtAlbum) itAlbum.next();
                     out.println("<li>" + album.getNombre() + "(" + album.getAnio() +")</li>");
                 }            
             %>
@@ -54,9 +57,9 @@
             <ul>
                 <%
                     Iterator itSeguidores = user.getSeguidores().iterator();
-                    DTUsuario user_seguidores;
+                    DtUsuario user_seguidores;
                     while(itSeguidores.hasNext()){
-                        user_seguidores = (DTUsuario) itSeguidores.next();
+                        user_seguidores = (DtUsuario) itSeguidores.next();
                         out.println("<li>" + user_seguidores.getNick() + "</li>");
                     }
                 %>
@@ -66,7 +69,7 @@
    <%
         if(request.getSession().getAttribute("UserNick")!=null){
             if((Boolean)request.getSession().getAttribute("EsArtista") == false){
-                IControlador controlador = new Controlador();
+                //IControlador controlador = new Controlador();
                 String seguidor = (String) request.getSession().getAttribute("UserNick");
                 //String seguido = (String) request.getSession().getAttribute("userConsult");
                 if(!user.yaSigue(seguidor)){

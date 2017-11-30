@@ -30,22 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Artista }
-     * 
-     */
-    public Artista createArtista() {
-        return new Artista();
-    }
-
-    /**
-     * Create an instance of {@link Album }
-     * 
-     */
-    public Album createAlbum() {
-        return new Album();
-    }
-
-    /**
      * Create an instance of {@link Suscripcion }
      * 
      */
@@ -70,19 +54,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DtUsuario }
-     * 
-     */
-    public DtUsuario createDtUsuario() {
-        return new DtUsuario();
-    }
-
-    /**
      * Create an instance of {@link DtListaRepro }
      * 
      */
     public DtListaRepro createDtListaRepro() {
         return new DtListaRepro();
+    }
+
+    /**
+     * Create an instance of {@link DtListaPrticular }
+     * 
+     */
+    public DtListaPrticular createDtListaPrticular() {
+        return new DtListaPrticular();
+    }
+
+    /**
+     * Create an instance of {@link ListaDeReproduccion }
+     * 
+     */
+    public ListaDeReproduccion createListaDeReproduccion() {
+        return new ListaDeReproduccion();
+    }
+
+    /**
+     * Create an instance of {@link Genero }
+     * 
+     */
+    public Genero createGenero() {
+        return new Genero();
+    }
+
+    /**
+     * Create an instance of {@link DtAlbum }
+     * 
+     */
+    public DtAlbum createDtAlbum() {
+        return new DtAlbum();
+    }
+
+    /**
+     * Create an instance of {@link ArrayList }
+     * 
+     */
+    public ArrayList createArrayList() {
+        return new ArrayList();
+    }
+
+    /**
+     * Create an instance of {@link DtTema }
+     * 
+     */
+    public DtTema createDtTema() {
+        return new DtTema();
+    }
+
+    /**
+     * Create an instance of {@link DtArtista }
+     * 
+     */
+    public DtArtista createDtArtista() {
+        return new DtArtista();
+    }
+
+    /**
+     * Create an instance of {@link Artista }
+     * 
+     */
+    public Artista createArtista() {
+        return new Artista();
+    }
+
+    /**
+     * Create an instance of {@link Album }
+     * 
+     */
+    public Album createAlbum() {
+        return new Album();
+    }
+
+    /**
+     * Create an instance of {@link DtListaDefecto }
+     * 
+     */
+    public DtListaDefecto createDtListaDefecto() {
+        return new DtListaDefecto();
+    }
+
+    /**
+     * Create an instance of {@link DtUsuario }
+     * 
+     */
+    public DtUsuario createDtUsuario() {
+        return new DtUsuario();
     }
 
     /**
@@ -102,43 +166,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ListaDeReproduccion }
-     * 
-     */
-    public ListaDeReproduccion createListaDeReproduccion() {
-        return new ListaDeReproduccion();
-    }
-
-    /**
      * Create an instance of {@link Tema }
      * 
      */
     public Tema createTema() {
         return new Tema();
-    }
-
-    /**
-     * Create an instance of {@link Genero }
-     * 
-     */
-    public Genero createGenero() {
-        return new Genero();
-    }
-
-    /**
-     * Create an instance of {@link ArrayList }
-     * 
-     */
-    public ArrayList createArrayList() {
-        return new ArrayList();
-    }
-
-    /**
-     * Create an instance of {@link DtTema }
-     * 
-     */
-    public DtTema createDtTema() {
-        return new DtTema();
     }
 
     /**

@@ -4,6 +4,8 @@
     Author     : Casca
 --%>
 
+<%@page import="pkgWS.DtCliente"%>
+<%@page import="pkgWS.DtUsuario"%>
 <%@page import="pkgWS.ArrayList"%>
 <%@page import="pkgWS.Publicador"%>
 <%@page import="pkgWS.PublicadorService"%>
@@ -22,8 +24,8 @@
        //IControlador ICU = fabrica.getIControlador();
        PublicadorService service = new pkgWS.PublicadorService();
        Publicador ICU = service.getPublicadorPort();
-       DTUsuario user= ICU.getUserData(usernick);
-       if(user instanceof DTCliente){
+       DtUsuario user= ICU.getUserData(usernick);
+       if(user instanceof DtCliente){
            response.sendRedirect("index.jsp"); 
        }
     }

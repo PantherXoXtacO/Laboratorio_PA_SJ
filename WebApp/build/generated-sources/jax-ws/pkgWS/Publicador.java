@@ -250,6 +250,30 @@ public interface Publicador {
 
     /**
      * 
+     * @return
+     *     returns pkgWS.ArrayList
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getTemporalGenresRequest", output = "http://Publicador/Publicador/getTemporalGenresResponse")
+    public ArrayList getTemporalGenres();
+
+    /**
+     * 
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/createTemporalAlbumRequest", output = "http://Publicador/Publicador/createTemporalAlbumResponse")
+    public void createTemporalAlbum();
+
+    /**
+     * 
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/createTemporalGenresRequest", output = "http://Publicador/Publicador/createTemporalGenresResponse")
+    public void createTemporalGenres();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns pkgWS.DtUsuario
@@ -505,6 +529,29 @@ public interface Publicador {
     /**
      * 
      * @return
+     *     returns pkgWS.Album
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getTemporalAlbumRequest", output = "http://Publicador/Publicador/getTemporalAlbumResponse")
+    public Album getTemporalAlbum();
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod(operationName = "AltaGenero")
+    @Action(input = "http://Publicador/Publicador/AltaGeneroRequest", output = "http://Publicador/Publicador/AltaGeneroResponse")
+    public void altaGenero(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @return
      *     returns pkgWS.DtCliente
      */
     @WebMethod
@@ -521,5 +568,55 @@ public interface Publicador {
     @WebResult(partName = "return")
     @Action(input = "http://Publicador/Publicador/dtListaRequest", output = "http://Publicador/Publicador/dtListaResponse")
     public DtListaRepro dtLista();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtArtista
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtArtistaRequest", output = "http://Publicador/Publicador/dtArtistaResponse")
+    public DtArtista dtArtista();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtTema
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtTemaRequest", output = "http://Publicador/Publicador/dtTemaResponse")
+    public DtTema dtTema();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtAlbum
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtAlbumRequest", output = "http://Publicador/Publicador/dtAlbumResponse")
+    public DtAlbum dtAlbum();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtListaDefecto
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtListaDefRequest", output = "http://Publicador/Publicador/dtListaDefResponse")
+    public DtListaDefecto dtListaDef();
+
+    /**
+     * 
+     * @return
+     *     returns pkgWS.DtListaPrticular
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/dtListaParticularRequest", output = "http://Publicador/Publicador/dtListaParticularResponse")
+    public DtListaPrticular dtListaParticular();
 
 }

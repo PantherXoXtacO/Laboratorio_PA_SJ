@@ -4,22 +4,22 @@
     Author     : Casca
 --%>
 
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="Logica.Genero"%>
+<%@page import="pkgWS.Genero"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.List"%>
-<%@page import="Logica.Artista"%>
-<%@page import="Logica.Fecha"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Fabrica"%>
+<%@page import="pkgWS.Artista"%>
+<%@page import="pkgWS.Fecha"%>
 <!DOCTYPE html>
 <%
     
-        Fabrica fabrica = Fabrica.getInstance();
-        IControlador ICU = fabrica.getIControlador(); 
-        ICU.AltaGenero("GeneroTest1", "General");
-        ICU.AltaGenero("GeneroTest2", "General");
+        PublicadorService service = new PublicadorService();
+        Publicador ICU = service.getPublicadorPort(); 
+        ICU.altaGenero("GeneroTest1", "General");
+        ICU.altaGenero("GeneroTest2", "General");
         //ICU.registrarArtista("asd", "asd", "asd@asd", "asdNombre", "asdApellido", new Fecha(29,11,2017), "none", "no", "no");
         //ICU.registrarArtista("asd2", "asd2", "asd2@asd2", "asd2Nombre", "asd2Apellido", new Fecha(29,11,2017), "none", "no", "no");
         //Artista artista = ICU.consultarArtista("asd");

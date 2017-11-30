@@ -4,7 +4,7 @@
     Author     : Usuario
 --%>
 
-<%@page import="DataType.DTArtista"%>
+<%@page import="pkgWS.DtArtista"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -12,7 +12,7 @@
         response.sendRedirect("index.html");
     }
     
-    DTArtista user = (DTArtista) request.getAttribute("userInfo");
+    DtArtista user = (DtArtista) request.getAttribute("userInfo");
 %>
     
 <!DOCTYPE html>

@@ -48,7 +48,8 @@ import javax.xml.bind.annotation.XmlType;
     "artista"
 })
 @XmlSeeAlso({
-    DtCliente.class
+    DtCliente.class,
+    DtArtista.class
 })
 public class DtUsuario {
 

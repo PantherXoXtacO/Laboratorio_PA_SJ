@@ -5,10 +5,6 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Fabrica;
-import Logica.Genero;
-import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -18,6 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.Album;
+import pkgWS.ArrayList;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -31,15 +31,17 @@ public class getAlbumsByGenre extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             
                       
-            Fabrica fabrica = Fabrica.getInstance();
-            IControlador ICU = fabrica.getIControlador();
+//            Fabrica fabrica = Fabrica.getInstance();
+//            IControlador ICU = fabrica.getIControlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
             String genero = request.getParameter("dropdown1").trim(); 
             if(genero!=null){
-                Genero gen = ICU.getGeneroPorNombre(genero);
+                Genero gen = ICU.getGeneroPorNombre(genero);                
                 List<Album> albumsDelGenero = gen.getAlbums();
                 if(albumsDelGenero.size()==0)
                     response.getWriter().write("");
-                String albums = ICU.albumListToString(albumsDelGenero);
+                String albums = ICU.albumListToString((ArrayList) albumsDelGenero);
                 response.setContentType("text/plain");
                 response.getWriter().write(albums);
             }             

@@ -4,24 +4,26 @@
     Author     : Casca
 --%>
 
-<%@page import="DataType.DTUsuario"%>
-<%@page import="Enums.EstadosDeSuscripcion"%>
-<%@page import="Logica.Suscripcion"%>
-<%@page import="Logica.Fabrica"%>
-<%@page import="Logica.Cliente"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="DataType.DTArtista"%>
+
+<%@page import="pkgWS.EstadosDeSuscripcion"%>
+<%@page import="pkgWS.Cliente"%>
+<%@page import="pkgWS.Suscripcion"%>
+<%@page import="pkgWS.DtUsuario"%>
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
     String username = (String )request.getSession().getAttribute("UserNick");
-    Fabrica fabrica = Fabrica.getInstance();
-    IControlador ICU = fabrica.getIControlador();
-    DTUsuario user= ICU.getUserData(username);
+    //Fabrica fabrica = Fabrica.getInstance();
+    //IControlador ICU = fabrica.getIControlador();
+    PublicadorService service = new pkgWS.PublicadorService();
+    Publicador ICU = service.getPublicadorPort();
+    DtUsuario user= ICU.getUserData(username);
     Suscripcion s = null;
     
     
-    if(request.getSession().getAttribute("UserNick")==null || user instanceof DTArtista ||
+    if(request.getSession().getAttribute("UserNick")==null || user instanceof DtArtista ||
         ICU.consultarCliente(request.getSession().getAttribute("UserNick").toString()).getSuscripcion()==null ||
         ICU.consultarCliente(request.getSession().getAttribute("UserNick").toString()).getSuscripcion().getEstado()!=EstadosDeSuscripcion.Pendiente){
         response.sendRedirect("index.jsp");

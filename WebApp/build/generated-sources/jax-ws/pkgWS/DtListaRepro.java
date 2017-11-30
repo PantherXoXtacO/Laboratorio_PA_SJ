@@ -1,24 +1,23 @@
 
 package pkgWS;
 
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para artista complex type.
+ * <p>Clase Java para dataSession complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="artista">
+ * &lt;complexType name="dtListaRepro">
  *   &lt;complexContent>
- *     &lt;extension base="{http://Publicador/}usuario">
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *       &lt;/sequence>
- *     &lt;/extension>
+ *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
@@ -26,14 +25,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "artista")
-public class Artista
-    extends Usuario
+@XmlType(name = "dtListaRepro")
+public class DtListaRepro
 {
-
-    public List<Album> getAlbums() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
 }

@@ -5,7 +5,6 @@
  */
 package Servlets;
 
-import DataType.DTListaRepro;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -14,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.DtListaRepro;
 
 /**
  *
@@ -35,7 +35,7 @@ public class VerListaInfo extends HttpServlet {
             PrintWriter out = response.getWriter();
             HashMap listas = (HashMap)request.getSession().getAttribute("ListasMap");
             int id = (Integer) request.getAttribute("id");
-            DTListaRepro l = (DTListaRepro) listas.get(id);
+            DtListaRepro l = (DtListaRepro) listas.get(id);
             request.setAttribute("Lista", l);
             if(l!=null){
                 getServletConfig().getServletContext().getRequestDispatcher("/InfoLista.jsp").forward(request,response);

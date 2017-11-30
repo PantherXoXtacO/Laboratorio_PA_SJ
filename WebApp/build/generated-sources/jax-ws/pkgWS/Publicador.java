@@ -401,4 +401,179 @@ public interface Publicador {
     @Action(input = "http://Publicador/Publicador/wipeTemporalGenresRequest", output = "http://Publicador/Publicador/wipeTemporalGenresResponse")
     public void wipeTemporalGenres();
 
+    
+    /**
+     * 
+     * @param arg0
+     * @param arg1
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/ActualizarImagenAlbumRequest", output = "http://Publicador/Publicador/ActualizarImagenAlbumResponse")
+    public void ActualizarImagenAlbum(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+  
+    /**
+     * 
+     * @param arg0
+     * @return 
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/mailLibreRequest", output = "http://Publicador/Publicador/mailLibreResponse")
+    public boolean mailLibre(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    
+    /**
+     * 
+     * @param arg0
+     * @param arg1
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/SeguirUsuarioRequest", output = "http://Publicador/Publicador/SeguirUsuarioResponse")
+    public void SeguirUsuario(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @param arg1
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/DejarDeSeguirUsuarioRequest", output = "http://Publicador/Publicador/DejarDeSeguirUsuarioResponse")
+    public void DejarDeSeguirUsuario(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return 
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/DejarDeSeguirUsuarioRequest", output = "http://Publicador/Publicador/DejarDeSeguirUsuarioResponse")
+    public boolean nicknameLibre(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @param arg1
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/DejarDeSeguirUsuarioRequest", output = "http://Publicador/Publicador/DejarDeSeguirUsuarioResponse")
+    public void ActualizarImagenUsuario(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @return 
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getTemporalAlbumRequest", output = "http://Publicador/Publicador/getTemporalAlbumResponse")
+    public Album getTemporalAlbum();
+    
+    /**
+     * 
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/createTemporalAlbumRequest", output = "http://Publicador/Publicador/createTemporalAlbumResponse")
+    public void createTemporalAlbum();
+    
+    /**
+     * 
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/createTemporalGenresRequest", output = "http://Publicador/Publicador/createTemporalGenresResponse")
+    public void createTemporalGenres();
+    
+    /**
+     * 
+     * @return 
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://Publicador/Publicador/getTemporalGenresRequest", output = "http://Publicador/Publicador/getTemporalGenresResponse")
+    public ArrayList getTemporalGenres();
+    
+    /**
+     * 
+     * @param nick
+     * @param pass
+     * @param mail
+     * @param nombre
+     * @param apellido
+     * @param f
+     * @param string
+     * @param bio
+     * @param web_url
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/registrarArtistaRequest", output = "http://Publicador/Publicador/registrarArtistaResponse")
+    public void registrarArtista(
+            @WebParam(name = "nick", partName = "nick")
+            String nick,
+            @WebParam(name = "pass", partName = "pass")
+            String pass,
+            @WebParam(name = "mail", partName = "mail")
+            String mail,
+            @WebParam(name = "nombre", partName = "nombre")
+            String nombre,
+            @WebParam(name = "apellido", partName = "apellido")
+            String apellido,
+            @WebParam(name = "f", partName = "f")
+            Fecha f,
+            @WebParam(name = "string", partName = "string")
+            String string,
+            @WebParam(name = "bio", partName = "bio")
+            String bio,
+            @WebParam(name = "web_url", partName = "web_url")
+            String web_url);
+
+    /**
+     * 
+     * @param nick
+     * @param pass
+     * @param mail
+     * @param nombre
+     * @param f
+     * @param apellido
+     * @param string
+     */
+    @WebMethod
+    @Action(input = "http://Publicador/Publicador/registrarClienteRequest", output = "http://Publicador/Publicador/registrarClienteResponse")
+    public void registrarCliente(
+            @WebParam(name = "nick", partName = "nick")
+            String nick,
+            @WebParam(name = "pass", partName = "pass")
+            String pass,
+            @WebParam(name = "mail", partName = "mail") 
+            String mail,
+            @WebParam(name = "nombre", partName = "nombre")
+            String nombre,
+            @WebParam(name = "apellido", partName = "apellido")
+            String apellido,
+            @WebParam(name = "f", partName = "f")
+            Fecha f,
+            @WebParam(name = "string", partName = "string")
+            String string);
+
+    
+    
 }

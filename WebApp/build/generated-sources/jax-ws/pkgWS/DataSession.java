@@ -28,5 +28,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "dataSession")
 public class DataSession {
 
+    public Object getNick() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Object getMail() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Object getEsArtista() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 }

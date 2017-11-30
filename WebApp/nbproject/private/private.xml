@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/src/java/Servlets/ConsultarLista.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/src/java/Servlets/VerListaInfo.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/web/ConsultarLista.jsp</file>
-            <file>file:/C:/Users/Usuario/Desktop/GitKraken/Programacion%20de%20Aplicaciones/PA%20LAB/Laboratorio_PA_SJ/WebApp/web/BuscarLista.jsp</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/getAlbumsByGenre.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/ContratarSuscripcion.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/web/AgregarGenerosAlAlbum.jsp</file>
             <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/AltaAlbum.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/web/AltaAlbum.jsp</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/src/java/Servlets/AltaTema.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/build/generated-sources/jax-ws/pkgWS/Publicador.java</file>
+            <file>file:/I:/Gian/Coding/Instituto/Laboratorio_PA_SJ/WebApp/web/ActualizarSuscripcion.jsp</file>
         </group>
     </open-files>
 </project-private>

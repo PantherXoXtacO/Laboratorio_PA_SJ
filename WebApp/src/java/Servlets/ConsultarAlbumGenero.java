@@ -5,9 +5,7 @@
  */
 package Servlets;
 
-import Logica.Album;
-import Logica.Fabrica;
-import Logica.IControlador;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,6 +13,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Album;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -42,8 +43,10 @@ public class ConsultarAlbumGenero extends HttpServlet {
             response.sendRedirect("index.jsp");
         }
         else{
-            Fabrica fabrica = Fabrica.getInstance();
-            IControlador ICU = fabrica.getIControlador();
+            //Fabrica fabrica = Fabrica.getInstance();
+            //IControlador ICU = fabrica.getIControlador();
+            PublicadorService service = new pkgWS.PublicadorService();
+            Publicador ICU = service.getPublicadorPort();
             Album album = ICU.getAlbumByName(albumName);
             
             

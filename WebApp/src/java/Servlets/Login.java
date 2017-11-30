@@ -6,9 +6,7 @@ package Servlets;
  * and open the template in the editor.
  */
 
-import DataType.DataSession;
-import Logica.Controlador;
-import Logica.IControlador;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,6 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import pkgWS.DataSession;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -37,8 +38,10 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         String nick_mail = request.getParameter("name");
         String pass = request.getParameter("pass");
-        IControlador controlador = new Controlador();
-        DataSession user = controlador.getUserSession(nick_mail, pass);
+//        IControlador controlador = new Controlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
+        DataSession user = ICU.getUserSession(nick_mail, pass);
         if(user!=null){
             HttpSession session = request.getSession();
             session.setAttribute("UserNick", user.getNick());

@@ -5,14 +5,14 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -32,13 +32,15 @@ public class CheckNick extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         String nick = request.getParameter("nick");
-        IControlador controlador = new Controlador();
+        //IControlador controlador = new Controlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
         if(nick.equals("")){
             response.setContentType("text/plain");
             response.getWriter().write("");
             return;
         }
-        if(!controlador.nicknameLibre(nick)){
+        if(!ICU.nicknameLibre(nick)){
             response.setContentType("text/plain");
             response.getWriter().write(" Nick en uso");
         }

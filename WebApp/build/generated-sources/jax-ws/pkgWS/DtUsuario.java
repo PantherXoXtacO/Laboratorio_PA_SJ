@@ -32,5 +32,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class DtUsuario {
 
+    public Object getNick() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 }

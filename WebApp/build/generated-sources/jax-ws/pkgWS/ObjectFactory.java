@@ -84,15 +84,7 @@ public class ObjectFactory {
     public Cliente createCliente() {
         return new Cliente();
     }
-
-    /**
-     * Create an instance of {@link Fecha }
-     * 
-     */
-    public Fecha createFecha() {
-        return new Fecha();
-    }
-
+    
     /**
      * Create an instance of {@link ArrayList }
      * 

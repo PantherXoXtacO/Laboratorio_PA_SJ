@@ -4,10 +4,8 @@
     Author     : Casca
 --%>
 
-<%@page import="DataType.DTArtista"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Fabrica"%>
-<%@page import="DataType.DTUsuario"%>
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
@@ -16,8 +14,10 @@
     }
     else{
        String usernick = (String) session.getAttribute("UserNick");
-       Fabrica fabrica = Fabrica.getInstance();
-       IControlador ICU = fabrica.getIControlador();
+       //Fabrica fabrica = Fabrica.getInstance();
+       //IControlador ICU = fabrica.getIControlador();
+       PublicadorService service = new pkgWS.PublicadorService();
+       Publicador ICU = service.getPublicadorPort();
        DTUsuario user= ICU.getUserData(usernick);
        if(user instanceof DTArtista){
            response.sendRedirect("index.jsp"); 

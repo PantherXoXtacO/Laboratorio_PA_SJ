@@ -5,16 +5,16 @@
  */
 package Servlets;
 
-import DataType.DTCliente;
-import DataType.DTUsuario;
-import Logica.Controlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import Logica.IControlador;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
+import pkgWS.DtCliente;
+import pkgWS.DtUsuario;
 
 /**
  *
@@ -34,12 +34,14 @@ public class VerInfoUser extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         String nick = request.getParameter("dataname");
-        IControlador controlador = new Controlador();
-        DTUsuario u = controlador.getUserData(nick);
+        //IControlador controlador = new Controlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
+        DtUsuario u = ICU.getUserData(nick);
         if(u!=null){
             request.getSession().setAttribute("userConsult", u.getNick());
             request.setAttribute("userInfo", u);
-            if(u instanceof DTCliente){
+            if(u instanceof DtCliente){
                 getServletConfig().getServletContext().getRequestDispatcher("/ConsultarCliente.jsp").forward(request,response);
             }
             else{

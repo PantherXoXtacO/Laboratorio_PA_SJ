@@ -1,5 +1,4 @@
-<%@page import="Logica.Controlador"%>
-<%@page import="Logica.IControlador"%>
+
 <%@page import="DataType.*"%>
 <%@page import="java.util.Iterator"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>

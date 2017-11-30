@@ -157,4 +157,12 @@ public class Album {
         this.nombre = value;
     }
 
+    public ArrayList getGeneros() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getListaDeTemasEnString() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

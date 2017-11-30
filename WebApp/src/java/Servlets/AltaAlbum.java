@@ -57,11 +57,11 @@ public class AltaAlbum extends HttpServlet {
         
         if(nombreAlbum!=null && año_album!=null && año_album.matches("\\d+") && generos_album!=null){
             
-            List listgen = new ArrayList();
-            listgen = (List) ICU.generosFromString(año_album);           
+            pkgWS.ArrayList listgen = new pkgWS.ArrayList();
+            listgen = ICU.generosFromString(año_album);           
             
             //ICU.createTemporalAlbum(); ya deberia estar creado
-            ICU.configTemporalAlbum(artist, nombreAlbum, listgen , Integer.parseInt(año_album), imagen_album);
+            ICU.configTemporalAlbum(artist, nombreAlbum, listgen, Integer.parseInt(año_album), imagen_album);
             ICU.addTemporalAlbum();
             ICU.deleteTemporalAlbum();
             ICU.wipeTemporalGenres();
@@ -79,7 +79,7 @@ public class AltaAlbum extends HttpServlet {
                 out.println("<h1>Nombre: " + nombreAlbum + "</h1>");
                 out.println("<h1>Artista: " + artistname + "</h1>");
                 out.println("<h1>Año de creacion: " + año_album+ "</h1>");
-                ArrayList arrayGen = (ArrayList)listgen;
+                pkgWS.ArrayList arrayGen = listgen;
                 out.println("<h1>Generos: " + ICU.imprimirListaDeGeneros(arrayGen) + "</h1>");
                 out.println("<h1>Path a imagen del album: " + imagen_album + "</h1>");
                 out.println("</body>");

@@ -5,8 +5,6 @@
  */
 package Servlets;
 
-import Logica.Controlador;
-import Logica.IControlador;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Map;
@@ -15,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pkgWS.Publicador;
+import pkgWS.PublicadorService;
 
 /**
  *
@@ -35,8 +35,10 @@ public class ConsultarLista extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         String nombreLista = (String) request.getAttribute("nombreLista");
-        IControlador controlador = new Controlador();
-        Map map = controlador.getListasConNombre(nombreLista);
+        //IControlador controlador = new Controlador();
+        PublicadorService service = new pkgWS.PublicadorService();
+        Publicador ICU = service.getPublicadorPort();
+        Map map = (Map) ICU.getListasConNombre(nombreLista);
         if(!map.isEmpty()){
             request.getSession().setAttribute("ListasMap", map);
             response.sendRedirect("ConsultarLista.jsp");

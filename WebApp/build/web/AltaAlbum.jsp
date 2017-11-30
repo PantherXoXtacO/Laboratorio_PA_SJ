@@ -5,13 +5,12 @@
 --%>
 
 
-<%@page import="Logica.Genero"%>
+
+<%@page import="pkgWS.ArrayList"%>
+<%@page import="pkgWS.Album"%>
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page import="java.util.List"%>
-<%@page import="Logica.Album"%>
-<%@page import="DataType.DTCliente"%>
-<%@page import="DataType.DTUsuario"%>
-<%@page import="Logica.IControlador"%>
-<%@page import="Logica.Fabrica"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <% 
@@ -22,15 +21,19 @@
     } 
      else{
        String usernick = (String) username;
-       Fabrica fabrica = Fabrica.getInstance();
-       IControlador ICU = fabrica.getIControlador();
+       //Fabrica fabrica = Fabrica.getInstance();
+       //IControlador ICU = fabrica.getIControlador();
+       PublicadorService service = new pkgWS.PublicadorService();
+       Publicador ICU = service.getPublicadorPort();
        DTUsuario user= ICU.getUserData(usernick);
        if(user instanceof DTCliente){
            response.sendRedirect("index.jsp"); 
        }
     }
-    Fabrica fabrica = Fabrica.getInstance();
-    IControlador ICU = fabrica.getIControlador(); 
+    //Fabrica fabrica = Fabrica.getInstance();
+    //IControlador ICU = fabrica.getIControlador(); 
+    PublicadorService service = new pkgWS.PublicadorService();
+    Publicador ICU = service.getPublicadorPort();
     String listaDeGeneros = (String) session.getAttribute("generosAgregados");    
     Album album = ICU.getTemporalAlbum();
     if(album==null){
@@ -38,7 +41,7 @@
         album = ICU.getTemporalAlbum();
     }
     
-    List<Genero> generosTemp = ICU.getTemporalGenres();
+    ArrayList generosTemp = ICU.getTemporalGenres();
     if(generosTemp==null){
         ICU.createTemporalGenres();
         generosTemp = ICU.getTemporalGenres();

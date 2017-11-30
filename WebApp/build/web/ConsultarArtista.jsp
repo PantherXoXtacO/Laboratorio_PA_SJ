@@ -1,3 +1,5 @@
+<%@page import="pkgWS.Publicador"%>
+<%@page import="pkgWS.PublicadorService"%>
 <%@page import="pkgWS.DtUsuario"%>
 <%@page import="pkgWS.DtAlbum"%>
 <%@page import="pkgWS.DtArtista"%>
@@ -70,9 +72,11 @@
         if(request.getSession().getAttribute("UserNick")!=null){
             if((Boolean)request.getSession().getAttribute("EsArtista") == false){
                 //IControlador controlador = new Controlador();
+                PublicadorService service = new PublicadorService();
+                Publicador port = service.getPublicadorPort();
                 String seguidor = (String) request.getSession().getAttribute("UserNick");
                 //String seguido = (String) request.getSession().getAttribute("userConsult");
-                if(!user.yaSigue(seguidor)){
+                if(!port.yaSigue(user, seguidor)){
                     out.println("<form name=\"SeguirUser\" action=\"/Lab/SeguirUser\" method=\"POST\">");
                     if(user.getNick().equals(request.getSession().getAttribute("UserNick"))){
                         out.println("<input type=\"submit\" value=\"Seguir\" disabled=\"true\">");

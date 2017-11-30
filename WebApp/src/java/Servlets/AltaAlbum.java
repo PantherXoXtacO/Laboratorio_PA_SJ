@@ -65,8 +65,9 @@ public class AltaAlbum extends HttpServlet {
             //ICU.addTemporalAlbum();
             //ICU.deleteTemporalAlbum();
             //ICU.wipeTemporalGenres();
-            Album album = new Album(nombreAlbum,  Integer.parseInt(año_album), imagen_album, artist);
-            album.setGenero(listgen);
+            Album album = ICU.nuevoAlbum(nombreAlbum,  Integer.parseInt(año_album), imagen_album, artist);
+                    //new Album(nombreAlbum,  Integer.parseInt(año_album), imagen_album, artist);
+            ICU.setGenero(album, listgen);
             ICU.persistAlbum(album);
             
 

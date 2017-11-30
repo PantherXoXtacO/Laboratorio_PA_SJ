@@ -6,7 +6,6 @@ import Enums.*;
 import Logica.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -245,7 +244,26 @@ public class Publicador {
         controlador.AltaGenero(nombre, padre);
     }
     
+    @WebMethod
+    public boolean yaSigue(DTCliente c, String s){
+        return c.yaSigue(s);
+    }
     
+    @WebMethod
+    public void persistAlbum(Album album){
+        IControlador controlador = new Controlador();
+        controlador.persistAlbum(album);
+    }
+    
+    @WebMethod
+    public void setGenero(Album album, ArrayList listgen){
+        album.setGenero(listgen);
+    }
+    
+    @WebMethod
+    public Album nuevoAlbum(String nombreAlbum,  int año_album, String imagen_album, Artista artist){
+        return new Album(nombreAlbum, año_album, imagen_album, artist);
+    }
     
     //////////////////////Funciones que no retornan nada, solo para incluir los .java
     @WebMethod

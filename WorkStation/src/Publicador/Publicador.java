@@ -246,12 +246,7 @@ public class Publicador {
     
     @WebMethod
     public boolean yaSigue(DTCliente c, String s){
-        if(c!=null){
-            return c.yaSigue(s);
-        }
-        else{
-            return false;
-        }
+        return c.yaSigue(s);
     }
     
     @WebMethod
